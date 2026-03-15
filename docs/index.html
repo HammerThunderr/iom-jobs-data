@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IOM Jobs API</title>
+<style>
+  body { font-family: sans-serif; max-width: 600px; margin: 40px auto; padding: 0 20px; color: #333; }
+  h1   { color: #1A5276; }
+  .card { background: #f5f5f5; border-radius: 8px; padding: 16px; margin: 16px 0; }
+  code { background: #e8e8e8; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  .status { color: #1a7a4a; font-weight: bold; }
+  a { color: #1A5276; }
+</style>
+</head>
+<body>
+  <h1>🇮🇲 IOM Jobs API</h1>
+  <p class="status" id="status">Loading status...</p>
+
+  <div class="card">
+    <h3>Endpoints</h3>
+    <p><strong>All jobs (JSON):</strong><br>
+    <code><a href="jobs.json">jobs.json</a></code></p>
+  </div>
+
+  <div class="card">
+    <h3>Usage in Android</h3>
+    <p>In <code>JobScraper.java</code>, set:</p>
+    <pre><code>public static final String API_BASE =
+  "https://YOUR-USERNAME.github.io/iom-jobs-data";</code></pre>
+  </div>
+
+  <div class="card" id="stats">Loading stats...</div>
+
+  <script>
+    fetch('jobs.json')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('status').textContent =
+          '✅ Live — ' + data.total + ' jobs available';
+        document.getElementById('stats').innerHTML =
+          '<h3>Current Data</h3>' +
+          '<p>Total jobs: <strong>' + data.total + '</strong></p>' +
+          '<p>Last updated: <strong>' + data.lastUpdatedHuman + '</strong></p>' +
+          '<p>Updates: <strong>' + data.nextUpdate + '</strong></p>' +
+          '<p>Source: <strong>' + data.source + '</strong></p>';
+      })
+      .catch(() => {
+        document.getElementById('status').textContent =
+          '⚠️ jobs.json not yet generated — run the GitHub Action to populate it.';
+      });
+  </script>
+</body>
+</html>
