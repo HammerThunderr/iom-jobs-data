@@ -1,15 +1,18 @@
 name: Scrape IOM Jobs
 
 on:
+  # Run every 4 hours automatically
   schedule:
     - cron: "0 */4 * * *"
+
+  # Allow manual trigger from GitHub Actions tab
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
+    # Give Actions permission to commit back to the repo
     permissions:
       contents: write
 
@@ -22,11 +25,8 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      - name: Install Playwright browsers
-        run: playwright install chromium --with-deps
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
 
       - name: Run scraper
         run: python scraper.py
@@ -36,5 +36,6 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/jobs.json
-          git diff --staged --quiet || git commit -m "Update jobs [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          # Only commit if the file actually changed
+          git diff --staged --quiet || git commit -m "Update jobs data [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
