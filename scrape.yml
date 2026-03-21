@@ -2,13 +2,13 @@ name: Scrape IOM Jobs
 
 on:
   schedule:
-    - cron: "0 */4 * * *"   # every 4 hours
-  workflow_dispatch:          # manual trigger from Actions tab
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 5        # kill job if it takes longer than 5 mins
+    timeout-minutes: 5
 
     permissions:
       contents: write
@@ -23,7 +23,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install -r requirements.txt
 
       - name: Run scraper
         run: python scraper.py
