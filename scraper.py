@@ -1,8 +1,8 @@
 """
-IOM Jobs Scraper - services.gov.im
------------------------------------
+IOM Jobs Scraper
+----------------
 Run by GitHub Actions every 4 hours.
-Saves jobs.json to docs/ folder served by GitHub Pages.
+Saves jobs.json to docs/ folder which is served by GitHub Pages.
 """
 
 import requests
@@ -37,7 +37,7 @@ def scrape_all_jobs():
     print(f"Fetching jobs from {BASE_URL}...")
     resp = requests.get(BASE_URL, params=params, headers=HEADERS, timeout=30)
     resp.raise_for_status()
-    print(f"HTTP {resp.status_code}, {len(resp.text)} bytes")
+    print(f"Got response: HTTP {resp.status_code}, {len(resp.text)} bytes")
 
     soup = BeautifulSoup(resp.text, "html.parser")
     jobs = []
@@ -75,21 +75,36 @@ def scrape_all_jobs():
     return jobs
 
 
+def scrape_job_detail(job_id):
+    url  = f"{JOB_BASE}/job-search/viewjob?Id={job_id}"
+    resp = requests.get(url, headers=HEADERS, timeout=15)
+    resp.raise_for_status()
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for tag in soup.select("header, footer, .breadcrumb, nav, script, style, form, .section--collapsible, .noticebox"):
+        tag.decompose()
+
+    content = soup.select_one(".content")
+    return content.get_text(separator="\n", strip=True) if content else ""
+
+
 def main():
     jobs = scrape_all_jobs()
     print(f"Scraped {len(jobs)} jobs")
 
+    # Build output
     now = datetime.now(timezone.utc)
     output = {
-        "success":          True,
-        "total":            len(jobs),
-        "lastUpdated":      now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "success":      True,
+        "total":        len(jobs),
+        "lastUpdated":  now.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "lastUpdatedHuman": now.strftime("%d %b %Y at %H:%M UTC"),
-        "nextUpdate":       "Every 4 hours",
-        "source":           "services.gov.im",
-        "jobs":             jobs,
+        "nextUpdate":   "Every 4 hours",
+        "source":       "services.gov.im",
+        "jobs":         jobs,
     }
 
+    # Write to docs/jobs.json (served by GitHub Pages)
     os.makedirs("docs", exist_ok=True)
     out_path = "docs/jobs.json"
     with open(out_path, "w", encoding="utf-8") as f:
