@@ -1,0 +1,44 @@
+# ─────────────────────────────────────────────────────────
+# Add this file to your iom-jobs-data GitHub repo at:
+#   .github/workflows/weather.yml
+#
+# It runs every 30 minutes, fetches IOM weather RSS feeds,
+# and saves them as JSON to GitHub Pages (docs/ folder).
+# This lets the Flutter web app read weather without CORS issues.
+# ─────────────────────────────────────────────────────────
+
+name: Scrape Weather RSS
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 minutes
+  workflow_dispatch:          # manual trigger from GitHub Actions tab
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run weather scraper
+        run: python scripts/scrape_weather.py
+
+      - name: Commit and push JSON files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/weather_*.json docs/webcams.json
+          git diff --staged --quiet || git commit -m "chore: update weather data $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
