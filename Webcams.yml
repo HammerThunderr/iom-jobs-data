@@ -1,0 +1,71 @@
+# ─────────────────────────────────────────────────────────────
+# Webcam scraper — runs every 2 minutes, FREE on public repos.
+#
+# Place at: .github/workflows/webcams.yml in iom-jobs-data repo
+#
+# How it stays small:
+# Keeps webcam images in a separate "webcams" orphan branch with 
+# only ONE commit (force-pushed every run).
+# GitHub Pages reads main branch normally, webcams come from raw URL.
+#
+# After first run, images will be at:
+#   https://raw.githubusercontent.com/USER/iom-jobs-data/webcams/<file>.jpg
+# ─────────────────────────────────────────────────────────────
+
+name: Scrape Webcams
+
+on:
+  schedule:
+    - cron: '*/2 * * * *'   # every 2 minutes
+  workflow_dispatch:
+
+concurrency:
+  group: webcams
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scraper
+        run: python scripts/scrape_webcams.py
+
+      - name: Force-push to "webcams" orphan branch
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Save webcam files outside git
+          mkdir -p /tmp/cam-out
+          cp -r docs/webcams/. /tmp/cam-out/
+          cp docs/webcams.json /tmp/cam-out/webcams.json
+
+          # Fresh orphan branch — no history
+          git checkout --orphan webcams
+          git reset --hard
+
+          # Copy files to root
+          cp -r /tmp/cam-out/. .
+
+          echo "# Webcam Images" > README.md
+          echo "Force-pushed every 2 minutes — single commit, no history." >> README.md
+
+          git add -A
+          git commit -m "webcams $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push -f origin webcams
