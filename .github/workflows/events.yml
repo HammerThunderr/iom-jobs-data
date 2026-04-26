@@ -1,0 +1,57 @@
+# ─────────────────────────────────────────────────────────────
+# Events scraper workflow
+# Place at: .github/workflows/events.yml in iom-jobs-data repo
+#
+# Scrapes whatsoniom.im every 30 minutes.
+# ─────────────────────────────────────────────────────────────
+
+name: Scrape Events
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'   # every 30 minutes
+  workflow_dispatch:
+
+concurrency:
+  group: events
+  cancel-in-progress: true
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python scripts/scrape_events.py
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/events.json
+
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+
+          git commit -m "chore: update events $(date -u '+%Y-%m-%d %H:%M UTC')"
+
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 3
+          done
