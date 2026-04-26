@@ -1,11 +1,8 @@
 """
-Isle of Man Airport Flight Scraper (FlightAware)
--------------------------------------------------
-Scrapes departures + arrivals from FlightAware's public airport page.
-Saves to docs/flights.json on GitHub Pages.
-
-FlightAware embeds the flight data as JSON inside a <script> tag,
-which is reliable to parse and doesn't change often.
+Isle of Man Airport Flight Scraper
+-----------------------------------
+Scrapes departures + arrivals from airport.im/live-flight-information/
+Saves to docs/flights.json on GitHub Pages every 5 minutes.
 
 Place at: scripts/scrape_flights.py in your iom-jobs-data repo.
 """
@@ -16,184 +13,108 @@ import json
 import os
 import re
 from datetime import datetime, timezone
+from bs4 import BeautifulSoup
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# FlightAware airport pages — publicly accessible
-ARRIVALS_URL    = "https://www.flightaware.com/live/airport/EGNS/arrivals"
-DEPARTURES_URL  = "https://www.flightaware.com/live/airport/EGNS/departures"
+URL = "https://www.airport.im/live-flight-information/"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-GB,en;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "DNT": "1",
-    "Connection": "keep-alive",
-    "Upgrade-Insecure-Requests": "1",
 }
 
 
-def fetch(url):
-    """Fetch URL with SSL fallback."""
+def fetch():
+    """Fetch the live flight information page."""
     for verify in [True, False]:
         try:
-            print(f"  Fetching {url} (verify={verify})")
-            resp = requests.get(url, headers=HEADERS, timeout=25, verify=verify)
+            print(f"Fetching {URL} (verify={verify})...")
+            resp = requests.get(URL, headers=HEADERS, timeout=25, verify=verify)
             resp.raise_for_status()
-            print(f"  ✓ {len(resp.text)} bytes")
+            print(f"  ✓ Got {len(resp.text)} bytes")
             return resp.text
         except Exception as e:
             print(f"  ✗ {type(e).__name__}: {str(e)[:80]}")
-    return None
+    raise Exception("All fetch attempts failed")
 
 
-def extract_flightaware_data(html, is_departure):
+def parse_flight_section(soup, tab_id, is_departure):
     """
-    FlightAware embeds flight data as JSON in window variables.
-    Look for `var trackpollBootstrap = {...}` or similar patterns.
+    Parse one tab pane (#pills-departures or #pills-arrivals).
+    Each flight is a <div class="d-flex flex-wrap flex-md-nowrap...">
+    containing 4 main child elements: airport, flightNo+airline, time, status.
     """
     flights = []
 
-    # FlightAware uses several patterns over the years
-    patterns = [
-        # Modern pattern (2024+)
-        r'var\s+trackpollBootstrap\s*=\s*({.+?});',
-        r'window\.flightAwareDataBootstrap\s*=\s*({.+?});',
-        # JSON-LD or data attribute
-        r'<script[^>]*type=[\'"]application/json[\'"][^>]*>(.+?)</script>',
-        # Data within JS object
-        r'"flights"\s*:\s*(\[.+?\])',
-        r'data:\s*({"\w+":.+?})\s*[,}]',
-    ]
+    tab = soup.find("div", id=tab_id)
+    if not tab:
+        print(f"  ✗ Could not find #{tab_id}")
+        return flights
 
-    for pattern in patterns:
-        matches = re.findall(pattern, html, re.DOTALL)
-        if not matches:
-            continue
-        for raw in matches:
-            try:
-                data = json.loads(raw)
-                # Recursively find flight-shaped objects
-                found = find_flights_in_obj(data, is_departure)
-                if found:
-                    flights.extend(found)
-                    print(f"  ✓ Pattern matched, found {len(found)} flights")
-                    return flights
-            except json.JSONDecodeError:
+    # Each flight row has class "flight-information__airport" inside it
+    # We'll find all the rows that contain an airport span
+    airport_spans = tab.find_all("span", class_="flight-information__airport")
+    print(f"  Found {len(airport_spans)} flights in #{tab_id}")
+
+    for airport_span in airport_spans:
+        try:
+            # The flight row is the parent div containing this airport span
+            row = airport_span.find_parent("div", class_=re.compile(r"d-flex.*flex-wrap"))
+            if not row:
                 continue
 
-    # Fallback — parse the visible HTML table
-    print("  No JSON found, parsing HTML table...")
-    return parse_flightaware_table(html, is_departure)
+            airport = airport_span.get_text(strip=True)
 
+            # Flight number
+            flight_no_div = row.find("div", class_="flight-information__flight-no")
+            flight_no = flight_no_div.get_text(strip=True) if flight_no_div else ""
 
-def find_flights_in_obj(obj, is_departure):
-    """Recursively scan a parsed JSON object for things that look like flights."""
-    flights = []
-    if isinstance(obj, dict):
-        # Check if this dict has flight data fields
-        keys = set(obj.keys())
-        if {'ident', 'origin', 'destination'} & keys or 'flightId' in keys:
-            f = extract_flight_fields(obj, is_departure)
-            if f:
-                flights.append(f)
-        # Recurse
-        for v in obj.values():
-            flights.extend(find_flights_in_obj(v, is_departure))
-    elif isinstance(obj, list):
-        for item in obj:
-            flights.extend(find_flights_in_obj(item, is_departure))
-    return flights
+            # Airline — the sibling div of flight-no inside flight-airline container
+            airline = ""
+            airline_container = row.find("div", class_=re.compile(r"flight-information__flight-airline"))
+            if airline_container:
+                # Find the div that doesn't have flight-no class
+                divs = airline_container.find_all("div", recursive=False)
+                for d in divs:
+                    classes = d.get("class", [])
+                    if "flight-information__flight-no" not in classes:
+                        airline = d.get_text(strip=True)
+                        break
 
+            # Scheduled time — inside a span with bi-clock-history svg
+            scheduled = ""
+            time_span = row.find("span", class_=re.compile(r"d-inline-flex.*align-items-center"))
+            if time_span:
+                # Get text but strip out the SVG content
+                for svg in time_span.find_all("svg"):
+                    svg.decompose()
+                scheduled = time_span.get_text(strip=True)
 
-def extract_flight_fields(obj, is_departure):
-    """Pull out the fields we care about from a flight object."""
-    try:
-        flight_no = obj.get('ident') or obj.get('flightNumber') or obj.get('displayIdent') or ''
-        airline   = obj.get('airline', {})
-        if isinstance(airline, dict):
-            airline = airline.get('name') or airline.get('callsign') or airline.get('code') or ''
+            # Status — the badge at the end
+            status = "Scheduled"
+            status_badge = row.find("span", class_=re.compile(r"flight-information__status-badge"))
+            if status_badge:
+                status = status_badge.get_text(strip=True)
 
-        origin_obj = obj.get('origin', {})
-        dest_obj   = obj.get('destination', {})
-        origin_city = origin_obj.get('friendlyName') if isinstance(origin_obj, dict) else (origin_obj or '')
-        dest_city   = dest_obj.get('friendlyName')   if isinstance(dest_obj, dict)   else (dest_obj or '')
+            flight = {
+                "flightNo":  flight_no,
+                "airline":   airline,
+                "scheduled": scheduled,
+                "status":    status,
+            }
+            if is_departure:
+                flight["destination"] = airport
+            else:
+                flight["origin"] = airport
 
-        # Time fields
-        scheduled = (obj.get('takeoffTimes', {}).get('scheduled') if is_departure
-                    else obj.get('landingTimes', {}).get('scheduled'))
-        if not scheduled:
-            scheduled = obj.get('scheduled') or obj.get('estimated') or obj.get('actual') or ''
-        if isinstance(scheduled, (int, float)):
-            scheduled = datetime.fromtimestamp(scheduled, tz=timezone.utc).strftime('%H:%M')
+            if flight_no:
+                flights.append(flight)
+                print(f"    ✓ {flight_no} {airport} {scheduled} - {status}")
 
-        status = obj.get('flightStatus') or obj.get('status') or 'Scheduled'
-
-        result = {
-            "flightNo":  str(flight_no).strip(),
-            "airline":   str(airline).strip(),
-            "scheduled": str(scheduled).strip()[:5] if scheduled else '',
-            "status":    str(status).strip(),
-        }
-        if is_departure:
-            result["destination"] = str(dest_city).strip()
-        else:
-            result["origin"] = str(origin_city).strip()
-
-        if result["flightNo"]:
-            return result
-    except Exception as e:
-        print(f"    Field extract error: {e}")
-    return None
-
-
-def parse_flightaware_table(html, is_departure):
-    """Fallback HTML table parser for FlightAware airport pages."""
-    from bs4 import BeautifulSoup
-    soup = BeautifulSoup(html, "html.parser")
-    flights = []
-
-    # FlightAware uses a table with class containing "prettyTable" or similar
-    tables = soup.find_all("table")
-    print(f"    Found {len(tables)} tables")
-    
-    for table in tables:
-        # Check if this looks like a flight table
-        thead = table.find("thead")
-        if thead:
-            head_text = thead.get_text().lower()
-            if not any(k in head_text for k in ['flight', 'origin', 'destination', 'arrival', 'departure']):
-                continue
-
-        rows = table.find("tbody").find_all("tr") if table.find("tbody") else table.find_all("tr")[1:]
-
-        for row in rows:
-            cols = [td.get_text(strip=True) for td in row.find_all("td")]
-            if len(cols) < 4:
-                continue
-            try:
-                # FlightAware columns: Flight | Aircraft | Origin/Dest | Time | Status
-                # but layout may vary
-                flight_no = cols[0]
-                place = cols[2] if len(cols) > 2 else ''
-                time_  = cols[3] if len(cols) > 3 else ''
-                status = cols[-1] if len(cols) > 4 else 'Scheduled'
-
-                f = {
-                    "flightNo":  flight_no,
-                    "airline":   '',
-                    "scheduled": time_,
-                    "status":    status,
-                }
-                if is_departure:
-                    f["destination"] = place
-                else:
-                    f["origin"] = place
-                if flight_no and not flight_no.lower().startswith('flight'):
-                    flights.append(f)
-            except Exception as e:
-                continue
+        except Exception as e:
+            print(f"    ✗ Row parse error: {e}")
 
     return flights
 
@@ -203,61 +124,73 @@ def categorize_status(status):
     if "cancel"   in s: return "cancelled"
     if "delay"    in s: return "delayed"
     if "boarding" in s: return "boarding"
-    if "departed" in s or "en route" in s: return "departed"
+    if "gate closed" in s: return "boarding"
+    if "departed" in s: return "departed"
     if "arrived"  in s or "landed" in s: return "arrived"
     if "expected" in s: return "expected"
     if "on-time"  in s or "on time" in s: return "ontime"
     return "scheduled"
 
 
+def get_last_updated(soup):
+    """Find the data-last-updated-time attribute."""
+    span = soup.find("span", class_="last-updated-time")
+    if span:
+        ts = span.get("data-last-updated-time", "")
+        if ts:
+            try:
+                # Parse ISO format e.g. 2026-04-26T16:13:05Z
+                dt = datetime.fromisoformat(ts.replace("Z", "+00:00"))
+                return dt.strftime("%H:%M UTC")
+            except Exception:
+                return ts
+    return ""
+
+
 def main():
     os.makedirs("docs", exist_ok=True)
 
-    print("\n=== Fetching DEPARTURES ===")
-    dep_html = fetch(DEPARTURES_URL)
-    departures = extract_flightaware_data(dep_html, True) if dep_html else []
+    try:
+        html = fetch()
+        soup = BeautifulSoup(html, "html.parser")
 
-    print("\n=== Fetching ARRIVALS ===")
-    arr_html = fetch(ARRIVALS_URL)
-    arrivals = extract_flightaware_data(arr_html, False) if arr_html else []
+        print("\n=== Parsing DEPARTURES ===")
+        departures = parse_flight_section(soup, "pills-departures", is_departure=True)
 
-    # Add status types
-    for f in departures + arrivals:
-        f["statusType"] = categorize_status(f.get("status", ""))
+        print("\n=== Parsing ARRIVALS ===")
+        arrivals = parse_flight_section(soup, "pills-arrivals", is_departure=False)
 
-    if departures or arrivals:
+        # Add status types
+        for f in departures + arrivals:
+            f["statusType"] = categorize_status(f.get("status", ""))
+
+        last_updated = get_last_updated(soup)
+
         data = {
             "success":     True,
             "fetchedAt":   datetime.now(timezone.utc).isoformat(),
-            "lastUpdated": datetime.now(timezone.utc).strftime("%H:%M UTC"),
+            "lastUpdated": last_updated,
             "departures":  departures,
             "arrivals":    arrivals,
             "totalCount":  len(departures) + len(arrivals),
-            "source":      "FlightAware EGNS",
+            "source":      "airport.im",
         }
         print(f"\n✓ SUCCESS — {len(departures)} departures, {len(arrivals)} arrivals")
-    else:
-        # Save debug HTML
-        os.makedirs("docs/_debug", exist_ok=True)
-        if dep_html:
-            with open("docs/_debug/departures.html", "w", encoding="utf-8") as f:
-                f.write(dep_html[:100000])
-        if arr_html:
-            with open("docs/_debug/arrivals.html", "w", encoding="utf-8") as f:
-                f.write(arr_html[:100000])
+        print(f"  Last updated on site: {last_updated}")
 
+    except Exception as e:
+        print(f"\n✗ FAILED: {e}")
         data = {
             "success":     False,
-            "error":       "Could not extract flight data. FlightAware may have changed their HTML. Check docs/_debug/",
+            "error":       str(e)[:200],
             "fetchedAt":   datetime.now(timezone.utc).isoformat(),
             "departures":  [],
             "arrivals":    [],
         }
-        print("\n✗ FAILED — debug HTML saved")
 
     with open("docs/flights.json", "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    print("✓ Saved docs/flights.json")
+    print("\n✓ Saved docs/flights.json")
 
 
 if __name__ == "__main__":
