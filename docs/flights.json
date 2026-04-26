@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "error": "HTTPSConnectionPool(host='www.airport.im', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1016)')))",
+  "fetchedAt": "2026-04-26T12:42:23.380330+00:00",
+  "departures": [],
+  "arrivals": []
+}
