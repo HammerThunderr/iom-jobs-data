@@ -1,7 +1,7 @@
 {
   "success": false,
-  "error": "No flight data found on page. Site may load data via JavaScript. Check docs/_debug/last_page.html",
-  "fetchedAt": "2026-04-26T13:19:54.005298+00:00",
+  "error": "Could not extract flight data. FlightAware may have changed their HTML. Check docs/_debug/",
+  "fetchedAt": "2026-04-26T13:52:36.143356+00:00",
   "departures": [],
   "arrivals": []
 }
