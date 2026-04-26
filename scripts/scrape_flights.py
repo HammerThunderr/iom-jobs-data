@@ -1,73 +1,120 @@
 """
 Isle of Man Airport Flight Scraper
 -----------------------------------
-Run by GitHub Actions every 5 minutes.
-Scrapes departures + arrivals from airport.im and saves to docs/flights.json.
+Scrapes departures + arrivals from airport.im every 5 minutes.
+Saves to docs/flights.json on GitHub Pages.
 
 Place at: scripts/scrape_flights.py in your iom-jobs-data repo.
 """
 
 import requests
+import urllib3
 import json
 import os
 import re
+import ssl
 from datetime import datetime, timezone
 from bs4 import BeautifulSoup
 
-URL = "https://www.airport.im/"
+# Disable SSL warnings — airport.im has cert issues on some runners
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# Try multiple URLs in order of preference
+URLS = [
+    "https://www.airport.im/",
+    "https://airport.im/",
+    "http://www.airport.im/",   # fallback to HTTP if HTTPS fails
+]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept-Language": "en-GB,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
 }
 
 
-def parse_flights():
+def fetch_html():
+    """Try multiple URL variants until one succeeds."""
+    last_error = None
+    for url in URLS:
+        for verify in [True, False]:  # try with SSL verification, then without
+            try:
+                print(f"Trying {url} (SSL verify={verify})...")
+                resp = requests.get(
+                    url,
+                    headers=HEADERS,
+                    timeout=20,
+                    verify=verify,
+                    allow_redirects=True,
+                )
+                resp.raise_for_status()
+                print(f"  ✓ Got {len(resp.text)} bytes from {url}")
+                return resp.text
+            except Exception as e:
+                last_error = e
+                print(f"  ✗ {type(e).__name__}: {str(e)[:80]}")
+                continue
+    raise Exception(f"All URLs failed. Last error: {last_error}")
+
+
+def parse_flights(html):
     """Scrape arrivals & departures from airport.im homepage."""
-    resp = requests.get(URL, headers=HEADERS, timeout=20)
-    resp.raise_for_status()
-    soup = BeautifulSoup(resp.text, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
     departures = []
     arrivals = []
 
-    # Find all tables — airport.im uses two tables: departures + arrivals
     tables = soup.find_all("table")
+    print(f"Found {len(tables)} tables")
 
     for table in tables:
-        # Try to determine if this is departures or arrivals
-        headers_row = table.find("thead")
+        # Determine if departure or arrival table
         is_departure = False
         is_arrival = False
 
-        if headers_row:
-            header_text = headers_row.get_text().lower()
-            if "departing to" in header_text or "destination" in header_text:
+        # Check thead first
+        thead = table.find("thead")
+        if thead:
+            header_text = thead.get_text().lower()
+            if any(k in header_text for k in ["departing to", "destination", "departures"]):
                 is_departure = True
-            elif "arriving from" in header_text or "origin" in header_text:
+            elif any(k in header_text for k in ["arriving from", "origin", "arrivals"]):
                 is_arrival = True
 
-        # Fallback — check first row
+        # Check ALL surrounding text — sections often have h1/h2 above the table
+        if not is_departure and not is_arrival:
+            # Look at previous siblings for headings
+            for prev in table.find_all_previous(['h1', 'h2', 'h3', 'h4'], limit=3):
+                t = prev.get_text().lower()
+                if 'depart' in t:
+                    is_departure = True
+                    break
+                elif 'arriv' in t:
+                    is_arrival = True
+                    break
+
+        # Last resort — check first data row
         if not is_departure and not is_arrival:
             first_row = table.find("tr")
             if first_row:
                 row_text = first_row.get_text().lower()
-                if "departing" in row_text or "to" in row_text and "from" not in row_text:
+                if any(k in row_text for k in ["departing", "destination"]):
                     is_departure = True
-                elif "arriving" in row_text or "from" in row_text:
+                elif any(k in row_text for k in ["arriving", "origin"]):
                     is_arrival = True
 
         if not is_departure and not is_arrival:
             continue
 
-        rows = table.find("tbody").find_all("tr") if table.find("tbody") else table.find_all("tr")[1:]
+        tbody = table.find("tbody")
+        rows = tbody.find_all("tr") if tbody else table.find_all("tr")[1:]
 
         for row in rows:
             cols = row.find_all("td")
             if len(cols) < 5:
                 continue
-
             try:
                 if is_departure:
                     flight = {
@@ -90,9 +137,9 @@ def parse_flights():
                     if flight["flightNo"]:
                         arrivals.append(flight)
             except Exception as e:
-                print(f"Row parse error: {e}")
+                print(f"  Row parse error: {e}")
 
-    # Try to find "last updated" timestamp on page
+    # Find "last updated" timestamp
     last_updated = ""
     text = soup.get_text()
     m = re.search(r'last updated[:\s]+(.+?)(?:\n|$)', text, re.IGNORECASE)
@@ -103,16 +150,15 @@ def parse_flights():
 
 
 def categorize_status(status):
-    """Group statuses for UI coloring."""
     s = status.lower()
-    if "cancel" in s:           return "cancelled"
-    if "delay" in s:            return "delayed"
-    if "boarding" in s:         return "boarding"
-    if "departed" in s:         return "departed"
-    if "arrived" in s:          return "arrived"
-    if "expected" in s:         return "expected"
-    if "on-time" in s or "on time" in s: return "ontime"
-    if "scheduled" in s:        return "scheduled"
+    if "cancel"   in s: return "cancelled"
+    if "delay"    in s: return "delayed"
+    if "boarding" in s: return "boarding"
+    if "departed" in s: return "departed"
+    if "arrived"  in s: return "arrived"
+    if "expected" in s: return "expected"
+    if "on-time"  in s or "on time" in s: return "ontime"
+    if "scheduled" in s: return "scheduled"
     return "scheduled"
 
 
@@ -120,9 +166,9 @@ def main():
     os.makedirs("docs", exist_ok=True)
 
     try:
-        deps, arrs, page_updated = parse_flights()
+        html = fetch_html()
+        deps, arrs, page_updated = parse_flights(html)
 
-        # Add status category to each flight
         for f in deps + arrs:
             f["statusType"] = categorize_status(f.get("status", ""))
 
@@ -134,13 +180,13 @@ def main():
             "arrivals":     arrs,
             "totalCount":   len(deps) + len(arrs),
         }
-        print(f"✓ Departures: {len(deps)}, Arrivals: {len(arrs)}")
+        print(f"\n✓ Departures: {len(deps)}, Arrivals: {len(arrs)}")
 
     except Exception as e:
-        print(f"✗ Error: {e}")
+        print(f"\n✗ Final error: {e}")
         data = {
             "success":     False,
-            "error":       str(e),
+            "error":       str(e)[:200],
             "fetchedAt":   datetime.now(timezone.utc).isoformat(),
             "departures":  [],
             "arrivals":    [],
