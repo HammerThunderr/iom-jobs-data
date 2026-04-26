@@ -1,8 +1,6 @@
 # ─────────────────────────────────────────────────────────────
-# Add this to .github/workflows/flights.yml
-#
-# Scrapes Isle of Man Airport departures & arrivals every 5 min.
-# Saves to docs/flights.json on GitHub Pages.
+# Flight scraper workflow
+# Place at: .github/workflows/flights.yml in iom-jobs-data repo
 # ─────────────────────────────────────────────────────────────
 
 name: Scrape Flights
@@ -26,13 +24,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Update CA certificates
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ca-certificates
+          sudo update-ca-certificates
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: |
+          pip install --upgrade pip
+          pip install --upgrade certifi requests beautifulsoup4
 
       - name: Run scraper
         run: python scripts/scrape_flights.py
