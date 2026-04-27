@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-27T11:24:20.534126+00:00",
-  "lastUpdated": "11:24 UTC",
+  "fetchedAt": "2026-04-27T12:58:29.857266+00:00",
+  "lastUpdated": "12:58 UTC",
   "departures": [
-    {
-      "flightNo": "LM671",
-      "airline": "Loganair",
-      "scheduled": "06:55",
-      "status": "Departed 06:51",
-      "destination": "London City",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:11",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -71,17 +55,17 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Last call",
+      "status": "Departed 12:44",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Departed 13:29",
       "destination": "Bristol",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -126,14 +110,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "07:50",
-      "status": "Arrived 07:30",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "08:40",
@@ -169,7 +145,7 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 14:30",
+      "status": "Delayed 14:35",
       "origin": "Dublin",
       "statusType": "delayed"
     },
@@ -185,9 +161,9 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Expected 12:36",
+      "status": "Arrived 12:38",
       "origin": "Bristol",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
@@ -246,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 27,
   "source": "airport.im"
 }
