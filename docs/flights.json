@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-27T09:33:59.299317+00:00",
-  "lastUpdated": "09:32 UTC",
+  "fetchedAt": "2026-04-27T11:24:20.534126+00:00",
+  "lastUpdated": "11:24 UTC",
   "departures": [
     {
       "flightNo": "LM671",
@@ -55,9 +55,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Departed 11:40",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
@@ -71,9 +71,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY234",
@@ -177,17 +177,17 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:50",
-      "status": "On-time",
+      "status": "Arrived 12:02",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "On-time",
+      "status": "Expected 12:36",
       "origin": "Bristol",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM638",
