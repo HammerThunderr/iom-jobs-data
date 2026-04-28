@@ -1,31 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-28T11:12:44.691690+00:00",
-  "lastUpdated": "11:11 UTC",
+  "fetchedAt": "2026-04-28T12:58:51.788177+00:00",
+  "lastUpdated": "12:57 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:03",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:10",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:55",
-      "status": "Delayed 13:00",
+      "status": "Departed 13:06",
       "destination": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY840",
@@ -97,9 +81,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "09:25",
-      "status": "Delayed 12:15",
+      "status": "Arrived 12:27",
       "origin": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
@@ -113,9 +97,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Arrived 13:27",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
@@ -166,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 18,
   "source": "airport.im"
 }
