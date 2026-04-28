@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-28T17:11:40.076761+00:00",
-  "lastUpdated": "17:11 UTC",
+  "fetchedAt": "2026-04-28T18:51:26.118833+00:00",
+  "lastUpdated": "18:51 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:55",
-      "status": "Departed 13:06",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -47,9 +39,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Gate closed",
+      "status": "Departed 18:38",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM671",
@@ -66,25 +58,17 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "09:25",
-      "status": "Arrived 12:27",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "13:25",
-      "status": "Arrived 13:27",
-      "origin": "Newquay, via Manchester",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -129,8 +113,24 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Arrived 19:44",
       "origin": "London City",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM682",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:35",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
