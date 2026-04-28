@@ -1,26 +1,26 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-28T15:04:01.215928+00:00",
-  "lastUpdated": "15:04 UTC",
-  "totalCount": 708,
+  "fetchedAt": "2026-04-28T17:10:15.921031+00:00",
+  "lastUpdated": "17:10 UTC",
+  "totalCount": 713,
   "categories": {
-    "Kids": 82,
+    "Kids": 78,
     "Things to Do": 89,
-    "Workshops": 22,
-    "Learning": 22,
-    "Arts": 5,
-    "Culture": 5,
-    "Nature": 10,
-    "Outdoors": 10,
-    "Family": 13,
+    "Workshops": 11,
+    "Learning": 11,
+    "Arts": 4,
+    "Culture": 4,
     "Sports": 68,
     "Fitness": 6,
     "Community": 1,
+    "Nature": 3,
+    "Outdoors": 3,
     "Entertainment": 2,
     "Charity": 3,
     "Fundraising": 3,
     "Music": 5,
     "Youth": 3,
+    "Family": 11,
     "Social": 1,
     "Nightlife": 1,
     "Motorsport": 62
@@ -57,6 +57,22 @@
       "time": "11am",
       "price": "Free",
       "url": "https://manxnationalheritage.im/whats-on/detail/behind-the-scenes-at-the-peggy/"
+    },
+    {
+      "title": "Lunchtime Learning: Conservation of the Great Laxey Wheel",
+      "venue": "Online",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "manx national heritage",
+      "recurring": false,
+      "description": "Discover the challenges and opportunities of keeping the world's largest working water wheel working in this unique online learning session with MNH and IHBC North West.",
+      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2016/10/LW-101-550x477.jpg",
+      "time": "12pm – 1pm",
+      "price": "Free",
+      "url": "https://manxnationalheritage.im/whats-on/detail/lunchtime-learning-conservation-of-the-great-laxey-wheel/"
     },
     {
       "title": "Castletown Heritage Site Tours: Wednesdays and Saturdays",
@@ -2617,24 +2633,6 @@
       "url": "https://www.kidsontherock.co.uk/events/foxdale-parents-and-tots-group/"
     },
     {
-      "title": "French Lessons @ Manx Family Centre",
-      "venue": "Douglas",
-      "startDate": "",
-      "endDate": "",
-      "isTbc": true,
-      "duration": 0.0,
-      "tags": [
-        "Kids"
-      ],
-      "source": "kids on the rock iom",
-      "recurring": false,
-      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock MEGA EASTER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
-      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
-      "time": "See event page",
-      "price": "",
-      "url": "https://www.kidsontherock.co.uk/events/french-lessons-manx-family-centre/"
-    },
-    {
       "title": "Harbour Tots",
       "venue": "Castletown",
       "startDate": "",
@@ -3517,24 +3515,6 @@
       "url": "https://www.kidsontherock.co.uk/events/storytime-onchan-library/"
     },
     {
-      "title": "Storytime @ Onchan Library",
-      "venue": "Onchan",
-      "startDate": "",
-      "endDate": "",
-      "isTbc": true,
-      "duration": 0.0,
-      "tags": [
-        "Kids"
-      ],
-      "source": "kids on the rock iom",
-      "recurring": false,
-      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock MEGA EASTER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
-      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
-      "time": "See event page",
-      "price": "",
-      "url": "https://www.kidsontherock.co.uk/events/storytime-onchan-library-2/"
-    },
-    {
       "title": "Tea & Toast",
       "venue": "St Johns",
       "startDate": "",
@@ -3771,6 +3751,22 @@
       "url": "https://www.erinartscentre.com/event/weekend-opening-spring-forward-a-community-exhibition-to-celebrate-the-return-of-the-sun-2/"
     },
     {
+      "title": "Mind Your Language",
+      "venue": "Manx Museum",
+      "startDate": "2026-04-28",
+      "endDate": "2026-10-04T15:30:00+00:00",
+      "isTbc": false,
+      "duration": 159.64583333333334,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "Join us for a vibrant exhibition celebrating the beauty of the Manx language and its rich culture, presented in partnership with Culture Vannin as part of Blein ny Gaelgey, the ‘Year of Manx'.",
+      "imageUrl": "",
+      "time": "09:30 – 16:30",
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/mind-your-language/"
+    },
+    {
       "title": "Ramsey Roadshow",
       "venue": "Milntown Estate",
       "startDate": "2026-04-28",
@@ -3787,23 +3783,20 @@
       "url": "https://allevents.in/ramsey/ramsey-roadshow/200029986107724"
     },
     {
-      "title": "Behind the Scenes Tour of the Manx Museum’s Natural History Collections -FULLY BOOKED-",
+      "title": "Behind the Scenes Tour of the Manx Museum’s Natural History Collections",
       "venue": "Manx Museum, Douglas",
       "startDate": "2026-04-28",
-      "endDate": "2026-04-28",
+      "endDate": "2026-04-28T11:30:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.4791666666666667,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "What's on display is only a fraction of what we have. Come and see the rest!",
+      "description": "Join Manx National Heritage’s Curator of Natural History and take a look at the thousands of plants and animals that we hold in our stores. Learn about the research and conservation efforts linked to these invaluable specimens, how we look after them and their importance for our past and future. Meet in Manx Museum’s reception. Access: small rooms, stepped access, no seating. Maximum 6 people, so booking essential. For enquiries: laura.mccoy@mnh.im or call 01624 648022 Location: https://maps.app.goo.gl/DrwTFhxWbKek6Rxt7 , What3Words: ///cards.areas.lime",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2025/03/Pygmy-Shrew-1-550x477.jpg",
       "time": "11:00 – 12:30",
-      "price": "FULLY BOOKED",
-      "url": "https://manxnationalheritage.im/whats-on/detail/behind-the-scenes-tour-of-the-manx-museums-natural-history-collections/"
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/behind-the-scenes-tour-of-the-manx-museums-natural-history-collections/"
     },
     {
       "title": "LEARNAI: \"AI-Powered Pulses\" - Tues 28 April",
@@ -3857,41 +3850,17 @@
       "title": "Macro Photography: A Technical Field Walk",
       "venue": "Ballachurry Nature Reserve",
       "startDate": "2026-04-29",
-      "endDate": "2026-04-29",
+      "endDate": "2026-04-29T11:30:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.4791666666666667,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "Join Adam Morgan for a technical \"walk and talk\" and experiment with macro photography. This specialized workshop offers a rare opportunity to zoom in and appreciate features most don't get to see. You will learn how to capture the stunning, minute details of our Island's natural world.",
+      "description": "Join Adam Morgan for a technical \"walk and talk\" and experiment with macro photography. This specialized workshop offers a rare opportunity to zoom in and appreciate features most don't get to see. You will learn how to capture the stunning, minute details of our Island's natural world. We welcome photographers of all levels who want to move beyond basic snapshots and explore the mechanics of close-up photography in a “real world” environment. This workshop is designed for DSLR or Mirrorless camera users and is not suitable for phone photography. We will move at a “macro pace,” focusing on the small details that usually go unnoticed. This is a practical session where we troubleshoot the common hurdles of macro photography, including: Lighting in the Wild: Demonstration of how use flash and diffusers as well as how to use portable LED setups for still subjects and shaded areas. Stability & Focus: When to use a tripod for focus stacking versus handheld “sway” techniques for moving subjects. Optics & Settings: Advice on aperture “sweet spots,” avoiding diffraction, and managing paper-thin depth of field. Finding Subjects: Learning to spot the patterns, silhouettes, and “signs” of local Manx invertebrates and flora. What to bring: Your own camera gear (preferably a macro lens or “close-up” diopter filters are recommended). Your camera must have full manual settings. Lenses: Please bring a macro lens if you can. Otherwise, bring a lens capable of manual focus. A flash and diffuser if you have one. Sturdy, waterproof walking shoes and a rain jacket (we will carry on in light rain). A tripod is optional—bring it if you wish to practice focus stacking on still subjects. Gear Demo: I will be bringing my professional macro rig for demonstrations, along with a spare GH5 setup equipped with a 4x diopter. Attendees are welcome to try this kit to see how dedicated macro tools can change your workflow. Accessibility: We will be moving slowly with frequent stops. You should be comfortable standing for periods and potentially kneeling or leaning to reach subjects at ground level. Weather Contingency: In the event of heavy rain, we will utilize nearby shelter for a hands-on gear demonstration and a Q&A session on macro lighting and editing. Dogs: No dogs please, to ensure we don’t disturb delicate wildlife at ground level. Parking: Limited parking is available near the reserve entrance; please car-share where possible. Location: Close Sartfield (ASSI & Ramsar Site) Windmill Lane, Ballaugh Curragh, Ballaugh. OS Map Reference: SC358955, What 3 Words ///Symptom.Twinge.Raindrops , Google map: https://maps.app.goo.gl/Lq4Dry345gWWMwSNA For enquiries: adamamorgan@live.co.uk or 07624 486390",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/02Summer_Peel_0F9A7174_Froghopper_Leaf_Insect_Texture_Eyes_Macro_Wildlife1-550x477.jpeg",
       "time": "09:30 – 12:30",
-      "price": "£20",
-      "url": "https://manxnationalheritage.im/whats-on/detail/macro-photography-a-technical-field-walk/"
-    },
-    {
-      "title": "A Walk Through Time: our peatlands past and future",
-      "venue": "Beinn-Y-Phott",
-      "startDate": "2026-04-29",
-      "endDate": "2026-04-29",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Arts",
-        "Culture"
-      ],
-      "source": "manx national heritage",
-      "recurring": false,
-      "description": "Wander the ancient peat roads around Beinn-y-Phott, looking at the historical and cultural value of peatlands as well as the restoration work undertaken.",
-      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/border-550x477.png",
-      "time": "10.30 – 12.30",
-      "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/a-walk-through-time-our-peatlands-past-and-future/"
+      "price": "£12",
+      "url": "https://www.manxradio.com/community/event/macro-photography-a-technical-field-walk/"
     },
     {
       "title": "Peel Roadshow",
@@ -3910,25 +3879,52 @@
       "url": "https://allevents.in/peel/peel-roadshow/200029972318351"
     },
     {
-      "title": "Manx Wildlife Trust – Minibeast Magic",
-      "venue": "Onchan",
+      "title": "Manx Coffee Morning",
+      "venue": "Port St Mary Methodist Church (Mount Tabor)",
       "startDate": "2026-04-29",
-      "endDate": "2026-04-29",
+      "endDate": "2026-04-29T11:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Kids",
-        "Nature",
-        "Outdoors",
-        "Family"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.4583333333333333,
+      "tags": [],
+      "source": "manx radio",
       "recurring": false,
-      "description": "MWT Onchan Community Wetlands, offers a small piece of wild in the heart of Onchan! Come with us to study all kind of minibeasts and discover what lies under the leaf litter.",
+      "description": "Port St Mary WI invite you to their Manx themed Coffee Morning, celebrating the year of Manx Language. Coffee and bonnag will be served, stalls featuring homemade cakes, greetings cards, raffle and a Manx stall.",
+      "imageUrl": "",
+      "time": "10:00 – 12:00",
+      "price": "£2.00",
+      "url": "https://www.manxradio.com/community/event/manx-coffee-morning/"
+    },
+    {
+      "title": "A Walk Through Time: our peatlands past and future",
+      "venue": "Beinn-Y-Phott",
+      "startDate": "2026-04-29",
+      "endDate": "2026-04-29T11:30:00+00:00",
+      "isTbc": false,
+      "duration": 0.4791666666666667,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
+      "recurring": false,
+      "description": "Wander the ancient peat roads around Beinn-y-Phott, looking at the historical and cultural value of peatlands as well as the restoration work undertaken. Peatlands are a vital part of our landscape. Containing information about our prehistoric past, they are also a vital carbon store and flood defence that is home to rare species. Meet the DEFA officers in charge of making sure that our peatlands continue to be a functioning part of our island and let them tell you about their fascinating story. This walk will take in the summit of Beinn-y-Phott and will include very uneven ground. Participants will need sturdy footwear, ideally walking boots, warm and waterproof clothing, a drink and a snack. Unfortunately dogs are not permitted as this is a sensitive time of year for lambing and ground nesting birds. Parking will be at the Brandywell Road layby, on the Beinn-y-Phott Road, just off the A18 mountain road. Grid reference: SC389858, https://maps.app.goo.gl/X92efXyf5n9wC9vC9 , What3Words: ///altitudes.darkroom.coupon Book through the following link or the QR code: https://www.eventbrite.co.uk/e/a-walk-through-time-our-peatlands-past-and-future-tickets-1981430343496?aff=ebdssbdestsearch For enquiries: sarah.hickey@gov.im or tel: 203012",
+      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/border-550x477.png",
+      "time": "10:30 – 12:30",
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/a-walk-through-time-our-peatlands-past-and-future/"
+    },
+    {
+      "title": "Manx Wildlife Trust – Minibeast Magic",
+      "venue": "Mwt Onchan Community Wetlands",
+      "startDate": "2026-04-29",
+      "endDate": "2026-04-29T16:30:00+00:00",
+      "isTbc": false,
+      "duration": 0.6875,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
+      "recurring": false,
+      "description": "MWT Onchan Community Wetlands, offers a small piece of wild in the heart of Onchan! Come with us to study all kind of minibeasts and discover what lies under the leaf litter. You can access the wetlands either via Church Road or Derwent Drive in Onchan. On road parking available. The site has limited access for wheelchairs. The full path around the wetlands is not wheelchair accessible, however the position of the event will be. Dogs on leads allowed. This event is free and open to all, with no need to book. It is weather dependant, however, so please check the Manx Wildlife Trust Facebook page for any updates. What3Words: ///swinging.subsets.panther, Grid reference: SC400782, Google maps: https://maps.app.goo.gl/gQGZ9NYzjP6eQXRz8",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Watch-Posts-Email-4-550x477.jpg",
       "time": "15:30 – 17:30",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-wildlife-trust-minibeast-magic/"
+      "url": "https://www.manxradio.com/community/event/manx-wildlife-trust-minibeast-magic/"
     },
     {
       "title": "Pickleball Ladder League - State Sanctioned",
@@ -3953,22 +3949,17 @@
       "title": "Isle of Man Fungus Group – Managing your Garden for Fungi",
       "venue": "Imuseum, Kingswood Grove, Douglas, Im1 3Ly",
       "startDate": "2026-04-29",
-      "endDate": "2026-04-29",
+      "endDate": "2026-04-29T19:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.7916666666666666,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "Explore the role of fungi in the garden, learn about those which might be growing in your lawn and how you can encourage a rich diversity of beneficial and colourful fungi. A talk by Liz Charter, Chair of Isle of Man Fungus Group and waxcap specialist.",
+      "description": "Explore the role of fungi in the garden, learn about those which might be growing in your lawn and how you can encourage a rich diversity of beneficial and colourful fungi. A talk by Liz Charter, Chair of Isle of Man Fungus Group and waxcap specialist. Explore the role of fungi in the garden, learn about those which might be growing in your lawn and how you can encourage a rich diversity of beneficial and colourful fungi. A talk by Liz Charter, Chair of Isle of Man Fungus Group and waxcap specialist. Location: iMuseum, Kingswood Grove, Douglas. This venue is wheelchair accessible and there is disabled parking by the entrance. There is also on street parking in the vicinity or at Chester Street carpark. No need to book. For enquiries please contact: laura.mccoy@mnh.im What3Words: ///home.soon.tested ; Google Maps: https://maps.app.goo.gl/2T2M16dqrjkfm6Ue8",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/9df6ac6e-440f-426f-b7e7-bb53a7a58e2c-550x477.png",
       "time": "19:00 – 20:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/isle-of-man-fungus-group-managing-your-garden-for-fungi/"
+      "url": "https://www.manxradio.com/community/event/isle-of-man-fungus-group-managing-your-garden-for-fungi/"
     },
     {
       "title": "UkeJam (SOUTH)",
@@ -4012,20 +4003,17 @@
       "title": "Manx BirdLife – Nocturnal Nature",
       "venue": "Manx Birdlife Langness Nature Reserve",
       "startDate": "2026-04-29",
-      "endDate": "2026-04-29",
+      "endDate": "2026-04-29T21:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.875,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "Join us for a night walk through Manx BirdLife's Langness Nature Reserve.",
+      "description": "Listen to the dusk bird chorus, be on the lookout for bats and discover the magical world of moths as we put out a light trap and investigate what has flown in. Start and finish at Herring Tower Car Park – https://maps.app.goo.gl/mEuLFLdXSHQNaaRe7 and What3Words – https://w3w.co/accomplished.skidding.rhinos Approx. 2 mile walk on grass paths with some uneven terrain. Bring a torch; walking shoes are recommended. Binoculars and bat detectors available to borrow but you are welcome to bring your own. Not suitable for wheelchairs. Hot drinks and biscuits provided during the moth trap investigation. Booking essential – email: enquiries@manxbirdlife.im",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Poplar-Hawk-Moth-2026-02-20-Quellin-Images-550x477.png",
       "time": "20:00 – 22:00",
       "price": "£5,",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-birdlife-nocturnal-nature/"
+      "url": "https://www.manxradio.com/community/event/manx-birdlife-nocturnal-nature/"
     },
     {
       "title": "Neurodiversity at Work: Strength in Difference",
@@ -4063,46 +4051,36 @@
       "url": "https://allevents.in/douglas/communities-of-practice-esg/100001985358805632"
     },
     {
-      "title": "Manx Wildlife Trust – Rockpooling – All Ages",
+      "title": "Manx Wildlife Trust – Rockpooling – All Age",
       "venue": "Beach Ramp, At The Bottom Of Summerhill Road, Douglas",
       "startDate": "2026-04-30",
-      "endDate": "2026-04-30",
+      "endDate": "2026-04-30T17:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Family",
-        "Kids"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.7083333333333334,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "Everybody loves rockpooling, come to see what's on our seashore.",
+      "description": "Join the MWT education officer for a rockpooling afternoon in Douglas beach! Discover the wonders of marine biodiversity at low tide and prepare to be surprised with what lives in our Manx waters. Meet at Douglas Beach, accessed via a ramp opposite the end of Summer Hill Road. Disk parking available on the Promenade directly above the beach. Bring wellies and suitable clothing. This event is free with no need to book. It is weather dependant, however, so please check the Manx Wildlife Trust Facebook page for any updates. Location: What3Words: ///forms.works.dock , Google maps: https://maps.app.goo.gl/fruyN1VskGGTMqf47",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Watch-Posts-Email-3-550x477.jpg",
       "time": "16:30 – 18:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-wildlife-trust-rockpooling-all-ages/"
+      "url": "https://www.manxradio.com/community/event/manx-wildlife-trust-rockpooling-all-age/"
     },
     {
       "title": "Manx Wildlife Trust – Rainforest Under Construction",
       "venue": "Mwt Glion Darragh Nature Reserve, West Baldwin",
       "startDate": "2026-04-30",
-      "endDate": "2026-04-30",
+      "endDate": "2026-04-30T19:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.7916666666666666,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "How can we create a temperate rainforest that can be sustained through the generations? Find out here!",
+      "description": "Enjoy a look around one of Manx Wildlife Trust’s newest nature reserves and have a two-hour guided walk through Glion Darragh Nature Reserve in West Baldwin. Wear suitable footwear for a walk over some rough ground and moderate slopes. Dogs allowed. Numbers limited, please book to reserve a place: https://buytickets.at/mwt/2127760. Location: Park at layby at bottom of track, grid reference: SC3532 8115, W3W: ///prepped.salty.individually , Google Maps: https://maps.app.goo.gl/uZxbDth9ZqzyYWdM7",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/4274ccd6-b0dc-4d7b-8bbd-9bae0baccc68-550x477.jpg",
       "time": "18:00 – 20:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-wildlife-trust-rainforest-under-construction/"
+      "url": "https://www.manxradio.com/community/event/manx-wildlife-trust-rainforest-under-construction/"
     },
     {
       "title": "BBQ Master class",
@@ -4124,22 +4102,17 @@
       "title": "Nest Monitoring on the Ayres",
       "venue": "Mwt Ayres Nature Discovery Centre",
       "startDate": "2026-04-30",
-      "endDate": "2026-04-30",
+      "endDate": "2026-04-30T19:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.7916666666666666,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
       "recurring": false,
-      "description": "The Ayres is home to some of the Island's most important bird populations. Find out how we monitor and protect them.",
+      "description": "Meet the DEFA Ayres Warden and learn about nest monitoring on the Ayres NNR – why, where, how, legislation and safe practices. Location: Manx Wildlife Trust’s Ayres Nature Discovery Centre, Ayres NNR, Ballaghennie. What3Words: ///winded.plush.absorber, grid reference: NX435038 , Google maps: https://maps.app.goo.gl/b6VXvWKN6g4XHF2s5 Enquiries: ecopolicy@gov.im or 651577",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/OC-and-chick-cropped-550x477.jpg",
       "time": "18:30 – 20:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/nest-monitoring-on-the-ayres/"
+      "url": "https://www.manxradio.com/community/event/nest-monitoring-on-the-ayres/"
     },
     {
       "title": "An Evening with Kevin Sinfield CBE.",
@@ -4197,22 +4170,17 @@
       "title": "Manx BirdLife – Morning Bird Song",
       "venue": "Tynwald National Park And Arboretum",
       "startDate": "2026-05-01",
-      "endDate": "2026-05-01",
+      "endDate": "2026-05-01T09:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage & visit isle of man",
+      "duration": 0.375,
+      "tags": [],
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Join us for a morning walk through Tynwald National Park and Arboretum to listen out for Spring bird song as the breeding season begins. Learn how to identify species by song such as Great Tit, Chaffinch, Robin and Song Thrush.",
+      "description": "Join us for a morning walk through Tynwald National Park and Arboretum to listen out for Spring bird song as the breeding season begins. Learn how to identify species by song such as Great Tit, Chaffinch, Robin and Song Thrush. Start and finish at Tynwald National Park and Arboretum car park – https://maps.app.goo.gl/GU13CSUvpxAdvfpR6 What3Words///funnels.clad.eggs. Approx. 2 mile walk on grass paths with some slopes and uneven terrain, so not suitable for wheelchairs. Walking shoes are recommended, binoculars are available to borrow but you are welcome to bring your own. You are welcome to join Manx BirdLife staff for a chat and cuppa at Greens Cafe after the walk. Booking essential – email: enquiries@manxbirdlife.im",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Robin-Alex-King-Ramsey1-550x477.jpg",
       "time": "08:00 – 10:00",
       "price": "£5,",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-birdlife-morning-bird-song/"
+      "url": "https://www.manxradio.com/community/event/manx-birdlife-morning-bird-song/"
     },
     {
       "title": "Expedition Limitless: Conference of Human Performancevia The Children's Centre",
@@ -4237,20 +4205,17 @@
       "title": "Wildflower Seed Paper Making",
       "venue": "Manx Museum, Douglas",
       "startDate": "2026-05-01",
-      "endDate": "2026-05-01",
+      "endDate": "2026-05-01T11:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "manx national heritage & visit isle of man",
+      "duration": 0.4583333333333333,
+      "tags": [],
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Celebrate Wildlife Week in a hands-on, creative way by connecting with nature through making. You’ll discover more about native wildflowers and learn the traditional craft of papermaking from the Manx Museum's very own Paper Conservator, Emma Le Cornu",
+      "description": "Celebrate Wildlife Week in a hands-on, creative way by connecting with nature through making. You’ll discover more about native wildflowers and learn the traditional craft of papermaking from the Manx Museum's very own Paper Conservator, Emma Le Cornu. We’ll be recycling paper scraps into unique handmade paper sheets, supporting sustainability and experiencing a fun, creative and calming process. You’ll leave with at least four sheets of handmade paper, perfect for creating cards, envelopes, invitations and more. When you’re ready, return your creation to the earth by planting it in a pot or garden and watching your seeds grow. All equipment and materials are provided. You’re also welcome to bring your own paper scraps such as tissue paper, coloured paper, printer paper offcuts or even leaves and flowers to embed in your custom handmade sheets. The event is being held in the Manx Museum; there is a lift to the room the event is being held in and there is an access guide here for more detail. The main museum carpark has a small number of spaces and disabled parking in front of the main entrance. Chester Street carpark offers more reliable parking options and is accessible by the footbridge. Location: https://maps.app.goo.gl/jgwZBDJgQAJdkFEP6 , What3Words: ///cards.areas.lime For more information: emma.lecornu@mnh.im or 648029",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/389ec0fa-3cd3-4181-97fe-d5d006b8a6ca-1-550x477.jpg",
       "time": "10:30 – 12:00",
       "price": "£20",
-      "url": "https://manxnationalheritage.im/whats-on/detail/wildflower-seed-paper-making/"
+      "url": "https://www.manxradio.com/community/event/wildflower-seed-paper-making/"
     },
     {
       "title": "Gloucester Wild Food Foraging Walk/Course",
@@ -4425,23 +4390,36 @@
       "url": "https://www.manxradio.com/community/event/friends-of-the-earth-garden-tips-for-drought-and-flooding/"
     },
     {
-      "title": "Isle of Man Invertebrate Group – Wetland Wonders",
-      "venue": "Curraghs Wildlife Park",
+      "title": "Onchan Horticultural Society Coffee Morning",
+      "venue": "Elim Family Centre",
       "startDate": "2026-05-02",
-      "endDate": "2026-05-02",
+      "endDate": "2026-05-02T11:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "manx national heritage",
+      "duration": 0.4583333333333333,
+      "tags": [],
+      "source": "manx radio",
       "recurring": false,
-      "description": "Come bug hunting with us!",
+      "description": "Onchan Horticultural Society Coffee Morning Bedding plant stall, cake stall, raffle, bring & buy",
+      "imageUrl": "",
+      "time": "10:30 – 12:00",
+      "price": "£2",
+      "url": "https://www.manxradio.com/community/event/onchan-horticultural-society-coffee-morning10/"
+    },
+    {
+      "title": "Isle of Man Invertebrate Group – Wetland Wonders",
+      "venue": "The Curraghs Wildlife Park",
+      "startDate": "2026-05-02",
+      "endDate": "2026-05-02T14:00:00+00:00",
+      "isTbc": false,
+      "duration": 0.5833333333333334,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
+      "recurring": false,
+      "description": "The Manx Wildlife Trust’s Invertebrate Group are joining forces with Curraghs Wildlife Park to help raise awareness of EAZA’s Wetlands for life Campaign, which is running this year (European Association of Zoos and Aquaria). Wetlands are some of our most threatened habitats, disappearing three times faster than forests. This unsung habitat is so important for flood protection, improving water quality and providing biodiverse hot spots. Come and meet some fascinating invertebrates adapted to life in the wet. And discover the Park’s more exotic wetland creatures and our own specialised creatures living on the Island. The Invertebrate Group will provide a public drop-in event for Wildlife Park visitors of all ages to experience the mini-world of invertebrates using microscopes and hand lenses. Volunteers will guide invertebrate forays into the Curragh wetland and will be on hand to help identify and learn about the creatures we find. Find us at the Wildlife Park school room and adjacent Curragh wetland. There’s plenty of parking at the Wildlife Park – Usual admission fees to the Wildlife Park will apply. Bring footwear for wet paths and Curragh if you want to join in the wetland forays (wellies, walking boots). Wheelchair access along paths, short walks along park trails. Refreshments are available in café adjacent to the school room. For more info on the Park and ticket prices: https://www.curraghswildlifepark.im/ For general enquiries: 897323 or dawn.c.colley@gmail.com Location: Google Maps: https://maps.app.goo.gl/qFMCtPQbVA9fZ2Qr9 , What3Words: ///excite.patiently.mealtime",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/118891206_4489487531091193_8975366466010770795_n-550x477.jpg",
       "time": "11:00 – 15:00",
       "price": "Wildlife Park entrance fee",
-      "url": "https://manxnationalheritage.im/whats-on/detail/isle-of-man-invertebrate-group-wetland-wonders/"
+      "url": "https://www.manxradio.com/community/event/isle-of-man-invertebrate-group-wetland-wonders/"
     },
     {
       "title": "Manx National Heritage",
@@ -4550,6 +4528,22 @@
       "url": "https://allevents.in/douglas/t-fest-2026-the-return-of-the-jurassic-sprint/200029828856328"
     },
     {
+      "title": "The life and times of Illiam Dhone",
+      "venue": "Guild Room Adjoining Peel Methodist Church, Atholl Street, Peel",
+      "startDate": "2026-05-02",
+      "endDate": "2026-05-02T15:00:00+00:00",
+      "isTbc": false,
+      "duration": 0.625,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "The death of Illiam Dhone is a well-known event in Manx history. Less well-known is the lifetime of the man who suffered that fate. Cori Philips has been looking into the life and times of Illiam Dhone and gives a presention about the man before his untimely death before a firing squad. Cori's presentation will be followed by a chance for a cooish over light refreshments.",
+      "imageUrl": "",
+      "time": "14:30 – 16:00",
+      "price": "£3",
+      "url": "https://www.manxradio.com/community/event/the-life-and-times-of-illiam-dhone/"
+    },
+    {
       "title": "Met Opera: Eugene Onegin (Tchaikovsky)",
       "venue": "Erin Arts Centre",
       "startDate": "2026-05-02",
@@ -4641,38 +4635,33 @@
       "title": "Bat Walk at Silverdale Glen",
       "venue": "Silverdale Glen",
       "startDate": "2026-05-02",
-      "endDate": "2026-05-02",
+      "endDate": "2026-05-02T21:30:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning",
-        "Nature",
-        "Outdoors"
-      ],
-      "source": "manx national heritage & visit isle of man",
+      "duration": 0.8958333333333334,
+      "tags": [],
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Here's your chance to see and hear some of the Island's special nocturnal residents.",
+      "description": "An introductory talk about bats followed by a walk around Silverdale Glen where we hope you will see and, with the aid of a bat detector, hear bats. The event will last around 2 hours. Please wear sensible shoes as some of the paths we will be walking on will be a bit rough. Please note that we are walking in the dark, but would ask that attendees refrain from using torches as this will ruin people’s night vision and spoil your experience. The event is weather dependent and will be cancelled if it is raining or too cold / windy. Cancelation will be published on the Manx Bat Group Facebook page no later than 18:30 on the day of the walk, so please check the page before setting out if the weather looks unsuitable. Children must be accompanied by a responsible adult. For more information contact: info@manxbatgroup.org. Meet in the new Silverdale Car Park off the A3 Castletown to Foxdale road (not the small parking area by the Café). What3Words: ///mass.prep.reroute , Google Maps: https://maps.app.goo.gl/Z2gfbK5fkDpXDzZj6",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Daubenton-over-water1-550x477.jpg",
       "time": "20:30 – 22:30",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/bat-walk-at-silverdale-glen/"
+      "url": "https://www.manxradio.com/community/event/bat-walk-at-silverdale-glen/"
     },
     {
       "title": "Ballaugh Old Church Dawn Chorus and Concert!",
-      "venue": "Ballaugh Old Church",
+      "venue": "St Mary De Ballaugh Church",
       "startDate": "2026-05-03",
-      "endDate": "2026-05-03",
+      "endDate": "2026-05-03T07:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
+      "duration": 0.2916666666666667,
       "tags": [],
-      "source": "manx national heritage & visit isle of man",
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Dawn chorus, meditation, breakfast and a concert, what more could you ask for?",
+      "description": "Enjoy the peace and tranquillity of this iconic church and its surrounding birdlife. Join us for a warm welcome drink and a short, guided breathing meditation, then into the churchyard to hear the birds waken in real time. With Manx Wildlife Trust on hand to discuss the various bird calls and answer any questions, you can get a real understanding of local birdlife. Then hot breakfast is available and enjoy an extraordinary performance by renowned composer Eleri Morgan who will perform live. Eleri’s work is a regular feature of Radio 3 and BBC Sounds, her distinctive style embodies serene, reflective moods, a perfect conclusion to an extraordinary dawn experience. Warm drinks are available free and breakfast is available for a donation, all money raised goes to supporting Ballaugh Old Church, cash and Sum up payments available. Parking is available on the rural roads around the church. Please dress warmly and bring clothes suitable for the weather conditions, the event will go ahead regardless of rain. Some seating is available but please bring a folding chair if you definitely require seating. The churchyard is not wheelchair accessible unfortunately and no dogs are allowed. St Mary’s Ballaugh Old Church, Cronk Road, Ballaugh (by Ballaugh Beach). Event enquiries: foballaughoc@yahoo.com Location: https://maps.app.goo.gl/vpMXKyCieeKsbSqb9 , What3Words: ///audibly.toasting.eats To check for updates, please go to the Facebook page: https://www.facebook.com/people/Friends-Of-Ballaugh-Old-Church/100090684240645/#",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/a5119f6b-54b7-4a2c-8b94-bb5433d27c29-550x477.jpg",
       "time": "05:15 – 08:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/ballaugh-old-church-dawn-chorus-and-concert/"
+      "url": "https://www.manxradio.com/community/event/ballaugh-old-church-dawn-chorus-and-concert/"
     },
     {
       "title": "FIM Capital Harbour2Harbour Walk 2026",
@@ -4692,19 +4681,19 @@
     },
     {
       "title": "Manx Wildlife Trust – Onchan Wetlands Meditation and Guided Walk",
-      "venue": "Onchan Wetlands",
+      "venue": "Onchan Community Wetlands",
       "startDate": "2026-05-03",
-      "endDate": "2026-05-03",
+      "endDate": "2026-05-03T10:30:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
+      "duration": 0.4375,
       "tags": [],
-      "source": "manx national heritage & visit isle of man",
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Join the local community group who manage the reserve for relaxation and exploration of this wildlife refuge in the heart of Onchan.",
+      "description": "Join the local community group who manage the reserve for relaxation and exploration of this wildlife refuge in the heart of Onchan. MWT Onchan Community Wetlands, offers a small piece of wild in the heart of Onchan! Full of twisted willows, dangling ivy and deep swamps this little site attracts an abundance of birds for its suburban location. Join us with a relaxing Sunday morning meditation and guided walk through the wetlands and find out more about the recent improvements and ongoing plans. A great opportunity to enjoy this unique Manx Wildlife Trust Reserve in the heart of Onchan. Refreshments will be served. Parking is limited in local housing estate so please try to limit car usage. Walkway is mixture of gravel paths and wooden decking however tarmac path on edge of wetlands and can view and experience from here and seating available. You can access the wetlands either via Church Road or Derwent Drive in Onchan. Dogs on leads allowed. This event is free with no need to book. It is weather dependant, however, so please check the Manx Wildlife Trust Facebook page for any updates. Hot drinks provided as well as some chairs (although please bring your own camping chair if you can). Looking forward to seeing you there! Enquiries: enquiries@mwt.im or 844432 You can access the wetlands either via Church Road or Derwent Drive in Onchan. On road parking available. The site has limited access for wheelchairs. The full path around the wetlands is not wheelchair accessible, however the position of the event will be. Dogs on leads allowed. What3Words: ///swinging.subsets.panther, Grid reference: SC400782, Google maps: https://maps.app.goo.gl/gQGZ9NYzjP6eQXRz8",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Sandra-Kaighin-credit-550x477.jpg",
       "time": "10:00 – 11:30",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-wildlife-trust-onchan-wetlands-meditation-and-guided-walk/"
+      "url": "https://www.manxradio.com/community/event/manx-wildlife-trust-onchan-wetlands-meditation-and-guided-walk/"
     },
     {
       "title": "Harbour 2 Harbour Walk",
@@ -4935,19 +4924,19 @@
     },
     {
       "title": "Manx Whale and Dolphin Watch – Sea Watch at the Sound",
-      "venue": "The Sound By The Calf Of Man",
+      "venue": "The Sound",
       "startDate": "2026-05-04",
-      "endDate": "2026-05-04",
+      "endDate": "2026-05-04T12:00:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
+      "duration": 0.5,
       "tags": [],
-      "source": "manx national heritage & visit isle of man",
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Sea Watches at the Sound 2026 MWDW Sea Watches at the Sound are back for 2026 and we are delighted to collaborate with Manx BirdLife once again. Join us monthly at the Sound to look out for whales, dolphins, porpoises, basking sharks, seals and sea birds. We have binoculars to borrow, but please bring your own camping chair or picnic blanket and snacks! There is no need to book, just turn up and stay for as long or as little as you like. Times are slightly different this year, designed to coincide with the 8s bus service which runs from Peel to the Sound. We hope this will enable more people to join us, reduce emissions and reduce the number of parked cars on the road down to the Sound at busy times. The only date we are keeping as 11am-1pm is Bank holiday Monday 4th May which is an additional event for Manx Wildlife Week. Additional dates will be added as and when the weather allows. Sea watches are subject to cancellation in poor weather. Keep notified via the Facebook page. All dates are Sunday's except the Early May Bank Holiday Monday 4th May (Bank Holiday) 11am-1pm 17th May 14:30-16:30 14th June 10:30-12:30 19th July 14:30-16:30 16th August 10:30-12:30 13th September 14:30-16:30 Also check out other Trips & Adventurous Activities in Castletown.",
-      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czEwL2Jhbm5lcnMvYTQwYmNiMmE1YjZlMDVhNThiNWFhMGM4NjUyNTU0MWI5ZDZiYjcxODg4ZTYzNzlmYzdiN2NjODQzYjVjN2UwMC1yaW1nLXcxMjAwLWgxMDY5LWRjNzY3NjQ1LWdtaXI_dj0xNzc1ODA1NDg3.avif",
+      "description": "Join Manx Whale and Dolphin Watch and Manx BirdLife at the Sound to look out for whales, dolphins, porpoises, basking sharks, seals and sea birds. We will have binoculars to borrow, but please bring your own camping chair or picnic blanket and snacks! There is no need to book, just turn up, look out for the MWDW flag and stay for as long or as little as you like. Event is subject to cancellation in poor weather, notice of which will go on Facebook or you can phone MWDW ahead on the day. There is parking at the Sound which may overflow onto the road if busy. Drop in or leave at any time between 11am and 1pm, free to take part, though donations to Manx Whale and Dolphin Watch are very welcome. For enquiries email info@mwdw.net or call 610131. What3Words: ///skipping.bibs.armband , Google Maps: https://maps.app.goo.gl/qhdE9mikJAT5Cpz6A",
+      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Public-watch-4-550x477.jpg",
       "time": "11:00 – 13:00",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/manx-whale-and-dolphin-watch-sea-watch-at-the-sound/"
+      "url": "https://www.manxradio.com/community/event/manx-whale-and-dolphin-watch-and-manx-birdlife-sea-watch-at-the-sound/"
     },
     {
       "title": "Ramsey Motorcycle Show 2026",
@@ -5001,17 +4990,17 @@
       "title": "Get to Know Your Terns",
       "venue": "Mwt Ayres Nature Discovery Centre",
       "startDate": "2026-05-04",
-      "endDate": "2026-05-04",
+      "endDate": "2026-05-04T14:30:00+00:00",
       "isTbc": false,
-      "duration": 0.0,
+      "duration": 0.6041666666666666,
       "tags": [],
-      "source": "manx national heritage & visit isle of man",
+      "source": "manx radio & manx national heritage & visit isle of man",
       "recurring": false,
-      "description": "Did you know we have three types of tern that use the Isle of Man to have their chicks and they all nest up at the Ayres? Meet the DEFA Biodiversity Warden who can tell you all about the Common Tern, Arctic Tern and Little Tern and, if the weather behaves, also try and spot them. We also have an additional species that regularly visits the Isle of Man, the Sandwich tern and a rare visitor, Roseate Terns!",
+      "description": "Did you know we have three types of tern that use the Isle of Man to have their chicks and they all nest up at the Ayres? Meet the DEFA Biodiversity Warden who can tell you all about the Common Tern, Arctic Tern and Little Tern and, if the weather behaves, also try and spot them. We also have an additional species that regularly visits the Isle of Man, the Sandwich tern and a rare visitor, Roseate Terns! Meet the DEFA Ayres Warden and learn about the four tern species regularly seen on the Isle of Man and how they live side by side on the Ayres NNR, followed by a tern watch from Manx Wildlife Trust’s view tower (weather dependant). For enquiries: ecopolicy@gov.im or 651577 Location: Manx Wildlife Trust’s Ayres Nature Discovery Centre, Ayres NNR, Ballaghennie. What3Words: ///winded.plush.absorber, grid reference: NX435038, Google Maps: https://maps.app.goo.gl/W3z2HcHebjZeEDQJ6",
       "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/03/Terns-cropped-550x477.jpg",
       "time": "14:30 – 15:30",
       "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/get-to-know-your-terns/"
+      "url": "https://www.manxradio.com/community/event/get-to-know-your-terns/"
     },
     {
       "title": "Summer Singers",
@@ -5681,6 +5670,22 @@
       "time": "14:00 – 16:00",
       "price": "No Charge",
       "url": "https://www.manxradio.com/community/event/political-surgery-douglas-central/"
+    },
+    {
+      "title": "Brass Band Pop Up",
+      "venue": "House Of Manannan, Peel",
+      "startDate": "2026-05-10",
+      "endDate": "2026-05-10",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "manx national heritage",
+      "recurring": false,
+      "description": "Live brass music for a relaxed Sunday afternoon.",
+      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/04/Crosby-and-District-Silver-Band-550x477.jpeg",
+      "time": "2.30pm",
+      "price": "Free",
+      "url": "https://manxnationalheritage.im/whats-on/detail/brass-band-pop-up/"
     },
     {
       "title": "Sprint Triathlon (Teams & Individuals)",
@@ -8301,7 +8306,7 @@
       "tags": [],
       "source": "allevents (castletown)",
       "recurring": false,
-      "description": "Taste of Cairo Dinner Show The Taste of Cairo Dinner Show is a stunning and unique, two part professional production with up to 6 dancers that showcases the diverse and vibrant range of dance that the Middle East and beyond has to offer. Dance is an art form enjoyed by all genders and ages, young and old alike, and it is an integral part of the Middle Eastern culture, our goal is to bring the vibrancy and vivaciousness of Arabic and Mediterranean dance and music in its many forms and styles. The Show INCLUDES a fabulous Dinner BUFFET. Self Serve MENU: STARTERS: Halloumi and honey salad Hummus and pitta bread Taktouka salad Spring rolls in sweet chilli and ginger sauce Samosas in tzatziki sauce Spicy Moroccan tortilla Moroccan harira soup MAINS: Meatballs tajine Lamd and peach tajine Roast chicken in pickled lemon and olive sauce Vegetarian couscous Zucchini and aubergine mossaka DESSERT: Warm pistachio and cinnamon baklavas in a warm honey and yogurt sauce You may also like the following events from RS Promotions:This Saturday, 4th April, 08:00 pm, THE ILLEGAL EAGLES Celebrating The Music of the Legendary EAGLES in DouglasThis June, 26th June, 07:30 pm, Taste of Cairo Dinner Show in CastletownThis July, 18th July, 08:00 pm, Definitely OASIS at the Villa Marina, Douglas, Isle of Man in DouglasAlso check out other Arts events in Castletown.",
+      "description": "A Taste of Cairo Dinner Show in Port Erin The Taste of Cairo Dinner Show is a stunning and unique, two part professional production with up to 6 dancers that showcases the diverse and vibrant range of dance that the Middle East and beyond has to offer. Dance is an art form enjoyed by all genders and ages, young and old alike, and it is an integral part of the Middle Eastern culture, our goal is to bring the vibrancy and vivaciousness of Arabic and Mediterranean dance and music in its many forms and styles. The Show INCLUDES a fabulous Dinner BUFFET. Self Serve MENU: STARTERS: Halloumi and honey salad Hummus and pitta bread Taktouka salad Spring rolls in sweet chilli and ginger sauce Samosas in tzatziki sauce Spicy Moroccan tortilla Moroccan harira soup MAINS: Meatballs tajine Lamd and peach tajine Roast chicken in pickled lemon and olive sauce Vegetarian couscous Zucchini and aubergine mossaka DESSERT: Warm pistachio and cinnamon baklavas in a warm honey and yogurt sauce EVENT TIMINGS: Doors Open 7.00pm Buffet. 7.30pm Show (1st set) 8.30pm Interval Show (2nd set) 9.30pm Finish (Approx) 10.20pm You may also like the following events from RS Promotions:This June, 26th June, 07:30 pm, A Taste of Cairo Dinner Show in Port Erin in CastletownThis June, 27th June, 01:00 pm, Open Level Belly Dancing Class at Sami's Bradda Glen, Port Erin in CastletownThis July, 18th July, 08:00 pm, Definitely OASIS at the Villa Marina, Douglas, Isle of Man in DouglasAlso check out other Arts events in Castletown.",
       "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy82MjA1MWQ1MDQ1OWU1MTIzZDU3MTUzMzI1N2U3NTFiZGM4YjM2ZTM5YWRhYmI5ODkxYzVkNTk2NmU4MjQ2MTBkLXJpbWctdzYwMC1oNjAwLWRjNGIwMjJlLWdtaXI_dj0xNzc1MjE4NTQ3.avif",
       "time": "19:30 – 22:30",
       "price": "",
@@ -8892,6 +8897,22 @@
       "url": "https://www.manxradio.com/community/event/isle-of-man-orienteering-klubb-summer-evening-come-and-try-urban-orienteering-activity-castletown/"
     },
     {
+      "title": "The Grove Grand Sports Day",
+      "venue": "The Grove, Ramsey",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-11T15:00:00+00:00",
+      "isTbc": false,
+      "duration": 0.625,
+      "tags": [],
+      "source": "manx radio & manx national heritage",
+      "recurring": false,
+      "description": "The Grove Grand Sports Day Step into a traditional sports day set against the elegant backdrop of The Grove. With Victorian gardens and open lawns all around, it’s the perfect setting for a day of relaxed competition and laughter. Take to the same lawns once enjoyed by the Gibb family and join in classic races that never get old. Balance your way through the egg and spoon race, team up for the three-legged sprint, or pull together in a lively tug-of-war. Expect plenty of light-hearted rivalry, from wheelbarrow races to simple games that bring out everyone’s competitive side. With heritage surroundings and space to roam, it’s outdoor fun the way it used to be. Bring your friends or family, your picnic, and enjoy a proper garden sports day.",
+      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/04/SD2-e1776782608281-550x477.png",
+      "time": "13:00 – 16:00",
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/the-grove-grand-sports-day/"
+    },
+    {
       "title": "Come From Away",
       "venue": "Gaiety Theatre, Isle Of Man",
       "startDate": "2026-07-11",
@@ -8906,22 +8927,6 @@
       "time": "19:30 – 21:15",
       "price": "",
       "url": "https://allevents.in/douglas/come-from-away/200029533215940"
-    },
-    {
-      "title": "The Grove Grand Sports Day",
-      "venue": "The Grove, Ramsey",
-      "startDate": "2026-07-11",
-      "endDate": "2026-07-11",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [],
-      "source": "manx national heritage",
-      "recurring": false,
-      "description": "A good old-fashioned Sports Day for the whole family to enjoy!",
-      "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/04/SD2-e1776782608281-550x477.png",
-      "time": "1pm – 4pm",
-      "price": "Free",
-      "url": "https://manxnationalheritage.im/whats-on/detail/the-grove-grand-sports-day/"
     },
     {
       "title": "Manx Wildlife Trust Festival of the Sea",
@@ -9439,6 +9444,22 @@
       "time": "11:00",
       "price": "Adults £7 return / Children £3.50 return",
       "url": "https://www.ggr.org.uk/timetable"
+    },
+    {
+      "title": "☆ Sketch on the Beach! Saturday Special ☆✍🥂🎨🌊❤",
+      "venue": "Port Erin Beach Huts",
+      "startDate": "2026-07-26",
+      "endDate": "2026-07-26",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "allevents (castletown)",
+      "recurring": false,
+      "description": "☆ Sketch on the Beach! Saturday Special ☆✍🥂🎨🌊❤ Why not join us for a jolly at Port Erin Beach Huts!? 🏠✍🎨🍾🥂🍪🥪☕🍓✍🎨🍾🥂 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊 Let your hair down & relax with a full day of sketching / painting on the Beach with a warm & friendly group. Bring your own mini-set of favourite Art materials - a sketch book, pencils, pastels, paints etc. Sketching materials will also be available for you. Please note, if the weather is nice we can paint on the beach, but no paint allowed inside the hut please (to avoid unhappy accidents!)🤪💦✍🎨 A light picnic style lunch will be provided, including fruit & snacks, lashings of tea & coffee & a comp glass of fizz! 🥰☕🍪🥪🍓🍾🥂 Be prepared for all manx weather conditions! Bring a light waterproof jacket, comfortable shoes, or.... *fingers crossed* sunscreen! 😎🙏🌞🌞🌞 or even...a swimming costume!! 👙 On - Sunday 26th July, 11:30am - 4:30pm 🩷 At - Port Erin Beach Huts Hut 3 - The Seaside Hut 🏠🌊 Hut 4 - The Tiki Bar 🥂🏝 Soak up the good vibes of the beach and the beautiful sweep of the bay, how will YOU sketch / paint it? There are many positives to painting in a group - a sense of community with like-minded folk, a sharing of techniques & tips, and you'll likely feel more motivated to keep learning / adding to your skills or just simply paint for the pleasure of it. Join us & feel brave and playful, loose and expressive! 🩷 Added benefit - feel the mood boost! ☺️ ☆ Note - spaces are limited (For 12 special people!) ✨️✨️✨️ To book - £85 in advance secures your place. Please DM for payment info 🩷 See you on the beach!?😊🏠❤🥂✍🎨🌊🌊🌊 Also check out other Arts events in Castletown, Fine Arts events in Castletown, Sports events in Castletown.",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czYvYmFubmVycy8wZWU0NzNiZGI0YTBkYTI4ZTMzZmIwMTE2YWIwMzJmZDNmZDlhMzcyMjRhZjM4YThjMGZlMTQ1YWM5YTM2YzhlLXJpbWctdzEwNjQtaDk2Ni1kY2ZmZmZmZS1nbWlyP3Y9MTc3NzM3MDk5MA.avif",
+      "time": "11:30 – 16:30",
+      "price": "",
+      "url": "https://allevents.in/castletown/☆-sketch-on-the-beach-saturday-special-☆/200029996669850"
     },
     {
       "title": "Shakespeare's Macbeth - Rushen Abbey",
