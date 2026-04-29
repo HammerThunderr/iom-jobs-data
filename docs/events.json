@@ -1,8 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-29T14:07:00.070433+00:00",
-  "lastUpdated": "14:07 UTC",
-  "totalCount": 712,
+  "fetchedAt": "2026-04-29T16:11:14.298477+00:00",
+  "lastUpdated": "16:11 UTC",
+  "totalCount": 717,
   "categories": {
     "Kids": 80,
     "Things to Do": 89,
@@ -23,6 +23,7 @@
     "Family": 11,
     "Social": 1,
     "Nightlife": 1,
+    "Indoor": 18,
     "Motorsport": 62
   },
   "events": [
@@ -281,6 +282,54 @@
       "time": "20:00",
       "price": "£31",
       "url": "https://www.villagaiety.com/whats-on/the-drifters/"
+    },
+    {
+      "title": "Mad Daddy",
+      "venue": "Villa Marina Promenade Suite - Free Entry",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/jvm8h8vowalb97bo5vh3pld2nzx1",
+      "time": "20:30",
+      "price": "",
+      "url": "https://www.villagaiety.com/whats-on/mad-daddy/"
+    },
+    {
+      "title": "The Totally 80s Band",
+      "venue": "Villa Marina Promenade Suite - Free Entry",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/aeo5fjnjej0gzkedadh25p7ds3uv",
+      "time": "20:30",
+      "price": "",
+      "url": "https://www.villagaiety.com/whats-on/the-totally-80s-band/"
+    },
+    {
+      "title": "Awesome Party Band",
+      "venue": "Villa Marina Promenade Suite - Free Entry",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/g3nqx3l76kowcjoqca9k1xmrx0v0",
+      "time": "20:30",
+      "price": "",
+      "url": "https://www.villagaiety.com/whats-on/awesome-party-band/"
     },
     {
       "title": "Reminders of Him",
@@ -3956,6 +4005,22 @@
       "url": "https://www.villagaiety.com/whats-on/the-great-gatsby-f-scott-fitzgerald/"
     },
     {
+      "title": "AGM, followed by Folklore Sites of the Isle of Man",
+      "venue": "St Mary'S On The Harbour, Castletown",
+      "startDate": "2026-04-29",
+      "endDate": "2026-04-29",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "allevents (castletown)",
+      "recurring": false,
+      "description": "AGM, followed by Folklore Sites of the Isle of Man The AGM at 7.15pm will be followed at 7.30pm by James Franklin's look at some of the folklore sites of the Isle of Man, many of which feature in the book published recently by Culture Vannin",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czUvYmFubmVycy9lMWRiOWIzNGUyY2I0MzQxYjU0YTcyMmM1Y2EyNzIyNDc0NjM2ZmViNmNhZmQwYjc1NTg4NmVhYjc5NDNkNDNmLXJpbWctdzQyMC1oMjgwLWRjMTgxODE3LWdtaXI_dj0xNzU3MDI0Mjkw.avif",
+      "time": "19:30",
+      "price": "",
+      "url": "https://allevents.in/castletown/agm-followed-by-folklore-sites-of-the-isle-of-man/200028179027303"
+    },
+    {
       "title": "Manx BirdLife – Nocturnal Nature",
       "venue": "Manx Birdlife Langness Nature Reserve",
       "startDate": "2026-04-29",
@@ -3986,6 +4051,22 @@
       "time": "09:00",
       "price": "",
       "url": "https://allevents.in/douglas/neurodiversity-at-work-strength-in-difference/200029959428010"
+    },
+    {
+      "title": "Port Erin Roadshow",
+      "venue": "Erin Arts Centre",
+      "startDate": "2026-04-30",
+      "endDate": "2026-04-30",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "allevents (castletown)",
+      "recurring": false,
+      "description": "Port Erin Roadshow Selling Your Stuff Couldn't Be Easier! You may also like the following events from Vintage Cashout:This Tuesday, 28th April, 10:00 am, Ramsey Roadshow in RamseyThis Wednesday, 29th April, 10:00 am, Peel Roadshow in Peel",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czgvYmFubmVycy85ZDgzZTFmMGE3MTBlYWQ2ZDA0N2M2OGY3OGI2Yjc5NWU3ODdhY2RhYTE3MTM5OWRhYTY5NmQ4ZjQ1NjcwNzU4LXJpbWctdzEwODAtaDEzNTAtZGNmZmZmZmYtZ21pcj92PTE3NzY5NDc5NTE.avif",
+      "time": "10:00 – 15:00",
+      "price": "",
+      "url": "https://allevents.in/castletown/port-erin-roadshow/200029980514011"
     },
     {
       "title": "Communities of Practice: ESG",
@@ -5080,7 +5161,9 @@
       "endDate": "2026-05-06",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "EAC Book Circle: The Immortal Life of Henrietta Lacks by Rebecca Skloots Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 6th May – from 2pm The Immortal Life of Henrietta Lacks by Rebecca Skloots Her name was Henrietta Lacks, but scientists know her as HeLa. Her cancer cells, taken without her knowledge, became a multimillion-dollar industry and one of the most important tools in medicine. Henrietta’s family did not learn of her ‘immortality’ until more than twenty years after her death, with devastating consequences. You may also like the following events from Erin Arts Centre:Next Friday, 10th April, 07:30 pm, EAC Jazz Club: Beccy Rork with Blue Vannin in CastletownNext Saturday, 11th April, 11:00 am, Piano Series: Kasparas Mikužis (FREE Masterclass) in CastletownNext Saturday, 11th April, 12:00 pm, Weekend Opening - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownAlso check out other Nonprofit events in Castletown.",
@@ -5278,7 +5361,9 @@
       "endDate": "2026-05-08",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -5531,7 +5616,9 @@
       "endDate": "2026-05-09",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -5762,7 +5849,9 @@
       "endDate": "2026-05-13",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -5826,7 +5915,9 @@
       "endDate": "2026-05-16",
       "isTbc": false,
       "duration": 2.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Rushen Players present Visitors (3 nights) Adults £12 / Over 65s £10 / Under 18s £5 Visitors by Barney Norris In a remote farmhouse, an elderly couple are coming to terms with needing assistance. Edie’s mind is slowly unravelling, and Arthur can no longer cope with caring for her and running the farm. Their son Stephen, who rarely visits, has domestic problems of his own, so they have turned to a young carer, Kate, to help them. The play focuses on the stresses of growing old but also calls into question the choices we make at every stage of our lives. You may also like the following events from Erin Arts Centre:This Thursday, 2nd April, 07:00 pm, Exhibition Preview - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownNext Friday, 10th April, 07:30 pm, EAC Jazz Club: Beccy Rork with Blue Vannin in CastletownNext Saturday, 11th April, 11:00 am, Piano Series: Kasparas Mikužis (FREE Masterclass) in Castletown",
@@ -6178,7 +6269,9 @@
       "endDate": "2026-05-18",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -6460,7 +6553,9 @@
       "endDate": "2026-05-23",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -6958,7 +7053,9 @@
       "endDate": "2026-05-30",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Met Opera: El Último Sueño de Frida y Diego Adults £15 / Under 18 £2 American composer Gabriela Lena Frank makes her Met debut with her first opera, a magical-realist portrait of Mexico’s painterly power couple Frida Kahlo and Diego Rivera, with libretto by Pulitzer Prize–winning playwright Nilo Cruz. Yannick Nézet-Séguin conducts the Met premiere of Frank’s opera, a “confident, richly imagined score” (The New Yorker) that “bursts with color and fresh individuality” (Los Angeles Times), a vibrant new production which takes enthusiastic inspiration from Frida and Diego’s paintings. It is directed and choreographed by Deborah Colker, following her remarkable 2024 debut staging of Ainadamar. Fashioned as a reversal of the Orpheus and Euridice myth, the story depicts Frida (leading mezzo-soprano Isabel Leonard) leaving the underworld on the Day of the Dead and reuniting with Diego (baritone Carlos Álvarez). The famously feuding pair briefly relive their tumultuous love, embracing both the passion and the pain, before bidding the land of the living a final farewell. These stunning, modern productions feature exclusive, live backstage footage and cast interviews shown during the intervals. Buffet served with interval drinks. Feel free to dress for the occasion! You may also like the following events from Erin Arts Centre:Next Friday, 10th April, 07:30 pm, EAC Jazz Club: Beccy Rork with Blue Vannin in CastletownNext Saturday, 11th April, 11:00 am, Piano Series: Kasparas Mikužis (FREE Masterclass) in CastletownNext Saturday, 11th April, 12:00 pm, Weekend Opening - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownAlso check out other Arts events in Castletown, Fine Arts events in Castletown.",
@@ -7676,7 +7773,9 @@
       "endDate": "2026-06-13",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Mananan 50: Scott Brothers Duo Adults £20 / Under 18s £2 The fabulous Scott Brothers Duo have graced many a Mananan festival stage over the years and when the IOM Organists Association kindly booked them to play here, we thought it was fitting to make them part of the 50 year celebrations! Brothers Jonathan and Tom perform internationally in instrumental combinations which cover the entire keyboard spectrum. Their online performance videos on the Scott Brothers Duo YouTube channel have achieved more than 100 million views making them some of the most watched in the world. For this Mananan 50 concert, they will perform duets for piano (as well as using the Erin Arts Centre chamber organ) in an unmissable programme showcasing the duos virtuosic arrangements of some of the greatest classical works! Born in Manchester, Jonathan and Tom both studied at Chetham’s School of Music. Tom read Music on the joint course at The University of Manchester, gained the Sir Thomas Beecham Medal for Excellence in his degree, and achieved a distinction in his Masters degree. He made his concerto debut with the Hallé Orchestra, aged 17. Tom is also a keen artist and animator, and creates animations to accompany live classical concerts which have been performed worldwide. As a composer, his work ranges from instrumental to acousmatic compositions and audio/visual works. Jonathan continued his studies in USA and Holland, won the coveted Worshipful Company of Musicians WT Best Scholarship and gold medal, is a Freeman of The City of London and Associate Artist of The Bridgewater Hall, Manchester. Recent concert highlights include the reopening concerts at the organs of Rochdale Town Hall, UK, St Mary's Basilica, Kevelaer, Germany and All Saints Church, Warsaw, Poland, as well as solo organ concerts at York Minster, Lyon Concert Hall, France, Rheingau Festival, Germany, and BBC Proms, broadcast live from the organ of the Royal Albert Hall, London. Their programme will be: Gioacchino Antonio Rossini - William Tell Overture George Frederic Handel - Air & Variations “Harmonious Blacksmith” from Suite No. 5 HWV 430 Johann Sebastian Bach - Concerto in F Minor BWV 1056 Alexander Borodin - Polovtsian Dances (Prince Igor) INTERVAL George Frideric Handel - Arrival of the Queen of Sheba Sergei Rachmaninoff - Adagio Sostenuto (from Piano Concerto No. 2 Op. 18) Tom Scott - Dances for Chamber Organ & Piano (2019) George Gershwin- Rhapsody in Blue You may also like the following events from Erin Arts Centre:This month, 11th April, 12:00 pm, Weekend Opening - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownThis Wednesday, 15th April, 02:00 pm, Midweek Movie: The Choral (12) (matinee) in CastletownThis Wednesday, 15th April, 07:30 pm, Midweek Movie: The Choral (12) in CastletownAlso check out other Music events in Castletown, Entertainment events in Castletown, Concerts in Castletown.",
@@ -7903,7 +8002,9 @@
       "endDate": "2026-06-19",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8339,7 +8440,9 @@
       "endDate": "2026-06-29",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8371,7 +8474,9 @@
       "endDate": "2026-06-30",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8403,7 +8508,9 @@
       "endDate": "2026-07-01",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8469,7 +8576,9 @@
       "endDate": "2026-07-01",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8501,7 +8610,9 @@
       "endDate": "2026-07-02",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Mananan 50: Landless Tickets £20 / Under 18s £2 Please note - anyone under 18 years old must be accompanied by a responsible adult at all times. This amazing ensemble have been on our radar for a while and we're delighted that they can join us for Mananan 50. Landless are Ruth Clinton, Meabh Meir, Sinead Lynch and Lily Power. They sing unaccompanied traditional songs from Irish, Scottish, English and American traditions in close four part harmony. Their repertoire features songs of love, death and lamentation, as well as work songs, shape-note hymns and more recently penned folk songs. Landless sang at Celtic Connections this year and have performed in various settings both in Ireland and abroad. They are closely involved with traditional singing sessions in Dublin and Belfast. “Vocal harmony is in the dense weave of so much traditional music, and it becomes a startling, golden thread in Landless’s second album, a collection of 10 sublime songs …. four female singers whose voices seem to rise from the sacra of their spines, emerging from their bodies in heavenly flight or heavy drones …. Long-term Celtic music fans should flock to them – they’re a deliciously doomier Clannad – while devotees of Ireland’s current, brilliant scene should also respond to their stunning intensity.” ***** The Guardian (Folk Album of the Month) You may also like the following events from Erin Arts Centre:This month, 11th April, 12:00 pm, Weekend Opening - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownThis Friday, 24th April, 07:30 pm, Friday Film Club: The Long Walk (15) in CastletownNext Saturday, 2nd May, 05:55 pm, Met Opera: Eugene Onegin in CastletownAlso check out other Music events in Castletown.",
@@ -8549,7 +8660,9 @@
       "endDate": "2026-07-03",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8599,7 +8712,9 @@
       "endDate": "2026-07-04",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Mananan 50: Biskee Brisht sing Brebbal Ushtey Tickets £10 / Under 18s £2 This is a standing-only (dancing encouraged!) gig in the auditorium. Please note - anyone under 18 years old must be accompanied by a responsible adult at all times. Sometimes the perfect headline act is right on your doorstep, so to honour Blein ny Gaelgey (Year of the Manx Language 2026) and see Mananan 50 out in style, the mighty Biskee Brisht and friends will perform their excellent second album Treading Water / Brebbal Ushtey, in Manx. Four years in the making, Treading Water / Brebbal Ushtey is a world first - the first dual language English and Manx Gaelic album. Recorded, mixed and mastered by Gyp Buggane at Ballagroove Studios, it is a cinematic and deeply personal exploration of adulthood, mental health and the vibrant resilience of the Manx language. You may also like the following events from Erin Arts Centre:This month, 11th April, 12:00 pm, Weekend Opening - Spring Forward: A Community Exhibition to Celebrate The Return of The Sun in CastletownThis Friday, 24th April, 07:30 pm, Friday Film Club: The Long Walk (15) in CastletownNext Saturday, 2nd May, 05:55 pm, Met Opera: Eugene Onegin in CastletownAlso check out other Health & Wellness events in Castletown.",
@@ -10487,7 +10602,9 @@
       "endDate": "2026-09-02",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
