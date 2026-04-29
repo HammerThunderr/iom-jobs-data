@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-04-29T08:35:42.832078+00:00",
-  "lastUpdated": "08:34 UTC",
+  "fetchedAt": "2026-04-29T10:28:52.657647+00:00",
+  "lastUpdated": "10:28 UTC",
   "departures": [
     {
       "flightNo": "LM671",
@@ -23,7 +23,7 @@
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "Departed 09:33",
+      "status": "Departed 09:32",
       "destination": "Manchester",
       "statusType": "departed"
     },
@@ -31,17 +31,17 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:05",
-      "status": "Boarding now",
+      "status": "Departed 10:08",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM314",
@@ -105,25 +105,25 @@
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:35",
-      "status": "Expected 09:31",
+      "status": "Arrived 09:16",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM672",
       "airline": "Loganair",
       "scheduled": "10:15",
-      "status": "Expected 09:55",
+      "status": "Arrived 09:54",
       "origin": "London City",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Delayed 11:58",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY843",
