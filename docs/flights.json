@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-01T19:36:39.048510+00:00",
-  "lastUpdated": "19:36 UTC",
+  "fetchedAt": "2026-05-01T20:29:51.757005+00:00",
+  "lastUpdated": "20:28 UTC",
   "departures": [
-    {
-      "flightNo": "EZY234",
-      "airline": "easyJet",
-      "scheduled": "14:45",
-      "status": "Departed 15:41",
-      "destination": "Bristol",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "15:25",
-      "status": "Departed 15:32",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -102,14 +86,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "14:55",
-      "status": "Arrived 14:41",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
@@ -169,7 +145,7 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Arrived 20:35",
+      "status": "Arrived 20:36",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -188,8 +164,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "11:25",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 21,
   "source": "airport.im"
 }
