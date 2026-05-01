@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-01T15:09:46.036820+00:00",
-  "lastUpdated": "15:09 UTC",
+  "fetchedAt": "2026-05-01T16:07:28.445926+00:00",
+  "lastUpdated": "16:06 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -55,31 +55,31 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Last call",
+      "status": "Departed 16:22",
       "destination": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Departed 16:47",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 17:30",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:25",
-      "status": "Delayed 17:50",
+      "status": "Delayed 18:10",
       "destination": "Manchester",
       "statusType": "delayed"
     },
@@ -98,17 +98,17 @@
       "status": "Delayed 18:45",
       "destination": "London Gatwick",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "11:00",
-      "status": "Arrived 10:46",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
@@ -169,15 +169,15 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:40",
-      "status": "Delayed 17:35",
+      "status": "Arrived 16:56",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:55",
-      "status": "Delayed 17:20",
+      "status": "Delayed 17:40",
       "origin": "Manchester",
       "statusType": "delayed"
     },
