@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-01T22:10:44.139709+00:00",
-  "lastUpdated": "22:10 UTC",
+  "fetchedAt": "2026-05-01T23:06:17.107587+00:00",
+  "lastUpdated": "23:05 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:27",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -81,6 +73,14 @@
       "scheduled": "12:10",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "14:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -164,8 +164,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "13:35",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
