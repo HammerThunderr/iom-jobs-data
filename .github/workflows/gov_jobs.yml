@@ -34,10 +34,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          pip install playwright
-          python -m playwright install chromium
-          python -m playwright install-deps chromium
+        run: pip install requests beautifulsoup4
 
       - name: Run scraper
         run: python scripts/scrape_gov_jobs.py
