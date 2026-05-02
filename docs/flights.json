@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-02T16:08:29.505338+00:00",
-  "lastUpdated": "16:08 UTC",
+  "fetchedAt": "2026-05-02T17:04:30.636952+00:00",
+  "lastUpdated": "17:03 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:01",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:13",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -31,17 +15,17 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Gate closed",
+      "status": "Departed 17:21",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Boarding now",
+      "status": "Departed 17:29",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     }
   ],
   "arrivals": [
@@ -51,30 +35,6 @@
       "scheduled": "09:15",
       "status": "Arrived 12:55",
       "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:25",
-      "status": "Arrived 11:15",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:26",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Arrived 11:22",
-      "origin": "Liverpool",
       "statusType": "arrived"
     },
     {
@@ -110,6 +70,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 8,
   "source": "airport.im"
 }
