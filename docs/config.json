@@ -1,9 +1,9 @@
 {
   "_comment": "Master config for IOM Jobs app. Edit URLs here when migrating backends.",
-  "_lastUpdated": "2026-04-29",
+  "_lastUpdated": "2026-05-02",
 
   "jobs":             "https://hammerthunderr.github.io/iom-jobs-data/jobs.json",
-  "gov_jobs":         "https://raw.githubusercontent.com/HammerThunderr/jobtrain-scraper/main/jobs.json",
+  "gov_jobs":         "https://hammerthunderr.github.io/iom-jobs-data/gov_jobs.json",
 
   "weather_current":  "https://hammerthunderr.github.io/iom-jobs-data/weather_current.json",
   "weather_5day":     "https://hammerthunderr.github.io/iom-jobs-data/weather_5day.json",
@@ -13,7 +13,7 @@
   "flights":          "https://hammerthunderr.github.io/iom-jobs-data/flights.json",
   "events":           "https://hammerthunderr.github.io/iom-jobs-data/events.json",
 
-  "tynwald_base":     "https://raw.githubusercontent.com/HammerThunderr/tynwald-rssfeed/main/data",
+  "tynwald_base":     "https://hammerthunderr.github.io/iom-jobs-data",
   "webcam_base":      "https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/webcams",
 
   "min_app_version":  "1.0.0",
