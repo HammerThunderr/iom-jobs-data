@@ -1,240 +1,161 @@
 """
-IOM Government Jobs Scraper (JobTrain) — Multi-page Playwright Version
------------------------------------------------------------------------
-Loops through all pages of JobTrain listings.
-Saves to docs/gov_jobs.json on GitHub Pages.
+IOM Government Jobs Scraper (JobTrain) — Direct API Version
+------------------------------------------------------------
+Uses the internal _JobCard endpoint that JobTrain itself uses for pagination.
+Returns HTML fragments which we parse with BeautifulSoup.
+
+URL pattern:
+  /iomgovjobs/Home/_JobCard?Skip=0
+  /iomgovjobs/Home/_JobCard?Skip=12
+  /iomgovjobs/Home/_JobCard?Skip=24
+  ...
+
+Each request returns 12 job cards as HTML.
 """
 
+import requests
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
-from playwright.sync_api import sync_playwright
+from bs4 import BeautifulSoup
 
-BASE_URL = "https://www.jobtrain.co.uk/iomgovjobs/Home/Job"
-MAX_PAGES = 30  # safety limit
+API_URL = "https://www.jobtrain.co.uk/iomgovjobs/Home/_JobCard"
+JOBS_PER_PAGE = 12
+MAX_PAGES = 30  # safety: 30 * 12 = 360 jobs max
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,*/*",
+    "Accept-Language": "en-GB,en;q=0.9",
+    "Referer": "https://www.jobtrain.co.uk/iomgovjobs/Home/Job",
+    "X-Requested-With": "XMLHttpRequest",
+}
 
 
-def scrape():
-    """Scrape all pages of jobs."""
-    all_jobs = []
-    seen_ids = set()
+def fetch_page(skip):
+    """Fetch one page of jobs from the _JobCard endpoint."""
+    params = {
+        "Skip":             skip,
+        "what":             "",
+        "Miles":            "",
+        "Salary":           "",
+        "LocationId":       "",
+        "Regions":          "",
+        "DivisionIds":      "",
+        "ClientCategory":   "",
+        "Departments":      "",
+        "SchoolLocationId": "",
+        "JobLevels":        "",
+        "SchoolSubjectId":  "",
+        "JobTypeIds":       "",
+        "lat":              "",
+        "long":             "",
+        "EmploymentType":   "",
+        "postedDate":       "",
+    }
 
-    with sync_playwright() as p:
-        print("Launching browser...")
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
-            viewport={"width": 1280, "height": 1024},
-        )
-        page = context.new_page()
+    try:
+        resp = requests.get(API_URL, params=params, headers=HEADERS, timeout=20)
+        resp.raise_for_status()
+        return resp.text
+    except Exception as e:
+        print(f"  ✗ Fetch failed at Skip={skip}: {e}")
+        return None
 
-        # Capture API calls
-        api_responses = []
 
-        def handle_response(response):
-            url = response.url
-            ctype = (response.headers.get("content-type") or "").lower()
-            if "iomgovjobs" in url and (
-                "json" in ctype
-                or "/api/" in url.lower()
-                or "search" in url.lower()
-                or "vacancies" in url.lower()
-            ):
-                try:
-                    body = response.text()
-                    if body and (body.startswith("[") or body.startswith("{")):
-                        api_responses.append({"url": url, "body": body[:200000]})
-                except Exception:
-                    pass
+def parse_jobs_from_html(html):
+    """Extract job cards from HTML fragment."""
+    soup = BeautifulSoup(html, "html.parser")
+    jobs = []
 
-        page.on("response", handle_response)
+    # Find all links that point to JobDetail — each represents one job card
+    links = soup.find_all("a", href=re.compile(r"JobDetail", re.IGNORECASE))
 
+    seen_in_this_page = set()
+
+    for link in links:
         try:
-            for page_no in range(1, MAX_PAGES + 1):
-                # Build URL with pagination
-                if page_no == 1:
-                    url = BASE_URL
-                else:
-                    url = f"{BASE_URL}?PageNo={page_no}&AttachedSAF=0"
+            href = link.get("href", "")
+            if not href:
+                continue
 
-                print(f"\n[Page {page_no}] Navigating to {url}")
+            # Build absolute URL
+            if href.startswith("/"):
+                full_url = "https://www.jobtrain.co.uk" + href
+            elif href.startswith("http"):
+                full_url = href
+            else:
+                full_url = "https://www.jobtrain.co.uk/iomgovjobs/" + href.lstrip("./")
 
-                try:
-                    page.goto(url, wait_until="networkidle", timeout=45000)
-                except Exception as e:
-                    print(f"  ✗ Navigation failed: {e}")
-                    break
+            # Extract job ID
+            id_match = re.search(r'jobid=(\d+)', full_url, re.IGNORECASE)
+            if not id_match:
+                continue
+            job_id = id_match.group(1)
 
-                # Wait for JS rendering
-                page.wait_for_timeout(4000)
+            # Skip if duplicate within same page (same job linked multiple times)
+            if job_id in seen_in_this_page:
+                continue
+            seen_in_this_page.add(job_id)
 
-                # Scroll to trigger any lazy loading
-                for i in range(8):
-                    page.evaluate(f"window.scrollTo(0, {(i+1) * 800})")
-                    page.wait_for_timeout(400)
+            # Get the parent card container for richer text context
+            card = (link.find_parent("article") or
+                    link.find_parent("div", class_=re.compile(r"job", re.IGNORECASE)) or
+                    link.find_parent("div", class_=re.compile(r"card", re.IGNORECASE)) or
+                    link.find_parent("li") or
+                    link.parent)
 
-                page.evaluate("window.scrollTo(0, 0)")
-                page.wait_for_timeout(1500)
+            # Get title from link text
+            title = link.get_text(strip=True)
+            title = re.sub(r'\s+', ' ', title)
+            title = re.sub(r'^(NEW|New|new)\s+', '', title).strip()
 
-                # Find all JobDetail links on this page
-                links = page.query_selector_all('a[href*="JobDetail"]')
-                print(f"  Found {len(links)} JobDetail links on page {page_no}")
-
-                page_jobs_count = 0
-
-                for link in links:
-                    try:
-                        href = link.get_attribute("href") or ""
-                        if not href:
-                            continue
-
-                        # Build absolute URL
-                        if href.startswith("/"):
-                            full_url = "https://www.jobtrain.co.uk" + href
-                        elif href.startswith("http"):
-                            full_url = href
-                        else:
-                            full_url = "https://www.jobtrain.co.uk/iomgovjobs/" + href.lstrip("./")
-
-                        # Extract job ID
-                        id_match = re.search(r'jobid=(\d+)', full_url, re.IGNORECASE)
-                        if not id_match:
-                            continue
-                        job_id = id_match.group(1)
-
-                        # Dedupe across pages
-                        if job_id in seen_ids:
-                            continue
-                        seen_ids.add(job_id)
-
-                        # Get title
-                        title = (link.text_content() or "").strip()
-                        title = re.sub(r'\s+', ' ', title)
+            # Fallback to card heading if link text is empty
+            if not title or len(title) < 3:
+                if card:
+                    h = (card.find("h2") or card.find("h3") or
+                         card.find("h4") or card.find("h5"))
+                    if h:
+                        title = re.sub(r'\s+', ' ', h.get_text(strip=True))
                         title = re.sub(r'^(NEW|New|new)\s+', '', title).strip()
 
-                        if not title or len(title) < 3:
-                            title = (link.get_attribute("title") or
-                                    link.get_attribute("aria-label") or "").strip()
-                            title = re.sub(r'^(NEW|New|new)\s+', '', title).strip()
+            if not title:
+                continue
 
-                        # Get parent context
-                        parent_text = ""
-                        try:
-                            parent_text = link.evaluate("""
-                                el => {
-                                    let p = el.closest('article, li, div[class*="job"], div[class*="vacancy"], div[class*="card"], section');
-                                    return p ? p.innerText : el.parentElement?.innerText || '';
-                                }
-                            """) or ""
-                        except Exception:
-                            pass
+            # Get full card text for field extraction
+            card_text = ""
+            if card:
+                card_text = re.sub(r'\s+', ' ', card.get_text(separator=" ", strip=True))
 
-                        parent_text = re.sub(r'\s+', ' ', parent_text).strip()
+            # Extract structured fields
+            location   = extract_field(card_text, ["Location", "Where", "Based"])
+            salary     = extract_field(card_text, ["Salary", "Pay", "Wage"])
+            hours      = extract_field(card_text, ["Hours", "Type", "Working"])
+            closing    = extract_field(card_text, ["Closing", "Deadline", "Apply by"])
+            department = extract_field(card_text, ["Department", "Team", "Division"])
 
-                        # If still no title, use first line of parent text
-                        if not title or len(title) < 3:
-                            for line in parent_text.split('.'):
-                                line = line.strip()
-                                line = re.sub(r'^(NEW|New|new)\s+', '', line).strip()
-                                if line and len(line) > 5 and len(line) < 200:
-                                    title = line
-                                    break
+            jobs.append({
+                "jobId":       job_id,
+                "title":       title,
+                "department":  department,
+                "location":    location,
+                "salary":      salary,
+                "hours":       hours,
+                "closingDate": closing,
+                "url":         full_url,
+                "rawText":     card_text[:500] if card_text else title,
+            })
 
-                        if not title:
-                            continue
+        except Exception as e:
+            print(f"    ✗ Card parse error: {e}")
 
-                        # Extract structured fields
-                        location  = extract_field(parent_text, ["Location", "Where", "Based"])
-                        salary    = extract_field(parent_text, ["Salary", "Pay", "Wage"])
-                        hours     = extract_field(parent_text, ["Hours", "Type", "Working"])
-                        closing   = extract_field(parent_text, ["Closing", "Deadline", "Apply by"])
-                        department = extract_field(parent_text, ["Department", "Team", "Division"])
-
-                        all_jobs.append({
-                            "jobId":       job_id,
-                            "title":       title,
-                            "department":  department,
-                            "location":    location,
-                            "salary":      salary,
-                            "hours":       hours,
-                            "closingDate": closing,
-                            "url":         full_url,
-                            "rawText":     parent_text[:500] if parent_text else title,
-                        })
-                        print(f"    ✓ {job_id}: {title[:60]}")
-                        page_jobs_count += 1
-
-                    except Exception as e:
-                        print(f"    ✗ Error: {e}")
-
-                # If this page added 0 new jobs, we're done
-                if page_jobs_count == 0:
-                    print(f"  No new jobs on page {page_no} — stopping pagination")
-                    break
-
-                print(f"  ✓ Page {page_no}: added {page_jobs_count} new jobs (total: {len(all_jobs)})")
-
-            # Try to also use API responses if we got any
-            if not all_jobs and api_responses:
-                print("\nFalling back to API responses...")
-                for api in api_responses:
-                    try:
-                        data = json.loads(api["body"])
-                        candidates = []
-                        if isinstance(data, list):
-                            candidates = data
-                        elif isinstance(data, dict):
-                            for key in ["jobs", "data", "items", "results", "vacancies", "Jobs", "Items"]:
-                                if key in data and isinstance(data[key], list):
-                                    candidates = data[key]
-                                    break
-
-                        if candidates:
-                            for item in candidates:
-                                job = parse_api_item(item)
-                                if job and job["jobId"] not in seen_ids:
-                                    seen_ids.add(job["jobId"])
-                                    all_jobs.append(job)
-                    except Exception:
-                        pass
-
-        finally:
-            browser.close()
-
-    return all_jobs
-
-
-def parse_api_item(item):
-    if not isinstance(item, dict):
-        return None
-
-    job_id = (item.get("Id") or item.get("id") or item.get("JobId") or
-              item.get("jobId") or item.get("VacancyId") or "")
-    title = (item.get("Title") or item.get("title") or item.get("JobTitle") or
-             item.get("Name") or item.get("PositionTitle") or "")
-
-    if not title or not job_id:
-        return None
-
-    title = re.sub(r'^(NEW|New|new)\s+', '', str(title)).strip()
-
-    return {
-        "jobId":       str(job_id),
-        "title":       title,
-        "department":  str(item.get("Department") or item.get("department") or ""),
-        "location":    str(item.get("Location") or item.get("location") or ""),
-        "salary":      str(item.get("Salary") or item.get("salary") or ""),
-        "hours":       str(item.get("Hours") or item.get("EmploymentType") or
-                          item.get("hours") or item.get("type") or ""),
-        "closingDate": str(item.get("ClosingDate") or item.get("closingDate") or
-                          item.get("Closing") or ""),
-        "url":         f"https://www.jobtrain.co.uk/iomgovjobs/Job/JobDetail?jobid={job_id}",
-        "rawText":     "",
-    }
+    return jobs
 
 
 def extract_field(text, labels):
+    """Extract a labelled field from card text."""
     for label in labels:
         pattern = (
             rf'{label}[:\s]+([^|.]{{1,150}}?)'
@@ -248,12 +169,59 @@ def extract_field(text, labels):
     return ""
 
 
+def scrape_all():
+    """Loop through all pages until we run out of jobs."""
+    all_jobs = []
+    seen_ids = set()
+
+    for page_num in range(MAX_PAGES):
+        skip = page_num * JOBS_PER_PAGE
+        print(f"\n[Page {page_num + 1}] Fetching Skip={skip}")
+
+        html = fetch_page(skip)
+        if not html:
+            print("  ✗ Empty response — stopping")
+            break
+
+        # Sanity check — if HTML is super short, probably no jobs
+        if len(html) < 200:
+            print(f"  Tiny response ({len(html)} bytes) — end of jobs")
+            break
+
+        page_jobs = parse_jobs_from_html(html)
+        new_count = 0
+
+        for job in page_jobs:
+            if job["jobId"] in seen_ids:
+                continue
+            seen_ids.add(job["jobId"])
+            all_jobs.append(job)
+            new_count += 1
+            print(f"    ✓ {job['jobId']}: {job['title'][:60]}")
+
+        print(f"  Page {page_num + 1}: {new_count} new jobs (total: {len(all_jobs)})")
+
+        # If we got fewer than expected or nothing new, we're done
+        if new_count == 0:
+            print(f"  No new jobs on page {page_num + 1} — stopping pagination")
+            break
+
+        if len(page_jobs) < JOBS_PER_PAGE:
+            print(f"  Only {len(page_jobs)} jobs on this page (less than {JOBS_PER_PAGE}) — last page")
+            break
+
+        # Polite delay between requests
+        time.sleep(1)
+
+    return all_jobs
+
+
 def main():
     os.makedirs("docs", exist_ok=True)
 
     try:
-        print("Starting gov jobs scrape (with pagination)...")
-        jobs = scrape()
+        print("Starting gov jobs scrape (using direct _JobCard API)...")
+        jobs = scrape_all()
 
         if not jobs:
             print("⚠ No jobs found")
@@ -270,7 +238,7 @@ def main():
             "source":      "jobtrain.co.uk/iomgovjobs",
         }
 
-        print(f"\n✓ SUCCESS — {len(jobs)} TOTAL gov jobs scraped across all pages")
+        print(f"\n✓ SUCCESS — {len(jobs)} TOTAL gov jobs scraped")
 
     except Exception as e:
         print(f"\n✗ FAILED: {e}")
