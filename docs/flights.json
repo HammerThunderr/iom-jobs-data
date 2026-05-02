@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-02T18:51:13.594290+00:00",
-  "lastUpdated": "18:50 UTC",
+  "fetchedAt": "2026-05-02T19:44:01.688743+00:00",
+  "lastUpdated": "19:43 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "14:05",
-      "status": "Departed 14:19",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -33,6 +25,14 @@
       "scheduled": "08:05",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "09:50",
+      "status": "On-time",
+      "destination": "Edinburgh",
       "statusType": "ontime"
     }
   ],
@@ -60,8 +60,16 @@
       "status": "Arrived 19:45",
       "origin": "Manchester",
       "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 7,
+  "totalCount": 8,
   "source": "airport.im"
 }
