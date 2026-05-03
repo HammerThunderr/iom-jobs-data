@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-02T23:11:38.375047+00:00",
-  "lastUpdated": "23:11 UTC",
+  "fetchedAt": "2026-05-03T00:00:25.081210+00:00",
+  "lastUpdated": "23:59 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -50,6 +50,14 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "14:55",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -92,8 +100,16 @@
       "status": "On-time",
       "origin": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "14:25",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 13,
   "source": "airport.im"
 }
