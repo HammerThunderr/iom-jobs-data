@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-03T09:40:52.322769+00:00",
-  "lastUpdated": "09:39 UTC",
+  "fetchedAt": "2026-05-03T10:36:27.238576+00:00",
+  "lastUpdated": "10:35 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -23,17 +23,17 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "10:45",
-      "status": "Taxied 10:36",
+      "status": "Departed 10:45",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "Boarding now",
+      "status": "Departed 11:28",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
