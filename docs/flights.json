@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-03T21:57:06.124313+00:00",
-  "lastUpdated": "21:56 UTC",
+  "fetchedAt": "2026-05-03T22:36:50.425492+00:00",
+  "lastUpdated": "22:36 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -9,14 +9,6 @@
       "scheduled": "17:10",
       "status": "Departed 18:08",
       "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:19",
-      "destination": "Dublin",
       "statusType": "departed"
     },
     {
@@ -90,17 +82,17 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY234",
+      "airline": "easyJet",
+      "scheduled": "13:35",
+      "status": "On-time",
+      "destination": "Bristol",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:55",
-      "status": "Arrived 17:16",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
@@ -163,6 +155,14 @@
       "scheduled": "11:50",
       "status": "On-time",
       "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "13:00",
+      "status": "On-time",
+      "origin": "Bristol",
       "statusType": "ontime"
     }
   ],
