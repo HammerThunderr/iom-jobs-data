@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-03T22:36:50.425492+00:00",
-  "lastUpdated": "22:36 UTC",
+  "fetchedAt": "2026-05-03T23:25:17.830082+00:00",
+  "lastUpdated": "23:24 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:10",
-      "status": "Departed 18:08",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 18:13",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -166,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 18,
   "source": "airport.im"
 }
