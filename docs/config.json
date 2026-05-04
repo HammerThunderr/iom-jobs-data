@@ -1,6 +1,6 @@
 {
   "_comment": "Master config for IOM Jobs app. Edit URLs here when migrating backends.",
-  "_lastUpdated": "2026-05-02",
+  "_lastUpdated": "2026-05-04",
 
   "jobs":             "https://hammerthunderr.github.io/iom-jobs-data/jobs.json",
   "gov_jobs":         "https://hammerthunderr.github.io/iom-jobs-data/gov_jobs.json",
@@ -14,7 +14,7 @@
   "events":           "https://hammerthunderr.github.io/iom-jobs-data/events.json",
   "ferry":            "https://hammerthunderr.github.io/iom-jobs-data/ferry.json",
 
-  "tynwald_base":     "https://hammerthunderr.github.io/iom-jobs-data",
+  "tynwald_base":     "https://raw.githubusercontent.com/HammerThunderr/tynwald-rssfeed/main/data",
   "webcam_base":      "https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/webcams",
 
   "min_app_version":  "1.0.0",
