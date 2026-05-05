@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-05T05:23:10.217117+00:00",
-  "lastUpdated": "04:57 05/05/26",
+  "fetchedAt": "2026-05-05T07:29:38.568119+00:00",
+  "lastUpdated": "06:17 05/05/26",
   "totalCount": 38,
   "days": [
     {
@@ -17,13 +17,13 @@
           "statusType": "arrived"
         },
         {
-          "departTime": "07:30",
+          "departTime": "07:15",
           "departPort": "Douglas",
-          "arriveTime": "10:00",
+          "arriveTime": "09:45",
           "arrivePort": "Heysham",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "11:30",
