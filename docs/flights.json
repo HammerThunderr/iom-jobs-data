@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-05T08:23:57.699471+00:00",
-  "lastUpdated": "08:23 UTC",
+  "fetchedAt": "2026-05-05T10:14:54.935119+00:00",
+  "lastUpdated": "10:14 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,25 +23,25 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:55",
-      "status": "Last call",
+      "status": "Departed 10:03",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:05",
-      "status": "Boarding now",
+      "status": "Departed 10:15",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
@@ -87,9 +87,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:50",
-      "status": "On-time",
+      "status": "Delayed 19:45",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
@@ -113,9 +113,9 @@
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:35",
-      "status": "Expected 09:29",
+      "status": "Arrived 09:18",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3212",
@@ -161,9 +161,9 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "On-time",
+      "status": "Delayed 19:15",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM688",
