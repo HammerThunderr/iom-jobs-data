@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-05T16:21:59.648552+00:00",
-  "lastUpdated": "16:21 UTC",
+  "fetchedAt": "2026-05-05T17:56:19.671611+00:00",
+  "lastUpdated": "17:55 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "11:30",
-      "status": "Departed 11:34",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "12:15",
-      "status": "Departed 12:28",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -39,7 +23,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Departed 17:13",
+      "status": "Departed 17:12",
       "destination": "Dublin",
       "statusType": "departed"
     },
@@ -47,17 +31,17 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "Boarding shortly",
+      "status": "Departed 17:59",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:50",
-      "status": "Delayed 19:35",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM671",
@@ -77,14 +61,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 11:49",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
@@ -121,7 +97,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "Delayed 19:00",
+      "status": "Delayed 19:07",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -137,11 +113,11 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Expected 19:49",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "expected"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 14,
   "source": "airport.im"
 }
