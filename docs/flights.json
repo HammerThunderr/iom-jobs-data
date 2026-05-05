@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-05T19:10:25.950586+00:00",
-  "lastUpdated": "19:10 UTC",
+  "fetchedAt": "2026-05-05T20:15:59.678458+00:00",
+  "lastUpdated": "20:14 UTC",
   "departures": [
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "15:20",
-      "status": "Departed 15:17",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
@@ -139,6 +131,14 @@
       "scheduled": "09:35",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM672",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "London City",
       "statusType": "ontime"
     }
   ],
