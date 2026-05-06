@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-06T02:24:49.476766+00:00",
-  "lastUpdated": "02:24 UTC",
-  "totalCount": 701,
+  "fetchedAt": "2026-05-06T05:42:22.159558+00:00",
+  "lastUpdated": "05:42 UTC",
+  "totalCount": 704,
   "categories": {
-    "Kids": 81,
+    "Kids": 83,
     "Things to Do": 83,
-    "Workshops": 16,
-    "Learning": 16,
-    "Sports": 72,
-    "Motorsport": 66,
+    "Workshops": 14,
+    "Learning": 14,
+    "Sports": 71,
+    "Motorsport": 65,
     "Fitness": 6,
     "Food": 1,
     "Drink": 1,
@@ -870,6 +870,22 @@
       "time": "See event page",
       "price": "£20",
       "url": "https://www.villagaiety.com/whats-on/of-mice-and-men-by-john-steinbeck/"
+    },
+    {
+      "title": "IOM Arts Council present the 2026 Summer Concert series",
+      "venue": "Villa Marina & Gaiety Theatre",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/yyk6dz8t9hkj4gha6egwg9jvhmpx",
+      "time": "See event page",
+      "price": "",
+      "url": "https://www.villagaiety.com/whats-on/iom-arts-council-present-the-2026-summer-concert-series/"
     },
     {
       "title": "Art Adventures for Beginners",
@@ -2842,6 +2858,24 @@
       "url": "https://www.kidsontherock.co.uk/events/foxdale-parents-and-tots-group/"
     },
     {
+      "title": "French Lessons @ Manx Family Centre",
+      "venue": "Douglas",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [
+        "Kids"
+      ],
+      "source": "kids on the rock iom",
+      "recurring": false,
+      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock MEGA EASTER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
+      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
+      "time": "See event page",
+      "price": "",
+      "url": "https://www.kidsontherock.co.uk/events/french-lessons-manx-family-centre/"
+    },
+    {
       "title": "Harbour Tots",
       "venue": "Castletown",
       "startDate": "",
@@ -3850,6 +3884,24 @@
       "url": "https://www.kidsontherock.co.uk/events/storytime-onchan-library/"
     },
     {
+      "title": "Storytime @ Onchan Library",
+      "venue": "Onchan",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [
+        "Kids"
+      ],
+      "source": "kids on the rock iom",
+      "recurring": false,
+      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock MEGA EASTER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
+      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
+      "time": "See event page",
+      "price": "",
+      "url": "https://www.kidsontherock.co.uk/events/storytime-onchan-library-2/"
+    },
+    {
       "title": "Tea & Toast",
       "venue": "St Johns",
       "startDate": "",
@@ -4029,63 +4081,6 @@
       "time": "19:00 – 20:00",
       "price": "Free",
       "url": "https://allevents.in/peel/free-evening-6-week-manx-taster-course-blass-a-taste-of-manx-st-johns/200029878494534"
-    },
-    {
-      "title": "Isle of Man Classic & Sports Car Weekend",
-      "venue": "Isle Of Man Tt",
-      "startDate": "2026-05-05",
-      "endDate": "2026-05-10",
-      "isTbc": false,
-      "duration": 5.0,
-      "tags": [
-        "Sports",
-        "Motorsport"
-      ],
-      "source": "allevents (douglas)",
-      "recurring": false,
-      "description": "Isle of Man Classic & Sports Car Weekend 𝐈𝐒𝐋𝐄 𝐎𝐅 𝐌𝐀𝐍 𝐂𝐋𝐀𝐒𝐒𝐈𝐂 & 𝐒𝐏𝐎𝐑𝐓𝐒 𝐂𝐀𝐑 𝐖𝐄𝐄𝐊𝐄𝐍𝐃 6-10 May 2026 Join us, for the first time ever! Direct Ireland to Isle of Man crossings 4 nights accommodation at one of our handpicked hotels, return ferry and event entry from £589 per person. Be apart of one of the exclusive driving tours on the Isle of Man. For more information or to book contact b2xpdmVyICEgYnJlZWRlbiB8IHNjZW5pY2NhcnRvdXJzICEgY29t Also check out other Sports events in Douglas.",
-      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czcvYmFubmVycy9iN2Q5MzFkOGQzOTNmYzJjNGQzZjY3YjYwNTIyMGJlZjEwYzg5YWVmOWFjOGZhYjJlMmIwN2YxYzlmMWM5OTA4LXJpbWctdzEyMDAtaDc0Ni1kY2JlYTU3Ny1nbWlyP3Y9MTc3NDU1NTQwOA.avif",
-      "time": "00:00 – 03:00",
-      "price": "",
-      "url": "https://allevents.in/douglas/isle-of-man-classic-and-sports-car-weekend/200029628536945"
-    },
-    {
-      "title": "LEARNAI: \"Getting Started with AI in Small Businesses\" - Tues 5 May",
-      "venue": "Activate Ai Centre (Hillary House)",
-      "startDate": "2026-05-05",
-      "endDate": "2026-05-05",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "allevents (douglas)",
-      "recurring": false,
-      "description": "LEARNAI: \"Getting Started with AI in Small Businesses\" - Tues 5 May Discover how to break through common AI barriers and confidently use powerful tools like Microsoft Co-pilot securely and effectively!About this EventCurious about AI but not sure where to start?This interactive workshop is designed for small business owners and managers who want to confidently use AI tools like Microsoft Copilot, both safely and effectively.You’ll learn how to overcome common challenges and roadblocks that businesses face when adopting AI, with practical solutions you can apply right away. Using Microsoft Copilot as a foundation, you’ll explore real-world examples of how AI can streamline everyday tasks, boost productivity, and support smarter decision-making.The workshop also introduces other AI tools tailored to your business needs, so you’ll leave with actionable ideas and the confidence to integrate AI into your daily operations.Level: Beginner / Intermediate📍 Location: Activate AI Centre, First Floor, Hillary House⏱ Duration: 2 hours (room will be open 15 minutes prior to start time)Who Should Attend:Small business owners, managers, and teams who want to understand and apply AI in practical, low-risk ways.Attendees will:Identify common blockers to AI adoption in small businessesDemonstrate practical AI use cases using Microsoft CopilotExplore secure and safe AI adoption strategiesProvide tailored examples based on participants’ real business challengesEmpower attendees with confidence to begin using AI tools effectivelySession Agenda:Introduction & Objectives - Overview of AI in small businessCommon AI Blockers – Identifying and addressing adoption challengesPractical Demo: Microsoft Copilot – Real-world examples in actionExploring Other AI Tools – Tailored to audience needs and casesInteractive Q&A & Wrap-Up – Open discussion and action planningInstructor:Dan Taylor, Principal Consultant at Taylored Solutions, brings over 20 years of experience in IT, cloud infrastructure, and executive leadership roles, including COO and CTO. Known in the industry for his integrity, practical mindset, and hands-on approach, Dan blends deep technical expertise with sharp commercial insight.Sharon Lunt, Digital Media Consultant at Taylored Solutions, helps businesses turn AI from buzzword to practical tool. With hands-on experience integrating AI into digital strategy, she guides beginners in using AI ethically and effectively, making technology accessible and actionable.At Taylored Solutions, we specialise in helping small and medium-sized businesses embrace technology that drives meaningful change. From strategic planning to AI adoption, we focus on solutions that are practical, ethical, and results driven.This AI course, led by Dan and Sharon, is delivered in an engaging, conversational format, making it more of a guided discussion than a traditional lecture.About Activate AI:Activate AI empowers the Isle of Man community through accessible AI education and training. Led by industry experts, these sessions help businesses and residents harness AI for innovation, productivity, and growth.Note:By registering, you consent to your information being shared with the trainers for session management and communication purposes. You will also receive the Activate AI newsletter (unsubscribe anytime).Please note that photographs may be taken during this session and used for promotional purposes by Digital Isle of Man. For concerns about data sharing, newsletter subscriptions, or photography, please email . Also check out other Workshops in Douglas, Business events in Douglas.",
-      "imageUrl": "",
-      "time": "10:00 – 12:00",
-      "price": "£0.00",
-      "url": "https://allevents.in/douglas/learnai-getting-started-with-ai-in-small-businesses-tues-5-may/100001987126238070"
-    },
-    {
-      "title": "★NEW★ Meet & Make * ART SOCIAL * 5th may",
-      "venue": "Artreach Studios",
-      "startDate": "2026-05-05",
-      "endDate": "2026-05-05",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Workshops",
-        "Learning"
-      ],
-      "source": "allevents (peel)",
-      "recurring": false,
-      "description": "★NEW★ Meet & Make * ART SOCIAL * 5th may Welcome to Meet & Make, Arty Social 🎨✨ A brand-new monthly meet-up where creativity meets connection in a 2hr mindful art or craft break ★ Enjoy a complimentary glass of fizz on arrival (launch night only) ★ Summer Watercolour Blooms: Let seasonal florals inspire you as we guide you to create simple yet effective watercolour paintings, all while socialising and having fun! Meet & Make is the ultimate chilled, feel-good night of making, chatting, and getting a little creative. Each month brings a fresh theme and a bite-size guided creative mini project—no pressure, no experience needed, just playful creativity and good vibes. Whether you come solo or with friends, you’ll leave with something you made and a head full of inspiration. Think: 🖌️ Hands-on art prompts 💬 Easy conversations with creative souls 🍷 A social, welcoming atmosphere ✨ Mini skill-building without pressure or perfection 💡 Inspiring—not intimidating - creativity for all abilities 💷 Affordable: Perfect tryout price point! This isn’t a class—it’s a creative hangout. A space to switch off, try something new, and remember how fun it feels to just make. ✨ Kick-start your creativity. Meet new people. Have a genuinely fun night. Spaces are limited—book your spot and make Art Social your new monthly ritual. Reserve your spot now and let your imagination soar! EVENT Highlights ★ Watercolour Meditation ★ Fun + effective art making ★ Guided art making ★ Clear instruction Complimentary glass prosecco at first session + tea, coffee & biscuits! You may also like the following events from Artreach Studios:Next Monday, 20th April, 07:00 pm, Beginners & Improvers - Ceramics x 8 weeks: 20th April in PeelNext Saturday, 25th April, 02:30 pm, Floral Bloom Pot & Sculpture: April 25th in PeelNext month, 9th May, 02:30 pm, Saturday in the Studio - Gustav Klimt \"Flower Garden\": 9th May in PeelAlso check out other Arts events in Peel, Workshops in Peel, Health & Wellness events in Peel.",
-      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czQvYmFubmVycy8xMGFmMWJmMDI0NWE1M2FkYmU5MDNhOWFlMDkwMTg2NmU4MmY3NzI0Y2RkYjRmNWFiOGQxNjg5NTVmNWUwMjI5LXJpbWctdzEyMDAtaDgwMC1kY2ZlYTE3Ny1nbWlyP3Y9MTc3NjMzNjExNA.avif",
-      "time": "18:30 – 20:30",
-      "price": "",
-      "url": "https://allevents.in/peel/★new★-meet-and-make-art-social-5th-may/200029952838755"
     },
     {
       "title": "Classic and Sports Car Weekend",
@@ -4948,6 +4943,22 @@
       "url": "https://www.manxtriclub.com"
     },
     {
+      "title": "Exhibition: Ashlishyn Vannin (Visions of Mann)",
+      "venue": "Erin Arts Centre",
+      "startDate": "2026-05-11",
+      "endDate": "2026-05-11",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "erin arts centre",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/05/juan-ashlish-may-2026.jpg",
+      "time": "10:00",
+      "price": "",
+      "url": "https://www.erinartscentre.com/event/exhibition-ashlishyn-vannin-visions-of-mann/"
+    },
+    {
       "title": "Little Art Explorers – Funny Faces",
       "venue": "House Of Manannan, Peel",
       "startDate": "2026-05-11",
@@ -5618,6 +5629,22 @@
       "time": "18:00",
       "price": "",
       "url": "https://allevents.in/ramsey/bike-night-2-19th-may/200029986355530"
+    },
+    {
+      "title": "International Branch Meeting",
+      "venue": "Lloyds Bank, Villiers House",
+      "startDate": "2026-05-19",
+      "endDate": "2026-05-19",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "allevents (douglas)",
+      "recurring": false,
+      "description": "International Branch Meeting Meet, mingle, and connect with your local branch at an informal evening socialAbout this EventThanks to the hospitality of our main sponsor Lloyds International, we welcome members and guests to our annual International Branch Meeting hosted at Villiers House.We'll kick start the evening by hearing from Steve Billinghurst, Chair IoD Isle of Man. The event is your opportunity to connect with fellow IoD members, our local Ambassadors, and to highlight upcoming IoD Isle of Man news.We will also be welcoming a guest speaker (or two...) More details on the way!Expect good conversation, networking and a fun evening!FormatArrival from 6pmAt around 6:30pm Steve will open the floor before moving to our speaker discussion.A selection of drinks and capanes will be available throughout the evening.Event close at 8:00pm.SponsorThank you to Lloyds International for supporting IoD Isle of Man Connect and Develop events.Your privacy is important to us and the IoD are committed to protecting it. We have a rebost T&Cs policy which can be found by clicking Also check out other Meetups in Douglas.",
+      "imageUrl": "",
+      "time": "18:00 – 20:00",
+      "price": "£0.00",
+      "url": "https://allevents.in/douglas/international-branch-meeting/100001988311781061"
     },
     {
       "title": "LEARNAI: \"From Buzzword to Business Tool\" - Mon 18 May",
@@ -6533,6 +6560,25 @@
       "url": "https://allevents.in/douglas/wrwr-led-legacy-lap/200029783091137"
     },
     {
+      "title": "TT 2026 — Race Day 2",
+      "venue": "Tt Mountain Course",
+      "startDate": "2026-05-31",
+      "endDate": "2026-06-06",
+      "isTbc": false,
+      "duration": 6.0,
+      "tags": [
+        "Sports",
+        "Motorsport"
+      ],
+      "source": "allevents (douglas) & iom tt official",
+      "recurring": false,
+      "description": "RACE DAY- TT Fan Zone Trackside Bar – VIP Experience Upgrade your Trackside experience with exclusive access to our VIP area.About this EventRelax and enjoy the action from this dedicated VIP space; designed to give you a smoother, more enjoyable experience throughout the day!Our VIP area is perfect for groups, race fans, and anyone looking to elevate their day, this is the ultimate way to enjoy Trackside in comfort and style.This area features a comfortable reserved seating, a dedicated bar lane, and VIP‑only toilet facilities.PLEASE NOTE:This VIP area is accessed via the Trackside Bar within the Fan Zone.The VIP area is managed by Trackside Bar, not TT Motorsports.All tickets are non‑changeable and non‑refundable. Also check out other Sports events in Douglas.",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy8xOTYzZTA3MjdhNzk1NzhlZmI1ZTNkZjIwYzhhOTM2YTg4MjdjMWI2NjYyNDhhYjU1ZmM2NGY0ZTg3NmQ5Yzc1LXJpbWctdzEyMDAtaDYwMC1kYzQ4NDk0Ni1nbWlyLmpwZz92PTE3Nzc2NzkyOTA.avif",
+      "time": "11:00 – 21:00",
+      "price": "£30.00",
+      "url": "https://allevents.in/douglas/race-day-tt-fan-zone-trackside-bar-vip-experience/100001988269305014"
+    },
+    {
       "title": "William Booth - Book Launch",
       "venue": "The Terminus Tavern, Douglas",
       "startDate": "2026-05-31",
@@ -6579,25 +6625,6 @@
       "time": "See event page",
       "price": "",
       "url": "https://www.visitisleofman.com/whats-on/ramp-jump-and-stockcar-racing-p1807861"
-    },
-    {
-      "title": "TT 2026 — Race Day 2",
-      "venue": "Tt Mountain Course",
-      "startDate": "2026-05-31",
-      "endDate": "2026-05-31",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Sports",
-        "Motorsport"
-      ],
-      "source": "iom tt official",
-      "recurring": false,
-      "description": "Isle of Man TT 2026 Race Day on Sunday 31 May 2026. Witness the world's greatest road race on the legendary Mountain Course — 37.73 miles of public roads through towns, villages and open mountain. Spectator viewing is free at most points around the course. Check iomtt.com for race schedule, start times and road closure details.",
-      "imageUrl": "",
-      "time": "See event page",
-      "price": "Free spectator entry at most viewing points",
-      "url": "https://www.iomtt.com/tt-info"
     },
     {
       "title": "North Quay Live: TT Music Event",
@@ -10455,6 +10482,22 @@
       "time": "See event page",
       "price": "",
       "url": "https://www.southernmcc.com/"
+    },
+    {
+      "title": "Creative Watercolour Painting Daytime Course: starts 10th September 2026",
+      "venue": "Artreach Studios Ltd",
+      "startDate": "2026-09-10",
+      "endDate": "2026-10-09",
+      "isTbc": false,
+      "duration": 29.0,
+      "tags": [],
+      "source": "allevents (peel)",
+      "recurring": false,
+      "description": "Creative Watercolour Painting Daytime Course: starts 10th September 2026 Join our 4 week mini course exploring contemporary (+ traditional) techniques and discover the beauty of this meditative medium!About this EventCreative Watercolour Painting ** Night or Day Course(Available as an evening or day course)x4 weeks from 10th or 11th September 2026 - 8th or 9th OctoberNone on the 24th/25th SeptemberFancy learning to paint & getting creative with Watercolour?See our website for full details!Learn the fundamentals + use Watercolour in fluid and expressive ways.We'll share some of our favourite techniques to help you loosen up & find your style!Join us for our 4 week beginners and improvers course in Watercolour, ideal for anyone that would like to learn the basics and then loosen up with paint, develop new watercolour techniques or just have some creative fun!This transformative course is perfect for art enthusiasts eager to explore the vibrant world ofwatercolour painting. Whether you're a beginner or looking to enhance your skills, this course offers an exploration of traditional and contemporary techniques.Dive into the art of colour mixing, texture creation, and personal expression, guided by expert instruction and inspiring projects. Join us and discover your unique artistic voice and transform your creative vision into stunning watercolour masterpieces. Don't miss this chance to elevate your artistry—sign up today!Advice on tools and materials and lots more!Overview:Week 1: The Fundamentals in WatercoloursStart with an overview of watercolour painting techniques and essential materials like brushes, paper, and paints. Explore basic techniques such as washes and gradients, and understand colour theory for harmonious compositions.Week 2: Exploring Textures and EffectsLearn to create textures with unconventional tools and mediums. Master layering for depth and transparency, and complete a landscape or abstract piece focusing on these techniques.Week 3: Modern StylesDraw inspiration from contemporary artists and explore expressive brushwork to convey feeling and emotion. Create a piece inspired by a modern artist, applying the techniques learned.Week 4: Mastering Personal ExpressionDevelop your unique style through experimentation. Participate in a group critiques to refine your work, culminating in a final artwork that highlights your personal expression and innovation.Receive support, guidance and more to build your confidence in watercolour painting.This workshop inspires participants to cultivate their unique artistic voices in watercolour techniques.Instruction by Kate Jerry Also check out other Arts events in Peel, Workshops in Peel, Fine Arts events in Peel.",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czIvYmFubmVycy9hMmY2NjhlNGIzZjBlOTg0ZDY4YjQ0NTRlYTQwMWY5ODhmMDk1OGNlMzg1MzNjMzM2Nzg1ODIzMjA0MDUyMTVkLXJpbWctdzEyMDAtaDgwMC1kY2Q4ZDhkOC1nbWlyLmpwZz92PTE3NzU4MjExMjg.avif",
+      "time": "18:30 – 21:00",
+      "price": "£109.05",
+      "url": "https://allevents.in/peel/creative-watercolour-painting-daytime-course-starts-10th-september-2026/100001986408228484"
     },
     {
       "title": "Creative Watercolour Painting Daytime Course: starts 11th September 2026",
