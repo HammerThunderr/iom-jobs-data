@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-08T10:51:31.855706+00:00",
-  "lastUpdated": "10:51 UTC",
+  "fetchedAt": "2026-05-08T12:01:11.522592+00:00",
+  "lastUpdated": "12:00 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:04",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
@@ -39,25 +31,25 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Delayed 12:45",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "12:30",
-      "status": "Delayed 13:45",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "On-time",
+      "status": "Departed 12:38",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY234",
@@ -145,7 +137,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Landed 11:32",
+      "status": "Arrived 11:34",
       "origin": "Manchester",
       "statusType": "arrived"
     },
@@ -153,15 +145,15 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:15",
+      "status": "Arrived 12:03",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "12:00",
-      "status": "Delayed 13:15",
+      "status": "Delayed 13:37",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -246,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 29,
   "source": "airport.im"
 }
