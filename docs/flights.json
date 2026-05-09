@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-09T22:43:21.834747+00:00",
-  "lastUpdated": "22:42 UTC",
+  "fetchedAt": "2026-05-09T23:31:01.331242+00:00",
+  "lastUpdated": "23:30 UTC",
   "departures": [
-    {
-      "flightNo": "BA4547",
-      "airline": "British Airways",
-      "scheduled": "16:40",
-      "status": "Departed 18:12",
-      "destination": "Faro",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -57,6 +49,14 @@
       "scheduled": "13:10",
       "status": "On-time",
       "destination": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "14:05",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -108,8 +108,16 @@
       "status": "On-time",
       "origin": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "14:25",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
