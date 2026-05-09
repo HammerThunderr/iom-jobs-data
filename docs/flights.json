@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-09T11:30:55.568427+00:00",
-  "lastUpdated": "11:29 UTC",
+  "fetchedAt": "2026-05-09T12:11:33.858219+00:00",
+  "lastUpdated": "12:10 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 06:54",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -39,9 +31,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "Taxied 12:23",
+      "status": "Departed 12:29",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY520",
@@ -63,9 +55,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "BA4547",
@@ -137,17 +129,17 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "On-time",
+      "status": "Diverted",
       "origin": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Expected 13:25",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM676",
@@ -174,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
