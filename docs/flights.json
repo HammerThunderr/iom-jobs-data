@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-09T20:25:48.690115+00:00",
-  "lastUpdated": "20:24 UTC",
+  "fetchedAt": "2026-05-09T21:07:46.874122+00:00",
+  "lastUpdated": "21:07 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -58,17 +58,17 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:10",
-      "status": "Arrived 16:04",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
