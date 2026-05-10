@@ -1,32 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-10T22:04:10.551226+00:00",
-  "lastUpdated": "22:03 UTC",
+  "fetchedAt": "2026-05-10T23:00:48.327070+00:00",
+  "lastUpdated": "23:00 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:10",
-      "status": "Departed 17:17",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:24",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 17:40",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM671",
       "airline": "Loganair",
@@ -97,6 +73,14 @@
       "scheduled": "12:35",
       "status": "On-time",
       "destination": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY234",
+      "airline": "easyJet",
+      "scheduled": "13:35",
+      "status": "On-time",
+      "destination": "Bristol",
       "statusType": "ontime"
     }
   ],
@@ -182,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 20,
   "source": "airport.im"
 }
