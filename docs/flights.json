@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-10T13:53:01.060888+00:00",
-  "lastUpdated": "13:52 UTC",
+  "fetchedAt": "2026-05-10T14:42:22.728554+00:00",
+  "lastUpdated": "14:41 UTC",
   "departures": [
-    {
-      "flightNo": "LM314",
-      "airline": "Loganair",
-      "scheduled": "09:50",
-      "status": "Departed 09:50",
-      "destination": "Edinburgh",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -55,9 +47,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "Last call",
+      "status": "Departed 15:17",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY844",
@@ -153,17 +145,17 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
-      "status": "On-time",
+      "status": "Expected 15:47",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:15",
-      "status": "On-time",
+      "status": "Expected 15:56",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EI3216",
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
