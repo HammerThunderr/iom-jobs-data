@@ -1,8 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-11T13:43:35.433349+00:00",
-  "lastUpdated": "13:43 UTC",
-  "totalCount": 691,
+  "fetchedAt": "2026-05-11T16:28:27.255375+00:00",
+  "lastUpdated": "16:28 UTC",
+  "totalCount": 696,
   "categories": {
     "Kids": 85,
     "Things to Do": 81,
@@ -14,6 +14,7 @@
     "Sports": 56,
     "Motorsport": 54,
     "Music": 2,
+    "Indoor": 4,
     "Family": 7,
     "Youth": 2,
     "Fitness": 2
@@ -4686,6 +4687,38 @@
       "url": "https://www.manxradio.com/community/event/onchan-political-surgery-with-rob-callister-mhk6/"
     },
     {
+      "title": "Cash Compass",
+      "venue": "Isle Of Man",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-16T10:30:00+00:00",
+      "isTbc": false,
+      "duration": 0.4375,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "Bite sized budgeting session aimed at couples who would like to learn new skills in an informal and non judgemental setting. Tea and coffee provided. 10 am at Douglas City Library (downstair study area).",
+      "imageUrl": "",
+      "time": "10:00 – 11:30",
+      "price": "nil",
+      "url": "https://www.manxradio.com/community/event/cash-compass1/"
+    },
+    {
+      "title": "Summer Singers Coffee Morning (Ramsey)",
+      "venue": "Ramsey Town Hall",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-16T11:00:00+00:00",
+      "isTbc": false,
+      "duration": 0.4583333333333333,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "Summer Singers Coffee Morning. Lots of stalls including cake stall, bottle stall, garden stall and raffle.",
+      "imageUrl": "",
+      "time": "10:00 – 12:00",
+      "price": "£1",
+      "url": "https://www.manxradio.com/community/event/summer-singers-coffee-morning-ramsey/"
+    },
+    {
       "title": "Praying the Keeills week 2026: launch event",
       "venue": "Ballakilpheric Methodist Chapel",
       "startDate": "2026-05-16",
@@ -4716,6 +4749,22 @@
       "time": "10:15 – 11:45",
       "price": "",
       "url": "https://allevents.in/douglas/ms-iom-wheel-and-walk/200029931427933"
+    },
+    {
+      "title": "GREAT UNION CAMERA OBSCURA - OPEN WEEKENDS & BANK HOLIDAYS",
+      "venue": "Isle Of Man",
+      "startDate": "2026-05-16",
+      "endDate": "2026-05-16T15:00:00+00:00",
+      "isTbc": false,
+      "duration": 0.625,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "The Great Union Camera Obscura on Douglas Head was built in 1892 and is unique amongst the very few that are left in the British Isles as it has eleven lenses and produces eleven images of its picturesque surroundings. Since Victorian times it has been of great interest and still works by just a simple arrangement of mirrors and a darkened room. A spectacle not to be missed by visitors and residents alike. Join us up Douglas Head this weekend. Entry for Adults is £3, children FREE. Please note that we now have SUMUP card facilities - but Cash payments gratefully accepted - as in Victorian/Edwardian times! The Camera Obscura doesn’t open if raining or thick mist descends on The Head. Look for the flag flying.",
+      "imageUrl": "",
+      "time": "13:00 – 16:00",
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/great-union-camera-obscura-open-weekends-and-bank-holidays/"
     },
     {
       "title": "Plant Sale and Afternoon Tea",
@@ -4867,6 +4916,22 @@
       "time": "12:00 – 15:00",
       "price": "",
       "url": "https://allevents.in/douglas/signing-bingo/200029929574023"
+    },
+    {
+      "title": "20-30's Munch and Mingle: A space to connect",
+      "venue": "Porters Kitchen",
+      "startDate": "2026-05-17",
+      "endDate": "2026-05-17",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [],
+      "source": "allevents (douglas)",
+      "recurring": false,
+      "description": "20-30's Munch and Mingle: A space to connect An invitation to anyone who is ‘on their own’. Come along to meet new people & share good conversation. £12 for burger or wrap & chips.About this EventMunch and MingleThis is a special invitation to anyone (20-30's) who, for whatever reason, is ‘on their own’.Join us for a relaxed and welcoming “Munch and Mingle” lunch at Porters Kitchen after our ONE gathering on 17th May. It’s all about connection …… it’s an opportunity for creating meaningful connections and building friendships across our congregations.Come along to meet new people, share good conversation, and enjoy some great food together in a warm, friendly atmosphere.Spaces are limited, so be sure to reserve your spot via Eventbrite using the QR code on the invite. We’d love to see you there! The menu is a burger or wrap and chips costing £12.",
+      "imageUrl": "",
+      "time": "13:00 – 15:00",
+      "price": "£0.00",
+      "url": "https://allevents.in/douglas/20-30s-munch-and-mingle-a-space-to-connect/100001988238216026"
     },
     {
       "title": "The Tallis Consort: Music of the Spheres (at Castletown Methodist Church)",
@@ -5262,7 +5327,9 @@
       "endDate": "2026-05-22",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "centenary centre",
       "recurring": false,
       "description": "",
@@ -6135,6 +6202,22 @@
       "time": "See event page",
       "price": "",
       "url": "https://www.visitisleofman.com/whats-on/ramp-jump-and-stockcar-racing-p1807861"
+    },
+    {
+      "title": "TT Live at the Manx Museum",
+      "venue": "Manx Museum",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-06T15:30:00+00:00",
+      "isTbc": false,
+      "duration": 5.645833333333333,
+      "tags": [],
+      "source": "manx radio",
+      "recurring": false,
+      "description": "TT Live at the Manx Museum Catch every moment of the Isle of Man TT live at the Manx Museum across all 10 days of racing. Drop in, take a seat, and follow the action with full, uninterrupted coverage of qualifying sessions and race days, streamed via TT+. What you get: • Live coverage of all sessions taking place during opening hours • Pre-race build-up, expert commentary, and post-race analysis • Extra course-side cameras for closer, more detailed race views • Watch the key moments as they happen, without the crowds or long waits trackside. This is the only place to experience official TT+ coverage together in a shared setting. No interruptions. No missed action. Perfect if you want to stay close to the racing while taking a break from the course.",
+      "imageUrl": "",
+      "time": "09:30 – 16:30",
+      "price": "Free",
+      "url": "https://www.manxradio.com/community/event/tt-live-at-the-manx-museum/"
     },
     {
       "title": "North Quay Live: TT Music Event",
@@ -7580,7 +7663,9 @@
       "endDate": "2026-06-27",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "centenary centre & peel online",
       "recurring": false,
       "description": "Due to popular demand, we are pleased to welcome back the wonderfully entertaining Houghton Weavers back to Peel for another evening packed with humour and song. Doors open at 7pm, Show time 8pm. Tickets: https://www.etickets.im/cc.",
@@ -8539,7 +8624,9 @@
       "endDate": "2026-07-18",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "centenary centre & iom arts council & allevents (peel)",
       "recurring": false,
       "description": "An Evening of Deep Roots Blues with Grant Dermody & Adam Franklin Saturday 18 July 2026 • Peel Centenary Centre Doors 7:30pm • Music 8pm • Tickets only £15 Book now: www.etickets.im/cc • Celtic Gold (Peel) • OMA (Ramsey) Grant Dermody brings the soulful depth, warmth and mastery that have made him one of the most respected harmonica players in American roots music. A singer, songwriter and “understated harmonica virtuoso” celebrated for his rich tone and heartfelt delivery, Grant’s music draws from the deep well of acoustic and electric blues, old time traditions, and the Louisiana influences that shape his acclaimed recordings. His performances are rooted in sincerity, groove and a lifelong devotion to the blues. Adam Franklin is a superb exponent of acoustic blues and hot jazz, breathing new life into a century old art form with powerful vocals, resonator guitar, mandolin and a rhythmic ease honed over four decades. Known for his impeccable feel, deep musical vocabulary and energetic, highly engaging performances, Adam channels the spirit of the 1930s blues masters while making the music feel vivid, immediate and alive today. Together, these two master craftsmen create an intimate evening of deep roots blues—rich in stories, tradition, virtuosity and soul. Expect resonator slide, harmonica fire, timeless songs and the kind of musical conversation that only happens when two artists steeped in the tradition share a stage You may also like the following events from Live Roots Music IoM:Next Friday, 15th May, 07:00 pm, Americana Double Bill (the Jesse Janes Band & Joe Martin) in PeelNext Saturday, 16th May, 07:00 pm, John Gregory celebrates 20 incredible years of blues with special guests the Jesse Janes Band in DouglasThis September, 26th September, 07:30 pm, This Flight Tonight - The Songs Of Joni Michell in PeelAlso check out other Music events in Peel, Entertainment events in Peel, Arts events in Peel.",
@@ -10418,7 +10505,9 @@
       "endDate": "2026-09-26",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "centenary centre & allevents (peel)",
       "recurring": false,
       "description": "This Flight Tonight - The Songs Of Joni Michell Peel Centenary Centre & Live Roots Music IoM proudly presents ‘This Flight Tonight-The Songs of Joni Mitchell’ an intimate acoustic tribute to the music of Joni Mitchell… featuring songs such as ‘California’, ‘Blue’, ‘Woodstock’ ‘Both Sides Now’, ‘Carey’, ‘Coyote’, ‘A Case Of You’, and many more… Joni Mitchell is one of the most influential artists of the modern age, rising to stardom in the late 1960’s, Her music and songwriting is the jewel in the crown of the Woodstock generation. Bursting onto the scene with a sound entirely her own, Joni earned the respect of her musical peers and the love of her audiences Worldwide 🌍 ‘This Flight Tonight’ is a celebration of Joni Mitchell’s music that the band has had in the making for many years, established in early 2023 and touring extensively thereafter. The carefully crafted set list will feature songs from Joni’s million-selling albums such as Clouds, Ladies of the Canyon, For The Roses, Court and Spark, featuring many cuts from her 1971 landmark release ‘Blue’. This is a fully seated show performed by the full band on stage You may also like the following events from Live Roots Music IoM:Next Friday, 1st May, 07:30 pm, Live Music for Hospice IoM in DouglasNext month, 15th May, 07:00 pm, Americana Double Bill (the Jesse Janes Band & Joe Martin) in PeelNext month, 16th May, 07:00 pm, John Gregory celebrates 20 incredible years of blues with special guests the Jesse Janes Band in DouglasAlso check out other Music events in Peel, Entertainment events in Peel.",
