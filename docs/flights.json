@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-12T21:49:06.080241+00:00",
-  "lastUpdated": "21:48 UTC",
+  "fetchedAt": "2026-05-12T22:49:08.605383+00:00",
+  "lastUpdated": "22:48 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:11",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
@@ -86,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Arrived 17:19",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
@@ -158,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 17,
   "source": "airport.im"
 }
