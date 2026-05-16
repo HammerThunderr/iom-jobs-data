@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-16T12:08:03.742216+00:00",
-  "lastUpdated": "12:07 UTC",
+  "fetchedAt": "2026-05-16T13:56:24.062330+00:00",
+  "lastUpdated": "13:55 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Departed 08:56",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -47,17 +39,17 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Delayed 14:40",
+      "status": "Taxied 14:47",
       "destination": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Departed 14:15",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4547",
@@ -113,7 +105,7 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "Arrived 11:48",
+      "status": "Arrived 11:45",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -129,17 +121,17 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:40",
+      "status": "Arrived 13:39",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Expected 13:20",
+      "status": "Arrived 13:24",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
@@ -174,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
