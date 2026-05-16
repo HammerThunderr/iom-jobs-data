@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-16T10:08:01.424163+00:00",
-  "lastUpdated": "10:07 UTC",
+  "fetchedAt": "2026-05-16T11:15:56.628815+00:00",
+  "lastUpdated": "11:14 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,23 +39,23 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "On-time",
+      "status": "Departed 12:09",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "On-time",
+      "status": "Departed 12:05",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Delayed 14:10",
+      "status": "Delayed 14:40",
       "destination": "Palma De Mallorca",
       "statusType": "delayed"
     },
@@ -113,7 +113,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
-      "status": "Landed 11:06",
+      "status": "Arrived 11:08",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -121,23 +121,23 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "Delayed 11:55",
+      "status": "Arrived 11:48",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Expected 11:15",
+      "status": "Arrived 11:20",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:30",
+      "status": "Delayed 13:40",
       "origin": "Palma De Mallorca",
       "statusType": "delayed"
     },
