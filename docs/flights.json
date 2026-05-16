@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-16T17:36:24.734982+00:00",
-  "lastUpdated": "17:36 UTC",
+  "fetchedAt": "2026-05-16T18:35:50.494068+00:00",
+  "lastUpdated": "18:35 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -62,14 +62,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Arrived 13:24",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
@@ -97,11 +89,11 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "On-time",
+      "status": "Delayed 19:51",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
