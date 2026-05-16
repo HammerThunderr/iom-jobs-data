@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-16T08:55:12.333982+00:00",
-  "lastUpdated": "08:54 UTC",
+  "fetchedAt": "2026-05-16T10:08:01.424163+00:00",
+  "lastUpdated": "10:07 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -23,17 +23,17 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "09:30",
-      "status": "Gate closed",
+      "status": "Departed 09:48",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "09:45",
-      "status": "Gate closed",
+      "status": "Departed 10:08",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -55,9 +55,9 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "On-time",
+      "status": "Delayed 14:10",
       "destination": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY842",
@@ -113,9 +113,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
-      "status": "On-time",
+      "status": "Landed 11:06",
       "origin": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM682",
@@ -129,17 +129,17 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Expected 11:15",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "On-time",
+      "status": "Delayed 13:30",
       "origin": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY841",
