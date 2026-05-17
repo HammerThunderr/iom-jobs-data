@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-17T08:56:06.163366+00:00",
-  "lastUpdated": "08:55 UTC",
+  "fetchedAt": "2026-05-17T10:19:04.201324+00:00",
+  "lastUpdated": "10:18 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -23,17 +23,17 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "10:45",
-      "status": "On-time",
+      "status": "Departed 10:48",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM675",
@@ -105,17 +105,17 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "10:15",
-      "status": "Expected 10:13",
+      "status": "Arrived 10:12",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "10:50",
-      "status": "Expected 10:47",
+      "status": "Arrived 10:25",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM313",
