@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-17T12:37:30.470090+00:00",
-  "lastUpdated": "12:36 UTC",
+  "fetchedAt": "2026-05-17T14:08:01.648448+00:00",
+  "lastUpdated": "14:07 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "08:05",
-      "status": "Departed 08:05",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
@@ -47,17 +39,17 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:05",
-      "status": "Boarding shortly",
+      "status": "Departed 14:10",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY844",
@@ -87,9 +79,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Delayed 18:30",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
@@ -129,7 +121,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "13:20",
-      "status": "Arrived 13:11",
+      "status": "Arrived 13:07",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -137,9 +129,9 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "On-time",
+      "status": "Arrived 15:00",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY843",
@@ -161,9 +153,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:40",
-      "status": "On-time",
+      "status": "Delayed 18:05",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY715",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
