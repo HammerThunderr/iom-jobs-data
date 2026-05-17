@@ -1,19 +1,19 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-17T14:02:20.836092+00:00",
-  "lastUpdated": "14:02 UTC",
-  "totalCount": 690,
+  "fetchedAt": "2026-05-17T15:35:21.325451+00:00",
+  "lastUpdated": "15:35 UTC",
+  "totalCount": 691,
   "categories": {
-    "Kids": 87,
-    "Things to Do": 81,
+    "Kids": 88,
+    "Things to Do": 80,
     "Workshops": 3,
     "Learning": 3,
     "Sports": 55,
     "Motorsport": 53,
     "Family": 7,
-    "Youth": 2,
     "Fitness": 2,
-    "Music": 1
+    "Music": 1,
+    "Youth": 1
   },
   "events": [
     {
@@ -4201,6 +4201,24 @@
       "url": "https://www.kidsontherock.co.uk/events/tt-funfair-2026/"
     },
     {
+      "title": "TT Manx Messy Play",
+      "venue": "Onchan",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [
+        "Kids"
+      ],
+      "source": "kids on the rock iom",
+      "recurring": false,
+      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock MEGA EASTER event guide MEGA EASTER event guide MEGA TT event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
+      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
+      "time": "See event page",
+      "price": "",
+      "url": "https://www.kidsontherock.co.uk/events/tt-manx-messy-play/"
+    },
+    {
       "title": "Willow & Waves Tots",
       "venue": "Peel",
       "startDate": "",
@@ -5834,6 +5852,25 @@
       "url": "https://www.manxradio.com/community/event/tt-live-at-the-manx-museum/"
     },
     {
+      "title": "TT Beach Race - Douglas",
+      "venue": "Queens Promenade",
+      "startDate": "2026-06-01",
+      "endDate": "2026-06-01",
+      "isTbc": false,
+      "duration": 0.0,
+      "tags": [
+        "Sports",
+        "Motorsport"
+      ],
+      "source": "allevents (douglas) & visitor events calendar",
+      "recurring": false,
+      "description": "TT 2026 - DOUGLAS BEACH RACE 🏁Peveril MCC Douglas Beach Race 🏍️ Douglas beach race is back for TT 2026, supported by Monster Energy. Join us for an evening of beach racing right opposite the Best Western Hotel, Douglas. 💥Watch Adult Quads & Solos tackle the sand, with an all-comers race to finish! Don’t miss the action 🤙 📆 Monday 1st June ⏰ First practice at 6pm 🏍️ Adult A & B Group & Quads 📍 Queens Promenade - Opposite Best Western Hotel 💰 Cash Prizes for 1st, 2nd & 3rd in every race ✍️ Signing on for riders from 4.30pm on the slipway 🪪 ACU licence required (day licences are available) Also check out other Sports events in Douglas.",
+      "imageUrl": "https://cdn-ip.allevents.in/s/rs:fill:500:250/g:sm/sh:100/aHR0cHM6Ly9jZG4tYXouYWxsZXZlbnRzLmluL2V2ZW50czMvYmFubmVycy9iMmI2MTNhNjg5YzNkYzU4ZjM3ZTcxODg4YzVmNzBmNmE0NDM5NDlkNmFjNmQ1NmYzZjc0MjgxYmZhZjc3YTg0LXJpbWctdzEwMTYtaDE1MjUtZGM0NzQ4MzMtZ21pcj92PTE3Nzg5OTcxNTE.avif",
+      "time": "18:00 – 20:30",
+      "price": "",
+      "url": "https://allevents.in/douglas/tt-2026-douglas-beach-race/200030062175732"
+    },
+    {
       "title": "North Quay Live: TT Music Event",
       "venue": "North Quay",
       "startDate": "2026-06-01",
@@ -5896,27 +5933,6 @@
       "time": "See event page",
       "price": "",
       "url": "https://www.visitisleofman.com/whats-on/tt-douglas-beachcross-p1803381"
-    },
-    {
-      "title": "TT Beach Race - Douglas",
-      "venue": "Isle Of Man",
-      "startDate": "2026-06-01",
-      "endDate": "2026-06-01",
-      "isTbc": false,
-      "duration": 0.0,
-      "tags": [
-        "Things to Do",
-        "Youth",
-        "Sports",
-        "Motorsport"
-      ],
-      "source": "visitor events calendar",
-      "recurring": false,
-      "description": "",
-      "imageUrl": "",
-      "time": "See event page",
-      "price": "",
-      "url": "https://www.facebook.com/pevelmcc"
     },
     {
       "title": "Port Erin TT Fun Day",
