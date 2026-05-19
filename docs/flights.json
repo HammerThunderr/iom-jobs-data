@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-19T08:52:05.256372+00:00",
-  "lastUpdated": "08:51 UTC",
+  "fetchedAt": "2026-05-19T11:50:06.846872+00:00",
+  "lastUpdated": "11:49 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,33 +23,33 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:55",
-      "status": "Gate closed",
+      "status": "Departed 10:06",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:05",
-      "status": "Gate closed",
+      "status": "Departed 10:08",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "On-time",
+      "status": "Departed 11:30",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Departed 12:44",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -105,7 +105,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "09:25",
-      "status": "Landed 09:22",
+      "status": "Arrived 09:25",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -121,17 +121,17 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Arrived 12:09",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Expected 13:07",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM676",
