@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-25T23:48:39.627423+00:00",
-  "lastUpdated": "23:48 UTC",
+  "fetchedAt": "2026-05-26T01:33:40.397858+00:00",
+  "lastUpdated": "01:32 UTC",
   "departures": [
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:40",
-      "status": "Departed 19:02",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3219",
-      "airline": "Aer Lingus",
-      "scheduled": "19:10",
-      "status": "Departed 20:13",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -90,33 +74,17 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EI3218",
-      "airline": "Aer Lingus",
-      "scheduled": "18:40",
-      "status": "Arrived 19:35",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 19:54",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Arrived 20:04",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY517",
       "airline": "easyJet",
@@ -180,8 +148,16 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 19,
   "source": "airport.im"
 }
