@@ -1,88 +1,20 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-26T23:32:29.585133+00:00",
-  "lastUpdated": "20:01 26/05/26",
-  "totalCount": 43,
+  "fetchedAt": "2026-05-27T01:50:29.659124+00:00",
+  "lastUpdated": "23:53 26/05/26",
+  "totalCount": 44,
   "days": [
-    {
-      "date": "Tuesday, 26 May 2026",
-      "sailings": [
-        {
-          "departTime": "03:29",
-          "departPort": "Heysham",
-          "arriveTime": "07:21",
-          "arrivePort": "Douglas",
-          "ferry": "Manxman",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "08:18",
-          "departPort": "Liverpool",
-          "arriveTime": "10:57",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "09:03",
-          "departPort": "Douglas",
-          "arriveTime": "12:58",
-          "arrivePort": "Heysham",
-          "ferry": "Manxman",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "13:00",
-          "departPort": "Douglas",
-          "arriveTime": "15:24",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "15:24",
-          "departPort": "Heysham",
-          "arriveTime": "19:13",
-          "arrivePort": "Douglas",
-          "ferry": "Manxman",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "17:24",
-          "departPort": "Liverpool",
-          "arriveTime": "20:07",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "21:00",
-          "departPort": "Douglas",
-          "arriveTime": "00:45",
-          "arrivePort": "Heysham",
-          "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
-        }
-      ]
-    },
     {
       "date": "Wednesday, 27 May 2026",
       "sailings": [
         {
-          "departTime": "01:00",
+          "departTime": "00:52",
           "departPort": "Liverpool",
-          "arriveTime": "04:00",
+          "arriveTime": "03:52",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "03:30",
@@ -409,6 +341,83 @@
     },
     {
       "date": "Sunday, 31 May 2026",
+      "sailings": [
+        {
+          "departTime": "03:00",
+          "departPort": "Douglas",
+          "arriveTime": "05:45",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "03:30",
+          "departPort": "Heysham",
+          "arriveTime": "07:15",
+          "arrivePort": "Douglas",
+          "ferry": "Manxman",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "07:15",
+          "departPort": "Liverpool",
+          "arriveTime": "10:15",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "09:15",
+          "departPort": "Douglas",
+          "arriveTime": "13:00",
+          "arrivePort": "Heysham",
+          "ferry": "Manxman",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "12:00",
+          "departPort": "Douglas",
+          "arriveTime": "14:45",
+          "arrivePort": "Larne",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "15:30",
+          "departPort": "Heysham",
+          "arriveTime": "19:15",
+          "arrivePort": "Douglas",
+          "ferry": "Manxman",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "17:00",
+          "departPort": "Larne",
+          "arriveTime": "20:15",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "21:00",
+          "departPort": "Douglas",
+          "arriveTime": "00:45",
+          "arrivePort": "Heysham",
+          "ferry": "Manxman",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Monday, 1 June 2026",
       "sailings": [
         {
           "departTime": "21:00",
