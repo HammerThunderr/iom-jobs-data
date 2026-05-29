@@ -1,47 +1,47 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-29T03:29:46.810427+00:00",
-  "lastUpdated": "03:29 UTC",
+  "fetchedAt": "2026-05-29T07:08:33.081257+00:00",
+  "lastUpdated": "07:07 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Departed 07:00",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY718",
       "airline": "easyJet",
       "scheduled": "08:10",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "08:20",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Edinburgh",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY518",
       "airline": "easyJet",
       "scheduled": "08:35",
-      "status": "On-time",
+      "status": "Delayed 09:40",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "08:40",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM693",
@@ -154,6 +154,30 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY844",
+      "airline": "easyJet",
+      "scheduled": "18:50",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3219",
+      "airline": "Aer Lingus",
+      "scheduled": "19:10",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY648",
+      "airline": "easyJet",
+      "scheduled": "20:05",
+      "status": "Delayed 20:30",
+      "destination": "London Luton",
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
@@ -161,25 +185,25 @@
       "flightNo": "EZY717",
       "airline": "easyJet",
       "scheduled": "07:35",
-      "status": "On-time",
+      "status": "Arrived 07:34",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "07:50",
-      "status": "On-time",
+      "status": "Arrived 07:26",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "08:05",
-      "status": "On-time",
+      "status": "Delayed 09:05",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM682",
@@ -300,8 +324,40 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3218",
+      "airline": "Aer Lingus",
+      "scheduled": "18:40",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY647",
+      "airline": "easyJet",
+      "scheduled": "19:35",
+      "status": "Delayed 19:55",
+      "origin": "London Luton",
+      "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM678",
+      "airline": "Loganair",
+      "scheduled": "20:10",
+      "status": "On-time",
+      "origin": "London City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM688",
+      "airline": "Loganair",
+      "scheduled": "20:20",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 37,
+  "totalCount": 44,
   "source": "airport.im"
 }
