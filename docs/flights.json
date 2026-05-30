@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-30T19:58:22.363244+00:00",
-  "lastUpdated": "19:58 UTC",
+  "fetchedAt": "2026-05-30T20:57:21.484077+00:00",
+  "lastUpdated": "20:56 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -9,14 +9,6 @@
       "scheduled": "09:30",
       "status": "Departed 19:23",
       "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3635",
-      "airline": "Aer Lingus",
-      "scheduled": "15:20",
-      "status": "Departed 15:22",
-      "destination": "Belfast City",
       "statusType": "departed"
     },
     {
@@ -122,6 +114,14 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -131,22 +131,6 @@
       "scheduled": "09:00",
       "status": "Arrived 18:39",
       "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY717",
-      "airline": "easyJet",
-      "scheduled": "15:10",
-      "status": "Arrived 15:24",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "BA4548",
-      "airline": "British Airways",
-      "scheduled": "15:35",
-      "status": "Arrived 15:30",
-      "origin": "Faro",
       "statusType": "arrived"
     },
     {
@@ -228,8 +212,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 27,
   "source": "airport.im"
 }
