@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-30T11:51:14.276720+00:00",
-  "lastUpdated": "11:50 UTC",
+  "fetchedAt": "2026-05-30T12:53:08.420189+00:00",
+  "lastUpdated": "12:52 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:05",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY518",
       "airline": "easyJet",
@@ -79,17 +71,17 @@
       "flightNo": "EZY514",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3635",
@@ -158,20 +150,12 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY517",
-      "airline": "easyJet",
-      "scheduled": "07:45",
-      "status": "Arrived 07:25",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:00",
-      "status": "Diverted",
+      "status": "Delayed 16:10",
       "origin": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM694",
@@ -201,9 +185,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "Delayed 13:12",
+      "status": "Arrived 13:11",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY519",
@@ -217,25 +201,25 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 14:00",
+      "status": "Landed 13:51",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY513",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Arrived 13:26",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Arrived 13:45",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3634",
@@ -302,6 +286,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 37,
+  "totalCount": 35,
   "source": "airport.im"
 }
