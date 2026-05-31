@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-31T19:39:42.473119+00:00",
-  "lastUpdated": "19:38 UTC",
+  "fetchedAt": "2026-05-31T20:40:29.633572+00:00",
+  "lastUpdated": "20:40 UTC",
   "departures": [
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "14:55",
-      "status": "Departed 14:54",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3635",
-      "airline": "Aer Lingus",
-      "scheduled": "15:20",
-      "status": "Departed 15:23",
-      "destination": "Belfast City",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY520",
       "airline": "easyJet",
@@ -146,17 +130,25 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "MMD452",
+      "airline": "Air Alsie",
+      "scheduled": "11:00",
+      "status": "On-time",
+      "destination": "Copenhagen",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY518",
+      "airline": "easyJet",
+      "scheduled": "11:05",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "15:30",
-      "status": "Arrived 15:24",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY843",
       "airline": "easyJet",
@@ -302,6 +294,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 37,
+  "totalCount": 36,
   "source": "airport.im"
 }
