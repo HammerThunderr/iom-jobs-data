@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-05-31T11:46:12.510594+00:00",
-  "lastUpdated": "11:45 UTC",
+  "fetchedAt": "2026-05-31T13:02:56.182047+00:00",
+  "lastUpdated": "13:02 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "08:05",
-      "status": "Departed 08:03",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY718",
       "airline": "easyJet",
@@ -71,25 +63,25 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Gate closed",
+      "status": "Departed 13:08",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Departed 14:01",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3635",
@@ -233,17 +225,17 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "13:20",
-      "status": "Delayed 13:35",
+      "status": "Arrived 13:10",
       "origin": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "On-time",
+      "status": "Expected 14:20",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EI3634",
@@ -342,6 +334,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 42,
+  "totalCount": 41,
   "source": "airport.im"
 }
