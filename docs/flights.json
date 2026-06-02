@@ -1,38 +1,14 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-02T10:58:23.023438+00:00",
-  "lastUpdated": "10:57 UTC",
+  "fetchedAt": "2026-06-02T14:52:35.908225+00:00",
+  "lastUpdated": "14:51 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 08:44",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
       "status": "Departed 11:30",
       "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY518",
-      "airline": "easyJet",
-      "scheduled": "09:15",
-      "status": "Departed 09:18",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3019",
-      "airline": "Aer Lingus",
-      "scheduled": "09:40",
-      "status": "Departed 09:49",
-      "destination": "Dublin",
       "statusType": "departed"
     },
     {
@@ -47,81 +23,81 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:05",
-      "status": "Boarding now",
+      "status": "Departed 12:31",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3017",
       "airline": "Aer Lingus",
       "scheduled": "11:30",
-      "status": "Boarding shortly",
+      "status": "Departed 12:41",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "Gate closed",
+      "status": "Departed 12:01",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Boarding shortly",
+      "status": "Departed 12:43",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY718",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Delayed 14:20",
+      "status": "Departed 14:22",
       "destination": "Manchester",
-      "statusType": "delayed"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY514",
       "airline": "easyJet",
       "scheduled": "13:50",
-      "status": "On-time",
+      "status": "Departed 14:42",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3635",
       "airline": "Aer Lingus",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Departed 15:15",
       "destination": "Belfast City",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Departed 15:21",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 17:40",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Delayed 17:36",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
@@ -150,38 +126,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY517",
-      "airline": "easyJet",
-      "scheduled": "08:45",
-      "status": "Arrived 08:28",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 09:14",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EI3018",
-      "airline": "Aer Lingus",
-      "scheduled": "09:10",
-      "status": "Arrived 09:07",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "09:25",
-      "status": "Arrived 09:18",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:35",
@@ -201,73 +145,73 @@
       "flightNo": "EI3016",
       "airline": "Aer Lingus",
       "scheduled": "11:05",
-      "status": "Delayed 11:40",
+      "status": "Arrived 12:00",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 11:55",
+      "status": "Arrived 11:48",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY717",
       "airline": "easyJet",
       "scheduled": "12:30",
-      "status": "Delayed 13:50",
+      "status": "Arrived 13:40",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM696",
       "airline": "Loganair",
       "scheduled": "13:15",
-      "status": "On-time",
+      "status": "Arrived 13:20",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY513",
       "airline": "easyJet",
       "scheduled": "13:20",
-      "status": "On-time",
+      "status": "Arrived 13:52",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Arrived 13:55",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3634",
       "airline": "Aer Lingus",
       "scheduled": "14:35",
-      "status": "On-time",
+      "status": "Arrived 14:37",
       "origin": "Belfast City",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Delayed 16:15",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 17:20",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM698",
@@ -310,6 +254,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 38,
+  "totalCount": 31,
   "source": "airport.im"
 }
