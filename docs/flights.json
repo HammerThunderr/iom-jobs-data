@@ -1,40 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-01T23:19:00.665692+00:00",
-  "lastUpdated": "23:18 UTC",
+  "fetchedAt": "2026-06-02T01:39:50.849226+00:00",
+  "lastUpdated": "01:38 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Cancelled",
-      "destination": "Dublin",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "18:25",
-      "status": "Cancelled",
-      "destination": "Liverpool",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:40",
-      "status": "Cancelled",
-      "destination": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EI3219",
-      "airline": "Aer Lingus",
-      "scheduled": "19:10",
-      "status": "Cancelled",
-      "destination": "Dublin",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -122,49 +90,25 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3635",
+      "airline": "Aer Lingus",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Belfast City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:45",
-      "status": "Diverted",
-      "origin": "Manchester",
-      "statusType": "scheduled"
-    },
-    {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "18:10",
-      "status": "Cancelled",
-      "origin": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EI3218",
-      "airline": "Aer Lingus",
-      "scheduled": "18:40",
-      "status": "Cancelled",
-      "origin": "Dublin",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Cancelled",
-      "origin": "London City",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Cancelled",
-      "origin": "Liverpool",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "EI3018",
       "airline": "Aer Lingus",
@@ -260,8 +204,24 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3634",
+      "airline": "Aer Lingus",
+      "scheduled": "14:35",
+      "status": "On-time",
+      "origin": "Belfast City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 32,
+  "totalCount": 27,
   "source": "airport.im"
 }
