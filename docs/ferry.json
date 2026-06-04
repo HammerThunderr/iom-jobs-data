@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-04T10:35:10.284545+00:00",
-  "lastUpdated": "09:49 04/06/26",
+  "fetchedAt": "2026-06-04T13:47:12.614520+00:00",
+  "lastUpdated": "13:44 04/06/26",
   "totalCount": 43,
   "days": [
     {
@@ -28,29 +28,29 @@
         {
           "departTime": "09:47",
           "departPort": "Douglas",
-          "arriveTime": "12:00",
+          "arriveTime": "12:17",
           "arrivePort": "Heysham",
           "ferry": "Manannan",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
           "departTime": "10:21",
           "departPort": "Douglas",
-          "arriveTime": "14:05",
+          "arriveTime": "14:25",
           "arrivePort": "Heysham",
           "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
-          "departTime": "11:15",
+          "departTime": "13:30",
           "departPort": "Heysham",
-          "arriveTime": "13:45",
+          "arriveTime": "16:15",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Delayed",
-          "statusType": "delayed"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "15:00",
@@ -67,8 +67,8 @@
           "arriveTime": "18:15",
           "arrivePort": "Liverpool",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Delayed",
+          "statusType": "delayed"
         },
         {
           "departTime": "19:15",
@@ -76,8 +76,8 @@
           "arriveTime": "22:15",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Delayed",
+          "statusType": "delayed"
         },
         {
           "departTime": "21:00",
