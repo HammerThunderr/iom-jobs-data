@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-04T06:54:57.994360+00:00",
-  "lastUpdated": "04:40 04/06/26",
+  "fetchedAt": "2026-06-04T10:35:10.284545+00:00",
+  "lastUpdated": "09:49 04/06/26",
   "totalCount": 43,
   "days": [
     {
@@ -10,38 +10,38 @@
         {
           "departTime": "04:16",
           "departPort": "Heysham",
-          "arriveTime": "08:00",
+          "arriveTime": "08:10",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
           "departTime": "05:36",
           "departPort": "Larne",
-          "arriveTime": "08:30",
+          "arriveTime": "08:33",
           "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "09:47",
+          "departPort": "Douglas",
+          "arriveTime": "12:00",
+          "arrivePort": "Heysham",
           "ferry": "Manannan",
           "status": "Departed",
           "statusType": "departed"
         },
         {
-          "departTime": "07:30",
+          "departTime": "10:21",
           "departPort": "Douglas",
-          "arriveTime": "10:00",
-          "arrivePort": "Heysham",
-          "ferry": "Manannan",
-          "status": "Delayed",
-          "statusType": "delayed"
-        },
-        {
-          "departTime": "09:15",
-          "departPort": "Douglas",
-          "arriveTime": "13:00",
+          "arriveTime": "14:05",
           "arrivePort": "Heysham",
           "ferry": "Manxman",
-          "status": "Delayed",
-          "statusType": "delayed"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "11:15",
@@ -49,8 +49,8 @@
           "arriveTime": "13:45",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Delayed",
+          "statusType": "delayed"
         },
         {
           "departTime": "15:00",
@@ -58,8 +58,8 @@
           "arriveTime": "18:45",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Delayed",
+          "statusType": "delayed"
         },
         {
           "departTime": "15:15",
