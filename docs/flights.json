@@ -1,32 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-06T12:57:21.138085+00:00",
-  "lastUpdated": "12:57 UTC",
+  "fetchedAt": "2026-06-06T14:28:00.952082+00:00",
+  "lastUpdated": "14:27 UTC",
   "departures": [
-    {
-      "flightNo": "EZY518",
-      "airline": "easyJet",
-      "scheduled": "08:15",
-      "status": "Departed 08:08",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Departed 09:02",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "09:30",
-      "status": "Departed 09:35",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -63,15 +39,15 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Last call",
+      "status": "Departed 14:35",
       "destination": "Palma De Mallorca",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY514",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Delayed 15:00",
+      "status": "Delayed 17:00",
       "destination": "Liverpool",
       "statusType": "delayed"
     },
@@ -79,33 +55,33 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Gate closed",
+      "status": "Departed 14:38",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3635",
       "airline": "Aer Lingus",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Taxied 15:18",
       "destination": "Belfast City",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY718",
       "airline": "easyJet",
       "scheduled": "15:40",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "BA9793",
       "airline": "British Airways",
       "scheduled": "15:50",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "Ibiza",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4547",
@@ -158,22 +134,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY715",
-      "airline": "easyJet",
-      "scheduled": "09:00",
-      "status": "Arrived 08:36",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "Arrived 09:00",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "10:00",
@@ -217,7 +177,7 @@
       "flightNo": "EZY513",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Delayed 14:30",
+      "status": "Delayed 16:30",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -233,41 +193,41 @@
       "flightNo": "EI3634",
       "airline": "Aer Lingus",
       "scheduled": "14:35",
-      "status": "On-time",
+      "status": "Arrived 14:24",
       "origin": "Belfast City",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA9794",
       "airline": "British Airways",
       "scheduled": "14:40",
-      "status": "On-time",
+      "status": "Arrived 14:57",
       "origin": "Ibiza",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY717",
       "airline": "easyJet",
       "scheduled": "15:10",
-      "status": "On-time",
+      "status": "Arrived 15:24",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Landed 15:25",
       "origin": "Faro",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "On-time",
+      "status": "Expected 16:09",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY651",
@@ -310,6 +270,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 38,
+  "totalCount": 33,
   "source": "airport.im"
 }
