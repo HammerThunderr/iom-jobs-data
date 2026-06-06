@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-06T14:28:00.952082+00:00",
-  "lastUpdated": "14:27 UTC",
+  "fetchedAt": "2026-06-06T15:50:02.643370+00:00",
+  "lastUpdated": "15:48 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "09:45",
-      "status": "Departed 09:37",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -47,9 +39,9 @@
       "flightNo": "EZY514",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Delayed 17:00",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY842",
@@ -63,49 +55,49 @@
       "flightNo": "EI3635",
       "airline": "Aer Lingus",
       "scheduled": "15:20",
-      "status": "Taxied 15:18",
+      "status": "Departed 15:28",
       "destination": "Belfast City",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY718",
       "airline": "easyJet",
       "scheduled": "15:40",
-      "status": "Boarding now",
+      "status": "Departed 16:45",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA9793",
       "airline": "British Airways",
       "scheduled": "15:50",
-      "status": "Last call",
+      "status": "Departed 15:52",
       "destination": "Ibiza",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "On-time",
+      "status": "Departed 16:37",
       "destination": "Faro",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY652",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "London Luton",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
@@ -119,9 +111,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "17:35",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3219",
@@ -133,14 +125,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY839",
-      "airline": "easyJet",
-      "scheduled": "10:00",
-      "status": "Arrived 09:53",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM638",
       "airline": "Loganair",
@@ -177,9 +161,9 @@
       "flightNo": "EZY513",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Delayed 16:30",
+      "status": "Arrived 16:34",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
@@ -217,7 +201,7 @@
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "Landed 15:25",
+      "status": "Arrived 15:30",
       "origin": "Faro",
       "statusType": "arrived"
     },
@@ -225,33 +209,33 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Expected 16:09",
+      "status": "Arrived 16:02",
       "origin": "London Heathrow",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY651",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "On-time",
+      "status": "Arrived 16:28",
       "origin": "London Luton",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Arrived 16:43",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:05",
-      "status": "On-time",
+      "status": "Landed 16:46",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3218",
@@ -270,6 +254,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 33,
+  "totalCount": 31,
   "source": "airport.im"
 }
