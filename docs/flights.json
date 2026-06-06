@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-06T20:36:55.417674+00:00",
-  "lastUpdated": "20:36 UTC",
+  "fetchedAt": "2026-06-06T21:41:13.648318+00:00",
+  "lastUpdated": "21:40 UTC",
   "departures": [
     {
       "flightNo": "EZY514",
@@ -9,30 +9,6 @@
       "scheduled": "14:05",
       "status": "Departed 17:16",
       "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY718",
-      "airline": "easyJet",
-      "scheduled": "15:40",
-      "status": "Departed 16:45",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "BA9793",
-      "airline": "British Airways",
-      "scheduled": "15:50",
-      "status": "Departed 15:52",
-      "destination": "Ibiza",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "BA4547",
-      "airline": "British Airways",
-      "scheduled": "16:40",
-      "status": "Departed 16:37",
-      "destination": "Faro",
       "statusType": "departed"
     },
     {
@@ -146,33 +122,17 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY513",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Arrived 16:34",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:10",
-      "status": "Arrived 16:02",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY651",
-      "airline": "easyJet",
-      "scheduled": "16:45",
-      "status": "Arrived 16:28",
-      "origin": "London Luton",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
@@ -260,8 +220,32 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "6I451",
+      "airline": "Air Alsie",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Soenderborg",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 32,
+  "totalCount": 30,
   "source": "airport.im"
 }
