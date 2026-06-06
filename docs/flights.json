@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-06T15:50:02.643370+00:00",
-  "lastUpdated": "15:48 UTC",
+  "fetchedAt": "2026-06-06T16:53:40.591351+00:00",
+  "lastUpdated": "16:53 UTC",
   "departures": [
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:55",
-      "status": "Departed 10:23",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -39,9 +31,9 @@
       "flightNo": "EZY514",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Last call",
+      "status": "Departed 17:16",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
@@ -87,33 +79,33 @@
       "flightNo": "EZY652",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Boarding now",
+      "status": "Departed 17:32",
       "destination": "London Luton",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding shortly",
+      "status": "Departed 17:29",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "On-time",
+      "status": "Departed 17:36",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "17:35",
-      "status": "Boarding shortly",
+      "status": "Departed 17:44",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3219",
@@ -122,25 +114,17 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM691",
+      "airline": "Loganair",
+      "scheduled": "07:05",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:25",
-      "status": "Arrived 11:08",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:32",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY519",
       "airline": "easyJet",
@@ -233,7 +217,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:05",
-      "status": "Landed 16:46",
+      "status": "Arrived 16:49",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -252,8 +236,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY717",
+      "airline": "easyJet",
+      "scheduled": "07:50",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 31,
+  "totalCount": 30,
   "source": "airport.im"
 }
