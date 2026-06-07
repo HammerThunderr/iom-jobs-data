@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-07T09:40:35.988088+00:00",
-  "lastUpdated": "09:39 UTC",
+  "fetchedAt": "2026-06-07T11:24:46.218977+00:00",
+  "lastUpdated": "11:24 UTC",
   "departures": [
     {
       "flightNo": "LM691",
@@ -55,33 +55,33 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "10:45",
-      "status": "Gate closed",
+      "status": "Departed 10:51",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM312",
       "airline": "Loganair",
       "scheduled": "11:05",
-      "status": "Boarding now",
+      "status": "Departed 11:11",
       "destination": "Edinburgh",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "On-time",
+      "status": "Departed 11:41",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM675",
@@ -95,9 +95,9 @@
       "flightNo": "6I452",
       "airline": "Air Alsie",
       "scheduled": "13:15",
-      "status": "On-time",
+      "status": "Delayed 14:00",
       "destination": "Soenderborg",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM697",
@@ -257,7 +257,7 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "10:50",
-      "status": "Landed 10:37",
+      "status": "Arrived 10:40",
       "origin": "London Gatwick",
       "statusType": "arrived"
     },
@@ -265,25 +265,25 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Arrived 11:55",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "6I451",
       "airline": "Air Alsie",
       "scheduled": "12:30",
-      "status": "On-time",
+      "status": "Delayed 13:24",
       "origin": "Soenderborg",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
-      "status": "On-time",
+      "status": "Arrived 12:12",
       "origin": "Edinburgh",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
