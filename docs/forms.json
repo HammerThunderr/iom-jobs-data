@@ -1,0 +1,267 @@
+{
+  "success": true,
+  "lastUpdated": "2026-06-07",
+  "source": "gov.im / services.gov.im — Crown Copyright, Open Government Licence",
+  "categories": [
+    "Tax & Income",
+    "Vehicles & Driving",
+    "Benefits & Pensions",
+    "Births, Deaths & Marriage",
+    "Housing & Property",
+    "Health",
+    "Business & Employment",
+    "Travel & Permits"
+  ],
+  "forms": [
+    {
+      "id": "frm_001",
+      "title": "Income Tax Return (Online)",
+      "category": "Tax & Income",
+      "description": "Submit and view your income tax returns online, see assessments and balances, and make payments. Requires Government Online Services login.",
+      "type": "service",
+      "url": "https://services.gov.im/income-tax/",
+      "department": "Treasury — Income Tax Division",
+      "loginRequired": true
+    },
+    {
+      "id": "frm_002",
+      "title": "Register for Online Tax Services",
+      "category": "Tax & Income",
+      "description": "One-time registration with Government Online Services to enrol for Income Tax Services and request your activation code.",
+      "type": "service",
+      "url": "https://www.gov.im/onlineservices",
+      "department": "Cabinet Office",
+      "loginRequired": true
+    },
+    {
+      "id": "frm_003",
+      "title": "Income Tax Forms (Download)",
+      "category": "Tax & Income",
+      "description": "Downloadable income tax forms for individuals and employers, including registration, coding and return forms.",
+      "type": "download",
+      "url": "https://www.gov.im/tax-forms",
+      "department": "Treasury — Income Tax Division",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_004",
+      "title": "National Insurance Forms",
+      "category": "Tax & Income",
+      "description": "Forms and information relating to National Insurance contributions for individuals and employers.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/tax-vat-and-your-money/national-insurance/",
+      "department": "Treasury",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_005",
+      "title": "Vehicle Tax & Licensing (Online)",
+      "category": "Vehicles & Driving",
+      "description": "Renew vehicle tax, register a vehicle and manage driving and vehicle services online.",
+      "type": "service",
+      "url": "https://services.gov.im/vehicles-driving/",
+      "department": "Department of Infrastructure",
+      "loginRequired": true
+    },
+    {
+      "id": "frm_006",
+      "title": "Driving Licence Applications",
+      "category": "Vehicles & Driving",
+      "description": "Apply for or renew a driving licence, provisional licence, and related driver services.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/travel-traffic-and-motoring/driver-licensing/",
+      "department": "Department of Infrastructure",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_007",
+      "title": "Vehicle Registration & Number Plates",
+      "category": "Vehicles & Driving",
+      "description": "Register a vehicle, transfer ownership, and apply for personalised registration marks.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/travel-traffic-and-motoring/vehicle-registration-and-licensing/",
+      "department": "Department of Infrastructure",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_008",
+      "title": "Vehicle Test (MOT) Booking",
+      "category": "Vehicles & Driving",
+      "description": "Book a vehicle test at the Vehicle Test Centre online.",
+      "type": "service",
+      "url": "https://services.gov.im/vehicles-driving/",
+      "department": "Department of Infrastructure — Vehicle Test Centre",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_009",
+      "title": "Social Security Benefits",
+      "category": "Benefits & Pensions",
+      "description": "Information and application forms for income support, jobseeker's allowance, employed person's allowance and other benefits.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/benefits-and-financial-support/",
+      "department": "Treasury — Social Security Division",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_010",
+      "title": "State Pension",
+      "category": "Benefits & Pensions",
+      "description": "Check your State Pension entitlement, claim your pension, and find related forms and guidance.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/benefits-and-financial-support/manx-state-pension/",
+      "department": "Treasury — Social Security Division",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_011",
+      "title": "Child Benefit",
+      "category": "Benefits & Pensions",
+      "description": "Claim Child Benefit and report changes in your circumstances.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/benefits-and-financial-support/benefits/families-and-children/child-benefit/",
+      "department": "Treasury — Social Security Division",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_012",
+      "title": "Housing Benefit & Income Support",
+      "category": "Benefits & Pensions",
+      "description": "Apply for help with rent and living costs through Income Support and Housing Benefit.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/benefits-and-financial-support/benefits/",
+      "department": "Treasury — Social Security Division",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_013",
+      "title": "Register a Birth",
+      "category": "Births, Deaths & Marriage",
+      "description": "Information and appointment booking to register a birth with the Civil Registry.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/births-deaths-and-marriages/births/",
+      "department": "General Registry — Civil Registry",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_014",
+      "title": "Register a Death",
+      "category": "Births, Deaths & Marriage",
+      "description": "Guidance and appointment booking to register a death, and what to do afterwards.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/births-deaths-and-marriages/deaths/",
+      "department": "General Registry — Civil Registry",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_015",
+      "title": "Marriage & Civil Partnership",
+      "category": "Births, Deaths & Marriage",
+      "description": "Give notice of marriage or civil partnership, book a ceremony, and order certificates.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/births-deaths-and-marriages/marriage-and-civil-partnership/",
+      "department": "General Registry — Civil Registry",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_016",
+      "title": "Order a Certificate (Birth/Death/Marriage)",
+      "category": "Births, Deaths & Marriage",
+      "description": "Order official copies of birth, death, marriage and civil partnership certificates.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/births-deaths-and-marriages/ordering-certificates/",
+      "department": "General Registry — Civil Registry",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_017",
+      "title": "Public Sector Housing Application",
+      "category": "Housing & Property",
+      "description": "Apply for public sector (social) housing and find information on the housing allocation policy.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/housing-and-property/public-sector-housing/",
+      "department": "Manx Housing / Local Authorities",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_018",
+      "title": "Planning Application",
+      "category": "Housing & Property",
+      "description": "Submit and track planning applications, and search the public planning register.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/planning-and-building-control/planning/",
+      "department": "Department of Environment, Food and Agriculture",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_019",
+      "title": "Building Control Application",
+      "category": "Housing & Property",
+      "description": "Apply for building regulations approval and arrange building control inspections.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/planning-and-building-control/building-control/",
+      "department": "Local Authorities / DEFA",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_020",
+      "title": "Register with a GP / Manx Care",
+      "category": "Health",
+      "description": "Find out how to register with a GP practice and access Manx Care health services.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/health-and-wellbeing/",
+      "department": "Manx Care",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_021",
+      "title": "European Health Insurance / Reciprocal Cover",
+      "category": "Health",
+      "description": "Information on healthcare cover when travelling and reciprocal health agreements.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/health-and-wellbeing/health-services/",
+      "department": "Manx Care",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_022",
+      "title": "Register as an Employer",
+      "category": "Business & Employment",
+      "description": "Register a new business as an employer for income tax and National Insurance purposes.",
+      "type": "service",
+      "url": "https://services.gov.im/income-tax/",
+      "department": "Treasury — Income Tax Division",
+      "loginRequired": true
+    },
+    {
+      "id": "frm_023",
+      "title": "VAT Registration & Returns",
+      "category": "Business & Employment",
+      "description": "Register for VAT, submit VAT returns and manage customs and excise obligations.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/tax-vat-and-your-money/customs-and-excise/",
+      "department": "Treasury — Customs and Excise",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_024",
+      "title": "Incorporate a Company",
+      "category": "Business & Employment",
+      "description": "Register a company and file documents with the Companies Registry.",
+      "type": "online_form",
+      "url": "https://www.gov.im/categories/business-and-industries/companies-registry/",
+      "department": "Companies Registry",
+      "loginRequired": false
+    },
+    {
+      "id": "frm_025",
+      "title": "Manx Entry / Travel Notification",
+      "category": "Travel & Permits",
+      "description": "Complete travel notification and entry requirements via the Government Online Services portal before arriving on the Island.",
+      "type": "service",
+      "url": "https://www.gov.im/onlineservices",
+      "department": "Cabinet Office",
+      "loginRequired": true
+    }
+  ]
+}
