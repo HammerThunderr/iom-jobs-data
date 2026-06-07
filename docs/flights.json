@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-07T11:24:46.218977+00:00",
-  "lastUpdated": "11:24 UTC",
+  "fetchedAt": "2026-06-07T12:55:48.918600+00:00",
+  "lastUpdated": "12:55 UTC",
   "departures": [
-    {
-      "flightNo": "LM691",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:07",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -79,41 +71,41 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Gate closed",
+      "status": "Departed 12:44",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "On-time",
+      "status": "Departed 13:51",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "6I452",
       "airline": "Air Alsie",
       "scheduled": "13:15",
-      "status": "Delayed 14:00",
+      "status": "Gate closed",
       "destination": "Soenderborg",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "On-time",
+      "status": "Delayed 15:15",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3635",
@@ -273,9 +265,9 @@
       "flightNo": "6I451",
       "airline": "Air Alsie",
       "scheduled": "12:30",
-      "status": "Delayed 13:24",
+      "status": "Arrived 13:27",
       "origin": "Soenderborg",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM313",
@@ -289,17 +281,17 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "13:20",
-      "status": "On-time",
+      "status": "Arrived 13:20",
       "origin": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "On-time",
+      "status": "Delayed 14:45",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3634",
@@ -406,6 +398,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 50,
+  "totalCount": 49,
   "source": "airport.im"
 }
