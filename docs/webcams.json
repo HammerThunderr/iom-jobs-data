@@ -1,44 +1,25 @@
 {
+  "success": true,
+  "lastUpdated": "2026-06-09",
+  "source": "gov.im, Manx Radio, Bushy's, ipcamlive, camsecure",
   "webcams": [
-    {
-      "name": "Bungalow (A18 North)",
-      "url": "https://images.gov.im/webcams/bungalow3.jpg"
-    },
-    {
-      "name": "Bungalow (A18 South)",
-      "url": "https://images.gov.im/webcams/bungalow1.jpg"
-    },
-    {
-      "name": "Bungalow (Laxey Valley)",
-      "url": "https://images.gov.im/webcams/bungalow2.jpg"
-    },
-    {
-      "name": "Douglas Marina",
-      "url": "https://images.gov.im/webcams/douglas_00001.jpg"
-    },
-    {
-      "name": "Douglas Promenade",
-      "url": "https://images.gov.im/webcams/DTL_00001.jpg"
-    },
-    {
-      "name": "Peel Breakwater",
-      "url": "https://images.gov.im/webcams/peel_00001.jpg"
-    },
-    {
-      "name": "Port Erin Bay",
-      "url": "https://images.gov.im/webcams/PortErin.jpg"
-    },
-    {
-      "name": "Douglas Outer Harbour",
-      "url": "https://images.gov.im/webcams/ed_tower.jpg"
-    },
-    {
-      "name": "Ramsey",
-      "url": "https://images.gov.im/webcams/Ramsey_00001.jpg"
-    },
-    {
-      "name": "Castletown Bay",
-      "url": "https://images.gov.im/webcams/Castletown_Bay.jpg"
-    }
+    { "name": "Bungalow (A18 North)",       "type": "gov_image",   "file": "bungalow3.jpg" },
+    { "name": "Bungalow (A18 South)",        "type": "gov_image",   "file": "bungalow1.jpg" },
+    { "name": "Bungalow (Laxey Valley)",     "type": "gov_image",   "file": "bungalow2.jpg" },
+    { "name": "Douglas Marina",              "type": "gov_image",   "file": "douglas_00001.jpg" },
+    { "name": "Douglas Promenade",           "type": "gov_image",   "file": "DTL_00001.jpg" },
+    { "name": "Douglas - King Edward Pier",  "type": "gov_image",   "file": "ed_tower.jpg" },
+    { "name": "Peel Harbour",                "type": "gov_image",   "file": "peel_00001.jpg" },
+    { "name": "Port Erin Bay",               "type": "gov_image",   "file": "PortErin.jpg" },
+    { "name": "Ramsey Harbour",              "type": "gov_image",   "file": "Ramsey_00001.jpg" },
+    { "name": "Castletown Bay",              "type": "gov_image",   "file": "Castletown_Bay.jpg" },
+    { "name": "Manx Radio Studio 1",         "type": "other_image", "url": "https://s3-eu-west-1.amazonaws.com/mrwebcams/Studio.jpg" },
+    { "name": "The Bay, Port Erin",          "type": "other_image", "url": "https://media.bushys.com/baycam.jpg" },
+    { "name": "Douglas Bay (Live)",          "type": "video", "url": "https://g0.ipcamlive.com/player/player.php?alias=6808d4e663c20&autoplay=1" },
+    { "name": "TT Grandstand (Live)",        "type": "video", "url": "https://g0.ipcamlive.com/player/player.php?alias=68274c1366579&autoplay=1" },
+    { "name": "Sound Cafe (Live)",           "type": "video", "url": "https://g0.ipcamlive.com/player/player.php?alias=682ddc66bf37f&autoplay=1" },
+    { "name": "Scarlett Point 1 (Live)",     "type": "video", "url": "https://camsecure.uk/httpswebcam/scarlettpoint/scarlettpoint1.html" },
+    { "name": "Scarlett Point 2 (Live)",     "type": "video", "url": "https://camsecure.uk/httpswebcam/scarlettpoint/scarlettpoint2.html" },
+    { "name": "Scarlett Point 3 (Live)",     "type": "video", "url": "https://camsecure.uk/httpswebcam/scarlettpoint/scarlettpoint3.html" }
   ]
 }
