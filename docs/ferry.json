@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-09T08:00:09.049106+00:00",
-  "lastUpdated": "06:56 09/06/26",
+  "fetchedAt": "2026-06-09T11:23:36.251842+00:00",
+  "lastUpdated": "10:52 09/06/26",
   "totalCount": 39,
   "days": [
     {
@@ -13,35 +13,35 @@
           "arriveTime": "09:15",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
           "departTime": "07:48",
           "departPort": "Douglas",
-          "arriveTime": "10:50",
+          "arriveTime": "10:40",
           "arrivePort": "Liverpool",
           "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "10:35",
+          "departPort": "Douglas",
+          "arriveTime": "14:20",
+          "arrivePort": "Heysham",
+          "ferry": "Manxman",
           "status": "Departed",
           "statusType": "departed"
         },
         {
-          "departTime": "09:15",
-          "departPort": "Douglas",
-          "arriveTime": "13:00",
-          "arrivePort": "Heysham",
-          "ferry": "Manxman",
-          "status": "Delayed",
-          "statusType": "delayed"
-        },
-        {
-          "departTime": "12:00",
+          "departTime": "11:51",
           "departPort": "Liverpool",
-          "arriveTime": "14:45",
+          "arriveTime": "14:35",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "15:00",
@@ -49,8 +49,8 @@
           "arriveTime": "18:45",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Delayed",
+          "statusType": "delayed"
         },
         {
           "departTime": "16:00",
