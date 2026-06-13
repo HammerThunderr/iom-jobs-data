@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-13T17:06:06.213669+00:00",
-  "lastUpdated": "17:05 UTC",
+  "fetchedAt": "2026-06-13T18:20:50.301531+00:00",
+  "lastUpdated": "18:20 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:38",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:32",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -82,25 +66,17 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY718",
+      "airline": "easyJet",
+      "scheduled": "08:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA4504",
-      "airline": "British Airways",
-      "scheduled": "12:45",
-      "status": "Arrived 13:11",
-      "origin": "Palma De Mallorca",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Arrived 13:19",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA9794",
       "airline": "British Airways",
@@ -145,9 +121,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "On-time",
+      "status": "Delayed 20:08",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY717",
@@ -156,8 +132,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY525",
+      "airline": "easyJet",
+      "scheduled": "09:05",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 17,
   "source": "airport.im"
 }
