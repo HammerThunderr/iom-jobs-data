@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-13T19:57:03.888862+00:00",
-  "lastUpdated": "19:56 UTC",
+  "fetchedAt": "2026-06-13T21:11:43.100204+00:00",
+  "lastUpdated": "21:11 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "14:05",
-      "status": "Departed 15:37",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY718",
-      "airline": "easyJet",
-      "scheduled": "15:40",
-      "status": "Departed 16:02",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA9793",
       "airline": "British Airways",
@@ -90,33 +74,17 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA9794",
-      "airline": "British Airways",
-      "scheduled": "14:40",
-      "status": "Arrived 15:21",
-      "origin": "Ibiza",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY717",
-      "airline": "easyJet",
-      "scheduled": "15:10",
-      "status": "Arrived 15:01",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "BA4548",
-      "airline": "British Airways",
-      "scheduled": "15:35",
-      "status": "Arrived 15:26",
-      "origin": "Faro",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -172,8 +140,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 18,
   "source": "airport.im"
 }
