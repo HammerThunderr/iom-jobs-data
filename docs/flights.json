@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-13T12:11:18.689863+00:00",
-  "lastUpdated": "12:10 UTC",
+  "fetchedAt": "2026-06-13T14:23:59.201333+00:00",
+  "lastUpdated": "14:23 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Departed 09:05",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -47,15 +39,15 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "On-time",
+      "status": "Departed 15:09",
       "destination": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Boarding shortly",
+      "status": "Gate closed",
       "destination": "London Gatwick",
       "statusType": "boarding"
     },
@@ -63,9 +55,9 @@
       "flightNo": "EZY718",
       "airline": "easyJet",
       "scheduled": "15:40",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "BA9793",
@@ -102,22 +94,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY715",
-      "airline": "easyJet",
-      "scheduled": "09:00",
-      "status": "Arrived 08:55",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "Arrived 09:04",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
@@ -145,7 +121,7 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Arrived 13:08",
+      "status": "Arrived 13:11",
       "origin": "Palma De Mallorca",
       "statusType": "arrived"
     },
@@ -153,9 +129,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Expected 13:15",
+      "status": "Arrived 13:19",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA9794",
@@ -169,17 +145,17 @@
       "flightNo": "EZY717",
       "airline": "easyJet",
       "scheduled": "15:10",
-      "status": "On-time",
+      "status": "Arrived 15:08",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "Faro",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM676",
@@ -206,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 22,
   "source": "airport.im"
 }
