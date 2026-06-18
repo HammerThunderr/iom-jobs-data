@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-18T21:54:21.609133+00:00",
-  "lastUpdated": "21:53 UTC",
+  "fetchedAt": "2026-06-18T23:26:02.781633+00:00",
+  "lastUpdated": "23:25 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:38",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
@@ -55,17 +47,17 @@
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "On-time",
+      "status": "Delayed 10:22",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "On-time",
+      "status": "Delayed 12:45",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3213",
@@ -87,28 +79,12 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "On-time",
+      "status": "Delayed 13:07",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:40",
-      "status": "Arrived 16:53",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Arrived 18:08",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
@@ -180,8 +156,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "14:15",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 20,
   "source": "airport.im"
 }
