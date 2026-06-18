@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-17T23:53:59.021012+00:00",
-  "lastUpdated": "23:53 UTC",
+  "fetchedAt": "2026-06-18T02:11:39.280880+00:00",
+  "lastUpdated": "02:10 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -50,25 +50,33 @@
       "status": "On-time",
       "destination": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "15:55",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM677",
+      "airline": "Loganair",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "destination": "London City",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 20:02",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Arrived 20:19",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM682",
       "airline": "Loganair",
@@ -108,8 +116,32 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:40",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 17,
   "source": "airport.im"
 }
