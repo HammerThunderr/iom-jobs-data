@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-19T21:41:03.926090+00:00",
-  "lastUpdated": "21:40 UTC",
+  "fetchedAt": "2026-06-19T22:36:27.992624+00:00",
+  "lastUpdated": "22:35 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Cancelled",
-      "destination": "London City",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:15",
-      "status": "Departed 17:42",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -94,30 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "15:25",
-      "status": "Arrived 16:46",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:40",
-      "status": "Arrived 17:07",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY715",
-      "airline": "easyJet",
-      "scheduled": "16:45",
-      "status": "Arrived 16:54",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
@@ -188,8 +148,24 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4504",
+      "airline": "British Airways",
+      "scheduled": "12:45",
+      "status": "On-time",
+      "origin": "Palma De Mallorca",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "13:35",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 20,
   "source": "airport.im"
 }
