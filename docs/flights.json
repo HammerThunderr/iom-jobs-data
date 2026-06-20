@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-20T18:01:04.449158+00:00",
-  "lastUpdated": "18:00 UTC",
+  "fetchedAt": "2026-06-20T19:47:25.121248+00:00",
+  "lastUpdated": "19:46 UTC",
   "departures": [
-    {
-      "flightNo": "BA4503",
-      "airline": "British Airways",
-      "scheduled": "13:55",
-      "status": "Departed 14:32",
-      "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -66,17 +58,33 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY526",
+      "airline": "easyJet",
+      "scheduled": "09:35",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "09:50",
+      "status": "On-time",
+      "destination": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Arrived 14:33",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA9794",
       "airline": "British Airways",
@@ -113,9 +121,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "Expected 19:36",
+      "status": "Arrived 19:47",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY717",
@@ -124,8 +132,24 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY525",
+      "airline": "easyJet",
+      "scheduled": "09:05",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 18,
   "source": "airport.im"
 }
