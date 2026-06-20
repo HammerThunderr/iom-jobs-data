@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-20T16:46:01.233233+00:00",
-  "lastUpdated": "16:45 UTC",
+  "fetchedAt": "2026-06-20T18:01:04.449158+00:00",
+  "lastUpdated": "18:00 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:37",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:08",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -47,7 +31,7 @@
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "Departed 17:17",
+      "status": "Departed 17:16",
       "destination": "Faro",
       "statusType": "departed"
     },
@@ -66,17 +50,25 @@
       "status": "Departed 17:32",
       "destination": "Manchester",
       "statusType": "departed"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "08:05",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY718",
+      "airline": "easyJet",
+      "scheduled": "08:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA4504",
-      "airline": "British Airways",
-      "scheduled": "12:45",
-      "status": "Arrived 12:58",
-      "origin": "Palma De Mallorca",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
@@ -121,6 +113,14 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
+      "status": "Expected 19:36",
+      "origin": "Manchester",
+      "statusType": "expected"
+    },
+    {
+      "flightNo": "EZY717",
+      "airline": "easyJet",
+      "scheduled": "07:50",
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
