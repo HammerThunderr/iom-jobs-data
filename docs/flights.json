@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-20T11:31:39.591492+00:00",
-  "lastUpdated": "11:31 UTC",
+  "fetchedAt": "2026-06-20T13:07:13.880653+00:00",
+  "lastUpdated": "13:07 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:00",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -39,9 +31,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "Taxied 12:27",
+      "status": "Departed 12:37",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY520",
@@ -55,15 +47,15 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "On-time",
+      "status": "Taxied 14:05",
       "destination": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Delayed 14:35",
+      "status": "Delayed 15:05",
       "destination": "London Gatwick",
       "statusType": "delayed"
     },
@@ -145,17 +137,17 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "On-time",
+      "status": "Arrived 12:58",
       "origin": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Delayed 14:39",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "BA9794",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
