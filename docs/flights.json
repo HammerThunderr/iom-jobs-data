@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-19T23:44:02.157143+00:00",
-  "lastUpdated": "23:43 UTC",
+  "fetchedAt": "2026-06-20T01:52:13.742310+00:00",
+  "lastUpdated": "01:51 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -66,25 +66,25 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA9793",
+      "airline": "British Airways",
+      "scheduled": "15:50",
+      "status": "On-time",
+      "destination": "Ibiza",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4547",
+      "airline": "British Airways",
+      "scheduled": "16:40",
+      "status": "On-time",
+      "destination": "Faro",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Cancelled",
-      "origin": "London City",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Cancelled",
-      "origin": "Liverpool",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
@@ -148,8 +148,32 @@
       "status": "On-time",
       "origin": "Ibiza",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4548",
+      "airline": "British Airways",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "origin": "Faro",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 21,
   "source": "airport.im"
 }
