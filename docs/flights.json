@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-24T22:10:10.015273+00:00",
-  "lastUpdated": "22:09 UTC",
+  "fetchedAt": "2026-06-24T23:20:33.535741+00:00",
+  "lastUpdated": "23:19 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:45",
-      "status": "Arrived 17:55",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
@@ -115,6 +107,14 @@
       "scheduled": "11:45",
       "status": "On-time",
       "origin": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "13:25",
+      "status": "On-time",
+      "origin": "Newquay, via Manchester",
       "statusType": "ontime"
     }
   ],
