@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-25T21:58:24.886666+00:00",
-  "lastUpdated": "18:58 25/06/26",
+  "fetchedAt": "2026-06-25T23:19:34.292273+00:00",
+  "lastUpdated": "22:39 25/06/26",
   "totalCount": 40,
   "days": [
     {
@@ -73,11 +73,11 @@
         {
           "departTime": "19:58",
           "departPort": "Douglas",
-          "arriveTime": "23:45",
+          "arriveTime": "23:38",
           "arrivePort": "Heysham",
           "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         }
       ]
     },
