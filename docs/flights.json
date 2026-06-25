@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-25T11:19:11.914889+00:00",
-  "lastUpdated": "11:18 UTC",
+  "fetchedAt": "2026-06-25T13:29:01.426347+00:00",
+  "lastUpdated": "13:28 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:05",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:10",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -47,9 +31,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Delayed 13:20",
+      "status": "Departed 14:01",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -71,7 +55,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 19:40",
+      "status": "Delayed 20:25",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -129,7 +113,7 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:55",
+      "status": "Delayed 15:00",
       "origin": "Dublin",
       "statusType": "delayed"
     },
@@ -137,9 +121,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Arrived 13:18",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
@@ -153,9 +137,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 20:05",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM698",
@@ -198,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 22,
   "source": "airport.im"
 }
