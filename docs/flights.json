@@ -1,47 +1,47 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-26T05:50:57.785800+00:00",
-  "lastUpdated": "05:50 UTC",
+  "fetchedAt": "2026-06-26T08:42:24.951205+00:00",
+  "lastUpdated": "08:42 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Gate closed",
+      "status": "Departed 07:11",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "08:20",
-      "status": "Delayed 08:35",
+      "status": "Departed 08:47",
       "destination": "Edinburgh",
-      "statusType": "delayed"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:20",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "On-time",
+      "status": "Delayed 11:36",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3213",
@@ -129,17 +129,17 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "On-time",
+      "status": "Arrived 09:04",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:25",
-      "status": "On-time",
+      "status": "Arrived 09:24",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM313",
