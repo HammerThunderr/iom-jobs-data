@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-27T15:51:47.588137+00:00",
-  "lastUpdated": "15:50 UTC",
+  "fetchedAt": "2026-06-27T16:50:51.930020+00:00",
+  "lastUpdated": "16:50 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -31,52 +31,36 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Taxied 16:43",
+      "status": "Departed 16:55",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "Taxied 16:47",
+      "status": "Departed 16:58",
       "destination": "Faro",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 18:05",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "On-time",
+      "status": "Departed 17:47",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "departed"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:31",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Arrived 11:48",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA4504",
       "airline": "British Airways",
@@ -113,17 +97,17 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Delayed 16:59",
+      "status": "Arrived 17:04",
       "origin": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Delayed 17:45",
+      "status": "Arrived 17:40",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
@@ -134,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 14,
   "source": "airport.im"
 }
