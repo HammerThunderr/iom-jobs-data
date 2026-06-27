@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-27T14:41:26.097910+00:00",
-  "lastUpdated": "14:40 UTC",
+  "fetchedAt": "2026-06-27T15:51:47.588137+00:00",
+  "lastUpdated": "15:50 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "09:45",
-      "status": "Departed 09:50",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -39,23 +31,23 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Boarding now",
+      "status": "Taxied 16:43",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "On-time",
+      "status": "Taxied 16:47",
       "destination": "Faro",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 18:15",
+      "status": "Delayed 18:05",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -97,7 +89,7 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "Arrived 15:39",
+      "status": "Arrived 15:36",
       "origin": "London Gatwick",
       "statusType": "arrived"
     },
@@ -105,9 +97,9 @@
       "flightNo": "BA9794",
       "airline": "British Airways",
       "scheduled": "14:30",
-      "status": "Delayed 16:05",
+      "status": "Arrived 15:57",
       "origin": "Ibiza",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
@@ -121,9 +113,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "On-time",
+      "status": "Delayed 16:59",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3216",
@@ -142,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 16,
   "source": "airport.im"
 }
