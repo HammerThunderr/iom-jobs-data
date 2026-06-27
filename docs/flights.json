@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-27T21:15:43.228123+00:00",
-  "lastUpdated": "21:15 UTC",
+  "fetchedAt": "2026-06-27T22:16:57.130279+00:00",
+  "lastUpdated": "22:16 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "15:00",
-      "status": "Departed 16:55",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "BA4547",
-      "airline": "British Airways",
-      "scheduled": "16:40",
-      "status": "Departed 16:58",
-      "destination": "Faro",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -66,17 +50,25 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "Delayed 15:20",
+      "destination": "Dublin",
+      "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "13:10",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:10",
-      "status": "Arrived 17:04",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
@@ -116,6 +108,14 @@
       "status": "Delayed 14:50",
       "origin": "Dublin",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
   "totalCount": 14,
