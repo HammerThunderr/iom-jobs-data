@@ -1,48 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-26T23:15:51.392762+00:00",
-  "lastUpdated": "23:14 UTC",
+  "fetchedAt": "2026-06-27T01:23:56.503434+00:00",
+  "lastUpdated": "01:22 UTC",
   "departures": [
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:20",
-      "status": "Departed 19:22",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 19:05",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "18:20",
-      "status": "Departed 20:16",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "18:25",
-      "status": "Departed 19:29",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Departed 18:44",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -82,25 +42,17 @@
       "status": "On-time",
       "destination": "Palma De Mallorca",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "15:00",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:45",
-      "status": "Arrived 18:43",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "17:50",
-      "status": "Arrived 19:28",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM678",
       "airline": "Loganair",
@@ -148,8 +100,40 @@
       "status": "On-time",
       "origin": "Palma De Mallorca",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA9794",
+      "airline": "British Airways",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "Ibiza",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4548",
+      "airline": "British Airways",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "origin": "Faro",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 16,
   "source": "airport.im"
 }
