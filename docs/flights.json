@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-27T11:47:54.431080+00:00",
-  "lastUpdated": "11:47 UTC",
+  "fetchedAt": "2026-06-27T12:58:28.350452+00:00",
+  "lastUpdated": "12:58 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:07",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -23,9 +15,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "Gate closed",
+      "status": "Departed 13:02",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY520",
@@ -39,9 +31,9 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Delayed 14:15",
+      "status": "Gate closed",
       "destination": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
@@ -105,9 +97,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:15",
+      "status": "Arrived 13:12",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
@@ -121,9 +113,9 @@
       "flightNo": "BA9794",
       "airline": "British Airways",
       "scheduled": "14:30",
-      "status": "On-time",
+      "status": "Delayed 16:05",
       "origin": "Ibiza",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "BA4548",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
