@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-28T18:55:46.915219+00:00",
-  "lastUpdated": "18:54 UTC",
+  "fetchedAt": "2026-06-28T20:07:22.541893+00:00",
+  "lastUpdated": "20:06 UTC",
   "departures": [
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "14:05",
-      "status": "Departed 14:03",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -97,6 +89,14 @@
       "scheduled": "09:40",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY840",
+      "airline": "easyJet",
+      "scheduled": "10:00",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -196,8 +196,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM672",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "London City",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 25,
   "source": "airport.im"
 }
