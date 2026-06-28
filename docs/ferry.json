@@ -1,20 +1,20 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-28T01:51:27.801795+00:00",
-  "lastUpdated": "05:00 28/11/25",
+  "fetchedAt": "2026-06-28T06:11:01.525986+00:00",
+  "lastUpdated": "04:57 28/06/26",
   "totalCount": 40,
   "days": [
     {
       "date": "Sunday, 28 June 2026",
       "sailings": [
         {
-          "departTime": "02:30",
+          "departTime": "02:22",
           "departPort": "Larne",
-          "arriveTime": "07:15",
+          "arriveTime": "07:10",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "07:15",
