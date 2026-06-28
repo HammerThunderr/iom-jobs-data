@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-28T21:15:48.715549+00:00",
-  "lastUpdated": "21:14 UTC",
+  "fetchedAt": "2026-06-28T22:16:10.867569+00:00",
+  "lastUpdated": "22:15 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -9,22 +9,6 @@
       "scheduled": "15:15",
       "status": "Departed 18:47",
       "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "16:45",
-      "status": "Departed 16:52",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 16:54",
-      "destination": "London City",
       "statusType": "departed"
     },
     {
@@ -98,6 +82,22 @@
       "status": "On-time",
       "destination": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "12:35",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -110,27 +110,11 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "16:15",
-      "status": "Arrived 16:19",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
       "status": "Arrived 18:15",
       "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:55",
-      "status": "Arrived 16:53",
-      "origin": "London Heathrow",
       "statusType": "arrived"
     },
     {
@@ -206,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 23,
   "source": "airport.im"
 }
