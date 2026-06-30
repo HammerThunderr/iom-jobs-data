@@ -1,31 +1,31 @@
 {
   "success": true,
-  "fetchedAt": "2026-06-30T05:39:41.462829+00:00",
-  "lastUpdated": "05:39 UTC",
+  "fetchedAt": "2026-06-30T08:44:57.173861+00:00",
+  "lastUpdated": "08:44 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Boarding now",
+      "status": "Departed 07:08",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
-      "status": "Boarding shortly",
+      "status": "Departed 07:14",
       "destination": "Newquay, via Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:05",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM675",
@@ -39,9 +39,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Delayed 13:00",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM697",
@@ -81,25 +81,25 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "On-time",
+      "status": "Arrived 08:46",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:35",
-      "status": "On-time",
+      "status": "Expected 09:28",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Delayed 12:30",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM694",
