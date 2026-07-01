@@ -1,25 +1,27 @@
 # ─────────────────────────────────────────────────────────────
-# Flight scraper workflow
+# Flight scraper workflow — SELF-LOOPING version
 # Place at: .github/workflows/flights.yml in iom-jobs-data repo
+#
+# One job now scrapes 6 times (~4 min apart), committing after each
+# cycle if the data changed. A single (even late) cron tick therefore
+# gives ~25 minutes of fresh coverage instead of one snapshot.
+# Rollback: git revert this commit (or restore the old file) — nothing
+# else changes; the scraper itself is untouched.
 # ─────────────────────────────────────────────────────────────
-
 name: Scrape Flights
-
 on:
   schedule:
-    - cron: '*/5 * * * *'   # every 5 minutes
+    - cron: '*/30 * * * *'   # every 30 min — each run covers ~25 min internally
   workflow_dispatch:
-
 concurrency:
   group: flights
-  cancel-in-progress: true
-
+  cancel-in-progress: false   # let a running loop finish; queue the next
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 35
     permissions:
       contents: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,13 +42,29 @@ jobs:
           pip install --upgrade pip
           pip install --upgrade certifi requests beautifulsoup4
 
-      - name: Run scraper
-        run: python scripts/scrape_flights.py
-
-      - name: Commit and push
+      - name: Configure git
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/flights.json
-          git diff --staged --quiet || git commit -m "chore: update flights $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push
+
+      - name: Scrape loop (6 cycles, ~4 min apart)
+        run: |
+          for i in 1 2 3 4 5 6; do
+            echo "── Cycle $i of 6 ──"
+            python scripts/scrape_flights.py || echo "Scrape failed this cycle — keeping last good data"
+
+            git add docs/flights.json
+            if git diff --staged --quiet; then
+              echo "No change this cycle — nothing to commit"
+            else
+              git commit -m "chore: update flights $(date -u '+%Y-%m-%d %H:%M UTC')"
+              # Another workflow (e.g. ferry) may have pushed meanwhile —
+              # rebase our commit on top, then push. Retry once if needed.
+              git pull --rebase origin main || true
+              git push || (git pull --rebase origin main && git push)
+            fi
+
+            if [ "$i" -lt 6 ]; then
+              sleep 240
+            fi
+          done
