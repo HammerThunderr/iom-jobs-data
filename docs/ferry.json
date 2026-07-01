@@ -1,8 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-01T14:17:41.140811+00:00",
-  "lastUpdated": "13:48 01/07/26",
-  "totalCount": 38,
+  "fetchedAt": "2026-07-01T16:42:45.969497+00:00",
+  "lastUpdated": "16:09 01/07/26",
+  "totalCount": 40,
   "days": [
     {
       "date": "Wednesday, 1 July 2026",
@@ -69,12 +69,30 @@
           "ferry": "Manannan",
           "status": "Scheduled",
           "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:45",
+          "departPort": "Douglas",
+          "arriveTime": "23:30",
+          "arrivePort": "Heysham",
+          "ferry": "Manxman",
+          "status": "Cancelled",
+          "statusType": "cancelled"
         }
       ]
     },
     {
       "date": "Thursday, 2 July 2026",
       "sailings": [
+        {
+          "departTime": "02:15",
+          "departPort": "Heysham",
+          "arriveTime": "06:00",
+          "arrivePort": "Douglas",
+          "ferry": "Manxman",
+          "status": "Cancelled",
+          "statusType": "cancelled"
+        },
         {
           "departTime": "07:15",
           "departPort": "Douglas",
