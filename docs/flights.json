@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-02T20:10:34.970687+00:00",
-  "lastUpdated": "20:09 UTC",
+  "fetchedAt": "2026-07-02T20:14:37.246495+00:00",
+  "lastUpdated": "20:13 UTC",
   "departures": [
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "15:20",
-      "status": "Departed 15:21",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
