@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T17:09:32.543791+00:00",
-  "lastUpdated": "17:09 UTC",
+  "fetchedAt": "2026-07-03T17:13:34.835354+00:00",
+  "lastUpdated": "17:13 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -39,9 +39,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London City",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY716",
