@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T17:25:41.481401+00:00",
-  "lastUpdated": "17:25 UTC",
+  "fetchedAt": "2026-07-03T17:29:43.563174+00:00",
+  "lastUpdated": "17:29 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -9,14 +9,6 @@
       "scheduled": "12:15",
       "status": "Departed 13:00",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "12:35",
-      "status": "Departed 12:31",
-      "destination": "Birmingham",
       "statusType": "departed"
     },
     {
@@ -63,9 +55,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "Taxied 18:16",
+      "status": "Departed 18:26",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM687",
@@ -145,7 +137,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:50",
-      "status": "Arrived 17:42",
+      "status": "Arrived 17:44",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -153,7 +145,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "Arrived 17:58",
+      "status": "Arrived 18:03",
       "origin": "London Gatwick",
       "statusType": "arrived"
     },
@@ -174,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
