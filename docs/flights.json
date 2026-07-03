@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T21:45:00.861665+00:00",
-  "lastUpdated": "21:44 UTC",
+  "fetchedAt": "2026-07-03T21:49:02.643498+00:00",
+  "lastUpdated": "21:48 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -102,14 +102,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 16:46",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
@@ -179,6 +171,14 @@
       "scheduled": "11:40",
       "status": "On-time",
       "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4504",
+      "airline": "British Airways",
+      "scheduled": "12:45",
+      "status": "On-time",
+      "origin": "Palma De Mallorca",
       "statusType": "ontime"
     }
   ],
