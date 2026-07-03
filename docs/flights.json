@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T17:29:43.563174+00:00",
-  "lastUpdated": "17:29 UTC",
+  "fetchedAt": "2026-07-03T18:43:48.291409+00:00",
+  "lastUpdated": "18:43 UTC",
   "departures": [
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "12:15",
-      "status": "Departed 13:00",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY234",
       "airline": "easyJet",
@@ -31,9 +23,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Gate closed",
+      "status": "Departed 18:34",
       "destination": "London City",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY716",
@@ -71,9 +63,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Last call",
+      "status": "Departed 19:10",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
@@ -81,6 +73,14 @@
       "scheduled": "07:00",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "destination": "Birmingham",
       "statusType": "ontime"
     }
   ],
@@ -153,19 +153,27 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Delayed 22:00",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "On-time",
+      "status": "Delayed 21:30",
       "origin": "Liverpool",
+      "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "09:15",
+      "status": "On-time",
+      "origin": "Manchester",
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
