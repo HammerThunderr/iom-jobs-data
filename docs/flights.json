@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T22:51:53.981965+00:00",
-  "lastUpdated": "22:50 UTC",
+  "fetchedAt": "2026-07-03T22:55:56.222299+00:00",
+  "lastUpdated": "22:55 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -74,6 +74,14 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4503",
+      "airline": "British Airways",
+      "scheduled": "13:55",
+      "status": "On-time",
+      "destination": "Palma De Mallorca",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
