@@ -16,9 +16,9 @@
   "weather_shipping": "https://hammerthunderr.github.io/iom-jobs-data/weather_shipping.json",
   "weather_coastal":  "https://hammerthunderr.github.io/iom-jobs-data/weather_coastal.json",
 
-  "flights":          "https://hammerthunderr.github.io/iom-jobs-data/flights.json",
+  "flights":          "https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/main/docs/flights.json",
   "events":           "https://hammerthunderr.github.io/iom-jobs-data/events.json",
-  "ferry":            "https://hammerthunderr.github.io/iom-jobs-data/ferry.json",
+  "ferry":            "https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/main/docs/ferry.json",
 
   "tynwald_base":     "https://raw.githubusercontent.com/HammerThunderr/tynwald-rssfeed/main/data",
   "webcam_base":      "https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/webcams",
