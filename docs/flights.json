@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-03T20:23:59.639356+00:00",
-  "lastUpdated": "20:23 UTC",
+  "fetchedAt": "2026-07-03T20:28:01.275676+00:00",
+  "lastUpdated": "20:27 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -137,15 +137,15 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Final approach",
+      "status": "Landed 21:27",
       "origin": "London City",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Delayed 21:28",
+      "status": "Delayed 21:34",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "11:25",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
