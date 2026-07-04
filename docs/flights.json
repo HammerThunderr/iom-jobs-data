@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T15:57:44.598218+00:00",
-  "lastUpdated": "15:57 UTC",
+  "fetchedAt": "2026-07-04T16:49:06.509689+00:00",
+  "lastUpdated": "16:48 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,44 +47,20 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Departed 17:25",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Boarding shortly",
+      "status": "Departed 17:38",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:25",
-      "status": "Arrived 11:06",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:28",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Arrived 11:39",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA4504",
       "airline": "British Airways",
@@ -134,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 13,
   "source": "airport.im"
 }
