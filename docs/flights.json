@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T13:06:39.148212+00:00",
-  "lastUpdated": "13:05 UTC",
+  "fetchedAt": "2026-07-04T13:10:40.956406+00:00",
+  "lastUpdated": "13:09 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -121,9 +121,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "On-time",
+      "status": "Expected 14:18",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "BA4548",
