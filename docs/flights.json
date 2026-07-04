@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T01:38:41.765595+00:00",
-  "lastUpdated": "01:37 UTC",
+  "fetchedAt": "2026-07-04T01:42:43.327663+00:00",
+  "lastUpdated": "01:42 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -57,6 +57,14 @@
       "scheduled": "15:00",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4547",
+      "airline": "British Airways",
+      "scheduled": "16:40",
+      "status": "On-time",
+      "destination": "Faro",
       "statusType": "ontime"
     }
   ],
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
