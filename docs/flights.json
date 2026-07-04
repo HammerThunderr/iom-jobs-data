@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T13:14:42.610429+00:00",
-  "lastUpdated": "13:13 UTC",
+  "fetchedAt": "2026-07-04T14:22:19.920796+00:00",
+  "lastUpdated": "14:21 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Departed 09:07",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -39,17 +31,17 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Gate closed",
+      "status": "Departed 14:28",
       "destination": "Palma De Mallorca",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Boarding shortly",
+      "status": "Departed 15:05",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4547",
@@ -121,9 +113,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "Expected 14:17",
+      "status": "Arrived 14:21",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
