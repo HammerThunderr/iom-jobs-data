@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T14:26:22.044857+00:00",
-  "lastUpdated": "14:25 UTC",
+  "fetchedAt": "2026-07-04T14:30:24.498835+00:00",
+  "lastUpdated": "14:29 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -70,14 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "Arrived 09:26",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
@@ -121,7 +113,7 @@
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "Expected 15:32",
+      "status": "Expected 15:33",
       "origin": "Faro",
       "statusType": "expected"
     },
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
