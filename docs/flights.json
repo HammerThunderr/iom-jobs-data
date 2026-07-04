@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T10:30:16.589875+00:00",
-  "lastUpdated": "10:29 UTC",
+  "fetchedAt": "2026-07-04T10:34:19.565513+00:00",
+  "lastUpdated": "10:33 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -113,9 +113,9 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Expected 11:36",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4504",
