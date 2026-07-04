@@ -1,0 +1,56 @@
+# ─────────────────────────────────────────────────────────────
+# Tide predictions scraper workflow
+# Place at: .github/workflows/tides.yml in iom-jobs-data repo
+#
+# Scrapes gov.im tide predictions once daily (predictions cover
+# 7 days ahead, so daily is plenty).
+#
+# ⚠ SCHEDULE DISABLED until scripts/scrape_tides.py's parser is
+# finished — otherwise this would fail every run. Once the parser
+# is done, uncomment the two "schedule:" lines below.
+# Until then it can only be run manually from the Actions tab.
+# ─────────────────────────────────────────────────────────────
+name: Scrape Tides
+on:
+  # schedule:
+  #   - cron: '30 4 * * *'   # daily at 4:30am UTC — uncomment when parser is ready
+  workflow_dispatch:
+concurrency:
+  group: tides
+  cancel-in-progress: true
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python scripts/scrape_tides.py
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/tides.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "chore: update tides $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break
+            echo "Push attempt $i failed, retrying..."
+            sleep 3
+          done
