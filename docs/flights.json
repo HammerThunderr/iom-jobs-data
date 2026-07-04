@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T00:14:02.481551+00:00",
-  "lastUpdated": "00:12 UTC",
+  "fetchedAt": "2026-07-04T01:30:38.410876+00:00",
+  "lastUpdated": "01:29 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -124,8 +124,24 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4548",
+      "airline": "British Airways",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "origin": "Faro",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 17,
   "source": "airport.im"
 }
