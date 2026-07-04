@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T14:30:24.498835+00:00",
-  "lastUpdated": "14:29 UTC",
+  "fetchedAt": "2026-07-04T14:34:26.802365+00:00",
+  "lastUpdated": "14:34 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,9 +113,9 @@
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "Expected 15:33",
+      "status": "Final approach",
       "origin": "Faro",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM676",
