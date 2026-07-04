@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T05:03:28.482120+00:00",
-  "lastUpdated": "01:22 04/07/26",
+  "fetchedAt": "2026-07-04T08:03:40.017875+00:00",
+  "lastUpdated": "06:06 04/07/26",
   "totalCount": 40,
   "days": [
     {
@@ -10,20 +10,20 @@
         {
           "departTime": "02:21",
           "departPort": "Heysham",
-          "arriveTime": "06:06",
+          "arriveTime": "06:04",
           "arrivePort": "Douglas",
           "ferry": "Manxman",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
-          "departTime": "07:15",
+          "departTime": "07:04",
           "departPort": "Douglas",
-          "arriveTime": "10:00",
+          "arriveTime": "09:50",
           "arrivePort": "Liverpool",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "08:30",
