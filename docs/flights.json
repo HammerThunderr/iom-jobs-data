@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T21:40:38.461894+00:00",
-  "lastUpdated": "21:39 UTC",
+  "fetchedAt": "2026-07-04T21:44:40.064286+00:00",
+  "lastUpdated": "21:43 UTC",
   "departures": [
-    {
-      "flightNo": "BA4547",
-      "airline": "British Airways",
-      "scheduled": "16:40",
-      "status": "Departed 16:52",
-      "destination": "Faro",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -118,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
