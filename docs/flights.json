@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-04T17:09:18.084907+00:00",
-  "lastUpdated": "17:08 UTC",
+  "fetchedAt": "2026-07-04T17:53:43.306039+00:00",
+  "lastUpdated": "17:52 UTC",
   "departures": [
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:19",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -110,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 12,
   "source": "airport.im"
 }
