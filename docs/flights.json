@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-05T08:39:29.760902+00:00",
-  "lastUpdated": "08:38 UTC",
+  "fetchedAt": "2026-07-05T08:43:31.735283+00:00",
+  "lastUpdated": "08:42 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -15,9 +15,9 @@
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "09:50",
-      "status": "Gate closed",
+      "status": "Taxied 09:40",
       "destination": "Edinburgh",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM637",
