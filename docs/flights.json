@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-05T19:04:25.217384+00:00",
-  "lastUpdated": "19:03 UTC",
+  "fetchedAt": "2026-07-05T19:08:26.762056+00:00",
+  "lastUpdated": "19:08 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -89,6 +89,14 @@
       "scheduled": "09:40",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY840",
+      "airline": "easyJet",
+      "scheduled": "10:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -190,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 24,
   "source": "airport.im"
 }
