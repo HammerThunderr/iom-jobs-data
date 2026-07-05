@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-05T17:53:53.403647+00:00",
-  "lastUpdated": "17:53 UTC",
+  "fetchedAt": "2026-07-05T17:57:55.113690+00:00",
+  "lastUpdated": "17:57 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -161,9 +161,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Expected 20:04",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY515",
