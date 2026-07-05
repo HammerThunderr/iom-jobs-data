@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-05T10:32:51.025298+00:00",
-  "lastUpdated": "10:32 UTC",
+  "fetchedAt": "2026-07-05T10:36:52.978350+00:00",
+  "lastUpdated": "10:36 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,9 +31,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "Gate closed",
+      "status": "Taxied 11:35",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
@@ -113,7 +113,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "10:15",
-      "status": "Arrived 10:46",
+      "status": "Arrived 10:47",
       "origin": "Manchester",
       "statusType": "arrived"
     },
