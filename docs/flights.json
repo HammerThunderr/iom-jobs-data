@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-06T02:12:58.257292+00:00",
-  "lastUpdated": "02:11 UTC",
+  "fetchedAt": "2026-07-06T06:15:30.806758+00:00",
+  "lastUpdated": "06:14 UTC",
   "departures": [
     {
       "flightNo": "LM671",
       "airline": "Loganair",
       "scheduled": "06:50",
-      "status": "On-time",
+      "status": "Departed 06:54",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Taxied 07:11",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
@@ -97,6 +97,30 @@
       "scheduled": "16:50",
       "status": "On-time",
       "destination": "London City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3217",
+      "airline": "Aer Lingus",
+      "scheduled": "17:20",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM687",
+      "airline": "Loganair",
+      "scheduled": "18:25",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY844",
+      "airline": "easyJet",
+      "scheduled": "19:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -188,8 +212,40 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM698",
+      "airline": "Loganair",
+      "scheduled": "17:45",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY843",
+      "airline": "easyJet",
+      "scheduled": "18:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM678",
+      "airline": "Loganair",
+      "scheduled": "20:10",
+      "status": "On-time",
+      "origin": "London City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM688",
+      "airline": "Loganair",
+      "scheduled": "20:20",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 30,
   "source": "airport.im"
 }
