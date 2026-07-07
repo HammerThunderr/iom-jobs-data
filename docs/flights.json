@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-07T21:22:08.484698+00:00",
-  "lastUpdated": "21:21 UTC",
+  "fetchedAt": "2026-07-07T21:26:10.964958+00:00",
+  "lastUpdated": "21:25 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -65,6 +65,14 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "12:25",
+      "status": "On-time",
+      "destination": "Edinburgh",
       "statusType": "ontime"
     }
   ],
@@ -134,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 17,
   "source": "airport.im"
 }
