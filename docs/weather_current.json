@@ -1,1 +1,14 @@
-{"success": false, "error": "HTTPSConnectionPool(host='www.gov.im', port=443): Read timed out. (read timeout=20)", "items": []}
+{
+  "success": true,
+  "feedTitle": "Weather forecast for the Isle of Man",
+  "lastUpdated": "",
+  "fetchedAt": "2026-07-08T08:25:42.402760+00:00",
+  "items": [
+    {
+      "title": "Weather forecast updated as of 8 July 2026 9:00am",
+      "description": "##Weather##\n\nIssued on Wednesday, 08 July 2026 at 8:50am by Ronaldsway Met Office\n##Detailed forecast##\n\nDry and mostly sunny today, with a gentle breeze and temperatures rising to 21°C this afternoon. Some low cloud may affect southern and eastern coasts for a time later this afternoon and evening.\n\n\n##Outlook##\n\nRemaining settled for the rest of the week with a good amount of sunshine and temperatures rising to 23 or 24°C.\n\n\n##Sunrise##\n\n4:56am Today\n\n\n##Sunset##\n\n9:50pm Today",
+      "pubDate": "Wed 08 Jul 2026, 08:00",
+      "link": "https://www.gov.im/weather/"
+    }
+  ]
+}
