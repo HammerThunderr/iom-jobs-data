@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-08T21:52:29.178242+00:00",
-  "lastUpdated": "21:51 UTC",
+  "fetchedAt": "2026-07-08T21:56:31.349930+00:00",
+  "lastUpdated": "21:55 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:40",
-      "status": "Arrived 16:54",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
@@ -118,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
