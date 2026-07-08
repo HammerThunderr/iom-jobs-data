@@ -1,1 +1,14 @@
-{"success": false, "error": "HTTPSConnectionPool(host='www.gov.im', port=443): Read timed out. (read timeout=20)", "items": []}
+{
+  "success": true,
+  "feedTitle": "Shipping forecast for the North Irish Sea",
+  "lastUpdated": "",
+  "fetchedAt": "2026-07-08T05:50:16.107013+00:00",
+  "items": [
+    {
+      "title": "Shipping forecast updated as of 7 July 2026 9:46pm",
+      "description": "##Current shipping forecast##\n\nValid for 24 HoursIssued on Tuesday, 07 July 2026 at 9:15pm by Ronaldsway Met Office\n##Warning##\n\nNil.\n\n\n##Synopsis##\n\nHigh pressure near the Azores, extending a ridge over much of Britain and Ireland.\n\n\n##Wind##\n\nWest or southwest 2 to 4, becoming variable 3 or less overnight.\n\n\n##State of Sea##\n\nSmooth or slight.\n\n\n##Weather##\n\nMainly fair, mist patches possible.\n\n\n##Visibility##\n\nGood, occasionally moderate in any mist.\n\n\n##Outlook for the following 24 hours##\n\n\n##Wind##\n\nVariable 2 to 4.\n\n\n##State of Sea##\n\nSmooth or slight.\n\n\n##Weather##\n\nFair.\n\n\n##Visibility##\n\nGood.\n\n\n####\n\n\nLow water\n\nYesterday 11:40pm (1.8m)\n\n\n\nHigh water\n\nToday 5:40am (5.8m)\n\n\n\nLow water\n\nToday 11:59am (1.7m)\n\n\n\nHigh water\n\nToday 6:08pm (5.9m)\n\n\n(heights in metres above Chart Datum)",
+      "pubDate": "Tue 07 Jul 2026, 20:46",
+      "link": "https://www.gov.im/weather/current-shipping-forecast/"
+    }
+  ]
+}
