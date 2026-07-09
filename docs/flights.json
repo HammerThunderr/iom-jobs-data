@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-09T21:15:33.776672+00:00",
-  "lastUpdated": "21:14 UTC",
+  "fetchedAt": "2026-07-09T21:19:36.134568+00:00",
+  "lastUpdated": "21:18 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -73,6 +73,14 @@
       "scheduled": "11:30",
       "status": "On-time",
       "destination": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
       "statusType": "ontime"
     }
   ],
@@ -158,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
