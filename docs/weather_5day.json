@@ -1,14 +1,1 @@
-{
-  "success": true,
-  "feedTitle": "Isle of Man 5 day weather forecast",
-  "lastUpdated": "",
-  "fetchedAt": "2026-07-08T23:06:20.871220+00:00",
-  "items": [
-    {
-      "title": "5 day forecast updated as of 8 July 2026 9:37pm",
-      "description": "##Yesterday##\n\nSunny spells.\n\n\n##Temperature##\n\nMin. air temperature 13°C and max. air temperature 22°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n6\n\n\n##Wind Direction##\n\nSW\n\n\n##Wind##\n\nLight and variable.\n\n\n##Visibility##\n\nGood. Isolated hill fog.\n\n\n##Comments##\n\nNil.\n\n\n##Today##\n\nSunny spells. Warm.\n\n\n##Temperature##\n\nMin. air temperature 14°C and max. air temperature 22°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n5\n\n\n##Wind Direction##\n\nE\n\n\n##Wind##\n\nLight and variable, becoming E or NE 5-15 later.\n\n\n##Visibility##\n\nGood. Small risk isolated hill fog patches.\n\n\n##Comments##\n\nNil.\n\n\n##Tomorrow##\n\nSunny spells. Very warm.\n\n\n##Temperature##\n\nMin. air temperature 15°C and max. air temperature 24°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n10\n\n\n##Wind Direction##\n\nNE\n\n\n##Wind##\n\nN or NE 5-15, backing N or NW for a time later.\n\n\n##Visibility##\n\nGood. Small risk isolated hill fog patches.\n\n\n##Comments##\n\nNil.\n\n\n##Saturday, 11 July 2026##\n\nDry and bright with very warm sunny spells.\n\n\n##Temperature##\n\nMin. air temperature 17°C and max. air temperature 24°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n15\n\n\n##Wind Direction##\n\nN\n\n\n##Wind##\n\nN or NE 10-15, veering E or NE, increasing 15-20 later.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.\n\n\n##Sunday, 12 July 2026##\n\nDry with plenty of warm sunshine.\n\n\n##Temperature##\n\nMin. air temperature 15°C and max. air temperature 23°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n15\n\n\n##Wind Direction##\n\nE\n\n\n##Wind##\n\nE or NE 10-15, increasing 15-20 later.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.",
-      "pubDate": "Wed 08 Jul 2026, 20:37",
-      "link": "https://www.gov.im/weather/5-day-forecast/"
-    }
-  ]
-}
+{"success": false, "error": "HTTPSConnectionPool(host='www.gov.im', port=443): Read timed out. (read timeout=20)", "items": []}
