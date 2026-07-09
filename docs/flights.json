@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-09T15:54:16.372672+00:00",
-  "lastUpdated": "15:53 UTC",
+  "fetchedAt": "2026-07-09T15:58:18.141201+00:00",
+  "lastUpdated": "15:57 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -47,7 +47,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Dublin",
       "statusType": "boarding"
     },
@@ -97,9 +97,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:40",
-      "status": "Final approach",
+      "status": "Landed 16:54",
       "origin": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
