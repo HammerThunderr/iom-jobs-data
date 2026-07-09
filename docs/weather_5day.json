@@ -1,1 +1,14 @@
-{"success": false, "error": "HTTPSConnectionPool(host='www.gov.im', port=443): Read timed out. (read timeout=20)", "items": []}
+{
+  "success": true,
+  "feedTitle": "Isle of Man 5 day weather forecast",
+  "lastUpdated": "",
+  "fetchedAt": "2026-07-09T05:37:26.206351+00:00",
+  "items": [
+    {
+      "title": "5 day forecast updated as of 9 July 2026 6:27am",
+      "description": "##Today##\n\nDry with the risk of coastal mist and low cloud in places at first, then sunny spells soon developing.\n\n\n##Temperature##\n\nMin. air temperature 14°C and max. air temperature 22°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n7\n\n\n##Wind Direction##\n\nNW\n\n\n##Wind##\n\nVariable 5-10, becoming N'ly later.\n\n\n##Visibility##\n\nMostly good. Poor or very poor in any mist and fog patches at first.\n\n\n##Comments##\n\nNil.\n\n\n##Tomorrow##\n\nSunny. Very warm.\n\n\n##Temperature##\n\nMin. air temperature 15°C and max. air temperature 25°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n10\n\n\n##Wind Direction##\n\nN\n\n\n##Wind##\n\nN'y 5-15, veering E or NE later.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.\n\n\n##Saturday, 11 July 2026##\n\nDry and bright with very warm sunny spells.\n\n\n##Temperature##\n\nMin. air temperature 17°C and max. air temperature 24°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n15\n\n\n##Wind Direction##\n\nN\n\n\n##Wind##\n\nN or NE 10-15, veering E or NE, increasing 15-20 later.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.\n\n\n##Sunday, 12 July 2026##\n\nDry with plenty of warm sunshine.\n\n\n##Temperature##\n\nMin. air temperature 15°C and max. air temperature 23°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n15\n\n\n##Wind Direction##\n\nE\n\n\n##Wind##\n\nE or NE 10-15, increasing 15-20 later.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.\n\n\n##Monday, 13 July 2026##\n\nFine and dry.\n\n\n##Temperature##\n\nMin. air temperature 14°C and max. air temperature 22°C\n\n\n##Rainfall (mm):##\n\n0\n\n\n##Wind Speed##\n\n12\n\n\n##Wind Direction##\n\nNE\n\n\n##Wind##\n\nE or NE 10-15 occasionally 20 in places.\n\n\n##Visibility##\n\nGood.\n\n\n##Comments##\n\nNil.",
+      "pubDate": "Thu 09 Jul 2026, 05:27",
+      "link": "https://www.gov.im/weather/5-day-forecast/"
+    }
+  ]
+}
