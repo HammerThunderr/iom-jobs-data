@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T18:06:04.103354+00:00",
-  "lastUpdated": "18:04 UTC",
+  "fetchedAt": "2026-07-10T18:10:05.997133+00:00",
+  "lastUpdated": "18:08 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -79,9 +79,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Gate closed",
+      "status": "Taxied 19:05",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM693",
@@ -107,14 +107,6 @@
       "scheduled": "11:40",
       "status": "Arrived 13:09",
       "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 13:07",
-      "origin": "Dublin",
       "statusType": "arrived"
     },
     {
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
