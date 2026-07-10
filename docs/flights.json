@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T16:15:48.547279+00:00",
-  "lastUpdated": "16:14 UTC",
+  "fetchedAt": "2026-07-10T16:19:50.709915+00:00",
+  "lastUpdated": "16:18 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -63,9 +63,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
