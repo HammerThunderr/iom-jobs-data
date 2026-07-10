@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T21:07:27.276105+00:00",
-  "lastUpdated": "21:06 UTC",
+  "fetchedAt": "2026-07-10T21:11:29.654540+00:00",
+  "lastUpdated": "21:11 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -81,6 +81,14 @@
       "scheduled": "12:05",
       "status": "On-time",
       "destination": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY520",
+      "airline": "easyJet",
+      "scheduled": "12:10",
+      "status": "On-time",
+      "destination": "Liverpool",
       "statusType": "ontime"
     }
   ],
@@ -182,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 23,
   "source": "airport.im"
 }
