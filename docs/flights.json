@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T14:11:07.519646+00:00",
-  "lastUpdated": "14:10 UTC",
+  "fetchedAt": "2026-07-10T16:11:46.512663+00:00",
+  "lastUpdated": "16:10 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "09:30",
-      "status": "Departed 09:31",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:20",
-      "status": "Departed 10:23",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -47,25 +31,25 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Boarding shortly",
+      "status": "Departed 16:17",
       "destination": "Bristol",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding shortly",
+      "status": "Departed 15:45",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 18:00",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY716",
@@ -79,9 +63,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
@@ -103,28 +87,20 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "On-time",
+      "status": "Delayed 18:55",
       "destination": "London Gatwick",
+      "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY839",
-      "airline": "easyJet",
-      "scheduled": "09:25",
-      "status": "Arrived 09:37",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "11:00",
-      "status": "Arrived 10:43",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
@@ -145,9 +121,9 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Final approach",
+      "status": "Arrived 15:16",
       "origin": "Bristol",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
@@ -161,9 +137,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Delayed 17:31",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY715",
@@ -177,9 +153,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Arrived 16:47",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
@@ -201,9 +177,9 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "On-time",
+      "status": "Delayed 18:20",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM678",
@@ -222,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 27,
+  "totalCount": 24,
   "source": "airport.im"
 }
