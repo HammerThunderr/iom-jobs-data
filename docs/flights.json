@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T16:19:50.709915+00:00",
-  "lastUpdated": "16:18 UTC",
+  "fetchedAt": "2026-07-10T16:23:52.561858+00:00",
+  "lastUpdated": "16:22 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,9 +47,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Delayed 18:00",
+      "status": "Boarding shortly",
       "destination": "London City",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY716",
@@ -137,7 +137,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Delayed 17:50",
+      "status": "Delayed 17:46",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
@@ -169,7 +169,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:50",
-      "status": "Expected 17:40",
+      "status": "Expected 17:31",
       "origin": "Liverpool",
       "statusType": "expected"
     },
