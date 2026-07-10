@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T01:43:10.193873+00:00",
-  "lastUpdated": "01:42 UTC",
+  "fetchedAt": "2026-07-10T01:47:11.957384+00:00",
+  "lastUpdated": "01:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY715",
+      "airline": "easyJet",
+      "scheduled": "16:45",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
