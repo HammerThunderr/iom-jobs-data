@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T19:45:45.115631+00:00",
-  "lastUpdated": "19:45 UTC",
+  "fetchedAt": "2026-07-11T19:49:46.791985+00:00",
+  "lastUpdated": "19:49 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -50,6 +50,14 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -94,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 12,
   "source": "airport.im"
 }
