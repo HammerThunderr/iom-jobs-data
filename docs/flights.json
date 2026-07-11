@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T21:57:24.270171+00:00",
-  "lastUpdated": "21:56 UTC",
+  "fetchedAt": "2026-07-11T22:34:39.770396+00:00",
+  "lastUpdated": "22:33 UTC",
   "departures": [
     {
       "flightNo": "BA4547",
@@ -17,14 +17,6 @@
       "scheduled": "17:20",
       "status": "Departed 18:41",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 17:33",
-      "destination": "Manchester",
       "statusType": "departed"
     },
     {
@@ -65,6 +57,14 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "13:10",
+      "status": "On-time",
+      "destination": "London Heathrow",
       "statusType": "ontime"
     }
   ],
@@ -116,8 +116,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "13:20",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
