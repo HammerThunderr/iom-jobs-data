@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-10T23:46:26.081363+00:00",
-  "lastUpdated": "23:45 UTC",
+  "fetchedAt": "2026-07-11T00:54:43.141723+00:00",
+  "lastUpdated": "00:53 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:15",
-      "status": "Departed 19:00",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Departed 19:17",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -65,6 +49,14 @@
       "scheduled": "13:55",
       "status": "On-time",
       "destination": "Palma De Mallorca",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "15:00",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -131,6 +123,14 @@
       "scheduled": "14:30",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4548",
+      "airline": "British Airways",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "origin": "Faro",
       "statusType": "ontime"
     }
   ],
