@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T17:35:17.726131+00:00",
-  "lastUpdated": "17:34 UTC",
+  "fetchedAt": "2026-07-11T17:39:19.983992+00:00",
+  "lastUpdated": "17:38 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:42",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -39,9 +31,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Gate closed",
+      "status": "Taxied 18:34",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
@@ -110,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 12,
   "source": "airport.im"
 }
