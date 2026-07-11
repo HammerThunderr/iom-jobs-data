@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T20:56:20.524818+00:00",
-  "lastUpdated": "20:55 UTC",
+  "fetchedAt": "2026-07-11T21:37:15.675974+00:00",
+  "lastUpdated": "21:36 UTC",
   "departures": [
     {
       "flightNo": "BA4547",
@@ -58,17 +58,17 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA4548",
-      "airline": "British Airways",
-      "scheduled": "15:35",
-      "status": "Arrived 16:19",
-      "origin": "Faro",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -116,8 +116,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
