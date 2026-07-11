@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T11:11:03.960943+00:00",
-  "lastUpdated": "11:10 UTC",
+  "fetchedAt": "2026-07-11T11:41:40.615817+00:00",
+  "lastUpdated": "11:40 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,17 +31,17 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "Gate closed",
+      "status": "Taxied 12:36",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Gate closed",
+      "status": "Departed 12:30",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4503",
@@ -97,7 +97,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
-      "status": "Arrived 11:20",
+      "status": "Arrived 11:18",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -105,7 +105,7 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "Arrived 11:30",
+      "status": "Arrived 11:28",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
