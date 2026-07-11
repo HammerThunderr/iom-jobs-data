@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T23:52:41.337363+00:00",
-  "lastUpdated": "23:51 UTC",
+  "fetchedAt": "2026-07-11T23:56:43.592510+00:00",
+  "lastUpdated": "23:55 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -57,6 +57,14 @@
       "scheduled": "14:05",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "14:55",
+      "status": "On-time",
+      "destination": "Liverpool",
       "statusType": "ontime"
     }
   ],
@@ -126,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
