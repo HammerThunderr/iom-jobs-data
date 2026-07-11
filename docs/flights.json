@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T20:44:13.443201+00:00",
-  "lastUpdated": "20:43 UTC",
+  "fetchedAt": "2026-07-11T20:48:15.819626+00:00",
+  "lastUpdated": "20:47 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "15:00",
-      "status": "Departed 15:54",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4547",
       "airline": "British Airways",
@@ -115,6 +107,14 @@
       "scheduled": "10:50",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
       "statusType": "ontime"
     }
   ],
