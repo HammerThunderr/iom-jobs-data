@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T12:01:52.569554+00:00",
-  "lastUpdated": "12:01 UTC",
+  "fetchedAt": "2026-07-11T12:46:10.034206+00:00",
+  "lastUpdated": "12:44 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -55,9 +55,9 @@
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "On-time",
+      "status": "Delayed 17:15",
       "destination": "Faro",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3217",
@@ -113,9 +113,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:45",
+      "status": "Arrived 13:37",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
@@ -129,9 +129,9 @@
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Delayed 16:15",
       "origin": "Faro",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
