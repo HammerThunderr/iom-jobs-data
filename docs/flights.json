@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T15:27:25.027139+00:00",
-  "lastUpdated": "15:26 UTC",
+  "fetchedAt": "2026-07-11T15:31:26.806223+00:00",
+  "lastUpdated": "15:30 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -39,9 +39,9 @@
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "Delayed 17:15",
+      "status": "Boarding now",
       "destination": "Faro",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
