@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T19:49:46.791985+00:00",
-  "lastUpdated": "19:49 UTC",
+  "fetchedAt": "2026-07-11T19:53:48.447890+00:00",
+  "lastUpdated": "19:52 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "10:50",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
