@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T18:33:58.191173+00:00",
-  "lastUpdated": "18:33 UTC",
+  "fetchedAt": "2026-07-11T19:37:41.798298+00:00",
+  "lastUpdated": "19:36 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -50,17 +50,17 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "09:50",
+      "status": "On-time",
+      "destination": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA4504",
-      "airline": "British Airways",
-      "scheduled": "12:45",
-      "status": "Arrived 13:37",
-      "origin": "Palma De Mallorca",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY841",
       "airline": "easyJet",
@@ -97,11 +97,19 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
+      "status": "Arrived 20:07",
+      "origin": "Manchester",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "10:15",
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
