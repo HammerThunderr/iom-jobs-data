@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T19:41:43.435433+00:00",
-  "lastUpdated": "19:41 UTC",
+  "fetchedAt": "2026-07-11T19:45:45.115631+00:00",
+  "lastUpdated": "19:45 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -54,14 +54,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "14:30",
-      "status": "Arrived 14:43",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
