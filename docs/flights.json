@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-11T15:35:28.839505+00:00",
-  "lastUpdated": "15:34 UTC",
+  "fetchedAt": "2026-07-11T15:39:30.416098+00:00",
+  "lastUpdated": "15:38 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -39,7 +39,7 @@
       "flightNo": "BA4547",
       "airline": "British Airways",
       "scheduled": "16:40",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Faro",
       "statusType": "boarding"
     },
@@ -47,9 +47,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Delayed 18:40",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM697",
