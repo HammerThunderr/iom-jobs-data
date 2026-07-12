@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T12:01:32.739583+00:00",
-  "lastUpdated": "12:00 UTC",
+  "fetchedAt": "2026-07-12T12:05:34.719111+00:00",
+  "lastUpdated": "12:04 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,15 +47,15 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:05",
-      "status": "Delayed 14:30",
+      "status": "Delayed 15:03",
       "destination": "Manchester",
       "statusType": "delayed"
     },
