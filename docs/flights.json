@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T16:45:50.130065+00:00",
-  "lastUpdated": "16:44 UTC",
+  "fetchedAt": "2026-07-12T16:49:51.811538+00:00",
+  "lastUpdated": "16:48 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -71,9 +71,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Delayed 18:25",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM671",
@@ -145,9 +145,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:15",
-      "status": "Final approach",
+      "status": "Landed 17:47",
       "origin": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
@@ -161,9 +161,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Delayed 17:48",
+      "status": "Final approach",
       "origin": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM688",
