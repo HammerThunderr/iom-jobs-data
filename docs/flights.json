@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T17:55:13.923187+00:00",
-  "lastUpdated": "17:54 UTC",
+  "fetchedAt": "2026-07-12T17:59:15.567968+00:00",
+  "lastUpdated": "17:57 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -94,14 +94,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "12:30",
-      "status": "Arrived 12:55",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "13:20",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
