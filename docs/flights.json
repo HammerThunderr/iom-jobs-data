@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T21:36:56.470251+00:00",
-  "lastUpdated": "21:36 UTC",
+  "fetchedAt": "2026-07-12T21:40:58.485344+00:00",
+  "lastUpdated": "21:40 UTC",
   "departures": [
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "16:45",
-      "status": "Departed 16:48",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
