@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T11:49:27.367668+00:00",
-  "lastUpdated": "11:48 UTC",
+  "fetchedAt": "2026-07-12T11:53:29.067776+00:00",
+  "lastUpdated": "11:52 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,9 +47,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Delayed 13:30",
+      "status": "Boarding now",
       "destination": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
@@ -137,9 +137,9 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
-      "status": "Final approach",
+      "status": "Landed 12:49",
       "origin": "Edinburgh",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
