@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T15:46:38.325197+00:00",
-  "lastUpdated": "15:45 UTC",
+  "fetchedAt": "2026-07-12T15:50:40.881336+00:00",
+  "lastUpdated": "15:49 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -63,9 +63,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Taxied 16:37",
+      "status": "Departed 16:48",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
@@ -99,14 +99,6 @@
       "scheduled": "10:15",
       "status": "Arrived 11:10",
       "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "10:50",
-      "status": "Arrived 10:48",
-      "origin": "London Gatwick",
       "statusType": "arrived"
     },
     {
@@ -169,7 +161,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Landed 16:42",
+      "status": "Arrived 16:46",
       "origin": "Dublin",
       "statusType": "arrived"
     },
@@ -198,6 +190,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
