@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-12T14:37:13.599292+00:00",
-  "lastUpdated": "14:36 UTC",
+  "fetchedAt": "2026-07-12T14:41:15.988779+00:00",
+  "lastUpdated": "14:40 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -63,9 +63,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY844",
@@ -161,7 +161,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
-      "status": "Expected 15:38",
+      "status": "Expected 15:45",
       "origin": "London Gatwick",
       "statusType": "expected"
     },
