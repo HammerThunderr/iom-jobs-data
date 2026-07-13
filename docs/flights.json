@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-13T18:27:04.754152+00:00",
-  "lastUpdated": "18:26 UTC",
+  "fetchedAt": "2026-07-13T18:31:07.177949+00:00",
+  "lastUpdated": "18:30 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
