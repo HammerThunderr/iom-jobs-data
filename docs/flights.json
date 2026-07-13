@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-13T13:37:21.321361+00:00",
-  "lastUpdated": "13:36 UTC",
+  "fetchedAt": "2026-07-13T13:41:23.274520+00:00",
+  "lastUpdated": "13:40 UTC",
   "departures": [
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "08:35",
-      "status": "Departed 08:47",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -63,9 +55,9 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Bristol",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
@@ -222,6 +214,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 27,
+  "totalCount": 26,
   "source": "airport.im"
 }
