@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-13T22:02:27.829989+00:00",
-  "lastUpdated": "22:01 UTC",
+  "fetchedAt": "2026-07-13T22:42:24.201547+00:00",
+  "lastUpdated": "22:41 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:21",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
@@ -123,6 +115,14 @@
       "scheduled": "11:45",
       "status": "On-time",
       "origin": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "13:25",
+      "status": "On-time",
+      "origin": "Newquay, via Manchester",
       "statusType": "ontime"
     }
   ],
