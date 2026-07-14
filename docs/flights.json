@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-14T23:04:00.714990+00:00",
-  "lastUpdated": "23:03 UTC",
+  "fetchedAt": "2026-07-14T23:39:57.835913+00:00",
+  "lastUpdated": "23:39 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY519",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
