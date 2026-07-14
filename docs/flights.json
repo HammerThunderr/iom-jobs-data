@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-14T20:09:33.020553+00:00",
-  "lastUpdated": "20:08 UTC",
+  "fetchedAt": "2026-07-14T20:47:32.259183+00:00",
+  "lastUpdated": "20:46 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -50,17 +50,17 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "15:25",
-      "status": "Arrived 15:15",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
@@ -108,8 +108,24 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "11:40",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 15,
   "source": "airport.im"
 }
