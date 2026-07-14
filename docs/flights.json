@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-14T14:24:22.026879+00:00",
-  "lastUpdated": "14:23 UTC",
+  "fetchedAt": "2026-07-14T14:28:24.714029+00:00",
+  "lastUpdated": "14:27 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY839",
-      "airline": "easyJet",
-      "scheduled": "09:30",
-      "status": "Arrived 09:25",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
@@ -89,7 +81,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Arrived 15:16",
+      "status": "Arrived 15:15",
       "origin": "London Heathrow",
       "statusType": "arrived"
     },
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
