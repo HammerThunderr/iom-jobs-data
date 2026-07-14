@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-14T10:43:35.332755+00:00",
-  "lastUpdated": "10:42 UTC",
+  "fetchedAt": "2026-07-14T10:47:38.099533+00:00",
+  "lastUpdated": "10:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,9 +39,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
