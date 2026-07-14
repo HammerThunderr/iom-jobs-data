@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-14T09:01:21.670437+00:00",
-  "lastUpdated": "09:00 UTC",
+  "fetchedAt": "2026-07-14T09:05:24.125791+00:00",
+  "lastUpdated": "09:04 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,9 +23,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:00",
-      "status": "Gate closed",
+      "status": "Taxied 10:02",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM675",
