@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T14:51:15.904229+00:00",
-  "lastUpdated": "14:51 UTC",
+  "fetchedAt": "2026-07-15T16:11:32.351718+00:00",
+  "lastUpdated": "16:11 UTC",
   "departures": [
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:05",
-      "status": "Departed 10:10",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -47,25 +39,25 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding shortly",
+      "status": "Departed 16:31",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Departed 16:54",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -74,6 +66,22 @@
       "status": "Delayed 18:50",
       "destination": "Liverpool",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:05",
+      "status": "On-time",
+      "destination": "Newquay, via Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -121,9 +129,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:40",
-      "status": "On-time",
+      "status": "Arrived 16:50",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
@@ -150,6 +158,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
