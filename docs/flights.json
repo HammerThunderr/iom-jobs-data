@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T19:59:47.467503+00:00",
-  "lastUpdated": "19:59 UTC",
+  "fetchedAt": "2026-07-15T20:03:50.934626+00:00",
+  "lastUpdated": "20:02 UTC",
   "departures": [
     {
       "flightNo": "EZY520",
@@ -78,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "15:05",
-      "status": "Arrived 15:01",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
@@ -121,7 +113,7 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Delayed 21:30",
+      "status": "Delayed 21:40",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
