@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T16:31:42.316514+00:00",
-  "lastUpdated": "16:31 UTC",
+  "fetchedAt": "2026-07-15T17:42:38.414613+00:00",
+  "lastUpdated": "17:42 UTC",
   "departures": [
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "12:15",
-      "status": "Departed 12:35",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM314",
-      "airline": "Loganair",
-      "scheduled": "12:25",
-      "status": "Departed 12:27",
-      "destination": "Edinburgh",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY520",
       "airline": "easyJet",
@@ -55,7 +39,7 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Delayed 18:50",
+      "status": "Delayed 19:35",
       "destination": "Liverpool",
       "statusType": "delayed"
     },
@@ -77,22 +61,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "11:40",
-      "status": "Arrived 11:39",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 11:58",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY519",
       "airline": "easyJet",
@@ -129,9 +97,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
-      "status": "Delayed 18:20",
+      "status": "Arrived 18:35",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM678",
@@ -145,11 +113,11 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Delayed 20:45",
+      "status": "Delayed 21:30",
       "origin": "Liverpool",
       "statusType": "delayed"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 14,
   "source": "airport.im"
 }
