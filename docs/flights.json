@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T23:34:37.113614+00:00",
-  "lastUpdated": "23:33 UTC",
+  "fetchedAt": "2026-07-15T23:38:39.430513+00:00",
+  "lastUpdated": "23:37 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -54,14 +54,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:45",
-      "status": "Arrived 18:35",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
@@ -110,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 12,
   "source": "airport.im"
 }
