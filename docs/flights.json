@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T18:54:59.472795+00:00",
-  "lastUpdated": "18:54 UTC",
+  "fetchedAt": "2026-07-15T18:59:01.925631+00:00",
+  "lastUpdated": "18:58 UTC",
   "departures": [
     {
       "flightNo": "EZY520",
@@ -58,6 +58,14 @@
       "status": "On-time",
       "destination": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "09:55",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -105,9 +113,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Final approach",
+      "status": "Landed 19:55",
       "origin": "London City",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM688",
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
