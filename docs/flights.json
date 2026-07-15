@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-15T17:58:48.364527+00:00",
-  "lastUpdated": "17:58 UTC",
+  "fetchedAt": "2026-07-15T18:02:50.906940+00:00",
+  "lastUpdated": "18:02 UTC",
   "departures": [
     {
       "flightNo": "EZY520",
@@ -105,9 +105,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Expected 20:01",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM688",
@@ -116,8 +116,16 @@
       "status": "Delayed 21:30",
       "origin": "Liverpool",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM682",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
