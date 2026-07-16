@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T12:33:03.099739+00:00",
-  "lastUpdated": "12:32 UTC",
+  "fetchedAt": "2026-07-16T14:29:18.757346+00:00",
+  "lastUpdated": "14:29 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -31,17 +31,17 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Departed 15:19",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:45",
-      "status": "On-time",
+      "status": "Delayed 16:50",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM677",
@@ -78,22 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:52",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "09:25",
-      "status": "Arrived 09:16",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:35",
@@ -105,7 +89,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "Arrived 13:22",
+      "status": "Arrived 13:21",
       "origin": "Newquay, via Manchester",
       "statusType": "arrived"
     },
@@ -113,17 +97,17 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "15:10",
-      "status": "On-time",
+      "status": "Delayed 16:05",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Arrived 15:20",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
@@ -166,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 18,
   "source": "airport.im"
 }
