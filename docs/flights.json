@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T20:42:32.336884+00:00",
-  "lastUpdated": "20:41 UTC",
+  "fetchedAt": "2026-07-16T20:46:34.338066+00:00",
+  "lastUpdated": "20:46 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -164,8 +164,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
