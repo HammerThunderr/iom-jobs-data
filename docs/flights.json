@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T22:09:19.401726+00:00",
-  "lastUpdated": "22:08 UTC",
+  "fetchedAt": "2026-07-16T22:13:21.137138+00:00",
+  "lastUpdated": "22:12 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "15:45",
-      "status": "Departed 17:24",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -166,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 19,
   "source": "airport.im"
 }
