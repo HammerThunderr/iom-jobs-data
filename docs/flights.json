@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T20:14:19.208311+00:00",
-  "lastUpdated": "20:14 UTC",
+  "fetchedAt": "2026-07-16T20:42:32.336884+00:00",
+  "lastUpdated": "20:41 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -74,6 +74,14 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:30",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -83,14 +91,6 @@
       "scheduled": "15:10",
       "status": "Arrived 16:29",
       "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "15:25",
-      "status": "Arrived 15:20",
-      "origin": "London Heathrow",
       "statusType": "arrived"
     },
     {
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "11:40",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
