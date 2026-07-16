@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T16:03:29.819786+00:00",
-  "lastUpdated": "16:02 UTC",
+  "fetchedAt": "2026-07-16T16:07:31.584496+00:00",
+  "lastUpdated": "16:06 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -39,9 +39,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM687",
