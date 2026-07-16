@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T14:45:26.242301+00:00",
-  "lastUpdated": "14:45 UTC",
+  "fetchedAt": "2026-07-16T14:49:28.237070+00:00",
+  "lastUpdated": "14:49 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:55",
-      "status": "Departed 09:56",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
