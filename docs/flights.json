@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T08:41:32.935865+00:00",
-  "lastUpdated": "08:41 UTC",
+  "fetchedAt": "2026-07-16T08:45:35.812323+00:00",
+  "lastUpdated": "08:45 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,9 +23,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:55",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY840",
