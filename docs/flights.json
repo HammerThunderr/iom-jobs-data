@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-16T15:59:27.730658+00:00",
-  "lastUpdated": "15:58 UTC",
+  "fetchedAt": "2026-07-16T16:03:29.819786+00:00",
+  "lastUpdated": "16:02 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -56,6 +56,14 @@
       "airline": "easyJet",
       "scheduled": "19:20",
       "status": "Delayed 19:35",
+      "destination": "Liverpool",
+      "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "Delayed 08:35",
       "destination": "Liverpool",
       "statusType": "delayed"
     }
@@ -126,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
