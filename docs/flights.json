@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T18:14:09.834398+00:00",
-  "lastUpdated": "18:13 UTC",
+  "fetchedAt": "2026-07-17T18:18:11.925275+00:00",
+  "lastUpdated": "18:17 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -164,8 +164,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "09:15",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
