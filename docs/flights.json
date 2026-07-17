@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T09:45:19.501070+00:00",
-  "lastUpdated": "09:45 UTC",
+  "fetchedAt": "2026-07-17T11:00:53.041077+00:00",
+  "lastUpdated": "11:00 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,15 +39,15 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "On-time",
+      "status": "Departed 11:29",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Delayed 12:40",
+      "status": "Delayed 13:00",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -55,9 +55,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY234",
@@ -153,15 +153,15 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Arrived 11:39",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:10",
+      "status": "Delayed 12:31",
       "origin": "Dublin",
       "statusType": "delayed"
     },
