@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T18:18:11.925275+00:00",
-  "lastUpdated": "18:17 UTC",
+  "fetchedAt": "2026-07-17T19:00:15.100119+00:00",
+  "lastUpdated": "18:59 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -31,7 +31,7 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Departed 19:12",
+      "status": "Departed 19:11",
       "destination": "Manchester",
       "statusType": "departed"
     },
@@ -55,17 +55,17 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Taxied 19:13",
+      "status": "Departed 19:18",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Gate closed",
+      "status": "Departed 19:27",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
@@ -82,6 +82,14 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "09:45",
+      "status": "Delayed 10:01",
+      "destination": "Liverpool",
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
@@ -153,9 +161,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Expected 19:56",
+      "status": "Arrived 19:47",
       "origin": "London City",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM688",
@@ -174,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 22,
   "source": "airport.im"
 }
