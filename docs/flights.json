@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T12:43:16.572816+00:00",
-  "lastUpdated": "12:42 UTC",
+  "fetchedAt": "2026-07-17T12:47:19.204569+00:00",
+  "lastUpdated": "12:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -119,9 +119,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "On-time",
+      "status": "Delayed 19:10",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
@@ -225,9 +225,9 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "On-time",
+      "status": "Delayed 18:35",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM678",
