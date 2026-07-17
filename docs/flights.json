@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T07:15:57.074851+00:00",
-  "lastUpdated": "07:15 UTC",
+  "fetchedAt": "2026-07-17T07:19:59.515864+00:00",
+  "lastUpdated": "07:19 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "08:20",
-      "status": "Taxied 08:09",
+      "status": "Departed 08:18",
       "destination": "Edinburgh",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
