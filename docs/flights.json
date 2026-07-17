@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T09:29:09.949235+00:00",
-  "lastUpdated": "09:29 UTC",
+  "fetchedAt": "2026-07-17T09:33:12.585068+00:00",
+  "lastUpdated": "09:33 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -145,9 +145,9 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "11:00",
-      "status": "Expected 10:31",
+      "status": "Final approach",
       "origin": "Edinburgh",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM694",
