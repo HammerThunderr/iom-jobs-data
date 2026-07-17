@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T20:14:25.980633+00:00",
-  "lastUpdated": "20:13 UTC",
+  "fetchedAt": "2026-07-17T20:18:28.536466+00:00",
+  "lastUpdated": "20:17 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -148,8 +148,16 @@
       "status": "Arrived 21:10",
       "origin": "Liverpool",
       "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "09:15",
+      "status": "Delayed overnight",
+      "origin": "Manchester",
+      "statusType": "delayed"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
