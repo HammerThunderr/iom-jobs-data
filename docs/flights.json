@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-17T20:10:23.846465+00:00",
-  "lastUpdated": "20:09 UTC",
+  "fetchedAt": "2026-07-17T20:14:25.980633+00:00",
+  "lastUpdated": "20:13 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -79,7 +79,7 @@
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "09:45",
-      "status": "Delayed 10:01",
+      "status": "Delayed 10:00",
       "destination": "Liverpool",
       "statusType": "delayed"
     }
@@ -145,19 +145,11 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Landed 21:07",
+      "status": "Arrived 21:10",
       "origin": "Liverpool",
       "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "On-time",
-      "origin": "Manchester",
-      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
