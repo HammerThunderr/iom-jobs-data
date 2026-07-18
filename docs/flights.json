@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T07:43:25.631903+00:00",
-  "lastUpdated": "07:42 UTC",
+  "fetchedAt": "2026-07-18T09:06:01.131359+00:00",
+  "lastUpdated": "09:05 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -15,17 +15,17 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Boarding now",
+      "status": "Departed 08:54",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "09:45",
-      "status": "On-time",
+      "status": "Departed 09:49",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -89,9 +89,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "09:15",
-      "status": "On-time",
+      "status": "Arrived 09:17",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
