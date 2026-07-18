@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T11:54:10.466776+00:00",
-  "lastUpdated": "11:53 UTC",
+  "fetchedAt": "2026-07-18T11:58:12.234355+00:00",
+  "lastUpdated": "11:58 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -121,9 +121,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:00",
+      "status": "Final approach",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY841",
