@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T19:41:46.663759+00:00",
-  "lastUpdated": "19:40 UTC",
+  "fetchedAt": "2026-07-18T19:45:48.860395+00:00",
+  "lastUpdated": "19:45 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -50,17 +50,17 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "14:30",
-      "status": "Arrived 14:42",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA4548",
       "airline": "British Airways",
