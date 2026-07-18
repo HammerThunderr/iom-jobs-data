@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T16:28:46.457751+00:00",
-  "lastUpdated": "16:28 UTC",
+  "fetchedAt": "2026-07-18T16:32:49.217313+00:00",
+  "lastUpdated": "16:32 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -55,9 +55,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Taxied 17:24",
+      "status": "Departed 17:30",
       "destination": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "departed"
     }
   ],
   "arrivals": [
