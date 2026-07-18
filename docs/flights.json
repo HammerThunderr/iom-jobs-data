@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T20:39:18.056555+00:00",
-  "lastUpdated": "20:38 UTC",
+  "fetchedAt": "2026-07-18T20:43:19.696818+00:00",
+  "lastUpdated": "20:42 UTC",
   "departures": [
     {
       "flightNo": "BA4547",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "BA4548",
-      "airline": "British Airways",
-      "scheduled": "15:35",
-      "status": "Arrived 15:40",
-      "origin": "Faro",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
@@ -110,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 12,
   "source": "airport.im"
 }
