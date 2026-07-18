@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T20:43:19.696818+00:00",
-  "lastUpdated": "20:42 UTC",
+  "fetchedAt": "2026-07-18T20:47:21.424382+00:00",
+  "lastUpdated": "20:47 UTC",
   "departures": [
     {
       "flightNo": "BA4547",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
