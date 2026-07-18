@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-18T16:32:49.217313+00:00",
-  "lastUpdated": "16:32 UTC",
+  "fetchedAt": "2026-07-18T16:36:51.599971+00:00",
+  "lastUpdated": "16:35 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Arrived 11:34",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
@@ -118,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
