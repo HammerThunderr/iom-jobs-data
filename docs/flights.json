@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T20:39:34.046318+00:00",
-  "lastUpdated": "20:39 UTC",
+  "fetchedAt": "2026-07-19T20:43:36.206633+00:00",
+  "lastUpdated": "20:43 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -89,6 +89,14 @@
       "scheduled": "10:05",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:40",
+      "status": "On-time",
+      "destination": "London Heathrow",
       "statusType": "ontime"
     }
   ],
@@ -190,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 24,
   "source": "airport.im"
 }
