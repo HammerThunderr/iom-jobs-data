@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T11:01:14.134877+00:00",
-  "lastUpdated": "11:00 UTC",
+  "fetchedAt": "2026-07-19T11:05:16.094906+00:00",
+  "lastUpdated": "11:04 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Delayed 12:40",
+      "status": "Boarding shortly",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM675",
@@ -137,9 +137,9 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
-      "status": "On-time",
+      "status": "Expected 12:07",
       "origin": "Edinburgh",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM638",
