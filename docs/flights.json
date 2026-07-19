@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T15:44:49.379588+00:00",
-  "lastUpdated": "15:43 UTC",
+  "fetchedAt": "2026-07-19T15:48:51.332476+00:00",
+  "lastUpdated": "15:47 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -63,15 +63,15 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Gate closed",
+      "status": "Taxied 16:44",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "London City",
       "statusType": "boarding"
     },
@@ -79,9 +79,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM687",
@@ -161,7 +161,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Landed 16:41",
+      "status": "Arrived 16:45",
       "origin": "Dublin",
       "statusType": "arrived"
     },
