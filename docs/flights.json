@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T21:55:26.288509+00:00",
-  "lastUpdated": "21:54 UTC",
+  "fetchedAt": "2026-07-19T21:59:28.510869+00:00",
+  "lastUpdated": "21:58 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 17:05",
-      "destination": "London City",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
