@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T17:37:55.275532+00:00",
-  "lastUpdated": "17:37 UTC",
+  "fetchedAt": "2026-07-19T17:41:57.058390+00:00",
+  "lastUpdated": "17:41 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -172,8 +172,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY715",
+      "airline": "easyJet",
+      "scheduled": "08:40",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 22,
   "source": "airport.im"
 }
