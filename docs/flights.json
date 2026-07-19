@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-19T18:31:15.610138+00:00",
-  "lastUpdated": "18:30 UTC",
+  "fetchedAt": "2026-07-19T18:35:17.364509+00:00",
+  "lastUpdated": "18:34 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -180,8 +180,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 23,
   "source": "airport.im"
 }
