@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-21T11:59:44.202838+00:00",
-  "lastUpdated": "11:58 UTC",
+  "fetchedAt": "2026-07-21T12:03:45.988733+00:00",
+  "lastUpdated": "12:02 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -89,9 +89,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Expected 13:08",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM676",
