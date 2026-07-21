@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-21T18:10:36.065896+00:00",
-  "lastUpdated": "18:10 UTC",
+  "fetchedAt": "2026-07-21T18:14:38.090429+00:00",
+  "lastUpdated": "18:14 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -45,14 +45,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "13:25",
-      "status": "Arrived 13:11",
-      "origin": "Newquay, via Manchester",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
