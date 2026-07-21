@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-21T17:51:06.126149+00:00",
-  "lastUpdated": "17:36 21/07/26",
+  "fetchedAt": "2026-07-21T19:07:32.866163+00:00",
+  "lastUpdated": "18:08 21/07/26",
   "totalCount": 20,
   "days": [
     {
@@ -35,13 +35,13 @@
           "statusType": "arrived"
         },
         {
-          "departTime": "19:15",
+          "departTime": "19:07",
           "departPort": "Liverpool",
-          "arriveTime": "22:00",
+          "arriveTime": "21:47",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         }
       ]
     },
