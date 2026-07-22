@@ -1,20 +1,20 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-22T04:31:53.074115+00:00",
-  "lastUpdated": "16:04 21/07/26",
+  "fetchedAt": "2026-07-22T07:19:55.376114+00:00",
+  "lastUpdated": "05:36 22/07/26",
   "totalCount": 20,
   "days": [
     {
       "date": "Wednesday, 22 July 2026",
       "sailings": [
         {
-          "departTime": "06:45",
+          "departTime": "06:35",
           "departPort": "Douglas",
-          "arriveTime": "09:30",
+          "arriveTime": "09:20",
           "arrivePort": "Larne",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         },
         {
           "departTime": "10:45",
