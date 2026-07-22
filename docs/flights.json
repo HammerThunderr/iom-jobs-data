@@ -1,30 +1,14 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-22T16:32:09.514631+00:00",
-  "lastUpdated": "16:31 UTC",
+  "fetchedAt": "2026-07-22T17:45:45.922744+00:00",
+  "lastUpdated": "17:44 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Departed 11:42",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:20",
       "status": "Departed 12:55",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM314",
-      "airline": "Loganair",
-      "scheduled": "12:25",
-      "status": "Departed 12:24",
-      "destination": "Edinburgh",
       "statusType": "departed"
     },
     {
@@ -47,17 +31,17 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Gate closed",
+      "status": "Departed 17:40",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "On-time",
+      "status": "Departed 18:26",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
@@ -77,22 +61,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "11:40",
-      "status": "Arrived 11:36",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 12:02",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM313",
       "airline": "Loganair",
@@ -121,7 +89,7 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
-      "status": "Landed 17:29",
+      "status": "Arrived 17:31",
       "origin": "Manchester",
       "statusType": "arrived"
     },
@@ -142,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 13,
   "source": "airport.im"
 }
