@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-23T18:12:47.816061+00:00",
-  "lastUpdated": "18:12 UTC",
+  "fetchedAt": "2026-07-23T18:16:50.054860+00:00",
+  "lastUpdated": "18:16 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -78,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "13:25",
-      "status": "Arrived 13:15",
-      "origin": "Newquay, via Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "15:10",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
