@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-23T12:00:21.808812+00:00",
-  "lastUpdated": "11:59 UTC",
+  "fetchedAt": "2026-07-23T12:04:25.091651+00:00",
+  "lastUpdated": "12:04 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:09",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -129,9 +121,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Expected 13:13",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY841",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
