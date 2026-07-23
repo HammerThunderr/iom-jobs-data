@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-23T09:48:00.763544+00:00",
-  "lastUpdated": "09:47 UTC",
+  "fetchedAt": "2026-07-23T09:52:02.908769+00:00",
+  "lastUpdated": "09:51 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -71,9 +71,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Delayed 17:55",
+      "status": "On-time",
       "destination": "London City",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EI3217",
