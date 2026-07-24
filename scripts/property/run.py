@@ -33,8 +33,28 @@ def _absolute(agent, href):
     return url.split("?")[0].rstrip("/") + "/"
 
 
+def sitemap_entries(text):
+    """Yield (loc, lastmod_or_None) for each <url> block in a sitemap.
+
+    Some agents (Garforth Gray) put listings at the root alongside ordinary
+    pages, and the only clean signal is that real listings carry a <lastmod>.
+    """
+    for block in re.findall(r"<url>(.*?)</url>", text, flags=re.S):
+        loc = re.search(r"<loc>\s*([^<]+?)\s*</loc>", block)
+        if not loc:
+            continue
+        lastmod = re.search(r"<lastmod>\s*([^<]+?)\s*</lastmod>", block)
+        yield loc.group(1), (lastmod.group(1) if lastmod else None)
+
+
+def _accept(agent, loc, lastmod):
+    if agent.require_lastmod and not lastmod:
+        return False
+    return agent.is_listing(loc)
+
+
 def discover_via_sitemap(agent):
-    """WordPress/most CMS sitemaps list listing URLs even when APIs are shut."""
+    """Most sites expose a sitemap even when their APIs are shut."""
     urls = set()
     if not agent.sitemap_url:
         return urls
@@ -43,24 +63,23 @@ def discover_via_sitemap(agent):
     if not index:
         return urls
 
-    locs = re.findall(r"<loc>\s*([^<]+?)\s*</loc>", index.text)
-    # A sitemap index points at sub-sitemaps; a flat sitemap lists pages.
-    direct = {_absolute(agent, l) for l in locs if agent.property_path in l}
-    if direct:
-        urls |= direct
+    entries = list(sitemap_entries(index.text))
+    urls |= {
+        _absolute(agent, loc) for loc, lastmod in entries if _accept(agent, loc, lastmod)
+    }
 
-    subs = [l for l in locs if l.endswith(".xml")]
+    # A sitemap index points at sub-sitemaps rather than listing pages directly.
+    subs = [loc for loc, _ in entries if loc.endswith(".xml")]
     for sub in subs:
-        # Only fetch sub-sitemaps that plausibly hold listings.
-        if subs and agent.property_path.strip("/") not in sub.lower():
+        if agent.property_path and agent.property_path.strip("/") not in sub.lower():
             continue
         page = common.get(sub)
         if not page:
             continue
         urls |= {
-            _absolute(agent, l)
-            for l in re.findall(r"<loc>\s*([^<]+?)\s*</loc>", page.text)
-            if agent.property_path in l
+            _absolute(agent, loc)
+            for loc, lastmod in sitemap_entries(page.text)
+            if _accept(agent, loc, lastmod)
         }
     return urls
 
@@ -80,8 +99,11 @@ def discover_via_search(agent):
         if not res:
             break
 
-        pattern = rf'href="([^"]*?{re.escape(agent.property_path)}[^"]+?)"'
-        found = {_absolute(agent, h) for h in re.findall(pattern, res.text)}
+        found = {
+            _absolute(agent, h)
+            for h in re.findall(r'href="([^"]+?)"', res.text)
+            if agent.is_listing(h)
+        }
         fresh = found - urls
         print(f"    search page {page_num}: +{len(fresh)}")
         if not fresh:
