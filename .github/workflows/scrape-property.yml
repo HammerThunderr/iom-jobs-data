@@ -102,4 +102,20 @@ jobs:
 
           COUNT=$(python -c "import json;print(len(json.load(open('docs/property/properties.json'))['listings']))")
           git commit -m "Update property listings ($COUNT) [skip ci]"
-          git push
+
+          # Other scrapers in this repo commit to the same branch, so the remote
+          # can move between checkout and push. Rebase onto whatever landed and
+          # retry rather than failing the whole run.
+          BRANCH=${{ github.ref_name }}
+          for ATTEMPT in 1 2 3 4 5; do
+            if git push origin HEAD:"$BRANCH"; then
+              echo "Pushed on attempt $ATTEMPT"
+              exit 0
+            fi
+            echo "Push rejected — rebasing onto origin/$BRANCH (attempt $ATTEMPT)"
+            git pull --rebase --autostash origin "$BRANCH" || true
+            sleep 5
+          done
+
+          echo "Failed to push after 5 attempts"
+          exit 1
