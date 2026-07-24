@@ -16,6 +16,7 @@ own search endpoint as a fallback.
 
 from dataclasses import dataclass, field
 from typing import Optional
+from urllib.parse import urlparse
 
 
 @dataclass
@@ -23,11 +24,20 @@ class Agent:
     key: str                     # short id, used as the listing id prefix
     name: str                    # display name shown in the app
     base: str                    # site root, no trailing slash
-    property_path: str           # marker identifying a listing URL
-    sitemap: Optional[str] = None        # path to sitemap or sitemap index
-    search_path: Optional[str] = None    # fallback listing-index page
-    search_params: dict = field(default_factory=dict)  # template; {page} filled
-    page_param: Optional[str] = "page"   # pagination query key
+
+    # --- how to recognise a listing URL (use ONE of these) ---
+    property_path: Optional[str] = None   # e.g. "/property/" — path contains this
+    root_level_slugs: bool = False        # listings live at /some-slug/ (no prefix)
+
+    # Extra filters, mainly for root_level_slugs sites where listings and
+    # ordinary pages share the same URL shape.
+    exclude_paths: tuple = ()             # path prefixes that are never listings
+    require_lastmod: bool = False         # only sitemap entries with <lastmod>
+
+    sitemap: Optional[str] = None         # path to sitemap or sitemap index
+    search_path: Optional[str] = None     # fallback listing-index page
+    search_params: dict = field(default_factory=dict)
+    page_param: Optional[str] = "page"
     max_pages: int = 30
     enabled: bool = True
 
@@ -38,6 +48,20 @@ class Agent:
     @property
     def search_url(self):
         return f"{self.base}{self.search_path}" if self.search_path else None
+
+    def is_listing(self, url):
+        """True if this URL looks like an individual property page."""
+        path = urlparse(url).path
+        if not path or path == "/":
+            return False
+        if any(path.startswith(prefix) for prefix in self.exclude_paths):
+            return False
+        if self.property_path:
+            return self.property_path in path
+        if self.root_level_slugs:
+            # Exactly one path segment: /douglas-ballanard-road-7/
+            return path.strip("/").count("/") == 0
+        return False
 
 
 AGENTS = [
@@ -73,6 +97,21 @@ AGENTS = [
         base="https://www.cowleygroves.com",
         property_path="/property/",
         sitemap="/sitemap.xml",
+    ),
+
+    # robots.txt checked: "Disallow:" with no path = everything permitted.
+    # Different shape to the others: listings sit at the ROOT (/douglas-elm-drive/)
+    # with no /property/ prefix, alongside ordinary pages. Their sitemap only
+    # puts <lastmod> on real listings — the homepage, /dashboard/ and the 100+
+    # /sales/ SEO landing pages have none — so that is the discriminator.
+    Agent(
+        key="gg",
+        name="Garforth Gray",
+        base="https://www.garforthgray.im",
+        root_level_slugs=True,
+        require_lastmod=True,
+        exclude_paths=("/sales/", "/rentals/", "/dashboard/", "/commercials/"),
+        sitemap="/sitemap.php",     # note: .php, not .xml
     ),
 
     # ---- Add further agents below once robots.txt is verified ----
