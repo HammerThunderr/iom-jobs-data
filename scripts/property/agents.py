@@ -64,6 +64,17 @@ AGENTS = [
         },
     ),
 
+    # robots.txt checked: "Disallow:" with no path = everything permitted.
+    # Flat sitemap (not an index) listing every property URL directly, so one
+    # request covers discovery. Slugs carry postcodes and some carry -rent/-sale.
+    Agent(
+        key="cg",
+        name="Cowley Groves",
+        base="https://www.cowleygroves.com",
+        property_path="/property/",
+        sitemap="/sitemap.xml",
+    ),
+
     # ---- Add further agents below once robots.txt is verified ----
     # Fill in property_path from a real listing URL before enabling.
     #
