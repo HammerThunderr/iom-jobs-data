@@ -146,11 +146,24 @@ def parse_place(text):
     return None
 
 
+def _dedupe_doubled(text):
+    """Chrystals slugs often repeat the address twice: 'a-b-c-a-b-c' -> 'a-b-c'."""
+    parts = text.split("-")
+    if len(parts) >= 4 and len(parts) % 2 == 0:
+        half = len(parts) // 2
+        if parts[:half] == parts[half:]:
+            return "-".join(parts[:half])
+    return text
+
+
 def address_from_slug(url):
     slug = url.rstrip("/").split("/")[-1]
     # Drop a trailing -sale / -rent marker and any postcode fragment.
     slug = re.sub(r"-(sale|rent|let|letting)$", "", slug, flags=re.I)
     slug = re.sub(r"-im\d{1,2}-\d[a-z]{2}$", "", slug, flags=re.I)
+    # Some agents prefix a numeric listing reference: 12877821-17-oak-park-peel
+    slug = re.sub(r"^\d{6,}-", "", slug)
+    slug = _dedupe_doubled(slug)
     return slug.replace("-", " ").strip().title()
 
 
@@ -205,16 +218,19 @@ def scrape_listing(agent, url):
     price, qualifier, listing_type = parse_price(body)
     slug = url.rstrip("/").split("/")[-1]
 
-    # An explicit -rent/-sale slug beats inferring from the page wording.
-    listing_type = listing_type_from_slug(url) or listing_type
-
     address = heading or title.split("|")[0].strip() or address_from_slug(url)
+
+    # Where an agent encodes category/type in the URL, trust that over both the
+    # slug suffix and any guess made from the page wording.
+    url_category, url_type = agent.classify(url)
+    listing_type = url_type or listing_type_from_slug(url) or listing_type
+    category = url_category or parse_category(f"{address} {head_blob}")
 
     return {
         "id": f"{agent.key}-{slug}",
         "agent": agent.name,
         "url": url,
-        "category": parse_category(f"{address} {head_blob}"),
+        "category": category,
         "listingType": listing_type,
         "price": price,
         "priceQualifier": qualifier,
