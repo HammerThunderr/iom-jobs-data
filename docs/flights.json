@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-24T22:54:14.759066+00:00",
-  "lastUpdated": "22:53 UTC",
+  "fetchedAt": "2026-07-24T22:58:16.493255+00:00",
+  "lastUpdated": "22:57 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 18:01",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -73,6 +65,14 @@
       "scheduled": "12:10",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4503",
+      "airline": "British Airways",
+      "scheduled": "13:55",
+      "status": "On-time",
+      "destination": "Palma De Mallorca",
       "statusType": "ontime"
     }
   ],
