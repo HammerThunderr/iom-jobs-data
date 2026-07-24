@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-24T05:01:05.890428+00:00",
-  "lastUpdated": "05:00 UTC",
+  "fetchedAt": "2026-07-24T07:24:02.462399+00:00",
+  "lastUpdated": "07:23 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Departed 07:00",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM314",
@@ -145,9 +145,9 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "11:00",
-      "status": "On-time",
+      "status": "Delayed 12:10",
       "origin": "Edinburgh",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM694",
@@ -228,8 +228,24 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM678",
+      "airline": "Loganair",
+      "scheduled": "20:10",
+      "status": "On-time",
+      "origin": "London City",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM688",
+      "airline": "Loganair",
+      "scheduled": "20:20",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 30,
   "source": "airport.im"
 }
