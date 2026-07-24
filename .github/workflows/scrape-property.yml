@@ -1,0 +1,105 @@
+# .github/workflows/scrape-property.yml
+#
+# Isle of Man property listings scraper for Manx One.
+# Same pattern as the JobTrain / IOM_OPEN_DATA workflows:
+#   scheduled run -> scraper -> JSON in docs/ -> GitHub Pages -> Flutter app.
+#
+# Output: docs/property/properties.json
+# Served at: https://<user>.github.io/<repo>/property/properties.json
+
+name: Scrape Property Listings
+
+on:
+  schedule:
+    # 06:00 and 18:00 UTC daily. Twice a day is plenty — listings move slowly
+    # and hammering a small agency's server is how you get blocked.
+    - cron: "0 6,18 * * *"
+  workflow_dispatch:        # manual "Run workflow" button for testing
+
+# Never let two runs overlap and fight over the same commit.
+concurrency:
+  group: scrape-property
+  cancel-in-progress: false
+
+permissions:
+  contents: write           # needed to commit the JSON back
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30     # scraping ~150 pages at 2s each, plus headroom
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Record previous listing count
+        id: before
+        run: |
+          FILE=docs/property/properties.json
+          if [ -f "$FILE" ]; then
+            COUNT=$(python -c "import json;print(len(json.load(open('$FILE'))['listings']))")
+          else
+            COUNT=0
+          fi
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Previous run had $COUNT listings"
+
+      - name: Run scraper
+        env:
+          OUTPUT_PATH: docs/property/properties.json
+        run: |
+          mkdir -p docs/property
+          python scrapers/property/run.py
+
+      - name: Sanity check output
+        id: check
+        run: |
+          FILE=docs/property/properties.json
+          PREV=${{ steps.before.outputs.count }}
+
+          # Fail loudly rather than committing a broken/empty file over good data.
+          python - <<'PY'
+          import json, os, sys
+          prev = int(os.environ["PREV"])
+          data = json.load(open("docs/property/properties.json", encoding="utf-8"))
+          listings = data.get("listings", [])
+          count = len(listings)
+          priced = sum(1 for l in listings if l.get("price"))
+          print(f"Scraped {count} listings ({priced} with a price)")
+
+          if count == 0:
+              sys.exit("ABORT: zero listings — site layout probably changed.")
+          # A sudden collapse means a broken parser, not a quiet market.
+          if prev >= 20 and count < prev * 0.5:
+              sys.exit(f"ABORT: {count} listings vs {prev} previously — suspicious drop.")
+          if count and priced / count < 0.5:
+              print("WARNING: over half the listings have no price — check the parser.")
+          PY
+        env:
+          PREV: ${{ steps.before.outputs.count }}
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/property/properties.json
+
+          # No changes is a normal outcome, not a failure.
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          COUNT=$(python -c "import json;print(len(json.load(open('docs/property/properties.json'))['listings']))")
+          git commit -m "Update property listings ($COUNT) [skip ci]"
+          git push
