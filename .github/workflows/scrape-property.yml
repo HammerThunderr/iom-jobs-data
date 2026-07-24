@@ -59,7 +59,7 @@ jobs:
           OUTPUT_PATH: docs/property/properties.json
         run: |
           mkdir -p docs/property
-          python scrapers/property/run.py
+          python scripts/property/run.py
 
       - name: Sanity check output
         id: check
