@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-24T22:12:50.476446+00:00",
-  "lastUpdated": "22:12 UTC",
+  "fetchedAt": "2026-07-24T22:50:12.868638+00:00",
+  "lastUpdated": "22:49 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:15",
-      "status": "Departed 17:45",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -86,30 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 17:23",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:45",
-      "status": "Arrived 17:40",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "17:50",
-      "status": "Arrived 17:27",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
@@ -174,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 17,
   "source": "airport.im"
 }
