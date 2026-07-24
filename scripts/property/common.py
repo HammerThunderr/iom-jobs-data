@@ -65,11 +65,18 @@ LAND_WORDS = ["field no", "field number", "land at", "building plot", "site at"]
 # ---------------------------------------------------------------------------
 
 def get(url, params=None):
-    """Polite GET. Returns Response on 200, else None."""
+    """Polite GET. Returns Response on 200, else None.
+
+    Non-200 responses are logged: a silent None made a 403 from an agent's
+    firewall look identical to an empty sitemap, which cost a debugging cycle.
+    """
     try:
         res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
         time.sleep(DELAY_SECONDS)
-        return res if res.status_code == 200 else None
+        if res.status_code != 200:
+            print(f"    ! HTTP {res.status_code} for {url}")
+            return None
+        return res
     except requests.RequestException as exc:
         print(f"    ! {url} -> {exc}")
         return None
@@ -91,19 +98,31 @@ def page_text(html):
     return title, heading, body
 
 
-def parse_price(text):
-    """Return (amount, qualifier, listing_type)."""
+# Agents word rentals inconsistently. Chrystals uses "Monthly Rental Of
+# £725", which the original keyword list missed entirely — every one of their
+# lettings came back unpriced.
+RENT_PHRASES = (
+    "per calendar month", "pcm", "p.c.m", "per month", "per week",
+    "monthly rent", "monthly rental", "per annum", "rent of", "rental of",
+)
+
+
+def parse_price(text, listing_type_hint=None):
+    """Return (amount, qualifier, listing_type).
+
+    listing_type_hint comes from the agent's URL structure where available,
+    and is trusted over guessing from the page wording.
+    """
     low = text.lower()
-    is_rent = any(
-        k in low for k in ("per calendar month", "pcm", "per month", "per week")
-    )
+    is_rent = listing_type_hint == "rent" or any(k in low for k in RENT_PHRASES)
     if "poa" in low or "price on application" in low:
         return None, "poa", "rent" if is_rent else "sale"
 
     amounts = [int(m.replace(",", "")) for m in re.findall(r"£\s*([\d,]{3,})", text)]
-    # Filter noise: rents are small, sale prices are large.
+    # Filter noise: rents are small, sale prices are large. The upper rent
+    # bound is generous because commercial lettings are quoted per annum.
     if is_rent:
-        amounts = [a for a in amounts if 200 <= a <= 20000]
+        amounts = [a for a in amounts if 100 <= a <= 100000]
     else:
         amounts = [a for a in amounts if a >= 20000]
 
@@ -132,9 +151,15 @@ def parse_int(text, words):
 
 
 def parse_type(text):
+    """Match on WORD BOUNDARIES.
+
+    Plain substring matching made 'land' match inside 'Island' — and every
+    Isle of Man page says Island somewhere — which mis-typed 1447 listings.
+    Order matters: 'semi-detached' is listed before 'detached' so it wins.
+    """
     low = text.lower()
     for candidate in PROPERTY_TYPES:
-        if candidate in low:
+        if re.search(rf"\b{re.escape(candidate)}\b", low):
             return candidate
     return None
 
@@ -206,6 +231,53 @@ def listing_type_from_slug(url):
 BEDS = ["bed", "bedroom", "bedrooms"]
 BATHS = ["bath", "bathroom", "bathrooms"]
 
+# Agents leave dead listing URLs in their sitemaps (Chrystals especially).
+# Those pages return HTTP 200 with an error message, so they have to be
+# detected by content or they end up in the app as "Property Not Found".
+DEAD_PAGE_MARKERS = [
+    "property not found", "page not found", "404", "no longer available",
+    "not currently available", "under offer no longer", "listing removed",
+]
+
+
+def _looks_dead(title, heading, body):
+    blob = f"{heading} {title}".lower()
+    if any(marker in blob for marker in DEAD_PAGE_MARKERS):
+        return True
+    # A real listing page always has some substance to it.
+    return len(body) < 200
+
+
+def _clean_address(address, agent_name):
+    """Strip the agency name that several agents prepend to their <h1>.
+
+    'Cowley Groves - 1 Forest View Apartments, Ramsey' -> '1 Forest View...'
+    Without this the agent name shows twice on every card.
+    """
+    text = address.strip()
+    for separator in (" - ", " | ", " – ", ": "):
+        prefix = f"{agent_name}{separator}"
+        if text.lower().startswith(prefix.lower()):
+            text = text[len(prefix):].strip()
+        suffix = f"{separator}{agent_name}"
+        if text.lower().endswith(suffix.lower()):
+            text = text[: -len(suffix)].strip()
+    # Also drop a bare leading/trailing agency name.
+    if text.lower().startswith(agent_name.lower()):
+        text = text[len(agent_name):].lstrip(" -|–:,").strip()
+
+    # Some agents append the price to the heading, e.g.
+    # "Central Promenade, Douglas Monthly Rental Of £725" -> drop the tail.
+    text = re.sub(
+        r"\s*(monthly rent(al)?( of)?|per calendar month|pcm|price|offers?"
+        r"( (in|around|over|above))?|guide price|asking price|from)\b.*$",
+        "",
+        text,
+        flags=re.I,
+    ).strip(" -–|,:")
+
+    return text or address
+
 
 def scrape_listing(agent, url):
     """Fetch one property page and pull out the facts. Returns dict or None."""
@@ -214,17 +286,34 @@ def scrape_listing(agent, url):
         return None
 
     title, heading, body = page_text(res.text)
+
+    # Dead or placeholder pages must not reach the app.
+    if _looks_dead(title, heading, body):
+        return None
+
     head_blob = f"{heading} {title}"
-    price, qualifier, listing_type = parse_price(body)
     slug = url.rstrip("/").split("/")[-1]
 
     address = heading or title.split("|")[0].strip() or address_from_slug(url)
+    address = _clean_address(address, agent.name)
 
     # Where an agent encodes category/type in the URL, trust that over both the
     # slug suffix and any guess made from the page wording.
     url_category, url_type = agent.classify(url)
+
+    # Price: the heading usually states it ("... Monthly Rental Of £725"),
+    # and the heading has none of the footer noise the body carries.
+    price, qualifier, listing_type = parse_price(head_blob, url_type)
+    if price is None:
+        price, qualifier, listing_type = parse_price(body, url_type)
+
     listing_type = url_type or listing_type_from_slug(url) or listing_type
     category = url_category or parse_category(f"{address} {head_blob}")
+
+    # Parish and property type are read from the ADDRESS ONLY, never the body.
+    # Reading the body picked up the agency's own footer address, which made
+    # 78% of listings look like they were in Douglas.
+    place_blob = f"{address} {heading}"
 
     return {
         "id": f"{agent.key}-{slug}",
@@ -236,10 +325,9 @@ def scrape_listing(agent, url):
         "priceQualifier": qualifier,
         "bedrooms": parse_int(head_blob, BEDS) or parse_int(body, BEDS),
         "bathrooms": parse_int(head_blob, BATHS) or parse_int(body, BATHS),
-        "propertyType": parse_type(head_blob) or parse_type(body),
+        "propertyType": parse_type(place_blob),
         "address": address,
-        "parish": parse_place(address) or parse_place(heading or title)
-        or parse_place(body),
+        "parish": parse_place(place_blob),
         "postcode": parse_postcode(url, body),
         # Deliberately absent: description, images.
     }
