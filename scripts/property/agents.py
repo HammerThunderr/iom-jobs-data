@@ -41,6 +41,19 @@ class Agent:
     max_pages: int = 30
     enabled: bool = True
 
+    # Some agents encode category/type in the URL itself, which is far more
+    # reliable than guessing from page wording. First match wins.
+    # Format: ((path_fragment, category, listing_type), ...)
+    url_rules: tuple = ()
+
+    def classify(self, url):
+        """Return (category, listing_type) from the URL, or (None, None)."""
+        path = urlparse(url).path
+        for fragment, category, listing_type in self.url_rules:
+            if fragment in path:
+                return category, listing_type
+        return None, None
+
     @property
     def sitemap_url(self):
         return f"{self.base}{self.sitemap}" if self.sitemap else None
@@ -112,6 +125,32 @@ AGENTS = [
         require_lastmod=True,
         exclude_paths=("/sales/", "/rentals/", "/dashboard/", "/commercials/"),
         sitemap="/sitemap.php",     # note: .php, not .xml
+    ),
+
+    # robots.txt checked: Joomla site. Listing paths are permitted, but
+    # /properties/agentproperties/ IS disallowed, so it is excluded below.
+    # Flat sitemap. Their URL structure encodes category and sale/rent, which
+    # is more reliable than reading the page — see url_rules.
+    # Slugs are {numeric_id}-{address}, often with the address repeated twice.
+    Agent(
+        key="chr",
+        name="Chrystals",
+        base="https://www.chrystals.co.im",
+        property_path="/property/",
+        sitemap="/sitemap.xml",
+        exclude_paths=(
+            "/properties/agentproperties/",   # disallowed in robots.txt
+            "/components/", "/component/", "/modules/", "/administrator/",
+        ),
+        url_rules=(
+            ("/commercial/commercial-lettings/", "commercial", "rent"),
+            ("/commercial/commercial-sales/", "commercial", "sale"),
+            ("/agricultural/", "land", None),
+            ("/developments/", "residential", "sale"),
+            ("/properties-for-sale/", "residential", "sale"),
+            ("/properties-to-rent/", "residential", "rent"),
+            ("/properties-to-let/", "residential", "rent"),
+        ),
     ),
 
     # ---- Add further agents below once robots.txt is verified ----
