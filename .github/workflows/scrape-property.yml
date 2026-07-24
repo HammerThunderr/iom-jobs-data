@@ -27,7 +27,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 30     # scraping ~150 pages at 2s each, plus headroom
+    timeout-minutes: 120    # ~900+ pages at a polite 2s delay across 4 agents
 
     steps:
       - name: Checkout
