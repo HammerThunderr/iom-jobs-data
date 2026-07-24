@@ -48,6 +48,17 @@ WORD_NUMBERS = {
     "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
 }
 
+# Words that mark a listing as non-residential. Users browsing for a home do
+# not want offices and shops mixed into the results, so tag them and let the
+# app filter. Kept deliberately specific: "unit"/"premises" alone are too loose.
+COMMERCIAL_WORDS = [
+    "office", "offices", "shop", "retail", "showroom", "workshop",
+    "commercial", "warehouse", "industrial", "hotel", "licensed premises",
+    "business", "restaurant", "cafe", "salon", "surgery", "storage",
+]
+
+LAND_WORDS = ["field no", "field number", "land at", "building plot", "site at"]
+
 
 # ---------------------------------------------------------------------------
 # HTTP
@@ -137,7 +148,46 @@ def parse_place(text):
 
 def address_from_slug(url):
     slug = url.rstrip("/").split("/")[-1]
-    return slug.replace("-", " ").title()
+    # Drop a trailing -sale / -rent marker and any postcode fragment.
+    slug = re.sub(r"-(sale|rent|let|letting)$", "", slug, flags=re.I)
+    slug = re.sub(r"-im\d{1,2}-\d[a-z]{2}$", "", slug, flags=re.I)
+    return slug.replace("-", " ").strip().title()
+
+
+def parse_postcode(url, text=""):
+    """Isle of Man postcodes are IM1-IM9 + space + digit + two letters.
+
+    Several agents put the postcode straight in the URL slug
+    (…-ramsey-im7-1bl), which is more reliable than reading the page.
+    """
+    slug_match = re.search(r"\b(im\d{1,2})-(\d[a-z]{2})\b", url, flags=re.I)
+    if slug_match:
+        return f"{slug_match.group(1).upper()} {slug_match.group(2).upper()}"
+
+    text_match = re.search(r"\b(IM\d{1,2})\s*(\d[A-Z]{2})\b", text)
+    if text_match:
+        return f"{text_match.group(1)} {text_match.group(2)}"
+    return None
+
+
+def parse_category(text):
+    """residential | commercial | land — so the app can filter homes only."""
+    low = text.lower()
+    if any(word in low for word in LAND_WORDS):
+        return "land"
+    if any(re.search(rf"\b{re.escape(w)}\b", low) for w in COMMERCIAL_WORDS):
+        return "commercial"
+    return "residential"
+
+
+def listing_type_from_slug(url):
+    """Some agents end the slug with -rent or -sale. Trust it when present."""
+    slug = url.rstrip("/").split("/")[-1].lower()
+    if re.search(r"-(rent|let|letting)$", slug):
+        return "rent"
+    if re.search(r"-sale$", slug):
+        return "sale"
+    return None
 
 
 BEDS = ["bed", "bedroom", "bedrooms"]
@@ -155,18 +205,26 @@ def scrape_listing(agent, url):
     price, qualifier, listing_type = parse_price(body)
     slug = url.rstrip("/").split("/")[-1]
 
+    # An explicit -rent/-sale slug beats inferring from the page wording.
+    listing_type = listing_type_from_slug(url) or listing_type
+
+    address = heading or title.split("|")[0].strip() or address_from_slug(url)
+
     return {
         "id": f"{agent.key}-{slug}",
         "agent": agent.name,
         "url": url,
+        "category": parse_category(f"{address} {head_blob}"),
         "listingType": listing_type,
         "price": price,
         "priceQualifier": qualifier,
         "bedrooms": parse_int(head_blob, BEDS) or parse_int(body, BEDS),
         "bathrooms": parse_int(head_blob, BATHS) or parse_int(body, BATHS),
         "propertyType": parse_type(head_blob) or parse_type(body),
-        "address": heading or title.split("|")[0].strip() or address_from_slug(url),
-        "parish": parse_place(heading or title) or parse_place(body),
+        "address": address,
+        "parish": parse_place(address) or parse_place(heading or title)
+        or parse_place(body),
+        "postcode": parse_postcode(url, body),
         # Deliberately absent: description, images.
     }
 
