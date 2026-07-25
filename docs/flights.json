@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T01:43:10.768347+00:00",
-  "lastUpdated": "01:42 UTC",
+  "fetchedAt": "2026-07-25T04:36:01.813413+00:00",
+  "lastUpdated": "04:35 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -65,6 +65,22 @@
       "scheduled": "16:40",
       "status": "On-time",
       "destination": "Faro",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3217",
+      "airline": "Aer Lingus",
+      "scheduled": "17:20",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "17:30",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -132,8 +148,16 @@
       "status": "On-time",
       "origin": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 19,
   "source": "airport.im"
 }
