@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T13:15:19.287799+00:00",
-  "lastUpdated": "13:14 UTC",
+  "fetchedAt": "2026-07-25T14:24:44.484426+00:00",
+  "lastUpdated": "14:24 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 09:29",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:05",
-      "status": "Departed 09:19",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -55,9 +39,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Delayed 15:30",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4547",
@@ -113,9 +97,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Delayed 14:13",
+      "status": "Arrived 14:15",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4504",
@@ -129,17 +113,17 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "Delayed 15:00",
+      "status": "Arrived 14:45",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4548",
       "airline": "British Airways",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Delayed 15:45",
       "origin": "Faro",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
@@ -166,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 18,
   "source": "airport.im"
 }
