@@ -2,10 +2,11 @@
 # Jobs scraper workflow with full job details
 # Place at: .github/workflows/jobs.yml in iom-jobs-data repo
 #
-# Runs every 4 hours. Fetches list + detail for every job (~150 jobs).
-# Total run time: ~5 minutes (1 second per detail page).
+# Fetches list + detail for every job. The board has grown from ~150 to ~700
+# listings, so at roughly 1s per detail page a full run now takes 15-25 min.
+# Keep timeout-minutes well above the real runtime — when it was 15 the job
+# was killed mid-scrape at ~565/698 three runs in a row.
 # ─────────────────────────────────────────────────────────────
-
 name: Scrape Jobs
 
 on:
@@ -15,14 +16,16 @@ on:
 
 concurrency:
   group: jobs
-  cancel-in-progress: true
+  # false, not true: a manual run started while the scheduled one is working
+  # should QUEUE behind it, not kill 20 minutes of scraping.
+  cancel-in-progress: false
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    timeout-minutes: 15
+    timeout-minutes: 60     # ~700 jobs at ~1s each, with headroom to grow
 
     steps:
       - name: Checkout
@@ -32,6 +35,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
@@ -52,8 +56,17 @@ jobs:
 
           git commit -m "chore: update jobs $(date -u '+%Y-%m-%d %H:%M UTC')"
 
-          for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push && break
-            echo "Push attempt $i failed, retrying..."
-            sleep 3
+          # Other scrapers in this repo commit to the same branch, so the
+          # remote can move between checkout and push.
+          for ATTEMPT in 1 2 3 4 5; do
+            if git push origin HEAD:"${{ github.ref_name }}"; then
+              echo "Pushed on attempt $ATTEMPT"
+              exit 0
+            fi
+            echo "Push rejected — rebasing (attempt $ATTEMPT)"
+            git pull --rebase --autostash origin "${{ github.ref_name }}" || true
+            sleep 5
           done
+
+          echo "Failed to push after 5 attempts"
+          exit 1
