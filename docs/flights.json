@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T12:55:10.510887+00:00",
-  "lastUpdated": "12:55 UTC",
+  "fetchedAt": "2026-07-25T12:59:12.279242+00:00",
+  "lastUpdated": "12:58 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,9 +47,9 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Palma De Mallorca",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
