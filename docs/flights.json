@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T20:23:30.443879+00:00",
-  "lastUpdated": "20:23 UTC",
+  "fetchedAt": "2026-07-25T21:13:48.617435+00:00",
+  "lastUpdated": "21:13 UTC",
   "departures": [
-    {
-      "flightNo": "BA4503",
-      "airline": "British Airways",
-      "scheduled": "13:55",
-      "status": "Departed 15:32",
-      "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "15:00",
-      "status": "Departed 15:45",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4547",
       "airline": "British Airways",
@@ -66,17 +50,17 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "BA4548",
-      "airline": "British Airways",
-      "scheduled": "15:35",
-      "status": "Arrived 15:50",
-      "origin": "Faro",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -116,8 +100,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
