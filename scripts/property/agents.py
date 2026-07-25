@@ -132,10 +132,18 @@ AGENTS = [
     # Flat sitemap. Their URL structure encodes category and sale/rent, which
     # is more reliable than reading the page — see url_rules.
     # Slugs are {numeric_id}-{address}, often with the address repeated twice.
+    #
+    # DISABLED for now: their sitemap carries years of archived listings —
+    # roughly 78% of the 1554 URLs return a live "Property Not Found" page,
+    # and crawling them accounted for most of the run time. Re-enable by
+    # setting enabled=True once we filter on lastmod age or find a live-only
+    # index; the dead-page detection in common.py already discards them, it
+    # just wastes ~50 minutes doing so.
     Agent(
         key="chr",
         name="Chrystals",
         base="https://www.chrystals.co.im",
+        enabled=False,
         property_path="/property/",
         sitemap="/sitemap.xml",
         exclude_paths=(
