@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T13:03:13.969501+00:00",
-  "lastUpdated": "13:03 UTC",
+  "fetchedAt": "2026-07-25T13:07:15.677931+00:00",
+  "lastUpdated": "13:07 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -113,7 +113,7 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Delayed 14:05",
+      "status": "Delayed 14:13",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -121,9 +121,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Delayed 13:35",
+      "status": "Arrived 13:40",
       "origin": "Palma De Mallorca",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
