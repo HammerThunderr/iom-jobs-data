@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T00:12:21.580991+00:00",
-  "lastUpdated": "00:11 UTC",
+  "fetchedAt": "2026-07-25T01:23:01.040827+00:00",
+  "lastUpdated": "01:22 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -62,22 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 20:12",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Arrived 20:20",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "09:15",
@@ -123,6 +107,22 @@
       "scheduled": "14:30",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4548",
+      "airline": "British Airways",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "origin": "Faro",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
       "statusType": "ontime"
     }
   ],
