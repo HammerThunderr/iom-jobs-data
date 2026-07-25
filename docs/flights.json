@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T16:54:06.351202+00:00",
-  "lastUpdated": "16:53 UTC",
+  "fetchedAt": "2026-07-25T16:58:08.133540+00:00",
+  "lastUpdated": "16:57 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -70,22 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "Arrived 11:52",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:54",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:40",
@@ -142,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 15,
   "source": "airport.im"
 }
