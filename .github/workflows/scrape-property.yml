@@ -14,7 +14,12 @@ on:
     # 06:00 and 18:00 UTC daily. Twice a day is plenty — listings move slowly
     # and hammering a small agency's server is how you get blocked.
     - cron: "0 6,18 * * *"
-  workflow_dispatch:        # manual "Run workflow" button for testing
+  workflow_dispatch:
+    inputs:
+      skip_safety_check:
+        description: "Skip the drop-detection guard (use after enabling/disabling an agent)"
+        type: boolean
+        default: false
 
 # Never let two runs overlap and fight over the same commit.
 concurrency:
@@ -27,7 +32,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 120    # ~900+ pages at a polite 2s delay across 4 agents
+    timeout-minutes: 120    # polite 2s delay per page across all agents
 
     steps:
       - name: Checkout
@@ -42,17 +47,16 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4
 
-      - name: Record previous listing count
-        id: before
+      - name: Snapshot previous data
         run: |
-          FILE=docs/property/properties.json
-          if [ -f "$FILE" ]; then
-            COUNT=$(python -c "import json;print(len(json.load(open('$FILE'))['listings']))")
+          # Kept so the safety check can compare PER AGENT. Comparing totals
+          # broke the moment an agent was deliberately disabled.
+          if [ -f docs/property/properties.json ]; then
+            cp docs/property/properties.json /tmp/previous.json
+            echo "Snapshotted previous run"
           else
-            COUNT=0
+            echo "No previous run to compare against"
           fi
-          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
-          echo "Previous run had $COUNT listings"
 
       - name: Run scraper
         env:
@@ -62,31 +66,64 @@ jobs:
           python scripts/property/run.py
 
       - name: Sanity check output
-        id: check
+        env:
+          SKIP_CHECK: ${{ inputs.skip_safety_check }}
         run: |
-          FILE=docs/property/properties.json
-          PREV=${{ steps.before.outputs.count }}
-
-          # Fail loudly rather than committing a broken/empty file over good data.
           python - <<'PY'
           import json, os, sys
-          prev = int(os.environ["PREV"])
-          data = json.load(open("docs/property/properties.json", encoding="utf-8"))
-          listings = data.get("listings", [])
+
+          with open("docs/property/properties.json", encoding="utf-8") as fh:
+              new = json.load(fh)
+
+          listings = new.get("listings", [])
+          sources = new.get("meta", {}).get("sources", [])
           count = len(listings)
           priced = sum(1 for l in listings if l.get("price"))
+
           print(f"Scraped {count} listings ({priced} with a price)")
+          for s in sources:
+              print(f"  {s.get('status','?'):7} {s.get('agent')}: {s.get('count')}")
 
           if count == 0:
-              sys.exit("ABORT: zero listings — site layout probably changed.")
-          # A sudden collapse means a broken parser, not a quiet market.
-          if prev >= 20 and count < prev * 0.5:
-              sys.exit(f"ABORT: {count} listings vs {prev} previously — suspicious drop.")
+              sys.exit("ABORT: zero listings — something is badly broken.")
+
+          if os.environ.get("SKIP_CHECK") == "true":
+              print("\nSafety check skipped by manual request.")
+              sys.exit(0)
+
+          # Load the previous run, if any.
+          previous = []
+          if os.path.exists("/tmp/previous.json"):
+              try:
+                  with open("/tmp/previous.json", encoding="utf-8") as fh:
+                      previous = json.load(fh).get("listings", [])
+              except (json.JSONDecodeError, OSError):
+                  print("Previous file unreadable — skipping comparison.")
+
+          # Compare each agent against ITSELF. An agent that was switched off
+          # simply is not in `sources`, so its absence never trips the guard.
+          problems = []
+          for s in sources:
+              agent = s.get("agent")
+              if s.get("status") != "ok":
+                  print(f"\nWARNING: {agent} failed — {s.get('error')}")
+                  print("  Its previous listings were carried over and flagged stale.")
+                  continue
+              before = sum(1 for l in previous if l.get("agent") == agent)
+              now = s.get("count", 0)
+              if before >= 20 and now < before * 0.5:
+                  problems.append(f"{agent}: {now} now vs {before} before")
+
+          if problems:
+              print("\nSuspicious drops detected:")
+              for p in problems:
+                  print(f"  {p}")
+              sys.exit("ABORT: a parser has probably broken. Re-run with "
+                       "skip_safety_check if this drop is expected.")
+
           if count and priced / count < 0.5:
-              print("WARNING: over half the listings have no price — check the parser.")
+              print("\nWARNING: over half the listings have no price.")
           PY
-        env:
-          PREV: ${{ steps.before.outputs.count }}
 
       - name: Commit and push
         run: |
