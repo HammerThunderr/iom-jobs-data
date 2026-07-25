@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T22:18:54.250541+00:00",
-  "lastUpdated": "22:18 UTC",
+  "fetchedAt": "2026-07-25T22:22:55.926368+00:00",
+  "lastUpdated": "22:22 UTC",
   "departures": [
     {
       "flightNo": "BA4547",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "13:20",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
