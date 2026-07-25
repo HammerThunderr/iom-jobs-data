@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-25T07:23:54.208898+00:00",
-  "lastUpdated": "07:23 UTC",
+  "fetchedAt": "2026-07-25T07:27:56.481250+00:00",
+  "lastUpdated": "07:27 UTC",
   "departures": [
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Delayed 09:05",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:05",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM681",
