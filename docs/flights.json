@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T16:50:47.125251+00:00",
-  "lastUpdated": "16:50 UTC",
+  "fetchedAt": "2026-07-26T16:54:48.821708+00:00",
+  "lastUpdated": "16:54 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -196,8 +196,16 @@
       "status": "On-time",
       "origin": "London City",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "07:50",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 25,
   "source": "airport.im"
 }
