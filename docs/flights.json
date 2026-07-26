@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T21:23:47.347166+00:00",
-  "lastUpdated": "21:22 UTC",
+  "fetchedAt": "2026-07-26T21:27:49.141521+00:00",
+  "lastUpdated": "21:26 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "16:15",
-      "status": "Landed 16:24",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
