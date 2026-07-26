@@ -651,5 +651,615 @@
    ]
   }
  ],
- "exceptions": []
+ "exceptions": [],
+ "recycling": {
+  "note": "Kerbside recycling collection covers Douglas and Braddan. In other areas, take recycling to a bring bank or a Household Waste Recycling Centre.",
+  "plasticsNote": "Only plastics marked 1 (PET), 2 (HDPE) and 5 (PP) are accepted. Check the triangle symbol.",
+  "timing": "Put kerbside boxes out before 8am on collection day. Wheelie bins go out the night before, or by 6am.",
+  "sources": [
+   "Douglas City Council kerbside guide",
+   "recyclenow.im",
+   "gov.im recycling guidance"
+  ],
+  "items": [
+   {
+    "name": "Plastic drinks bottle",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Rinse it out. Only symbols 1, 2 and 5 are accepted.",
+    "aliases": [
+     "bottle",
+     "water bottle",
+     "pop bottle",
+     "pet",
+     "fizzy"
+    ]
+   },
+   {
+    "name": "Milk bottle (plastic)",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Rinse it out.",
+    "aliases": [
+     "milk",
+     "milk carton plastic"
+    ]
+   },
+   {
+    "name": "Shampoo or cosmetics bottle",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Empty and rinsed.",
+    "aliases": [
+     "shampoo",
+     "conditioner",
+     "shower gel",
+     "cosmetic"
+    ]
+   },
+   {
+    "name": "Household cleaner bottle",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Must be empty.",
+    "aliases": [
+     "bleach",
+     "cleaner",
+     "detergent",
+     "spray bottle"
+    ]
+   },
+   {
+    "name": "Plastic takeaway tray",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Clean, no food residue.",
+    "aliases": [
+     "takeaway",
+     "tray",
+     "container"
+    ]
+   },
+   {
+    "name": "Yoghurt pot",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Rinsed. Yoghurt-type pots are accepted.",
+    "aliases": [
+     "yoghurt",
+     "yogurt",
+     "pot"
+    ]
+   },
+   {
+    "name": "Other plastics (symbols 3, 4, 6, 7)",
+    "status": "no",
+    "stream": "",
+    "note": "Only 1, 2 and 5 are accepted. Everything else goes in your household bin.",
+    "aliases": [
+     "plastic",
+     "symbol",
+     "triangle",
+     "pvc",
+     "ldpe",
+     "ps"
+    ]
+   },
+   {
+    "name": "Carrier bag or plastic wrapping",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin. Some supermarkets take bags back.",
+    "aliases": [
+     "carrier bag",
+     "plastic bag",
+     "wrapping",
+     "film"
+    ]
+   },
+   {
+    "name": "Magazine plastic wrapping",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "magazine wrap",
+     "plastic wrap"
+    ]
+   },
+   {
+    "name": "Cling film",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "clingfilm",
+     "cling film",
+     "plastic film"
+    ]
+   },
+   {
+    "name": "Polystyrene",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin. Not recyclable on the Island.",
+    "aliases": [
+     "polystyrene",
+     "styrofoam",
+     "foam packaging"
+    ]
+   },
+   {
+    "name": "Food tin or drinks can",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Rinse it out.",
+    "aliases": [
+     "can",
+     "tin",
+     "tin can",
+     "beans",
+     "coke can"
+    ]
+   },
+   {
+    "name": "Aerosol",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Must be completely empty. Do not pierce or crush.",
+    "aliases": [
+     "aerosol",
+     "deodorant",
+     "spray can"
+    ]
+   },
+   {
+    "name": "Aluminium foil / foil tray",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Clean, no food residue.",
+    "aliases": [
+     "foil",
+     "tinfoil",
+     "aluminium",
+     "pie case"
+    ]
+   },
+   {
+    "name": "Metal jar lid",
+    "status": "kerbside",
+    "stream": "Plastics & cans",
+    "note": "Put lids in with tins and cans, not with the glass.",
+    "aliases": [
+     "lid",
+     "jar lid",
+     "cap",
+     "metal lid"
+    ]
+   },
+   {
+    "name": "Scrap metal",
+    "status": "site",
+    "stream": "",
+    "note": "Household Waste Recycling Centre — scrap metal skip.",
+    "aliases": [
+     "scrap",
+     "metal",
+     "pans",
+     "radiator"
+    ]
+   },
+   {
+    "name": "Glass bottle or jar",
+    "status": "kerbside",
+    "stream": "Glass",
+    "note": "Must be intact and rinsed. Put metal lids in with the cans.",
+    "aliases": [
+     "glass",
+     "jar",
+     "wine bottle",
+     "beer bottle"
+    ]
+   },
+   {
+    "name": "Broken glass",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin, wrapped safely. Never in the recycling.",
+    "aliases": [
+     "broken glass",
+     "smashed"
+    ]
+   },
+   {
+    "name": "Drinking glass, Pyrex or window glass",
+    "status": "no",
+    "stream": "",
+    "note": "Not accepted — only intact bottles and jars.",
+    "aliases": [
+     "drinking glass",
+     "pyrex",
+     "window",
+     "mirror",
+     "glazing"
+    ]
+   },
+   {
+    "name": "Crockery or ceramics",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin. Not recyclable with glass.",
+    "aliases": [
+     "crockery",
+     "ceramic",
+     "plate",
+     "mug",
+     "china",
+     "pottery"
+    ]
+   },
+   {
+    "name": "Newspapers and magazines",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "Clean and dry.",
+    "aliases": [
+     "newspaper",
+     "magazine",
+     "paper"
+    ]
+   },
+   {
+    "name": "White paper and envelopes",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "Windowed envelopes are fine.",
+    "aliases": [
+     "paper",
+     "envelope",
+     "letter",
+     "office paper"
+    ]
+   },
+   {
+    "name": "Grey card (cereal boxes)",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "Food packaging card. Flatten it.",
+    "aliases": [
+     "cereal box",
+     "grey card",
+     "packaging",
+     "ready meal sleeve"
+    ]
+   },
+   {
+    "name": "Brown cardboard",
+    "status": "kerbside",
+    "stream": "Brown card",
+    "note": "Flatten it. Kept separate from paper and grey card.",
+    "aliases": [
+     "cardboard",
+     "box",
+     "brown card",
+     "parcel"
+    ]
+   },
+   {
+    "name": "Shredded paper",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "Only if bagged. Loose shredded paper is not accepted.",
+    "aliases": [
+     "shredded",
+     "shredder"
+    ]
+   },
+   {
+    "name": "Phone directory",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "One per box.",
+    "aliases": [
+     "phone book",
+     "directory",
+     "yellow pages"
+    ]
+   },
+   {
+    "name": "Soft-backed catalogue",
+    "status": "kerbside",
+    "stream": "Paper & grey card",
+    "note": "Hard-backed catalogues are not accepted.",
+    "aliases": [
+     "catalogue",
+     "catalog",
+     "brochure"
+    ]
+   },
+   {
+    "name": "Greetings card",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin. Plain cards without glitter or batteries may be accepted as grey card.",
+    "aliases": [
+     "greeting card",
+     "christmas card",
+     "birthday card"
+    ]
+   },
+   {
+    "name": "Wrapping or craft paper",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "wrapping paper",
+     "gift wrap",
+     "craft paper",
+     "tissue paper"
+    ]
+   },
+   {
+    "name": "Wallpaper",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "wallpaper"
+    ]
+   },
+   {
+    "name": "Paper towels or tissues",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "kitchen roll",
+     "tissue",
+     "paper towel",
+     "napkin"
+    ]
+   },
+   {
+    "name": "Laminated paper",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "laminated",
+     "laminate"
+    ]
+   },
+   {
+    "name": "Drinks or milk carton (Tetra Pak)",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin. Cartons are not accepted.",
+    "aliases": [
+     "carton",
+     "tetra pak",
+     "juice carton",
+     "milk carton"
+    ]
+   },
+   {
+    "name": "Books",
+    "status": "site",
+    "stream": "",
+    "note": "Charity shop, or the reuse area at the Household Waste Recycling Centre.",
+    "aliases": [
+     "book",
+     "paperback",
+     "hardback"
+    ]
+   },
+   {
+    "name": "Grass and hedge cuttings",
+    "status": "kerbside",
+    "stream": "Garden waste bin",
+    "note": "Douglas garden waste runs February to November.",
+    "aliases": [
+     "grass",
+     "hedge",
+     "cuttings",
+     "clippings",
+     "lawn"
+    ]
+   },
+   {
+    "name": "Leaves, bark and prunings",
+    "status": "kerbside",
+    "stream": "Garden waste bin",
+    "note": "Branches up to 5cm across.",
+    "aliases": [
+     "leaves",
+     "bark",
+     "prunings",
+     "twigs",
+     "branches"
+    ]
+   },
+   {
+    "name": "Cut flowers, plants and weeds",
+    "status": "kerbside",
+    "stream": "Garden waste bin",
+    "note": "",
+    "aliases": [
+     "flowers",
+     "plants",
+     "weeds"
+    ]
+   },
+   {
+    "name": "Pet bedding (rabbit, guinea pig)",
+    "status": "kerbside",
+    "stream": "Garden waste bin",
+    "note": "Herbivore pets only.",
+    "aliases": [
+     "pet bedding",
+     "hay",
+     "sawdust",
+     "rabbit",
+     "guinea pig"
+    ]
+   },
+   {
+    "name": "Fruit and vegetable peelings",
+    "status": "no",
+    "stream": "",
+    "note": "Not allowed in garden waste under Animal By-Product rules. Home compost or household bin.",
+    "aliases": [
+     "peelings",
+     "food waste",
+     "vegetable",
+     "fruit",
+     "compost"
+    ]
+   },
+   {
+    "name": "Japanese knotweed / invasive plants",
+    "status": "no",
+    "stream": "",
+    "note": "Never put in garden waste. Contact the council for advice.",
+    "aliases": [
+     "knotweed",
+     "invasive",
+     "japanese knotweed"
+    ]
+   },
+   {
+    "name": "Batteries",
+    "status": "site",
+    "stream": "",
+    "note": "Household Waste Recycling Centre or a shop collection point. Never in any bin.",
+    "aliases": [
+     "battery",
+     "batteries",
+     "aa",
+     "aaa"
+    ]
+   },
+   {
+    "name": "Light bulbs and lamps",
+    "status": "site",
+    "stream": "",
+    "note": "Household Waste Recycling Centre. Not in a household bin.",
+    "aliases": [
+     "bulb",
+     "lamp",
+     "light",
+     "led",
+     "fluorescent"
+    ]
+   },
+   {
+    "name": "Paint tins",
+    "status": "no",
+    "stream": "",
+    "note": "Not in kerbside recycling. Take to the Household Waste Recycling Centre.",
+    "aliases": [
+     "paint",
+     "paint tin",
+     "tin of paint"
+    ]
+   },
+   {
+    "name": "Fridge or freezer",
+    "status": "site",
+    "stream": "",
+    "note": "Household Waste Recycling Centre. Charges apply.",
+    "aliases": [
+     "fridge",
+     "freezer",
+     "appliance",
+     "white goods"
+    ]
+   },
+   {
+    "name": "Electrical items",
+    "status": "site",
+    "stream": "",
+    "note": "Household Waste Recycling Centre. Small charge may apply.",
+    "aliases": [
+     "electrical",
+     "electronics",
+     "tv",
+     "computer",
+     "waste electrical"
+    ]
+   },
+   {
+    "name": "Textiles and clothing",
+    "status": "kerbside",
+    "stream": "Textiles",
+    "note": "Bag it and tie it off — bag, not box. Also charity shops and bring banks.",
+    "aliases": [
+     "clothes",
+     "clothing",
+     "textiles",
+     "shoes",
+     "fabric"
+    ]
+   },
+   {
+    "name": "Bicycle",
+    "status": "site",
+    "stream": "",
+    "note": "Reuse area at the Household Waste Recycling Centre if usable, otherwise the scrap metal skip.",
+    "aliases": [
+     "bike",
+     "bicycle",
+     "cycle"
+    ]
+   },
+   {
+    "name": "Nappies",
+    "status": "no",
+    "stream": "",
+    "note": "Household bin.",
+    "aliases": [
+     "nappy",
+     "nappies",
+     "diaper"
+    ]
+   },
+   {
+    "name": "Sharp or broken items",
+    "status": "no",
+    "stream": "",
+    "note": "Never in recycling. Wrap and put in the household bin.",
+    "aliases": [
+     "sharp",
+     "broken",
+     "knife",
+     "needle"
+    ]
+   },
+   {
+    "name": "Building waste, rubble or timber",
+    "status": "no",
+    "stream": "",
+    "note": "Not collected. Household Waste Recycling Centre.",
+    "aliases": [
+     "rubble",
+     "brick",
+     "timber",
+     "building",
+     "diy"
+    ]
+   },
+   {
+    "name": "Christmas tree (real)",
+    "status": "site",
+    "stream": "",
+    "note": "Douglas runs free collection points each January.",
+    "aliases": [
+     "christmas tree",
+     "xmas tree",
+     "tree"
+    ]
+   }
+  ]
+ }
 }
