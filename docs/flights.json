@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T22:46:21.529759+00:00",
-  "lastUpdated": "22:45 UTC",
+  "fetchedAt": "2026-07-26T23:26:25.951273+00:00",
+  "lastUpdated": "23:25 UTC",
   "departures": [
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 18:18",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM671",
       "airline": "Loganair",
@@ -155,6 +147,14 @@
       "scheduled": "11:50",
       "status": "On-time",
       "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "14:15",
+      "status": "On-time",
+      "origin": "Bristol",
       "statusType": "ontime"
     }
   ],
