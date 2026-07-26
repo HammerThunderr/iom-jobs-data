@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T15:47:13.448713+00:00",
-  "lastUpdated": "15:46 UTC",
+  "fetchedAt": "2026-07-26T15:51:15.137283+00:00",
+  "lastUpdated": "15:50 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -63,7 +63,7 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "London Gatwick",
       "statusType": "boarding"
     },
@@ -71,9 +71,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "London City",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
@@ -90,6 +90,14 @@
       "status": "Delayed 18:10",
       "destination": "Liverpool",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM671",
+      "airline": "Loganair",
+      "scheduled": "06:50",
+      "status": "On-time",
+      "destination": "London City",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -190,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 24,
   "source": "airport.im"
 }
