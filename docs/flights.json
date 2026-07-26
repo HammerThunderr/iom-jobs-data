@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T21:19:45.289483+00:00",
-  "lastUpdated": "21:18 UTC",
+  "fetchedAt": "2026-07-26T21:23:47.347166+00:00",
+  "lastUpdated": "21:22 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "16:05",
-      "status": "Arrived 16:19",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:15",
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
