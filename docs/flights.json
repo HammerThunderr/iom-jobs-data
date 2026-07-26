@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-26T12:34:32.092485+00:00",
-  "lastUpdated": "12:33 UTC",
+  "fetchedAt": "2026-07-26T12:38:34.462176+00:00",
+  "lastUpdated": "12:37 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:45",
-      "status": "Departed 07:46",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
@@ -47,9 +39,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Taxied 13:28",
+      "status": "Departed 13:35",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -214,6 +206,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 26,
+  "totalCount": 25,
   "source": "airport.im"
 }
