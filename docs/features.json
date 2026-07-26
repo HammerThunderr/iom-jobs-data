@@ -1,0 +1,83 @@
+{
+  "_comment": "Remote kill switch for Manx One features. Set enabled=false and the feature disappears from the app on next launch — no app update, no Play Store review. Use this if a data source objects or a feature breaks.",
+  "updated": "2026-07-25",
+  "features": {
+    "property": {
+      "enabled": true,
+      "message": "The property listings feature is temporarily unavailable."
+    },
+    "bins": {
+      "enabled": true,
+      "message": "The bin day feature is temporarily unavailable."
+    },
+    "jobs": {
+      "enabled": true,
+      "message": ""
+    },
+    "govJobs": {
+      "enabled": true,
+      "message": ""
+    },
+    "news": {
+      "enabled": true,
+      "message": ""
+    },
+    "weather": {
+      "enabled": true,
+      "message": ""
+    },
+    "ferry": {
+      "enabled": true,
+      "message": ""
+    },
+    "flights": {
+      "enabled": true,
+      "message": ""
+    },
+    "bus": {
+      "enabled": true,
+      "message": ""
+    },
+    "webcams": {
+      "enabled": true,
+      "message": ""
+    },
+    "radio": {
+      "enabled": true,
+      "message": ""
+    },
+    "events": {
+      "enabled": true,
+      "message": ""
+    },
+    "places": {
+      "enabled": true,
+      "message": ""
+    },
+    "tides": {
+      "enabled": true,
+      "message": ""
+    },
+    "visitor": {
+      "enabled": true,
+      "message": ""
+    },
+    "volunteer": {
+      "enabled": true,
+      "message": ""
+    },
+    "bookmarks": {
+      "enabled": true,
+      "message": ""
+    },
+    "forms": {
+      "enabled": false,
+      "message": "Forms are not available yet."
+    }
+  },
+  "banner": {
+    "show": false,
+    "text": "",
+    "url": ""
+  }
+}
