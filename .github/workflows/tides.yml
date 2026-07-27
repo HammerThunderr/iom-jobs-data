@@ -12,8 +12,8 @@
 # ─────────────────────────────────────────────────────────────
 name: Scrape Tides
 on:
-  # schedule:
-  #   - cron: '30 4 * * *'   # daily at 4:30am UTC — uncomment when parser is ready
+  schedule:
+    - cron: '30 4 * * *'   # daily at 4:30am UTC — uncomment when parser is ready
   workflow_dispatch:
 concurrency:
   group: tides
