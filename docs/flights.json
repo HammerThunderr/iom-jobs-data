@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-27T11:55:11.244525+00:00",
-  "lastUpdated": "11:54 UTC",
+  "fetchedAt": "2026-07-27T11:59:13.852032+00:00",
+  "lastUpdated": "11:58 UTC",
   "departures": [
-    {
-      "flightNo": "LM671",
-      "airline": "Loganair",
-      "scheduled": "06:50",
-      "status": "Departed 07:03",
-      "destination": "London City",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -246,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 29,
   "source": "airport.im"
 }
