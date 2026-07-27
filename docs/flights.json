@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-27T05:11:46.779986+00:00",
-  "lastUpdated": "05:11 UTC",
+  "fetchedAt": "2026-07-27T05:15:49.246608+00:00",
+  "lastUpdated": "05:15 UTC",
   "departures": [
     {
       "flightNo": "LM671",
@@ -15,9 +15,9 @@
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Delayed 07:30",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY516",
