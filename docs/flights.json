@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-27T14:09:52.009828+00:00",
-  "lastUpdated": "14:09 UTC",
+  "fetchedAt": "2026-07-27T14:13:53.989031+00:00",
+  "lastUpdated": "14:13 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -63,9 +63,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM677",
@@ -101,14 +101,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 09:09",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY839",
       "airline": "easyJet",
@@ -161,9 +153,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Expected 15:14",
+      "status": "Final approach",
       "origin": "London Heathrow",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3216",
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
