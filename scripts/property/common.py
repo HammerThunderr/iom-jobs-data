@@ -110,11 +110,23 @@ RENT_PHRASES = (
 def parse_price(text, listing_type_hint=None):
     """Return (amount, qualifier, listing_type).
 
-    listing_type_hint comes from the agent's URL structure where available,
-    and is trusted over guessing from the page wording.
+    listing_type_hint comes from the agent's URL structure or slug where
+    available, and is AUTHORITATIVE IN BOTH DIRECTIONS. This matters:
+
+      * A sale listing's text often mentions rent ("rental yield", "currently
+        let at £X pa") — common on investment and commercial sales. Without a
+        binding hint those flipped to "rent".
+      * A rent listing may quote large sale-like figures in passing, which
+        flipped it to "sale" and gave it a bogus price.
+
+    Only when no hint exists do we infer the type from the page wording.
     """
     low = text.lower()
-    is_rent = listing_type_hint == "rent" or any(k in low for k in RENT_PHRASES)
+    if listing_type_hint in ("rent", "sale"):
+        is_rent = listing_type_hint == "rent"
+    else:
+        is_rent = any(k in low for k in RENT_PHRASES)
+
     if "poa" in low or "price on application" in low:
         return None, "poa", "rent" if is_rent else "sale"
 
@@ -301,13 +313,20 @@ def scrape_listing(agent, url):
     # slug suffix and any guess made from the page wording.
     url_category, url_type = agent.classify(url)
 
+    # The binding type hint comes from the URL path (Chrystals) or the slug
+    # suffix (Cowley Groves' -rent/-sale). It must be resolved BEFORE price
+    # parsing so the price is read with the correct rent/sale expectations —
+    # otherwise a rental parsed hint-less can grab a sale-sized number from
+    # the page and flip itself.
+    type_hint = url_type or listing_type_from_slug(url)
+
     # Price: the heading usually states it ("... Monthly Rental Of £725"),
     # and the heading has none of the footer noise the body carries.
-    price, qualifier, listing_type = parse_price(head_blob, url_type)
+    price, qualifier, listing_type = parse_price(head_blob, type_hint)
     if price is None:
-        price, qualifier, listing_type = parse_price(body, url_type)
+        price, qualifier, listing_type = parse_price(body, type_hint)
 
-    listing_type = url_type or listing_type_from_slug(url) or listing_type
+    listing_type = type_hint or listing_type
     category = url_category or parse_category(f"{address} {head_blob}")
 
     # Parish and property type are read from the ADDRESS ONLY, never the body.
