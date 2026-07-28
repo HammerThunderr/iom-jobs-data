@@ -98,45 +98,103 @@ def page_text(html):
     return title, heading, body
 
 
-# Agents word rentals inconsistently. Chrystals uses "Monthly Rental Of
-# £725", which the original keyword list missed entirely — every one of their
-# lettings came back unpriced.
-RENT_PHRASES = (
-    "per calendar month", "pcm", "p.c.m", "per month", "per week",
-    "monthly rent", "monthly rental", "per annum", "rent of", "rental of",
+# Phrases that reliably mean a RENTAL price when they sit next to a figure.
+# "per annum", "rent of" and "rental of" are deliberately NOT here: Isle of
+# Man sale listings routinely quote rates, ground rent and service charges
+# per annum, and including those flipped sale listings to rent — taking the
+# rates figure along as the price.
+RENT_MARKERS = (
+    "per calendar month", "pcm", "p.c.m", "per month", "per week", "pw",
+    "monthly rent", "monthly rental", "a month", "a week",
 )
+
+# Phrases that mean a SALE price.
+SALE_MARKERS = (
+    "for sale", "offers around", "offers in the region", "offers over",
+    "offers in excess", "asking price", "guide price", "oiro", "oieo",
+)
+
+# Figures that are NOT the headline price. If one of these appears just
+# before a £ amount, that amount is ignored entirely. This is what stops
+# "Rates: £650 per annum" being read as the rent on a £335,000 house.
+NOT_THE_PRICE = (
+    "rate", "rates", "rateable", "ground rent", "service charge",
+    "maintenance", "deposit", "bond", "fee", "fees", "yield", "insurance",
+    "council tax", "premium", "per annum", "pa", "annual", "epc",
+    "commission", "stamp duty", "legal",
+)
+
+_AMOUNT_RE = re.compile(r"£\s*([\d,]{3,})")
+
+
+def _context_before(text, pos, span=45):
+    return text[max(0, pos - span):pos].lower()
+
+
+def _context_after(text, pos, span=35):
+    return text[pos:pos + span].lower()
+
+
+def _candidate_amounts(text):
+    """Every £ figure that could plausibly be the headline price.
+
+    Returns (amount, before_context, after_context). Figures preceded by
+    rates/ground rent/service charge wording are dropped, because those are
+    incidental costs, not the price of the property.
+    """
+    out = []
+    for m in _AMOUNT_RE.finditer(text):
+        try:
+            amount = int(m.group(1).replace(",", ""))
+        except ValueError:
+            continue
+        before = _context_before(text, m.start())
+        after = _context_after(text, m.end())
+        if any(re.search(rf"\b{re.escape(w)}\b", before) for w in NOT_THE_PRICE):
+            continue
+        out.append((amount, before, after))
+    return out
 
 
 def parse_price(text, listing_type_hint=None):
     """Return (amount, qualifier, listing_type).
 
-    listing_type_hint comes from the agent's URL structure or slug where
-    available, and is AUTHORITATIVE IN BOTH DIRECTIONS. This matters:
-
-      * A sale listing's text often mentions rent ("rental yield", "currently
-        let at £X pa") — common on investment and commercial sales. Without a
-        binding hint those flipped to "rent".
-      * A rent listing may quote large sale-like figures in passing, which
-        flipped it to "sale" and gave it a bogus price.
-
-    Only when no hint exists do we infer the type from the page wording.
+    Prices are read WITH their surrounding words, so an incidental figure
+    (rates, service charge) can never be mistaken for the asking price.
+    A hint from the agent's URL or slug is authoritative in both directions.
     """
     low = text.lower()
+
+    candidates = _candidate_amounts(text)
+
+    # --- decide sale vs rent ---
     if listing_type_hint in ("rent", "sale"):
         is_rent = listing_type_hint == "rent"
     else:
-        is_rent = any(k in low for k in RENT_PHRASES)
+        # A rent marker only counts if it sits beside a surviving figure.
+        rent_beside = any(
+            any(mk in after or mk in before for mk in RENT_MARKERS)
+            for _, before, after in candidates
+        )
+        sale_on_page = any(mk in low for mk in SALE_MARKERS)
+        if rent_beside and not sale_on_page:
+            is_rent = True
+        elif sale_on_page:
+            is_rent = False
+        else:
+            is_rent = rent_beside
 
-    if "poa" in low or "price on application" in low:
+    if re.search(r"\bpoa\b", low) or "price on application" in low:
         return None, "poa", "rent" if is_rent else "sale"
 
-    amounts = [int(m.replace(",", "")) for m in re.findall(r"£\s*([\d,]{3,})", text)]
-    # Filter noise: rents are small, sale prices are large. The upper rent
-    # bound is generous because commercial lettings are quoted per annum.
+    # --- pick the figure ---
     if is_rent:
-        amounts = [a for a in amounts if 100 <= a <= 100000]
+        amounts = [a for a, _, _ in candidates if 100 <= a <= 100000]
     else:
-        amounts = [a for a in amounts if a >= 20000]
+        amounts = [a for a, _, _ in candidates if a >= 20000]
+        # A sale page's headline price is the largest plausible figure, not
+        # the first one it happens to mention.
+        amounts.sort(reverse=True)
 
     if not amounts:
         return None, "unknown", "rent" if is_rent else "sale"
