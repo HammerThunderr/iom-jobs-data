@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-28T10:25:50.831831+00:00",
-  "lastUpdated": "10:25 UTC",
+  "fetchedAt": "2026-07-28T12:18:06.493369+00:00",
+  "lastUpdated": "12:17 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:01",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:05",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -31,17 +15,17 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "Taxied 11:24",
+      "status": "Departed 11:32",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Departed 12:17",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -97,17 +81,17 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Expected 11:36",
+      "status": "Arrived 11:26",
       "origin": "Dublin",
-      "statusType": "expected"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM676",
@@ -150,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 16,
   "source": "airport.im"
 }
