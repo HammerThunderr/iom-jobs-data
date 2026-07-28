@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-28T16:39:11.988419+00:00",
-  "lastUpdated": "16:38 UTC",
+  "fetchedAt": "2026-07-28T16:43:15.017142+00:00",
+  "lastUpdated": "16:42 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -81,9 +81,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Final approach",
+      "status": "Landed 17:40",
       "origin": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM688",
