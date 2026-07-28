@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-28T19:44:10+00:00",
+    "generated": "2026-07-28T20:09:25+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -11,13 +11,13 @@
       {
         "agent": "Cowley Groves",
         "count": 204,
-        "withPrice": 170,
+        "withPrice": 156,
         "status": "ok"
       },
       {
         "agent": "Garforth Gray",
         "count": 75,
-        "withPrice": 74,
+        "withPrice": 75,
         "status": "ok"
       }
     ],
@@ -30,7 +30,7 @@
       "url": "https://www.cowleygroves.com/property/1-cambridge-terrace-douglas-im1-3ll/",
       "category": "residential",
       "listingType": "sale",
-      "price": 690000,
+      "price": 700000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -39,6 +39,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3LL",
       "firstSeen": "2026-07-24",
+      "previousPrice": 690000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -97,9 +98,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/1-marine-gardens-ramsey-im8-1en/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 650,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 325000,
+      "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
       "propertyType": null,
@@ -107,7 +108,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1EN",
       "firstSeen": "2026-07-24",
-      "previousPrice": 325000,
+      "previousPrice": 650,
       "lastSeen": "2026-07-28"
     },
     {
@@ -116,7 +117,7 @@
       "url": "https://www.cowleygroves.com/property/1-murrays-lake-drive-mount-murray-douglas-im4-2gz/",
       "category": "residential",
       "listingType": "sale",
-      "price": 359000,
+      "price": 359950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -125,6 +126,7 @@
       "parish": "Douglas",
       "postcode": "IM4 2GZ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 359000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -132,9 +134,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/1-person-serviced-offices-bubble-clinch-s-lord-street-douglas/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 600,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -286,7 +288,7 @@
       "url": "https://www.cowleygroves.com/property/15-queens-valley-ramsey-im8-1ng/",
       "category": "residential",
       "listingType": "sale",
-      "price": 789950,
+      "price": 799000,
       "priceQualifier": "asking",
       "bedrooms": 6,
       "bathrooms": 1,
@@ -295,6 +297,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1NG",
       "firstSeen": "2026-07-24",
+      "previousPrice": 789950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -303,7 +306,7 @@
       "url": "https://www.cowleygroves.com/property/16-bowring-road-ramsey-im8-3ej/",
       "category": "residential",
       "listingType": "sale",
-      "price": 469950,
+      "price": 475000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 2,
@@ -312,6 +315,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3EJ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 469950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -354,7 +358,7 @@
       "url": "https://www.cowleygroves.com/property/18-st-runius-way-glen-vine-im4-4fg/",
       "category": "residential",
       "listingType": "sale",
-      "price": 559950,
+      "price": 560000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -363,6 +367,7 @@
       "parish": "Glen Vine",
       "postcode": "IM4 4FG",
       "firstSeen": "2026-07-24",
+      "previousPrice": 559950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -422,7 +427,7 @@
       "url": "https://www.cowleygroves.com/property/2-bedroom-apartments-forest-view-bowring-road-ramsey-im8-2lh/",
       "category": "residential",
       "listingType": "sale",
-      "price": 230000,
+      "price": 250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -431,6 +436,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2LH",
       "firstSeen": "2026-07-24",
+      "previousPrice": 230000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -439,7 +445,7 @@
       "url": "https://www.cowleygroves.com/property/2-beechwood-rise-douglas-im2-5ne/",
       "category": "residential",
       "listingType": "sale",
-      "price": 599000,
+      "price": 625000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -448,6 +454,7 @@
       "parish": "Douglas",
       "postcode": "IM2 5NE",
       "firstSeen": "2026-07-24",
+      "previousPrice": 599000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -472,9 +479,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/2-person-serviced-offices-bubble-clinch-s-lord-street-douglas/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 850,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -490,7 +497,7 @@
       "url": "https://www.cowleygroves.com/property/2-queens-drive-east-ramsey-im8-1ej/",
       "category": "residential",
       "listingType": "sale",
-      "price": 157500,
+      "price": 169950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -499,6 +506,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1EJ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 157500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -574,9 +582,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/26-archallagan-terrace-foxdale-im4-3ez/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1260,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -592,7 +600,7 @@
       "url": "https://www.cowleygroves.com/property/26-farmhill-park-douglas-im2-2ee/",
       "category": "residential",
       "listingType": "sale",
-      "price": 699000,
+      "price": 700000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -601,6 +609,7 @@
       "parish": "Douglas",
       "postcode": "IM2 2EE",
       "firstSeen": "2026-07-24",
+      "previousPrice": 699000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -676,9 +685,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/3-carlton-grove-ramsey-im8-2ja/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1550,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 169950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -686,7 +695,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2JA",
       "firstSeen": "2026-07-24",
-      "previousPrice": 169950,
+      "previousPrice": 1550,
       "lastSeen": "2026-07-28"
     },
     {
@@ -797,7 +806,7 @@
       "url": "https://www.cowleygroves.com/property/34-auburn-road-onchan-im3-1lw/",
       "category": "residential",
       "listingType": "sale",
-      "price": 345000,
+      "price": 379950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -806,6 +815,7 @@
       "parish": "Onchan",
       "postcode": "IM3 1LW",
       "firstSeen": "2026-07-24",
+      "previousPrice": 345000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -830,9 +840,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/4-5-person-serviced-office-bubble-clinch-s-lord-street-douglas/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 2500,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -848,7 +858,7 @@
       "url": "https://www.cowleygroves.com/property/4-cronkbourne-avenue-douglas-im2-3la/",
       "category": "residential",
       "listingType": "sale",
-      "price": 349950,
+      "price": 359950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -857,6 +867,7 @@
       "parish": "Douglas",
       "postcode": "IM2 3LA",
       "firstSeen": "2026-07-24",
+      "previousPrice": 349950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -865,7 +876,7 @@
       "url": "https://www.cowleygroves.com/property/4-thorny-road--single-garage-douglas-im2-5ed/",
       "category": "residential",
       "listingType": "sale",
-      "price": 465000,
+      "price": 479000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -874,6 +885,7 @@
       "parish": "Douglas",
       "postcode": "IM2 5ED",
       "firstSeen": "2026-07-24",
+      "previousPrice": 465000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -916,7 +928,7 @@
       "url": "https://www.cowleygroves.com/property/41-lhon-vane-close-onchan-im3-3bb/",
       "category": "residential",
       "listingType": "sale",
-      "price": 379950,
+      "price": 425000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -925,6 +937,7 @@
       "parish": "Onchan",
       "postcode": "IM3 3BB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 379950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -933,7 +946,7 @@
       "url": "https://www.cowleygroves.com/property/41-selborne-drive-douglas-im2-3nj/",
       "category": "residential",
       "listingType": "sale",
-      "price": 615000,
+      "price": 625000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -942,6 +955,7 @@
       "parish": "Douglas",
       "postcode": "IM2 3NJ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 615000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -950,7 +964,7 @@
       "url": "https://www.cowleygroves.com/property/45-governors-road-onchan-im3-1ay/",
       "category": "residential",
       "listingType": "sale",
-      "price": 299950,
+      "price": 349950,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -959,6 +973,7 @@
       "parish": "Onchan",
       "postcode": "IM3 1AY",
       "firstSeen": "2026-07-24",
+      "previousPrice": 299950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -967,7 +982,7 @@
       "url": "https://www.cowleygroves.com/property/5-hanley-villas-ramsey-im8-3dg/",
       "category": "residential",
       "listingType": "sale",
-      "price": 285000,
+      "price": 299950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -976,6 +991,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3DG",
       "firstSeen": "2026-07-24",
+      "previousPrice": 285000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -983,9 +999,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/5-the-waterfront-mooragh-promenade-ramsey-im8-3aw/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1500,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 299950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -993,7 +1009,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3AW",
       "firstSeen": "2026-07-24",
-      "previousPrice": 299950,
+      "previousPrice": 1500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1019,7 +1035,7 @@
       "url": "https://www.cowleygroves.com/property/56-derwent-drive-lakeside-gardens-onchan-im3-2da/",
       "category": "residential",
       "listingType": "sale",
-      "price": 315000,
+      "price": 349950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -1028,6 +1044,7 @@
       "parish": "Onchan",
       "postcode": "IM3 2DA",
       "firstSeen": "2026-07-24",
+      "previousPrice": 315000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1036,7 +1053,7 @@
       "url": "https://www.cowleygroves.com/property/58-woodbourne-road-douglas-im1-3aw/",
       "category": "residential",
       "listingType": "sale",
-      "price": 425000,
+      "price": 465000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -1045,6 +1062,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3AW",
       "firstSeen": "2026-07-24",
+      "previousPrice": 425000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1104,7 +1122,7 @@
       "url": "https://www.cowleygroves.com/property/60-royal-avenue-onchan-im3-1lb/",
       "category": "residential",
       "listingType": "sale",
-      "price": 349950,
+      "price": 379950,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -1113,6 +1131,7 @@
       "parish": "Onchan",
       "postcode": "IM3 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 349950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1188,9 +1207,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/7-marine-gardens-ramsey-im8-1en/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 650,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 335000,
+      "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
       "propertyType": null,
@@ -1198,7 +1217,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1EN",
       "firstSeen": "2026-07-24",
-      "previousPrice": 335000,
+      "previousPrice": 650,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1241,7 +1260,7 @@
       "url": "https://www.cowleygroves.com/property/8-claughbane-avenue-ramsey-im8-2be/",
       "category": "residential",
       "listingType": "sale",
-      "price": 165000,
+      "price": 169950,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -1250,6 +1269,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2BE",
       "firstSeen": "2026-07-24",
+      "previousPrice": 165000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1291,9 +1311,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/8-marine-gardens-ramsey-im8-1en/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 650,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 349950,
+      "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
       "propertyType": null,
@@ -1301,7 +1321,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1EN",
       "firstSeen": "2026-07-24",
-      "previousPrice": 349950,
+      "previousPrice": 650,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1343,9 +1363,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/9-marine-gardens-ramsey-im8-1en/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 650,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 319950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1353,7 +1373,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1EN",
       "firstSeen": "2026-07-24",
-      "previousPrice": 319950,
+      "previousPrice": 650,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1412,9 +1432,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-1-7-royal-avenue-west-onchan-im3-1hb/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 120,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 139950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1422,6 +1442,7 @@
       "parish": "Onchan",
       "postcode": "IM3 1HB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 120,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1429,9 +1450,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-1-73-derby-square-douglas-im1-3lr/",
       "category": "residential",
-      "listingType": "rent",
-      "price": null,
-      "priceQualifier": "unknown",
+      "listingType": "sale",
+      "price": 212000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1446,9 +1467,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-10-harris-view-apartments-mona-terrace-douglas-im1-3na/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1250,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 230000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -1456,7 +1477,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3NA",
       "firstSeen": "2026-07-24",
-      "previousPrice": 230000,
+      "previousPrice": 1250,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1464,9 +1485,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-100-spectrum-apartments-central-promenade-douglas-im2-4ll/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2345,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 215000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1474,7 +1495,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 215000,
+      "previousPrice": 2345,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1482,9 +1503,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-11-quay-west-bridge-road-douglas-im1-5ag/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1595,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 239950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1492,7 +1513,7 @@
       "parish": "Douglas",
       "postcode": "IM1 5AG",
       "firstSeen": "2026-07-24",
-      "previousPrice": 239950,
+      "previousPrice": 1595,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1500,9 +1521,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-12-majestic-apartments-king-edward-road-onchan-im3-2bd/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 3928,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 599950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1510,7 +1531,7 @@
       "parish": "Onchan",
       "postcode": "IM3 2BD",
       "firstSeen": "2026-07-24",
-      "previousPrice": 550000,
+      "previousPrice": 3928,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1518,9 +1539,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-14-spectrum-apartments-central-promenade-douglas-im2-4ll/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1365,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 149950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1528,7 +1549,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 115000,
+      "previousPrice": 1365,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1536,9 +1557,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-15-spectrum-apartments-central-promenade-douglas-im2-4ll/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1400,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 149950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1546,7 +1567,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 130000,
+      "previousPrice": 1400,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1554,9 +1575,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-17-magnus-court-kings-reach-ramsey-im8-3nt/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1519,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 189950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -1564,6 +1585,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3NT",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1519,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1588,9 +1610,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-2-16-kensington-road-douglas-im1-3ep/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 675,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1606,7 +1628,7 @@
       "url": "https://www.cowleygroves.com/property/apt-2-19-royal-avenue-west-onchan-im3-1hb/",
       "category": "residential",
       "listingType": "sale",
-      "price": 130000,
+      "price": 139950,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
@@ -1615,6 +1637,7 @@
       "parish": "Onchan",
       "postcode": "IM3 1HB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 130000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1622,9 +1645,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-2-charles-street-close-peel-im5-1dt/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 969,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 235000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1632,6 +1655,7 @@
       "parish": "Peel",
       "postcode": "IM5 1DT",
       "firstSeen": "2026-07-24",
+      "previousPrice": 969,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1639,9 +1663,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-2-harris-view-apartments-mona-terrace-douglas-im1-3na/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1250,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 230000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -1649,7 +1673,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3NA",
       "firstSeen": "2026-07-24",
-      "previousPrice": 230000,
+      "previousPrice": 1250,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1657,9 +1681,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-21-the-fountains-ballure-promenade-ramsey-im8-1nn/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2228,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 475000,
+      "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
       "propertyType": null,
@@ -1667,7 +1691,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1NN",
       "firstSeen": "2026-07-24",
-      "previousPrice": 439950,
+      "previousPrice": 2228,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1692,9 +1716,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-27-spectrum-apartments-central-promenade-douglas-im2-4ll/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1295,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 149950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1702,7 +1726,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 130000,
+      "previousPrice": 1295,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1710,9 +1734,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-3-128-bucks-road-douglas-im1-3ah/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1715,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 149950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1720,7 +1744,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3AH",
       "firstSeen": "2026-07-24",
-      "previousPrice": 149950,
+      "previousPrice": 1715,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1728,9 +1752,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-3-39-peel-road-douglas-im1-4lu/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 790,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1746,7 +1770,7 @@
       "url": "https://www.cowleygroves.com/property/apt-307-queens-court-ramsey-im8-1ll/",
       "category": "residential",
       "listingType": "sale",
-      "price": 165000,
+      "price": 169950,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -1755,6 +1779,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1LL",
       "firstSeen": "2026-07-24",
+      "previousPrice": 165000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1762,9 +1787,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-34-thie-clag-westmoreland-road-douglas-im1-4aj/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1915,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1796,9 +1821,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-4-32-derby-square-douglas-im1-3lw/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 950,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1813,9 +1838,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-4-empress-apartments-central-promenade-douglas-im2-4ee/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1144,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 199950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1823,7 +1848,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4EE",
       "firstSeen": "2026-07-24",
-      "previousPrice": 199950,
+      "previousPrice": 1144,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1831,9 +1856,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-4-holmleigh-brookhill-road-ramsey-im8-2hy/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 120,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 169950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1841,7 +1866,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2HY",
       "firstSeen": "2026-07-24",
-      "previousPrice": 629,
+      "previousPrice": 120,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1867,9 +1892,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-4-quay-house-apartments-west-quay-ramsey-im8-1dd/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1000,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 189950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1877,7 +1902,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1DD",
       "firstSeen": "2026-07-24",
-      "previousPrice": 189950,
+      "previousPrice": 1000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1885,9 +1910,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-4-quay-west-apartments-bridge-road-douglas-im1-5ag/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1603,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 245000,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1895,6 +1920,7 @@
       "parish": "Douglas",
       "postcode": "IM1 5AG",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1603,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1902,9 +1928,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-41-spectrum-apartments-central-promenade-douglas-im2-4ll/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1645,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 165000,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -1912,7 +1938,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 165000,
+      "previousPrice": 1645,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1954,9 +1980,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-5-cringle-close-reayrt-mie-ballasalla-im9-2bz/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 835,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 239950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -1964,7 +1990,7 @@
       "parish": "Ballasalla",
       "postcode": "IM9 2BZ",
       "firstSeen": "2026-07-24",
-      "previousPrice": 239950,
+      "previousPrice": 835,
       "lastSeen": "2026-07-28"
     },
     {
@@ -1972,9 +1998,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-5-majestic-apartments-king-edward-road-onchan-im3-2bd/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 5629,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 875000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -1982,7 +2008,7 @@
       "parish": "Onchan",
       "postcode": "IM3 2BD",
       "firstSeen": "2026-07-24",
-      "previousPrice": 799000,
+      "previousPrice": 5629,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2007,9 +2033,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-6-claymore-apartments-16-stanley-view-douglas-im2-3ja/",
       "category": "residential",
-      "listingType": "rent",
-      "price": null,
-      "priceQualifier": "unknown",
+      "listingType": "sale",
+      "price": 149950,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -2024,9 +2050,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-6-fuchsia-court-hailwood-avenue-douglas-im2-7el/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1526,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 235000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -2034,7 +2060,7 @@
       "parish": "Douglas",
       "postcode": "IM2 7EL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 235000,
+      "previousPrice": 1526,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2042,7 +2068,7 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-6-holmleigh-brookhill-road-ramsey-im8-2hy/",
       "category": "residential",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": null,
       "priceQualifier": "poa",
       "bedrooms": 1,
@@ -2059,9 +2085,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-62-majestic-apartments--single-garage-king-edward-road-onchan-im3-2be/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1219,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 315000,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -2069,7 +2095,7 @@
       "parish": "Onchan",
       "postcode": "IM3 2BE",
       "firstSeen": "2026-07-24",
-      "previousPrice": 299950,
+      "previousPrice": 1219,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2077,9 +2103,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-7-the-waterfront-mooragh-promenade-ramsey-im8-3aw/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1500,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 299950,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 2,
       "propertyType": null,
@@ -2087,7 +2113,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3AW",
       "firstSeen": "2026-07-24",
-      "previousPrice": 299950,
+      "previousPrice": 1500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2095,9 +2121,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-7-thie-clag-westmoreland-road-douglas-im1-4aj/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1100,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -2112,9 +2138,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-8-harris-view-apartments-mona-terrace-douglas-im1-3na/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1349,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 265000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": null,
@@ -2122,7 +2148,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3NA",
       "firstSeen": "2026-07-24",
-      "previousPrice": 265000,
+      "previousPrice": 1349,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2283,7 +2309,7 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/coach-house-old-castletown-road-crogga-santon-im4-1eb/",
       "category": "residential",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": null,
       "priceQualifier": "poa",
       "bedrooms": 7,
@@ -2369,7 +2395,7 @@
       "url": "https://www.cowleygroves.com/property/field-224243-rear-of-st-marys-meadow-ballaugh/",
       "category": "residential",
       "listingType": "sale",
-      "price": 90000,
+      "price": 130000,
       "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
@@ -2378,6 +2404,7 @@
       "parish": "Ballaugh",
       "postcode": "IM1 2LQ",
       "firstSeen": "2026-07-27",
+      "previousPrice": 90000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2419,7 +2446,7 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/flambards-west-baldwin-road-mount-rule-braddan-im4-4hs/",
       "category": "residential",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": null,
       "priceQualifier": "poa",
       "bedrooms": 4,
@@ -2436,7 +2463,7 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/flat-5-viking-house-mooragh-promenade-ramsey-im8-3ag/",
       "category": "residential",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": null,
       "priceQualifier": "poa",
       "bedrooms": 1,
@@ -2454,7 +2481,7 @@
       "url": "https://www.cowleygroves.com/property/glion-loch-2-westhill-village-jurby-road-ramsey-im8-3td/",
       "category": "residential",
       "listingType": "sale",
-      "price": 765000,
+      "price": 799000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 4,
@@ -2463,6 +2490,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3TD",
       "firstSeen": "2026-07-24",
+      "previousPrice": 765000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2471,7 +2499,7 @@
       "url": "https://www.cowleygroves.com/property/greeba-view-main-road-crosby-im4-2dq/",
       "category": "residential",
       "listingType": "sale",
-      "price": 750000,
+      "price": 799000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -2480,6 +2508,7 @@
       "parish": "Crosby",
       "postcode": "IM4 2DQ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 750000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2504,9 +2533,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/ground-floor-commercial-space-thie-clag-westmoreland-road-douglas-im1-4aj/",
       "category": "commercial",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": 60000,
-      "priceQualifier": "pcm",
+      "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": "commercial",
@@ -2521,9 +2550,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/ground-floor-office-exchange-house-54-58-athol-street-douglas-im1-1jd/",
       "category": "commercial",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": 38160,
-      "priceQualifier": "pcm",
+      "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -2538,9 +2567,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/ground-floor-shop-62-bucks-road-douglas-im1-3ae/",
       "category": "commercial",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": 30000,
-      "priceQualifier": "pcm",
+      "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -2589,9 +2618,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/hillview-kiondroghad-road-andreas-im7-3el/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2000,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 4,
       "bathrooms": 3,
       "propertyType": null,
@@ -2692,7 +2721,7 @@
       "url": "https://www.cowleygroves.com/property/mill-bank-cottage-glen-road-ballaugh-im7-5jd/",
       "category": "residential",
       "listingType": "sale",
-      "price": 495000,
+      "price": 499950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -2701,6 +2730,7 @@
       "parish": "Ballaugh",
       "postcode": "IM7 5JD",
       "firstSeen": "2026-07-24",
+      "previousPrice": 495000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2726,7 +2756,7 @@
       "url": "https://www.cowleygroves.com/property/mount-murray-lodge-mount-murray-douglas-im4-1je/",
       "category": "residential",
       "listingType": "sale",
-      "price": 559950,
+      "price": 599000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -2735,6 +2765,7 @@
       "parish": "Douglas",
       "postcode": "IM4 1JE",
       "firstSeen": "2026-07-24",
+      "previousPrice": 559950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2759,9 +2790,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/neoworx-samuel-harris-house-5-11-st-george-s-street-douglas-im1-1aj/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 350,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -2794,7 +2825,7 @@
       "url": "https://www.cowleygroves.com/property/north-point-the-downs-union-mills-im4-4nq/",
       "category": "residential",
       "listingType": "sale",
-      "price": 879950,
+      "price": 925000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 4,
@@ -2803,6 +2834,7 @@
       "parish": "Union Mills",
       "postcode": "IM4 4NQ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 879950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -2811,7 +2843,7 @@
       "url": "https://www.cowleygroves.com/property/outbuildings-glen-mooar-road-st-john-s-im4-3aq/",
       "category": "residential",
       "listingType": "sale",
-      "price": 700000,
+      "price": 750000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -2820,6 +2852,7 @@
       "parish": null,
       "postcode": "IM4 3AQ",
       "firstSeen": "2026-07-24",
+      "previousPrice": 700000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3100,7 +3133,7 @@
       "url": "https://www.cowleygroves.com/property/plot-4-st-olaves-development-bowring-road-ramsey-im8-3es/",
       "category": "residential",
       "listingType": "sale",
-      "price": 675000,
+      "price": 700000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -3109,6 +3142,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3ES",
       "firstSeen": "2026-07-24",
+      "previousPrice": 675000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3134,7 +3168,7 @@
       "url": "https://www.cowleygroves.com/property/prospect-villa-andreas-road-ramsey-im7-4ef/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1595000,
+      "price": 1695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -3143,6 +3177,7 @@
       "parish": "Ramsey",
       "postcode": "IM7 4EF",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1595000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3151,7 +3186,7 @@
       "url": "https://www.cowleygroves.com/property/ravenscourt-jurby-road-ramsey-im8-3ta/",
       "category": "residential",
       "listingType": "sale",
-      "price": 445000,
+      "price": 475000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -3160,6 +3195,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 3TA",
       "firstSeen": "2026-07-24",
+      "previousPrice": 445000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3168,7 +3204,7 @@
       "url": "https://www.cowleygroves.com/property/ravenswood-27-farmhill-park-douglas-im2-2ee/",
       "category": "residential",
       "listingType": "sale",
-      "price": 845000,
+      "price": 879950,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 3,
@@ -3177,6 +3213,7 @@
       "parish": "Douglas",
       "postcode": "IM2 2EE",
       "firstSeen": "2026-07-24",
+      "previousPrice": 845000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3184,9 +3221,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/regaby-mooar-house-regaby-west-road-andreas-im7-3hl/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 3475,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 4,
       "bathrooms": 3,
       "propertyType": null,
@@ -3252,9 +3289,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/second-floor-office-53-victoria-street-douglas-im1-2la/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 575,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -3269,9 +3306,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/shop--basement-19-victoria-street-douglas-im1-2lw/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 19000,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": null,
       "bathrooms": 1,
       "propertyType": null,
@@ -3286,9 +3323,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/st-mary-s-church-the-parade-castletown-im9-1lg/",
       "category": "residential",
-      "listingType": "rent",
+      "listingType": "sale",
       "price": 66000,
-      "priceQualifier": "pcm",
+      "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -3304,7 +3341,7 @@
       "url": "https://www.cowleygroves.com/property/strathmore-11-palace-road-douglas-im2-4ld/",
       "category": "residential",
       "listingType": "sale",
-      "price": 560000,
+      "price": 599000,
       "priceQualifier": "asking",
       "bedrooms": 8,
       "bathrooms": 2,
@@ -3313,6 +3350,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LD",
       "firstSeen": "2026-07-24",
+      "previousPrice": 560000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3320,9 +3358,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/sunset-cottage-the-old-toll-house-king-edward-road-onchan-im3-2jy/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 850,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": "cottage",
@@ -3354,9 +3392,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/the-la-apartment-main-road-baldrine-im4-6ae/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 1400,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": "apartment",
@@ -3439,9 +3477,9 @@
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/unit-2-quay-west-bridge-road-douglas-im1-5ag/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 78400,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 1050000,
+      "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": null,
@@ -3449,7 +3487,7 @@
       "parish": "Douglas",
       "postcode": "IM1 5AG",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1050000,
+      "previousPrice": 78400,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3492,7 +3530,7 @@
       "url": "https://www.cowleygroves.com/property/wesley-manse-the-crescent-ramsey-im8-2jn/",
       "category": "residential",
       "listingType": "sale",
-      "price": 425000,
+      "price": 475000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -3501,6 +3539,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2JN",
       "firstSeen": "2026-07-24",
+      "previousPrice": 425000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3526,7 +3565,7 @@
       "url": "https://www.garforthgray.im/andreas-1-mountain-view/",
       "category": "residential",
       "listingType": "sale",
-      "price": 480000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3535,6 +3574,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 480000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3543,7 +3583,7 @@
       "url": "https://www.garforthgray.im/andreas-little-meddow-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 315000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3552,6 +3592,7 @@
       "parish": "Andreas",
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 315000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3560,7 +3601,7 @@
       "url": "https://www.garforthgray.im/andreas-oatlands-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 339000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3569,6 +3610,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 339000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3577,7 +3619,7 @@
       "url": "https://www.garforthgray.im/andreas-smeale/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1295000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3586,6 +3628,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1295000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3594,7 +3637,7 @@
       "url": "https://www.garforthgray.im/baldrine-17-mountain-view/",
       "category": "residential",
       "listingType": "sale",
-      "price": 399950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3603,6 +3646,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 399950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3611,7 +3655,7 @@
       "url": "https://www.garforthgray.im/baldrine-clay-head-road-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1175000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3620,6 +3664,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1175000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3628,7 +3673,7 @@
       "url": "https://www.garforthgray.im/ballasalla-beech-grove/",
       "category": "residential",
       "listingType": "sale",
-      "price": 449950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3637,6 +3682,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 449950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3645,7 +3691,7 @@
       "url": "https://www.garforthgray.im/ballasalla-bridge-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 799950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -3654,6 +3700,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 799950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3662,7 +3709,7 @@
       "url": "https://www.garforthgray.im/ballasalla-meadow-court-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 349950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3671,6 +3718,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 349950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3679,7 +3727,7 @@
       "url": "https://www.garforthgray.im/ballasalla-watterson-road-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 375000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3688,6 +3736,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 375000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3696,7 +3745,7 @@
       "url": "https://www.garforthgray.im/castletown-61-arbory-street/",
       "category": "residential",
       "listingType": "sale",
-      "price": 449950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3705,6 +3754,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 449950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3713,7 +3763,7 @@
       "url": "https://www.garforthgray.im/castletown-main-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 275000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3722,6 +3772,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 275000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3730,7 +3781,7 @@
       "url": "https://www.garforthgray.im/castletown-malew-street-9/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 285000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -3739,6 +3790,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 285000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3747,7 +3799,7 @@
       "url": "https://www.garforthgray.im/castletown-station-road/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 865000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3756,6 +3808,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 865000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3764,7 +3817,7 @@
       "url": "https://www.garforthgray.im/colby-ballakeyll/",
       "category": "residential",
       "listingType": "sale",
-      "price": 725000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -3773,6 +3826,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 725000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3781,7 +3835,7 @@
       "url": "https://www.garforthgray.im/colby-ballakilpheric-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 150000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3790,6 +3844,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 150000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3798,7 +3853,7 @@
       "url": "https://www.garforthgray.im/colby-crosby/",
       "category": "land",
       "listingType": "sale",
-      "price": 99950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3807,6 +3862,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 99950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3815,7 +3871,7 @@
       "url": "https://www.garforthgray.im/colby-field-number-324067/",
       "category": "land",
       "listingType": "sale",
-      "price": 149950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3824,6 +3880,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 149950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3832,7 +3889,7 @@
       "url": "https://www.garforthgray.im/colby-main-road-8/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 275000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3841,6 +3898,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 275000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3848,9 +3906,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/crosby-eyreton-farm-cottages-3/",
       "category": "residential",
-      "listingType": "rent",
-      "price": null,
-      "priceQualifier": "unknown",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": null,
@@ -3865,9 +3923,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-1-2-woodville-terrace-1/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2000,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -3875,7 +3933,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 175000,
+      "previousPrice": 2000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3883,9 +3941,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-11-mount-bradda-2/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 720,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -3893,7 +3951,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 210000,
+      "previousPrice": 720,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3901,9 +3959,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-12-derby-road/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 900,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
       "propertyType": "flat",
@@ -3911,6 +3969,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 900,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3919,7 +3978,7 @@
       "url": "https://www.garforthgray.im/douglas-3-ballanard-woods/",
       "category": "residential",
       "listingType": "sale",
-      "price": 3595000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3928,6 +3987,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 3595000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3970,7 +4030,7 @@
       "url": "https://www.garforthgray.im/douglas-brunswick-road-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 559950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 3,
@@ -3979,6 +4039,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 559950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -3986,9 +4047,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-castlemona-avenue-6/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2061,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -3996,7 +4057,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 215000,
+      "previousPrice": 2061,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4005,7 +4066,7 @@
       "url": "https://www.garforthgray.im/douglas-close-kennish-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 320000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4014,6 +4075,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 320000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4022,7 +4084,7 @@
       "url": "https://www.garforthgray.im/douglas-cooil-drive-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 369950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4031,6 +4093,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 369950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4038,9 +4101,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-demesne-road-1/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2285,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
       "propertyType": null,
@@ -4048,6 +4111,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 2285,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4056,7 +4120,7 @@
       "url": "https://www.garforthgray.im/douglas-devonshire-road-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 525000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4065,6 +4129,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 525000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4073,7 +4138,7 @@
       "url": "https://www.garforthgray.im/douglas-ellenbrook-avenue/",
       "category": "residential",
       "listingType": "sale",
-      "price": 389950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4082,6 +4147,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 389950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4090,7 +4156,7 @@
       "url": "https://www.garforthgray.im/douglas-esplanade-lane-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 215000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4099,6 +4165,7 @@
       "parish": "Douglas",
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 215000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4107,7 +4174,7 @@
       "url": "https://www.garforthgray.im/douglas-farmhill-lane-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1250000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4116,6 +4183,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1250000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4124,7 +4192,7 @@
       "url": "https://www.garforthgray.im/douglas-fenella-court-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 274950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4133,6 +4201,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-27",
+      "previousPrice": 274950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4140,9 +4209,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-marlborough-court-apartments-2/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2400,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -4150,7 +4219,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 197500,
+      "previousPrice": 2400,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4159,7 +4228,7 @@
       "url": "https://www.garforthgray.im/douglas-oxford-street-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 359950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -4168,6 +4237,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 359950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4176,7 +4246,7 @@
       "url": "https://www.garforthgray.im/douglas-princes-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 389000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4185,6 +4255,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 389000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4193,7 +4264,7 @@
       "url": "https://www.garforthgray.im/douglas-river-walk-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 995000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4202,6 +4273,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 995000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4210,7 +4282,7 @@
       "url": "https://www.garforthgray.im/douglas-wesley-terrace-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 299000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4219,6 +4291,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 299000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4227,7 +4300,7 @@
       "url": "https://www.garforthgray.im/foxdale-chapel-row/",
       "category": "residential",
       "listingType": "sale",
-      "price": 399000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4236,6 +4309,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 399000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4244,7 +4318,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-pennybridge-cottages-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 285000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -4253,6 +4327,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 285000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4261,7 +4336,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-pennybridge-cottages/",
       "category": "residential",
       "listingType": "sale",
-      "price": 210000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4270,6 +4345,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 210000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4278,7 +4354,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-windmill-terrace/",
       "category": "residential",
       "listingType": "sale",
-      "price": 349950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4287,6 +4363,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 349950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4295,7 +4372,7 @@
       "url": "https://www.garforthgray.im/laxey-fairy-cottage-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 326950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4304,6 +4381,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 326950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4312,7 +4390,7 @@
       "url": "https://www.garforthgray.im/maughold-church-road-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 549500,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4321,6 +4399,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 549500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4329,7 +4408,7 @@
       "url": "https://www.garforthgray.im/onchan-60-howe-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 549950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4338,6 +4417,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 549950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4346,7 +4426,7 @@
       "url": "https://www.garforthgray.im/onchan-derwent-drive-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 395000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4355,6 +4435,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 395000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4363,7 +4444,7 @@
       "url": "https://www.garforthgray.im/onchan-howe-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 359950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4372,6 +4453,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 359950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4379,9 +4461,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/onchan-king-edward-bay-apartments-1/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 2700,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -4389,7 +4471,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 560000,
+      "previousPrice": 2700,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4398,7 +4480,7 @@
       "url": "https://www.garforthgray.im/onchan-little-mill-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 795000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4407,6 +4489,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 795000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4415,7 +4498,7 @@
       "url": "https://www.garforthgray.im/onchan-majestic-drive-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1000000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 6,
       "bathrooms": null,
@@ -4424,6 +4507,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1000000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4432,7 +4516,7 @@
       "url": "https://www.garforthgray.im/peel-derby-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 399950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4441,6 +4525,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 399950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4449,7 +4534,7 @@
       "url": "https://www.garforthgray.im/port-erin-cronk-view-crescent-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 355000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4458,6 +4543,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 355000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4466,7 +4552,7 @@
       "url": "https://www.garforthgray.im/port-erin-surby-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 799950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4475,6 +4561,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 799950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4483,7 +4570,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-5-athol-street/",
       "category": "residential",
       "listingType": "sale",
-      "price": 419950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4492,6 +4579,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 419950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4500,7 +4588,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-clifton-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1995000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4509,6 +4597,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1995000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4517,7 +4606,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-clifton-road-north/",
       "category": "residential",
       "listingType": "sale",
-      "price": 449950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4526,6 +4615,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 449950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4534,7 +4624,7 @@
       "url": "https://www.garforthgray.im/ramsey-auldyn-meadow-drive-7/",
       "category": "residential",
       "listingType": "sale",
-      "price": 449950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4543,6 +4633,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 449950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4551,7 +4642,7 @@
       "url": "https://www.garforthgray.im/ramsey-clifton-drive-7/",
       "category": "residential",
       "listingType": "sale",
-      "price": 365000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4560,6 +4651,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 365000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4568,7 +4660,7 @@
       "url": "https://www.garforthgray.im/ramsey-glen-auldyn-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 950000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4577,6 +4669,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 950000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4585,7 +4678,7 @@
       "url": "https://www.garforthgray.im/ramsey-glen-auldyn-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 749500,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4594,6 +4687,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 749500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4602,7 +4696,7 @@
       "url": "https://www.garforthgray.im/ramsey-glen-mona/",
       "category": "residential",
       "listingType": "sale",
-      "price": 599950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -4611,6 +4705,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 599950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4619,7 +4714,7 @@
       "url": "https://www.garforthgray.im/ramsey-greenlands-avenue-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 329950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4628,6 +4723,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 329950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4636,7 +4732,7 @@
       "url": "https://www.garforthgray.im/ramsey-mount-auldyn-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 499950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4645,6 +4741,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 499950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4653,7 +4750,7 @@
       "url": "https://www.garforthgray.im/ramsey-royal-park-31/",
       "category": "residential",
       "listingType": "sale",
-      "price": 485000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4662,6 +4759,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 485000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4669,9 +4767,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/ramsey-st-pauls-mews-2/",
       "category": "residential",
-      "listingType": "rent",
-      "price": 283,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": "apartment",
@@ -4679,7 +4777,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 149950,
+      "previousPrice": 283,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4688,7 +4786,7 @@
       "url": "https://www.garforthgray.im/ramsey-stanley-mount-west-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 425000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4697,6 +4795,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 425000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4705,7 +4804,7 @@
       "url": "https://www.garforthgray.im/ramsey-sycamores/",
       "category": "residential",
       "listingType": "sale",
-      "price": 269950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4714,7 +4813,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 284950,
+      "previousPrice": 269950,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4722,9 +4821,9 @@
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/ramsey-ventnor/",
       "category": "commercial",
-      "listingType": "rent",
-      "price": 1200,
-      "priceQualifier": "pcm",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": null,
@@ -4732,7 +4831,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 139950,
+      "previousPrice": 1200,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4741,7 +4840,7 @@
       "url": "https://www.garforthgray.im/ramsey-westfield-drive/",
       "category": "residential",
       "listingType": "sale",
-      "price": 995000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -4750,6 +4849,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 995000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4758,7 +4858,7 @@
       "url": "https://www.garforthgray.im/santon-fairways-drive-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 628500,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4767,6 +4867,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-27",
+      "previousPrice": 628500,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4775,7 +4876,7 @@
       "url": "https://www.garforthgray.im/st-marks-st-marks-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 659000,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4784,6 +4885,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 659000,
       "lastSeen": "2026-07-28"
     },
     {
@@ -4792,7 +4894,7 @@
       "url": "https://www.garforthgray.im/union-mills-main-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 499950,
+      "price": 4250000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4801,6 +4903,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 499950,
       "lastSeen": "2026-07-28"
     },
     {
