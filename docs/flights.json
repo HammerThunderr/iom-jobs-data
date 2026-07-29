@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-29T18:04:26.898752+00:00",
-  "lastUpdated": "18:04 UTC",
+  "fetchedAt": "2026-07-29T18:49:47.659458+00:00",
+  "lastUpdated": "18:49 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -89,9 +89,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Expected 20:03",
+      "status": "Final approach",
       "origin": "London City",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM688",
@@ -108,8 +108,24 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "09:25",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:35",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 15,
   "source": "airport.im"
 }
