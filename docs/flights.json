@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-29T20:05:44.232190+00:00",
-  "lastUpdated": "20:05 UTC",
+  "fetchedAt": "2026-07-29T20:09:46.070416+00:00",
+  "lastUpdated": "20:09 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -70,14 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "15:05",
-      "status": "Arrived 15:05",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
@@ -142,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 16,
   "source": "airport.im"
 }
