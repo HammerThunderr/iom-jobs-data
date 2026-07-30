@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-30T21:23:03.352281+00:00",
-  "lastUpdated": "21:22 UTC",
+  "fetchedAt": "2026-07-30T22:32:17.319957+00:00",
+  "lastUpdated": "22:31 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 16:46",
-      "destination": "London City",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:21",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
@@ -82,25 +66,17 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "12:35",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 16:41",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Arrived 17:21",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
@@ -164,8 +140,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM840P",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Glasgow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 18,
   "source": "airport.im"
 }
