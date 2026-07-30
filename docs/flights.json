@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-30T22:52:28.585350+00:00",
-  "lastUpdated": "22:51 UTC",
+  "fetchedAt": "2026-07-30T23:51:02.963386+00:00",
+  "lastUpdated": "23:50 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -65,6 +65,14 @@
       "scheduled": "12:35",
       "status": "On-time",
       "destination": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM840",
+      "airline": "Loganair",
+      "scheduled": "14:00",
+      "status": "On-time",
+      "destination": "Inverness",
       "statusType": "ontime"
     }
   ],
@@ -140,8 +148,16 @@
       "status": "On-time",
       "origin": "Glasgow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "14:45",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 19,
   "source": "airport.im"
 }
