@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-30T19:58:03.875328+00:00",
-  "lastUpdated": "19:57 UTC",
+  "fetchedAt": "2026-07-30T20:02:06.100338+00:00",
+  "lastUpdated": "20:01 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "11:00",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
