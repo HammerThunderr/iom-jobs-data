@@ -3,7 +3,7 @@
   "updated": "2026-07-25",
   "features": {
     "property": {
-      "enabled": false,
+      "enabled": true,
       "message": "The property listings feature is temporarily unavailable."
     },
     "bins": {
@@ -73,6 +73,18 @@
     "forms": {
       "enabled": false,
       "message": "Forms are not available yet."
+    },
+    "races": {
+      "enabled": true,
+      "message": "The race schedule is temporarily unavailable."
+    },
+    "pharmacy": {
+      "enabled": true,
+      "message": "The pharmacy rota is temporarily unavailable."
+    },
+    "railways": {
+      "enabled": true,
+      "message": "Timetables are temporarily unavailable."
     }
   },
   "banner": {
