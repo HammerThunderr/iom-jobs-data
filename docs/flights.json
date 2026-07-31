@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-31T10:41:51.982417+00:00",
-  "lastUpdated": "10:41 UTC",
+  "fetchedAt": "2026-07-31T10:45:54.337759+00:00",
+  "lastUpdated": "10:45 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,9 +39,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:30",
-      "status": "Taxied 11:32",
+      "status": "Departed 11:42",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
@@ -161,7 +161,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Arrived 11:31",
+      "status": "Arrived 11:35",
       "origin": "Manchester",
       "statusType": "arrived"
     },
