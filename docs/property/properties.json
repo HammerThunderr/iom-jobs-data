@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-31T09:08:08+00:00",
+    "generated": "2026-07-31T19:43:25+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -10,7 +10,7 @@
       },
       {
         "agent": "Cowley Groves",
-        "count": 182,
+        "count": 181,
         "withPrice": 134,
         "status": "ok"
       },
@@ -1821,23 +1821,6 @@
       "lastSeen": "2026-07-31"
     },
     {
-      "id": "cg-apt-9-clybane-mooragh-promenade-ramsey-im8-3ba",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/apt-9-clybane-mooragh-promenade-ramsey-im8-3ba/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": null,
-      "priceQualifier": "unknown",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": null,
-      "address": "Apt. 9 Clybane, Mooragh Promenade, Ramsey, IM8 3BA",
-      "parish": "Ramsey",
-      "postcode": "IM8 3BA",
-      "firstSeen": "2026-07-29",
-      "lastSeen": "2026-07-31"
-    },
-    {
       "id": "cg-armstrong-cottage-glen-auldyn-ramsey-im7-2ab",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/armstrong-cottage-glen-auldyn-ramsey-im7-2ab/",
@@ -3195,24 +3178,6 @@
       "lastSeen": "2026-07-31"
     },
     {
-      "id": "gg-andreas-little-meddow-5",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/andreas-little-meddow-5/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 4250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "semi-detached",
-      "address": "Stunning Semi-Detached Home in Andreas Village",
-      "parish": "Andreas",
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 315000,
-      "lastSeen": "2026-07-31"
-    },
-    {
       "id": "gg-andreas-oatlands-road",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/andreas-oatlands-road/",
@@ -3246,24 +3211,6 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 1295000,
-      "lastSeen": "2026-07-31"
-    },
-    {
-      "id": "gg-baldrine-17-mountain-view",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/baldrine-17-mountain-view/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 4250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "bungalow",
-      "address": "Attractive Bungalow with No Onward Chain",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 399950,
       "lastSeen": "2026-07-31"
     },
     {
@@ -3571,6 +3518,23 @@
       "lastSeen": "2026-07-31"
     },
     {
+      "id": "gg-douglas-ballabrooie-drive-5",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-ballabrooie-drive-5/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Family Home with Exceptional Outdoor Space",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-07-31",
+      "lastSeen": "2026-07-31"
+    },
+    {
       "id": "gg-douglas-ballanard-road-7",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-ballanard-road-7/",
@@ -3836,6 +3800,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 995000,
+      "lastSeen": "2026-07-31"
+    },
+    {
+      "id": "gg-douglas-stanley-place-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-stanley-place-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 4250000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "propertyType": "detached",
+      "address": "Beautifully Refurbished Detached Family Home",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-07-31",
       "lastSeen": "2026-07-31"
     },
     {
