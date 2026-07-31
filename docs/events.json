@@ -1,10 +1,10 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-31T13:12:23.369341+00:00",
-  "lastUpdated": "13:12 UTC",
+  "fetchedAt": "2026-07-31T15:35:43.642499+00:00",
+  "lastUpdated": "15:35 UTC",
   "totalCount": 633,
   "categories": {
-    "Kids": 86,
+    "Kids": 84,
     "Things to Do": 47,
     "Workshops": 1,
     "Learning": 1,
@@ -13,6 +13,7 @@
     "Family": 8,
     "Sports": 22,
     "Motorsport": 22,
+    "Indoor": 14,
     "Youth": 1
   },
   "events": [
@@ -2031,6 +2032,38 @@
       "time": "See event page",
       "price": "£18.00",
       "url": "https://www.villagaiety.com/whats-on/fallen-angels-by-noël-coward/"
+    },
+    {
+      "title": "Spider-Man Brand New Day",
+      "venue": "Villa Marina & Gaiety Theatre",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/tw3ky7vv4ow5wa8gwhrlg2sjxai0/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+      "time": "See event page",
+      "price": "£11.00",
+      "url": "https://www.villagaiety.com/whats-on/spider-man-brand-new-day/"
+    },
+    {
+      "title": "The Great British Bake Off - The Musical",
+      "venue": "Villa Marina & Gaiety Theatre",
+      "startDate": "",
+      "endDate": "",
+      "isTbc": true,
+      "duration": 0.0,
+      "tags": [],
+      "source": "villa gaiety",
+      "recurring": false,
+      "description": "Inspired by the beloved TV phenomenon, The Great British Bake Off, this musical serves up a deliciously funny and heart-warming celebration of baking, friendship, and competition! Follow 8 amateur bakers as they whisk, knead, and sing their way through the nation's favourite baking competition, all under the watchful eyes of the judges and hosts. Packed with catchy songs, laugh-out-loud moments, and plenty of theatrical treats, this feel-good musical is perfect for the whole family. Expect cakes, chaos, and showstopping performances in a production guaranteed to leave audiences smiling.",
+      "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/qe4vf29xqegsl4iqne667kpalb2t/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+      "time": "See event page",
+      "price": "£26",
+      "url": "https://www.villagaiety.com/whats-on/the-great-british-bake-off-the-musical/"
     },
     {
       "title": "Art Adventures for Beginners",
@@ -4655,42 +4688,6 @@
       "url": "https://www.kidsontherock.co.uk/events/holiday-craft-club-the-crafty-cat-years-3-11/"
     },
     {
-      "title": "Hummingbird Yoga – Children’s Yoga for 4-7 Year Olds",
-      "venue": "Union Mills",
-      "startDate": "",
-      "endDate": "",
-      "isTbc": true,
-      "duration": 0.0,
-      "tags": [
-        "Kids"
-      ],
-      "source": "kids on the rock iom",
-      "recurring": false,
-      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock Submit summer events to our free guide MEGA EASTER event guide MEGA EASTER event guide SUMMER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
-      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
-      "time": "See event page",
-      "price": "",
-      "url": "https://www.kidsontherock.co.uk/events/hummingbird-yoga-childrens-yoga-4-to-7-year-olds/"
-    },
-    {
-      "title": "Hummingbird Yoga – Children’s Yoga for 8-11 Year Olds",
-      "venue": "Union Mills",
-      "startDate": "",
-      "endDate": "",
-      "isTbc": true,
-      "duration": 0.0,
-      "tags": [
-        "Kids"
-      ],
-      "source": "kids on the rock iom",
-      "recurring": false,
-      "description": "SPARK FESTIVAL is back on 5th July MEGA CHRISTMAS event guide Advertise with Kids on the Rock Submit summer events to our free guide MEGA EASTER event guide MEGA EASTER event guide SUMMER event guide Please take a half term survey WIN tickets with this VillaGaiety competition! Check out the best route on Traveline or head to IOM Transport’s website. Why not have a look at some other areas of Kids on the Rock Don’t miss our future updates!",
-      "imageUrl": "https://www.kidsontherock.co.uk/wp-content/uploads/2023/09/KOTR-Logo-Standard-White.png",
-      "time": "See event page",
-      "price": "",
-      "url": "https://www.kidsontherock.co.uk/events/hummingbird-yoga-childrens-yoga-8-to-11-year-olds/"
-    },
-    {
       "title": "Isle of Play – Playing Out Supported by Hartford Homes",
       "venue": "Various",
       "startDate": "",
@@ -7280,7 +7277,9 @@
       "endDate": "2026-08-17",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -7906,7 +7905,9 @@
       "endDate": "2026-09-01",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -7922,7 +7923,9 @@
       "endDate": "2026-09-01",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -7954,7 +7957,9 @@
       "endDate": "2026-09-02",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "EAC Book Circle: Demon Copperhead by Barbara Kingsolver Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd September – from 2pm Demon Copperhead by Barbara Kingsolver Dickens is not a prerequisite for readers of this novel, but he provided its inspiration. Set in the Appalachian mountains, this is the story of a boy born to a teenaged single mother in a single-wide trailer, with no assets beyond his dead father’s good looks and copper-coloured hair, a caustic wit, and a fierce talent for survival. You may also like the following events from Erin Arts Centre:This Saturday, 13th June, 07:30 pm, Mananan 50: Scott Brothers Duo in CastletownNext Thursday, 18th June, 01:00 pm, H Is For Hawk: Midweek Movie Matinee in CastletownNext Thursday, 18th June, 07:30 pm, H Is For Hawk: Midweek Movie in CastletownAlso check out other Entertainment events in Castletown, Nonprofit events in Castletown.",
@@ -8018,7 +8023,9 @@
       "endDate": "2026-09-04",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8223,7 +8230,9 @@
       "endDate": "2026-09-09",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -8613,7 +8622,9 @@
       "endDate": "2026-09-19",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -9035,7 +9046,9 @@
       "endDate": "2026-10-07",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -9083,7 +9096,9 @@
       "endDate": "2026-10-09",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre & allevents (castletown)",
       "recurring": false,
       "description": "Met Opera: Cosi Fan Tutte Adults £15 / Under 18 £2 The new Met: Live in HD season gets underway with Mozart’s satirical comedy of fickle young love. Phelim McDermott’s “colorful, inventive” (The New York Times) staging, inspired by Coney Island in the 1950s, sets the uproarious story at a boardwalk amusement park, where the two pairs of lovers at the heart of the tale find themselves on one emotional—and literal—thrill ride after another. Soprano Federica Lombardi and mezzo-soprano Samantha Hankey sing Fiordiligi and Dorabella, opposite tenor Duke Kim and baritone Andrey Zhilikhovsky as Ferrando and Guglielmo. Bass-baritone Gerald Finley reprises his portrayal of the cynical Don Alfonso, with soprano Ana María Martínez as the witty maid Despina. These stunning, modern productions feature exclusive, live backstage footage and cast interviews shown during the intervals. Buffet served with interval drinks. Feel free to dress for the occasion! You may also like the following events from Erin Arts Centre:Next month, 7th August, 07:30 pm, Parker & Snell Youth Co presents Be My Baby in CastletownNext month, 9th August, 03:00 pm, Grampian Concert Orchestra - Island Classics in CastletownThis September, 2nd September, 02:00 pm, EAC Book Circle: Demon Copperhead by Barbara Kingsolver in CastletownAlso check out other Comedy events in Castletown.",
@@ -9222,7 +9237,9 @@
       "endDate": "2026-10-11",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -9398,7 +9415,9 @@
       "endDate": "2026-10-23",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -9686,7 +9705,9 @@
       "endDate": "2026-11-04",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -10104,7 +10125,9 @@
       "endDate": "2026-12-02",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
@@ -10120,7 +10143,9 @@
       "endDate": "2026-12-05",
       "isTbc": false,
       "duration": 0.0,
-      "tags": [],
+      "tags": [
+        "Indoor"
+      ],
       "source": "erin arts centre",
       "recurring": false,
       "description": "",
