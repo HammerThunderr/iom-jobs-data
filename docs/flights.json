@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-07-31T23:29:22.149797+00:00",
-  "lastUpdated": "23:28 UTC",
+  "fetchedAt": "2026-07-31T23:33:24.162913+00:00",
+  "lastUpdated": "23:32 UTC",
   "departures": [
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "18:20",
-      "status": "Departed 18:39",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY844",
       "airline": "easyJet",
@@ -131,6 +123,14 @@
       "scheduled": "12:45",
       "status": "On-time",
       "origin": "Palma De Mallorca",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
