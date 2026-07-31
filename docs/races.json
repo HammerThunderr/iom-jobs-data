@@ -1,0 +1,361 @@
+{
+ "meta": {
+  "schemaVersion": 1,
+  "generated": "2026-07-30",
+  "sourceUpdated": "2026-01-28T09:15:00",
+  "source": "Official Classic TT schedule",
+  "sourceUrl": "https://www.iomtt.com",
+  "mgpUrl": "https://www.manxgrandprix.co.uk",
+  "disclaimer": "Schedule subject to road closure approval by the Department of Infrastructure under the Road Races Act 2016. Sessions can be delayed or cancelled at short notice — always check the official schedule and road closure notices before travelling.",
+  "contingencyNote": "Contingency dates may be used for qualifying if earlier sessions are delayed. The Clerk of the Course announces on event whether these sessions run, and in what format.",
+  "sharedCourseNote": "The Classic TT shares course time with the 2026 Manx Grand Prix, running Sunday 16 to Monday 24 August."
+ },
+ "event": {
+  "name": "Classic TT & Manx Grand Prix 2026",
+  "shortName": "Classic TT",
+  "from": "2026-08-16",
+  "to": "2026-08-28"
+ },
+ "days": [
+  {
+   "date": "2026-08-16",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "13:30",
+     "name": "Newcomers speed controlled laps",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "13:45",
+     "name": "Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "14:30",
+     "name": "Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "15:15",
+     "name": "Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "16:05",
+     "name": "Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-17",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "18:30",
+     "name": "Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:15",
+     "name": "Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:50",
+     "name": "Classic TT",
+     "laps": 1,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-18",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "18:30",
+     "name": "Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": "18:30 - 19:10"
+    },
+    {
+     "time": "19:15",
+     "name": "Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:50",
+     "name": "Classic TT",
+     "laps": 1,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-19",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "18:30",
+     "name": "Formula One / Junior 600 / Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:15",
+     "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:50",
+     "name": "Historic Senior / Historic Junior",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-20",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "18:30",
+     "name": "Formula One / Junior 600 / Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:15",
+     "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "19:50",
+     "name": "Historic Senior / Historic Junior",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-21",
+   "label": "Qualifying",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "10:15",
+     "name": "Historic Senior / Historic Junior",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "11:45",
+     "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "13:15",
+     "name": "Formula One / Junior 600 / Senior MGP / Supersport MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-22",
+   "label": "Qualifying & Races",
+   "week": "Qualifying Week",
+   "sessions": [
+    {
+     "time": "10:15",
+     "name": "Sportbike Manx Grand Prix",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "12:15",
+     "name": "Lightweight / Ultra Lightweight / Historic Senior / Historic Junior",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    },
+    {
+     "time": "14:15",
+     "name": "Supersport Manx Grand Prix",
+     "laps": 4,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "16:15",
+     "name": "Formula One / Junior 600",
+     "laps": null,
+     "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-24",
+   "label": "Race Day",
+   "week": "Race Week",
+   "sessions": [
+    {
+     "time": "10:15",
+     "name": "Junior Manx Grand Prix",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "12:45",
+     "name": "Senior Manx Grand Prix",
+     "laps": 4,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "15:00",
+     "name": "Historic Junior Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-26",
+   "label": "Race Day",
+   "week": "Race Week",
+   "sessions": [
+    {
+     "time": "10:15",
+     "name": "Formula One Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "12:15",
+     "name": "TT Rewind / Classic Sidecar Parade",
+     "laps": 1,
+     "kind": "parade",
+     "note": ""
+    },
+    {
+     "time": "13:15",
+     "name": "Lightweight Classic TT & Ultra Lightweight Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "15:00",
+     "name": "Junior 600 Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-28",
+   "label": "Race Day",
+   "week": "Race Week",
+   "sessions": [
+    {
+     "time": "10:15",
+     "name": "Historic Senior Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "13:00",
+     "name": "Senior Classic TT",
+     "laps": 4,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "15:30",
+     "name": "John McGuinness MBE Parade",
+     "laps": 1,
+     "kind": "parade",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "contingency": [
+  {
+   "date": "2026-08-19",
+   "detail": "Afternoon session",
+   "roadsClose": "12:30"
+  },
+  {
+   "date": "2026-08-20",
+   "detail": "Afternoon session",
+   "roadsClose": "12:30"
+  },
+  {
+   "date": "2026-08-21",
+   "detail": "Evening session",
+   "roadsClose": "18:00"
+  },
+  {
+   "date": "2026-08-23",
+   "detail": "Contingency",
+   "roadsClose": "12:45"
+  },
+  {
+   "date": "2026-08-25",
+   "detail": "Contingency",
+   "roadsClose": "09:30"
+  },
+  {
+   "date": "2026-08-27",
+   "detail": "Contingency",
+   "roadsClose": "09:30"
+  }
+ ]
+}

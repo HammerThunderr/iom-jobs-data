@@ -1,0 +1,608 @@
+{
+ "meta": {
+  "schemaVersion": 1,
+  "generated": "2026-07-30",
+  "period": "July to September 2026",
+  "validFrom": "2026-07-01",
+  "validTo": "2026-09-30",
+  "source": "Isle of Man Government pharmacy rota (Manx Care)",
+  "sourceUrl": "https://www.gov.im/categories/health-and-wellbeing/pharmacy-services/pharmacy-rota/",
+  "licence": "Contains public sector information licensed under the Isle of Man Open Government Licence.",
+  "disclaimer": "Pharmacy rota published by Manx Care. Always telephone the pharmacy before travelling — hours can change at short notice. In a medical emergency call 999.",
+  "updateNote": "The rota is published quarterly. When validTo passes, the app tells people to check gov.im rather than showing out-of-date information."
+ },
+ "standingHours": {
+  "normal": "Dispensing chemists are generally open 9:00am to 5:30pm, Monday to Saturday.",
+  "weekdayRota": "Duty rota 5:30pm to 6:30pm, Monday to Friday (excluding bank holidays).",
+  "sundayRota": "Sundays and bank holidays: duty pharmacy hours as listed below."
+ },
+ "urgentCare": [
+  {
+   "name": "Emergency",
+   "detail": "Call 999",
+   "phone": "999"
+  },
+  {
+   "name": "Manx Emergency Doctor Service (MEDS)",
+   "detail": "Out of hours: 6pm-8am weekdays, 24 hours weekends and bank holidays",
+   "phone": "+441624650355"
+  },
+  {
+   "name": "Minor Injury Unit, Ramsey Cottage Hospital",
+   "detail": "Walk-in, 8am-8pm daily including bank holidays",
+   "phone": "+441624811800"
+  },
+  {
+   "name": "Emergency Department, Noble's Hospital",
+   "detail": "Accident & Emergency enquiries",
+   "phone": "+441624650040"
+  }
+ ],
+ "areas": [
+  {
+   "key": "douglas",
+   "name": "Douglas",
+   "entries": [
+    {
+     "date": "2026-07-05",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-06",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "9am to 5:30pm"
+     },
+     "note": "Tynwald Day bank holiday"
+    },
+    {
+     "date": "2026-07-12",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-19",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-26",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-02",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-09",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-16",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-23",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-30",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-06",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-13",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-20",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-27",
+     "pharmacy": {
+      "name": "Boots the Chemists",
+      "address": "14/22 Strand Street, Douglas",
+      "phone": "+441624616120",
+      "hours": "11am to 4:30pm"
+     },
+     "note": ""
+    }
+   ]
+  },
+  {
+   "key": "south",
+   "name": "South (Port Erin & Port St Mary)",
+   "entries": [
+    {
+     "date": "2026-07-05",
+     "pharmacy": null,
+     "note": "No pharmacy on duty"
+    },
+    {
+     "date": "2026-07-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Darnill's Complex, Station Road, Port Erin",
+      "phone": "+441624832139",
+      "hours": "12 noon to 1pm"
+     },
+     "note": "Tynwald Day bank holiday"
+    },
+    {
+     "date": "2026-07-12",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Helmshore House, Bay View Road, Port St Mary",
+      "phone": "+441624832128",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-19",
+     "pharmacy": null,
+     "note": "No pharmacy on duty"
+    },
+    {
+     "date": "2026-07-26",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Darnill's Complex, Station Road, Port Erin",
+      "phone": "+441624832139",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-02",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Helmshore House, Bay View Road, Port St Mary",
+      "phone": "+441624832128",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-09",
+     "pharmacy": null,
+     "note": "No pharmacy on duty"
+    },
+    {
+     "date": "2026-08-16",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Darnill's Complex, Station Road, Port Erin",
+      "phone": "+441624832139",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-23",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Helmshore House, Bay View Road, Port St Mary",
+      "phone": "+441624832128",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-30",
+     "pharmacy": null,
+     "note": "No pharmacy on duty"
+    },
+    {
+     "date": "2026-09-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Darnill's Complex, Station Road, Port Erin",
+      "phone": "+441624832139",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-13",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Helmshore House, Bay View Road, Port St Mary",
+      "phone": "+441624832128",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-20",
+     "pharmacy": null,
+     "note": "No pharmacy on duty"
+    },
+    {
+     "date": "2026-09-27",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Darnill's Complex, Station Road, Port Erin",
+      "phone": "+441624832139",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    }
+   ]
+  },
+  {
+   "key": "peel",
+   "name": "Peel",
+   "entries": [
+    {
+     "date": "2026-07-05",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": "Tynwald Day bank holiday"
+    },
+    {
+     "date": "2026-07-12",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-19",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-26",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-02",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-09",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-16",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-23",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-30",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-13",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-20",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "8-10 Atholl Place, Peel",
+      "phone": "+441624842264",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-27",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "6-8 Michael Street, Peel",
+      "phone": "+441624843130",
+      "hours": "12 noon to 1pm"
+     },
+     "note": ""
+    }
+   ]
+  },
+  {
+   "key": "ramsey",
+   "name": "Ramsey",
+   "entries": [
+    {
+     "date": "2026-07-05",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "12pm to 1pm"
+     },
+     "note": "Tynwald Day bank holiday"
+    },
+    {
+     "date": "2026-07-12",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-19",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-07-26",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-02",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-09",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-16",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-23",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-08-30",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-06",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-13",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-20",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    },
+    {
+     "date": "2026-09-27",
+     "pharmacy": {
+      "name": "Clear Pharmacy",
+      "address": "Tesco, Ramsey",
+      "phone": "+441624812246",
+      "hours": "10am to 2pm"
+     },
+     "note": ""
+    }
+   ]
+  },
+  {
+   "key": "laxey-onchan",
+   "name": "Laxey & Onchan",
+   "entries": [],
+   "noRotaNote": "No rota arrangements for Laxey and Onchan."
+  }
+ ]
+}
