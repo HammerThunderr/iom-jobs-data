@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T11:17:54.760964+00:00",
-  "lastUpdated": "11:16 UTC",
+  "fetchedAt": "2026-08-01T11:58:57.029701+00:00",
+  "lastUpdated": "11:57 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 06:58",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -39,9 +31,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Gate closed",
+      "status": "Departed 12:27",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4503",
@@ -105,7 +97,7 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Arrived 11:43",
+      "status": "Arrived 11:41",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -113,9 +105,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "On-time",
+      "status": "Arrived 12:46",
       "origin": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
