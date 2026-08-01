@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T18:09:08.198743+00:00",
-  "lastUpdated": "18:08 UTC",
+  "fetchedAt": "2026-08-01T18:48:35.365086+00:00",
+  "lastUpdated": "18:48 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -81,9 +81,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "On-time",
+      "status": "Delayed 20:05",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "totalCount": 10,
