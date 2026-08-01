@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T12:19:07.543846+00:00",
-  "lastUpdated": "12:18 UTC",
+  "fetchedAt": "2026-08-01T13:14:14.257101+00:00",
+  "lastUpdated": "13:13 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -39,17 +39,17 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Boarding now",
+      "status": "Departed 14:12",
       "destination": "Palma De Mallorca",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -105,7 +105,7 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Arrived 12:46",
+      "status": "Arrived 12:44",
       "origin": "Palma De Mallorca",
       "statusType": "arrived"
     },
@@ -113,9 +113,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4548",
