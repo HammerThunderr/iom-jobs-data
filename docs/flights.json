@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T17:04:26.598307+00:00",
-  "lastUpdated": "17:03 UTC",
+  "fetchedAt": "2026-08-01T17:48:59.047812+00:00",
+  "lastUpdated": "17:48 UTC",
   "departures": [
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:27",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -54,14 +46,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "BA4504",
-      "airline": "British Airways",
-      "scheduled": "12:45",
-      "status": "Arrived 12:44",
-      "origin": "Palma De Mallorca",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
@@ -102,6 +86,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 10,
   "source": "airport.im"
 }
