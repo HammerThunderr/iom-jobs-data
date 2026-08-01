@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T18:52:37.020981+00:00",
-  "lastUpdated": "18:51 UTC",
+  "fetchedAt": "2026-08-01T18:56:38.650208+00:00",
+  "lastUpdated": "18:56 UTC",
   "departures": [
-    {
-      "flightNo": "BA4503",
-      "airline": "British Airways",
-      "scheduled": "13:55",
-      "status": "Departed 14:12",
-      "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -94,6 +86,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 10,
   "source": "airport.im"
 }
