@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-01T18:56:38.650208+00:00",
-  "lastUpdated": "18:56 UTC",
+  "fetchedAt": "2026-08-01T19:00:40.576570+00:00",
+  "lastUpdated": "19:00 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -81,9 +81,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "Delayed 20:00",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     }
   ],
   "totalCount": 10,
