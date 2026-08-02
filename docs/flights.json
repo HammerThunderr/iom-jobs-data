@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-02T22:23:32.924521+00:00",
-  "lastUpdated": "22:22 UTC",
+  "fetchedAt": "2026-08-02T22:27:35.176151+00:00",
+  "lastUpdated": "22:26 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -9,14 +9,6 @@
       "scheduled": "17:20",
       "status": "Departed 17:44",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 17:31",
-      "destination": "Liverpool",
       "statusType": "departed"
     },
     {
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
