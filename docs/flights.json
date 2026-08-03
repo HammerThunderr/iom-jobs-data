@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-03T16:52:01.115384+00:00",
-  "lastUpdated": "16:50 UTC",
+  "fetchedAt": "2026-08-03T16:56:03.527770+00:00",
+  "lastUpdated": "16:54 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "09:10",
-      "status": "Departed 12:07",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
@@ -174,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
