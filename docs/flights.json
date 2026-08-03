@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-03T14:25:45.232476+00:00",
-  "lastUpdated": "14:24 UTC",
+  "fetchedAt": "2026-08-03T14:29:47.375701+00:00",
+  "lastUpdated": "14:28 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -63,9 +63,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM677",
