@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-03T12:08:05.185504+00:00",
-  "lastUpdated": "12:07 UTC",
+  "fetchedAt": "2026-08-03T12:12:07.631455+00:00",
+  "lastUpdated": "12:11 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -63,9 +63,9 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Delayed 14:05",
+      "status": "Boarding shortly",
       "destination": "Bristol",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
