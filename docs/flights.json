@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-04T20:13:44.922246+00:00",
-  "lastUpdated": "20:13 UTC",
+  "fetchedAt": "2026-08-04T20:17:46.727087+00:00",
+  "lastUpdated": "20:17 UTC",
   "departures": [
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "15:20",
-      "status": "Departed 15:26",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
@@ -62,14 +54,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "15:25",
-      "status": "Arrived 15:12",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -118,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 12,
   "source": "airport.im"
 }
