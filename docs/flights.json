@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-04T18:20:49.287957+00:00",
-  "lastUpdated": "18:20 UTC",
+  "fetchedAt": "2026-08-04T18:24:51.515355+00:00",
+  "lastUpdated": "18:24 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -89,15 +89,15 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:55",
-      "status": "On-time",
+      "status": "Delayed",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Expected 20:04",
+      "status": "Expected 19:58",
       "origin": "London City",
       "statusType": "expected"
     },
