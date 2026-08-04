@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-04T00:17:36.666992+00:00",
-  "lastUpdated": "00:17 UTC",
+  "fetchedAt": "2026-08-04T01:53:29.524046+00:00",
+  "lastUpdated": "01:53 UTC",
   "departures": [
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "18:25",
-      "status": "Departed 19:43",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "19:05",
-      "status": "Departed 19:53",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -66,17 +50,25 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM677",
+      "airline": "Loganair",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "destination": "London City",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 20:04",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
@@ -124,8 +116,24 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
