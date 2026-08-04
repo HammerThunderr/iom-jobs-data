@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-04T08:55:43+00:00",
+    "generated": "2026-08-04T19:55:50+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -3232,24 +3232,6 @@
       "lastSeen": "2026-08-04"
     },
     {
-      "id": "gg-ballasalla-beech-grove",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/ballasalla-beech-grove/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1695000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "bungalow",
-      "address": "Well Presented True Bungalow with a Lovely Garden",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 628500,
-      "lastSeen": "2026-08-04"
-    },
-    {
       "id": "gg-ballasalla-bridge-road",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/ballasalla-bridge-road/",
@@ -3319,24 +3301,6 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 865000,
-      "lastSeen": "2026-08-04"
-    },
-    {
-      "id": "gg-colby-ballakilpheric-road-2",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/colby-ballakilpheric-road-2/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1695000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "cottage",
-      "address": "Charming Cottage in Need of Renovation",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 628500,
       "lastSeen": "2026-08-04"
     },
     {
@@ -3912,6 +3876,23 @@
       "lastSeen": "2026-08-04"
     },
     {
+      "id": "gg-jurby-ballacaine-cottages",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/jurby-ballacaine-cottages/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1695000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "bungalow",
+      "address": "Well Presented Bungalow in a Countryside Location",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-04",
+      "lastSeen": "2026-08-04"
+    },
+    {
       "id": "gg-kirk-michael-pennybridge-cottages-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/kirk-michael-pennybridge-cottages-1/",
@@ -4218,21 +4199,37 @@
       "lastSeen": "2026-08-04"
     },
     {
-      "id": "gg-ramsey-auldyn-meadow-drive-7",
+      "id": "gg-ramsey-auldyn-court",
       "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/ramsey-auldyn-meadow-drive-7/",
+      "url": "https://www.garforthgray.im/ramsey-auldyn-court/",
       "category": "residential",
       "listingType": "sale",
       "price": 1695000,
       "priceQualifier": "asking",
       "bedrooms": null,
       "bathrooms": null,
-      "propertyType": "detached",
-      "address": "Luxury Detached Bunaglow with a Landscaped Garden",
+      "propertyType": "apartment",
+      "address": "Modern Apartment with 2 Parking Spaces & a Garden",
       "parish": null,
       "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 628500,
+      "firstSeen": "2026-08-04",
+      "lastSeen": "2026-08-04"
+    },
+    {
+      "id": "gg-ramsey-claughbane-drive-6",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/ramsey-claughbane-drive-6/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1695000,
+      "priceQualifier": "asking",
+      "bedrooms": null,
+      "bathrooms": 2,
+      "propertyType": "bungalow",
+      "address": "Extended Bungalow with Large Plot and Outbuilding",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-04",
       "lastSeen": "2026-08-04"
     },
     {
