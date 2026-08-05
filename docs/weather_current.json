@@ -1,14 +1,1 @@
-{
-  "success": true,
-  "feedTitle": "Weather forecast for the Isle of Man",
-  "lastUpdated": "",
-  "fetchedAt": "2026-08-05T04:07:07.339132+00:00",
-  "items": [
-    {
-      "title": "Weather forecast updated as of 5 August 2026 4:14am",
-      "description": "##Weather##\n\nIssued on Wednesday, 05 August 2026 at 4:15am by Ronaldsway Met Office\n##Detailed forecast##\n\nMainly dry to start with variable amounts of cloud then showery outbreaks of rain developing in the afternoon and evening. Becoming windy as a fresh to strong west or southwest wind develops with gusts to around 40mph in places. Maximum temperature 17°C.\n\nMainly dry tomorrow with bright or sunny spells. Fresh west or northwest winds steadily decreasing through the day and top temperatures of 18°C.\n\n\n##Outlook##\n\nDry with sunny spells on Friday. Moderate to fresh mainly southwest wind and a highest temperature of 18°C.\n\n\n##Sunrise##\n\n5:38am Today\n\n\n##Sunset##\n\n9:10pm Today",
-      "pubDate": "Wed 05 Aug 2026, 03:14",
-      "link": "https://www.gov.im/weather/"
-    }
-  ]
-}
+{"success": false, "error": "403 Client Error: Forbidden for url: https://www.gov.im/weather/RssCurrentForecast", "items": []}
