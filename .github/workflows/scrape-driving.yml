@@ -1,0 +1,111 @@
+# .github/workflows/scrape-driving.yml
+#
+# Approved driving instructor register — refreshed monthly.
+#
+# The register changes as instructors qualify or leave, so this keeps the
+# app's list current without any manual work.
+#
+# gov.im RATE-LIMITS. This fetches exactly one page per run, once a month.
+# Do not increase the frequency or add retry loops.
+#
+# Output: docs/driving.json
+
+name: Scrape Driving Instructors
+
+on:
+  schedule:
+    # 04:00 UTC on the 2nd of each month. The register is updated
+    # infrequently, so monthly is plenty.
+    - cron: "0 4 2 * *"
+  workflow_dispatch:
+
+concurrency:
+  group: scrape-driving
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Snapshot previous data
+        run: |
+          if [ -f docs/driving.json ]; then
+            cp docs/driving.json /tmp/previous.json
+          fi
+
+      - name: Scrape register
+        env:
+          OUTPUT_PATH: docs/driving.json
+        run: python scripts/driving/scrape_instructors.py
+
+      - name: Sanity check
+        run: |
+          python - <<'PY'
+          import json, os, sys
+
+          data = json.load(open("docs/driving.json", encoding="utf-8"))
+          now = len(data.get("instructors", []))
+          print(f"Scraped {now} instructors")
+
+          if now == 0:
+              sys.exit("ABORT: no instructors parsed.")
+
+          # A sharp drop means the page layout changed, not that half the
+          # island's instructors retired overnight.
+          if os.path.exists("/tmp/previous.json"):
+              before = len(json.load(open("/tmp/previous.json"))["instructors"])
+              print(f"Previous run had {before}")
+              if before >= 10 and now < before * 0.7:
+                  sys.exit(f"ABORT: {now} vs {before} previously — layout likely changed.")
+
+          # Contact details are the whole point of the feature.
+          reachable = sum(
+              1 for i in data["instructors"] if i.get("mobile") or i.get("email")
+          )
+          print(f"{reachable} have a phone or email")
+          if reachable < now * 0.7:
+              sys.exit("ABORT: most instructors have no contact details.")
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/driving.json
+
+          if git diff --staged --quiet; then
+            echo "Register unchanged"
+            exit 0
+          fi
+
+          COUNT=$(python -c "import json;print(len(json.load(open('docs/driving.json'))['instructors']))")
+          git commit -m "Update driving instructor register ($COUNT) [skip ci]"
+
+          # Other scrapers commit to this branch too, so rebase and retry.
+          BRANCH=${{ github.ref_name }}
+          for ATTEMPT in 1 2 3 4 5; do
+            if git push origin HEAD:"$BRANCH"; then
+              echo "Pushed on attempt $ATTEMPT"
+              exit 0
+            fi
+            git pull --rebase --autostash origin "$BRANCH" || true
+            sleep 5
+          done
+          exit 1
