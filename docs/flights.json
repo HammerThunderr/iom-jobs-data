@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-05T19:31:18.670135+00:00",
-  "lastUpdated": "19:30 UTC",
+  "fetchedAt": "2026-08-05T19:35:21.311621+00:00",
+  "lastUpdated": "19:34 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "6I451",
+      "airline": "Air Alsie",
+      "scheduled": "10:30",
+      "status": "On-time",
+      "origin": "Soenderborg",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
