@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-06T11:54:12.075287+00:00",
-  "lastUpdated": "11:53 UTC",
+  "fetchedAt": "2026-08-06T11:58:14.287972+00:00",
+  "lastUpdated": "11:57 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,9 +39,9 @@
       "flightNo": "6I452",
       "airline": "Air Alsie",
       "scheduled": "11:30",
-      "status": "Taxied 12:46",
+      "status": "Departed 12:56",
       "destination": "Copenhagen",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -153,7 +153,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "Expected 13:10",
+      "status": "Expected 13:06",
       "origin": "Newquay, via Manchester",
       "statusType": "expected"
     },
