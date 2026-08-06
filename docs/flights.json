@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-05T23:47:25.764005+00:00",
-  "lastUpdated": "23:46 UTC",
+  "fetchedAt": "2026-08-06T00:49:48.627031+00:00",
+  "lastUpdated": "00:48 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -49,6 +49,22 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "15:45",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -116,8 +132,24 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "15:10",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 18,
   "source": "airport.im"
 }
