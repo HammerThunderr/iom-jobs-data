@@ -3,7 +3,7 @@
   "updated": "2026-07-25",
   "features": {
     "property": {
-      "enabled": false,
+      "enabled": true,
       "message": "The property listings feature is temporarily unavailable."
     },
     "bins": {
@@ -85,6 +85,10 @@
     "railways": {
       "enabled": true,
       "message": "Timetables are temporarily unavailable."
+    },
+    "driving": {
+      "enabled": true,
+      "message": "The driving section is temporarily unavailable."
     }
   },
   "banner": {
