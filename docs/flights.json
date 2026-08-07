@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T12:12:04.125330+00:00",
-  "lastUpdated": "12:10 UTC",
+  "fetchedAt": "2026-08-07T12:16:06.600402+00:00",
+  "lastUpdated": "12:14 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -39,9 +39,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Gate closed",
+      "status": "Departed 13:11",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM637",
