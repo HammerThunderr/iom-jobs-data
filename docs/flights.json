@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T12:16:06.600402+00:00",
-  "lastUpdated": "12:14 UTC",
+  "fetchedAt": "2026-08-07T12:20:08.925678+00:00",
+  "lastUpdated": "12:19 UTC",
   "departures": [
-    {
-      "flightNo": "LM314",
-      "airline": "Loganair",
-      "scheduled": "06:55",
-      "status": "Departed 07:26",
-      "destination": "Edinburgh",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -47,9 +39,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Gate closed",
+      "status": "Taxied 13:16",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY234",
@@ -238,6 +230,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 29,
+  "totalCount": 28,
   "source": "airport.im"
 }
