@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T08:03:49.760083+00:00",
-  "lastUpdated": "08:03 UTC",
+  "fetchedAt": "2026-08-07T08:07:53.119938+00:00",
+  "lastUpdated": "08:07 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -129,9 +129,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Final approach",
+      "status": "Landed 09:05",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
