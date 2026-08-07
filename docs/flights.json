@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T15:45:35.400359+00:00",
-  "lastUpdated": "15:44 UTC",
+  "fetchedAt": "2026-08-07T15:49:37.564273+00:00",
+  "lastUpdated": "15:48 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,9 +47,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Gate closed",
+      "status": "Taxied 16:47",
       "destination": "London City",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY716",
@@ -145,7 +145,7 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Delayed 17:10",
+      "status": "Delayed 17:20",
       "origin": "Manchester",
       "statusType": "delayed"
     },
