@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T22:22:08.922896+00:00",
-  "lastUpdated": "22:20 UTC",
+  "fetchedAt": "2026-08-07T23:01:03.442958+00:00",
+  "lastUpdated": "22:59 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "17:15",
-      "status": "Departed 17:57",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -74,6 +66,14 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4503",
+      "airline": "British Airways",
+      "scheduled": "13:55",
+      "status": "On-time",
+      "destination": "Palma De Mallorca",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -83,22 +83,6 @@
       "scheduled": "17:45",
       "status": "Arrived 18:26",
       "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "17:50",
-      "status": "Arrived 17:31",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "18:00",
-      "status": "Arrived 17:58",
-      "origin": "London Gatwick",
       "statusType": "arrived"
     },
     {
@@ -158,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 17,
   "source": "airport.im"
 }
