@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T09:28:42.421832+00:00",
-  "lastUpdated": "09:28 UTC",
+  "fetchedAt": "2026-08-07T09:32:44.749396+00:00",
+  "lastUpdated": "09:31 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -31,9 +31,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:20",
-      "status": "Gate closed",
+      "status": "Departed 10:29",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
