@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T12:24:11.293408+00:00",
-  "lastUpdated": "12:23 UTC",
+  "fetchedAt": "2026-08-07T13:44:34.769315+00:00",
+  "lastUpdated": "13:43 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,15 +39,15 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Taxied 13:16",
+      "status": "Departed 13:26",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Delayed 15:30",
+      "status": "Delayed 15:55",
       "destination": "Bristol",
       "statusType": "delayed"
     },
@@ -95,7 +95,7 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Delayed 19:10",
+      "status": "Delayed 19:15",
       "destination": "Liverpool",
       "statusType": "delayed"
     },
@@ -153,7 +153,7 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Delayed 15:00",
+      "status": "Delayed 15:20",
       "origin": "Bristol",
       "statusType": "delayed"
     },
@@ -169,15 +169,15 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Expected 15:15",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Delayed 17:15",
+      "status": "Delayed 17:10",
       "origin": "Manchester",
       "statusType": "delayed"
     },
