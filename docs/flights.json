@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T14:04:49.421966+00:00",
-  "lastUpdated": "14:03 UTC",
+  "fetchedAt": "2026-08-07T14:43:26.050424+00:00",
+  "lastUpdated": "14:42 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "09:30",
-      "status": "Departed 09:44",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -47,7 +39,7 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Bristol",
       "statusType": "boarding"
     },
@@ -55,9 +47,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Delayed 16:30",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM677",
@@ -110,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 09:10",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:25",
@@ -153,25 +137,25 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Delayed 15:20",
+      "status": "Arrived 15:31",
       "origin": "Bristol",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Delayed 16:00",
+      "status": "Landed 15:41",
       "origin": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Delayed 15:32",
+      "status": "Arrived 15:27",
       "origin": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY715",
@@ -230,6 +214,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 26,
   "source": "airport.im"
 }
