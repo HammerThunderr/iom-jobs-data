@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T14:47:28.772124+00:00",
-  "lastUpdated": "14:47 UTC",
+  "fetchedAt": "2026-08-07T14:51:32.035399+00:00",
+  "lastUpdated": "14:51 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -39,15 +39,15 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Bristol",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Manchester",
       "statusType": "boarding"
     },
