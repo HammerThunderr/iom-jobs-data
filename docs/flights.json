@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T20:42:33.152664+00:00",
-  "lastUpdated": "20:41 UTC",
+  "fetchedAt": "2026-08-07T20:46:35.406775+00:00",
+  "lastUpdated": "20:45 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -94,14 +94,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "15:05",
-      "status": "Arrived 15:43",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:45",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
