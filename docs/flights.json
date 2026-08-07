@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T11:29:08.218647+00:00",
-  "lastUpdated": "11:28 UTC",
+  "fetchedAt": "2026-08-07T11:33:10.353054+00:00",
+  "lastUpdated": "11:32 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -153,7 +153,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Delayed 12:45",
+      "status": "Delayed 12:40",
       "origin": "Manchester",
       "statusType": "delayed"
     },
@@ -161,9 +161,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:25",
+      "status": "Arrived 12:27",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY233",
