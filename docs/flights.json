@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T20:46:35.406775+00:00",
-  "lastUpdated": "20:45 UTC",
+  "fetchedAt": "2026-08-07T21:07:00.060145+00:00",
+  "lastUpdated": "21:05 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -89,6 +89,14 @@
       "scheduled": "09:45",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "12:05",
+      "status": "On-time",
+      "destination": "London Heathrow",
       "statusType": "ontime"
     }
   ],
@@ -182,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 23,
   "source": "airport.im"
 }
