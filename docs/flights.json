@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T16:01:44.764651+00:00",
-  "lastUpdated": "16:01 UTC",
+  "fetchedAt": "2026-08-07T16:39:02.501619+00:00",
+  "lastUpdated": "16:38 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "11:30",
-      "status": "Departed 11:42",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
@@ -55,7 +47,7 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -63,17 +55,17 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding shortly",
+      "status": "Departed 17:32",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -145,9 +137,9 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Delayed 17:09",
+      "status": "Arrived 17:12",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
@@ -169,9 +161,9 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:50",
-      "status": "On-time",
+      "status": "Arrived 17:31",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY843",
@@ -198,6 +190,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
