@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T08:24:04.614976+00:00",
-  "lastUpdated": "08:23 UTC",
+  "fetchedAt": "2026-08-07T09:28:42.421832+00:00",
+  "lastUpdated": "09:28 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -23,17 +23,17 @@
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "Gate closed",
+      "status": "Departed 09:44",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:20",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM675",
@@ -47,9 +47,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Delayed 12:45",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM637",
@@ -87,7 +87,7 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Delayed 17:35",
+      "status": "Delayed 17:45",
       "destination": "Manchester",
       "statusType": "delayed"
     },
@@ -137,9 +137,9 @@
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:25",
-      "status": "Delayed 09:41",
+      "status": "Arrived 09:44",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM313",
@@ -161,9 +161,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Delayed 12:15",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY233",
@@ -193,7 +193,7 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Delayed 17:00",
+      "status": "Delayed 17:15",
       "origin": "Manchester",
       "statusType": "delayed"
     },
