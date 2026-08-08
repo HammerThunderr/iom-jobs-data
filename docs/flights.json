@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T22:07:54.887135+00:00",
-  "lastUpdated": "22:07 UTC",
+  "fetchedAt": "2026-08-08T22:11:57.542743+00:00",
+  "lastUpdated": "22:10 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -66,6 +66,14 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "13:10",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -118,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
