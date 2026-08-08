@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T11:54:44.361858+00:00",
-  "lastUpdated": "11:53 UTC",
+  "fetchedAt": "2026-08-08T11:58:46.876758+00:00",
+  "lastUpdated": "11:57 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:02",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
