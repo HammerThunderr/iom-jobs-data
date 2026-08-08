@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T22:18:52.928436+00:00",
-  "lastUpdated": "22:18 UTC",
+  "fetchedAt": "2026-08-08T22:22:55.041615+00:00",
+  "lastUpdated": "22:22 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -78,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 17:21",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
@@ -123,6 +115,14 @@
       "scheduled": "12:30",
       "status": "On-time",
       "origin": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "13:20",
+      "status": "On-time",
+      "origin": "Birmingham",
       "statusType": "ontime"
     }
   ],
