@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T23:04:58.345221+00:00",
-  "lastUpdated": "23:04 UTC",
+  "fetchedAt": "2026-08-08T23:09:00.458574+00:00",
+  "lastUpdated": "23:07 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -58,6 +58,14 @@
       "status": "On-time",
       "destination": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "14:05",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -110,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
