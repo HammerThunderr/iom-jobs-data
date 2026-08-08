@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T21:14:05.997173+00:00",
-  "lastUpdated": "21:13 UTC",
+  "fetchedAt": "2026-08-08T21:17:12.032002+00:00",
+  "lastUpdated": "21:16 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -58,6 +58,14 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -110,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
