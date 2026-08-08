@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T19:26:04.540499+00:00",
-  "lastUpdated": "19:25 UTC",
+  "fetchedAt": "2026-08-08T19:49:08.393854+00:00",
+  "lastUpdated": "19:48 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -42,17 +42,17 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "14:30",
-      "status": "Arrived 14:39",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
