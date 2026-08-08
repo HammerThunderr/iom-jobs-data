@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T17:18:22.872038+00:00",
-  "lastUpdated": "17:17 UTC",
+  "fetchedAt": "2026-08-08T17:24:48.843759+00:00",
+  "lastUpdated": "17:23 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:29",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -94,6 +86,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 10,
   "source": "airport.im"
 }
