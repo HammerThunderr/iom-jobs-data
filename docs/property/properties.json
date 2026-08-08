@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-08T07:11:29+00:00",
+    "generated": "2026-08-08T18:53:54+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 72,
-        "withPrice": 72,
+        "count": 70,
+        "withPrice": 70,
         "status": "ok"
       }
     ],
@@ -3410,24 +3410,6 @@
       "lastSeen": "2026-08-08"
     },
     {
-      "id": "gg-crosby-orchard-view",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/crosby-orchard-view/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1695000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Beautifully Presented Modern Home in Saddlestone",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-01",
-      "previousPrice": 628500,
-      "lastSeen": "2026-08-08"
-    },
-    {
       "id": "gg-douglas-1-2-woodville-terrace-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-1-2-woodville-terrace-1/",
@@ -3764,21 +3746,20 @@
       "lastSeen": "2026-08-08"
     },
     {
-      "id": "gg-douglas-highview-road",
+      "id": "gg-douglas-harris-terrace-1",
       "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-highview-road/",
+      "url": "https://www.garforthgray.im/douglas-harris-terrace-1/",
       "category": "residential",
       "listingType": "sale",
       "price": 1695000,
       "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Spacious Beautifully Refurbished Family Home",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "propertyType": "townhouse",
+      "address": "Spacious Townhouse in a Central Location",
       "parish": null,
       "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-01",
-      "previousPrice": 628500,
+      "firstSeen": "2026-08-08",
       "lastSeen": "2026-08-08"
     },
     {
@@ -4205,23 +4186,6 @@
       "bathrooms": null,
       "propertyType": "apartment",
       "address": "Modern Apartment with 2 Parking Spaces & a Garden",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-04",
-      "lastSeen": "2026-08-08"
-    },
-    {
-      "id": "gg-ramsey-claughbane-drive-6",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/ramsey-claughbane-drive-6/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1695000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": 2,
-      "propertyType": "bungalow",
-      "address": "Extended Bungalow with Large Plot and Outbuilding",
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-04",
