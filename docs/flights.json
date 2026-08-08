@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T19:22:02.132440+00:00",
-  "lastUpdated": "19:21 UTC",
+  "fetchedAt": "2026-08-08T19:26:04.540499+00:00",
+  "lastUpdated": "19:25 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
