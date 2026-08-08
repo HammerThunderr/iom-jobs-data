@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T22:22:55.041615+00:00",
-  "lastUpdated": "22:22 UTC",
+  "fetchedAt": "2026-08-08T22:26:57.158331+00:00",
+  "lastUpdated": "22:26 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -17,14 +17,6 @@
       "scheduled": "17:20",
       "status": "Departed 17:59",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Departed 17:33",
-      "destination": "Manchester",
       "statusType": "departed"
     },
     {
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
