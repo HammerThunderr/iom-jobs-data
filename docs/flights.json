@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T16:25:12.297650+00:00",
-  "lastUpdated": "16:24 UTC",
+  "fetchedAt": "2026-08-08T16:29:15.044780+00:00",
+  "lastUpdated": "16:28 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -39,17 +39,17 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 17:45",
+      "status": "Boarding now",
       "destination": "Dublin",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Gate closed",
+      "status": "Taxied 17:26",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     }
   ],
   "arrivals": [
@@ -59,14 +59,6 @@
       "scheduled": "11:25",
       "status": "Arrived 11:34",
       "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:23",
-      "origin": "Liverpool",
       "statusType": "arrived"
     },
     {
@@ -118,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
