@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T23:24:07.133300+00:00",
-  "lastUpdated": "23:23 UTC",
+  "fetchedAt": "2026-08-08T23:28:09.436493+00:00",
+  "lastUpdated": "23:27 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -116,8 +116,16 @@
       "status": "On-time",
       "origin": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "14:25",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
