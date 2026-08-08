@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T18:35:27.389664+00:00",
-  "lastUpdated": "18:35 UTC",
+  "fetchedAt": "2026-08-08T18:39:29.449992+00:00",
+  "lastUpdated": "18:39 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -15,9 +15,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Delayed 20:30",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -73,9 +73,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "Expected 19:41",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "scheduled"
     }
   ],
   "totalCount": 9,
