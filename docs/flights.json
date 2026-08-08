@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-07T23:57:46.169878+00:00",
-  "lastUpdated": "23:57 UTC",
+  "fetchedAt": "2026-08-08T00:01:48.638747+00:00",
+  "lastUpdated": "00:01 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -49,6 +49,14 @@
       "scheduled": "13:55",
       "status": "On-time",
       "destination": "Palma De Mallorca",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "15:00",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -118,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
