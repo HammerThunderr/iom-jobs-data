@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T15:03:00.897642+00:00",
-  "lastUpdated": "15:02 UTC",
+  "fetchedAt": "2026-08-08T15:07:02.741535+00:00",
+  "lastUpdated": "15:06 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -97,9 +97,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Delayed 16:19",
+      "status": "On-time",
       "origin": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EI3216",
