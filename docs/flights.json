@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T17:06:16.948849+00:00",
-  "lastUpdated": "17:05 UTC",
+  "fetchedAt": "2026-08-08T17:10:18.943500+00:00",
+  "lastUpdated": "17:09 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -9,14 +9,6 @@
       "scheduled": "12:05",
       "status": "Departed 12:29",
       "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:15",
-      "destination": "Liverpool",
       "statusType": "departed"
     },
     {
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
