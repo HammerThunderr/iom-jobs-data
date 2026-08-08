@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-08T11:21:49.509415+00:00",
-  "lastUpdated": "11:20 UTC",
+  "fetchedAt": "2026-08-08T11:25:51.576189+00:00",
+  "lastUpdated": "11:24 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,9 +31,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "Gate closed",
+      "status": "Taxied 12:20",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY520",
@@ -113,9 +113,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Expected 12:20",
+      "status": "Final approach",
       "origin": "Palma De Mallorca",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY841",
