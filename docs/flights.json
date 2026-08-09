@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T10:21:39.660131+00:00",
-  "lastUpdated": "10:20 UTC",
+  "fetchedAt": "2026-08-09T10:58:24.227482+00:00",
+  "lastUpdated": "10:57 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,15 +31,15 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "Delayed 12:15",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Delayed 12:30",
+      "status": "Delayed 12:55",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -47,9 +47,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "On-time",
+      "status": "Delayed 13:22",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM697",
@@ -121,15 +121,15 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "10:50",
-      "status": "Delayed 11:26",
+      "status": "Arrived 11:30",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:00",
+      "status": "Delayed 12:20",
       "origin": "Dublin",
       "statusType": "delayed"
     },
