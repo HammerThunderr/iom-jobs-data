@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T15:42:46.744757+00:00",
-  "lastUpdated": "15:41 UTC",
+  "fetchedAt": "2026-08-09T15:46:49.061224+00:00",
+  "lastUpdated": "15:44 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "10:45",
-      "status": "Departed 10:51",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -161,9 +153,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Final approach",
+      "status": "Landed 16:42",
       "origin": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
@@ -190,6 +182,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
