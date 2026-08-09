@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T16:02:41.143978+00:00",
-  "lastUpdated": "16:01 UTC",
+  "fetchedAt": "2026-08-09T16:06:43.947820+00:00",
+  "lastUpdated": "16:05 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -71,9 +71,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
