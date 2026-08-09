@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T22:59:44.993723+00:00",
-  "lastUpdated": "22:58 UTC",
+  "fetchedAt": "2026-08-09T23:03:47.789366+00:00",
+  "lastUpdated": "23:03 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -9,14 +9,6 @@
       "scheduled": "14:55",
       "status": "Departed 19:45",
       "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 18:11",
-      "destination": "London City",
       "statusType": "departed"
     },
     {
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
