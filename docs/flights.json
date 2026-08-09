@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T19:53:13.990160+00:00",
-  "lastUpdated": "19:52 UTC",
+  "fetchedAt": "2026-08-09T19:57:16.577134+00:00",
+  "lastUpdated": "19:56 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -161,9 +161,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Delayed 20:59",
+      "status": "Final approach",
       "origin": "London City",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY515",
