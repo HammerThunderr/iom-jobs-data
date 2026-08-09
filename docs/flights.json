@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T12:42:36.876290+00:00",
-  "lastUpdated": "12:41 UTC",
+  "fetchedAt": "2026-08-09T13:28:06.002280+00:00",
+  "lastUpdated": "13:27 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -39,9 +39,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Gate closed",
+      "status": "Departed 14:04",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -55,7 +55,7 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "Delayed 17:35",
+      "status": "Delayed 16:35",
       "destination": "Liverpool",
       "statusType": "delayed"
     },
@@ -79,9 +79,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 17:35",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3217",
@@ -129,7 +129,7 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
-      "status": "Arrived 12:59",
+      "status": "Arrived 13:00",
       "origin": "Edinburgh",
       "statusType": "arrived"
     },
@@ -137,7 +137,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "13:20",
-      "status": "Arrived 13:09",
+      "status": "Arrived 13:07",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -145,7 +145,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "Delayed 17:00",
+      "status": "Delayed 16:05",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -185,9 +185,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "On-time",
+      "status": "Delayed 17:00",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM688",
@@ -201,9 +201,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Delayed 21:20",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "totalCount": 25,
