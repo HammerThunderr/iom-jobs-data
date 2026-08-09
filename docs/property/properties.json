@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-09T07:15:06+00:00",
+    "generated": "2026-08-09T18:58:07+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 70,
-        "withPrice": 70,
+        "count": 72,
+        "withPrice": 72,
         "status": "ok"
       }
     ],
@@ -3510,9 +3510,9 @@
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "Ground Floor Apartment with Sea Views",
-      "parish": null,
+      "propertyType": "flat",
+      "address": "Centrally Located Flat Just off Douglas Promenade",
+      "parish": "Douglas",
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-09",
       "lastSeen": "2026-08-09"
@@ -4092,6 +4092,23 @@
       "lastSeen": "2026-08-09"
     },
     {
+      "id": "gg-peel-walpole-road",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/peel-walpole-road/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 599950,
+      "priceQualifier": "asking",
+      "bedrooms": null,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Coastal Living in the Heart of Peel",
+      "parish": "Peel",
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-09",
+      "lastSeen": "2026-08-09"
+    },
+    {
       "id": "gg-port-erin-cronk-view-crescent-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/port-erin-cronk-view-crescent-1/",
@@ -4179,6 +4196,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 1695000,
+      "lastSeen": "2026-08-09"
+    },
+    {
+      "id": "gg-ramsey-3-mona-street",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/ramsey-3-mona-street/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 599950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "A Little Gem in the Heart of Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-09",
       "lastSeen": "2026-08-09"
     },
     {
