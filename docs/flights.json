@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T12:26:25.309744+00:00",
-  "lastUpdated": "12:25 UTC",
+  "fetchedAt": "2026-08-09T12:30:28.246830+00:00",
+  "lastUpdated": "12:29 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -153,9 +153,9 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "On-time",
+      "status": "Delayed 15:01",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY843",
