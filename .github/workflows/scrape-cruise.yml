@@ -1,0 +1,104 @@
+# .github/workflows/scrape-cruise.yml
+#
+# Cruise schedule — refreshed weekly.
+#
+# The schedule changes through the season (the PDF was on Version 16 by late
+# July), so weekly keeps it current. The scraper follows whatever PDF the
+# schedule page currently links to rather than a hardcoded versioned URL.
+#
+# Output: docs/cruise.json
+
+name: Scrape Cruise Schedule
+
+on:
+  schedule:
+    - cron: "0 5 * * 1"   # Mondays at 05:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: scrape-cruise
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 pdfplumber
+
+      - name: Snapshot previous data
+        run: |
+          if [ -f docs/cruise.json ]; then
+            cp docs/cruise.json /tmp/previous.json
+          fi
+
+      - name: Scrape schedule
+        env:
+          OUTPUT_PATH: docs/cruise.json
+        run: python scripts/cruise/scrape_cruise.py
+
+      - name: Sanity check
+        run: |
+          python - <<'PY'
+          import json, os, sys
+
+          data = json.load(open("docs/cruise.json", encoding="utf-8"))
+          calls = data.get("calls", [])
+          print(f"Parsed {len(calls)} cruise calls")
+          print(f"  version: {data['meta'].get('scheduleVersion') or 'not stated'}")
+
+          if not calls:
+              sys.exit("ABORT: no calls parsed.")
+
+          # Every call needs a date and a ship name to be worth showing.
+          usable = sum(1 for c in calls if c.get("date") and c.get("ship"))
+          print(f"  usable : {usable}")
+          if usable < len(calls) * 0.8:
+              sys.exit("ABORT: most calls are missing a date or ship name.")
+
+          # A collapse means the PDF layout changed, not that the season ended.
+          if os.path.exists("/tmp/previous.json"):
+              before = len(json.load(open("/tmp/previous.json"))["calls"])
+              print(f"  previous run: {before}")
+              if before >= 10 and len(calls) < before * 0.6:
+                  sys.exit(f"ABORT: {len(calls)} vs {before} previously.")
+          PY
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/cruise.json
+
+          if git diff --staged --quiet; then
+            echo "Schedule unchanged"
+            exit 0
+          fi
+
+          COUNT=$(python -c "import json;print(len(json.load(open('docs/cruise.json'))['calls']))")
+          git commit -m "Update cruise schedule ($COUNT calls) [skip ci]"
+
+          BRANCH=${{ github.ref_name }}
+          for ATTEMPT in 1 2 3 4 5; do
+            if git push origin HEAD:"$BRANCH"; then
+              echo "Pushed on attempt $ATTEMPT"
+              exit 0
+            fi
+            git pull --rebase --autostash origin "$BRANCH" || true
+            sleep 5
+          done
+          exit 1
