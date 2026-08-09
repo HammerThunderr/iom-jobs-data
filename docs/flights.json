@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T15:38:44.570846+00:00",
-  "lastUpdated": "15:37 UTC",
+  "fetchedAt": "2026-08-09T15:42:46.744757+00:00",
+  "lastUpdated": "15:41 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -79,9 +79,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -161,15 +161,15 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Expected 16:36",
+      "status": "Final approach",
       "origin": "Dublin",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Delayed 17:40",
+      "status": "Delayed 17:42",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
