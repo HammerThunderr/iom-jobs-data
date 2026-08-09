@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T22:39:21.240260+00:00",
-  "lastUpdated": "22:38 UTC",
+  "fetchedAt": "2026-08-09T22:55:42.463785+00:00",
+  "lastUpdated": "22:54 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -110,22 +110,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "16:15",
-      "status": "Arrived 17:47",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "16:55",
-      "status": "Arrived 17:38",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:40",
@@ -206,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 23,
   "source": "airport.im"
 }
