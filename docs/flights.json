@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T15:14:23.568607+00:00",
-  "lastUpdated": "15:13 UTC",
+  "fetchedAt": "2026-08-09T15:18:25.593531+00:00",
+  "lastUpdated": "15:17 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -161,9 +161,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Expected 16:40",
+      "status": "Delayed 17:10",
       "origin": "Dublin",
-      "statusType": "expected"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
