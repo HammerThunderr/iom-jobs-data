@@ -141,6 +141,7 @@ def scrape():
     calls = []
     version_note = ""
     season = SEASON
+    last_call = None  # carried across continuation rows
 
     try:
         with pdfplumber.open(path) as pdf:
@@ -156,18 +157,13 @@ def scrape():
                 if match:
                     season = match.group(1)
 
-                for table in page.extract_tables() or []:
-                    for row in table:
-                        parsed = parse_row(row, season)
-                        if parsed:
-                            calls.append(parsed)
-
-                # Some pages render as text rather than a detected table.
-                if not calls:
-                    for line in text.split("\n"):
-                        parsed = parse_text_line(line, season)
-                        if parsed:
-                            calls.append(parsed)
+                # Text, not extract_tables(): this PDF's rows are not drawn
+                # as a table, and table extraction found 2 rows out of 40.
+                for line in text.split("\n"):
+                    parsed = parse_line(line, season, last_call)
+                    if parsed:
+                        last_call = parsed["callNumber"]
+                        calls.append(parsed)
     finally:
         if os.path.exists(path):
             os.remove(path)
@@ -202,65 +198,126 @@ def scrape():
     print(f"  upcoming: {len(upcoming)}")
 
 
-def parse_row(row, season):
-    """A table row from the schedule PDF."""
-    if not row or len(row) < 6:
+PORTS = ("Douglas Bay", "Calf of Man", "Douglas", "Peel", "Ramsey")
+
+WEEKDAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday",
+            "Saturday", "Sunday")
+
+# Some cruise lines are two or three words, so the ship name cannot simply be
+# "the first word". These are matched against the end of the ship+line text
+# and stripped off, longest first so "Seabourn Cruises" wins over "Seabourn".
+KNOWN_LINES = sorted([
+    "Compagnie du Ponant", "Seabourn Cruises", "Noble Caledonia",
+    "Hebridean Island Cruises", "Aurora Expeditions", "Windstar Cruises",
+    "Grand Circle Travel", "Phoenix Reisen", "Hapag-Lloyd Cruises",
+    "Saga Cruises", "Azamara", "Regent Seven Seas Cruises",
+    "Crystal Cruises", "Holland America Line", "Oceania Cruises",
+    "Swan Hellenic", "Carnival Cruise Line", "Seadream Yachts",
+    "Ponant", "Silversea", "Viking Ocean Cruises", "Fred Olsen Cruise Lines",
+    "Cunard", "P&O Cruises", "Princess Cruises", "Celebrity Cruises",
+], key=len, reverse=True)
+
+
+def split_ship_and_line(text):
+    """'Zuiderdam Holland America Line' -> ('Zuiderdam', 'Holland America Line')
+
+    Falls back to putting everything in the ship name rather than guessing —
+    a wrong split is worse than an unsplit label.
+    """
+    cleaned = " ".join(text.split())
+    for line in KNOWN_LINES:
+        if cleaned.endswith(line):
+            ship = cleaned[: -len(line)].strip()
+            if ship:
+                return ship, line
+    return cleaned, ""
+
+
+def parse_line(text, season, last_call=None):
+    """Parse one row of the schedule as plain text.
+
+    pdfplumber does not detect this PDF's rows as a table, so the text path is
+    the primary one — an earlier version relied on extract_tables() and found
+    only 2 rows out of 40.
+
+    Handles two awkward cases seen in the real file:
+      * continuation rows for a second port call, which omit the call number
+      * "-" in the Pax and Crew columns, meaning no figure given
+    """
+    line = " ".join((text or "").split())
+    if not line:
         return None
-    cells = [(c or "").strip() for c in row]
-    joined = " ".join(cells)
-    if "Ship Name" in joined or "Call Number" in joined:
-        return None
-    return build_call(cells, season)
-
-
-def parse_text_line(line, season):
-    """Fallback for pages where the table is not detected as a table."""
-    if not line or "Ship Name" in line or "PLEASE NOTE" in line:
-        return None
-    # Lines start with a call number and contain a time like 08:00.
-    if not re.match(r"^\s*\d{1,3}\s", line) or ":" not in line:
-        return None
-    return None  # table extraction is the reliable path; do not guess here
-
-
-def build_call(cells, season):
-    joined = " ".join(cells)
-
-    when = parse_date(joined, season)
-    if when is None:
+    if "Ship Name" in line or "PLEASE NOTE" in line or "CRUISE SCHEDULE" in line:
         return None
 
-    times = re.findall(r"\d{1,2}:\d{2}", joined)
+    # Find the port, but NOT inside a ship's name — the vessel "Douglas
+    # Mawson" would otherwise be split at "Douglas" and lose its name.
+    # The real port always sits immediately before the weekday, so search
+    # from the weekday backwards.
+    weekday_match = re.search(r"\b(?:%s)\b" % "|".join(WEEKDAYS), line)
+    if weekday_match is None:
+        return None
+    head = line[: weekday_match.start()]
+
+    port = None
+    port_at = -1
+    for candidate in PORTS:
+        found = head.rfind(candidate)
+        if found > port_at:
+            port, port_at = candidate, found
+    if port is None or port_at < 0:
+        return None
+
+    times = re.findall(r"\b(\d{1,2}:\d{2})\b", line)
     if not times:
         return None
 
-    call_number = to_int(cells[0]) if cells and cells[0] else None
+    call_number = last_call
+    match = re.match(r"^(\d{1,3})\s+", line)
+    if match:
+        call_number = int(match.group(1))
+        rest = line[match.end():]
+    else:
+        rest = line
 
-    # Ports are a known short list, which makes them a reliable anchor for
-    # splitting the ship/line text from everything after it.
-    port = ""
-    for candidate in ("Douglas Bay", "Calf of Man", "Douglas", "Peel", "Ramsey"):
-        if candidate in joined:
-            port = candidate
-            break
+    # Split at the located occurrence, not the first match in the string.
+    offset = port_at - (len(line) - len(rest))
+    if offset < 0:
+        offset = rest.rfind(port)
+    before_port = rest[:offset].strip()
+    after_port = rest[offset + len(port):].strip()
 
-    before_port = joined.split(port)[0] if port else joined
-    before_port = re.sub(r"^\s*\d{1,3}\s+", "", before_port).strip()
+    date_match = re.search(
+        r"(?:%s),?\s+(\d{1,2})\s+([A-Za-z]+)" % "|".join(WEEKDAYS),
+        after_port,
+    )
+    if not date_match:
+        return None
+    day = int(date_match.group(1))
+    month = MONTHS.get(date_match.group(2).lower())
+    if month is None:
+        return None
+    try:
+        when = date(int(season), month, day)
+    except ValueError:
+        return None
 
-    numbers = [to_int(n) for n in re.findall(r"\b\d{2,5}\b", joined.split(times[-1])[-1])]
-    passengers = numbers[0] if len(numbers) > 0 else None
-    crew = numbers[1] if len(numbers) > 1 else None
+    # Pax and crew are the trailing integers after the final time.
+    tail = after_port.rsplit(times[-1], 1)[-1]
+    numbers = [int(n) for n in re.findall(r"\b(\d{2,5})\b", tail)]
+
+    ship, cruise_line = split_ship_and_line(before_port)
 
     return {
         "callNumber": call_number,
-        "ship": before_port,
-        "line": "",
+        "ship": ship,
+        "line": cruise_line,
         "port": port,
         "date": when.isoformat(),
         "eta": clean_time(times[0]),
         "etd": clean_time(times[-1]) if len(times) > 1 else "",
-        "passengers": passengers,
-        "crew": crew,
+        "passengers": numbers[0] if len(numbers) > 0 else None,
+        "crew": numbers[1] if len(numbers) > 1 else None,
     }
 
 
