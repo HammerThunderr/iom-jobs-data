@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T21:30:42.242891+00:00",
-  "lastUpdated": "21:29 UTC",
+  "fetchedAt": "2026-08-09T21:34:44.918837+00:00",
+  "lastUpdated": "21:33 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -196,8 +196,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "6I451",
+      "airline": "Air Alsie",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Copenhagen",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 25,
   "source": "airport.im"
 }
