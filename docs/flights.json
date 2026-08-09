@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T22:19:08.771600+00:00",
-  "lastUpdated": "22:18 UTC",
+  "fetchedAt": "2026-08-09T22:23:11.228526+00:00",
+  "lastUpdated": "22:22 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -17,14 +17,6 @@
       "scheduled": "16:50",
       "status": "Departed 18:11",
       "destination": "London City",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:29",
-      "destination": "Dublin",
       "statusType": "departed"
     },
     {
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
