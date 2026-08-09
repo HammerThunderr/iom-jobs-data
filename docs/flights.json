@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T11:51:50.137602+00:00",
-  "lastUpdated": "11:50 UTC",
+  "fetchedAt": "2026-08-09T11:55:52.398048+00:00",
+  "lastUpdated": "11:54 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -137,9 +137,9 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
-      "status": "Delayed 12:58",
+      "status": "Final approach",
       "origin": "Edinburgh",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM638",
