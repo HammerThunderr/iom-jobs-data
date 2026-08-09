@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-09T11:02:26.695750+00:00",
-  "lastUpdated": "11:01 UTC",
+  "fetchedAt": "2026-08-09T11:06:29.408693+00:00",
+  "lastUpdated": "11:05 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,9 +31,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "11:35",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3213",
