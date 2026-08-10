@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T19:46:41.609338+00:00",
-  "lastUpdated": "19:45 UTC",
+  "fetchedAt": "2026-08-10T20:06:24.356044+00:00",
+  "lastUpdated": "20:05 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -78,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "15:05",
-      "status": "Cancelled",
-      "origin": "Birmingham",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
@@ -129,9 +121,9 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Delayed 21:22",
+      "status": "Landed 21:03",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM682",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
