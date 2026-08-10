@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T11:59:51.872699+00:00",
-  "lastUpdated": "11:58 UTC",
+  "fetchedAt": "2026-08-10T12:38:48.282382+00:00",
+  "lastUpdated": "12:38 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -55,7 +55,7 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Next info at 13:30",
+      "status": "Next info at 14:30",
       "destination": "Birmingham",
       "statusType": "scheduled"
     },
@@ -63,17 +63,17 @@
       "flightNo": "6I452",
       "airline": "Air Alsie",
       "scheduled": "13:30",
-      "status": "Delayed 14:00",
+      "status": "Boarding now",
       "destination": "Soenderborg",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Boarding now",
+      "status": "Taxied 13:33",
       "destination": "Bristol",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
@@ -118,14 +118,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "07:50",
-      "status": "Arrived 07:28",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "08:40",
@@ -169,9 +161,9 @@
       "flightNo": "6I451",
       "airline": "Air Alsie",
       "scheduled": "12:30",
-      "status": "Delayed 13:51",
+      "status": "Arrived 13:29",
       "origin": "Copenhagen",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY233",
@@ -238,6 +230,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 29,
+  "totalCount": 28,
   "source": "airport.im"
 }
