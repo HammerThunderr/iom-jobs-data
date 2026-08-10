@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T12:54:58.393843+00:00",
-  "lastUpdated": "12:54 UTC",
+  "fetchedAt": "2026-08-10T12:59:01.203701+00:00",
+  "lastUpdated": "12:58 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -55,9 +55,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Next info at 14:30",
+      "status": "Cancelled",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "6I452",
@@ -177,9 +177,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "On-time",
+      "status": "Cancelled",
       "origin": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "LM676",
