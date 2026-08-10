@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T11:43:41.882793+00:00",
-  "lastUpdated": "11:42 UTC",
+  "fetchedAt": "2026-08-10T11:47:44.080979+00:00",
+  "lastUpdated": "11:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -185,9 +185,9 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Expected 12:49",
+      "status": "Final approach",
       "origin": "Bristol",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM638",
