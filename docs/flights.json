@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T11:51:47.703254+00:00",
-  "lastUpdated": "11:50 UTC",
+  "fetchedAt": "2026-08-10T11:55:49.725475+00:00",
+  "lastUpdated": "11:54 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -79,9 +79,9 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Bristol",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
@@ -185,7 +185,7 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Landed 12:48",
+      "status": "Arrived 12:52",
       "origin": "Bristol",
       "statusType": "arrived"
     },
