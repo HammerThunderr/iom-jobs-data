@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T11:55:49.725475+00:00",
-  "lastUpdated": "11:54 UTC",
+  "fetchedAt": "2026-08-10T11:59:51.872699+00:00",
+  "lastUpdated": "11:58 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:02",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -63,7 +55,7 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Next info at 13:00",
+      "status": "Next info at 13:30",
       "destination": "Birmingham",
       "statusType": "scheduled"
     },
@@ -177,7 +169,7 @@
       "flightNo": "6I451",
       "airline": "Air Alsie",
       "scheduled": "12:30",
-      "status": "Delayed 13:30",
+      "status": "Delayed 13:51",
       "origin": "Copenhagen",
       "statusType": "delayed"
     },
@@ -246,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 29,
   "source": "airport.im"
 }
