@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T14:18:10.197514+00:00",
-  "lastUpdated": "14:17 UTC",
+  "fetchedAt": "2026-08-10T14:22:13.091965+00:00",
+  "lastUpdated": "14:21 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "09:10",
-      "status": "Departed 09:27",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -161,7 +153,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Delayed 15:51",
+      "status": "Delayed 15:48",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
@@ -206,6 +198,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
