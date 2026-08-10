@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T11:39:39.968110+00:00",
-  "lastUpdated": "11:38 UTC",
+  "fetchedAt": "2026-08-10T11:43:41.882793+00:00",
+  "lastUpdated": "11:42 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -55,9 +55,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Gate closed",
+      "status": "Departed 12:38",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM637",
@@ -71,9 +71,9 @@
       "flightNo": "6I452",
       "airline": "Air Alsie",
       "scheduled": "13:30",
-      "status": "On-time",
+      "status": "Delayed 14:00",
       "destination": "Soenderborg",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY234",
@@ -87,9 +87,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Delayed 16:36",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM677",
@@ -111,9 +111,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "On-time",
+      "status": "Delayed 19:17",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY844",
@@ -177,15 +177,15 @@
       "flightNo": "6I451",
       "airline": "Air Alsie",
       "scheduled": "12:30",
-      "status": "On-time",
+      "status": "Delayed 13:30",
       "origin": "Copenhagen",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Expected 12:51",
+      "status": "Expected 12:49",
       "origin": "Bristol",
       "statusType": "expected"
     },
