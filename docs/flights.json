@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-10T03:24:01.225877+00:00",
-  "lastUpdated": "03:22 UTC",
+  "fetchedAt": "2026-08-10T05:00:54.652221+00:00",
+  "lastUpdated": "04:59 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -97,6 +97,22 @@
       "scheduled": "17:20",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM687",
+      "airline": "Loganair",
+      "scheduled": "18:25",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY844",
+      "airline": "easyJet",
+      "scheduled": "19:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -196,8 +212,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY843",
+      "airline": "easyJet",
+      "scheduled": "18:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 27,
   "source": "airport.im"
 }
