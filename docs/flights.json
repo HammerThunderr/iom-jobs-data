@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-11T20:35:21.722801+00:00",
-  "lastUpdated": "20:34 UTC",
+  "fetchedAt": "2026-08-11T20:39:24.663775+00:00",
+  "lastUpdated": "20:38 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -49,6 +49,14 @@
       "scheduled": "10:05",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Heathrow",
       "statusType": "ontime"
     }
   ],
@@ -102,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
