@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-11T14:01:04.818735+00:00",
-  "lastUpdated": "14:00 UTC",
+  "fetchedAt": "2026-08-11T14:05:07.099224+00:00",
+  "lastUpdated": "14:04 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -39,9 +39,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM677",
