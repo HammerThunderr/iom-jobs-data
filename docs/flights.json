@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-11T17:03:34.738570+00:00",
-  "lastUpdated": "17:03 UTC",
+  "fetchedAt": "2026-08-11T17:45:41.835315+00:00",
+  "lastUpdated": "17:45 UTC",
   "departures": [
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "12:15",
-      "status": "Departed 12:20",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -39,9 +31,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "Gate closed",
+      "status": "Departed 18:18",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
