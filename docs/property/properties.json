@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-11T07:25:26+00:00",
+    "generated": "2026-08-11T19:19:06+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 73,
-        "withPrice": 73,
+        "count": 72,
+        "withPrice": 72,
         "status": "ok"
       }
     ],
@@ -3589,24 +3589,6 @@
       "lastSeen": "2026-08-11"
     },
     {
-      "id": "gg-douglas-brisbane-street-5",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-brisbane-street-5/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1735000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Stunning Extended Family Home with Large Garage",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-01",
-      "previousPrice": 599950,
-      "lastSeen": "2026-08-11"
-    },
-    {
       "id": "gg-douglas-brunswick-road-6",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-brunswick-road-6/",
@@ -3823,6 +3805,23 @@
       "lastSeen": "2026-08-11"
     },
     {
+      "id": "gg-foxdale-meainyn-close",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/foxdale-meainyn-close/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "detached bungalow",
+      "address": "Spacious Detached Bungalow Set on a Large Plot",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-11",
+      "lastSeen": "2026-08-11"
+    },
+    {
       "id": "gg-jurby-ballacaine-cottages",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/jurby-ballacaine-cottages/",
@@ -3945,24 +3944,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 599950,
-      "lastSeen": "2026-08-11"
-    },
-    {
-      "id": "gg-onchan-belgravia-road-1",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/onchan-belgravia-road-1/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1735000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Beautifully Presented Spacious & Versatile Home",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-01",
       "previousPrice": 599950,
       "lastSeen": "2026-08-11"
     },
