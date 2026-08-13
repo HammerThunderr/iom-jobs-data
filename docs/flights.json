@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-13T20:39:37.065949+00:00",
-  "lastUpdated": "20:39 UTC",
+  "fetchedAt": "2026-08-13T20:43:39.673513+00:00",
+  "lastUpdated": "20:43 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -148,8 +148,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "11:40",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
