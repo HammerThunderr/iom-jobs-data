@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-13T15:43:22.907186+00:00",
-  "lastUpdated": "15:42 UTC",
+  "fetchedAt": "2026-08-13T15:47:25.767381+00:00",
+  "lastUpdated": "15:46 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,7 +47,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Dublin",
       "statusType": "boarding"
     },
@@ -105,7 +105,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Landed 16:39",
+      "status": "Arrived 16:42",
       "origin": "Dublin",
       "statusType": "arrived"
     },
