@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-13T05:18:37.878038+00:00",
-  "lastUpdated": "05:18 UTC",
+  "fetchedAt": "2026-08-13T05:22:40.169407+00:00",
+  "lastUpdated": "05:22 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM693",
