@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-13T18:26:00.818305+00:00",
-  "lastUpdated": "18:25 UTC",
+  "fetchedAt": "2026-08-13T18:30:03.725054+00:00",
+  "lastUpdated": "18:29 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -70,14 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "13:25",
-      "status": "Arrived 13:25",
-      "origin": "Newquay, via Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "15:10",
@@ -121,7 +113,7 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:55",
-      "status": "Delayed",
+      "status": "Delayed 21:00",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
@@ -129,7 +121,7 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Expected 20:08",
+      "status": "Expected 20:01",
       "origin": "London City",
       "statusType": "expected"
     },
@@ -139,6 +131,14 @@
       "scheduled": "09:00",
       "status": "On-time",
       "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:25",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
