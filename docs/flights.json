@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T15:11:56.343131+00:00",
-  "lastUpdated": "15:11 UTC",
+  "fetchedAt": "2026-08-14T15:15:59.184445+00:00",
+  "lastUpdated": "15:15 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,9 +47,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY716",
