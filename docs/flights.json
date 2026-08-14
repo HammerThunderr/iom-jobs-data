@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T16:10:46.883900+00:00",
-  "lastUpdated": "16:10 UTC",
+  "fetchedAt": "2026-08-14T16:14:48.980081+00:00",
+  "lastUpdated": "16:14 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -55,17 +55,17 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
@@ -177,7 +177,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "Expected 17:52",
+      "status": "Expected 17:36",
       "origin": "London Gatwick",
       "statusType": "expected"
     },
