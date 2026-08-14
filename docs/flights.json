@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-13T23:28:53.992737+00:00",
-  "lastUpdated": "23:28 UTC",
+  "fetchedAt": "2026-08-14T00:03:50.293824+00:00",
+  "lastUpdated": "00:03 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "14:45",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
