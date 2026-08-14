@@ -1,31 +1,11 @@
 {
   "success": true,
-  "lastUpdated": "2026-08-13",
+  "lastUpdated": "2026-08-14",
   "source": "Isle of Man Government (gov.im) - Crown Copyright, OGL",
   "ports": [
     {
       "name": "Douglas",
       "days": [
-        {
-          "date": "2026-08-13",
-          "tides": [
-            {
-              "type": "low",
-              "time": "06:50",
-              "height_m": 0.79
-            },
-            {
-              "type": "high",
-              "time": "12:39",
-              "height_m": 6.81
-            },
-            {
-              "type": "low",
-              "time": "18:58",
-              "height_m": 0.57
-            }
-          ]
-        },
         {
           "date": "2026-08-14",
           "tides": [
@@ -175,37 +155,37 @@
               "height_m": 2.25
             }
           ]
+        },
+        {
+          "date": "2026-08-20",
+          "tides": [
+            {
+              "type": "high",
+              "time": "04:55",
+              "height_m": 5.83
+            },
+            {
+              "type": "low",
+              "time": "11:27",
+              "height_m": 1.9
+            },
+            {
+              "type": "high",
+              "time": "17:35",
+              "height_m": 5.58
+            },
+            {
+              "type": "low",
+              "time": "23:54",
+              "height_m": 2.64
+            }
+          ]
         }
       ]
     },
     {
       "name": "Peel",
       "days": [
-        {
-          "date": "2026-08-13",
-          "tides": [
-            {
-              "type": "low",
-              "time": "06:34",
-              "height_m": 0.13
-            },
-            {
-              "type": "high",
-              "time": "12:38",
-              "height_m": 5.22
-            },
-            {
-              "type": "low",
-              "time": "18:45",
-              "height_m": 0.37
-            },
-            {
-              "type": "high",
-              "time": "00:53",
-              "height_m": 5.4
-            }
-          ]
-        },
         {
           "date": "2026-08-14",
           "tides": [
@@ -350,37 +330,37 @@
               "height_m": 1.35
             }
           ]
+        },
+        {
+          "date": "2026-08-20",
+          "tides": [
+            {
+              "type": "high",
+              "time": "04:46",
+              "height_m": 4.43
+            },
+            {
+              "type": "low",
+              "time": "10:52",
+              "height_m": 1.47
+            },
+            {
+              "type": "high",
+              "time": "17:14",
+              "height_m": 4.28
+            },
+            {
+              "type": "low",
+              "time": "23:12",
+              "height_m": 1.66
+            }
+          ]
         }
       ]
     },
     {
       "name": "Port Erin",
       "days": [
-        {
-          "date": "2026-08-13",
-          "tides": [
-            {
-              "type": "low",
-              "time": "06:22",
-              "height_m": 0.15
-            },
-            {
-              "type": "high",
-              "time": "12:35",
-              "height_m": 5.14
-            },
-            {
-              "type": "low",
-              "time": "18:35",
-              "height_m": 0.49
-            },
-            {
-              "type": "high",
-              "time": "00:47",
-              "height_m": 5.54
-            }
-          ]
-        },
         {
           "date": "2026-08-14",
           "tides": [
@@ -525,37 +505,37 @@
               "height_m": 1.39
             }
           ]
+        },
+        {
+          "date": "2026-08-20",
+          "tides": [
+            {
+              "type": "high",
+              "time": "04:57",
+              "height_m": 4.37
+            },
+            {
+              "type": "low",
+              "time": "11:10",
+              "height_m": 1.48
+            },
+            {
+              "type": "high",
+              "time": "17:29",
+              "height_m": 4.15
+            },
+            {
+              "type": "low",
+              "time": "23:39",
+              "height_m": 1.72
+            }
+          ]
         }
       ]
     },
     {
       "name": "Port St Mary Harbour",
       "days": [
-        {
-          "date": "2026-08-13",
-          "tides": [
-            {
-              "type": "low",
-              "time": "06:31",
-              "height_m": 0.23
-            },
-            {
-              "type": "high",
-              "time": "12:38",
-              "height_m": 5.92
-            },
-            {
-              "type": "low",
-              "time": "18:42",
-              "height_m": 0.47
-            },
-            {
-              "type": "high",
-              "time": "00:53",
-              "height_m": 6.14
-            }
-          ]
-        },
         {
           "date": "2026-08-14",
           "tides": [
@@ -700,37 +680,37 @@
               "height_m": 1.45
             }
           ]
+        },
+        {
+          "date": "2026-08-20",
+          "tides": [
+            {
+              "type": "high",
+              "time": "04:52",
+              "height_m": 4.96
+            },
+            {
+              "type": "low",
+              "time": "10:52",
+              "height_m": 1.57
+            },
+            {
+              "type": "high",
+              "time": "17:20",
+              "height_m": 4.78
+            },
+            {
+              "type": "low",
+              "time": "23:12",
+              "height_m": 1.76
+            }
+          ]
         }
       ]
     },
     {
       "name": "Ramsey",
       "days": [
-        {
-          "date": "2026-08-13",
-          "tides": [
-            {
-              "type": "low",
-              "time": "06:44",
-              "height_m": 0.56
-            },
-            {
-              "type": "high",
-              "time": "12:38",
-              "height_m": 7.43
-            },
-            {
-              "type": "low",
-              "time": "18:55",
-              "height_m": 0.87
-            },
-            {
-              "type": "high",
-              "time": "00:53",
-              "height_m": 7.73
-            }
-          ]
-        },
         {
           "date": "2026-08-14",
           "tides": [
@@ -873,6 +853,31 @@
               "type": "low",
               "time": "22:35",
               "height_m": 2.11
+            }
+          ]
+        },
+        {
+          "date": "2026-08-20",
+          "tides": [
+            {
+              "type": "high",
+              "time": "04:52",
+              "height_m": 6.11
+            },
+            {
+              "type": "low",
+              "time": "11:02",
+              "height_m": 2.26
+            },
+            {
+              "type": "high",
+              "time": "17:20",
+              "height_m": 5.87
+            },
+            {
+              "type": "low",
+              "time": "23:22",
+              "height_m": 2.5
             }
           ]
         }
