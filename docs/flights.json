@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T17:30:37.786213+00:00",
-  "lastUpdated": "17:30 UTC",
+  "fetchedAt": "2026-08-14T17:34:39.808222+00:00",
+  "lastUpdated": "17:34 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -9,14 +9,6 @@
       "scheduled": "12:15",
       "status": "Departed 12:50",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "12:35",
-      "status": "Departed 12:41",
-      "destination": "Birmingham",
       "statusType": "departed"
     },
     {
@@ -174,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
