@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T03:19:54.875362+00:00",
-  "lastUpdated": "03:19 UTC",
+  "fetchedAt": "2026-08-14T03:23:56.732534+00:00",
+  "lastUpdated": "03:23 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -97,6 +97,14 @@
       "scheduled": "17:20",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "18:20",
+      "status": "On-time",
+      "destination": "Liverpool",
       "statusType": "ontime"
     }
   ],
@@ -206,6 +214,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 26,
   "source": "airport.im"
 }
