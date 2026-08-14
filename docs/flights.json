@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T23:30:00.616155+00:00",
-  "lastUpdated": "23:29 UTC",
+  "fetchedAt": "2026-08-14T23:43:08.538023+00:00",
+  "lastUpdated": "23:42 UTC",
   "departures": [
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Departed 18:48",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -115,6 +107,14 @@
       "scheduled": "12:45",
       "status": "On-time",
       "origin": "Palma De Mallorca",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
