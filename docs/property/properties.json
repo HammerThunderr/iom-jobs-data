@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-14T07:43:08+00:00",
+    "generated": "2026-08-14T19:12:53+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -10,14 +10,14 @@
       },
       {
         "agent": "Cowley Groves",
-        "count": 184,
+        "count": 186,
         "withPrice": 136,
         "status": "ok"
       },
       {
         "agent": "Garforth Gray",
-        "count": 73,
-        "withPrice": 73,
+        "count": 77,
+        "withPrice": 77,
         "status": "ok"
       }
     ],
@@ -1168,6 +1168,23 @@
       "lastSeen": "2026-08-14"
     },
     {
+      "id": "cg-apt-1-28-murrays-road-douglas-im2-3hp",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-1-28-murrays-road-douglas-im2-3hp/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "propertyType": null,
+      "address": "Apt. 1, 28 Murrays Road, Douglas, IM2 3HP",
+      "parish": "Douglas",
+      "postcode": "IM2 3HP",
+      "firstSeen": "2026-08-14",
+      "lastSeen": "2026-08-14"
+    },
+    {
       "id": "cg-apt-1-7-royal-avenue-west-onchan-im3-1hb",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-1-7-royal-avenue-west-onchan-im3-1hb/",
@@ -1712,6 +1729,23 @@
       "parish": "Ramsey",
       "postcode": "IM8 1LN",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-14"
+    },
+    {
+      "id": "cg-apt-6-2-rosebank-court-stevenson-way-farmhill-im2-2pd",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-6-2-rosebank-court-stevenson-way-farmhill-im2-2pd/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Apt. 6, 2 Rosebank Court, Stevenson Way, Farmhill, IM2 2PD",
+      "parish": null,
+      "postcode": "IM2 2PD",
+      "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-14"
     },
     {
@@ -3481,24 +3515,6 @@
       "lastSeen": "2026-08-14"
     },
     {
-      "id": "gg-douglas-23-the-crescent",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-23-the-crescent/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1735000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Beautifully Renovated Spacious Family Home",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-07",
-      "previousPrice": 599950,
-      "lastSeen": "2026-08-14"
-    },
-    {
       "id": "gg-douglas-3-ballanard-woods",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-3-ballanard-woods/",
@@ -3550,6 +3566,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-31",
       "previousPrice": 599950,
+      "lastSeen": "2026-08-14"
+    },
+    {
+      "id": "gg-douglas-ballacottier-meadow-7",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-ballacottier-meadow-7/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Modern Mid-Terrace Home in a Popular Location",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-14"
     },
     {
@@ -3748,6 +3781,23 @@
       "lastSeen": "2026-08-14"
     },
     {
+      "id": "gg-douglas-empress-apartments",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-empress-apartments/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Ground Floor Apartment with Beautiful Sea Views",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-14",
+      "lastSeen": "2026-08-14"
+    },
+    {
       "id": "gg-douglas-farmhill-lane-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-farmhill-lane-1/",
@@ -3817,6 +3867,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 599950,
+      "lastSeen": "2026-08-14"
+    },
+    {
+      "id": "gg-douglas-spectrum-apartments-12",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-spectrum-apartments-12/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Stunning Apartment with Magnificent Sea Views",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-14"
     },
     {
@@ -3981,6 +4048,23 @@
       "lastSeen": "2026-08-14"
     },
     {
+      "id": "gg-onchan-birchleigh-close-2",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/onchan-birchleigh-close-2/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Modernised Home with Double Garage",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-14",
+      "lastSeen": "2026-08-14"
+    },
+    {
       "id": "gg-onchan-derwent-drive-4",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/onchan-derwent-drive-4/",
@@ -4139,6 +4223,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 599950,
+      "lastSeen": "2026-08-14"
+    },
+    {
+      "id": "gg-port-erin-spaldrick-avenue",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/port-erin-spaldrick-avenue/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1735000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Extended Home with Lovely Open Aspects",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-14"
     },
     {
