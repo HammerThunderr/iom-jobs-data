@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-14T00:11:56.241061+00:00",
-  "lastUpdated": "00:11 UTC",
+  "fetchedAt": "2026-08-14T00:15:59.005095+00:00",
+  "lastUpdated": "00:15 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -65,6 +65,14 @@
       "scheduled": "12:35",
       "status": "On-time",
       "destination": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY234",
+      "airline": "easyJet",
+      "scheduled": "15:15",
+      "status": "On-time",
+      "destination": "Bristol",
       "statusType": "ontime"
     }
   ],
@@ -150,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
