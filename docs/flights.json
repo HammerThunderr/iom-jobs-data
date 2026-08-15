@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T19:12:26.356763+00:00",
-  "lastUpdated": "19:12 UTC",
+  "fetchedAt": "2026-08-15T19:40:59.271656+00:00",
+  "lastUpdated": "19:40 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -54,14 +54,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "14:30",
-      "status": "Arrived 14:31",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
@@ -84,6 +76,14 @@
       "status": "Arrived 19:47",
       "origin": "Manchester",
       "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "totalCount": 10,
