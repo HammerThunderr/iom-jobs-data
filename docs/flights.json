@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T13:48:30.830859+00:00",
-  "lastUpdated": "13:47 UTC",
+  "fetchedAt": "2026-08-15T13:52:33.289092+00:00",
+  "lastUpdated": "13:51 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,9 +47,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
