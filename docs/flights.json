@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T07:57:02.655996+00:00",
-  "lastUpdated": "07:56 UTC",
+  "fetchedAt": "2026-08-15T08:01:05.427612+00:00",
+  "lastUpdated": "08:00 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -15,9 +15,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Gate closed",
+      "status": "Taxied 08:55",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM681",
