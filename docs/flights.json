@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T11:40:48.076484+00:00",
-  "lastUpdated": "11:40 UTC",
+  "fetchedAt": "2026-08-15T11:44:50.063650+00:00",
+  "lastUpdated": "11:44 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Gate closed",
+      "status": "Taxied 12:41",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "BA4503",
