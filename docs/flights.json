@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T02:18:10.253881+00:00",
-  "lastUpdated": "02:17 UTC",
+  "fetchedAt": "2026-08-15T02:22:12.740899+00:00",
+  "lastUpdated": "02:21 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -57,6 +57,14 @@
       "scheduled": "15:00",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3217",
+      "airline": "Aer Lingus",
+      "scheduled": "17:20",
+      "status": "On-time",
+      "destination": "Dublin",
       "statusType": "ontime"
     }
   ],
@@ -126,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
