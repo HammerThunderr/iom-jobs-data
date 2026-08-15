@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T00:46:50.538967+00:00",
-  "lastUpdated": "00:46 UTC",
+  "fetchedAt": "2026-08-15T00:50:53.023837+00:00",
+  "lastUpdated": "00:50 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -62,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 19:49",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
