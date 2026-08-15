@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T11:28:46.144579+00:00",
-  "lastUpdated": "11:28 UTC",
+  "fetchedAt": "2026-08-15T11:40:48.076484+00:00",
+  "lastUpdated": "11:40 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -105,7 +105,7 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Arrived 12:02",
+      "status": "Arrived 12:01",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -113,9 +113,9 @@
       "flightNo": "BA4504",
       "airline": "British Airways",
       "scheduled": "12:45",
-      "status": "Final approach",
+      "status": "Arrived 12:38",
       "origin": "Palma De Mallorca",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
