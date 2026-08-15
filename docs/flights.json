@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T21:09:28.115301+00:00",
-  "lastUpdated": "21:08 UTC",
+  "fetchedAt": "2026-08-15T21:13:30.527048+00:00",
+  "lastUpdated": "21:13 UTC",
   "departures": [
-    {
-      "flightNo": "BA4503",
-      "airline": "British Airways",
-      "scheduled": "13:55",
-      "status": "Departed 16:21",
-      "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
