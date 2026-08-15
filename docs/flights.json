@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T18:30:53.930415+00:00",
-  "lastUpdated": "18:30 UTC",
+  "fetchedAt": "2026-08-15T18:52:13.253045+00:00",
+  "lastUpdated": "18:51 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -42,6 +42,14 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "09:50",
+      "status": "On-time",
+      "destination": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -73,11 +81,11 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "Delayed 20:08",
+      "status": "Arrived 19:47",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "arrived"
     }
   ],
-  "totalCount": 9,
+  "totalCount": 10,
   "source": "airport.im"
 }
