@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T08:17:01.848744+00:00",
-  "lastUpdated": "08:16 UTC",
+  "fetchedAt": "2026-08-15T08:21:04.425946+00:00",
+  "lastUpdated": "08:20 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "On-time",
+      "status": "Delayed 12:35",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "BA4503",
@@ -81,9 +81,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "09:15",
-      "status": "Final approach",
+      "status": "Landed 09:18",
       "origin": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
@@ -105,9 +105,9 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Delayed 12:00",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "BA4504",
