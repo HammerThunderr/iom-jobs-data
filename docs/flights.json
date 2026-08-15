@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T20:29:21.972629+00:00",
-  "lastUpdated": "20:28 UTC",
+  "fetchedAt": "2026-08-15T20:44:07.114974+00:00",
+  "lastUpdated": "20:43 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -50,6 +50,14 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -94,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 12,
   "source": "airport.im"
 }
