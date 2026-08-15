@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T19:45:01.774794+00:00",
-  "lastUpdated": "19:44 UTC",
+  "fetchedAt": "2026-08-15T19:49:04.797615+00:00",
+  "lastUpdated": "19:48 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -50,6 +50,14 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -86,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 11,
   "source": "airport.im"
 }
