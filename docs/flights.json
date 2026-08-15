@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T10:44:38.503290+00:00",
-  "lastUpdated": "10:44 UTC",
+  "fetchedAt": "2026-08-15T10:48:41.055888+00:00",
+  "lastUpdated": "10:48 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Delayed 12:40",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "BA4503",
@@ -105,7 +105,7 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Delayed 12:09",
+      "status": "Delayed 12:01",
       "origin": "Liverpool",
       "statusType": "delayed"
     },
