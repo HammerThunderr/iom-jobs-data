@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T20:09:08.718686+00:00",
-  "lastUpdated": "20:08 UTC",
+  "fetchedAt": "2026-08-15T20:13:10.981982+00:00",
+  "lastUpdated": "20:12 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -9,14 +9,6 @@
       "scheduled": "13:55",
       "status": "Departed 16:21",
       "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "15:00",
-      "status": "Departed 15:21",
-      "destination": "London Gatwick",
       "statusType": "departed"
     },
     {
@@ -102,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 11,
   "source": "airport.im"
 }
