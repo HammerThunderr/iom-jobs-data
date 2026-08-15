@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-15T14:48:03.870312+00:00",
-  "lastUpdated": "14:47 UTC",
+  "fetchedAt": "2026-08-15T14:52:06.853430+00:00",
+  "lastUpdated": "14:51 UTC",
   "departures": [
-    {
-      "flightNo": "LM681",
-      "airline": "Loganair",
-      "scheduled": "09:45",
-      "status": "Departed 10:03",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -105,9 +97,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Delayed 16:16",
+      "status": "On-time",
       "origin": "London Heathrow",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EI3216",
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
