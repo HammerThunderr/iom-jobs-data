@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T20:47:25.790671+00:00",
-  "lastUpdated": "20:46 UTC",
+  "fetchedAt": "2026-08-16T20:51:28.351702+00:00",
+  "lastUpdated": "20:50 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "15:15",
-      "status": "Departed 16:01",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY844",
       "airline": "easyJet",
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
