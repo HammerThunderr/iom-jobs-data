@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T10:10:58.295851+00:00",
-  "lastUpdated": "10:10 UTC",
+  "fetchedAt": "2026-08-16T10:15:00.840659+00:00",
+  "lastUpdated": "10:14 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -121,9 +121,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "10:50",
-      "status": "Delayed 11:14",
+      "status": "Final approach",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3212",
