@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T14:52:36.213141+00:00",
-  "lastUpdated": "14:52 UTC",
+  "fetchedAt": "2026-08-16T14:56:38.769446+00:00",
+  "lastUpdated": "14:56 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -153,7 +153,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
-      "status": "Delayed 16:24",
+      "status": "Delayed 16:21",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -169,9 +169,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Expected 16:30",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM676",
