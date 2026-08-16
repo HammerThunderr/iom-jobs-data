@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T08:34:15.296879+00:00",
-  "lastUpdated": "08:33 UTC",
+  "fetchedAt": "2026-08-16T08:53:08.678588+00:00",
+  "lastUpdated": "08:52 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -15,9 +15,9 @@
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "09:50",
-      "status": "Boarding now",
+      "status": "Departed 09:47",
       "destination": "Edinburgh",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM637",
@@ -113,9 +113,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "10:15",
-      "status": "Delayed 10:27",
+      "status": "Expected 10:00",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY841",
