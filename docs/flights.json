@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T13:57:32.143025+00:00",
-  "lastUpdated": "13:57 UTC",
+  "fetchedAt": "2026-08-16T14:01:34.796603+00:00",
+  "lastUpdated": "14:01 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -55,7 +55,7 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Liverpool",
       "statusType": "boarding"
     },
@@ -153,7 +153,7 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Delayed 15:15",
+      "status": "Delayed 15:13",
       "origin": "Manchester",
       "statusType": "delayed"
     },
