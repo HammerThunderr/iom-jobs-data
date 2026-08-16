@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T09:15:31.594237+00:00",
-  "lastUpdated": "09:14 UTC",
+  "fetchedAt": "2026-08-16T09:19:33.609398+00:00",
+  "lastUpdated": "09:18 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -23,9 +23,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "10:45",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
