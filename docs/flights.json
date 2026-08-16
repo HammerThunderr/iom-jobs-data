@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T21:29:02.729675+00:00",
-  "lastUpdated": "21:28 UTC",
+  "fetchedAt": "2026-08-16T21:39:49.016132+00:00",
+  "lastUpdated": "21:38 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -90,17 +90,17 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "12:35",
+      "status": "On-time",
+      "destination": "Birmingham",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 16:32",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
