@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T15:17:14.811409+00:00",
-  "lastUpdated": "15:16 UTC",
+  "fetchedAt": "2026-08-16T15:21:16.951865+00:00",
+  "lastUpdated": "15:21 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -145,23 +145,23 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
-      "status": "Final approach",
+      "status": "Arrived 16:18",
       "origin": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:15",
-      "status": "Delayed 16:24",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Expected 16:36",
+      "status": "Expected 16:24",
       "origin": "Dublin",
       "statusType": "expected"
     },
@@ -169,7 +169,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Delayed 17:02",
+      "status": "Delayed 17:08",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
