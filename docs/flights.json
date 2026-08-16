@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T21:59:59.782317+00:00",
-  "lastUpdated": "21:59 UTC",
+  "fetchedAt": "2026-08-16T22:08:11.291958+00:00",
+  "lastUpdated": "22:07 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "13:00",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
