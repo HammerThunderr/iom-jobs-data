@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T16:21:55.537401+00:00",
-  "lastUpdated": "16:21 UTC",
+  "fetchedAt": "2026-08-16T16:25:58.492393+00:00",
+  "lastUpdated": "16:25 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -63,9 +63,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Gate closed",
+      "status": "Taxied 17:23",
       "destination": "London City",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
@@ -93,14 +93,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "10:50",
-      "status": "Arrived 11:22",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
