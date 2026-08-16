@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T15:45:53.165450+00:00",
-  "lastUpdated": "15:45 UTC",
+  "fetchedAt": "2026-08-16T15:49:55.331468+00:00",
+  "lastUpdated": "15:49 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -161,9 +161,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Expected 16:52",
+      "status": "Final approach",
       "origin": "London Heathrow",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM688",
