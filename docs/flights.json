@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T22:20:18.180036+00:00",
-  "lastUpdated": "22:19 UTC",
+  "fetchedAt": "2026-08-16T22:24:20.968002+00:00",
+  "lastUpdated": "22:23 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 17:33",
-      "destination": "London City",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM687",
       "airline": "Loganair",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
