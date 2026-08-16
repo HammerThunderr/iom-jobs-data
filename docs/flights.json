@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-16T15:57:59.654039+00:00",
-  "lastUpdated": "15:57 UTC",
+  "fetchedAt": "2026-08-16T16:02:01.639735+00:00",
+  "lastUpdated": "16:01 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -71,7 +71,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Dublin",
       "statusType": "boarding"
     },
@@ -82,6 +82,14 @@
       "status": "Boarding shortly",
       "destination": "Liverpool",
       "statusType": "boarding"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -161,7 +169,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Landed 16:51",
+      "status": "Arrived 16:56",
       "origin": "London Heathrow",
       "statusType": "arrived"
     },
@@ -182,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 23,
   "source": "airport.im"
 }
