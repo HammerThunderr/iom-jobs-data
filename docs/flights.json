@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T11:18:06.293115+00:00",
-  "lastUpdated": "11:17 UTC",
+  "fetchedAt": "2026-08-17T11:22:09.044644+00:00",
+  "lastUpdated": "11:21 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -63,9 +63,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY234",
@@ -153,7 +153,7 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:40",
+      "status": "Delayed 12:30",
       "origin": "Dublin",
       "statusType": "delayed"
     },
