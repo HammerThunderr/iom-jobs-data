@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T17:59:08.401141+00:00",
-  "lastUpdated": "17:58 UTC",
+  "fetchedAt": "2026-08-17T18:03:11.977820+00:00",
+  "lastUpdated": "18:02 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -140,8 +140,16 @@
       "status": "Delayed 21:30",
       "origin": "Liverpool",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM682",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
