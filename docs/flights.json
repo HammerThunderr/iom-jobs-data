@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T13:24:19.953637+00:00",
-  "lastUpdated": "13:23 UTC",
+  "fetchedAt": "2026-08-17T13:28:22.073258+00:00",
+  "lastUpdated": "13:27 UTC",
   "departures": [
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "08:35",
-      "status": "Departed 08:36",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -161,7 +153,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Delayed 15:55",
+      "status": "Delayed 15:50",
       "origin": "Birmingham",
       "statusType": "delayed"
     },
@@ -169,7 +161,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Delayed 16:15",
+      "status": "Delayed 16:10",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
@@ -209,11 +201,11 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "On-time",
+      "status": "Delayed 21:00",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
-  "totalCount": 26,
+  "totalCount": 25,
   "source": "airport.im"
 }
