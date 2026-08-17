@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T17:51:02.118149+00:00",
-  "lastUpdated": "17:50 UTC",
+  "fetchedAt": "2026-08-17T17:55:05.228073+00:00",
+  "lastUpdated": "17:54 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -86,14 +86,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY233",
-      "airline": "easyJet",
-      "scheduled": "13:00",
-      "status": "Arrived 12:54",
-      "origin": "Bristol",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
@@ -150,6 +142,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
