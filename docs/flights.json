@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T18:31:22.108821+00:00",
-  "lastUpdated": "18:30 UTC",
+  "fetchedAt": "2026-08-17T18:35:24.486135+00:00",
+  "lastUpdated": "18:34 UTC",
   "departures": [
-    {
-      "flightNo": "EZY234",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Departed 13:42",
-      "destination": "Bristol",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -139,6 +131,14 @@
       "scheduled": "09:25",
       "status": "On-time",
       "origin": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
