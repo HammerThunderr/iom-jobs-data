@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T08:01:41.987405+00:00",
-  "lastUpdated": "08:00 UTC",
+  "fetchedAt": "2026-08-17T08:28:38.625101+00:00",
+  "lastUpdated": "08:28 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,17 +23,17 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "09:10",
-      "status": "Gate closed",
+      "status": "Departed 09:18",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:40",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY840",
@@ -145,7 +145,7 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Landed 08:59",
+      "status": "Arrived 09:01",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
