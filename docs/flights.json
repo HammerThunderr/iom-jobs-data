@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T11:34:18.523606+00:00",
-  "lastUpdated": "11:33 UTC",
+  "fetchedAt": "2026-08-17T11:46:34.084310+00:00",
+  "lastUpdated": "11:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,15 +47,15 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Taxied 12:25",
+      "status": "Departed 12:33",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Dublin",
       "statusType": "boarding"
     },
@@ -71,9 +71,9 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Bristol",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
@@ -169,7 +169,7 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Expected 12:53",
+      "status": "Expected 12:50",
       "origin": "Bristol",
       "statusType": "expected"
     },
