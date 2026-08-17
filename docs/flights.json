@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T10:02:15.248020+00:00",
-  "lastUpdated": "10:01 UTC",
+  "fetchedAt": "2026-08-17T10:06:17.600350+00:00",
+  "lastUpdated": "10:05 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -65,14 +65,6 @@
       "scheduled": "12:35",
       "status": "On-time",
       "destination": "Birmingham",
-      "statusType": "ontime"
-    },
-    {
-      "flightNo": "LM943",
-      "airline": "Loganair",
-      "scheduled": "13:00",
-      "status": "On-time",
-      "destination": "Aberdeen",
       "statusType": "ontime"
     },
     {
@@ -238,6 +230,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 29,
+  "totalCount": 28,
   "source": "airport.im"
 }
