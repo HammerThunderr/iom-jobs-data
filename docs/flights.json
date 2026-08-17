@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T07:49:33.210619+00:00",
-  "lastUpdated": "07:48 UTC",
+  "fetchedAt": "2026-08-17T07:53:35.807508+00:00",
+  "lastUpdated": "07:53 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -145,9 +145,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Delayed 09:05",
+      "status": "On-time",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EZY839",
