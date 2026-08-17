@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T16:05:58.300732+00:00",
-  "lastUpdated": "16:05 UTC",
+  "fetchedAt": "2026-08-17T16:12:34.135490+00:00",
+  "lastUpdated": "16:11 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -81,6 +81,14 @@
       "scheduled": "07:00",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:05",
+      "status": "On-time",
+      "destination": "Newquay, via Manchester",
       "statusType": "ontime"
     }
   ],
@@ -166,6 +174,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
