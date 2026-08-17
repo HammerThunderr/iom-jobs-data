@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-17T07:13:26+00:00",
+    "generated": "2026-08-17T18:57:45+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 77,
-        "withPrice": 77,
+        "count": 76,
+        "withPrice": 76,
         "status": "ok"
       }
     ],
@@ -1560,7 +1560,7 @@
       "url": "https://www.cowleygroves.com/property/apt-4-empress-apartments-central-promenade-douglas-im2-4ee/",
       "category": "residential",
       "listingType": "sale",
-      "price": 199950,
+      "price": 179950,
       "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
@@ -1569,7 +1569,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4EE",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1144,
+      "previousPrice": 199950,
       "lastSeen": "2026-08-17"
     },
     {
@@ -3925,6 +3925,23 @@
       "lastSeen": "2026-08-17"
     },
     {
+      "id": "gg-douglas-willowbrook-gardens-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-willowbrook-gardens-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1250000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Extended Home in a Desirable Cul-De-Sac Location",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-17",
+      "lastSeen": "2026-08-17"
+    },
+    {
       "id": "gg-foxdale-meainyn-close",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/foxdale-meainyn-close/",
@@ -4548,42 +4565,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-27",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-17"
-    },
-    {
-      "id": "gg-st-judes-slieau-whallian-park",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/st-judes-slieau-whallian-park/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Two Bedroom  Home with Countryside Views",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-10",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-17"
-    },
-    {
-      "id": "gg-st-marks-st-marks-road-1",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/st-marks-st-marks-road-1/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "detached",
-      "address": "Characterful Spacious Detached Manx Cottage",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
       "previousPrice": 1735000,
       "lastSeen": "2026-08-17"
     },
