@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T14:41:09.612797+00:00",
-  "lastUpdated": "14:40 UTC",
+  "fetchedAt": "2026-08-17T14:50:27.104353+00:00",
+  "lastUpdated": "14:50 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -47,9 +47,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Delayed 16:25",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM677",
@@ -113,15 +113,15 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Delayed 15:45",
+      "status": "Arrived 15:47",
       "origin": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Delayed 16:30",
+      "status": "Delayed 16:19",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
