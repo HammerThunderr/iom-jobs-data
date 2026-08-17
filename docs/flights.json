@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T11:54:40.212655+00:00",
-  "lastUpdated": "11:53 UTC",
+  "fetchedAt": "2026-08-17T11:58:42.556358+00:00",
+  "lastUpdated": "11:58 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -55,9 +55,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM637",
@@ -169,7 +169,7 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Landed 12:50",
+      "status": "Arrived 12:54",
       "origin": "Bristol",
       "statusType": "arrived"
     },
