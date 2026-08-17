@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T06:11:52.219789+00:00",
-  "lastUpdated": "06:11 UTC",
+  "fetchedAt": "2026-08-17T06:15:54.800830+00:00",
+  "lastUpdated": "06:15 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -121,7 +121,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "07:50",
-      "status": "Expected 07:41",
+      "status": "Expected 07:28",
       "origin": "Liverpool",
       "statusType": "expected"
     },
@@ -147,6 +147,14 @@
       "scheduled": "09:30",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM942",
+      "airline": "Loganair",
+      "scheduled": "11:10",
+      "status": "On-time",
+      "origin": "Aberdeen",
       "statusType": "ontime"
     },
     {
@@ -230,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 29,
   "source": "airport.im"
 }
