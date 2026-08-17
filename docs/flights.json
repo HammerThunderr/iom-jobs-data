@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-17T09:28:20.268820+00:00",
-  "lastUpdated": "09:27 UTC",
+  "fetchedAt": "2026-08-17T10:02:15.248020+00:00",
+  "lastUpdated": "10:01 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,9 +47,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Delayed 12:14",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3213",
@@ -158,14 +158,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "LM942",
-      "airline": "Loganair",
-      "scheduled": "11:10",
-      "status": "On-time",
-      "origin": "Aberdeen",
-      "statusType": "ontime"
-    },
-    {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
@@ -246,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 29,
   "source": "airport.im"
 }
