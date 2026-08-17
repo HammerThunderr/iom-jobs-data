@@ -1,14 +1,20 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "generated": "2026-07-30",
-  "sourceUpdated": "2026-01-28T09:15:00",
+  "generated": "2026-08-17",
+  "sourceUpdated": "2026-08-17T14:46:00",
   "source": "Official Classic TT schedule",
   "sourceUrl": "https://www.iomtt.com",
   "mgpUrl": "https://www.manxgrandprix.co.uk",
   "disclaimer": "Schedule subject to road closure approval by the Department of Infrastructure under the Road Races Act 2016. Sessions can be delayed or cancelled at short notice — always check the official schedule and road closure notices before travelling.",
   "contingencyNote": "Contingency dates may be used for qualifying if earlier sessions are delayed. The Clerk of the Course announces on event whether these sessions run, and in what format.",
-  "sharedCourseNote": "The Classic TT shares course time with the 2026 Manx Grand Prix, running Sunday 16 to Monday 24 August."
+  "sharedCourseNote": "The Classic TT shares course time with the 2026 Manx Grand Prix, running Sunday 16 to Monday 24 August.",
+  "lastUpdate": {
+   "timestamp": "2026-08-17T14:46:00+01:00",
+   "status": "cancelled",
+   "title": "Schedule Update",
+   "message": "Monday evening's qualifying session has been cancelled. Roads around a large section of the TT Course are wet and, with further rain forecast, conditions are not expected to have improved sufficiently for qualifying to take place. Tomorrow's schedule remains unchanged."
+  }
  },
  "event": {
   "name": "Classic TT & Manx Grand Prix 2026",
@@ -69,23 +75,28 @@
      "name": "Senior MGP / Supersport MGP",
      "laps": null,
      "kind": "qualifying",
-     "note": ""
+     "note": "Cancelled — wet roads, further rain forecast",
+     "status": "cancelled"
     },
     {
      "time": "19:15",
      "name": "Junior MGP / Sportbike MGP",
      "laps": null,
      "kind": "qualifying",
-     "note": ""
+     "note": "Cancelled — wet roads, further rain forecast",
+     "status": "cancelled"
     },
     {
      "time": "19:50",
      "name": "Classic TT",
      "laps": 1,
      "kind": "qualifying",
-     "note": ""
+     "note": "Cancelled — wet roads, further rain forecast",
+     "status": "cancelled"
     }
-   ]
+   ],
+   "status": "cancelled",
+   "note": "Cancelled — wet roads, further rain forecast"
   },
   {
    "date": "2026-08-18",
