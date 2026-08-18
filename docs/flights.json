@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-18T15:45:45.258590+00:00",
-  "lastUpdated": "15:44 UTC",
+  "fetchedAt": "2026-08-18T15:53:30.591758+00:00",
+  "lastUpdated": "15:52 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -31,9 +31,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Gate closed",
+      "status": "Taxied 16:50",
       "destination": "London City",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
