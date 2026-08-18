@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-18T16:20:55.640852+00:00",
-  "lastUpdated": "16:20 UTC",
+  "fetchedAt": "2026-08-18T16:24:59.694491+00:00",
+  "lastUpdated": "16:24 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -97,9 +97,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM688",
