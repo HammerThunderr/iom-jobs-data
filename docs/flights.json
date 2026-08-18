@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-18T08:19:11.487403+00:00",
-  "lastUpdated": "08:18 UTC",
+  "fetchedAt": "2026-08-18T08:33:02.334917+00:00",
+  "lastUpdated": "08:32 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -31,9 +31,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:00",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM675",
@@ -97,9 +97,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "09:25",
-      "status": "Final approach",
+      "status": "Landed 09:20",
       "origin": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
