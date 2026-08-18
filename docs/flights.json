@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-18T14:22:08.797070+00:00",
-  "lastUpdated": "14:21 UTC",
+  "fetchedAt": "2026-08-18T14:57:43.681762+00:00",
+  "lastUpdated": "14:57 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:55",
-      "status": "Departed 10:06",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -70,14 +62,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "09:25",
-      "status": "Arrived 09:23",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
@@ -97,9 +81,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Final approach",
+      "status": "Arrived 15:24",
       "origin": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
@@ -134,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 14,
   "source": "airport.im"
 }
