@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-18T17:57:58.975504+00:00",
-  "lastUpdated": "17:56 UTC",
+  "fetchedAt": "2026-08-18T18:02:02.075935+00:00",
+  "lastUpdated": "18:01 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -92,8 +92,16 @@
       "status": "On-time",
       "origin": "London City",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM682",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 12,
   "source": "airport.im"
 }
