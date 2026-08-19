@@ -13,12 +13,19 @@ on:
 permissions:
   contents: write
 
+# If another run of THIS workflow is already going, let it finish first.
+concurrency:
+  group: update-pharmacies
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so a rebase can work
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -31,15 +38,30 @@ jobs:
       - name: Scrape pharmacies
         run: python scripts/scrape_pharmacies.py
 
-      - name: Commit if changed
+      - name: Commit and push if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ -n "$(git status --porcelain docs/pharmacies.json)" ]; then
-            git add docs/pharmacies.json
-            git commit -m "chore: refresh pharmacies.json ($(date -u +%Y-%m-%d))"
-            git push
-            echo "pharmacies.json updated."
-          else
-            echo "No change to pharmacies.json."
+
+          if [ -z "$(git status --porcelain docs/pharmacies.json)" ]; then
+            echo "No change to pharmacies.json — nothing to do."
+            exit 0
           fi
+
+          git add docs/pharmacies.json
+          git commit -m "chore: refresh pharmacies.json ($(date -u +%Y-%m-%d))"
+
+          # Another workflow may have pushed to main while we were running.
+          # Rebase our single commit on top of the latest remote and retry.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected (remote moved). Syncing and retrying - attempt $attempt..."
+            git pull --rebase --autostash origin main || true
+            sleep 3
+          done
+
+          echo "::error::Failed to push pharmacies.json after 5 attempts."
+          exit 1
