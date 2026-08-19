@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-19T00:30:07.271902+00:00",
-  "lastUpdated": "00:29 UTC",
+  "fetchedAt": "2026-08-19T00:34:09.545819+00:00",
+  "lastUpdated": "00:33 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -108,8 +108,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:30",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
