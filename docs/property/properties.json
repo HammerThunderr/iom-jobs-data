@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-19T07:02:22+00:00",
+    "generated": "2026-08-19T18:53:56+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -10,14 +10,14 @@
       },
       {
         "agent": "Cowley Groves",
-        "count": 186,
-        "withPrice": 136,
+        "count": 188,
+        "withPrice": 137,
         "status": "ok"
       },
       {
         "agent": "Garforth Gray",
-        "count": 74,
-        "withPrice": 74,
+        "count": 72,
+        "withPrice": 72,
         "status": "ok"
       }
     ],
@@ -144,6 +144,23 @@
       "parish": "Douglas",
       "postcode": "IM1 2LQ",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-19"
+    },
+    {
+      "id": "cg-10-cronk-road-union-mills-im4-4nj",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/10-cronk-road-union-mills-im4-4nj/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 449950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "10 Cronk Road, Union Mills, IM4 4NJ",
+      "parish": "Union Mills",
+      "postcode": "IM4 4NJ",
+      "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19"
     },
     {
@@ -1526,7 +1543,7 @@
       "url": "https://www.cowleygroves.com/property/apt-4-10-derby-square-douglas-im1-3ls-rent/",
       "category": "residential",
       "listingType": "rent",
-      "price": 1750,
+      "price": 1650,
       "priceQualifier": "pcm",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -1535,6 +1552,7 @@
       "parish": "Douglas",
       "postcode": "IM1 3LS",
       "firstSeen": "2026-07-24",
+      "previousPrice": 1750,
       "lastSeen": "2026-08-19"
     },
     {
@@ -1851,6 +1869,23 @@
       "parish": "Douglas",
       "postcode": "IM1 4AJ",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-19"
+    },
+    {
+      "id": "cg-apt-8-beresford-house-11-12-palace-terrace-queens-promenade-douglas-im2-4ne",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-8-beresford-house-11-12-palace-terrace-queens-promenade-douglas-im2-4ne/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Apt. 8 Beresford House, 11-12 Palace Terrace, Queens Promenade, Douglas, IM2 4NE",
+      "parish": "Douglas",
+      "postcode": "IM2 4NE",
+      "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19"
     },
     {
@@ -3567,24 +3602,6 @@
       "lastSeen": "2026-08-19"
     },
     {
-      "id": "gg-douglas-7-mona-drive-3",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-7-mona-drive-3/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": "flat",
-      "address": "Centrally Located Flat Just off Douglas Promenade",
-      "parish": "Douglas",
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-09",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-19"
-    },
-    {
       "id": "gg-douglas-ballabrooie-drive-5",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-ballabrooie-drive-5/",
@@ -3709,6 +3726,23 @@
       "lastSeen": "2026-08-19"
     },
     {
+      "id": "gg-douglas-castlemona-avenue-6",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-castlemona-avenue-6/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1250000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Purpose Built Apartment Just off the Promenade",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-19",
+      "lastSeen": "2026-08-19"
+    },
+    {
       "id": "gg-douglas-cooil-drive-2",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-cooil-drive-2/",
@@ -3777,24 +3811,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-19"
-    },
-    {
-      "id": "gg-douglas-empress-apartments",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-empress-apartments/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "Ground Floor Apartment with Beautiful Sea Views",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-14",
       "previousPrice": 1735000,
       "lastSeen": "2026-08-19"
     },
@@ -3871,24 +3887,6 @@
       "lastSeen": "2026-08-19"
     },
     {
-      "id": "gg-douglas-spectrum-apartments-12",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-spectrum-apartments-12/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "Stunning Apartment with Magnificent Sea Views",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-14",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-19"
-    },
-    {
       "id": "gg-douglas-stanley-place-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-stanley-place-1/",
@@ -3921,24 +3919,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-17",
-      "lastSeen": "2026-08-19"
-    },
-    {
-      "id": "gg-foxdale-meainyn-close",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/foxdale-meainyn-close/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1250000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "detached bungalow",
-      "address": "Spacious Detached Bungalow Set on a Large Plot",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-11",
-      "previousPrice": 1735000,
       "lastSeen": "2026-08-19"
     },
     {
@@ -4064,6 +4044,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 1735000,
+      "lastSeen": "2026-08-19"
+    },
+    {
+      "id": "gg-onchan-46-sea-cliff-road-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/onchan-46-sea-cliff-road-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 2495000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Ultimate Luxury Coastal Home with Sea Views",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-19",
       "lastSeen": "2026-08-19"
     },
     {
