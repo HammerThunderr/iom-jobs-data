@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-19T11:33:32.608401+00:00",
-  "lastUpdated": "11:32 UTC",
+  "fetchedAt": "2026-08-19T11:46:04.544731+00:00",
+  "lastUpdated": "11:45 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,17 +39,17 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "12:25",
-      "status": "Taxied 12:26",
+      "status": "Departed 12:34",
       "destination": "Edinburgh",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
