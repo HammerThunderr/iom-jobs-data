@@ -1,35 +1,33 @@
 #!/usr/bin/env python3
 """
-scrape_pharmacies.py
-
-Scrapes the Isle of Man Government "Community Pharmacies" page and writes
-docs/pharmacies.json for the Manx One app.
+scrape_pharmacies.py  —  Isle of Man community pharmacies -> docs/pharmacies.json
 
 Source : https://www.gov.im/categories/health-and-wellbeing/pharmacy-services/community-pharmacies/
-Licence: Open Government Licence v3.0 (attribution retained in the JSON meta).
+Licence: Open Government Licence v3.0 (attribution kept in the JSON meta).
 
-WHY THE PARSING LOOKS FUSSY
----------------------------
-The hours and telephone lines on gov.im sit inside <strong> tags:
+DESIGN NOTE — why this does not hard-code heading levels
+--------------------------------------------------------
+Two earlier versions failed because they assumed the page markup:
+  v1 assumed h2 = area, h3 = pharmacy, and that hours/phone lines were plain
+     text -> every record came out with empty hours and phone.
+  v2 fixed the <strong> label reading but kept the h2/h3 assumption -> only
+     1 record parsed.
 
-    <p><strong>Telephone:</strong> +44 1624 824793</p>
-    <p><strong>Monday to Friday:</strong> 9am to 6pm<br>
-       <strong>Saturday:</strong> 9am to 1pm<br>
-       <strong>Sunday:</strong> Closed</p>
+So this version is structure-agnostic. It walks EVERY heading (h2..h5) and
+classifies it by what sits underneath:
+    - contains a postcode or a telephone  -> it is a PHARMACY
+    - otherwise                            -> it is an AREA heading
+That survives gov.im changing heading levels, which they evidently have.
 
-An earlier version split the <p> on <br> and looked for lines *starting* with
-"Telephone"/"Monday" — but get_text() puts the label and value together in ways
-that did not match, so every record came out with empty hours and phone. This
-version reads the <strong> label and takes the text that follows it, which is
-robust to the label being bold, having a colon or not, etc.
+Run with --debug to print what it found without writing anything:
+    python scrape_pharmacies.py --debug
 
-SAFETY: refuses to overwrite the JSON if the scrape looks broken (too few
-records, or most records missing hours). A stale-but-correct file beats a fresh
-empty one for health information.
-
-Pipeline: Python scraper (GitHub Actions) -> docs/pharmacies.json -> Pages -> Flutter
+SAFETY: refuses to write if too few records parse, or if most records are
+missing opening hours. For health information a stale-but-correct file beats a
+fresh empty one.
 """
 
+import argparse
 import datetime
 import json
 import os
@@ -37,7 +35,7 @@ import re
 import sys
 
 import requests
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup, NavigableString, Tag
 
 SOURCE_URL = (
     "https://www.gov.im/categories/health-and-wellbeing/"
@@ -46,174 +44,200 @@ SOURCE_URL = (
 OUT_PATH = os.environ.get("PHARMACY_OUT", "docs/pharmacies.json")
 USER_AGENT = "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"
 
-EXPECTED_MIN = 20          # fewer than this => template changed
-MIN_HOURS_RATIO = 0.75     # at least this share must have Mon-Fri hours
+EXPECTED_MIN = 20
+MIN_HOURS_RATIO = 0.75
 
 POSTCODE_RE = re.compile(r"\bIM\d{1,2}\s?\d[A-Z]{2}\b")
+PHONE_RE = re.compile(r"(?i)\b(telephone|tel|phone|fax)\b")
+HEADINGS = ("h2", "h3", "h4", "h5")
 
-DAY_LABELS = {
-    "monday to friday": "monFri",
-    "monday to saturday": "monFri",
-    "monday - friday": "monFri",
-    "monday": "monFri",
-    "saturday": "sat",
-    "sunday": "sun",
+DAY_LABELS = (
+    ("monday to friday", "monFri"),
+    ("monday to saturday", "monFri"),
+    ("monday - friday", "monFri"),
+    ("monday-friday", "monFri"),
+    ("monday", "monFri"),
+    ("saturday", "sat"),
+    ("sunday", "sun"),
+)
+
+SKIP_HEADINGS = {
+    "community pharmacies", "opening hours", "contact", "contact details",
+    "services", "related", "share this page", "pharmacy services",
 }
 
 
-def clean(s: str) -> str:
+def clean(s):
     return re.sub(r"\s+", " ", (s or "")).replace("\xa0", " ").strip()
 
 
-def norm_phone(s: str) -> str:
-    s = re.sub(r"(?i)^.*?(telephone|tel|phone)\s*:?", "", s)
+def norm_phone(s):
+    s = re.sub(r"(?i)^.*?(telephone\s*&\s*fax|telephone|tel|phone|fax)\s*:?", "", s)
     return re.sub(r"[^\d+]", "", s)
 
 
-def pretty_phone(digits: str) -> str:
-    if digits.startswith("+441624") and len(digits) > 7:
-        return f"+44 1624 {digits[7:]}"
-    return digits
+def pretty_phone(d):
+    return f"+44 1624 {d[7:]}" if d.startswith("+441624") and len(d) > 7 else d
 
 
-def fix_postcode(s: str) -> str:
+def fix_postcode(s):
     return re.sub(r"\b1M(\d)", r"IM\1", s)
 
 
-def value_after_strong(strong) -> str:
-    """Text following a <strong> label, up to the next <br> or <strong>."""
+def block_after(heading):
+    """All sibling tags between this heading and the next heading."""
+    out = []
+    for sib in heading.next_siblings:
+        if isinstance(sib, Tag):
+            if sib.name in HEADINGS:
+                break
+            out.append(sib)
+    return out
+
+
+def value_after_strong(strong):
     parts = []
     for sib in strong.next_siblings:
-        if getattr(sib, "name", None) in ("br", "strong"):
+        if isinstance(sib, Tag) and sib.name in ("br", "strong"):
             break
         parts.append(sib if isinstance(sib, NavigableString) else sib.get_text())
     return clean("".join(str(p) for p in parts)).lstrip(":").strip()
 
 
-def parse_p(p, out):
-    """Pull phone / hours / address lines out of one <p>."""
-    handled_labels = False
+def parse_block(block):
+    rec = {"phone": "", "hours": {"monFri": "", "sat": "", "sun": ""},
+           "address_lines": [], "services": []}
 
-    for strong in p.find_all("strong"):
-        label = clean(strong.get_text()).lower().rstrip(":").strip()
-        value = value_after_strong(strong)
-        if not value:
+    for node in block:
+        if node.name == "ul":
+            rec["services"] += [clean(li.get_text()) for li in node.find_all("li")]
             continue
-        if label.startswith(("telephone", "tel", "phone")):
-            if not out["phone"]:
-                out["phone"] = norm_phone(value)
-            handled_labels = True
-        elif label.startswith("fax"):
-            handled_labels = True
-        else:
-            for key, slot in DAY_LABELS.items():
+        if node.name not in ("p", "div", "span"):
+            continue
+
+        labelled = False
+        for strong in node.find_all(["strong", "b"]):
+            label = clean(strong.get_text()).lower().rstrip(":").strip()
+            value = value_after_strong(strong)
+            if not value:
+                continue
+            if label.startswith(("telephone", "tel", "phone", "fax")):
+                if not rec["phone"] and "fax" not in label.split()[0]:
+                    rec["phone"] = norm_phone(value)
+                elif not rec["phone"]:
+                    rec["phone"] = norm_phone(value)
+                labelled = True
+                continue
+            for key, slot in DAY_LABELS:
                 if label.startswith(key):
-                    out["hours"][slot] = value
-                    handled_labels = True
+                    rec["hours"][slot] = value
+                    labelled = True
                     break
 
-    if handled_labels:
-        return
+        text_lines = [clean(x) for x in node.get_text("\n").split("\n") if clean(x)]
 
-    # Plain <p>: address lines (and the odd unlabelled phone number).
-    for line in [clean(x) for x in p.get_text("\n").split("\n") if clean(x)]:
-        low = line.lower()
-        if low.startswith(("telephone", "tel ", "tel:", "phone")):
-            if not out["phone"]:
-                out["phone"] = norm_phone(line)
-        elif low.startswith("fax"):
-            continue
-        elif re.fullmatch(r"[\d\s+()-]{9,}", line):
-            if not out["phone"]:
-                out["phone"] = norm_phone(line)
-        else:
-            out["address_lines"].append(fix_postcode(line))
+        # Unlabelled fallback: "Monday to Friday: 9am to 6pm" as plain text.
+        for line in text_lines:
+            low = line.lower()
+            if PHONE_RE.match(low) or low.startswith(("telephone", "tel:", "phone")):
+                if not rec["phone"]:
+                    rec["phone"] = norm_phone(line)
+                labelled = True
+                continue
+            matched = False
+            for key, slot in DAY_LABELS:
+                if low.startswith(key):
+                    if not rec["hours"][slot]:
+                        rec["hours"][slot] = clean(line.split(":", 1)[-1])
+                    matched = True
+                    labelled = True
+                    break
+            if matched:
+                continue
+            if re.fullmatch(r"[\d\s+()-]{9,}", line):
+                if not rec["phone"]:
+                    rec["phone"] = norm_phone(line)
+                labelled = True
+                continue
+            if not labelled:
+                rec["address_lines"].append(fix_postcode(line))
+
+    return rec
 
 
-def scrape() -> dict:
+def scrape(debug=False):
     resp = requests.get(SOURCE_URL, headers={"User-Agent": USER_AGENT}, timeout=30)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
+    root = (soup.find("div", id="content") or soup.find("main")
+            or soup.find("article") or soup.body)
 
-    content = (
-        soup.find("div", id="content")
-        or soup.find("main")
-        or soup.find("article")
-        or soup.body
-    )
+    pharmacies, area = [], None
 
-    pharmacies = []
-    area = None
-
-    for el in content.find_all(["h2", "h3"]):
-        title = clean(el.get_text())
-        if not title:
+    for heading in root.find_all(HEADINGS):
+        title = clean(heading.get_text())
+        if not title or title.lower() in SKIP_HEADINGS:
             continue
 
-        if el.name == "h2":
-            if title.lower() != "community pharmacies":
-                area = title
+        block = block_after(heading)
+        block_text = " ".join(n.get_text(" ") for n in block if isinstance(n, Tag))
+
+        looks_like_pharmacy = bool(
+            POSTCODE_RE.search(block_text) or PHONE_RE.search(block_text)
+        )
+
+        if debug:
+            print(f"[{heading.name}] {title[:48]:<50} "
+                  f"{'PHARMACY' if looks_like_pharmacy else 'area?'}")
+
+        if not looks_like_pharmacy:
+            area = title
             continue
 
-        out = {
-            "phone": "",
-            "hours": {"monFri": "", "sat": "", "sun": ""},
-            "address_lines": [],
-            "services": [],
-        }
-
-        for sib in el.next_siblings:
-            name = getattr(sib, "name", None)
-            if name in ("h2", "h3"):
-                break
-            if name == "ul":
-                out["services"] += [clean(li.get_text()) for li in sib.find_all("li")]
-            elif name == "p":
-                parse_p(sib, out)
-
-        if not out["address_lines"]:
+        rec = parse_block(block)
+        if not rec["address_lines"] and not rec["phone"]:
             continue
 
         postcode = ""
-        for ln in out["address_lines"]:
+        for ln in rec["address_lines"]:
             m = POSTCODE_RE.search(ln)
             if m:
                 postcode = m.group(0)
                 break
-        addr = [ln for ln in out["address_lines"] if ln != postcode]
-
+        addr = [ln for ln in rec["address_lines"] if ln != postcode]
         full = ", ".join(addr + ([postcode] if postcode else []) + ["Isle of Man"])
+
         pharmacies.append({
             "name": title,
-            "area": area,
+            "area": area or "",
             "address": addr,
             "postcode": postcode,
             "addressText": ", ".join(addr + ([postcode] if postcode else [])),
-            "phone": out["phone"],
-            "phoneDisplay": pretty_phone(out["phone"]) if out["phone"] else None,
-            "hours": out["hours"],
-            "services": out["services"],
+            "phone": rec["phone"],
+            "phoneDisplay": pretty_phone(rec["phone"]) if rec["phone"] else None,
+            "hours": rec["hours"],
+            "services": rec["services"],
             "mapsQuery": f"{title}, {full}",
         })
 
-    # --- sanity gates -------------------------------------------------
-    if len(pharmacies) < EXPECTED_MIN:
-        raise RuntimeError(
-            f"Only parsed {len(pharmacies)} pharmacies (expected >= {EXPECTED_MIN}). "
-            "gov.im template may have changed — refusing to overwrite."
-        )
-
     with_hours = sum(1 for p in pharmacies if p["hours"]["monFri"])
-    ratio = with_hours / len(pharmacies)
-    if ratio < MIN_HOURS_RATIO:
-        raise RuntimeError(
-            f"Only {with_hours}/{len(pharmacies)} records have opening hours "
-            f"({ratio:.0%}). Refusing to overwrite a good file with empty data."
-        )
-
     with_phone = sum(1 for p in pharmacies if p["phone"])
     print(f"Parsed {len(pharmacies)} pharmacies "
           f"({with_hours} with hours, {with_phone} with phone).")
+
+    if debug:
+        for p in pharmacies[:3]:
+            print(json.dumps(p, indent=1, ensure_ascii=False))
+
+    if len(pharmacies) < EXPECTED_MIN:
+        raise RuntimeError(
+            f"Only parsed {len(pharmacies)} pharmacies (expected >= {EXPECTED_MIN}). "
+            "Refusing to overwrite. Run with --debug to see the headings found.")
+
+    if with_hours / max(len(pharmacies), 1) < MIN_HOURS_RATIO:
+        raise RuntimeError(
+            f"Only {with_hours}/{len(pharmacies)} records have opening hours. "
+            "Refusing to overwrite good data with empty data.")
 
     return {
         "meta": {
@@ -233,7 +257,16 @@ def scrape() -> dict:
 
 
 def main():
-    data = scrape()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--debug", action="store_true",
+                    help="print headings found and do not write the file")
+    args = ap.parse_args()
+
+    data = scrape(debug=args.debug)
+    if args.debug:
+        print("\n--debug: nothing written.")
+        return
+
     os.makedirs(os.path.dirname(OUT_PATH) or ".", exist_ok=True)
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
