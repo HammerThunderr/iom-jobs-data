@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T23:46:07.190166+00:00",
-  "lastUpdated": "23:45 UTC",
+  "fetchedAt": "2026-08-20T23:50:09.705321+00:00",
+  "lastUpdated": "23:49 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -124,8 +124,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "14:45",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
