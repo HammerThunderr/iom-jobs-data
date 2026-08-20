@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T19:19:35.815510+00:00",
-  "lastUpdated": "19:18 UTC",
+  "fetchedAt": "2026-08-20T19:23:38.183615+00:00",
+  "lastUpdated": "19:22 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -73,6 +73,14 @@
       "scheduled": "09:30",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY840",
+      "airline": "easyJet",
+      "scheduled": "10:20",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -150,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
