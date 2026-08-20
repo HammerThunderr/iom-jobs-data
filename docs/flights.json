@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T05:33:27.729842+00:00",
-  "lastUpdated": "05:33 UTC",
+  "fetchedAt": "2026-08-20T05:37:29.604994+00:00",
+  "lastUpdated": "05:37 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM637",
