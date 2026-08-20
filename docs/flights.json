@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T15:58:41.230343+00:00",
-  "lastUpdated": "15:58 UTC",
+  "fetchedAt": "2026-08-20T16:02:44.271458+00:00",
+  "lastUpdated": "16:02 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -66,6 +66,14 @@
       "status": "Delayed 19:35",
       "destination": "Liverpool",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
