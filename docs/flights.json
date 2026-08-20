@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T14:25:19.865558+00:00",
-  "lastUpdated": "14:24 UTC",
+  "fetchedAt": "2026-08-20T15:00:44.005222+00:00",
+  "lastUpdated": "15:00 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -39,17 +39,17 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "Gate closed",
+      "status": "Departed 15:45",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:45",
-      "status": "Delayed 16:15",
+      "status": "Gate closed",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM677",
@@ -86,22 +86,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "09:25",
-      "status": "Arrived 09:38",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY839",
-      "airline": "easyJet",
-      "scheduled": "09:35",
-      "status": "Arrived 09:44",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "10:55",
@@ -121,9 +105,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "15:10",
-      "status": "Delayed 15:38",
+      "status": "Arrived 15:43",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
@@ -174,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 19,
   "source": "airport.im"
 }
