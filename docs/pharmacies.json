@@ -7,18 +7,31 @@
     "licence": "Open Government Licence v3.0",
     "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
     "note": "Routine opening hours. Sunday and bank-holiday cover is via the pharmacy rota. Hours may vary on public holidays.",
-    "count": 26
+    "count": 35
   },
   "pharmacies": [
     {
+      "name": "Ballasalla",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624824793",
+      "phoneDisplay": "+44 1624 824793",
+      "hours": {
+        "monFri": "8:30am to 6pm",
+        "sat": "9am to 1pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Ballasalla, Isle of Man"
+    },
+    {
       "name": "Costain Pharmacy",
-      "area": "Ballasalla",
-      "address": [
-        "Main Road",
-        "Ballasalla"
-      ],
-      "postcode": "IM9 2DA",
-      "addressText": "Main Road, Ballasalla, IM9 2DA",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624824793",
       "phoneDisplay": "+44 1624 824793",
       "hours": {
@@ -36,18 +49,14 @@
         "Travel clinic",
         "Weight loss"
       ],
-      "mapsQuery": "Costain Pharmacy, Main Road, Ballasalla, IM9 2DA, Isle of Man"
+      "mapsQuery": "Costain Pharmacy, Isle of Man"
     },
     {
       "name": "Kingsley Muti",
-      "area": "Ballasalla",
-      "address": [
-        "BMS House Port Way",
-        "Balthane Industrial Estate",
-        "Ballasalla"
-      ],
-      "postcode": "IM9 2AJ",
-      "addressText": "BMS House Port Way, Balthane Industrial Estate, Ballasalla, IM9 2AJ",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624625040",
       "phoneDisplay": "+44 1624 625040",
       "hours": {
@@ -65,19 +74,30 @@
         "Prescribing Pharmacists on-site",
         "Cannabis dispensing"
       ],
-      "mapsQuery": "Kingsley Muti, BMS House Port Way, Balthane Industrial Estate, Ballasalla, IM9 2AJ, Isle of Man"
+      "mapsQuery": "Kingsley Muti, Isle of Man"
+    },
+    {
+      "name": "Braddan",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624644777",
+      "phoneDisplay": "+44 1624 644777",
+      "hours": {
+        "monFri": "9am to 6pm",
+        "sat": "Closed",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Braddan, Isle of Man"
     },
     {
       "name": "Clear Pharmacy Braddan",
-      "area": "Braddan",
-      "address": [
-        "Unit 1, The Roundhouse",
-        "Strang Corner Field",
-        "Ballaoates Rd",
-        "Strang"
-      ],
-      "postcode": "IM4 4RE",
-      "addressText": "Unit 1, The Roundhouse, Strang Corner Field, Ballaoates Rd, Strang, IM4 4RE",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624644777",
       "phoneDisplay": "+44 1624 644777",
       "hours": {
@@ -95,17 +115,30 @@
         "Period delay",
         "Private B12 injection"
       ],
-      "mapsQuery": "Clear Pharmacy Braddan, Unit 1, The Roundhouse, Strang Corner Field, Ballaoates Rd, Strang, IM4 4RE, Isle of Man"
+      "mapsQuery": "Clear Pharmacy Braddan, Isle of Man"
+    },
+    {
+      "name": "Castletown",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624822512",
+      "phoneDisplay": "+44 1624 822512",
+      "hours": {
+        "monFri": "9am to 5:30pm",
+        "sat": "9am to 1pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Castletown, Isle of Man"
     },
     {
       "name": "Castle Pharmacy",
-      "area": "Castletown",
-      "address": [
-        "20 Malew Street",
-        "Castletown"
-      ],
-      "postcode": "IM9 1AD",
-      "addressText": "20 Malew Street, Castletown, IM9 1AD",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624822512",
       "phoneDisplay": "+44 1624 822512",
       "hours": {
@@ -116,17 +149,14 @@
       "services": [
         "Distributes LFTs"
       ],
-      "mapsQuery": "Castle Pharmacy, 20 Malew Street, Castletown, IM9 1AD, Isle of Man"
+      "mapsQuery": "Castle Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Castletown",
-      "address": [
-        "The Parade",
-        "Castletown"
-      ],
-      "postcode": "IM9 1LG",
-      "addressText": "The Parade, Castletown, IM9 1LG",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624823272",
       "phoneDisplay": "+44 1624 823272",
       "hours": {
@@ -139,17 +169,30 @@
         "Distributes LFTs",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, The Parade, Castletown, IM9 1LG, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Douglas",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624673402",
+      "phoneDisplay": "+44 1624 673402",
+      "hours": {
+        "monFri": "9am to 6pm",
+        "sat": "9am to 5:30pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Douglas, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "13 Castle Street",
-        "Douglas"
-      ],
-      "postcode": "IM1 2EX",
-      "addressText": "13 Castle Street, Douglas, IM1 2EX",
+      "area": "",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624673402",
       "phoneDisplay": "+44 1624 673402",
       "hours": {
@@ -162,62 +205,14 @@
         "Offers flu service",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, 13 Castle Street, Douglas, IM1 2EX, Isle of Man"
-    },
-    {
-      "name": "Boots the Chemist",
-      "area": "Douglas",
-      "address": [
-        "14-22 Strand Street",
-        "Douglas"
-      ],
-      "postcode": "IM1 2EE",
-      "addressText": "14-22 Strand Street, Douglas, IM1 2EE",
-      "phone": "+441624616120",
-      "phoneDisplay": "+44 1624 616120",
-      "hours": {
-        "monFri": "8:30am to 5:30pm",
-        "sat": "10:30am to 4:30pm",
-        "sun": "12pm to 4pm"
-      },
-      "services": [
-        "Distributes LFTs",
-        "Offers flu service",
-        "Minor Ailments Scheme"
-      ],
-      "mapsQuery": "Boots the Chemist, 14-22 Strand Street, Douglas, IM1 2EE, Isle of Man"
-    },
-    {
-      "name": "Hemensley's Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "1 Windsor Road",
-        "Douglas"
-      ],
-      "postcode": "IM1 3JX",
-      "addressText": "1 Windsor Road, Douglas, IM1 3JX",
-      "phone": "+441624675162",
-      "phoneDisplay": "+44 1624 675162",
-      "hours": {
-        "monFri": "9am to 6pm",
-        "sat": "9:30am to 5pm",
-        "sun": "Closed"
-      },
-      "services": [
-        "Offers flu service",
-        "Minor Ailments Scheme"
-      ],
-      "mapsQuery": "Hemensley's Pharmacy, 1 Windsor Road, Douglas, IM1 3JX, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Kinrade's Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "Ballaquayle Road",
-        "Douglas"
-      ],
-      "postcode": "IM2 5DF",
-      "addressText": "Ballaquayle Road, Douglas, IM2 5DF",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624673912",
       "phoneDisplay": "+44 1624 673912",
       "hours": {
@@ -229,18 +224,14 @@
         "Offers flu service",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Kinrade's Pharmacy, Ballaquayle Road, Douglas, IM2 5DF, Isle of Man"
+      "mapsQuery": "Kinrade's Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "Cushag Road",
-        "Anagh Coar",
-        "Douglas"
-      ],
-      "postcode": "IM2 2BZ",
-      "addressText": "Cushag Road, Anagh Coar, Douglas, IM2 2BZ",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624616399",
       "phoneDisplay": "+44 1624 616399",
       "hours": {
@@ -251,19 +242,14 @@
       "services": [
         "Offers flu service"
       ],
-      "mapsQuery": "Clear Pharmacy, Cushag Road, Anagh Coar, Douglas, IM2 2BZ, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "Hailwood Court",
-        "Governors Hill",
-        "Douglas",
-        "+44 1624"
-      ],
-      "postcode": "IM2 7EA",
-      "addressText": "Hailwood Court, Governors Hill, Douglas, +44 1624, IM2 7EA",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624671042",
       "phoneDisplay": "+44 1624 671042",
       "hours": {
@@ -275,18 +261,14 @@
         "Offers flu service",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, Hailwood Court, Governors Hill, Douglas, +44 1624, IM2 7EA, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "Shoprite",
-        "Victoria Road",
-        "Douglas"
-      ],
-      "postcode": "IM2 4RE",
-      "addressText": "Shoprite, Victoria Road, Douglas, IM2 4RE",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624673268",
       "phoneDisplay": "+44 1624 673268",
       "hours": {
@@ -298,17 +280,14 @@
         "Offers flu service",
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, Shoprite, Victoria Road, Douglas, IM2 4RE, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Douglas",
-      "address": [
-        "22 Woodbourne Road",
-        "Douglas"
-      ],
-      "postcode": "IM1 3AL",
-      "addressText": "22 Woodbourne Road, Douglas, IM1 3AL",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624675900",
       "phoneDisplay": "+44 1624 675900",
       "hours": {
@@ -320,17 +299,30 @@
         "Offers flu service",
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, 22 Woodbourne Road, Douglas, IM1 3AL, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Kirk Michael",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624878545",
+      "phoneDisplay": "+44 1624 878545",
+      "hours": {
+        "monFri": "9am to 1pm and 2pm to 5:30pm",
+        "sat": "9am to 1pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Kirk Michael, Isle of Man"
     },
     {
       "name": "Karson's Pharmacy",
-      "area": "Kirk Michael",
-      "address": [
-        "Main Road",
-        "Kirk Michael"
-      ],
-      "postcode": "IM6 1AB",
-      "addressText": "Main Road, Kirk Michael, IM6 1AB",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624878545",
       "phoneDisplay": "+44 1624 878545",
       "hours": {
@@ -343,17 +335,14 @@
         "Offers flu service",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Karson's Pharmacy, Main Road, Kirk Michael, IM6 1AB, Isle of Man"
+      "mapsQuery": "Karson's Pharmacy, Isle of Man"
     },
     {
-      "name": "Laxey Chemist",
-      "area": "Laxey",
-      "address": [
-        "15 New Road",
-        "Laxey"
-      ],
-      "postcode": "IM4 7BD",
-      "addressText": "15 New Road, Laxey, IM4 7BD",
+      "name": "Laxey",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624861221",
       "phoneDisplay": "+44 1624 861221",
       "hours": {
@@ -362,17 +351,46 @@
         "sun": "Closed"
       },
       "services": [],
-      "mapsQuery": "Laxey Chemist, 15 New Road, Laxey, IM4 7BD, Isle of Man"
+      "mapsQuery": "Laxey, Isle of Man"
+    },
+    {
+      "name": "Laxey Chemist",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624861221",
+      "phoneDisplay": "+44 1624 861221",
+      "hours": {
+        "monFri": "9am to 6pm",
+        "sat": "9am to 5pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Laxey Chemist, Isle of Man"
+    },
+    {
+      "name": "Onchan",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624615150",
+      "phoneDisplay": "+44 1624 615150",
+      "hours": {
+        "monFri": "9am to 6pm",
+        "sat": "9am to 5pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Onchan, Isle of Man"
     },
     {
       "name": "Karsons Pharmacy",
-      "area": "Onchan",
-      "address": [
-        "1 Main Road",
-        "Onchan"
-      ],
-      "postcode": "IM3 1BA",
-      "addressText": "1 Main Road, Onchan, IM3 1BA",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624615150",
       "phoneDisplay": "+44 1624 615150",
       "hours": {
@@ -385,18 +403,14 @@
         "Offers flu service",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Karsons Pharmacy, 1 Main Road, Onchan, IM3 1BA, Isle of Man"
+      "mapsQuery": "Karsons Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Onchan",
-      "address": [
-        "18b - 21b Village Walk",
-        "Onchan",
-        "+44 1624"
-      ],
-      "postcode": "IM3 4EB",
-      "addressText": "18b - 21b Village Walk, Onchan, +44 1624, IM3 4EB",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624676410",
       "phoneDisplay": "+44 1624 676410",
       "hours": {
@@ -409,61 +423,83 @@
         "Distributes LFTs",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, 18b - 21b Village Walk, Onchan, +44 1624, IM3 4EB, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Peel",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624843130",
+      "phoneDisplay": "+44 1624 843130",
+      "hours": {
+        "monFri": "9am to 6pm",
+        "sat": "9am to 5pm",
+        "sun": "every other Sunday 12pm to 1pm (see rota)"
+      },
+      "services": [],
+      "mapsQuery": "Peel, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Peel",
-      "address": [
-        "6-8 Michael Street",
-        "Peel"
-      ],
-      "postcode": "IM5 1HA",
-      "addressText": "6-8 Michael Street, Peel, IM5 1HA",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624843130",
       "phoneDisplay": "+44 1624 843130",
       "hours": {
         "monFri": "9am to 1pm and 2pm to 6pm",
         "sat": "Closed",
-        "sun": "Every other Sunday 12pm to 1pm (see rota)"
+        "sun": "every other Sunday 12pm to 1pm (see rota)"
       },
       "services": [
         "Distributes LFTs",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, 6-8 Michael Street, Peel, IM5 1HA, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Cowley Pharmacy",
-      "area": "Peel",
-      "address": [
-        "8-10 Atholl Place",
-        "Peel"
-      ],
-      "postcode": "IM5 1HE",
-      "addressText": "8-10 Atholl Place, Peel, IM5 1HE",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624842264",
       "phoneDisplay": "+44 1624 842264",
       "hours": {
         "monFri": "9am to 6pm",
         "sat": "9am to 5pm",
-        "sun": "Every other Sunday 12pm to 1pm (see rota)"
+        "sun": "every other Sunday 12pm to 1pm (see rota)"
       },
       "services": [
         "Offers flu service"
       ],
-      "mapsQuery": "Cowley Pharmacy, 8-10 Atholl Place, Peel, IM5 1HE, Isle of Man"
+      "mapsQuery": "Cowley Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Port Erin",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624832139",
+      "phoneDisplay": "+44 1624 832139",
+      "hours": {
+        "monFri": "8:30am to 5:30pm",
+        "sat": "9am to 5:30pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Port Erin, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Port Erin",
-      "address": [
-        "Darnills Complex",
-        "Station Road",
-        "Port Erin"
-      ],
-      "postcode": "IM9 6AB",
-      "addressText": "Darnills Complex, Station Road, Port Erin, IM9 6AB",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624832139",
       "phoneDisplay": "+44 1624 832139",
       "hours": {
@@ -474,17 +510,14 @@
       "services": [
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, Darnills Complex, Station Road, Port Erin, IM9 6AB, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Port Erin",
-      "address": [
-        "4 Church Road",
-        "Port Erin"
-      ],
-      "postcode": "IM9 6AQ",
-      "addressText": "4 Church Road, Port Erin, IM9 6AQ",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624833101",
       "phoneDisplay": "+44 1624 833101",
       "hours": {
@@ -496,18 +529,30 @@
         "Offers flu service",
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, 4 Church Road, Port Erin, IM9 6AQ, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Port St Mary",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624832128",
+      "phoneDisplay": "+44 1624 832128",
+      "hours": {
+        "monFri": "9am to 5:30pm",
+        "sat": "9am to 5pm",
+        "sun": "When on rota 12pm to 1pm"
+      },
+      "services": [],
+      "mapsQuery": "Port St Mary, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Port St Mary",
-      "address": [
-        "Helmshore House",
-        "Bay View Road",
-        "Port St Mary"
-      ],
-      "postcode": "IM9 5AG",
-      "addressText": "Helmshore House, Bay View Road, Port St Mary, IM9 5AG",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624832128",
       "phoneDisplay": "+44 1624 832128",
       "hours": {
@@ -519,17 +564,30 @@
         "Distributes LFTs",
         "Minor Ailments Scheme"
       ],
-      "mapsQuery": "Clear Pharmacy, Helmshore House, Bay View Road, Port St Mary, IM9 5AG, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
+    },
+    {
+      "name": "Ramsey",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
+      "phone": "+441624803491",
+      "phoneDisplay": "+44 1624 803491",
+      "hours": {
+        "monFri": "9am to 5:30pm",
+        "sat": "9am to 5:30pm",
+        "sun": "Closed"
+      },
+      "services": [],
+      "mapsQuery": "Ramsey, Isle of Man"
     },
     {
       "name": "Baker's Pharmacy",
-      "area": "Ramsey",
-      "address": [
-        "67 Parliament Street",
-        "Ramsey"
-      ],
-      "postcode": "IM8 1AY",
-      "addressText": "67 Parliament Street, Ramsey, IM8 1AY",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624803491",
       "phoneDisplay": "+44 1624 803491",
       "hours": {
@@ -538,17 +596,14 @@
         "sun": "Closed"
       },
       "services": [],
-      "mapsQuery": "Baker's Pharmacy, 67 Parliament Street, Ramsey, IM8 1AY, Isle of Man"
+      "mapsQuery": "Baker's Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Ramsey",
-      "address": [
-        "17 Parliament Street",
-        "Ramsey"
-      ],
-      "postcode": "IM8 1AS",
-      "addressText": "17 Parliament Street, Ramsey, IM8 1AS",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624812167",
       "phoneDisplay": "+44 1624 812167",
       "hours": {
@@ -559,18 +614,14 @@
       "services": [
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, 17 Parliament Street, Ramsey, IM8 1AS, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Ramsey",
-      "address": [
-        "Shoprite",
-        "Bowring Road",
-        "Ramsey"
-      ],
-      "postcode": "IM8 2LL",
-      "addressText": "Shoprite, Bowring Road, Ramsey, IM8 2LL",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624812246",
       "phoneDisplay": "+44 1624 812246",
       "hours": {
@@ -579,17 +630,14 @@
         "sun": "10am to 2pm"
       },
       "services": [],
-      "mapsQuery": "Clear Pharmacy, Shoprite, Bowring Road, Ramsey, IM8 2LL, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     },
     {
       "name": "Clear Pharmacy",
-      "area": "Ramsey",
-      "address": [
-        "6 St Pauls Square",
-        "Ramsey"
-      ],
-      "postcode": "IM8 1LE",
-      "addressText": "6 St Pauls Square, Ramsey, IM8 1LE",
+      "area": "Hemensley's Pharmacy",
+      "address": [],
+      "postcode": "",
+      "addressText": "",
       "phone": "+441624814388",
       "phoneDisplay": "+44 1624 814388",
       "hours": {
@@ -600,7 +648,7 @@
       "services": [
         "Distributes LFTs"
       ],
-      "mapsQuery": "Clear Pharmacy, 6 St Pauls Square, Ramsey, IM8 1LE, Isle of Man"
+      "mapsQuery": "Clear Pharmacy, Isle of Man"
     }
   ]
 }
