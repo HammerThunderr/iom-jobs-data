@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T13:44:10.039565+00:00",
-  "lastUpdated": "13:43 UTC",
+  "fetchedAt": "2026-08-20T14:05:05.116231+00:00",
+  "lastUpdated": "14:04 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -39,9 +39,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY842",
@@ -129,7 +129,7 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "15:10",
-      "status": "Delayed 15:40",
+      "status": "Delayed 15:45",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -137,9 +137,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Expected 15:22",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EI3216",
