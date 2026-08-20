@@ -62,9 +62,17 @@ DAY_LABELS = (
 )
 
 SKIP_HEADINGS = {
-    "community pharmacies", "opening hours", "contact", "contact details",
-    "services", "related", "share this page", "pharmacy services",
+    "community pharmacies", "related", "share this page",
 }
+
+# Sub-headings that BELONG TO the pharmacy above them. The hours usually live
+# under one of these, so they must be parsed as a continuation of the current
+# pharmacy -- not skipped, and not counted as a new pharmacy. Getting this
+# wrong is why an earlier run reported 37 records with only 11 sets of hours.
+CONTINUATION_HEADINGS = (
+    "opening hours", "opening times", "hours", "contact", "contact details",
+    "telephone", "services", "pharmacy services", "services provided",
+)
 
 
 def clean(s):
@@ -181,13 +189,33 @@ def scrape(debug=False):
 
         block = block_after(heading)
         block_text = " ".join(n.get_text(" ") for n in block if isinstance(n, Tag))
+        low_title = title.lower().rstrip(":").strip()
 
-        looks_like_pharmacy = bool(
-            POSTCODE_RE.search(block_text) or PHONE_RE.search(block_text)
-        )
+        # A sub-heading belonging to the pharmacy above: merge its data in.
+        if low_title.startswith(CONTINUATION_HEADINGS) and pharmacies:
+            extra = parse_block(block)
+            target = pharmacies[-1]
+            for slot in ("monFri", "sat", "sun"):
+                if not target["hours"][slot] and extra["hours"][slot]:
+                    target["hours"][slot] = extra["hours"][slot]
+            if not target["phone"] and extra["phone"]:
+                target["phone"] = extra["phone"]
+                target["phoneDisplay"] = pretty_phone(extra["phone"])
+            for sv in extra["services"]:
+                if sv not in target["services"]:
+                    target["services"].append(sv)
+            if debug:
+                print(f"[{heading.name}] {title[:44]:<46} -> merged into "
+                      f"{target['name'][:28]}")
+            continue
+
+        # A NEW pharmacy must have a postcode beneath it. Requiring a postcode
+        # (rather than just a phone number) stops nav/footer blocks and stray
+        # sub-headings being counted as pharmacies.
+        looks_like_pharmacy = bool(POSTCODE_RE.search(block_text))
 
         if debug:
-            print(f"[{heading.name}] {title[:48]:<50} "
+            print(f"[{heading.name}] {title[:44]:<46} "
                   f"{'PHARMACY' if looks_like_pharmacy else 'area?'}")
 
         if not looks_like_pharmacy:
@@ -229,12 +257,23 @@ def scrape(debug=False):
         for p in pharmacies[:3]:
             print(json.dumps(p, indent=1, ensure_ascii=False))
 
+    def _dump():
+        print("\n--- diagnostic: first 5 parsed records ---", file=sys.stderr)
+        for p in pharmacies[:5]:
+            print(f"  {p['name']} | area={p['area']} | pc={p['postcode']} | "
+                  f"phone={p['phone']} | hours={p['hours']}", file=sys.stderr)
+        print("--- headings on page ---", file=sys.stderr)
+        for h in root.find_all(HEADINGS)[:60]:
+            print(f"  <{h.name}> {clean(h.get_text())[:60]}", file=sys.stderr)
+
     if len(pharmacies) < EXPECTED_MIN:
+        _dump()
         raise RuntimeError(
             f"Only parsed {len(pharmacies)} pharmacies (expected >= {EXPECTED_MIN}). "
-            "Refusing to overwrite. Run with --debug to see the headings found.")
+            "Refusing to overwrite.")
 
     if with_hours / max(len(pharmacies), 1) < MIN_HOURS_RATIO:
+        _dump()
         raise RuntimeError(
             f"Only {with_hours}/{len(pharmacies)} records have opening hours. "
             "Refusing to overwrite good data with empty data.")
