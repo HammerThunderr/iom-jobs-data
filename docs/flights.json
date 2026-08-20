@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T21:32:28.104335+00:00",
-  "lastUpdated": "21:31 UTC",
+  "fetchedAt": "2026-08-20T21:36:30.157442+00:00",
+  "lastUpdated": "21:35 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -81,6 +81,14 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "12:35",
+      "status": "On-time",
+      "destination": "Birmingham",
       "statusType": "ontime"
     }
   ],
@@ -166,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
