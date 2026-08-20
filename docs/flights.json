@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T12:04:27.194976+00:00",
-  "lastUpdated": "12:04 UTC",
+  "fetchedAt": "2026-08-20T12:08:29.642889+00:00",
+  "lastUpdated": "12:08 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:11",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -31,9 +23,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "11:25",
-      "status": "Gate closed",
+      "status": "Departed 12:34",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
