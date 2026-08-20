@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T08:17:54.284018+00:00",
-  "lastUpdated": "08:17 UTC",
+  "fetchedAt": "2026-08-20T08:21:57.154687+00:00",
+  "lastUpdated": "08:21 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,9 +113,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "09:25",
-      "status": "Delayed 09:30",
+      "status": "On-time",
       "origin": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EZY839",
