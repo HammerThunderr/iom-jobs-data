@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T16:14:52.048878+00:00",
-  "lastUpdated": "16:14 UTC",
+  "fetchedAt": "2026-08-20T16:19:08.303990+00:00",
+  "lastUpdated": "16:18 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -55,9 +55,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "On-time",
+      "status": "Delayed 18:33",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY516",
