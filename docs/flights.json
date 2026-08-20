@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-20T15:20:59.699742+00:00",
-  "lastUpdated": "15:20 UTC",
+  "fetchedAt": "2026-08-20T15:54:38.523101+00:00",
+  "lastUpdated": "15:54 UTC",
   "departures": [
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "09:55",
-      "status": "Departed 10:43",
-      "destination": "Birmingham",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:20",
-      "status": "Departed 10:40",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
@@ -47,25 +31,25 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:45",
-      "status": "Gate closed",
+      "status": "Departed 16:41",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Taxied 16:46",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -79,9 +63,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "19:20",
-      "status": "On-time",
+      "status": "Delayed 19:35",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     }
   ],
   "arrivals": [
@@ -121,9 +105,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Landed 16:50",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
@@ -158,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 17,
   "source": "airport.im"
 }
