@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T18:00:07.606703+00:00",
-  "lastUpdated": "17:59 UTC",
+  "fetchedAt": "2026-08-21T18:04:10.665768+00:00",
+  "lastUpdated": "18:03 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -63,7 +63,7 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Departed 18:52",
+      "status": "Departed 18:51",
       "destination": "London Gatwick",
       "statusType": "departed"
     },
@@ -73,6 +73,14 @@
       "scheduled": "07:00",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "09:00",
+      "status": "On-time",
+      "destination": "Birmingham",
       "statusType": "ontime"
     }
   ],
@@ -158,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
