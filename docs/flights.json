@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T22:19:07.683801+00:00",
-  "lastUpdated": "22:18 UTC",
+  "fetchedAt": "2026-08-21T22:23:10.278081+00:00",
+  "lastUpdated": "22:22 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -9,14 +9,6 @@
       "scheduled": "17:15",
       "status": "Departed 18:19",
       "destination": "Manchester",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 17:35",
-      "destination": "Dublin",
       "statusType": "departed"
     },
     {
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
