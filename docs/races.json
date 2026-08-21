@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "generated": "2026-08-19",
-  "sourceUpdated": "2026-08-19T16:15:00",
+  "generated": "2026-08-20",
+  "sourceUpdated": "2026-08-20T19:30:00",
   "source": "Official Classic TT schedule",
   "sourceUrl": "https://www.iomtt.com",
   "mgpUrl": "https://www.manxgrandprix.co.uk",
@@ -10,10 +10,10 @@
   "contingencyNote": "Contingency dates may be used for qualifying if earlier sessions are delayed. The Clerk of the Course announces on event whether these sessions run, and in what format.",
   "sharedCourseNote": "The Classic TT shares course time with the 2026 Manx Grand Prix, running Sunday 16 to Monday 24 August.",
   "lastUpdate": {
-   "timestamp": "2026-08-19T16:15:00+01:00",
+   "timestamp": "2026-08-20T19:30:00+01:00",
    "status": "scheduled",
    "title": "Schedule Issued",
-   "message": "Thursday 20 August schedule issued (Wednesday 19 August, 16:15 BST). Full afternoon and evening qualifying sessions planned."
+   "message": "Friday 21 August schedule issued (Thursday 20 August, 19:30 BST). Daytime qualifying only; roads re-open no later than 17:00."
   }
  },
  "event": {
@@ -252,6 +252,16 @@
    "date": "2026-08-21",
    "label": "Qualifying",
    "week": "Qualifying Week",
+   "issued": "2026-08-20T19:30:00+01:00",
+   "roads": {
+    "close": [
+     "09:30"
+    ],
+    "open": [
+     "17:00"
+    ],
+    "note": "Roads re-open no later than 17:00"
+   },
    "sessions": [
     {
      "time": "10:15",
@@ -261,14 +271,14 @@
      "note": ""
     },
     {
-     "time": "11:45",
+     "time": "12:00",
      "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
      "laps": null,
      "kind": "qualifying",
      "note": ""
     },
     {
-     "time": "13:15",
+     "time": "14:00",
      "name": "Formula One / Junior 600 / Senior MGP / Supersport MGP",
      "laps": null,
      "kind": "qualifying",
