@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T10:33:21.370161+00:00",
-  "lastUpdated": "10:32 UTC",
+  "fetchedAt": "2026-08-21T10:37:24.053717+00:00",
+  "lastUpdated": "10:36 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -161,9 +161,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Delayed 11:58",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY233",
