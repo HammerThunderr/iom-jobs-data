@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T21:52:25.746738+00:00",
-  "lastUpdated": "21:51 UTC",
+  "fetchedAt": "2026-08-21T21:56:27.947172+00:00",
+  "lastUpdated": "21:55 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -102,14 +102,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EI3216",
-      "airline": "Aer Lingus",
-      "scheduled": "16:50",
-      "status": "Arrived 16:54",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
