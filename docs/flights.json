@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T14:59:14.237812+00:00",
-  "lastUpdated": "14:58 UTC",
+  "fetchedAt": "2026-08-21T15:03:16.765678+00:00",
+  "lastUpdated": "15:03 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -79,9 +79,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "On-time",
+      "status": "Delayed 18:55",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
@@ -95,9 +95,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Delayed 18:50",
+      "status": "On-time",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -177,17 +177,17 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "17:50",
-      "status": "On-time",
+      "status": "Delayed 18:20",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "Delayed 18:15",
+      "status": "On-time",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "LM678",
