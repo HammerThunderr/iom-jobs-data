@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T23:27:48.120023+00:00",
-  "lastUpdated": "23:26 UTC",
+  "fetchedAt": "2026-08-21T23:31:50.173817+00:00",
+  "lastUpdated": "23:30 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "Palma De Mallorca",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
