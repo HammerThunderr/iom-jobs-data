@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T17:38:17.034123+00:00",
-  "lastUpdated": "17:37 UTC",
+  "fetchedAt": "2026-08-21T17:42:19.664694+00:00",
+  "lastUpdated": "17:41 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -55,9 +55,9 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "18:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM687",
