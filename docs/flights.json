@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T12:20:30.925061+00:00",
-  "lastUpdated": "12:19 UTC",
+  "fetchedAt": "2026-08-21T12:24:33.156539+00:00",
+  "lastUpdated": "12:23 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -217,9 +217,9 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:00",
-      "status": "Expected 17:50",
+      "status": "Delayed 18:15",
       "origin": "London Gatwick",
-      "statusType": "expected"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM678",
