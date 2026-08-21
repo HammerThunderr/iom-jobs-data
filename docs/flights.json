@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T13:43:21.611068+00:00",
-  "lastUpdated": "13:42 UTC",
+  "fetchedAt": "2026-08-21T14:03:24.383614+00:00",
+  "lastUpdated": "14:02 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,17 +47,17 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "Boarding shortly",
+      "status": "Last call",
       "destination": "Bristol",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM677",
@@ -110,14 +110,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:53",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:25",
@@ -153,9 +145,9 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Final approach",
+      "status": "Arrived 14:49",
       "origin": "Bristol",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM638",
@@ -169,9 +161,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Expected 15:18",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY715",
@@ -230,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 27,
   "source": "airport.im"
 }
