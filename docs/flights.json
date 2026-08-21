@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T14:07:26.841725+00:00",
-  "lastUpdated": "14:06 UTC",
+  "fetchedAt": "2026-08-21T14:11:28.908541+00:00",
+  "lastUpdated": "14:10 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -153,17 +153,17 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Final approach",
+      "status": "Landed 15:08",
       "origin": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Expected 15:14",
+      "status": "Final approach",
       "origin": "London Heathrow",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY715",
