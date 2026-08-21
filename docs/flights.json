@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-21T10:41:26.842492+00:00",
-  "lastUpdated": "10:40 UTC",
+  "fetchedAt": "2026-08-21T10:54:02.309138+00:00",
+  "lastUpdated": "10:53 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,9 +47,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Delayed 12:35",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM637",
@@ -161,7 +161,7 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:06",
+      "status": "Delayed 12:05",
       "origin": "Dublin",
       "statusType": "delayed"
     },
