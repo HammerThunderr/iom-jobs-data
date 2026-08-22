@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T18:31:27.408381+00:00",
-  "lastUpdated": "18:30 UTC",
+  "fetchedAt": "2026-08-22T18:53:39.511921+00:00",
+  "lastUpdated": "18:52 UTC",
   "departures": [
-    {
-      "flightNo": "BA4503",
-      "airline": "British Airways",
-      "scheduled": "13:55",
-      "status": "Departed 14:02",
-      "destination": "Palma De Mallorca",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -41,6 +33,14 @@
       "scheduled": "07:30",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM314",
+      "airline": "Loganair",
+      "scheduled": "09:50",
+      "status": "On-time",
+      "destination": "Edinburgh",
       "statusType": "ontime"
     }
   ],
@@ -73,7 +73,7 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "19:45",
-      "status": "Landed 19:30",
+      "status": "Arrived 19:32",
       "origin": "Manchester",
       "statusType": "arrived"
     }
