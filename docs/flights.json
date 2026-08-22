@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T11:57:13.449034+00:00",
-  "lastUpdated": "11:56 UTC",
+  "fetchedAt": "2026-08-22T12:01:15.581454+00:00",
+  "lastUpdated": "12:01 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,9 +47,9 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Palma De Mallorca",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
