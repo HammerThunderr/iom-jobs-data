@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T21:30:09.440832+00:00",
-  "lastUpdated": "21:30 UTC",
+  "fetchedAt": "2026-08-22T21:41:48.099921+00:00",
+  "lastUpdated": "21:41 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -100,8 +100,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
