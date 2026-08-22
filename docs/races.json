@@ -1,8 +1,8 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "generated": "2026-08-20",
-  "sourceUpdated": "2026-08-20T19:30:00",
+  "generated": "2026-08-22",
+  "sourceUpdated": "2026-08-22T19:30:00",
   "source": "Official Classic TT schedule",
   "sourceUrl": "https://www.iomtt.com",
   "mgpUrl": "https://www.manxgrandprix.co.uk",
@@ -10,10 +10,10 @@
   "contingencyNote": "Contingency dates may be used for qualifying if earlier sessions are delayed. The Clerk of the Course announces on event whether these sessions run, and in what format.",
   "sharedCourseNote": "The Classic TT shares course time with the 2026 Manx Grand Prix, running Sunday 16 to Monday 24 August.",
   "lastUpdate": {
-   "timestamp": "2026-08-20T19:30:00+01:00",
+   "timestamp": "2026-08-22T19:30:00+01:00",
    "status": "scheduled",
    "title": "Schedule Issued",
-   "message": "Friday 21 August schedule issued (Thursday 20 August, 19:30 BST). Daytime qualifying only; roads re-open no later than 17:00."
+   "message": "Sunday 23 August schedule issued (Saturday 22 August, 19:30 BST). Classic TT races: Formula One at 13:30 and Lightweight & Ultra Lightweight at 15:30, both 3 laps."
   }
  },
  "event": {
@@ -252,39 +252,39 @@
    "date": "2026-08-21",
    "label": "Qualifying",
    "week": "Qualifying Week",
-   "issued": "2026-08-20T19:30:00+01:00",
+   "issued": "2026-08-21T00:00:00+01:00",
    "roads": {
     "close": [
-     "09:30"
+     "11:30"
     ],
-    "open": [
-     "17:00"
-    ],
-    "note": "Roads re-open no later than 17:00"
+    "open": [],
+    "note": "Roads now close at 11:30 (2-hour delay). Re-opening time to be confirmed; originally no later than 17:00."
    },
    "sessions": [
     {
-     "time": "10:15",
+     "time": "12:15",
      "name": "Historic Senior / Historic Junior",
      "laps": null,
      "kind": "qualifying",
-     "note": ""
-    },
-    {
-     "time": "12:00",
-     "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
-     "laps": null,
-     "kind": "qualifying",
-     "note": ""
+     "note": "2-hour delay - wet roads around the TT Course"
     },
     {
      "time": "14:00",
+     "name": "Lightweight / Ultra Lightweight / Junior MGP / Sportbike MGP",
+     "laps": null,
+     "kind": "qualifying",
+     "note": "2-hour delay - wet roads around the TT Course"
+    },
+    {
+     "time": "16:00",
      "name": "Formula One / Junior 600 / Senior MGP / Supersport MGP",
      "laps": null,
      "kind": "qualifying",
-     "note": ""
+     "note": "2-hour delay - wet roads around the TT Course"
     }
-   ]
+   ],
+   "status": "delayed",
+   "note": "2-hour delay - wet roads around the TT Course"
   },
   {
    "date": "2026-08-22",
@@ -317,6 +317,37 @@
      "name": "Formula One / Junior 600",
      "laps": null,
      "kind": "qualifying",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "date": "2026-08-23",
+   "label": "Race Day",
+   "week": "Race Week",
+   "issued": "2026-08-22T19:30:00+01:00",
+   "roads": {
+    "close": [
+     "12:45"
+    ],
+    "open": [
+     "18:00"
+    ],
+    "note": "Roads open no later than 18:00"
+   },
+   "sessions": [
+    {
+     "time": "13:30",
+     "name": "Formula One Classic TT",
+     "laps": 3,
+     "kind": "race",
+     "note": ""
+    },
+    {
+     "time": "15:30",
+     "name": "Lightweight & Ultra Lightweight Classic TT",
+     "laps": 3,
+     "kind": "race",
      "note": ""
     }
    ]
