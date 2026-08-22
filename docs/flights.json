@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T22:08:58.592487+00:00",
-  "lastUpdated": "22:08 UTC",
+  "fetchedAt": "2026-08-22T22:13:00.856305+00:00",
+  "lastUpdated": "22:12 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -58,6 +58,14 @@
       "status": "On-time",
       "destination": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "13:10",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -102,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
