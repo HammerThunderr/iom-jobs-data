@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T13:26:21.267972+00:00",
-  "lastUpdated": "13:25 UTC",
+  "fetchedAt": "2026-08-22T13:48:47.736641+00:00",
+  "lastUpdated": "13:48 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -55,9 +55,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Delayed 15:25",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -129,9 +129,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "14:30",
-      "status": "Delayed 14:56",
+      "status": "Final approach",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM676",
