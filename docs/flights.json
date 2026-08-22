@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T11:05:42.859613+00:00",
-  "lastUpdated": "11:05 UTC",
+  "fetchedAt": "2026-08-22T11:09:46.887044+00:00",
+  "lastUpdated": "11:09 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Gate closed",
+      "status": "Taxied 12:05",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
@@ -121,9 +121,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:00",
+      "status": "Arrived 12:04",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4504",
