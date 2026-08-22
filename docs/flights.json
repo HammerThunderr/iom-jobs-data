@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T20:44:40.063208+00:00",
-  "lastUpdated": "20:44 UTC",
+  "fetchedAt": "2026-08-22T20:48:42.040623+00:00",
+  "lastUpdated": "20:48 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -84,8 +84,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 11,
   "source": "airport.im"
 }
