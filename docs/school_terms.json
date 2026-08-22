@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-08-22",
+    "source": "Department of Education, Sport and Culture (DESC)",
+    "sourceUrl": "https://desc.gov.im/education/education/school-holidays/",
+    "sourcePdf": "https://desc.gov.im/media/mjbffqyc/school-holidays-and-term-dates-2025-2028.pdf",
+    "published": "July 2025",
+    "licence": "Open Government Licence v3.0",
+    "attribution": "Contains public sector information licensed under the Open Government Licence v3.0.",
+    "notes": [
+      "All holidays are subject to IOM Government Bank Holidays and TT Festival dates being released, therefore dates may be subject to change.",
+      "In respect of Southern Schools, there may be a deviation in the holiday dates to accommodate the Southern 100 in July.",
+      "In-service days and twilight sessions are for staff training.",
+      "Teachers additionally have 2 days for their own professional development, taken at a time and place of their choosing."
+    ],
+    "yearsIncluded": [
+      "2025/2026",
+      "2026/2027"
+    ],
+    "missing": "2027/2028 not yet included - see sourcePdf"
+  },
+  "years": [
+    {
+      "year": "2025/2026",
+      "pupilDays": 188,
+      "terms": [
+        {
+          "name": "Autumn Term",
+          "events": [
+            {
+              "type": "in_service",
+              "label": "In-service days (closed to pupils)",
+              "start": "2025-09-01",
+              "end": "2025-09-02",
+              "note": ""
+            },
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2025-09-03",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term",
+              "start": "2025-10-27",
+              "end": "2025-10-31",
+              "note": ""
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Christmas",
+              "start": "2025-12-19",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "name": "Spring Term",
+          "events": [
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2026-01-05",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term",
+              "start": "2026-02-16",
+              "end": "2026-02-20",
+              "note": "Includes 2 days in-service for all schools to be twilighted"
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Easter",
+              "start": "2026-04-02",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "name": "Summer Term",
+          "events": [
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2026-04-20",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Bank Holiday",
+              "start": "2026-05-04",
+              "note": ""
+            },
+            {
+              "type": "in_service",
+              "label": "In-service day (closed to pupils)",
+              "start": "2026-05-22",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Bank Holiday",
+              "start": "2026-05-25",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term (TT)",
+              "start": "2026-05-26",
+              "end": "2026-06-05",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Tynwald Day",
+              "start": "2026-07-06",
+              "note": ""
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Summer",
+              "start": "2026-07-23",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2026/2027",
+      "pupilDays": 188,
+      "terms": [
+        {
+          "name": "Autumn Term",
+          "events": [
+            {
+              "type": "in_service",
+              "label": "In-service days (closed to pupils)",
+              "start": "2026-09-01",
+              "end": "2026-09-02",
+              "note": ""
+            },
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2026-09-03",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term",
+              "start": "2026-10-26",
+              "end": "2026-10-30",
+              "note": ""
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Christmas",
+              "start": "2026-12-22",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "name": "Spring Term",
+          "events": [
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2027-01-06",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term",
+              "start": "2027-02-15",
+              "end": "2027-02-19",
+              "note": "Includes 2 days in-service for all schools to be twilighted"
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Easter",
+              "start": "2027-03-25",
+              "note": ""
+            }
+          ]
+        },
+        {
+          "name": "Summer Term",
+          "events": [
+            {
+              "type": "term_start",
+              "label": "Open to pupils",
+              "start": "2027-04-12",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Bank Holiday",
+              "start": "2027-05-03",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Bank Holiday",
+              "start": "2027-05-31",
+              "note": ""
+            },
+            {
+              "type": "in_service",
+              "label": "In-service day (closed to pupils)",
+              "start": "2027-05-28",
+              "note": ""
+            },
+            {
+              "type": "half_term",
+              "label": "Half term (TT)",
+              "start": "2027-06-01",
+              "end": "2027-06-11",
+              "note": ""
+            },
+            {
+              "type": "bank_holiday",
+              "label": "Tynwald Day",
+              "start": "2027-07-05",
+              "note": ""
+            },
+            {
+              "type": "term_end",
+              "label": "Close for Summer",
+              "start": "2027-07-23",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
