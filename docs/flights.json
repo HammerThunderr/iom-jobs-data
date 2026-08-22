@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T08:26:58.157827+00:00",
-  "lastUpdated": "08:26 UTC",
+  "fetchedAt": "2026-08-22T08:31:00.167230+00:00",
+  "lastUpdated": "08:30 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -23,9 +23,9 @@
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "09:45",
-      "status": "Gate closed",
+      "status": "Taxied 09:29",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM675",
