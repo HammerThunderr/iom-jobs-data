@@ -1,0 +1,67 @@
+name: Watch school term dates
+
+# Monitor-only. This workflow NEVER edits docs/school_terms.json -- it just
+# tells you when the DESC source changes, so you can update the file yourself.
+# Term dates change perhaps once a year, so monthly is plenty.
+
+on:
+  schedule:
+    - cron: "0 7 1 * *"    # 07:00 UTC on the 1st of each month
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Check the DESC page
+        id: check
+        run: python scripts/watch_school_terms.py
+
+      - name: Save baseline hash
+        if: steps.check.outputs.status == 'first_run' || steps.check.outputs.status == 'changed'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .watch/school_terms.sha256
+          git commit -m "chore: school term dates watcher baseline" || exit 0
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase --autostash origin main || true
+          done
+
+      - name: Open an issue if the dates changed
+        if: steps.check.outputs.status == 'changed'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              "The DESC school holidays page has changed since the last check.",
+              "",
+              "**Action needed:** compare it against `docs/school_terms.json` and update if the dates differ.",
+              "",
+              "Page: https://desc.gov.im/education/education/school-holidays/",
+              "",
+              "_Notification only. No data was changed automatically._"
+            ].join("\n");
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "School term dates may have changed on DESC",
+              body: body
+            });
+
+      - name: Result
+        run: echo "Watcher result is ${{ steps.check.outputs.status }}"
