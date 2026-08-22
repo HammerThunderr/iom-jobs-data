@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-22T17:30:03.750510+00:00",
-  "lastUpdated": "17:29 UTC",
+  "fetchedAt": "2026-08-22T17:41:55.015897+00:00",
+  "lastUpdated": "17:41 UTC",
   "departures": [
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "12:15",
-      "status": "Departed 12:44",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -94,6 +86,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 10,
   "source": "airport.im"
 }
