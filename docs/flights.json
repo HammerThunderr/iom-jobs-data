@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T18:23:16.396348+00:00",
-  "lastUpdated": "18:22 UTC",
+  "fetchedAt": "2026-08-23T18:27:18.584743+00:00",
+  "lastUpdated": "18:26 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -137,15 +137,15 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:25",
-      "status": "Final approach",
+      "status": "Landed 19:23",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Expected 19:52",
+      "status": "Expected 19:56",
       "origin": "London City",
       "statusType": "expected"
     },
