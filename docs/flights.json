@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T13:27:20.954595+00:00",
-  "lastUpdated": "13:27 UTC",
+  "fetchedAt": "2026-08-23T13:50:50.856935+00:00",
+  "lastUpdated": "13:49 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -55,7 +55,7 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "14:55",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Liverpool",
       "statusType": "boarding"
     },
@@ -87,9 +87,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Delayed 17:55",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
@@ -145,7 +145,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "Landed 14:16",
+      "status": "Arrived 14:20",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
@@ -153,7 +153,7 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Delayed 15:10",
+      "status": "Delayed 14:58",
       "origin": "Manchester",
       "statusType": "delayed"
     },
