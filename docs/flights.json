@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T10:11:17.558217+00:00",
-  "lastUpdated": "10:10 UTC",
+  "fetchedAt": "2026-08-23T10:15:19.862134+00:00",
+  "lastUpdated": "10:14 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -71,9 +71,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "15:15",
-      "status": "On-time",
+      "status": "Delayed 15:40",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY844",
@@ -153,17 +153,17 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "14:25",
-      "status": "On-time",
+      "status": "Delayed 14:40",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "On-time",
+      "status": "Delayed 15:10",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY843",
