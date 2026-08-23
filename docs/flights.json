@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T08:31:43.609544+00:00",
-  "lastUpdated": "08:31 UTC",
+  "fetchedAt": "2026-08-23T08:35:45.818882+00:00",
+  "lastUpdated": "08:35 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -113,9 +113,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "10:15",
-      "status": "Expected 10:00",
+      "status": "On-time",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EZY841",
