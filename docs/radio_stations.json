@@ -105,58 +105,62 @@
     {
       "id": "bbc.radio1",
       "name": "BBC Radio 1",
-      "streamUrl": "",
+      "streamUrl": "https://as-hls-ww.live.cf.md.bbci.co.uk/pool_01505109/live/ww/bbc_radio_one/bbc_radio_one.isml/bbc_radio_one-audio%3d96000.norewind.m3u8",
       "imageUrl": "https://cdn.onlineradiobox.com/img/l/1/1841.v14.png",
       "radioId": "bbc.radio1",
       "description": "UK chart and youth culture.",
       "region": "United Kingdom",
       "enabled": true,
       "order": 8,
-      "type": "link",
-      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_one",
-      "linkLabel": "Open in BBC Sounds"
+      "type": "stream",
+      "linkUrl": "",
+      "linkLabel": "",
+      "note": "Unofficial BBC HLS endpoint. Geo-restricted and the BBC rotates these periodically - if it stops working, update streamUrl here or set type back to \"link\"."
     },
     {
       "id": "bbc.radio2",
       "name": "BBC Radio 2",
-      "streamUrl": "",
+      "streamUrl": "https://as-hls-ww-live.akamaized.net/pool_74208725/live/ww/bbc_radio_two/bbc_radio_two.isml/bbc_radio_two-audio%3d96000.norewind.m3u8",
       "imageUrl": "https://cdn.onlineradiobox.com/img/l/2/1842.v13.png",
       "radioId": "bbc.radio2",
       "description": "UK adult contemporary and pop.",
       "region": "United Kingdom",
       "enabled": true,
       "order": 9,
-      "type": "link",
-      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_two",
-      "linkLabel": "Open in BBC Sounds"
+      "type": "stream",
+      "linkUrl": "",
+      "linkLabel": "",
+      "note": "Unofficial BBC HLS endpoint. Geo-restricted and the BBC rotates these periodically - if it stops working, update streamUrl here or set type back to \"link\"."
     },
     {
       "id": "bbc.radio3",
       "name": "BBC Radio 3",
-      "streamUrl": "",
+      "streamUrl": "https://as-hls-ww.live.cf.md.bbci.co.uk/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d96000.norewind.m3u8",
       "imageUrl": "https://cdn.onlineradiobox.com/img/l/3/1843.v12.png",
       "radioId": "bbc.radio3",
       "description": "UK classical and cultural programming.",
       "region": "United Kingdom",
       "enabled": true,
       "order": 10,
-      "type": "link",
-      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_three",
-      "linkLabel": "Open in BBC Sounds"
+      "type": "stream",
+      "linkUrl": "",
+      "linkLabel": "",
+      "note": "Unofficial BBC HLS endpoint. Geo-restricted and the BBC rotates these periodically - if it stops working, update streamUrl here or set type back to \"link\"."
     },
     {
       "id": "bbc.radio4",
       "name": "BBC Radio 4",
-      "streamUrl": "",
+      "streamUrl": "https://as-hls-ww-live.akamaized.net/pool_55057080/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d96000.norewind.m3u8",
       "imageUrl": "https://cdn.onlineradiobox.com/img/l/4/1844.v12.png",
       "radioId": "bbc.radio4",
       "description": "UK news, speech, and documentaries.",
       "region": "United Kingdom",
       "enabled": true,
       "order": 11,
-      "type": "link",
-      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm",
-      "linkLabel": "Open in BBC Sounds"
+      "type": "stream",
+      "linkUrl": "",
+      "linkLabel": "",
+      "note": "Unofficial BBC HLS endpoint. Geo-restricted and the BBC rotates these periodically - if it stops working, update streamUrl here or set type back to \"link\"."
     },
     {
       "id": "classicfm",
@@ -170,7 +174,8 @@
       "order": 12,
       "type": "link",
       "linkUrl": "https://www.classicfm.com/radio/player/",
-      "linkLabel": "Open Classic FM"
+      "linkLabel": "Open Classic FM",
+      "note": "Opens Classic FM's own player - Global do not publish a third-party stream."
     }
   ]
 }
