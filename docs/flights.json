@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T16:47:14.277558+00:00",
-  "lastUpdated": "16:46 UTC",
+  "fetchedAt": "2026-08-23T16:51:16.692540+00:00",
+  "lastUpdated": "16:50 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -172,8 +172,16 @@
       "status": "On-time",
       "origin": "London City",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "07:50",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 22,
   "source": "airport.im"
 }
