@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T12:22:08.516328+00:00",
-  "lastUpdated": "12:21 UTC",
+  "fetchedAt": "2026-08-23T12:26:12.671137+00:00",
+  "lastUpdated": "12:25 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -39,17 +39,17 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:05",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
