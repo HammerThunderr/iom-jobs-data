@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T05:44:11.217144+00:00",
-  "lastUpdated": "05:43 UTC",
+  "fetchedAt": "2026-08-23T05:51:28.649333+00:00",
+  "lastUpdated": "05:51 UTC",
   "departures": [
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:30",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM314",
