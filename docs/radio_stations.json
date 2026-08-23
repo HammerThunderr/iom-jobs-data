@@ -161,21 +161,6 @@
       "linkUrl": "",
       "linkLabel": "",
       "note": "Unofficial BBC HLS endpoint. Geo-restricted and the BBC rotates these periodically - if it stops working, update streamUrl here or set type back to \"link\"."
-    },
-    {
-      "id": "classicfm",
-      "name": "Classic FM",
-      "streamUrl": "",
-      "imageUrl": "https://cdn.onlineradiobox.com/img/l/6/1846.v11.png",
-      "radioId": "classicfm",
-      "description": "Commercial classical music network.",
-      "region": "United Kingdom",
-      "enabled": true,
-      "order": 12,
-      "type": "link",
-      "linkUrl": "https://www.classicfm.com/radio/player/",
-      "linkLabel": "Open Classic FM",
-      "note": "Opens Classic FM's own player - Global do not publish a third-party stream."
     }
   ]
 }
