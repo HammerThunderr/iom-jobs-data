@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-08-23",
+    "note": "Isle of Man broadcasters. Stream URLs change without warning - when a station stops working, update its streamUrl here and the app picks it up on next launch, with no app store release.",
+    "howToDisable": "Set \"enabled\": false to hide a station immediately without deleting its entry.",
+    "count": 7
+  },
+  "stations": [
+    {
+      "id": "im.manxam",
+      "name": "Manx Radio",
+      "streamUrl": "https://listen-manxradio.sharp-stream.com/manxradioammobile.aac",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/8/25168.v17.png",
+      "radioId": "im.manxam",
+      "description": "The Isle of Man's national station.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "im.manxgold",
+      "name": "Manx Radio Gold",
+      "streamUrl": "https://listen-manxradio.sharp-stream.com/manxgoldhigh.mp3",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/7/137527.v4.png",
+      "radioId": "im.manxgold",
+      "description": "Classic hits from Manx Radio.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "im.3fm",
+      "name": "3FM - Isle of Man",
+      "streamUrl": "https://stream.rcs.revma.com/0kv9v43t87zuv",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/9/25149.v8.png",
+      "radioId": "im.3fm",
+      "description": "Island music and local news.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 3
+    },
+    {
+      "id": "im.energy",
+      "name": "Energy FM",
+      "streamUrl": "https://ukwesta.streaming.broadcast.radio/energyfm",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/6/25156.v6.png",
+      "radioId": "im.energy",
+      "description": "Contemporary hits for the Island.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "im.antennaweb",
+      "name": "Antenna Web Peel",
+      "streamUrl": "https://isleofman.radioantennaweb.com/Peel",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/0/129330.v9.png",
+      "radioId": "im.antennaweb",
+      "description": "Community radio from Peel.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 5
+    },
+    {
+      "id": "im.antennawebcastletown",
+      "name": "Antenna Web Castletown",
+      "streamUrl": "https://isleofman.radioantennaweb.com/Castletown",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/9/149829.v2.png",
+      "radioId": "im.antennawebcastletown",
+      "description": "Community radio from Castletown.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 6
+    },
+    {
+      "id": "im.isleofmanfree",
+      "name": "Isle of Man Free Radio",
+      "streamUrl": "https://listen.radioking.com/radio/499726/stream/556927",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/0/146400.v1.png",
+      "radioId": "im.isleofmanfree",
+      "description": "Independent Manx internet radio.",
+      "region": "Isle of Man",
+      "enabled": true,
+      "order": 7
+    }
+  ]
+}
