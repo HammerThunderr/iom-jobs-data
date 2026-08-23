@@ -4,7 +4,11 @@
     "generated": "2026-08-23",
     "note": "Isle of Man broadcasters. Stream URLs change without warning - when a station stops working, update its streamUrl here and the app picks it up on next launch, with no app store release.",
     "howToDisable": "Set \"enabled\": false to hide a station immediately without deleting its entry.",
-    "count": 7
+    "count": 12,
+    "types": {
+      "stream": "Played in-app via the built-in player.",
+      "link": "Opens the broadcaster's own official player. Used for stations whose streams are not licensed for third-party apps to embed, and whose unofficial endpoints are geo-blocked and change often."
+    }
   },
   "stations": [
     {
@@ -16,7 +20,9 @@
       "description": "The Isle of Man's national station.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 1
+      "order": 1,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.manxgold",
@@ -27,7 +33,9 @@
       "description": "Classic hits from Manx Radio.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 2
+      "order": 2,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.3fm",
@@ -38,7 +46,9 @@
       "description": "Island music and local news.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 3
+      "order": 3,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.energy",
@@ -49,7 +59,9 @@
       "description": "Contemporary hits for the Island.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 4
+      "order": 4,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.antennaweb",
@@ -60,7 +72,9 @@
       "description": "Community radio from Peel.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 5
+      "order": 5,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.antennawebcastletown",
@@ -71,7 +85,9 @@
       "description": "Community radio from Castletown.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 6
+      "order": 6,
+      "type": "stream",
+      "linkUrl": ""
     },
     {
       "id": "im.isleofmanfree",
@@ -82,7 +98,79 @@
       "description": "Independent Manx internet radio.",
       "region": "Isle of Man",
       "enabled": true,
-      "order": 7
+      "order": 7,
+      "type": "stream",
+      "linkUrl": ""
+    },
+    {
+      "id": "bbc.radio1",
+      "name": "BBC Radio 1",
+      "streamUrl": "",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/1/1841.v14.png",
+      "radioId": "bbc.radio1",
+      "description": "UK chart and youth culture.",
+      "region": "United Kingdom",
+      "enabled": true,
+      "order": 8,
+      "type": "link",
+      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_one",
+      "linkLabel": "Open in BBC Sounds"
+    },
+    {
+      "id": "bbc.radio2",
+      "name": "BBC Radio 2",
+      "streamUrl": "",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/2/1842.v13.png",
+      "radioId": "bbc.radio2",
+      "description": "UK adult contemporary and pop.",
+      "region": "United Kingdom",
+      "enabled": true,
+      "order": 9,
+      "type": "link",
+      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_two",
+      "linkLabel": "Open in BBC Sounds"
+    },
+    {
+      "id": "bbc.radio3",
+      "name": "BBC Radio 3",
+      "streamUrl": "",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/3/1843.v12.png",
+      "radioId": "bbc.radio3",
+      "description": "UK classical and cultural programming.",
+      "region": "United Kingdom",
+      "enabled": true,
+      "order": 10,
+      "type": "link",
+      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_three",
+      "linkLabel": "Open in BBC Sounds"
+    },
+    {
+      "id": "bbc.radio4",
+      "name": "BBC Radio 4",
+      "streamUrl": "",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/4/1844.v12.png",
+      "radioId": "bbc.radio4",
+      "description": "UK news, speech, and documentaries.",
+      "region": "United Kingdom",
+      "enabled": true,
+      "order": 11,
+      "type": "link",
+      "linkUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm",
+      "linkLabel": "Open in BBC Sounds"
+    },
+    {
+      "id": "classicfm",
+      "name": "Classic FM",
+      "streamUrl": "",
+      "imageUrl": "https://cdn.onlineradiobox.com/img/l/6/1846.v11.png",
+      "radioId": "classicfm",
+      "description": "Commercial classical music network.",
+      "region": "United Kingdom",
+      "enabled": true,
+      "order": 12,
+      "type": "link",
+      "linkUrl": "https://www.classicfm.com/radio/player/",
+      "linkLabel": "Open Classic FM"
     }
   ]
 }
