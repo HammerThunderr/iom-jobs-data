@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T16:26:39.529537+00:00",
-  "lastUpdated": "16:26 UTC",
+  "fetchedAt": "2026-08-23T16:30:41.993129+00:00",
+  "lastUpdated": "16:30 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -55,9 +55,9 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "16:45",
-      "status": "Gate closed",
+      "status": "Departed 17:25",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM677",
