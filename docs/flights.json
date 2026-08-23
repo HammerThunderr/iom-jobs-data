@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T20:28:46.308870+00:00",
-  "lastUpdated": "20:28 UTC",
+  "fetchedAt": "2026-08-23T20:44:33.605386+00:00",
+  "lastUpdated": "20:43 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "15:15",
-      "status": "Departed 15:50",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY844",
       "airline": "easyJet",
@@ -81,6 +73,14 @@
       "scheduled": "10:05",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:40",
+      "status": "On-time",
+      "destination": "London Heathrow",
       "statusType": "ontime"
     }
   ],
