@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T13:43:32.196277+00:00",
-  "lastUpdated": "13:42 UTC",
+  "fetchedAt": "2026-08-24T13:47:34.149872+00:00",
+  "lastUpdated": "13:46 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -98,14 +98,6 @@
       "status": "Delayed 20:35",
       "destination": "London Gatwick",
       "statusType": "delayed"
-    },
-    {
-      "flightNo": "LM941",
-      "airline": "Loganair",
-      "scheduled": "19:40",
-      "status": "On-time",
-      "destination": "Aberdeen",
-      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -174,14 +166,6 @@
       "statusType": "expected"
     },
     {
-      "flightNo": "LM940",
-      "airline": "Loganair",
-      "scheduled": "16:30",
-      "status": "On-time",
-      "origin": "Aberdeen",
-      "statusType": "ontime"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -222,6 +206,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 27,
+  "totalCount": 25,
   "source": "airport.im"
 }
