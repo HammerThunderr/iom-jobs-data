@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T12:09:40.125650+00:00",
-  "lastUpdated": "12:08 UTC",
+  "fetchedAt": "2026-08-24T12:20:57.761540+00:00",
+  "lastUpdated": "12:20 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -55,7 +55,7 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Delayed 13:35",
+      "status": "Delayed 14:00",
       "destination": "Birmingham",
       "statusType": "delayed"
     },
@@ -63,7 +63,7 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Bristol",
       "statusType": "boarding"
     },
@@ -161,7 +161,7 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "13:00",
-      "status": "Arrived 12:58",
+      "status": "Arrived 12:54",
       "origin": "Bristol",
       "statusType": "arrived"
     },
