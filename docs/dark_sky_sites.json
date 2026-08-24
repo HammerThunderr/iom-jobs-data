@@ -1,0 +1,445 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-08-24",
+    "source": "Visit Isle of Man / Dark Sky Discovery",
+    "sourceUrl": "https://www.visitisleofman.com/see-and-do/great-outdoors/stargazing-sites",
+    "attribution": "Site information from Visit Isle of Man. © Crown Copyright.",
+    "note": "The Isle of Man has 26 official Dark Sky Discovery Sites - the highest concentration anywhere in the British Isles. All are publicly accessible.",
+    "advice": [
+      "Let your eyes adapt for 20 minutes - avoid looking at your phone.",
+      "Use a red torch if you have one; white light ruins night vision.",
+      "Dress far warmer than you think you need to.",
+      "Tell someone where you are going, and take a charged phone.",
+      "Park considerately and take all litter home."
+    ],
+    "seasonalPicks": {
+      "winter": [
+        "Port Soderick Upper Car Park",
+        "Axnfell Forest",
+        "Fort Island",
+        "Sulby Reservoir"
+      ],
+      "spring": [
+        "Port Soderick Upper Car Park",
+        "The Sound",
+        "Fort Island"
+      ],
+      "summer": [
+        "Niarbyl Bay",
+        "The Sound",
+        "Fort Island"
+      ],
+      "autumn": [
+        "Port Soderick Upper Car Park",
+        "The Sound",
+        "Fort Island"
+      ]
+    },
+    "count": 25
+  },
+  "sites": [
+    {
+      "id": "smeale-coastal-area",
+      "name": "Smeale Coastal Area",
+      "address": "Smeale, Andreas",
+      "town": "Andreas",
+      "region": "North",
+      "horizons": "SW to NE",
+      "description": "One of the Island's darkest sites with near to no light pollution. Totally uninterrupted horizon views.",
+      "tags": [
+        "Darkest skies",
+        "Coastal",
+        "Car park"
+      ],
+      "mapsQuery": "Smeale Coastal Area, Smeale, Andreas, Isle of Man",
+      "order": 1
+    },
+    {
+      "id": "the-sound",
+      "name": "The Sound",
+      "address": "Sound Road, Port St Mary, IM9 5PZ",
+      "town": "Port St Mary",
+      "region": "South",
+      "horizons": "S and E",
+      "description": "The Island's southern tip and one of the most scenic places in the British Isles. Large car park, benches and grass. Listen for seals on Kitterland.",
+      "tags": [
+        "Iconic",
+        "Big car park",
+        "Seating",
+        "Coastal"
+      ],
+      "mapsQuery": "The Sound, Sound Road, Port St Mary, IM9 5PZ, Isle of Man",
+      "order": 2
+    },
+    {
+      "id": "the-sloc-car-park",
+      "name": "The Sloc Car Park",
+      "address": "A36, Port Erin",
+      "town": "Port Erin",
+      "region": "South",
+      "horizons": "S and NW",
+      "description": "A popular spot among local astronomers, with panoramic views over the South and North West.",
+      "tags": [
+        "Astronomers' favourite",
+        "Car park",
+        "Upland"
+      ],
+      "mapsQuery": "The Sloc Car Park, A36, Port Erin, Isle of Man",
+      "order": 3
+    },
+    {
+      "id": "niarbyl-bay",
+      "name": "Niarbyl Bay",
+      "address": "Niarbyl Road, Dalby, IM5 2BS",
+      "town": "Dalby",
+      "region": "West",
+      "horizons": "W",
+      "description": "A secluded beauty spot on the west coast with rolling hills and dramatic coastal paths. Views out over the Irish Sea.",
+      "tags": [
+        "Coastal",
+        "Cafe nearby",
+        "Car park"
+      ],
+      "mapsQuery": "Niarbyl Bay, Niarbyl Road, Dalby, IM5 2BS, Isle of Man",
+      "order": 4
+    },
+    {
+      "id": "fort-island",
+      "name": "Fort Island",
+      "address": "Derbyhaven",
+      "town": "Derbyhaven",
+      "region": "South",
+      "horizons": "NE to SW",
+      "description": "Views casting over Castletown and Port Erin, with sensational horizon views from North East to South West.",
+      "tags": [
+        "Coastal",
+        "Historic",
+        "Car park"
+      ],
+      "mapsQuery": "Fort Island, Derbyhaven, Isle of Man",
+      "order": 5
+    },
+    {
+      "id": "port-soderick-upper-car-park",
+      "name": "Port Soderick Upper Car Park",
+      "address": "Port Soderick",
+      "town": "Port Soderick",
+      "region": "East",
+      "horizons": "NW and S",
+      "description": "A small hamlet south of Douglas. The car park above the beach is a great vantage point, ten minutes from town.",
+      "tags": [
+        "Close to Douglas",
+        "Car park",
+        "Coastal"
+      ],
+      "mapsQuery": "Port Soderick Upper Car Park, Port Soderick, Isle of Man",
+      "order": 6
+    },
+    {
+      "id": "port-soderick-brooghs-little-ness-car-park",
+      "name": "Port Soderick Brooghs, Little Ness Car Park",
+      "address": "Port Soderick",
+      "town": "Port Soderick",
+      "region": "East",
+      "horizons": "NE and SW",
+      "description": "Uninterrupted views from the North East and South West along the cliff tops.",
+      "tags": [
+        "Close to Douglas",
+        "Car park",
+        "Cliff top"
+      ],
+      "mapsQuery": "Port Soderick Brooghs, Little Ness Car Park, Port Soderick, Isle of Man",
+      "order": 7
+    },
+    {
+      "id": "coastal-footpath-behind-peel-castle",
+      "name": "Coastal Footpath behind Peel Castle",
+      "address": "Peel Castle, West Quay, Peel, IM5 1TB",
+      "town": "Peel",
+      "region": "West",
+      "horizons": "NW and S",
+      "description": "Follow the coastal path around Peel Castle for panoramic views out to sea, with minimal light pollution.",
+      "tags": [
+        "Coastal",
+        "Walk required",
+        "Historic"
+      ],
+      "mapsQuery": "Coastal Footpath behind Peel Castle, Peel Castle, West Quay, Peel, IM5 1TB, Isle of Man",
+      "order": 8
+    },
+    {
+      "id": "sulby-reservoir",
+      "name": "Sulby Reservoir",
+      "address": "Tholt y Will, Sulby, IM7 2BF",
+      "town": "Sulby",
+      "region": "North",
+      "horizons": "Upland, open",
+      "description": "The Island's largest and deepest reservoir, in the shadow of Snaefell. Rugged upland moorland in the centre of the Island.",
+      "tags": [
+        "Upland",
+        "Remote",
+        "Car park"
+      ],
+      "mapsQuery": "Sulby Reservoir, Tholt y Will, Sulby, IM7 2BF, Isle of Man",
+      "order": 9
+    },
+    {
+      "id": "glen-mooar-beach-car-park",
+      "name": "Glen Mooar Beach Car Park",
+      "address": "A4 Coast Road, Glen Mooar",
+      "town": "Glen Mooar",
+      "region": "West",
+      "horizons": "W to N, and E over land",
+      "description": "Away from towns and street lights on the west coast, offering wonderfully clear night sky views.",
+      "tags": [
+        "Coastal",
+        "Car park",
+        "Dark"
+      ],
+      "mapsQuery": "Glen Mooar Beach Car Park, A4 Coast Road, Glen Mooar, Isle of Man",
+      "order": 10
+    },
+    {
+      "id": "glen-wyllin-beach",
+      "name": "Glen Wyllin Beach",
+      "address": "Glen Wyllin, Kirk Michael",
+      "town": "Kirk Michael",
+      "region": "West",
+      "horizons": "W and N",
+      "description": "A sandy and shingle stretch on the north west coast, accessible from Glen Wyllin campsite.",
+      "tags": [
+        "Coastal",
+        "Campsite",
+        "Beach"
+      ],
+      "mapsQuery": "Glen Wyllin Beach, Glen Wyllin, Kirk Michael, Isle of Man",
+      "order": 11
+    },
+    {
+      "id": "ballaugh-beach",
+      "name": "Ballaugh Beach",
+      "address": "Off the Bollyn Road, Ballaugh",
+      "town": "Ballaugh",
+      "region": "North",
+      "horizons": "W and N",
+      "description": "A sand and shale beach on the exposed North West of the Island.",
+      "tags": [
+        "Coastal",
+        "Beach",
+        "Dark"
+      ],
+      "mapsQuery": "Ballaugh Beach, Off the Bollyn Road, Ballaugh, Isle of Man",
+      "order": 12
+    },
+    {
+      "id": "port-lewaigue-car-park",
+      "name": "Port Lewaigue Car Park",
+      "address": "Port e Vullen",
+      "town": "Port e Vullen",
+      "region": "North",
+      "horizons": "N and E",
+      "description": "A small settlement on the rugged east coast. The car park above the beach is a great vantage point, and a good aurora spot.",
+      "tags": [
+        "Coastal",
+        "Car park",
+        "Aurora spot"
+      ],
+      "mapsQuery": "Port Lewaigue Car Park, Port e Vullen, Isle of Man",
+      "order": 13
+    },
+    {
+      "id": "axnfell-forest",
+      "name": "Axnfell Forest",
+      "address": "Glen Roy, Laxey",
+      "town": "Laxey",
+      "region": "East",
+      "horizons": "N",
+      "description": "On the steep north facing slopes of Glen Roy, with views stretching right up to Windy Corner on the TT course.",
+      "tags": [
+        "Forest",
+        "Upland",
+        "Winter favourite"
+      ],
+      "mapsQuery": "Axnfell Forest, Glen Roy, Laxey, Isle of Man",
+      "order": 14
+    },
+    {
+      "id": "ballannette-country-park",
+      "name": "Ballannette Country Park",
+      "address": "Ballamenagh Road, Baldrine, IM4 6AJ",
+      "town": "Baldrine",
+      "region": "East",
+      "horizons": "Open",
+      "description": "A nature reserve with lakes and a bird hide. A registered Dark Sky site with its own interpretation board.",
+      "tags": [
+        "Interpretation board",
+        "Nature reserve",
+        "Family friendly"
+      ],
+      "mapsQuery": "Ballannette Country Park, Ballamenagh Road, Baldrine, IM4 6AJ, Isle of Man",
+      "order": 15
+    },
+    {
+      "id": "clypse-kerrowdhoo-reservoirs",
+      "name": "Clypse & Kerrowdhoo Reservoirs",
+      "address": "Onchan, IM4 5BG",
+      "town": "Onchan",
+      "region": "East",
+      "horizons": "Open",
+      "description": "Two pretty reservoirs a short walk apart, in the hills above Onchan.",
+      "tags": [
+        "Reservoir",
+        "Close to Douglas",
+        "Walk required"
+      ],
+      "mapsQuery": "Clypse & Kerrowdhoo Reservoirs, Onchan, IM4 5BG, Isle of Man",
+      "order": 16
+    },
+    {
+      "id": "conrhenny-community-woodland",
+      "name": "Conrhenny Community Woodland",
+      "address": "Begoade Road, Onchan, IM4 6AX",
+      "town": "Onchan",
+      "region": "East",
+      "horizons": "Open",
+      "description": "A growing community woodland with a five hectare Children's Wood of more than 5,000 native trees.",
+      "tags": [
+        "Forest",
+        "Family friendly",
+        "Car park"
+      ],
+      "mapsQuery": "Conrhenny Community Woodland, Begoade Road, Onchan, IM4 6AX, Isle of Man",
+      "order": 17
+    },
+    {
+      "id": "west-baldwin-injebreck-reservoir",
+      "name": "West Baldwin (Injebreck) Reservoir",
+      "address": "West Baldwin, IM4 5EU",
+      "town": "West Baldwin",
+      "region": "Central",
+      "horizons": "Open valley",
+      "description": "A picturesque reservoir set within a wooded valley in the centre of the Island.",
+      "tags": [
+        "Reservoir",
+        "Central",
+        "Car park"
+      ],
+      "mapsQuery": "West Baldwin (Injebreck) Reservoir, West Baldwin, IM4 5EU, Isle of Man",
+      "order": 18
+    },
+    {
+      "id": "ballure-reservoir",
+      "name": "Ballure Reservoir",
+      "address": "Ramsey, IM7 1AB",
+      "town": "Ramsey",
+      "region": "North",
+      "horizons": "Sheltered",
+      "description": "A small sheltered hillside reservoir within Ballure plantation, walking distance from Ramsey.",
+      "tags": [
+        "Reservoir",
+        "Walk required",
+        "Near town"
+      ],
+      "mapsQuery": "Ballure Reservoir, Ramsey, IM7 1AB, Isle of Man",
+      "order": 19
+    },
+    {
+      "id": "mooragh-park",
+      "name": "Mooragh Park",
+      "address": "Lake Road, Ramsey, IM8 3AR",
+      "town": "Ramsey",
+      "region": "North",
+      "horizons": "N",
+      "description": "A popular park in Ramsey with a boating lake and excellent leisure facilities. Good northern horizon for aurora watching.",
+      "tags": [
+        "Family friendly",
+        "Aurora spot",
+        "Near town",
+        "Parking"
+      ],
+      "mapsQuery": "Mooragh Park, Lake Road, Ramsey, IM8 3AR, Isle of Man",
+      "order": 20
+    },
+    {
+      "id": "poulsom-park",
+      "name": "Poulsom Park",
+      "address": "Castletown",
+      "town": "Castletown",
+      "region": "South",
+      "horizons": "W and N",
+      "description": "Between Castletown's train station and the Silverburn river. A family favourite with dark skies to the West and North.",
+      "tags": [
+        "Family friendly",
+        "Near town",
+        "Parking"
+      ],
+      "mapsQuery": "Poulsom Park, Castletown, Isle of Man",
+      "order": 21
+    },
+    {
+      "id": "cregneash",
+      "name": "Cregneash",
+      "address": "Howe Road, Cregneash, IM9 5PX",
+      "town": "Cregneash",
+      "region": "South",
+      "horizons": "S and W",
+      "description": "A hill village overlooking the Calf of Man, one of the last strongholds of Manx crofting life.",
+      "tags": [
+        "Historic village",
+        "Upland",
+        "Parking"
+      ],
+      "mapsQuery": "Cregneash, Howe Road, Cregneash, IM9 5PX, Isle of Man",
+      "order": 22
+    },
+    {
+      "id": "rushen-abbey",
+      "name": "Rushen Abbey",
+      "address": "Mill Road, Ballasalla, IM9 3DB",
+      "town": "Ballasalla",
+      "region": "South",
+      "horizons": "Open",
+      "description": "The grounds of a 12th century abbey gifted by King Olaf I in 1134.",
+      "tags": [
+        "Historic",
+        "Parking",
+        "Family friendly"
+      ],
+      "mapsQuery": "Rushen Abbey, Mill Road, Ballasalla, IM9 3DB, Isle of Man",
+      "order": 23
+    },
+    {
+      "id": "tynwald-mills-overflow-car-park",
+      "name": "Tynwald Mills Overflow Car Park",
+      "address": "Ballig, St Johns, IM4 3AD",
+      "town": "St Johns",
+      "region": "Central",
+      "horizons": "Open",
+      "description": "Lined by trees with large flat open areas, in the rural centre of the Island.",
+      "tags": [
+        "Flat ground",
+        "Car park",
+        "Central"
+      ],
+      "mapsQuery": "Tynwald Mills Overflow Car Park, Ballig, St Johns, IM4 3AD, Isle of Man",
+      "order": 24
+    },
+    {
+      "id": "onchan-pleasure-park",
+      "name": "Onchan Pleasure Park",
+      "address": "Onchan Park, Onchan, IM3 1HU",
+      "town": "Onchan",
+      "region": "East",
+      "horizons": "Open",
+      "description": "A popular leisure park with a boating lake, close to Douglas and easy to reach.",
+      "tags": [
+        "Family friendly",
+        "Easy access",
+        "Near town"
+      ],
+      "mapsQuery": "Onchan Pleasure Park, Onchan Park, Onchan, IM3 1HU, Isle of Man",
+      "order": 25
+    }
+  ]
+}
