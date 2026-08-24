@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T20:36:16.203409+00:00",
-  "lastUpdated": "20:35 UTC",
+  "fetchedAt": "2026-08-24T20:54:25.783811+00:00",
+  "lastUpdated": "20:54 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
