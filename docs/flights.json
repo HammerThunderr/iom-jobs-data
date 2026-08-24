@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T19:11:21.636002+00:00",
-  "lastUpdated": "19:10 UTC",
+  "fetchedAt": "2026-08-24T19:15:24.304347+00:00",
+  "lastUpdated": "19:14 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -129,17 +129,17 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "London City",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Final approach",
+      "status": "Landed 20:13",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM682",
