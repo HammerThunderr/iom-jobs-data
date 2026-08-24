@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T12:41:10.886389+00:00",
-  "lastUpdated": "12:40 UTC",
+  "fetchedAt": "2026-08-24T13:27:23.953634+00:00",
+  "lastUpdated": "13:26 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -55,17 +55,17 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Delayed 14:00",
+      "status": "Next info at 14:30",
       "destination": "Birmingham",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Taxied 13:31",
+      "status": "Departed 13:41",
       "destination": "Bristol",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
@@ -105,6 +105,14 @@
       "scheduled": "19:05",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM941",
+      "airline": "Loganair",
+      "scheduled": "19:40",
+      "status": "On-time",
+      "destination": "Aberdeen",
       "statusType": "ontime"
     }
   ],
@@ -161,16 +169,24 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "On-time",
+      "status": "Delayed 17:15",
       "origin": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "On-time",
+      "status": "Expected 15:15",
       "origin": "London Heathrow",
+      "statusType": "expected"
+    },
+    {
+      "flightNo": "LM940",
+      "airline": "Loganair",
+      "scheduled": "16:30",
+      "status": "On-time",
+      "origin": "Aberdeen",
       "statusType": "ontime"
     },
     {
@@ -185,9 +201,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
-      "status": "On-time",
+      "status": "Delayed 19:00",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY843",
@@ -214,6 +230,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 26,
+  "totalCount": 28,
   "source": "airport.im"
 }
