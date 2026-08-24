@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T14:21:16.157027+00:00",
-  "lastUpdated": "14:20 UTC",
+  "fetchedAt": "2026-08-24T14:25:18.608516+00:00",
+  "lastUpdated": "14:25 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "09:10",
-      "status": "Departed 09:35",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -47,7 +39,7 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "12:35",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Birmingham",
       "statusType": "boarding"
     },
@@ -137,7 +129,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Landed 15:17",
+      "status": "Arrived 15:21",
       "origin": "London Heathrow",
       "statusType": "arrived"
     },
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
