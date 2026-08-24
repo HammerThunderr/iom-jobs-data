@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T11:53:30.041761+00:00",
-  "lastUpdated": "11:52 UTC",
+  "fetchedAt": "2026-08-24T11:57:33.006814+00:00",
+  "lastUpdated": "11:56 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -47,9 +47,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "Gate closed",
+      "status": "Departed 12:52",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM637",
