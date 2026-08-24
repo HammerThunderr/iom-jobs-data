@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T00:35:31.497652+00:00",
-  "lastUpdated": "00:34 UTC",
+  "fetchedAt": "2026-08-24T00:39:33.840478+00:00",
+  "lastUpdated": "00:38 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -73,6 +73,14 @@
       "scheduled": "13:35",
       "status": "On-time",
       "destination": "Bristol",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -158,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
