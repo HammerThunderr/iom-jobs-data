@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T18:29:29.793971+00:00",
-  "lastUpdated": "18:29 UTC",
+  "fetchedAt": "2026-08-24T18:33:33.247778+00:00",
+  "lastUpdated": "18:33 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -9,14 +9,6 @@
       "scheduled": "12:35",
       "status": "Departed 15:43",
       "destination": "Birmingham",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY234",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Departed 13:41",
-      "destination": "Bristol",
       "statusType": "departed"
     },
     {
@@ -147,6 +139,14 @@
       "scheduled": "09:25",
       "status": "On-time",
       "origin": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "origin": "London Gatwick",
       "statusType": "ontime"
     }
   ],
