@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-23T23:28:57.688852+00:00",
-  "lastUpdated": "23:28 UTC",
+  "fetchedAt": "2026-08-24T00:31:29.169593+00:00",
+  "lastUpdated": "00:30 UTC",
   "departures": [
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 18:42",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -86,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "19:25",
-      "status": "Arrived 19:28",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
@@ -155,6 +139,22 @@
       "scheduled": "13:00",
       "status": "On-time",
       "origin": "Bristol",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:30",
+      "status": "On-time",
+      "origin": "London Heathrow",
       "statusType": "ontime"
     }
   ],
