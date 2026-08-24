@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T07:14:15.267666+00:00",
-  "lastUpdated": "07:13 UTC",
+  "fetchedAt": "2026-08-24T07:47:29.293289+00:00",
+  "lastUpdated": "07:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -15,7 +15,7 @@
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "08:35",
-      "status": "Last call",
+      "status": "Taxied 08:38",
       "destination": "Liverpool",
       "statusType": "scheduled"
     },
@@ -23,9 +23,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "09:10",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM693",
@@ -55,9 +55,9 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Delayed 12:40",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM637",
@@ -95,9 +95,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Delayed 18:25",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
@@ -129,17 +129,17 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "08:40",
-      "status": "Expected 08:19",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "On-time",
+      "status": "Expected 08:48",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY839",
