@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-24T17:05:43.913901+00:00",
-  "lastUpdated": "17:04 UTC",
+  "fetchedAt": "2026-08-24T17:09:46.338925+00:00",
+  "lastUpdated": "17:08 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -47,9 +47,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -63,7 +63,7 @@
       "flightNo": "EZY844",
       "airline": "easyJet",
       "scheduled": "19:05",
-      "status": "Delayed 20:30",
+      "status": "Delayed 20:35",
       "destination": "London Gatwick",
       "statusType": "delayed"
     },
@@ -137,7 +137,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "18:30",
-      "status": "Delayed 20:00",
+      "status": "Delayed 20:05",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
