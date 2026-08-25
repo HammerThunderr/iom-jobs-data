@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T13:44:54.869288+00:00",
-  "lastUpdated": "13:43 UTC",
+  "fetchedAt": "2026-08-25T14:10:29.761352+00:00",
+  "lastUpdated": "14:09 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -39,7 +39,7 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "Boarding shortly",
+      "status": "Gate closed",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -55,7 +55,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 18:05",
+      "status": "Delayed 17:40",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -69,14 +69,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:46",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM638",
       "airline": "Loganair",
@@ -113,7 +105,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Expected 15:18",
+      "status": "Expected 15:12",
       "origin": "London Heathrow",
       "statusType": "expected"
     },
@@ -121,7 +113,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Delayed 17:35",
+      "status": "Delayed 17:10",
       "origin": "Dublin",
       "statusType": "delayed"
     },
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
