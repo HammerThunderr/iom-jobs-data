@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T00:02:31.751043+00:00",
-  "lastUpdated": "00:01 UTC",
+  "fetchedAt": "2026-08-25T00:30:51.363188+00:00",
+  "lastUpdated": "00:30 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -57,6 +57,14 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:20",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -132,8 +140,16 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 18,
   "source": "airport.im"
 }
