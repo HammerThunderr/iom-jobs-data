@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T10:05:39.343475+00:00",
-  "lastUpdated": "10:05 UTC",
+  "fetchedAt": "2026-08-25T10:09:41.976024+00:00",
+  "lastUpdated": "10:09 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,9 +113,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Expected 11:30",
+      "status": "On-time",
       "origin": "Dublin",
-      "statusType": "expected"
+      "statusType": "ontime"
     },
     {
       "flightNo": "LM694",
