@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T05:20:27.125186+00:00",
-  "lastUpdated": "05:20 UTC",
+  "fetchedAt": "2026-08-25T05:32:19.816763+00:00",
+  "lastUpdated": "05:32 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM637",
@@ -71,9 +71,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Delayed 18:05",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM687",
