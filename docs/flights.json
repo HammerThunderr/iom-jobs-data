@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T05:52:32.683467+00:00",
-  "lastUpdated": "05:52 UTC",
+  "fetchedAt": "2026-08-25T06:23:15.064418+00:00",
+  "lastUpdated": "06:22 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Gate closed",
+      "status": "Departed 07:02",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
-      "status": "Gate closed",
+      "status": "Departed 07:13",
       "destination": "Newquay, via Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM637",
@@ -137,9 +137,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM698",
