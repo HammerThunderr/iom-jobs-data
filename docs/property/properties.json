@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-25T07:05:55+00:00",
+    "generated": "2026-08-25T18:56:25+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -10,8 +10,8 @@
       },
       {
         "agent": "Cowley Groves",
-        "count": 187,
-        "withPrice": 138,
+        "count": 188,
+        "withPrice": 140,
         "status": "ok"
       },
       {
@@ -523,6 +523,23 @@
       "parish": "Ramsey",
       "postcode": "IM8 1ED",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-25"
+    },
+    {
+      "id": "cg-211-kings-court-ramsey-im8-1lw",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/211-kings-court-ramsey-im8-1lw/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 165000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "211 Kings Court, Ramsey, IM8 1LW",
+      "parish": "Ramsey",
+      "postcode": "IM8 1LW",
+      "firstSeen": "2026-08-25",
       "lastSeen": "2026-08-25"
     },
     {
@@ -1491,7 +1508,7 @@
       "url": "https://www.cowleygroves.com/property/apt-307-queens-court-ramsey-im8-1ll/",
       "category": "residential",
       "listingType": "sale",
-      "price": 169950,
+      "price": 165000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -1500,7 +1517,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1LL",
       "firstSeen": "2026-07-24",
-      "previousPrice": 165000,
+      "previousPrice": 169950,
       "lastSeen": "2026-08-25"
     },
     {
@@ -1807,8 +1824,8 @@
       "url": "https://www.cowleygroves.com/property/apt-6-holmleigh-brookhill-road-ramsey-im8-2hy/",
       "category": "residential",
       "listingType": "sale",
-      "price": null,
-      "priceQualifier": "poa",
+      "price": 165000,
+      "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": null,
@@ -3569,6 +3586,23 @@
       "lastSeen": "2026-08-25"
     },
     {
+      "id": "gg-douglas-7-mona-drive-3",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-7-mona-drive-3/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 950000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "flat",
+      "address": "Centrally Located Flat Just off Douglas Promenade",
+      "parish": "Douglas",
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-25",
+      "lastSeen": "2026-08-25"
+    },
+    {
       "id": "gg-douglas-ballabrooie-drive-5",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-ballabrooie-drive-5/",
@@ -3994,24 +4028,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 599950,
-      "lastSeen": "2026-08-25"
-    },
-    {
-      "id": "gg-laxey-glen-road-6",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/laxey-glen-road-6/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 950000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Beautifully Presented Home with Two Garages",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-20",
       "previousPrice": 599950,
       "lastSeen": "2026-08-25"
     },
