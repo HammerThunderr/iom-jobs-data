@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T11:50:17.094465+00:00",
-  "lastUpdated": "11:49 UTC",
+  "fetchedAt": "2026-08-25T11:54:19.434649+00:00",
+  "lastUpdated": "11:53 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -121,9 +121,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "13:25",
-      "status": "On-time",
+      "status": "Expected 13:11",
       "origin": "Newquay, via Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM676",
