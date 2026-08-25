@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-25T12:02:24.638978+00:00",
-  "lastUpdated": "12:01 UTC",
+  "fetchedAt": "2026-08-25T12:06:27.943250+00:00",
+  "lastUpdated": "12:05 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:05",
-      "status": "Departed 07:13",
-      "destination": "Newquay, via Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
