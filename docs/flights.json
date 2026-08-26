@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-26T18:21:54.229173+00:00",
-  "lastUpdated": "18:21 UTC",
+  "fetchedAt": "2026-08-26T18:25:56.635028+00:00",
+  "lastUpdated": "18:25 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -108,8 +108,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "09:25",
+      "status": "On-time",
+      "origin": "Birmingham",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
