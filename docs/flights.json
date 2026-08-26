@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-26T05:17:48.027972+00:00",
-  "lastUpdated": "05:17 UTC",
+  "fetchedAt": "2026-08-26T05:21:50.514153+00:00",
+  "lastUpdated": "05:21 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -156,8 +156,16 @@
       "status": "On-time",
       "origin": "London City",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM688",
+      "airline": "Loganair",
+      "scheduled": "20:20",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
