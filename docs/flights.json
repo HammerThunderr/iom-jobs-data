@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-26T14:32:25.541899+00:00",
-  "lastUpdated": "14:32 UTC",
+  "fetchedAt": "2026-08-26T14:36:29.523549+00:00",
+  "lastUpdated": "14:36 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "09:30",
-      "status": "Departed 09:46",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY840",
       "airline": "easyJet",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
