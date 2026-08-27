@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-27T16:43:45.448972+00:00",
-  "lastUpdated": "16:42 UTC",
+  "fetchedAt": "2026-08-27T16:47:47.654899+00:00",
+  "lastUpdated": "16:46 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -55,9 +55,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
@@ -121,7 +121,7 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Landed 17:36",
+      "status": "Arrived 17:43",
       "origin": "Manchester",
       "statusType": "arrived"
     },
