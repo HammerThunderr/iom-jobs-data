@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-27T16:47:47.654899+00:00",
-  "lastUpdated": "16:46 UTC",
+  "fetchedAt": "2026-08-27T16:51:50.041012+00:00",
+  "lastUpdated": "16:51 UTC",
   "departures": [
-    {
-      "flightNo": "EI3213",
-      "airline": "Aer Lingus",
-      "scheduled": "11:25",
-      "status": "Departed 11:56",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -55,9 +47,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
@@ -150,6 +142,6 @@
       "statusType": "cancelled"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
