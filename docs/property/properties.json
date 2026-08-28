@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-08-28T02:20:20+00:00",
+    "generated": "2026-08-28T18:34:14+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -10,14 +10,14 @@
       },
       {
         "agent": "Cowley Groves",
-        "count": 187,
+        "count": 188,
         "withPrice": 139,
         "status": "ok"
       },
       {
         "agent": "Garforth Gray",
-        "count": 71,
-        "withPrice": 71,
+        "count": 70,
+        "withPrice": 70,
         "status": "ok"
       }
     ],
@@ -358,7 +358,7 @@
       "url": "https://www.cowleygroves.com/property/18-st-runius-way-glen-vine-im4-4fg/",
       "category": "residential",
       "listingType": "sale",
-      "price": 559950,
+      "price": 575000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -367,7 +367,7 @@
       "parish": "Glen Vine",
       "postcode": "IM4 4FG",
       "firstSeen": "2026-07-24",
-      "previousPrice": 560000,
+      "previousPrice": 559950,
       "lastSeen": "2026-08-28"
     },
     {
@@ -1185,23 +1185,6 @@
       "lastSeen": "2026-08-28"
     },
     {
-      "id": "cg-albert-hotel-chapel-row-douglas-im1-2bj",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/albert-hotel-chapel-row-douglas-im1-2bj/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": 950000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Albert Hotel, Chapel Row, Douglas, IM1 2BJ",
-      "parish": "Douglas",
-      "postcode": "IM1 2BJ",
-      "firstSeen": "2026-07-24",
-      "lastSeen": "2026-08-28"
-    },
-    {
       "id": "cg-apt-1-28-murrays-road-douglas-im2-3hp",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-1-28-murrays-road-douglas-im2-3hp/",
@@ -1359,6 +1342,23 @@
       "postcode": "IM8 3NT",
       "firstSeen": "2026-07-24",
       "previousPrice": 1519,
+      "lastSeen": "2026-08-28"
+    },
+    {
+      "id": "cg-apt-2-11-mount-bradda-douglas-im1-4ar",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-2-11-mount-bradda-douglas-im1-4ar/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 165000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Apt. 2, 11 Mount Bradda, Douglas, IM1 4AR",
+      "parish": "Douglas",
+      "postcode": "IM1 4AR",
+      "firstSeen": "2026-08-28",
       "lastSeen": "2026-08-28"
     },
     {
@@ -1833,6 +1833,23 @@
       "parish": "Ramsey",
       "postcode": "IM8 2HY",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-28"
+    },
+    {
+      "id": "cg-apt-61-majestic-apartments-king-edward-road-onchan-im3-2be",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-61-majestic-apartments-king-edward-road-onchan-im3-2be/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 315000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Apt. 61 Majestic Apartments, King Edward Road, Onchan, IM3 2BE",
+      "parish": "Onchan",
+      "postcode": "IM3 2BE",
+      "firstSeen": "2026-08-28",
       "lastSeen": "2026-08-28"
     },
     {
@@ -2495,7 +2512,7 @@
       "url": "https://www.cowleygroves.com/property/mount-murray-lodge-mount-murray-douglas-im4-1je/",
       "category": "residential",
       "listingType": "sale",
-      "price": 550000,
+      "price": 545000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -2504,7 +2521,7 @@
       "parish": "Douglas",
       "postcode": "IM4 1JE",
       "firstSeen": "2026-07-24",
-      "previousPrice": 560000,
+      "previousPrice": 550000,
       "lastSeen": "2026-08-28"
     },
     {
@@ -3057,24 +3074,6 @@
       "lastSeen": "2026-08-28"
     },
     {
-      "id": "cg-strathmore-11-palace-road-douglas-im2-4ld",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/strathmore-11-palace-road-douglas-im2-4ld/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 550000,
-      "priceQualifier": "asking",
-      "bedrooms": 8,
-      "bathrooms": 2,
-      "propertyType": null,
-      "address": "Strathmore, 11 Palace Road, Douglas, IM2 4LD",
-      "parish": "Douglas",
-      "postcode": "IM2 4LD",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 560000,
-      "lastSeen": "2026-08-28"
-    },
-    {
       "id": "cg-sunset-cottage-the-old-toll-house-king-edward-road-onchan-im3-2jy",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/sunset-cottage-the-old-toll-house-king-edward-road-onchan-im3-2jy/",
@@ -3089,6 +3088,23 @@
       "parish": "Onchan",
       "postcode": "IM3 2JY",
       "firstSeen": "2026-07-24",
+      "lastSeen": "2026-08-28"
+    },
+    {
+      "id": "cg-the-albert-hotel-chapel-row-douglas-im1-2bj",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/the-albert-hotel-chapel-row-douglas-im1-2bj/",
+      "category": "commercial",
+      "listingType": "sale",
+      "price": null,
+      "priceQualifier": "poa",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "The Albert Hotel, Chapel Row, Douglas, IM1 2BJ",
+      "parish": "Douglas",
+      "postcode": "IM1 2BJ",
+      "firstSeen": "2026-08-28",
       "lastSeen": "2026-08-28"
     },
     {
@@ -3281,24 +3297,6 @@
       "lastSeen": "2026-08-28"
     },
     {
-      "id": "gg-andreas-smeale",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/andreas-smeale/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1295000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Elegant Country Home Nestled in Landscaped Grounds",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-24",
-      "previousPrice": 1735000,
-      "lastSeen": "2026-08-28"
-    },
-    {
       "id": "gg-baldrine-clay-head-road-4",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/baldrine-clay-head-road-4/",
@@ -3439,24 +3437,6 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 950000,
-      "lastSeen": "2026-08-28"
-    },
-    {
-      "id": "gg-colby-main-road-7",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/colby-main-road-7/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 969000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": "detached",
-      "address": "Detached Cottage with No Onward Chain",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-07-30",
       "previousPrice": 950000,
       "lastSeen": "2026-08-28"
     },
@@ -4228,6 +4208,23 @@
       "lastSeen": "2026-08-28"
     },
     {
+      "id": "gg-peel-headlands-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/peel-headlands-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 969000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Stunning Apartment with Superb Vistas & a Garage",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-08-28",
+      "lastSeen": "2026-08-28"
+    },
+    {
       "id": "gg-port-erin-cronk-view-crescent-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/port-erin-cronk-view-crescent-1/",
@@ -4318,21 +4315,20 @@
       "lastSeen": "2026-08-28"
     },
     {
-      "id": "gg-ramsey-claughbane-drive-6",
+      "id": "gg-ramsey-balleigh-mews-5",
       "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/ramsey-claughbane-drive-6/",
+      "url": "https://www.garforthgray.im/ramsey-balleigh-mews-5/",
       "category": "residential",
       "listingType": "sale",
       "price": 969000,
       "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "bungalow",
-      "address": "Extended Bungalow with Large Plot and Outbuilding",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Modern Family Living Close to the Town and Beach",
       "parish": null,
       "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-19",
-      "previousPrice": 950000,
+      "firstSeen": "2026-08-28",
       "lastSeen": "2026-08-28"
     },
     {
