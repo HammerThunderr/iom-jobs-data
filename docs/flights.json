@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-28T22:53:41.284855+00:00",
-  "lastUpdated": "22:52 UTC",
+  "fetchedAt": "2026-08-28T22:57:43.764442+00:00",
+  "lastUpdated": "22:56 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -89,6 +89,14 @@
       "scheduled": "12:25",
       "status": "On-time",
       "destination": "Dublin",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4503",
+      "airline": "British Airways",
+      "scheduled": "13:55",
+      "status": "On-time",
+      "destination": "Palma De Mallorca",
       "statusType": "ontime"
     }
   ],
@@ -190,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 24,
   "source": "airport.im"
 }
