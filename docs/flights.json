@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-28T13:07:50.774182+00:00",
-  "lastUpdated": "13:06 UTC",
+  "fetchedAt": "2026-08-28T13:11:53.180321+00:00",
+  "lastUpdated": "13:10 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -153,9 +153,9 @@
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "On-time",
+      "status": "Expected 14:40",
       "origin": "Bristol",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM638",
