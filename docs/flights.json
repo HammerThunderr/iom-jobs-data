@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-29T15:37:45.492706+00:00",
-  "lastUpdated": "15:37 UTC",
+  "fetchedAt": "2026-08-29T15:41:47.559788+00:00",
+  "lastUpdated": "15:41 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -113,7 +113,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Landed 16:33",
+      "status": "Arrived 16:37",
       "origin": "London Heathrow",
       "statusType": "arrived"
     },
@@ -121,9 +121,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 17:05",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM698",
