@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-29T10:38:08.136813+00:00",
-  "lastUpdated": "10:37 UTC",
+  "fetchedAt": "2026-08-29T10:42:11.120799+00:00",
+  "lastUpdated": "10:41 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:10",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
@@ -97,7 +97,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "11:25",
-      "status": "Landed 11:34",
+      "status": "Arrived 11:39",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
@@ -113,7 +113,7 @@
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:40",
-      "status": "Landed 11:30",
+      "status": "Arrived 11:36",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
