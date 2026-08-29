@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-29T10:46:13.497299+00:00",
-  "lastUpdated": "10:45 UTC",
+  "fetchedAt": "2026-08-29T10:50:16.052654+00:00",
+  "lastUpdated": "10:49 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -31,9 +31,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "12:05",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY520",
@@ -121,7 +121,7 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:10",
+      "status": "Delayed 12:05",
       "origin": "Dublin",
       "statusType": "delayed"
     },
