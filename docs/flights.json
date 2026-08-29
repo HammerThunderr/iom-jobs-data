@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-29T21:29:32.020276+00:00",
-  "lastUpdated": "21:28 UTC",
+  "fetchedAt": "2026-08-29T21:33:34.190211+00:00",
+  "lastUpdated": "21:32 UTC",
   "departures": [
     {
       "flightNo": "BA4503",
@@ -116,8 +116,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "12:30",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
