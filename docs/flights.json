@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-30T19:44:14.211110+00:00",
-  "lastUpdated": "19:43 UTC",
+  "fetchedAt": "2026-08-30T19:48:16.469328+00:00",
+  "lastUpdated": "19:48 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -110,14 +110,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EZY715",
-      "airline": "easyJet",
-      "scheduled": "14:45",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
