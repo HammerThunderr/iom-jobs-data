@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-30T17:02:26.880875+00:00",
-  "lastUpdated": "17:01 UTC",
+  "fetchedAt": "2026-08-30T17:06:29.248516+00:00",
+  "lastUpdated": "17:05 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -86,14 +86,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 12:05",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "12:30",
@@ -137,7 +129,7 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:15",
-      "status": "Delayed 18:17",
+      "status": "Delayed 18:40",
       "origin": "Manchester",
       "statusType": "delayed"
     },
@@ -169,7 +161,7 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Delayed 23:00",
+      "status": "Delayed 22:30",
       "origin": "London City",
       "statusType": "delayed"
     },
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
