@@ -1,6 +1,6 @@
 {
-  "_comment": "Remote kill switch for Manx One features. Set enabled=false and the feature disappears from the app on next launch — no app update, no Play Store review. Use this if a data source objects or a feature breaks.",
-  "updated": "2026-07-25",
+  "_comment": "Remote kill switch for Manx One features. Set enabled=false and the feature disappears from the app on next launch - no app update, no Play Store review. Use this if a data source objects or a feature breaks.",
+  "updated": "2026-08-29",
   "features": {
     "property": {
       "enabled": false,
@@ -34,9 +34,9 @@
       "enabled": true,
       "message": ""
     },
-    "bus": {
+    "bus_times": {
       "enabled": true,
-      "message": ""
+      "message": "Bus times are temporarily unavailable."
     },
     "webcams": {
       "enabled": true,
@@ -93,6 +93,18 @@
     "cruise": {
       "enabled": true,
       "message": "The cruise schedule is temporarily unavailable."
+    },
+    "astronomy": {
+      "enabled": true,
+      "message": "The night sky feature is temporarily unavailable."
+    },
+    "school_terms": {
+      "enabled": true,
+      "message": "School term dates are temporarily unavailable."
+    },
+    "bank_holidays": {
+      "enabled": true,
+      "message": "Bank holiday dates are temporarily unavailable."
     }
   },
   "banner": {
