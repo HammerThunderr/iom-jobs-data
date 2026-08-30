@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-30T19:48:16.469328+00:00",
-  "lastUpdated": "19:48 UTC",
+  "fetchedAt": "2026-08-30T19:52:18.629153+00:00",
+  "lastUpdated": "19:52 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "14:25",
-      "status": "Arrived 14:51",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
