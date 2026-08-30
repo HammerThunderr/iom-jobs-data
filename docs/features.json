@@ -1,6 +1,6 @@
 {
   "_comment": "Remote kill switch for Manx One features. Set enabled=false and the feature disappears from the app on next launch - no app update, no Play Store review. Use this if a data source objects or a feature breaks.",
-  "updated": "2026-08-29",
+  "updated": "2026-08-30",
   "features": {
     "property": {
       "enabled": false,
@@ -37,6 +37,10 @@
     "bus_times": {
       "enabled": true,
       "message": "Bus times are temporarily unavailable."
+    },
+    "bus_live": {
+      "enabled": true,
+      "message": "Live bus tracking is temporarily unavailable."
     },
     "webcams": {
       "enabled": true,
