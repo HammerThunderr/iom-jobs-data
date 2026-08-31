@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-31T14:14:36.096270+00:00",
-  "lastUpdated": "14:14 UTC",
+  "fetchedAt": "2026-08-31T14:18:38.441881+00:00",
+  "lastUpdated": "14:18 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -63,7 +63,7 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -137,9 +137,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Final approach",
+      "status": "Landed 15:17",
       "origin": "Birmingham",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
