@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-08-31T20:17:11.645743+00:00",
-  "lastUpdated": "20:16 UTC",
+  "fetchedAt": "2026-08-31T20:21:14.443189+00:00",
+  "lastUpdated": "20:20 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -78,14 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "15:05",
-      "status": "Arrived 15:19",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
@@ -121,9 +113,9 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Final approach",
+      "status": "Arrived 21:18",
       "origin": "London City",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM688",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
