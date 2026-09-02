@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-02T11:06:22+00:00",
+    "generated": "2026-09-02T20:55:28+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 68,
-        "withPrice": 68,
+        "count": 69,
+        "withPrice": 69,
         "status": "ok"
       }
     ],
@@ -3779,6 +3779,23 @@
       "lastSeen": "2026-09-02"
     },
     {
+      "id": "gg-douglas-empress-apartments",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-empress-apartments/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 969000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Ground Floor Apartment with Beautiful Sea Views",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-09-02",
+      "lastSeen": "2026-09-02"
+    },
+    {
       "id": "gg-douglas-farmhill-lane-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-farmhill-lane-1/",
@@ -4146,8 +4163,8 @@
       "bedrooms": 5,
       "bathrooms": null,
       "propertyType": null,
-      "address": "Coastal Home with Sea Views Over Douglas Bay",
-      "parish": "Douglas",
+      "address": "Coastal Home with Opportunity for Updating",
+      "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-15",
       "lastSeen": "2026-09-02"
