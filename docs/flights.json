@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-02T14:11:05.168200+00:00",
-  "lastUpdated": "14:10 UTC",
+  "fetchedAt": "2026-09-02T14:15:07.930773+00:00",
+  "lastUpdated": "14:13 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,9 +47,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY844",
@@ -137,7 +137,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:30",
-      "status": "Delayed 15:40",
+      "status": "Delayed 15:36",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
