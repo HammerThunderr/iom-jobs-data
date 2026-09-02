@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-01T23:00:04.687933+00:00",
-  "lastUpdated": "22:59 UTC",
+  "fetchedAt": "2026-09-02T00:37:25.441064+00:00",
+  "lastUpdated": "00:36 UTC",
   "departures": [
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "18:00",
-      "status": "Departed 18:19",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Departed 18:39",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM671",
       "airline": "Loganair",
@@ -74,17 +58,17 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "18:00",
-      "status": "Arrived 18:05",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM688",
       "airline": "Loganair",
@@ -140,8 +124,32 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY843",
+      "airline": "easyJet",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:30",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
