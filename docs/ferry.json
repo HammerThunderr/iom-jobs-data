@@ -1,50 +1,9 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-01T22:18:08.425478+00:00",
-  "lastUpdated": "19:15 01/09/26",
+  "fetchedAt": "2026-09-02T00:21:58.388970+00:00",
+  "lastUpdated": "05:00 14/08/26",
   "totalCount": 20,
   "days": [
-    {
-      "date": "Tuesday, 1 September 2026",
-      "sailings": [
-        {
-          "departTime": "07:01",
-          "departPort": "Douglas",
-          "arriveTime": "09:45",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "11:09",
-          "departPort": "Liverpool",
-          "arriveTime": "14:06",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "15:20",
-          "departPort": "Douglas",
-          "arriveTime": "18:08",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "19:19",
-          "departPort": "Liverpool",
-          "arriveTime": "22:05",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Departed",
-          "statusType": "departed"
-        }
-      ]
-    },
     {
       "date": "Wednesday, 2 September 2026",
       "sailings": [
@@ -170,6 +129,47 @@
     },
     {
       "date": "Saturday, 5 September 2026",
+      "sailings": [
+        {
+          "departTime": "07:15",
+          "departPort": "Douglas",
+          "arriveTime": "10:00",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "11:15",
+          "departPort": "Liverpool",
+          "arriveTime": "14:00",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "15:00",
+          "departPort": "Douglas",
+          "arriveTime": "17:45",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Liverpool",
+          "arriveTime": "22:00",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Sunday, 6 September 2026",
       "sailings": [
         {
           "departTime": "07:15",
