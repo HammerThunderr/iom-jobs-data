@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-02T22:24:47.452594+00:00",
-  "lastUpdated": "22:23 UTC",
+  "fetchedAt": "2026-09-02T22:28:49.700110+00:00",
+  "lastUpdated": "22:27 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -140,8 +140,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "13:25",
+      "status": "On-time",
+      "origin": "Newquay, via Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
