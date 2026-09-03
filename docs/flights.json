@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-03T13:44:20.854185+00:00",
-  "lastUpdated": "13:43 UTC",
+  "fetchedAt": "2026-09-03T13:48:23.933088+00:00",
+  "lastUpdated": "13:47 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -93,14 +93,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:46",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
