@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-03T20:10:14.402026+00:00",
-  "lastUpdated": "20:10 UTC",
+  "fetchedAt": "2026-09-03T20:14:16.967263+00:00",
+  "lastUpdated": "20:14 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -86,14 +86,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "15:25",
-      "status": "Arrived 15:12",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
