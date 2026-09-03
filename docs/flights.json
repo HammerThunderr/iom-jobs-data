@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-03T00:23:00.876804+00:00",
-  "lastUpdated": "00:22 UTC",
+  "fetchedAt": "2026-09-03T00:27:03.446539+00:00",
+  "lastUpdated": "00:26 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -132,8 +132,24 @@
       "status": "On-time",
       "origin": "Newquay, via Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 18,
   "source": "airport.im"
 }
