@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-04T17:24:38.780505+00:00",
-  "lastUpdated": "17:24 UTC",
+  "fetchedAt": "2026-09-04T17:28:40.960718+00:00",
+  "lastUpdated": "17:28 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EI3212",
-      "airline": "Aer Lingus",
-      "scheduled": "11:45",
-      "status": "Arrived 12:27",
-      "origin": "Dublin",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY233",
       "airline": "easyJet",
       "scheduled": "14:15",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
