@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-04T19:50:23.436567+00:00",
-  "lastUpdated": "19:49 UTC",
+  "fetchedAt": "2026-09-04T19:54:26.210099+00:00",
+  "lastUpdated": "19:53 UTC",
   "departures": [
-    {
-      "flightNo": "EZY234",
-      "airline": "easyJet",
-      "scheduled": "14:45",
-      "status": "Departed 15:03",
-      "destination": "Bristol",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
