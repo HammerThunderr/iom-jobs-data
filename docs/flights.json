@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-04T13:49:00.544809+00:00",
-  "lastUpdated": "13:48 UTC",
+  "fetchedAt": "2026-09-04T13:53:03.395935+00:00",
+  "lastUpdated": "13:52 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,9 +47,9 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "14:45",
-      "status": "Gate closed",
+      "status": "Taxied 14:50",
       "destination": "Bristol",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
@@ -110,14 +110,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:51",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "11:00",
@@ -177,7 +169,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Expected 15:21",
+      "status": "Expected 15:16",
       "origin": "London Heathrow",
       "statusType": "expected"
     },
@@ -230,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 27,
   "source": "airport.im"
 }
