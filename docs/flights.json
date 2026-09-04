@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-04T17:28:40.960718+00:00",
-  "lastUpdated": "17:28 UTC",
+  "fetchedAt": "2026-09-04T17:32:42.923942+00:00",
+  "lastUpdated": "17:32 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -17,14 +17,6 @@
       "scheduled": "12:30",
       "status": "Departed 12:46",
       "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "12:35",
-      "status": "Departed 12:35",
-      "destination": "Birmingham",
       "statusType": "departed"
     },
     {
@@ -87,9 +79,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Gate closed",
+      "status": "Taxied 18:29",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM693",
@@ -153,7 +145,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "17:10",
-      "status": "Delayed 19:31",
+      "status": "Delayed 19:25",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
