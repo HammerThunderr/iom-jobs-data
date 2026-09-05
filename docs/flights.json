@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-04T23:49:14.135356+00:00",
-  "lastUpdated": "23:48 UTC",
+  "fetchedAt": "2026-09-05T01:14:10.505621+00:00",
+  "lastUpdated": "01:13 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -78,22 +78,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "17:10",
-      "status": "Arrived 19:48",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Cancelled",
-      "origin": "London City",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
@@ -156,8 +140,16 @@
       "status": "Delayed 13:42",
       "origin": "London Gatwick",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
