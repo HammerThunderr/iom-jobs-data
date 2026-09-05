@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-05T20:35:04.805998+00:00",
-  "lastUpdated": "20:34 UTC",
+  "fetchedAt": "2026-09-05T20:39:07.255710+00:00",
+  "lastUpdated": "20:38 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -41,6 +41,14 @@
       "scheduled": "10:45",
       "status": "On-time",
       "destination": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "11:35",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -86,6 +94,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 11,
   "source": "airport.im"
 }
