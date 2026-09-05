@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-05T16:08:20.812035+00:00",
-  "lastUpdated": "16:07 UTC",
+  "fetchedAt": "2026-09-05T16:12:23.406837+00:00",
+  "lastUpdated": "16:11 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -47,20 +47,12 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Manchester",
       "statusType": "boarding"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:25",
-      "status": "Arrived 11:09",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM682",
       "airline": "Loganair",
@@ -118,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 13,
   "source": "airport.im"
 }
