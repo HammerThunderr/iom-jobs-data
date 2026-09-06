@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-06T18:05:35.527230+00:00",
-  "lastUpdated": "18:05 UTC",
+  "fetchedAt": "2026-09-06T18:09:38.021736+00:00",
+  "lastUpdated": "18:09 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -153,9 +153,9 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:25",
-      "status": "On-time",
+      "status": "Delayed 19:32",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM678",
