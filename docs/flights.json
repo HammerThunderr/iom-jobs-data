@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-07T21:13:59.643600+00:00",
-  "lastUpdated": "21:12 UTC",
+  "fetchedAt": "2026-09-07T21:18:02.659792+00:00",
+  "lastUpdated": "21:17 UTC",
   "departures": [
-    {
-      "flightNo": "LM697",
-      "airline": "Loganair",
-      "scheduled": "15:35",
-      "status": "Departed 16:26",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM677",
       "airline": "Loganair",
@@ -81,6 +73,14 @@
       "scheduled": "11:30",
       "status": "On-time",
       "destination": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3213",
+      "airline": "Aer Lingus",
+      "scheduled": "12:15",
+      "status": "On-time",
+      "destination": "Dublin",
       "statusType": "ontime"
     }
   ],
