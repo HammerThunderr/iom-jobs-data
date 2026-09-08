@@ -1,40 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-08T21:50:05.895831+00:00",
-  "lastUpdated": "21:49 UTC",
+  "fetchedAt": "2026-09-08T23:32:21.008407+00:00",
+  "lastUpdated": "23:31 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Cancelled",
-      "destination": "London City",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EI3217",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "Departed 18:11",
-      "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM687",
-      "airline": "Loganair",
-      "scheduled": "18:00",
-      "status": "Departed 18:37",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Cancelled",
-      "destination": "London Gatwick",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM671",
       "airline": "Loganair",
@@ -102,22 +70,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "18:00",
-      "status": "Cancelled",
-      "origin": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:55",
@@ -174,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 15,
   "source": "airport.im"
 }
