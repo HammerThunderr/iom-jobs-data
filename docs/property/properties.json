@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-08T11:05:04+00:00",
+    "generated": "2026-09-08T21:06:03+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -2840,7 +2840,7 @@
       "url": "https://www.cowleygroves.com/property/ridgeway-house-gladstone-avenue-ramsey-im8-2lb/",
       "category": "residential",
       "listingType": "sale",
-      "price": 370000,
+      "price": 425000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -2849,6 +2849,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 2LB",
       "firstSeen": "2026-07-24",
+      "previousPrice": 370000,
       "lastSeen": "2026-09-08"
     },
     {
@@ -3997,24 +3998,6 @@
       "lastSeen": "2026-09-08"
     },
     {
-      "id": "gg-port-erin-milner-park-1",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/port-erin-milner-park-1/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 859000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Beautifully Positioned Four Bedroom Home",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-08-29",
-      "previousPrice": 969000,
-      "lastSeen": "2026-09-08"
-    },
-    {
       "id": "gg-port-erin-surby-road-1",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/port-erin-surby-road-1/",
@@ -4119,6 +4102,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-28",
       "previousPrice": 969000,
+      "lastSeen": "2026-09-08"
+    },
+    {
+      "id": "gg-ramsey-carmodale",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/ramsey-carmodale/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 859000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "Spacious Duplex Apartment with Stunning Views",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-09-08",
       "lastSeen": "2026-09-08"
     },
     {
