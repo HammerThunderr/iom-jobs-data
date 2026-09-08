@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-08T01:49:18.329354+00:00",
-  "lastUpdated": "01:48 UTC",
+  "fetchedAt": "2026-09-08T01:53:20.449619+00:00",
+  "lastUpdated": "01:53 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -57,6 +57,14 @@
       "scheduled": "15:20",
       "status": "On-time",
       "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM677",
+      "airline": "Loganair",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "destination": "London City",
       "statusType": "ontime"
     }
   ],
@@ -116,8 +124,16 @@
       "status": "On-time",
       "origin": "London Heathrow",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 16,
   "source": "airport.im"
 }
