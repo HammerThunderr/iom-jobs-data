@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-08T23:52:32.460758+00:00",
-  "lastUpdated": "23:51 UTC",
+  "fetchedAt": "2026-09-09T01:48:05.893511+00:00",
+  "lastUpdated": "01:46 UTC",
   "departures": [
     {
       "flightNo": "LM671",
@@ -58,33 +58,25 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY844",
+      "airline": "easyJet",
+      "scheduled": "15:40",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM676",
-      "airline": "Loganair",
-      "scheduled": "15:25",
-      "status": "Arrived 18:57",
-      "origin": "London Heathrow",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "19:55",
-      "status": "Arrived 20:24",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Cancelled",
-      "origin": "London City",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM682",
       "airline": "Loganair",
@@ -124,8 +116,32 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM313",
+      "airline": "Loganair",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY843",
+      "airline": "easyJet",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:30",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 17,
   "source": "airport.im"
 }
