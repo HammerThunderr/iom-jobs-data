@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-10T11:06:21+00:00",
+    "generated": "2026-09-10T20:48:28+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -11,7 +11,7 @@
       {
         "agent": "Cowley Groves",
         "count": 180,
-        "withPrice": 129,
+        "withPrice": 130,
         "status": "ok"
       },
       {
@@ -1769,6 +1769,23 @@
       "lastSeen": "2026-09-10"
     },
     {
+      "id": "cg-apt-74-majestic-apartments-king-edward-road-onchan-im3-2be",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/apt-74-majestic-apartments-king-edward-road-onchan-im3-2be/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 315000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Apt. 74 Majestic Apartments, King Edward Road, Onchan, IM3 2BE",
+      "parish": "Onchan",
+      "postcode": "IM3 2BE",
+      "firstSeen": "2026-09-10",
+      "lastSeen": "2026-09-10"
+    },
+    {
       "id": "cg-apt-8-beresford-house-11-12-palace-terrace-queens-promenade-douglas-im2-4ne",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/apt-8-beresford-house-11-12-palace-terrace-queens-promenade-douglas-im2-4ne/",
@@ -2904,23 +2921,6 @@
       "lastSeen": "2026-09-10"
     },
     {
-      "id": "cg-shop--basement-19-victoria-street-douglas-im1-2lw",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/shop--basement-19-victoria-street-douglas-im1-2lw/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": null,
-      "priceQualifier": "unknown",
-      "bedrooms": null,
-      "bathrooms": 1,
-      "propertyType": null,
-      "address": "Shop & Basement, 19 Victoria Street, Douglas, IM1 2LW",
-      "parish": "Douglas",
-      "postcode": "IM1 2LW",
-      "firstSeen": "2026-07-24",
-      "lastSeen": "2026-09-10"
-    },
-    {
       "id": "cg-st-mary-s-church-the-parade-castletown-im9-1lg",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/st-mary-s-church-the-parade-castletown-im9-1lg/",
@@ -3148,7 +3148,7 @@
       "url": "https://www.garforthgray.im/andreas-1-mountain-view/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3157,7 +3157,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3166,7 +3166,7 @@
       "url": "https://www.garforthgray.im/baldrine-clay-head-road-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1175000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3175,7 +3175,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1250000,
+      "previousPrice": 1175000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3184,7 +3184,7 @@
       "url": "https://www.garforthgray.im/ballasalla-bridge-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -3193,7 +3193,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3202,7 +3202,7 @@
       "url": "https://www.garforthgray.im/ballaugh-dollagh-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3211,7 +3211,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-22",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3220,7 +3220,7 @@
       "url": "https://www.garforthgray.im/castletown-malew-street-9/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -3229,7 +3229,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3238,7 +3238,7 @@
       "url": "https://www.garforthgray.im/castletown-station-road/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 865000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3247,7 +3247,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 865000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3256,7 +3256,7 @@
       "url": "https://www.garforthgray.im/colby-crosby/",
       "category": "land",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3265,7 +3265,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3274,7 +3274,7 @@
       "url": "https://www.garforthgray.im/colby-field-number-324067/",
       "category": "land",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3283,7 +3283,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3292,7 +3292,7 @@
       "url": "https://www.garforthgray.im/colby-main-road-8/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3301,7 +3301,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3310,7 +3310,7 @@
       "url": "https://www.garforthgray.im/crosby-eyreton-farm-cottages-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3319,7 +3319,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3328,7 +3328,7 @@
       "url": "https://www.garforthgray.im/dalby-main-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 969000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3337,6 +3337,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-26",
+      "previousPrice": 969000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3345,7 +3346,7 @@
       "url": "https://www.garforthgray.im/douglas-1-2-woodville-terrace-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3354,7 +3355,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3363,7 +3364,7 @@
       "url": "https://www.garforthgray.im/douglas-12-derby-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -3372,7 +3373,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3399,7 +3400,7 @@
       "url": "https://www.garforthgray.im/douglas-7-mona-drive-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -3408,7 +3409,7 @@
       "parish": "Douglas",
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-25",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3417,7 +3418,7 @@
       "url": "https://www.garforthgray.im/douglas-ballabrooie-drive-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3426,7 +3427,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-31",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3452,7 +3453,7 @@
       "url": "https://www.garforthgray.im/douglas-ballanard-road-8/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3461,7 +3462,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-03",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3487,7 +3488,7 @@
       "url": "https://www.garforthgray.im/douglas-brunswick-road-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -3496,7 +3497,24 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
+      "lastSeen": "2026-09-10"
+    },
+    {
+      "id": "gg-douglas-brunswick-road-7",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-brunswick-road-7/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 2695000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Luxury Family Home in a Desirable Leafy Location",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-09-10",
       "lastSeen": "2026-09-10"
     },
     {
@@ -3505,7 +3523,7 @@
       "url": "https://www.garforthgray.im/douglas-castlemona-avenue-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3514,7 +3532,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-19",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3523,7 +3541,7 @@
       "url": "https://www.garforthgray.im/douglas-cooil-drive-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3532,7 +3550,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3541,7 +3559,7 @@
       "url": "https://www.garforthgray.im/douglas-demesne-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -3550,7 +3568,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3559,7 +3577,7 @@
       "url": "https://www.garforthgray.im/douglas-devonshire-road-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3568,7 +3586,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3577,7 +3595,7 @@
       "url": "https://www.garforthgray.im/douglas-farmhill-lane-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1250000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3586,7 +3604,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1735000,
+      "previousPrice": 1250000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3595,7 +3613,7 @@
       "url": "https://www.garforthgray.im/douglas-harris-terrace-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 4,
@@ -3604,7 +3622,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-08",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3613,7 +3631,7 @@
       "url": "https://www.garforthgray.im/douglas-hawarden-avenue-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -3622,23 +3640,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-07",
-      "lastSeen": "2026-09-10"
-    },
-    {
-      "id": "gg-douglas-hilltop-rise-2",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-hilltop-rise-2/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 859000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": null,
-      "address": "Spacious Family Home Enjoying Far Reaching Aspects",
-      "parish": null,
-      "postcode": "IM1 1LB",
-      "firstSeen": "2026-09-03",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3647,7 +3649,7 @@
       "url": "https://www.garforthgray.im/douglas-kewaigue-hill/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -3656,6 +3658,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-04",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3664,7 +3667,7 @@
       "url": "https://www.garforthgray.im/douglas-marlborough-court-apartments-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3673,7 +3676,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3682,7 +3685,7 @@
       "url": "https://www.garforthgray.im/douglas-orry-street-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -3691,7 +3694,7 @@
       "parish": "Douglas",
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-21",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3700,7 +3703,7 @@
       "url": "https://www.garforthgray.im/douglas-stanley-place-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 3,
@@ -3709,7 +3712,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-31",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3718,7 +3721,7 @@
       "url": "https://www.garforthgray.im/douglas-sydney-street-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3727,6 +3730,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-04",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3735,7 +3739,7 @@
       "url": "https://www.garforthgray.im/jurby-ballacaine-cottages/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3744,7 +3748,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-04",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3753,7 +3757,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-pennybridge-cottages-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -3762,7 +3766,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3771,7 +3775,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-pennybridge-cottages/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3780,7 +3784,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3789,7 +3793,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-slieau-curn-park-7/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3798,7 +3802,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-15",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3807,7 +3811,7 @@
       "url": "https://www.garforthgray.im/kirk-michael-windmill-terrace/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3816,7 +3820,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3825,7 +3829,7 @@
       "url": "https://www.garforthgray.im/laxey-fairy-cottage-4/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3834,7 +3838,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3843,7 +3847,7 @@
       "url": "https://www.garforthgray.im/maughold-church-road-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3852,7 +3856,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3861,7 +3865,7 @@
       "url": "https://www.garforthgray.im/maughold-jalloo/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3870,6 +3874,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-03",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3878,7 +3883,7 @@
       "url": "https://www.garforthgray.im/onchan-46-sea-cliff-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 2495000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -3887,6 +3892,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-19",
+      "previousPrice": 2495000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3895,7 +3901,7 @@
       "url": "https://www.garforthgray.im/onchan-60-howe-road/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3904,7 +3910,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3913,7 +3919,7 @@
       "url": "https://www.garforthgray.im/onchan-king-edward-bay-apartments-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3922,7 +3928,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3931,7 +3937,7 @@
       "url": "https://www.garforthgray.im/onchan-lag-birragh-drive/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1735000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -3940,6 +3946,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-10",
+      "previousPrice": 1735000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3948,7 +3955,7 @@
       "url": "https://www.garforthgray.im/onchan-little-mill-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3957,7 +3964,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3966,7 +3973,7 @@
       "url": "https://www.garforthgray.im/onchan-majestic-drive-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1000000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 6,
       "bathrooms": null,
@@ -3975,7 +3982,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1250000,
+      "previousPrice": 1000000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -3984,7 +3991,7 @@
       "url": "https://www.garforthgray.im/onchan-manor-park-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1250000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -3993,6 +4000,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-15",
+      "previousPrice": 1250000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4001,7 +4009,7 @@
       "url": "https://www.garforthgray.im/peel-headlands-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4010,7 +4018,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-28",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4019,7 +4027,7 @@
       "url": "https://www.garforthgray.im/port-erin-cronk-view-crescent-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4028,7 +4036,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4037,7 +4045,7 @@
       "url": "https://www.garforthgray.im/port-erin-surby-road-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4046,7 +4054,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4055,7 +4063,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-3-quay/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4064,6 +4072,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-08",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4072,7 +4081,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-5-athol-street/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4081,7 +4090,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4090,7 +4099,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-clifton-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1995000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4099,7 +4108,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 4250000,
+      "previousPrice": 1995000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4108,7 +4117,7 @@
       "url": "https://www.garforthgray.im/port-st-mary-clifton-road-north/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4117,7 +4126,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4126,7 +4135,7 @@
       "url": "https://www.garforthgray.im/ramsey-balleigh-mews-5/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4135,7 +4144,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-28",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4144,7 +4153,7 @@
       "url": "https://www.garforthgray.im/ramsey-carmodale/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4153,6 +4162,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-08",
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4161,7 +4171,7 @@
       "url": "https://www.garforthgray.im/ramsey-glen-auldyn-1/",
       "category": "residential",
       "listingType": "sale",
-      "price": 950000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -4170,7 +4180,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-24",
-      "previousPrice": 969000,
+      "previousPrice": 950000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4179,7 +4189,7 @@
       "url": "https://www.garforthgray.im/ramsey-glen-mona/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": null,
@@ -4188,7 +4198,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4197,7 +4207,7 @@
       "url": "https://www.garforthgray.im/ramsey-queens-drive-west/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4206,7 +4216,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-09-01",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4215,7 +4225,7 @@
       "url": "https://www.garforthgray.im/ramsey-st-pauls-mews-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4224,7 +4234,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4233,7 +4243,7 @@
       "url": "https://www.garforthgray.im/ramsey-stanley-mount-west-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4242,7 +4252,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4251,7 +4261,7 @@
       "url": "https://www.garforthgray.im/ramsey-ventnor/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4260,7 +4270,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4269,7 +4279,7 @@
       "url": "https://www.garforthgray.im/ramsey-westfield-drive/",
       "category": "residential",
       "listingType": "sale",
-      "price": 995000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": 2,
@@ -4278,7 +4288,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 1250000,
+      "previousPrice": 995000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4287,7 +4297,7 @@
       "url": "https://www.garforthgray.im/santon-fairways-drive-6/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 5,
       "bathrooms": null,
@@ -4296,7 +4306,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-27",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4305,7 +4315,7 @@
       "url": "https://www.garforthgray.im/union-mills-main-road-2/",
       "category": "residential",
       "listingType": "sale",
-      "price": 859000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4314,7 +4324,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
-      "previousPrice": 969000,
+      "previousPrice": 859000,
       "lastSeen": "2026-09-10"
     },
     {
@@ -4323,7 +4333,7 @@
       "url": "https://www.garforthgray.im/union-mills-main-road-3/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1695000,
+      "price": 2695000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -4332,7 +4342,7 @@
       "parish": null,
       "postcode": "IM1 1LB",
       "firstSeen": "2026-08-02",
-      "previousPrice": 1735000,
+      "previousPrice": 1695000,
       "lastSeen": "2026-09-10"
     },
     {
