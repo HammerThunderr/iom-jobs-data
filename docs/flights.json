@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-10T13:54:21.515623+00:00",
-  "lastUpdated": "13:53 UTC",
+  "fetchedAt": "2026-09-10T13:58:23.723737+00:00",
+  "lastUpdated": "13:57 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -47,7 +47,7 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -94,14 +94,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "09:00",
-      "status": "Arrived 08:55",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:10",
@@ -145,7 +137,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Expected 15:20",
+      "status": "Expected 15:17",
       "origin": "London Heathrow",
       "statusType": "expected"
     },
@@ -153,7 +145,7 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "15:25",
-      "status": "Expected 15:18",
+      "status": "Expected 15:11",
       "origin": "Liverpool",
       "statusType": "expected"
     },
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
