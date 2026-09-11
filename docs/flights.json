@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-11T17:26:38.406765+00:00",
-  "lastUpdated": "17:26 UTC",
+  "fetchedAt": "2026-09-11T17:30:40.933156+00:00",
+  "lastUpdated": "17:30 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -9,14 +9,6 @@
       "scheduled": "12:15",
       "status": "Departed 12:53",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "12:30",
-      "status": "Departed 12:38",
-      "destination": "London Gatwick",
       "statusType": "departed"
     },
     {
@@ -63,7 +55,7 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -182,6 +174,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 21,
   "source": "airport.im"
 }
