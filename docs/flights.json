@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-11T00:32:32.020438+00:00",
-  "lastUpdated": "00:32 UTC",
+  "fetchedAt": "2026-09-11T00:36:34.303052+00:00",
+  "lastUpdated": "00:36 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -9,14 +9,6 @@
       "scheduled": "17:20",
       "status": "Departed 19:51",
       "destination": "Dublin",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "18:35",
-      "status": "Departed 19:46",
-      "destination": "London Gatwick",
       "statusType": "departed"
     },
     {
@@ -89,6 +81,14 @@
       "scheduled": "15:30",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
