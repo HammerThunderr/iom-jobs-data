@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-11T00:24:27.007109+00:00",
-  "lastUpdated": "00:23 UTC",
+  "fetchedAt": "2026-09-11T00:28:29.479209+00:00",
+  "lastUpdated": "00:28 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -164,8 +164,16 @@
       "status": "On-time",
       "origin": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "15:25",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 21,
   "source": "airport.im"
 }
