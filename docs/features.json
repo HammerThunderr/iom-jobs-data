@@ -1,6 +1,6 @@
 {
   "_comment": "Remote kill switch for Manx One features. Set enabled=false and the feature disappears from the app on next launch - no app update, no Play Store review. Use this if a data source objects or a feature breaks.",
-  "updated": "2026-08-30",
+  "updated": "2026-09-04",
   "features": {
     "property": {
       "enabled": false,
@@ -79,7 +79,7 @@
       "message": "Forms are not available yet."
     },
     "races": {
-      "enabled": false,
+      "enabled": true,
       "message": "The race schedule is temporarily unavailable."
     },
     "pharmacy": {
@@ -101,6 +101,10 @@
     "astronomy": {
       "enabled": true,
       "message": "The night sky feature is temporarily unavailable."
+    },
+    "toilets": {
+      "enabled": true,
+      "message": "The public toilets list is temporarily unavailable."
     },
     "school_terms": {
       "enabled": true,
