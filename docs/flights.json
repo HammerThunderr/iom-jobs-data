@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-12T12:31:18.217501+00:00",
-  "lastUpdated": "12:30 UTC",
+  "fetchedAt": "2026-09-12T12:35:20.309123+00:00",
+  "lastUpdated": "12:34 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -129,9 +129,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Final approach",
+      "status": "Landed 13:31",
       "origin": "London Gatwick",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
