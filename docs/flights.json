@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-12T12:43:24.608964+00:00",
-  "lastUpdated": "12:42 UTC",
+  "fetchedAt": "2026-09-12T12:47:26.800501+00:00",
+  "lastUpdated": "12:46 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,15 +47,15 @@
       "flightNo": "BA4503",
       "airline": "British Airways",
       "scheduled": "13:55",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Palma De Mallorca",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "14:05",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "London Gatwick",
       "statusType": "boarding"
     },
