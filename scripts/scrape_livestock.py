@@ -63,6 +63,15 @@ MONTH_ALIASES = {
 MIN_MONTHS = 3
 MAX_PLAUSIBLE = 20000
 
+# Archive years available on gov.im. The current-year pages live at the base
+# URL; each past year is at <base>/<year>-archive/. Fetched once to build the
+# history behind the trend read-out; on later runs the years already in the
+# file are kept, so old archives are only fetched when missing.
+ARCHIVE_YEARS = [2019, 2020, 2021, 2022, 2023, 2024, 2025]
+
+def archive_url(base, year):
+    return base.rstrip("/") + f"/{year}-archive/"
+
 
 def fetch(url):
     r = requests.get(url, headers={"User-Agent": UA, "Accept": "text/html"},
@@ -154,6 +163,14 @@ def current_year():
     return datetime.date.today().year
 
 
+def year_from_page(html, fallback):
+    """The stats tables head their first column with the year, e.g. '2026'.
+    Read it so a page is filed under the year it actually reports, not the
+    calendar year the scraper happened to run in."""
+    m = re.search(r"\b(20[12]\d)\b", html[:4000])
+    return int(m.group(1)) if m else fallback
+
+
 def build_cattle_year(year, totals, split):
     months = []
     for m in MONTHS:
@@ -195,40 +212,67 @@ def merge_year(years, new_year):
     return out
 
 
+def scrape_cattle_page(html, fallback_year):
+    yr = year_from_page(html, fallback_year)
+    totals = parse_month_total_table(html, yr)
+    split = parse_cattle_split(html)
+    year = build_cattle_year(yr, totals, split)
+    if year["monthsReported"] < MIN_MONTHS:
+        raise RuntimeError(f"cattle {yr}: only {year['monthsReported']} months")
+    return year
+
+
+def scrape_sheep_page(html, fallback_year):
+    yr = year_from_page(html, fallback_year)
+    totals = parse_month_total_table(html, yr)
+    year = build_sheep_year(yr, totals)
+    if year["monthsReported"] < MIN_MONTHS:
+        raise RuntimeError(f"sheep {yr}: only {year['monthsReported']} months")
+    return year
+
+
 def main(debug=False):
     yr = current_year()
 
-    cattle_html = fetch(CATTLE_URL)
-    sheep_html = fetch(SHEEP_URL)
-
-    cattle_totals = parse_month_total_table(cattle_html, yr)
-    cattle_split = parse_cattle_split(cattle_html)
-    sheep_totals = parse_month_total_table(sheep_html, yr)
-
-    cattle_year = build_cattle_year(yr, cattle_totals, cattle_split)
-    sheep_year = build_sheep_year(yr, sheep_totals)
-
-    if cattle_year["monthsReported"] < MIN_MONTHS:
-        raise RuntimeError(
-            f"cattle: only {cattle_year['monthsReported']} months parsed")
-    if sheep_year["monthsReported"] < MIN_MONTHS:
-        raise RuntimeError(
-            f"sheep: only {sheep_year['monthsReported']} months parsed")
-
-    print(f"cattle {yr}: {cattle_year['totalToDate']} head "
+    # Current year (required — failure here fails the whole run).
+    cattle_year = scrape_cattle_page(fetch(CATTLE_URL), yr)
+    sheep_year = scrape_sheep_page(fetch(SHEEP_URL), yr)
+    print(f"cattle {cattle_year['year']}: {cattle_year['totalToDate']} head "
           f"({cattle_year['monthsReported']} months, "
           f"{cattle_year['rearingToDate']} rearing / "
           f"{cattle_year['slaughterToDate']} slaughter)")
-    print(f"sheep  {yr}: {sheep_year['totalToDate']} head "
+    print(f"sheep  {sheep_year['year']}: {sheep_year['totalToDate']} head "
           f"({sheep_year['monthsReported']} months)")
 
-    # Keep any previous years already in the file, so history builds up for
-    # the trend read-out.
     existing = load_existing() or {}
     cattle_years = merge_year(
         (existing.get("cattle") or {}).get("years", []), cattle_year)
     sheep_years = merge_year(
         (existing.get("sheep") or {}).get("years", []), sheep_year)
+
+    # Archive years: only fetch ones we do not already hold, so this cost is
+    # paid once. A single archive failing must NOT sink the whole run — the
+    # current year is what matters — so these are best-effort.
+    have_cattle = {y["year"] for y in cattle_years}
+    have_sheep = {y["year"] for y in sheep_years}
+
+    for ay in ARCHIVE_YEARS:
+        if ay >= cattle_year["year"]:
+            continue
+        if ay not in have_cattle:
+            try:
+                cy = scrape_cattle_page(fetch(archive_url(CATTLE_URL, ay)), ay)
+                cattle_years = merge_year(cattle_years, cy)
+                print(f"  + cattle archive {cy['year']}: {cy['totalToDate']}")
+            except Exception as e:  # noqa: BLE001
+                print(f"  ! cattle archive {ay} skipped: {e}", file=sys.stderr)
+        if ay not in have_sheep:
+            try:
+                sy = scrape_sheep_page(fetch(archive_url(SHEEP_URL, ay)), ay)
+                sheep_years = merge_year(sheep_years, sy)
+                print(f"  + sheep archive {sy['year']}: {sy['totalToDate']}")
+            except Exception as e:  # noqa: BLE001
+                print(f"  ! sheep archive {ay} skipped: {e}", file=sys.stderr)
 
     data = {
         "meta": {
