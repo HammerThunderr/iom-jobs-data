@@ -1,0 +1,84 @@
+name: Update livestock exports
+
+# Refreshes docs/livestock_exports.json from the DEFA export-statistics pages.
+#
+# Monthly, because DEFA publishes monthly and runs ~8 weeks behind - polling
+# harder would only re-fetch identical data.
+#
+# THE OPEN QUESTION is whether gov.im lets a GitHub runner through: those pages
+# have a firewall that has blocked automated requests before. The scraper is
+# built to fail safe - if it is blocked or the parse looks wrong it writes
+# nothing and exits non-zero, leaving the last good file in place, and this
+# job then opens an issue so a human updates it by hand. So either way the
+# data stays correct; the only difference is whether YOU have to touch it.
+
+on:
+  schedule:
+    - cron: "0 7 5 * *"    # 07:00 UTC on the 5th of each month
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Scrape livestock exports
+        id: scrape
+        run: python scripts/scrape_livestock.py
+
+      - name: Commit if changed
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -z "$(git status --porcelain docs/livestock_exports.json)" ]; then
+            echo "No change."
+            exit 0
+          fi
+          git add docs/livestock_exports.json
+          git commit -m "chore: refresh livestock exports ($(date -u +%Y-%m))"
+          for i in 1 2 3; do
+            git push && break
+            git pull --rebase --autostash origin main || true
+          done
+
+      - name: Open an issue if the scrape failed
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = "Livestock export scrape failed - update by hand";
+            // Avoid piling up duplicate issues month after month.
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: "open", labels: "livestock-scrape",
+            });
+            if (existing.data.length > 0) return;
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              labels: ["livestock-scrape"],
+              body: [
+                "The livestock export scraper could not update the figures.",
+                "Most likely gov.im blocked the request, or the table layout changed.",
+                "",
+                "**Update `docs/livestock_exports.json` by hand from:**",
+                "- Cattle: https://www.gov.im/categories/business-and-industries/agriculture/cattle/cattle-export-statistics/",
+                "- Sheep: https://www.gov.im/categories/business-and-industries/agriculture/sheep-goats/sheep-export-statistics/",
+                "",
+                "The previous good file is untouched, so the app is not broken - it is just not the latest month.",
+              ].join("\n"),
+            });
