@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-12T19:48:13.302084+00:00",
-  "lastUpdated": "19:47 UTC",
+  "fetchedAt": "2026-09-12T19:52:15.634331+00:00",
+  "lastUpdated": "19:51 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -76,8 +76,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "10:50",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 9,
+  "totalCount": 10,
   "source": "airport.im"
 }
