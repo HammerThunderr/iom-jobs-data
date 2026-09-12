@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-09-08",
+    "source": "Isle of Man Government (DEFA)",
+    "sourceUrl": "https://www.gov.im/categories/business-and-industries/agriculture/types-of-notifiable-diseases/",
+    "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
+    "reportPhone": "+441624685844",
+    "reportPhoneDisplay": "01624 685844",
+    "duty": "A notifiable disease must be reported to DEFA the moment it is suspected - not confirmed. Failing to report one is a criminal offence. If in any doubt, phone DEFA.",
+    "fullListNote": "DEFA highlights the diseases below as the current watch list. The full statutory list of notifiable diseases is maintained by DEFRA; a link is on the gov.im page."
+  },
+  "watchList": [
+    {
+      "name": "Avian Influenza (bird flu)",
+      "affects": "Poultry and captive birds",
+      "signs": "Sudden death, swollen head, dullness, drop in egg or feed intake, respiratory distress.",
+      "priority": "high"
+    },
+    {
+      "name": "Bluetongue",
+      "affects": "Cattle, sheep, goats, deer, alpacas and llamas",
+      "signs": "Fever, drooling, swelling of the head and neck, lameness, drop in milk yield. Spread by biting midges.",
+      "priority": "high"
+    },
+    {
+      "name": "Foot and Mouth Disease",
+      "affects": "Cattle, sheep, pigs, goats, deer",
+      "signs": "Blisters on the mouth, tongue, feet and teats; lameness; drooling; reluctance to feed.",
+      "priority": "high"
+    },
+    {
+      "name": "Chronic Wasting Disease",
+      "affects": "Deer (relevant outside the UK)",
+      "signs": "Progressive weight loss, behavioural change, excessive drooling and thirst. Flagged for anyone importing.",
+      "priority": "watch"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-09-08",
+    "source": "Isle of Man Government (DEFA)",
+    "sourceUrl": "https://www.gov.im/categories/business-and-industries/agriculture/",
+    "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
+    "note": "Always confirm dates and eligibility with DEFA before relying on them - schemes and deadlines change each year."
+  },
+  "schemes": [
+    {
+      "name": "Agricultural Development Scheme (ADS)",
+      "short": "ADS",
+      "summary": "The main annual farm support scheme - flat-rate area payments to Active Farmers.",
+      "url": "https://www.gov.im/categories/business-and-industries/agriculture/agricultural-development-scheme/",
+      "deadlines": [
+        {
+          "label": "Register a new agricultural business (to receive 2026/27 booklet)",
+          "date": "2026-02-28"
+        },
+        {
+          "label": "Late new-applicant booklet return",
+          "date": "2026-05-11"
+        }
+      ]
+    },
+    {
+      "name": "Agri-Environment Scheme (AES)",
+      "short": "AES",
+      "summary": "Payments for managing farmland to benefit wildlife and habitats. Up to £2m/year, delivered with Manx Wildlife Trust. Runs alongside the ADS.",
+      "url": "https://www.gov.im/categories/business-and-industries/agriculture/agri-environment-initiatives-grant-scheme/",
+      "deadlines": [
+        {
+          "label": "Primary Initiatives Application Form sent with ADS paperwork (late April)",
+          "date": null
+        }
+      ]
+    },
+    {
+      "name": "Agriculture & Fisheries Grant Scheme",
+      "short": "AFGS",
+      "summary": "The umbrella capital grant scheme approved by Tynwald, covering several agricultural and fisheries grants.",
+      "url": "https://www.gov.im/categories/business-and-industries/agriculture/agriculture-and-fisheries-grant-scheme/",
+      "deadlines": []
+    },
+    {
+      "name": "Advisory Grant",
+      "short": "Advisory",
+      "summary": "Help with the cost of professional advice for your farm business.",
+      "url": "https://www.gov.im/categories/business-and-industries/agriculture/advisory-grant/",
+      "deadlines": []
+    },
+    {
+      "name": "Farm Plastic Disposal Scheme",
+      "short": "Plastics",
+      "summary": "Scheme for the disposal of used farm plastics.",
+      "url": "https://www.gov.im/categories/business-and-industries/agriculture/farm-plastic-disposal-scheme/",
+      "deadlines": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-09-08",
+    "source": "Isle of Man Government (DEFA)",
+    "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
+    "note": "Report notifiable diseases immediately. If in doubt, call DEFA."
+  },
+  "contacts": [
+    {
+      "name": "DEFA - Agriculture",
+      "detail": "Grants, schemes, movements, general farming enquiries",
+      "phone": "+441624685844",
+      "phoneDisplay": "01624 685844",
+      "urgent": false,
+      "category": "Department"
+    },
+    {
+      "name": "Notifiable disease reporting",
+      "detail": "Suspected notifiable animal disease - report at once, day or night",
+      "phone": "+441624685844",
+      "phoneDisplay": "01624 685844",
+      "urgent": true,
+      "category": "Animal health"
+    },
+    {
+      "name": "Fallen / dead stock (knackery)",
+      "detail": "Collection and disposal of fallen animal stock",
+      "phone": "+441624801811",
+      "phoneDisplay": "01624 801811",
+      "urgent": false,
+      "category": "Animal health",
+      "note": "Confirm the current collection number with DEFA if unsure."
+    },
+    {
+      "name": "Isle of Man Meats",
+      "detail": "The Island's meat plant - slaughter bookings and enquiries",
+      "phone": "+441624835484",
+      "phoneDisplay": "01624 835484",
+      "urgent": false,
+      "category": "Meat plant"
+    },
+    {
+      "name": "Manx Wildlife Trust - Agri-Environment",
+      "detail": "Delivery partner for the Agri-Environment Scheme",
+      "phone": "+441624844432",
+      "phoneDisplay": "01624 844432",
+      "urgent": false,
+      "category": "Advice"
+    }
+  ]
+}

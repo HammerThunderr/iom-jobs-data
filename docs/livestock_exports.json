@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "schemaVersion": 1,
+    "generated": "2026-09-08",
+    "source": "Isle of Man Government (DEFA) - Cattle & Sheep Export Statistics",
+    "sourceUrls": {
+      "cattle": "https://www.gov.im/categories/business-and-industries/agriculture/cattle/cattle-export-statistics/",
+      "sheep": "https://www.gov.im/categories/business-and-industries/agriculture/sheep-goats/sheep-export-statistics/"
+    },
+    "licence": "Open Government Licence",
+    "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
+    "note": "Live export figures from DEFA. Data runs about 8 weeks behind, as it awaits completed export health certificates, so the most recent month or two may be incomplete or missing.",
+    "unit": "head of livestock"
+  },
+  "cattle": {
+    "note": "Cattle exported live from the Island, split by destination: 'Further rearing' (marts and farms) versus 'Direct to slaughter'.",
+    "years": [
+      {
+        "year": 2026,
+        "months": [
+          {
+            "month": "Jan",
+            "total": 121,
+            "rearing": 48,
+            "slaughter": 73
+          },
+          {
+            "month": "Feb",
+            "total": 42,
+            "rearing": 4,
+            "slaughter": 38
+          },
+          {
+            "month": "Mar",
+            "total": 140,
+            "rearing": 100,
+            "slaughter": 40
+          },
+          {
+            "month": "Apr",
+            "total": 277,
+            "rearing": 238,
+            "slaughter": 39
+          },
+          {
+            "month": "May",
+            "total": 127,
+            "rearing": 88,
+            "slaughter": 39
+          },
+          {
+            "month": "Jun",
+            "total": 198,
+            "rearing": 97,
+            "slaughter": 101
+          },
+          {
+            "month": "Jul",
+            "total": 129,
+            "rearing": 94,
+            "slaughter": 35
+          },
+          {
+            "month": "Aug",
+            "total": null,
+            "rearing": null,
+            "slaughter": null
+          },
+          {
+            "month": "Sep",
+            "total": null,
+            "rearing": null,
+            "slaughter": null
+          },
+          {
+            "month": "Oct",
+            "total": null,
+            "rearing": null,
+            "slaughter": null
+          },
+          {
+            "month": "Nov",
+            "total": null,
+            "rearing": null,
+            "slaughter": null
+          },
+          {
+            "month": "Dec",
+            "total": null,
+            "rearing": null,
+            "slaughter": null
+          }
+        ],
+        "totalToDate": 1034,
+        "rearingToDate": 669,
+        "slaughterToDate": 365,
+        "monthsReported": 7
+      }
+    ]
+  },
+  "sheep": {
+    "note": "Sheep exported live from the Island.",
+    "years": [
+      {
+        "year": 2026,
+        "months": [
+          {
+            "month": "Jan",
+            "total": 2505
+          },
+          {
+            "month": "Feb",
+            "total": 2306
+          },
+          {
+            "month": "Mar",
+            "total": 2065
+          },
+          {
+            "month": "Apr",
+            "total": 533
+          },
+          {
+            "month": "May",
+            "total": 504
+          },
+          {
+            "month": "Jun",
+            "total": 141
+          },
+          {
+            "month": "Jul",
+            "total": 0
+          },
+          {
+            "month": "Aug",
+            "total": null
+          },
+          {
+            "month": "Sep",
+            "total": null
+          },
+          {
+            "month": "Oct",
+            "total": null
+          },
+          {
+            "month": "Nov",
+            "total": null
+          },
+          {
+            "month": "Dec",
+            "total": null
+          }
+        ],
+        "totalToDate": 8054,
+        "monthsReported": 7
+      }
+    ]
+  }
+}
