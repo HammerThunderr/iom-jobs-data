@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-12T16:01:20.534113+00:00",
-  "lastUpdated": "16:00 UTC",
+  "fetchedAt": "2026-09-12T17:55:38.235218+00:00",
+  "lastUpdated": "17:54 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Departed 12:05",
-      "destination": "London Heathrow",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Departed 12:14",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "BA4503",
       "airline": "British Airways",
@@ -39,44 +23,28 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding shortly",
+      "status": "Departed 17:36",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Boarding shortly",
+      "status": "Departed 17:30",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:30",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM638",
-      "airline": "Loganair",
-      "scheduled": "11:25",
-      "status": "Arrived 11:08",
-      "origin": "Birmingham",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:35",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Arrived 11:16",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "BA4504",
       "airline": "British Airways",
@@ -118,6 +86,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 10,
   "source": "airport.im"
 }
