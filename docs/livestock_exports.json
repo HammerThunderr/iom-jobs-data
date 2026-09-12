@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generated": "2026-09-08",
+    "generated": "2026-09-12",
     "source": "Isle of Man Government (DEFA) - Cattle & Sheep Export Statistics",
     "sourceUrls": {
       "cattle": "https://www.gov.im/categories/business-and-industries/agriculture/cattle/cattle-export-statistics/",
@@ -9,11 +9,11 @@
     },
     "licence": "Open Government Licence",
     "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
-    "note": "Live export figures from DEFA. Data runs about 8 weeks behind, as it awaits completed export health certificates, so the most recent month or two may be incomplete or missing.",
+    "note": "Live export figures from DEFA. Data runs about 8 weeks behind, as it awaits export health certificates, so the most recent month or two may be incomplete or missing.",
     "unit": "head of livestock"
   },
   "cattle": {
-    "note": "Cattle exported live from the Island, split by destination: 'Further rearing' (marts and farms) versus 'Direct to slaughter'.",
+    "note": "Cattle exported live, split by destination: 'Further rearing' (marts and farms) vs 'Direct to slaughter'.",
     "years": [
       {
         "year": 2026,
@@ -63,32 +63,32 @@
           {
             "month": "Aug",
             "total": null,
-            "rearing": null,
-            "slaughter": null
+            "rearing": 0,
+            "slaughter": 0
           },
           {
             "month": "Sep",
             "total": null,
-            "rearing": null,
-            "slaughter": null
+            "rearing": 0,
+            "slaughter": 0
           },
           {
             "month": "Oct",
             "total": null,
-            "rearing": null,
-            "slaughter": null
+            "rearing": 0,
+            "slaughter": 0
           },
           {
             "month": "Nov",
             "total": null,
-            "rearing": null,
-            "slaughter": null
+            "rearing": 0,
+            "slaughter": 0
           },
           {
             "month": "Dec",
             "total": null,
-            "rearing": null,
-            "slaughter": null
+            "rearing": 0,
+            "slaughter": 0
           }
         ],
         "totalToDate": 1034,
