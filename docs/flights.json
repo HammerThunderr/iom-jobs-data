@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-13T21:19:02.032817+00:00",
-  "lastUpdated": "21:18 UTC",
+  "fetchedAt": "2026-09-13T21:23:04.851378+00:00",
+  "lastUpdated": "21:22 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -110,14 +110,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "16:05",
-      "status": "Arrived 16:18",
-      "origin": "London Gatwick",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -214,6 +206,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 26,
+  "totalCount": 25,
   "source": "airport.im"
 }
