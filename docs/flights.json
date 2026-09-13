@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-13T12:20:19.870473+00:00",
-  "lastUpdated": "12:19 UTC",
+  "fetchedAt": "2026-09-13T12:24:22.126640+00:00",
+  "lastUpdated": "12:23 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,9 +47,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "13:10",
-      "status": "Gate closed",
+      "status": "Taxied 13:23",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
