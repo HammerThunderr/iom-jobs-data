@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-14T19:02:19.652328+00:00",
-  "lastUpdated": "19:01 UTC",
+  "fetchedAt": "2026-09-14T19:06:22.413573+00:00",
+  "lastUpdated": "19:06 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -66,6 +66,14 @@
       "status": "On-time",
       "destination": "Birmingham",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY840",
+      "airline": "easyJet",
+      "scheduled": "10:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -113,7 +121,7 @@
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
-      "status": "Delayed 20:20",
+      "status": "Delayed 20:16",
       "origin": "London City",
       "statusType": "delayed"
     },
@@ -121,9 +129,9 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Expected 20:08",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM682",
@@ -150,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
