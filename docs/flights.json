@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-14T18:54:14.339256+00:00",
-  "lastUpdated": "18:53 UTC",
+  "fetchedAt": "2026-09-14T18:58:17.038813+00:00",
+  "lastUpdated": "18:57 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -57,6 +57,14 @@
       "scheduled": "07:05",
       "status": "On-time",
       "destination": "Newquay, via Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "09:55",
+      "status": "On-time",
+      "destination": "Birmingham",
       "statusType": "ontime"
     }
   ],
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
