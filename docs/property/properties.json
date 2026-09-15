@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-15T11:34:17+00:00",
+    "generated": "2026-09-15T21:14:52+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Garforth Gray",
-        "count": 73,
-        "withPrice": 73,
+        "count": 75,
+        "withPrice": 75,
         "status": "ok"
       }
     ],
@@ -405,23 +405,6 @@
       "postcode": "IM8 1EJ",
       "firstSeen": "2026-07-24",
       "previousPrice": 157500,
-      "lastSeen": "2026-09-15"
-    },
-    {
-      "id": "cg-20-ballakermeen-drive-douglas-im1-4hn",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/20-ballakermeen-drive-douglas-im1-4hn/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 375000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": null,
-      "address": "20 Ballakermeen Drive, Douglas, IM1 4HN",
-      "parish": "Douglas",
-      "postcode": "IM1 4HN",
-      "firstSeen": "2026-07-24",
       "lastSeen": "2026-09-15"
     },
     {
@@ -2284,6 +2267,23 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "id": "cg-huxley-37-westminster-drive-douglas-im1-4ej",
+      "agent": "Cowley Groves",
+      "url": "https://www.cowleygroves.com/property/huxley-37-westminster-drive-douglas-im1-4ej/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 380000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "propertyType": null,
+      "address": "Huxley, 37 Westminster Drive, Douglas, IM1 4EJ",
+      "parish": "Douglas",
+      "postcode": "IM1 4EJ",
+      "firstSeen": "2026-09-15",
+      "lastSeen": "2026-09-15"
+    },
+    {
       "id": "cg-international-house-victoria-road-douglas-im2-4ae",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/international-house-victoria-road-douglas-im2-4ae/",
@@ -3431,6 +3431,23 @@
       "lastSeen": "2026-09-15"
     },
     {
+      "id": "gg-douglas-8-derby-road",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/douglas-8-derby-road/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1275000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": null,
+      "propertyType": "flat",
+      "address": "Ground Floor Flat in a Central Douglas Location",
+      "parish": "Douglas",
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-09-15",
+      "lastSeen": "2026-09-15"
+    },
+    {
       "id": "gg-douglas-ballabrooie-drive-5",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-ballabrooie-drive-5/",
@@ -3998,6 +4015,23 @@
       "postcode": "IM1 1LB",
       "firstSeen": "2026-07-24",
       "previousPrice": 2695000,
+      "lastSeen": "2026-09-15"
+    },
+    {
+      "id": "gg-onchan-fairway-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/onchan-fairway-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1275000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": "bungalow",
+      "address": "Attractive Bungalow in a Desirable Location",
+      "parish": null,
+      "postcode": "IM1 1LB",
+      "firstSeen": "2026-09-15",
       "lastSeen": "2026-09-15"
     },
     {
