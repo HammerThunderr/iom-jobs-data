@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-16T00:33:20.870765+00:00",
-  "lastUpdated": "00:32 UTC",
+  "fetchedAt": "2026-09-16T00:37:22.942392+00:00",
+  "lastUpdated": "00:36 UTC",
   "departures": [
     {
       "flightNo": "LM671",
@@ -57,6 +57,14 @@
       "scheduled": "12:25",
       "status": "On-time",
       "destination": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "15:35",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -142,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 18,
   "source": "airport.im"
 }
