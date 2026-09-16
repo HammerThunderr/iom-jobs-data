@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-16T15:03:22.254676+00:00",
-  "lastUpdated": "15:02 UTC",
+  "fetchedAt": "2026-09-16T15:07:24.793485+00:00",
+  "lastUpdated": "15:07 UTC",
   "departures": [
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:05",
-      "status": "Departed 10:18",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
@@ -77,14 +69,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM672",
-      "airline": "Loganair",
-      "scheduled": "10:15",
-      "status": "Arrived 10:05",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "LM694",
       "airline": "Loganair",
@@ -158,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 17,
   "source": "airport.im"
 }
