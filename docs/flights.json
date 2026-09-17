@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-17T07:54:38.282732+00:00",
-  "lastUpdated": "07:54 UTC",
+  "fetchedAt": "2026-09-17T07:58:41.238385+00:00",
+  "lastUpdated": "07:58 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,9 +23,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "09:40",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM637",
@@ -113,9 +113,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Final approach",
+      "status": "Landed 08:57",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY715",
