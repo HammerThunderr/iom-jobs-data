@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-17T20:29:41.776984+00:00",
-  "lastUpdated": "20:29 UTC",
+  "fetchedAt": "2026-09-17T20:33:44.129181+00:00",
+  "lastUpdated": "20:33 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -74,6 +74,14 @@
       "status": "On-time",
       "destination": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM675",
+      "airline": "Loganair",
+      "scheduled": "11:30",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -134,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 17,
   "source": "airport.im"
 }
