@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-18T14:12:41.518453+00:00",
-  "lastUpdated": "14:11 UTC",
+  "fetchedAt": "2026-09-18T14:16:43.993603+00:00",
+  "lastUpdated": "14:16 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -87,7 +87,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 19:00",
+      "status": "Delayed 18:15",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -153,15 +153,15 @@
       "flightNo": "EZY515",
       "airline": "easyJet",
       "scheduled": "15:00",
-      "status": "Delayed 15:19",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Landed 15:10",
+      "status": "Arrived 15:14",
       "origin": "Birmingham",
       "statusType": "arrived"
     },
