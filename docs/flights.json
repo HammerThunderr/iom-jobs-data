@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-18T22:07:38.804135+00:00",
-  "lastUpdated": "22:06 UTC",
+  "fetchedAt": "2026-09-18T22:11:41.271366+00:00",
+  "lastUpdated": "22:10 UTC",
   "departures": [
-    {
-      "flightNo": "LM677",
-      "airline": "Loganair",
-      "scheduled": "16:50",
-      "status": "Departed 17:24",
-      "destination": "London City",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -190,6 +182,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 22,
   "source": "airport.im"
 }
