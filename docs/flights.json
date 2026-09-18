@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-18T17:38:23.634003+00:00",
-  "lastUpdated": "17:37 UTC",
+  "fetchedAt": "2026-09-18T17:42:26.377466+00:00",
+  "lastUpdated": "17:41 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -63,9 +63,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Gate closed",
+      "status": "Taxied 18:37",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM693",
@@ -137,7 +137,7 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:45",
-      "status": "Landed 18:09",
+      "status": "Arrived 18:11",
       "origin": "Manchester",
       "statusType": "arrived"
     },
