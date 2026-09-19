@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-19T19:44:57.472980+00:00",
-  "lastUpdated": "19:44 UTC",
+  "fetchedAt": "2026-09-19T19:49:00.385669+00:00",
+  "lastUpdated": "19:48 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -33,6 +33,14 @@
       "scheduled": "09:50",
       "status": "On-time",
       "destination": "Edinburgh",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM637",
+      "airline": "Loganair",
+      "scheduled": "10:45",
+      "status": "On-time",
+      "destination": "Birmingham",
       "statusType": "ontime"
     }
   ],
@@ -70,6 +78,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 8,
+  "totalCount": 9,
   "source": "airport.im"
 }
