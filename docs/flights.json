@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-19T00:13:45.474360+00:00",
-  "lastUpdated": "00:13 UTC",
+  "fetchedAt": "2026-09-19T01:54:10.518502+00:00",
+  "lastUpdated": "01:53 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -70,22 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 20:48",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Arrived 20:44",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:00",
@@ -139,6 +123,22 @@
       "scheduled": "13:35",
       "status": "On-time",
       "origin": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
       "statusType": "ontime"
     }
   ],
