@@ -41,6 +41,24 @@ class Agent:
     max_pages: int = 30
     enabled: bool = True
 
+    # --- discovery via the site's own section index pages ---
+    #
+    # Preferred over the sitemap when an agent's sitemap carries years of
+    # archived listings (Chrystals: ~78% of sitemap URLs are dead). A section
+    # index shows only what is currently on the market, so it is both smaller
+    # and correct.
+    #
+    # Each entry is a path, walked with pagination until a page yields nothing
+    # new. Listed BEFORE the sitemap is tried.
+    index_paths: tuple = ()
+
+    # How the index pages paginate:
+    #   "page"   -> ?page=2        (page_param, 1-based)
+    #   "offset" -> ?start=18      (offset_param, steps of page_size)
+    page_mode: str = "page"
+    offset_param: str = "start"
+    page_size: int = 20
+
     # Some agents encode category/type in the URL itself, which is far more
     # reliable than guessing from page wording. First match wins.
     # Format: ((path_fragment, category, listing_type), ...)
@@ -61,6 +79,18 @@ class Agent:
     @property
     def search_url(self):
         return f"{self.base}{self.search_path}" if self.search_path else None
+
+    @property
+    def index_urls(self):
+        return [f"{self.base}{p}" for p in self.index_paths]
+
+    def index_page_url(self, index_url, page_num):
+        """URL for page `page_num` (0-based) of a section index."""
+        if page_num == 0:
+            return index_url
+        if self.page_mode == "offset":
+            return f"{index_url}?{self.offset_param}={page_num * self.page_size}"
+        return f"{index_url}?{self.page_param}={page_num + 1}"
 
     def is_listing(self, url):
         """True if this URL looks like an individual property page."""
@@ -129,23 +159,36 @@ AGENTS = [
 
     # robots.txt checked: Joomla site. Listing paths are permitted, but
     # /properties/agentproperties/ IS disallowed, so it is excluded below.
-    # Flat sitemap. Their URL structure encodes category and sale/rent, which
-    # is more reliable than reading the page — see url_rules.
-    # Slugs are {numeric_id}-{address}, often with the address repeated twice.
     #
-    # DISABLED for now: their sitemap carries years of archived listings —
-    # roughly 78% of the 1554 URLs return a live "Property Not Found" page,
-    # and crawling them accounted for most of the run time. Re-enable by
-    # setting enabled=True once we filter on lastmod age or find a live-only
-    # index; the dead-page detection in common.py already discards them, it
-    # just wastes ~50 minutes doing so.
+    # DISCOVERY VIA SECTION INDEXES, NOT THE SITEMAP.
+    # Their sitemap carries years of archived listings — roughly 78% of its
+    # ~1554 URLs return a live "Property Not Found" page, and crawling them
+    # took most of the run time for nothing. The section index pages list only
+    # what is actually on the market (e.g. "Results 1 - 18 of 43"), so they are
+    # both smaller and correct. They paginate by OFFSET (?start=18), 18 per
+    # page, hence page_mode="offset".
+    #
+    # Their URL structure encodes category and sale/rent, which is more
+    # reliable than reading the page — see url_rules.
+    # Slugs are {numeric_id}-{address}, often with the address repeated twice.
     Agent(
         key="chr",
         name="Chrystals",
         base="https://www.chrystals.co.im",
-        enabled=False,
+        enabled=True,
         property_path="/property/",
-        sitemap="/sitemap.xml",
+        index_paths=(
+            "/properties-for-sale",
+            "/properties-to-let",
+            "/commercial/commercial-sales",
+            "/commercial/commercial-lettings",
+            "/agricultural",
+            "/developments",
+        ),
+        page_mode="offset",
+        offset_param="start",
+        page_size=18,
+        # Sitemap deliberately left unset: see the note above.
         exclude_paths=(
             "/properties/agentproperties/",   # disallowed in robots.txt
             "/components/", "/component/", "/modules/", "/administrator/",
