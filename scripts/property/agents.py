@@ -1,17 +1,8 @@
 """
 scrapers/property/agents.py — the agent registry.
 
-TO ADD A NEW PROVIDER:
-  1. Check <site>/robots.txt first. If listings paths are Disallowed, STOP —
-     email the agent instead of scraping them.
-  2. Open one property page and note the URL pattern (the bit before the slug,
-     e.g. /property/, /properties/, /for-sale/).
-  3. Add an Agent(...) entry below. No new code needed in most cases — the
-     extraction in common.py is heuristic, so it works across sites.
-  4. Run locally and check the per-agent counts before committing.
-
-Discovery order per agent: sitemap first (cheap, complete), then the site's
-own search endpoint as a fallback.
+For each provider, verify robots.txt and the listing URL pattern before enabling.
+Chrystals is currently the active provider and uses the site's section indexes.
 """
 
 from dataclasses import dataclass, field
@@ -21,51 +12,30 @@ from urllib.parse import urlparse
 
 @dataclass
 class Agent:
-    key: str                     # short id, used as the listing id prefix
-    name: str                    # display name shown in the app
-    base: str                    # site root, no trailing slash
+    key: str
+    name: str
+    base: str
 
-    # --- how to recognise a listing URL (use ONE of these) ---
-    property_path: Optional[str] = None   # e.g. "/property/" — path contains this
-    root_level_slugs: bool = False        # listings live at /some-slug/ (no prefix)
+    property_path: Optional[str] = None
+    root_level_slugs: bool = False
+    exclude_paths: tuple = ()
+    require_lastmod: bool = False
 
-    # Extra filters, mainly for root_level_slugs sites where listings and
-    # ordinary pages share the same URL shape.
-    exclude_paths: tuple = ()             # path prefixes that are never listings
-    require_lastmod: bool = False         # only sitemap entries with <lastmod>
-
-    sitemap: Optional[str] = None         # path to sitemap or sitemap index
-    search_path: Optional[str] = None     # fallback listing-index page
+    sitemap: Optional[str] = None
+    search_path: Optional[str] = None
     search_params: dict = field(default_factory=dict)
     page_param: Optional[str] = "page"
     max_pages: int = 30
     enabled: bool = True
 
-    # --- discovery via the site's own section index pages ---
-    #
-    # Preferred over the sitemap when an agent's sitemap carries years of
-    # archived listings (Chrystals: ~78% of sitemap URLs are dead). A section
-    # index shows only what is currently on the market, so it is both smaller
-    # and correct.
-    #
-    # Each entry is a path, walked with pagination until a page yields nothing
-    # new. Listed BEFORE the sitemap is tried.
     index_paths: tuple = ()
-
-    # How the index pages paginate:
-    #   "page"   -> ?page=2        (page_param, 1-based)
-    #   "offset" -> ?start=18      (offset_param, steps of page_size)
     page_mode: str = "page"
     offset_param: str = "start"
     page_size: int = 20
 
-    # Some agents encode category/type in the URL itself, which is far more
-    # reliable than guessing from page wording. First match wins.
-    # Format: ((path_fragment, category, listing_type), ...)
     url_rules: tuple = ()
 
     def classify(self, url):
-        """Return (category, listing_type) from the URL, or (None, None)."""
         path = urlparse(url).path
         for fragment, category, listing_type in self.url_rules:
             if fragment in path:
@@ -85,15 +55,15 @@ class Agent:
         return [f"{self.base}{p}" for p in self.index_paths]
 
     def index_page_url(self, index_url, page_num):
-        """URL for page `page_num` (0-based) of a section index."""
         if page_num == 0:
             return index_url
         if self.page_mode == "offset":
-            return f"{index_url}?{self.offset_param}={page_num * self.page_size}"
-        return f"{index_url}?{self.page_param}={page_num + 1}"
+            separator = "&" if "?" in index_url else "?"
+            return f"{index_url}{separator}{self.offset_param}={page_num * self.page_size}"
+        separator = "&" if "?" in index_url else "?"
+        return f"{index_url}{separator}{self.page_param}={page_num + 1}"
 
     def is_listing(self, url):
-        """True if this URL looks like an individual property page."""
         path = urlparse(url).path
         if not path or path == "/":
             return False
@@ -102,25 +72,23 @@ class Agent:
         if self.property_path:
             return self.property_path in path
         if self.root_level_slugs:
-            # Exactly one path segment: /douglas-ballanard-road-7/
             return path.strip("/").count("/") == 0
         return False
 
 
 AGENTS = [
-    # robots.txt checked: only /wp-admin/ disallowed, listings crawlable.
-    # WordPress site; the `property` post type is NOT exposed over REST, so we
-    # parse the pages. Their search params were found in their own page links.
+    # robots.txt checked previously: listings crawlable. Paused while testing
+    # providers one at a time.
     Agent(
         key="bgc",
         name="Black Grace Cowley",
         base="https://www.blackgracecowley.com",
-        enabled=False,   # paused: verifying one agent at a time
+        enabled=False,
         property_path="/property/",
         sitemap="/wp-sitemap.xml",
         search_path="/search/",
         search_params={
-            "PropertySearch[searchType]": "1",   # 1 = sales; 2 likely lettings
+            "PropertySearch[searchType]": "1",
             "PropertySearch[minPrice]": "0",
             "PropertySearch[maxPrice]": "99999999",
             "PropertySearch[term]": "",
@@ -132,48 +100,30 @@ AGENTS = [
         },
     ),
 
-    # robots.txt checked: "Disallow:" with no path = everything permitted.
-    # Flat sitemap (not an index) listing every property URL directly, so one
-    # request covers discovery. Slugs carry postcodes and some carry -rent/-sale.
     Agent(
         key="cg",
         name="Cowley Groves",
         base="https://www.cowleygroves.com",
-        enabled=False,   # paused: verifying one agent at a time
+        enabled=False,
         property_path="/property/",
         sitemap="/sitemap.xml",
     ),
 
-    # robots.txt checked: "Disallow:" with no path = everything permitted.
-    # Different shape to the others: listings sit at the ROOT (/douglas-elm-drive/)
-    # with no /property/ prefix, alongside ordinary pages. Their sitemap only
-    # puts <lastmod> on real listings — the homepage, /dashboard/ and the 100+
-    # /sales/ SEO landing pages have none — so that is the discriminator.
     Agent(
         key="gg",
         name="Garforth Gray",
         base="https://www.garforthgray.im",
-        enabled=False,   # paused: verifying one agent at a time
+        enabled=False,
         root_level_slugs=True,
         require_lastmod=True,
         exclude_paths=("/sales/", "/rentals/", "/dashboard/", "/commercials/"),
-        sitemap="/sitemap.php",     # note: .php, not .xml
+        sitemap="/sitemap.php",
     ),
 
-    # robots.txt checked: Joomla site. Listing paths are permitted, but
-    # /properties/agentproperties/ IS disallowed, so it is excluded below.
-    #
-    # DISCOVERY VIA SECTION INDEXES, NOT THE SITEMAP.
-    # Their sitemap carries years of archived listings — roughly 78% of its
-    # ~1554 URLs return a live "Property Not Found" page, and crawling them
-    # took most of the run time for nothing. The section index pages list only
-    # what is actually on the market (e.g. "Results 1 - 18 of 43"), so they are
-    # both smaller and correct. They paginate by OFFSET (?start=18), 18 per
-    # page, hence page_mode="offset".
-    #
-    # Their URL structure encodes category and sale/rent, which is more
-    # reliable than reading the page — see url_rules.
-    # Slugs are {numeric_id}-{address}, often with the address repeated twice.
+    # Chrystals / Expert Agent.
+    # The public section pages expose current catalogue entries and paginate
+    # with ?start=18, ?start=36, ... . Their sitemap also contains many stale
+    # property pages, so indexes are deliberately the primary discovery route.
     Agent(
         key="chr",
         name="Chrystals",
@@ -186,54 +136,27 @@ AGENTS = [
             "/commercial/commercial-sales",
             "/commercial/commercial-lettings",
             "/agricultural",
-            "/developments",
+            "/developments",  # Chrystals labels this section "Building Plots"
         ),
         page_mode="offset",
         offset_param="start",
         page_size=18,
-        # Sitemap deliberately left unset: see the note above.
+        sitemap=None,
+        search_path=None,
         exclude_paths=(
-            "/properties/agentproperties/",   # disallowed in robots.txt
+            "/properties/agentproperties/",
             "/components/", "/component/", "/modules/", "/administrator/",
         ),
         url_rules=(
             ("/commercial/commercial-lettings/", "commercial", "rent"),
             ("/commercial/commercial-sales/", "commercial", "sale"),
-            ("/agricultural/", "land", None),
-            ("/developments/", "residential", "sale"),
+            ("/agricultural/", "land", "sale"),
+            ("/developments/", "land", "sale"),
             ("/properties-for-sale/", "residential", "sale"),
             ("/properties-to-rent/", "residential", "rent"),
             ("/properties-to-let/", "residential", "rent"),
         ),
     ),
-
-    # ---- Add further agents below once robots.txt is verified ----
-    # Fill in property_path from a real listing URL before enabling.
-    #
-    # Agent(
-    #     key="chrystals",
-    #     name="Chrystals",
-    #     base="https://www.chrystals.co.im",
-    #     property_path="/property/",
-    #     sitemap="/sitemap.xml",
-    #     enabled=False,
-    # ),
-    # Agent(
-    #     key="cowleygroves",
-    #     name="Cowley Groves",
-    #     base="https://www.cowleygroves.com",
-    #     property_path="/property/",
-    #     sitemap="/sitemap.xml",
-    #     enabled=False,
-    # ),
-    # Agent(
-    #     key="garforthgray",
-    #     name="Garforth Gray",
-    #     base="https://www.garforthgray.im",
-    #     property_path="/property/",
-    #     sitemap="/sitemap.xml",
-    #     enabled=False,
-    # ),
 ]
 
 
