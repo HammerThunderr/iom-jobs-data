@@ -1,13 +1,13 @@
 """
 scrapers/property/common.py — shared logic for every agent scraper.
 
-DESIGN RULE (applies to all agents): index the FACTS, link out for the CONTENT.
-  Collected : price, beds, baths, type, address, parish, agent, listing URL
-  NEVER     : description prose, photographs
-Facts are not copyrightable; the agent's descriptions and images are theirs.
-Every listing carries attribution and links back to the agent's own page.
+FACTS ONLY: price, beds, baths, type, address, locality, agent, listing URL.
+No description or photographs are stored. Every listing links back to the agent.
 
-Always check an agent's robots.txt before adding them to agents.py.
+Chrystals is parsed from its actual Expert Agent page structure: the page gives
+an explicit price/title, a final 3-number stats block (beds/baths/receptions),
+and a dedicated location block containing postcode and locality. Generic agents
+still use the heuristic fallback.
 """
 
 import json
@@ -15,61 +15,51 @@ import os
 import re
 import time
 from datetime import date
+from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
 
-# Identify honestly — agents should be able to contact you, not just block you.
 USER_AGENT = "ManxOneBot/1.0 (+mailto:hammerpunch786@gmail.com)"
 HEADERS = {"User-Agent": USER_AGENT}
-
-DELAY_SECONDS = 2.0   # be polite; these are small businesses' servers
+DELAY_SECONDS = 2.0
 TIMEOUT = 20
-
 OUTPUT = os.environ.get("OUTPUT_PATH", "properties.json")
 
 IOM_PLACES = [
-    "Douglas", "Onchan", "Ramsey", "Peel", "Castletown", "Port Erin",
-    "Port St Mary", "Laxey", "Ballasalla", "Kirk Michael", "Andreas",
-    "Jurby", "Ballaugh", "Maughold", "St Johns", "Glen Vine", "Crosby",
-    "Union Mills", "Braddan", "Santon", "Ballabeg", "Colby", "Sulby",
-    "Foxdale", "Baldrine", "Dalby", "Marown", "Malew", "Lonan", "Bride",
-    "Ballaugh", "Glen Maye", "Ronague", "Grenaby", "Kirk Braddan",
+    "Port St Mary", "Kirk Michael", "St Marks", "St Johns", "Glen Vine",
+    "Glen Maye", "Union Mills", "Ballabeg", "Ballasalla", "Port Erin",
+    "Port St Mary", "Douglas", "Onchan", "Ramsey", "Peel", "Castletown",
+    "Laxey", "Kirk Braddan", "Braddan", "Santon", "Andreas", "Jurby",
+    "Ballaugh", "Maughold", "Crosby", "Foxdale", "Baldrine", "Dalby",
+    "Marown", "Malew", "Lonan", "Bride", "Colby", "Sulby", "Ronague",
+    "Grenaby", "Maughold", "Smeale", "Lezayre", "Arbory", "Patrick",
+    "German", "Garff", "Rushen", "Michael", "Ayre",
 ]
 
 PROPERTY_TYPES = [
     "detached bungalow", "semi-detached", "end of terrace", "end-of-terrace",
     "mid terrace", "terraced", "detached", "bungalow", "apartment", "flat",
     "cottage", "townhouse", "maisonette", "farmhouse", "land", "commercial",
+    "penthouse",
 ]
 
-WORD_NUMBERS = {
-    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
-    "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
-}
-
-# Words that mark a listing as non-residential. Users browsing for a home do
-# not want offices and shops mixed into the results, so tag them and let the
-# app filter. Kept deliberately specific: "unit"/"premises" alone are too loose.
 COMMERCIAL_WORDS = [
     "office", "offices", "shop", "retail", "showroom", "workshop",
     "commercial", "warehouse", "industrial", "hotel", "licensed premises",
     "business", "restaurant", "cafe", "salon", "surgery", "storage",
 ]
-
 LAND_WORDS = ["field no", "field number", "land at", "building plot", "site at"]
-
+WORD_NUMBERS = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5,
+    "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10,
+}
 
 # ---------------------------------------------------------------------------
 # HTTP
 # ---------------------------------------------------------------------------
 
 def get(url, params=None):
-    """Polite GET. Returns Response on 200, else None.
-
-    Non-200 responses are logged: a silent None made a 403 from an agent's
-    firewall look identical to an empty sitemap, which cost a debugging cycle.
-    """
     try:
         res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
         time.sleep(DELAY_SECONDS)
@@ -81,121 +71,51 @@ def get(url, params=None):
         print(f"    ! {url} -> {exc}")
         return None
 
-
 # ---------------------------------------------------------------------------
-# Extraction helpers (shared by every agent)
+# Text helpers
 # ---------------------------------------------------------------------------
-
-# Page furniture that is NOT part of the listing. Everything here is removed
-# before any text is read.
-#
-# THIS IS THE FIX FOR THE WORST CLASS OF BUG WE HAD. Reading the whole page
-# meant the agent's OWN OFFICE POSTCODE in the footer became the property's
-# postcode (every Garforth Gray listing came out as IM1 1LB, their Douglas
-# office), and a "similar properties" carousel supplied the price — several
-# unrelated listings all showed £1,250,000, the dearest house in the sidebar.
-_FURNITURE_TAGS = ("nav", "header", "footer", "aside", "form", "iframe")
-_FURNITURE_HINTS = (
-    "nav", "menu", "header", "footer", "sidebar", "side-bar", "widget",
-    "related", "similar", "recommend", "carousel", "slider", "also-like",
-    "other-propert", "more-propert", "featured", "cookie", "modal",
-    "popup", "breadcrumb", "search", "newsletter", "subscribe", "social",
-    "contact-us", "branch", "office",
-)
-
-
-def _strip_furniture(soup):
-    """Remove navigation, footers, sidebars and 'similar property' blocks."""
-    for tag in soup(["script", "style", "noscript"]):
-        tag.decompose()
-
-    for tag in soup(list(_FURNITURE_TAGS)):
-        tag.decompose()
-
-    for el in soup.find_all(True):
-        ident = " ".join(
-            filter(None, [
-                " ".join(el.get("class", [])),
-                el.get("id", "") or "",
-                el.get("role", "") or "",
-            ])
-        ).lower()
-        if not ident:
-            continue
-        if any(hint in ident for hint in _FURNITURE_HINTS):
-            el.decompose()
-    return soup
-
 
 def page_text(html):
-    """Return (title, h1, flattened MAIN text) with page furniture removed.
-
-    `body` is deliberately the main content only. Anything that reads it —
-    price, postcode, bedrooms — is therefore reading the listing itself and
-    not the site's chrome.
-    """
+    """Return (title, h1, flattened body text), stripping scripts/styles."""
     soup = BeautifulSoup(html, "html.parser")
-
-    title = soup.title.get_text(strip=True) if soup.title else ""
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+    title = soup.title.get_text(" ", strip=True) if soup.title else ""
     h1 = soup.find("h1")
     heading = h1.get_text(" ", strip=True) if h1 else ""
-
-    soup = _strip_furniture(soup)
-
-    # Prefer an explicit main/article container when the site marks one.
-    main = soup.find("main") or soup.find("article") or soup.find(
-        attrs={"role": "main"}
-    )
-    scope = main if main is not None else soup
-
-    body = re.sub(r"\s+", " ", scope.get_text(" ", strip=True))
+    body = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
     return title, heading, body
 
+# ---------------------------------------------------------------------------
+# Price
+# ---------------------------------------------------------------------------
 
-# Phrases that reliably mean a RENTAL price when they sit next to a figure.
-# "per annum", "rent of" and "rental of" are deliberately NOT here: Isle of
-# Man sale listings routinely quote rates, ground rent and service charges
-# per annum, and including those flipped sale listings to rent — taking the
-# rates figure along as the price.
 RENT_MARKERS = (
     "per calendar month", "pcm", "p.c.m", "per month", "per week", "pw",
     "monthly rent", "monthly rental", "a month", "a week",
 )
-
-# Phrases that mean a SALE price.
 SALE_MARKERS = (
     "for sale", "offers around", "offers in the region", "offers over",
     "offers in excess", "asking price", "guide price", "oiro", "oieo",
 )
-
-# Figures that are NOT the headline price. If one of these appears just
-# before a £ amount, that amount is ignored entirely. This is what stops
-# "Rates: £650 per annum" being read as the rent on a £335,000 house.
 NOT_THE_PRICE = (
     "rate", "rates", "rateable", "ground rent", "service charge",
     "maintenance", "deposit", "bond", "fee", "fees", "yield", "insurance",
     "council tax", "premium", "per annum", "pa", "annual", "epc",
     "commission", "stamp duty", "legal",
 )
-
 _AMOUNT_RE = re.compile(r"£\s*([\d,]{3,})")
 
 
-def _context_before(text, pos, span=45):
+def _context_before(text, pos, span=55):
     return text[max(0, pos - span):pos].lower()
 
 
-def _context_after(text, pos, span=35):
+def _context_after(text, pos, span=45):
     return text[pos:pos + span].lower()
 
 
 def _candidate_amounts(text):
-    """Every £ figure that could plausibly be the headline price.
-
-    Returns (amount, before_context, after_context). Figures preceded by
-    rates/ground rent/service charge wording are dropped, because those are
-    incidental costs, not the price of the property.
-    """
     out = []
     for m in _AMOUNT_RE.finditer(text):
         try:
@@ -211,26 +131,18 @@ def _candidate_amounts(text):
 
 
 def parse_price(text, listing_type_hint=None):
-    """Return (amount, qualifier, listing_type).
-
-    Prices are read WITH their surrounding words, so an incidental figure
-    (rates, service charge) can never be mistaken for the asking price.
-    A hint from the agent's URL or slug is authoritative in both directions.
-    """
+    """Return (amount, qualifier, listing_type), respecting rent/sale context."""
     low = text.lower()
-
     candidates = _candidate_amounts(text)
 
-    # --- decide sale vs rent ---
     if listing_type_hint in ("rent", "sale"):
         is_rent = listing_type_hint == "rent"
     else:
-        # A rent marker only counts if it sits beside a surviving figure.
         rent_beside = any(
-            any(mk in after or mk in before for mk in RENT_MARKERS)
+            any(marker in after or marker in before for marker in RENT_MARKERS)
             for _, before, after in candidates
         )
-        sale_on_page = any(mk in low for mk in SALE_MARKERS)
+        sale_on_page = any(marker in low for marker in SALE_MARKERS)
         if rent_beside and not sale_on_page:
             is_rent = True
         elif sale_on_page:
@@ -241,38 +153,37 @@ def parse_price(text, listing_type_hint=None):
     if re.search(r"\bpoa\b", low) or "price on application" in low:
         return None, "poa", "rent" if is_rent else "sale"
 
-    # --- pick the figure ---
-    #
-    # THIS USED TO TAKE THE LARGEST FIGURE ON THE PAGE, and that was the single
-    # worst bug in the scraper: a "similar properties" carousel meant a
-    # £375,000 house in Ballasalla was published at £1,250,000, the dearest
-    # listing in the sidebar — and several unrelated properties shared that
-    # same wrong price.
-    #
-    # With page furniture now stripped in page_text(), the remaining figures
-    # all belong to this listing, and the headline price is the FIRST one —
-    # agents lead with it. Incidental costs (rates, service charge) are
-    # already excluded by NOT_THE_PRICE before we get here.
     if is_rent:
         amounts = [a for a, _, _ in candidates if 100 <= a <= 100000]
+        qualifier = "pcm"
     else:
         amounts = [a for a, _, _ in candidates if a >= 20000]
+        amounts.sort(reverse=True)
+        if re.search(r"guide price", low):
+            qualifier = "guide"
+        elif "offers in excess" in low or "oieo" in low:
+            qualifier = "oieo"
+        elif "offers over" in low or "oio" in low:
+            qualifier = "oio"
+        elif "offers around" in low:
+            qualifier = "offers-around"
+        else:
+            qualifier = "asking"
 
     if not amounts:
         return None, "unknown", "rent" if is_rent else "sale"
-    return (
-        amounts[0],
-        "pcm" if is_rent else "asking",
-        "rent" if is_rent else "sale",
-    )
+
+    return amounts[0], qualifier, "rent" if is_rent else "sale"
+
+# ---------------------------------------------------------------------------
+# Generic parsing helpers
+# ---------------------------------------------------------------------------
+
+BEDS = ["bed", "bedroom", "bedrooms"]
+BATHS = ["bath", "bathroom", "bathrooms"]
 
 
 def parse_int(text, words):
-    """Find '3 bed', 'three-bedroom', 'two bedroom' -> 3 / 3 / 2.
-
-    Agent copy mixes digits, written numbers and hyphens freely, so all
-    three forms must be handled or counts silently go missing.
-    """
     noun = "(?:" + "|".join(words) + r")"
     number = r"(\d+|" + "|".join(WORD_NUMBERS) + r")"
     matches = re.findall(rf"\b{number}[-\s]*{noun}\b", text, flags=re.I)
@@ -282,39 +193,8 @@ def parse_int(text, words):
     return int(first) if first.isdigit() else WORD_NUMBERS[first]
 
 
-# Several agents show beds / baths / receptions as BARE NUMBERS beside icons,
-# with no words at all — Garforth Gray renders "3 [bed] 2 [bath] 1 [sofa]" and
-# Chrystals "2 1 2". parse_int() looks for a number next to a word, so on those
-# sites it finds nothing and the counts come out blank.
-#
-# Verified against real pages: the order is beds, baths, receptions.
-_ICON_TRIPLE_RE = re.compile(r"(?<!\d)(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})(?!\d)")
-
-
-def parse_icon_counts(text):
-    """Return (beds, baths, receptions) from an unlabelled numeric trio.
-
-    Only accepts a trio of small numbers standing alone, and only from the
-    first part of the page, so digits inside prose or a price can never be
-    mistaken for room counts.
-    """
-    head = text[:600]
-    for m in _ICON_TRIPLE_RE.finditer(head):
-        beds, baths, recs = (int(g) for g in m.groups())
-        # Room counts are small; anything larger is a year, a price fragment
-        # or a measurement.
-        if beds <= 20 and baths <= 20 and recs <= 20 and beds >= 1:
-            return beds, baths, recs
-    return None, None, None
-
-
 def parse_type(text):
-    """Match on WORD BOUNDARIES.
-
-    Plain substring matching made 'land' match inside 'Island' — and every
-    Isle of Man page says Island somewhere — which mis-typed 1447 listings.
-    Order matters: 'semi-detached' is listed before 'detached' so it wins.
-    """
+    """Generic fallback type parser using word boundaries."""
     low = text.lower()
     for candidate in PROPERTY_TYPES:
         if re.search(rf"\b{re.escape(candidate)}\b", low):
@@ -322,52 +202,45 @@ def parse_type(text):
     return None
 
 
+def parse_chrystals_type(text):
+    """Classify Chrystals from property-description phrases, avoiding garage noise."""
+    low = re.sub(r"\s+", " ", text.lower())
+
+    # Land/building-plot wording must win before a planning proposal such as
+    # "planning permission for detached property" is considered.
+    rules = (
+        (r"\bbuilding plot\b", "land"),
+        (r"\bdevelopment site\b", "land"),
+        (r"\bplot of land\b", "land"),
+        (r"\bsite for (?:residential|commercial) development\b", "land"),
+        (r"\bsemi[- ]detached\s+(?:[a-z-]+\s+){0,3}(?:house|home|property|townhouse|bungalow)\b", "semi-detached"),
+        (r"\bend[- ]of[- ]terrace\b", "end of terrace"),
+        (r"\bmid[- ]terrace\b", "mid terrace"),
+        (r"\bterraced\s+(?:house|home|property|townhouse)\b", "terraced"),
+        (r"\b(?:top|ground|first|second|third|lower|upper)[- ]floor\s+(?:apartment|flat)\b", "apartment"),
+        (r"\b(?:penthouse|apartment)\b", "apartment"),
+        (r"\bflat\b", "flat"),
+        (r"\bbungalow\b", "bungalow"),
+        (r"\btownhouse\b", "townhouse"),
+        (r"\bmaisonette\b", "maisonette"),
+        (r"\bfarmhouse\b", "farmhouse"),
+        (r"\bcottage\b", "cottage"),
+        (r"\bdetached\s+(?:[a-z-]+\s+){0,3}(?:house|home|property|residence|bungalow|cottage)\b", "detached"),
+    )
+    for pattern, value in rules:
+        if re.search(pattern, low):
+            return value
+    return None
+
+
 def parse_place(text):
-    for place in IOM_PLACES:
+    for place in sorted(set(IOM_PLACES), key=len, reverse=True):
         if re.search(rf"\b{re.escape(place)}\b", text, flags=re.I):
             return place
     return None
 
 
-def _dedupe_doubled(text):
-    """Chrystals slugs often repeat the address twice: 'a-b-c-a-b-c' -> 'a-b-c'."""
-    parts = text.split("-")
-    if len(parts) >= 4 and len(parts) % 2 == 0:
-        half = len(parts) // 2
-        if parts[:half] == parts[half:]:
-            return "-".join(parts[:half])
-    return text
-
-
-def address_from_slug(url):
-    slug = url.rstrip("/").split("/")[-1]
-    # Drop a trailing -sale / -rent marker and any postcode fragment.
-    slug = re.sub(r"-(sale|rent|let|letting)$", "", slug, flags=re.I)
-    slug = re.sub(r"-im\d{1,2}-\d[a-z]{2}$", "", slug, flags=re.I)
-    # Some agents prefix a numeric listing reference: 12877821-17-oak-park-peel
-    slug = re.sub(r"^\d{6,}-", "", slug)
-    slug = _dedupe_doubled(slug)
-    return slug.replace("-", " ").strip().title()
-
-
-def parse_postcode(url, text=""):
-    """Isle of Man postcodes are IM1-IM9 + space + digit + two letters.
-
-    Several agents put the postcode straight in the URL slug
-    (…-ramsey-im7-1bl), which is more reliable than reading the page.
-    """
-    slug_match = re.search(r"\b(im\d{1,2})-(\d[a-z]{2})\b", url, flags=re.I)
-    if slug_match:
-        return f"{slug_match.group(1).upper()} {slug_match.group(2).upper()}"
-
-    text_match = re.search(r"\b(IM\d{1,2})\s*(\d[A-Z]{2})\b", text)
-    if text_match:
-        return f"{text_match.group(1)} {text_match.group(2)}"
-    return None
-
-
 def parse_category(text):
-    """residential | commercial | land — so the app can filter homes only."""
     low = text.lower()
     if any(word in low for word in LAND_WORDS):
         return "land"
@@ -376,8 +249,31 @@ def parse_category(text):
     return "residential"
 
 
+def parse_postcode(url, text=""):
+    slug_match = re.search(r"\b(im\d{1,2})-(\d[a-z]{2})\b", url, flags=re.I)
+    if slug_match:
+        return f"{slug_match.group(1).upper()} {slug_match.group(2).upper()}"
+
+    text_match = re.search(r"\b(IM\d{1,2})\s*-?\s*(\d[A-Z]{2})\b", text, flags=re.I)
+    if text_match:
+        return f"{text_match.group(1).upper()} {text_match.group(2).upper()}"
+    return None
+
+
+def address_from_slug(url):
+    slug = url.rstrip("/").split("/")[-1]
+    slug = re.sub(r"-(sale|rent|let|letting)$", "", slug, flags=re.I)
+    slug = re.sub(r"-im\d{1,2}-\d[a-z]{2}$", "", slug, flags=re.I)
+    slug = re.sub(r"^\d{6,}-", "", slug)
+    parts = slug.split("-")
+    if len(parts) >= 4 and len(parts) % 2 == 0:
+        half = len(parts) // 2
+        if parts[:half] == parts[half:]:
+            slug = "-".join(parts[:half])
+    return slug.replace("-", " ").strip().title()
+
+
 def listing_type_from_slug(url):
-    """Some agents end the slug with -rent or -sale. Trust it when present."""
     slug = url.rstrip("/").split("/")[-1].lower()
     if re.search(r"-(rent|let|letting)$", slug):
         return "rent"
@@ -385,13 +281,10 @@ def listing_type_from_slug(url):
         return "sale"
     return None
 
+# ---------------------------------------------------------------------------
+# Chrystals-specific extraction
+# ---------------------------------------------------------------------------
 
-BEDS = ["bed", "bedroom", "bedrooms"]
-BATHS = ["bath", "bathroom", "bathrooms"]
-
-# Agents leave dead listing URLs in their sitemaps (Chrystals especially).
-# Those pages return HTTP 200 with an error message, so they have to be
-# detected by content or they end up in the app as "Property Not Found".
 DEAD_PAGE_MARKERS = [
     "property not found", "page not found", "404", "no longer available",
     "not currently available", "under offer no longer", "listing removed",
@@ -402,16 +295,10 @@ def _looks_dead(title, heading, body):
     blob = f"{heading} {title}".lower()
     if any(marker in blob for marker in DEAD_PAGE_MARKERS):
         return True
-    # A real listing page always has some substance to it.
     return len(body) < 200
 
 
 def _clean_address(address, agent_name):
-    """Strip the agency name that several agents prepend to their <h1>.
-
-    'Cowley Groves - 1 Forest View Apartments, Ramsey' -> '1 Forest View...'
-    Without this the agent name shows twice on every card.
-    """
     text = address.strip()
     for separator in (" - ", " | ", " – ", ": "):
         prefix = f"{agent_name}{separator}"
@@ -419,13 +306,9 @@ def _clean_address(address, agent_name):
             text = text[len(prefix):].strip()
         suffix = f"{separator}{agent_name}"
         if text.lower().endswith(suffix.lower()):
-            text = text[: -len(suffix)].strip()
-    # Also drop a bare leading/trailing agency name.
+            text = text[:-len(suffix)].strip()
     if text.lower().startswith(agent_name.lower()):
         text = text[len(agent_name):].lstrip(" -|–:,").strip()
-
-    # Some agents append the price to the heading, e.g.
-    # "Central Promenade, Douglas Monthly Rental Of £725" -> drop the tail.
     text = re.sub(
         r"\s*(monthly rent(al)?( of)?|per calendar month|pcm|price|offers?"
         r"( (in|around|over|above))?|guide price|asking price|from)\b.*$",
@@ -433,85 +316,94 @@ def _clean_address(address, agent_name):
         text,
         flags=re.I,
     ).strip(" -–|,:")
-
     return text or address
 
 
+def _chrystals_location(body, heading, url):
+    postcode = parse_postcode(url, body)
+
+    # The final "Click to Enlarge" is immediately before the location block on
+    # Expert Agent pages. Pull only that tail so footer/nav place names cannot win.
+    tail = body.rsplit("Click to Enlarge", 1)[-1]
+
+    if postcode:
+        candidates = []
+        for place in sorted(set(IOM_PLACES), key=len, reverse=True):
+            m = re.search(rf"(.+?)\s+{re.escape(place)}\s+{re.escape(postcode)}\s+County\s*:", tail, flags=re.I)
+            if m:
+                street = re.sub(r"^[*\s|]+|[*\s|]+$", "", m.group(1)).strip()
+                street = re.sub(r"\s+", " ", street)
+                candidates.append((len(m.group(1)), street, place))
+        if candidates:
+            # Shortest match is normally the actual street/address line.
+            _, street, place = min(candidates, key=lambda x: x[0])
+            if street:
+                return _clean_address(f"{street}, {place}", "Chrystals"), place, postcode
+
+    address = _clean_address(heading or address_from_slug(url), "Chrystals")
+    return address, parse_place(address), postcode
+
+
+def _chrystals_stats(body):
+    """Chrystals' final three integers are beds, baths, receptions."""
+    matches = re.findall(
+        r"\b(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})\s+(?:Brochure|Register With Us)\b",
+        body,
+        flags=re.I,
+    )
+    if matches:
+        b, ba, _rec = matches[-1]
+        return int(b), int(ba)
+    return None, None
+
+
+def _chrystals_status(body):
+    blob = body[:2500].lower()
+    for phrase in ("sold stc", "under offer", "let stc", "new property", "updated"):
+        if phrase in blob:
+            return phrase.replace(" ", "_")
+    return None
+
+
 def scrape_listing(agent, url):
-    """Fetch one property page and pull out the facts. Returns dict or None."""
+    """Fetch one property page and pull out facts with provider-aware parsing."""
     res = get(url)
     if not res:
         return None
 
     title, heading, body = page_text(res.text)
-
-    # Dead or placeholder pages must not reach the app.
     if _looks_dead(title, heading, body):
         return None
 
-    head_blob = f"{heading} {title}"
     slug = url.rstrip("/").split("/")[-1]
-
-    # Some agents head the page with a MARKETING HEADLINE rather than an
-    # address — Garforth Gray's h1 is "Beautifully Presented New Build Home",
-    # with the real address on a separate line. Publishing the headline as the
-    # address left listings with no location at all, so a heading that carries
-    # no address signal is rejected in favour of the slug (which on those
-    # sites is the address: /ballasalla-taggart-close/).
-    def _looks_like_address(value):
-        if not value:
-            return False
-        if re.search(r"\bIM\d{1,2}\b", value, re.I):
-            return True
-        if "," in value:
-            return True
-        # Street words are a reasonable signal on a single-line address.
-        return bool(re.search(
-            r"\b(road|street|avenue|drive|close|lane|terrace|crescent|way|"
-            r"court|park|place|view|hill|promenade|quay|mount|grove|gardens?)\b",
-            value, re.I))
-
-    candidate = heading or title.split("|")[0].strip()
-    address = candidate if _looks_like_address(candidate) else address_from_slug(url)
-    address = _clean_address(address, agent.name)
-
-    # Where an agent encodes category/type in the URL, trust that over both the
-    # slug suffix and any guess made from the page wording.
     url_category, url_type = agent.classify(url)
-
-    # The binding type hint comes from the URL path (Chrystals) or the slug
-    # suffix (Cowley Groves' -rent/-sale). It must be resolved BEFORE price
-    # parsing so the price is read with the correct rent/sale expectations —
-    # otherwise a rental parsed hint-less can grab a sale-sized number from
-    # the page and flip itself.
     type_hint = url_type or listing_type_from_slug(url)
 
-    # Price: the heading usually states it ("... Monthly Rental Of £725"),
-    # and the heading has none of the footer noise the body carries.
+    # Price should come from the page heading first. This avoids service charges,
+    # deposits and room dimensions later in the document becoming the headline price.
+    head_blob = f"{heading} {title}".strip()
     price, qualifier, listing_type = parse_price(head_blob, type_hint)
     if price is None:
-        price, qualifier, listing_type = parse_price(body, type_hint)
+        price, qualifier, listing_type = parse_price(body[:5000], type_hint)
+
+    if agent.key == "chr":
+        address, locality, postcode = _chrystals_location(body, heading, url)
+        bedrooms, bathrooms = _chrystals_stats(body)
+        prop_type = parse_chrystals_type(body[:12000]) or parse_type(address)
+        status = _chrystals_status(body)
+    else:
+        address = _clean_address(heading or title.split("|")[0].strip() or address_from_slug(url), agent.name)
+        locality = parse_place(address)
+        postcode = parse_postcode(url, body)
+        bedrooms = parse_int(head_blob, BEDS) or parse_int(body, BEDS)
+        bathrooms = parse_int(head_blob, BATHS) or parse_int(body, BATHS)
+        prop_type = parse_type(f"{address} {head_blob}")
+        status = None
 
     listing_type = type_hint or listing_type
-    category = url_category or parse_category(f"{address} {head_blob}")
+    category = url_category or parse_category(address)
 
-    # Parish and property type are read from the ADDRESS ONLY, never the body.
-    # Reading the body picked up the agency's own footer address, which made
-    # 78% of listings look like they were in Douglas.
-    place_blob = f"{address} {heading}"
-
-    # Worded counts first ("3 bedroom"); fall back to the unlabelled numeric
-    # trio that icon-based sites use.
-    beds = parse_int(head_blob, BEDS) or parse_int(body, BEDS)
-    baths = parse_int(head_blob, BATHS) or parse_int(body, BATHS)
-    receptions = None
-    if beds is None or baths is None:
-        icon_beds, icon_baths, icon_recs = parse_icon_counts(body)
-        beds = beds or icon_beds
-        baths = baths or icon_baths
-        receptions = icon_recs
-
-    return {
+    item = {
         "id": f"{agent.key}-{slug}",
         "agent": agent.name,
         "url": url,
@@ -519,21 +411,22 @@ def scrape_listing(agent, url):
         "listingType": listing_type,
         "price": price,
         "priceQualifier": qualifier,
-        "bedrooms": beds,
-        "bathrooms": baths,
-        "receptions": receptions,
-        "propertyType": parse_type(place_blob),
+        "bedrooms": bedrooms,
+        "bathrooms": bathrooms,
+        "propertyType": prop_type,
         "address": address,
-        "parish": parse_place(place_blob),
-        # Address first, body second. The body is furniture-free now, but the
-        # address is still the more trustworthy source.
-        "postcode": parse_postcode(url, f"{address} {heading} {body}"),
-        # Deliberately absent: description, images.
+        "locality": locality,
+        # Kept for backward compatibility with the current Manx One schema.
+        # Chrystals exposes locality + postcode, not a dedicated parish field.
+        "parish": locality,
+        "postcode": postcode,
     }
-
+    if status:
+        item["status"] = status
+    return item
 
 # ---------------------------------------------------------------------------
-# Merge with previous run — this is where the real value lives
+# Merge with previous run
 # ---------------------------------------------------------------------------
 
 def load_previous():
@@ -548,12 +441,6 @@ def load_previous():
 
 
 def merge(new_listings, previous, failed_agents):
-    """Add firstSeen / lastSeen / previousPrice.
-
-    Listings from agents that FAILED this run are carried over from the
-    previous file rather than silently vanishing from the app — one broken
-    parser should never blank out a whole agency.
-    """
     today = date.today().isoformat()
     prev_by_id = {item["id"]: item for item in previous}
 
@@ -563,7 +450,6 @@ def merge(new_listings, previous, failed_agents):
         if old:
             item["firstSeen"] = old.get("firstSeen", today)
             old_price = old.get("price")
-            # Track reductions — no agent site shows this, and it's OUR data.
             if old_price and item["price"] and old_price != item["price"]:
                 item["previousPrice"] = old_price
             elif old.get("previousPrice"):
@@ -577,7 +463,7 @@ def merge(new_listings, previous, failed_agents):
         seen_ids = {i["id"] for i in merged}
         for old in previous:
             if old["agent"] in failed_agents and old["id"] not in seen_ids:
-                old["stale"] = True   # app can show a "last checked" note
+                old["stale"] = True
                 merged.append(old)
 
     return merged
