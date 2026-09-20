@@ -84,6 +84,42 @@ def discover_via_sitemap(agent):
     return urls
 
 
+def discover_via_index(agent):
+    """Walk the agent's own section index pages.
+
+    Preferred over the sitemap where the sitemap is full of dead archived
+    listings (Chrystals). A section index only shows what is currently on the
+    market, so discovery is both smaller and correct.
+
+    Stops a section as soon as a page yields no new listing URLs, so an agent
+    with three pages costs four requests rather than max_pages.
+    """
+    urls = set()
+    for index_url in agent.index_urls:
+        section_total = 0
+        for page_num in range(agent.max_pages):
+            page_url = agent.index_page_url(index_url, page_num)
+            res = common.get(page_url)
+            if not res:
+                break
+
+            found = {
+                _absolute(agent, h)
+                for h in re.findall(r'href="([^"]+?)"', res.text)
+                if agent.is_listing(h)
+            }
+            fresh = found - urls
+            if not fresh:
+                break
+            urls |= fresh
+            section_total += len(fresh)
+
+        if section_total:
+            path = index_url.replace(agent.base, "")
+            print(f"    {path}: {section_total}")
+    return urls
+
+
 def discover_via_search(agent):
     """Fallback: walk the site's own search/results pages."""
     urls = set()
@@ -116,10 +152,19 @@ def run_agent(agent):
     """Scrape one agent. Raises on total failure so the caller can mark it."""
     print(f"\n=== {agent.name} ===")
 
-    urls = discover_via_sitemap(agent)
-    if urls:
-        print(f"  sitemap: {len(urls)} listing URLs")
-    else:
+    # Section indexes first where configured: they list only live properties,
+    # whereas some sitemaps are mostly dead archive URLs.
+    urls = set()
+    if agent.index_paths:
+        urls = discover_via_index(agent)
+        print(f"  index pages: {len(urls)} listing URLs")
+
+    if not urls:
+        urls = discover_via_sitemap(agent)
+        if urls:
+            print(f"  sitemap: {len(urls)} listing URLs")
+
+    if not urls:
         print("  sitemap empty — trying search endpoint")
         urls = discover_via_search(agent)
         print(f"  search: {len(urls)} listing URLs")
