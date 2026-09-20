@@ -86,15 +86,69 @@ def get(url, params=None):
 # Extraction helpers (shared by every agent)
 # ---------------------------------------------------------------------------
 
-def page_text(html):
-    """Return (title, h1, flattened body text) with scripts/styles removed."""
-    soup = BeautifulSoup(html, "html.parser")
+# Page furniture that is NOT part of the listing. Everything here is removed
+# before any text is read.
+#
+# THIS IS THE FIX FOR THE WORST CLASS OF BUG WE HAD. Reading the whole page
+# meant the agent's OWN OFFICE POSTCODE in the footer became the property's
+# postcode (every Garforth Gray listing came out as IM1 1LB, their Douglas
+# office), and a "similar properties" carousel supplied the price — several
+# unrelated listings all showed £1,250,000, the dearest house in the sidebar.
+_FURNITURE_TAGS = ("nav", "header", "footer", "aside", "form", "iframe")
+_FURNITURE_HINTS = (
+    "nav", "menu", "header", "footer", "sidebar", "side-bar", "widget",
+    "related", "similar", "recommend", "carousel", "slider", "also-like",
+    "other-propert", "more-propert", "featured", "cookie", "modal",
+    "popup", "breadcrumb", "search", "newsletter", "subscribe", "social",
+    "contact-us", "branch", "office",
+)
+
+
+def _strip_furniture(soup):
+    """Remove navigation, footers, sidebars and 'similar property' blocks."""
     for tag in soup(["script", "style", "noscript"]):
         tag.decompose()
+
+    for tag in soup(list(_FURNITURE_TAGS)):
+        tag.decompose()
+
+    for el in soup.find_all(True):
+        ident = " ".join(
+            filter(None, [
+                " ".join(el.get("class", [])),
+                el.get("id", "") or "",
+                el.get("role", "") or "",
+            ])
+        ).lower()
+        if not ident:
+            continue
+        if any(hint in ident for hint in _FURNITURE_HINTS):
+            el.decompose()
+    return soup
+
+
+def page_text(html):
+    """Return (title, h1, flattened MAIN text) with page furniture removed.
+
+    `body` is deliberately the main content only. Anything that reads it —
+    price, postcode, bedrooms — is therefore reading the listing itself and
+    not the site's chrome.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
     title = soup.title.get_text(strip=True) if soup.title else ""
     h1 = soup.find("h1")
     heading = h1.get_text(" ", strip=True) if h1 else ""
-    body = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+
+    soup = _strip_furniture(soup)
+
+    # Prefer an explicit main/article container when the site marks one.
+    main = soup.find("main") or soup.find("article") or soup.find(
+        attrs={"role": "main"}
+    )
+    scope = main if main is not None else soup
+
+    body = re.sub(r"\s+", " ", scope.get_text(" ", strip=True))
     return title, heading, body
 
 
@@ -188,13 +242,21 @@ def parse_price(text, listing_type_hint=None):
         return None, "poa", "rent" if is_rent else "sale"
 
     # --- pick the figure ---
+    #
+    # THIS USED TO TAKE THE LARGEST FIGURE ON THE PAGE, and that was the single
+    # worst bug in the scraper: a "similar properties" carousel meant a
+    # £375,000 house in Ballasalla was published at £1,250,000, the dearest
+    # listing in the sidebar — and several unrelated properties shared that
+    # same wrong price.
+    #
+    # With page furniture now stripped in page_text(), the remaining figures
+    # all belong to this listing, and the headline price is the FIRST one —
+    # agents lead with it. Incidental costs (rates, service charge) are
+    # already excluded by NOT_THE_PRICE before we get here.
     if is_rent:
         amounts = [a for a, _, _ in candidates if 100 <= a <= 100000]
     else:
         amounts = [a for a, _, _ in candidates if a >= 20000]
-        # A sale page's headline price is the largest plausible figure, not
-        # the first one it happens to mention.
-        amounts.sort(reverse=True)
 
     if not amounts:
         return None, "unknown", "rent" if is_rent else "sale"
@@ -218,6 +280,32 @@ def parse_int(text, words):
         return None
     first = matches[0].lower()
     return int(first) if first.isdigit() else WORD_NUMBERS[first]
+
+
+# Several agents show beds / baths / receptions as BARE NUMBERS beside icons,
+# with no words at all — Garforth Gray renders "3 [bed] 2 [bath] 1 [sofa]" and
+# Chrystals "2 1 2". parse_int() looks for a number next to a word, so on those
+# sites it finds nothing and the counts come out blank.
+#
+# Verified against real pages: the order is beds, baths, receptions.
+_ICON_TRIPLE_RE = re.compile(r"(?<!\d)(\d{1,2})\s+(\d{1,2})\s+(\d{1,2})(?!\d)")
+
+
+def parse_icon_counts(text):
+    """Return (beds, baths, receptions) from an unlabelled numeric trio.
+
+    Only accepts a trio of small numbers standing alone, and only from the
+    first part of the page, so digits inside prose or a price can never be
+    mistaken for room counts.
+    """
+    head = text[:600]
+    for m in _ICON_TRIPLE_RE.finditer(head):
+        beds, baths, recs = (int(g) for g in m.groups())
+        # Room counts are small; anything larger is a year, a price fragment
+        # or a measurement.
+        if beds <= 20 and baths <= 20 and recs <= 20 and beds >= 1:
+            return beds, baths, recs
+    return None, None, None
 
 
 def parse_type(text):
@@ -364,7 +452,27 @@ def scrape_listing(agent, url):
     head_blob = f"{heading} {title}"
     slug = url.rstrip("/").split("/")[-1]
 
-    address = heading or title.split("|")[0].strip() or address_from_slug(url)
+    # Some agents head the page with a MARKETING HEADLINE rather than an
+    # address — Garforth Gray's h1 is "Beautifully Presented New Build Home",
+    # with the real address on a separate line. Publishing the headline as the
+    # address left listings with no location at all, so a heading that carries
+    # no address signal is rejected in favour of the slug (which on those
+    # sites is the address: /ballasalla-taggart-close/).
+    def _looks_like_address(value):
+        if not value:
+            return False
+        if re.search(r"\bIM\d{1,2}\b", value, re.I):
+            return True
+        if "," in value:
+            return True
+        # Street words are a reasonable signal on a single-line address.
+        return bool(re.search(
+            r"\b(road|street|avenue|drive|close|lane|terrace|crescent|way|"
+            r"court|park|place|view|hill|promenade|quay|mount|grove|gardens?)\b",
+            value, re.I))
+
+    candidate = heading or title.split("|")[0].strip()
+    address = candidate if _looks_like_address(candidate) else address_from_slug(url)
     address = _clean_address(address, agent.name)
 
     # Where an agent encodes category/type in the URL, trust that over both the
@@ -392,6 +500,17 @@ def scrape_listing(agent, url):
     # 78% of listings look like they were in Douglas.
     place_blob = f"{address} {heading}"
 
+    # Worded counts first ("3 bedroom"); fall back to the unlabelled numeric
+    # trio that icon-based sites use.
+    beds = parse_int(head_blob, BEDS) or parse_int(body, BEDS)
+    baths = parse_int(head_blob, BATHS) or parse_int(body, BATHS)
+    receptions = None
+    if beds is None or baths is None:
+        icon_beds, icon_baths, icon_recs = parse_icon_counts(body)
+        beds = beds or icon_beds
+        baths = baths or icon_baths
+        receptions = icon_recs
+
     return {
         "id": f"{agent.key}-{slug}",
         "agent": agent.name,
@@ -400,12 +519,15 @@ def scrape_listing(agent, url):
         "listingType": listing_type,
         "price": price,
         "priceQualifier": qualifier,
-        "bedrooms": parse_int(head_blob, BEDS) or parse_int(body, BEDS),
-        "bathrooms": parse_int(head_blob, BATHS) or parse_int(body, BATHS),
+        "bedrooms": beds,
+        "bathrooms": baths,
+        "receptions": receptions,
         "propertyType": parse_type(place_blob),
         "address": address,
         "parish": parse_place(place_blob),
-        "postcode": parse_postcode(url, body),
+        # Address first, body second. The body is furniture-free now, but the
+        # address is still the more trustworthy source.
+        "postcode": parse_postcode(url, f"{address} {heading} {body}"),
         # Deliberately absent: description, images.
     }
 
