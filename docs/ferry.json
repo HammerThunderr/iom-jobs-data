@@ -1,50 +1,9 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-19T23:00:25.593566+00:00",
-  "lastUpdated": "22:13 19/09/26",
-  "totalCount": 16,
+  "fetchedAt": "2026-09-20T01:05:28.591130+00:00",
+  "lastUpdated": "05:00 14/08/26",
+  "totalCount": 14,
   "days": [
-    {
-      "date": "Saturday, 19 September 2026",
-      "sailings": [
-        {
-          "departTime": "07:02",
-          "departPort": "Douglas",
-          "arriveTime": "09:58",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "11:09",
-          "departPort": "Liverpool",
-          "arriveTime": "14:10",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "14:49",
-          "departPort": "Douglas",
-          "arriveTime": "17:36",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "19:02",
-          "departPort": "Liverpool",
-          "arriveTime": "21:47",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Departed",
-          "statusType": "departed"
-        }
-      ]
-    },
     {
       "date": "Sunday, 20 September 2026",
       "sailings": [
@@ -153,6 +112,29 @@
           "status": "Scheduled",
           "statusType": "scheduled"
         },
+        {
+          "departTime": "15:00",
+          "departPort": "Douglas",
+          "arriveTime": "17:45",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Liverpool",
+          "arriveTime": "22:00",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Thursday, 24 September 2026",
+      "sailings": [
         {
           "departTime": "15:00",
           "departPort": "Douglas",
