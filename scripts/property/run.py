@@ -1,22 +1,21 @@
 """
 scrapers/property/run.py — entry point for the property scraper.
 
-Runs every enabled agent in agents.py, merges the results with the previous
-run, and writes a single properties.json for the Manx One app.
+Discovery order is intentionally:
+  1. agent section indexes (current listings only)
+  2. sitemap (if configured)
+  3. site's own search endpoint (fallback)
 
-Usage:
-    pip install requests beautifulsoup4
-    python scrapers/property/run.py                 # writes ./properties.json
-    OUTPUT_PATH=docs/property/properties.json python scrapers/property/run.py
-
-One agent failing never kills the run: its previous listings are carried over
-and flagged stale, and the failure is recorded in meta.sources.
+This matters for Chrystals because its sitemap contains many archived/dead
+property URLs, while its section indexes expose the current catalogue.
 """
 
 import json
-import re
 import sys
 from datetime import datetime, timezone
+from urllib.parse import urljoin
+
+from bs4 import BeautifulSoup
 
 import common
 from agents import active_agents
@@ -29,21 +28,60 @@ DISCLAIMER = (
 
 
 def _absolute(agent, href):
-    url = href if href.startswith("http") else agent.base + href
-    return url.split("?")[0].rstrip("/") + "/"
+    return urljoin(agent.base + "/", href).split("#", 1)[0].split("?", 1)[0].rstrip("/") + "/"
+
+
+def _add_param(url, key, value):
+    separator = "&" if "?" in url else "?"
+    return f"{url}{separator}{key}={value}"
+
+
+def discover_via_index(agent):
+    """Walk the configured section indexes and collect listing URLs."""
+    urls = set()
+    if not agent.index_urls:
+        return urls
+
+    for index_url in agent.index_urls:
+        print(f"  index: {index_url}")
+        seen_on_section = set()
+
+        for page_num in range(agent.max_pages):
+            page_url = agent.index_page_url(index_url, page_num)
+            res = common.get(page_url)
+            if not res:
+                break
+
+            soup = BeautifulSoup(res.text, "html.parser")
+            found = set()
+            for link in soup.select("a[href]"):
+                href = link.get("href", "").strip()
+                if not href or href.startswith(("#", "javascript:", "mailto:")):
+                    continue
+                full = _absolute(agent, href)
+                if agent.is_listing(full):
+                    found.add(full)
+
+            fresh = found - seen_on_section
+            print(f"    page {page_num + 1}: +{len(fresh)}")
+            if not fresh:
+                break
+
+            urls |= fresh
+            seen_on_section |= found
+
+    return urls
 
 
 def sitemap_entries(text):
-    """Yield (loc, lastmod_or_None) for each <url> block in a sitemap.
+    """Yield (loc, lastmod_or_None) for each <url> block in a sitemap."""
+    import re
 
-    Some agents (Garforth Gray) put listings at the root alongside ordinary
-    pages, and the only clean signal is that real listings carry a <lastmod>.
-    """
-    for block in re.findall(r"<url>(.*?)</url>", text, flags=re.S):
-        loc = re.search(r"<loc>\s*([^<]+?)\s*</loc>", block)
+    for block in re.findall(r"<url>(.*?)</url>", text, flags=re.S | re.I):
+        loc = re.search(r"<loc>\s*([^<]+?)\s*</loc>", block, flags=re.I)
         if not loc:
             continue
-        lastmod = re.search(r"<lastmod>\s*([^<]+?)\s*</lastmod>", block)
+        lastmod = re.search(r"<lastmod>\s*([^<]+?)\s*</lastmod>", block, flags=re.I)
         yield loc.group(1), (lastmod.group(1) if lastmod else None)
 
 
@@ -54,7 +92,6 @@ def _accept(agent, loc, lastmod):
 
 
 def discover_via_sitemap(agent):
-    """Most sites expose a sitemap even when their APIs are shut."""
     urls = set()
     if not agent.sitemap_url:
         return urls
@@ -64,14 +101,11 @@ def discover_via_sitemap(agent):
         return urls
 
     entries = list(sitemap_entries(index.text))
-    urls |= {
-        _absolute(agent, loc) for loc, lastmod in entries if _accept(agent, loc, lastmod)
-    }
+    urls |= {_absolute(agent, loc) for loc, lastmod in entries if _accept(agent, loc, lastmod)}
 
-    # A sitemap index points at sub-sitemaps rather than listing pages directly.
-    subs = [loc for loc, _ in entries if loc.endswith(".xml")]
+    subs = [loc for loc, _ in entries if loc.lower().endswith(".xml")]
     for sub in subs:
-        if agent.property_path and agent.property_path.strip("/") not in sub.lower():
+        if agent.property_path and agent.property_path.strip("/").lower() not in sub.lower():
             continue
         page = common.get(sub)
         if not page:
@@ -84,44 +118,7 @@ def discover_via_sitemap(agent):
     return urls
 
 
-def discover_via_index(agent):
-    """Walk the agent's own section index pages.
-
-    Preferred over the sitemap where the sitemap is full of dead archived
-    listings (Chrystals). A section index only shows what is currently on the
-    market, so discovery is both smaller and correct.
-
-    Stops a section as soon as a page yields no new listing URLs, so an agent
-    with three pages costs four requests rather than max_pages.
-    """
-    urls = set()
-    for index_url in agent.index_urls:
-        section_total = 0
-        for page_num in range(agent.max_pages):
-            page_url = agent.index_page_url(index_url, page_num)
-            res = common.get(page_url)
-            if not res:
-                break
-
-            found = {
-                _absolute(agent, h)
-                for h in re.findall(r'href="([^"]+?)"', res.text)
-                if agent.is_listing(h)
-            }
-            fresh = found - urls
-            if not fresh:
-                break
-            urls |= fresh
-            section_total += len(fresh)
-
-        if section_total:
-            path = index_url.replace(agent.base, "")
-            print(f"    {path}: {section_total}")
-    return urls
-
-
 def discover_via_search(agent):
-    """Fallback: walk the site's own search/results pages."""
     urls = set()
     if not agent.search_url:
         return urls
@@ -135,39 +132,37 @@ def discover_via_search(agent):
         if not res:
             break
 
-        found = {
-            _absolute(agent, h)
-            for h in re.findall(r'href="([^"]+?)"', res.text)
-            if agent.is_listing(h)
-        }
+        soup = BeautifulSoup(res.text, "html.parser")
+        found = set()
+        for link in soup.select("a[href]"):
+            href = link.get("href", "").strip()
+            if not href:
+                continue
+            full = _absolute(agent, href)
+            if agent.is_listing(full):
+                found.add(full)
+
         fresh = found - urls
         print(f"    search page {page_num}: +{len(fresh)}")
         if not fresh:
             break
-        urls |= found
+        urls |= fresh
     return urls
 
 
 def run_agent(agent):
-    """Scrape one agent. Raises on total failure so the caller can mark it."""
     print(f"\n=== {agent.name} ===")
 
-    # Section indexes first where configured: they list only live properties,
-    # whereas some sitemaps are mostly dead archive URLs.
-    urls = set()
-    if agent.index_paths:
-        urls = discover_via_index(agent)
-        print(f"  index pages: {len(urls)} listing URLs")
-
-    if not urls:
+    urls = discover_via_index(agent)
+    if urls:
+        print(f"  index: {len(urls)} listing URLs")
+    else:
+        print("  index empty — trying sitemap")
         urls = discover_via_sitemap(agent)
-        if urls:
-            print(f"  sitemap: {len(urls)} listing URLs")
 
     if not urls:
         print("  sitemap empty — trying search endpoint")
         urls = discover_via_search(agent)
-        print(f"  search: {len(urls)} listing URLs")
 
     if not urls:
         raise RuntimeError("no listing URLs discovered")
@@ -186,12 +181,10 @@ def run_agent(agent):
 
 def main():
     print(f"Manx One property scraper\nIdentifying as: {common.USER_AGENT}")
-
     previous = common.load_previous()
     print(f"Previous run: {len(previous)} listings")
 
     all_listings, sources, failed = [], [], []
-
     for agent in active_agents():
         try:
             listings = run_agent(agent)
@@ -204,8 +197,7 @@ def main():
                 "status": "ok",
             })
             print(f"  -> {len(listings)} listings ({priced} priced)")
-        except Exception as exc:                     # noqa: BLE001
-            # Never let one agent take down the whole feed.
+        except Exception as exc:  # noqa: BLE001
             print(f"  !! {agent.name} FAILED: {exc}")
             failed.append(agent.name)
             sources.append({
@@ -216,7 +208,6 @@ def main():
             })
 
     merged = common.merge(all_listings, previous, failed)
-
     payload = {
         "meta": {
             "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -233,7 +224,6 @@ def main():
     for src in sources:
         print(f"  {src['status']:7} {src['agent']}: {src['count']}")
 
-    # Fail the CI run if every agent broke — better a red build than bad data.
     if failed and len(failed) == len(active_agents()):
         sys.exit("ABORT: all agents failed")
 
