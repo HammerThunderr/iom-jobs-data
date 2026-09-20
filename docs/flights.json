@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-20T16:50:25.457981+00:00",
-  "lastUpdated": "16:50 UTC",
+  "fetchedAt": "2026-09-20T16:54:27.828502+00:00",
+  "lastUpdated": "16:53 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -137,7 +137,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Delayed 18:15",
+      "status": "Delayed 18:27",
       "origin": "Dublin",
       "statusType": "delayed"
     },
@@ -172,8 +172,16 @@
       "status": "On-time",
       "origin": "London City",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "07:50",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 22,
   "source": "airport.im"
 }
