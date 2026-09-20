@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-20T19:15:43.923441+00:00",
-  "lastUpdated": "19:14 UTC",
+  "fetchedAt": "2026-09-20T19:19:46.064506+00:00",
+  "lastUpdated": "19:18 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -196,8 +196,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM672",
+      "airline": "Loganair",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "origin": "London City",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 25,
   "source": "airport.im"
 }
