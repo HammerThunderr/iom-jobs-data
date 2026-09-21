@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-21T23:10:05.046103+00:00",
-  "lastUpdated": "23:09 UTC",
+  "fetchedAt": "2026-09-21T23:14:07.206952+00:00",
+  "lastUpdated": "23:13 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -94,14 +94,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "EZY843",
-      "airline": "easyJet",
-      "scheduled": "18:10",
-      "status": "Cancelled",
-      "origin": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "LM678",
       "airline": "Loganair",
       "scheduled": "20:10",
@@ -158,6 +150,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 18,
   "source": "airport.im"
 }
