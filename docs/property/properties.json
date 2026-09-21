@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-09-21T12:52:20+00:00",
+    "generated": "2026-09-21T22:26:17+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 328,
-        "withPrice": 303,
+        "count": 329,
+        "withPrice": 304,
         "status": "ok"
       }
     ],
@@ -3882,24 +3882,6 @@
       "lastSeen": "2026-09-21"
     },
     {
-      "id": "chr-12834554-152-fairways-crescent-murrays-lake-drive-santon",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12834554-152-fairways-crescent-murrays-lake-drive-santon/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 529950,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "152 Fairways Crescent Murrays Lake Drive, Santon",
-      "locality": "Santon",
-      "parish": "Santon",
-      "postcode": "IM4 2JA",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-09-21"
-    },
-    {
       "id": "chr-12835185-waverley-main-road-colby",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12835185-waverley-main-road-colby/",
@@ -5467,6 +5449,24 @@
       "lastSeen": "2026-09-21"
     },
     {
+      "id": "chr-12898416-27-farmhill-meadows-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12898416-27-farmhill-meadows-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 345000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "27 Farmhill Meadows, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 2LJ",
+      "firstSeen": "2026-09-21",
+      "lastSeen": "2026-09-21"
+    },
+    {
       "id": "chr-12899324-60a-friary-park-ballabeg",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12899324-60a-friary-park-ballabeg/",
@@ -5608,6 +5608,24 @@
       "parish": "Port Erin",
       "postcode": "IM9 6FB",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-09-21"
+    },
+    {
+      "id": "chr-12905147-2-the-fairway-onchan",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12905147-2-the-fairway-onchan/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 599950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "land",
+      "address": "2 The Fairway, Onchan",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": "IM3 2EL",
+      "firstSeen": "2026-09-21",
       "lastSeen": "2026-09-21"
     },
     {
@@ -5883,6 +5901,7 @@
       "locality": "Santon",
       "parish": "Santon",
       "postcode": "IM4 2JJ",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-21"
     },
