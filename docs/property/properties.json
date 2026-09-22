@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-09-22T11:43:12+00:00",
+    "generated": "2026-09-22T21:36:49+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 331,
-        "withPrice": 306,
+        "count": 332,
+        "withPrice": 307,
         "status": "ok"
       }
     ],
@@ -1821,24 +1821,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 3LP",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-09-22"
-    },
-    {
-      "id": "chr-11638709-barn-owl-cottage-plot-cronk-y-dhooney-ballakilpheric-colby",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/developments/property/11638709-barn-owl-cottage-plot-cronk-y-dhooney-ballakilpheric-colby/",
-      "category": "land",
-      "listingType": "sale",
-      "price": 185000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "Barn Owl Cottage (Plot), Cronk Y Dhooney, Ballakilpheric, Colby",
-      "locality": "Colby",
-      "parish": "Colby",
-      "postcode": "IM9 4BS",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-22"
     },
@@ -4265,7 +4247,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12856295-9-delamere-apartments-castle-drive-douglas/",
       "category": "residential",
       "listingType": "sale",
-      "price": 200000,
+      "price": 190000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": 1,
@@ -4275,6 +4257,7 @@
       "parish": "Douglas",
       "postcode": "IM2 4LX",
       "firstSeen": "2026-09-20",
+      "previousPrice": 200000,
       "lastSeen": "2026-09-22"
     },
     {
@@ -5233,6 +5216,24 @@
       "lastSeen": "2026-09-22"
     },
     {
+      "id": "chr-12893050-lossan-y-twoaie-glen-road-laxey",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12893050-lossan-y-twoaie-glen-road-laxey/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 250000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "Lossan Y Twoaie, Glen Road, Laxey",
+      "locality": "Laxey",
+      "parish": "Laxey",
+      "postcode": "IM4 7AN",
+      "firstSeen": "2026-09-22",
+      "lastSeen": "2026-09-22"
+    },
+    {
       "id": "chr-12893579-mull-house-baymount-port-erin",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12893579-mull-house-baymount-port-erin/",
@@ -5683,6 +5684,24 @@
       "lastSeen": "2026-09-22"
     },
     {
+      "id": "chr-12911883-lhag-sumark-ballafesson-road-port-erin",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12911883-lhag-sumark-ballafesson-road-port-erin/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 489950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "propertyType": "land",
+      "address": "Lhag Sumark, Ballafesson Road, Port Erin",
+      "locality": "Port Erin",
+      "parish": "Port Erin",
+      "postcode": "IM9 6TU",
+      "firstSeen": "2026-09-22",
+      "lastSeen": "2026-09-22"
+    },
+    {
       "id": "chr-6644240-bolivia-mount-the-dhoor-lezayre",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/6644240-bolivia-mount-the-dhoor-lezayre/",
@@ -5825,6 +5844,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 1PX",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-22"
     },
