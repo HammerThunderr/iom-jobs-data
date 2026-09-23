@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-23T10:09:13.442186+00:00",
-  "lastUpdated": "10:08 UTC",
+  "fetchedAt": "2026-09-23T10:13:15.705223+00:00",
+  "lastUpdated": "10:12 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,7 +113,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "Delayed 11:46",
+      "status": "Delayed 12:04",
       "origin": "Manchester",
       "statusType": "delayed"
     },
@@ -121,9 +121,9 @@
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "Delayed 12:00",
+      "status": "Expected 11:30",
       "origin": "Dublin",
-      "statusType": "delayed"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM313",
