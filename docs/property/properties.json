@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-25T11:54:31+00:00",
+    "generated": "2026-09-25T21:52:31+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -5881,8 +5881,26 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 1PX",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-09-25"
+    },
+    {
+      "id": "chr-12141269-selborne-drive-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12141269-selborne-drive-douglas/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 3250,
+      "priceQualifier": "pcm",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "Selborne Drive, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 3NJ",
+      "firstSeen": "2026-09-25",
       "lastSeen": "2026-09-25"
     },
     {
@@ -5920,25 +5938,6 @@
       "parish": "Colby",
       "postcode": "IM9 4PS",
       "status": "under_offer",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-09-25"
-    },
-    {
-      "id": "chr-12907754-3-osborne-terrace-douglas-isle-of-man",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/12907754-3-osborne-terrace-douglas-isle-of-man/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 975,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "3 Osborne Terrace, Douglas, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 3LH",
-      "status": "let_stc",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-25"
     },
@@ -6032,7 +6031,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 3LH",
-      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-25"
     },
@@ -6051,6 +6049,7 @@
       "locality": "Baldrine",
       "parish": "Baldrine",
       "postcode": "IM4 6AF",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-25"
     }
