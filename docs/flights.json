@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-25T10:57:05.640263+00:00",
-  "lastUpdated": "10:56 UTC",
+  "fetchedAt": "2026-09-25T11:01:08.470843+00:00",
+  "lastUpdated": "11:00 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,9 +47,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "12:30",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM637",
