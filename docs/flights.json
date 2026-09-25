@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-25T23:05:26.183090+00:00",
-  "lastUpdated": "23:04 UTC",
+  "fetchedAt": "2026-09-25T23:09:29.009818+00:00",
+  "lastUpdated": "23:08 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -57,6 +57,14 @@
       "scheduled": "13:25",
       "status": "On-time",
       "destination": "Malaga",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY842",
+      "airline": "easyJet",
+      "scheduled": "14:05",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -118,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
