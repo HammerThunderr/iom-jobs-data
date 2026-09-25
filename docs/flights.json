@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-25T15:45:08.428778+00:00",
-  "lastUpdated": "15:44 UTC",
+  "fetchedAt": "2026-09-25T15:49:10.670078+00:00",
+  "lastUpdated": "15:48 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -71,9 +71,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
@@ -185,7 +185,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "17:10",
-      "status": "Expected 16:56",
+      "status": "Expected 16:54",
       "origin": "London Gatwick",
       "statusType": "expected"
     },
