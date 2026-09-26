@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-26T10:33:32.899257+00:00",
-  "lastUpdated": "10:33 UTC",
+  "fetchedAt": "2026-09-26T10:37:35.633241+00:00",
+  "lastUpdated": "10:37 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -97,9 +97,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "On-time",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY519",
