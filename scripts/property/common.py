@@ -502,6 +502,11 @@ def scrape_listing(agent, url):
         bedrooms, bathrooms = _chrystals_stats(body)
         prop_type = parse_chrystals_type(body[:12000]) or parse_type(address)
         status = _chrystals_status(body)
+        # Chrystals index URL rules are authoritative for category.
+        # Fall back to the address/header only if a listing comes from an
+        # unclassified path. This must be assigned in the Chrystals branch
+        # because the result dictionary below always expects ``category``.
+        category = url_category or parse_category(f"{address} {head_blob}")
     elif agent.key == "dw":
         address = _clean_address(
             heading or title.split("|")[0].strip() or address_from_slug(url),
