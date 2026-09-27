@@ -3,7 +3,7 @@
   "updated": "2026-09-08",
   "features": {
     "property": {
-      "enabled": true,
+      "enabled": false,
       "message": "The property listings feature is temporarily unavailable."
     },
     "bins": {
@@ -79,7 +79,7 @@
       "message": "Forms are not available yet."
     },
     "races": {
-      "enabled": false,
+      "enabled": true,
       "message": "The race schedule is temporarily unavailable."
     },
     "pharmacy": {
@@ -117,6 +117,10 @@
     "bank_holidays": {
       "enabled": true,
       "message": "Bank holiday dates are temporarily unavailable."
+    },
+    "road_signs": {
+      "enabled": true,
+      "message": "Live road signs are temporarily unavailable."
     }
   },
   "banner": {
