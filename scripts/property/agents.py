@@ -61,7 +61,10 @@ class Agent:
             separator = "&" if "?" in index_url else "?"
             return f"{index_url}{separator}{self.offset_param}={page_num * self.page_size}"
         if self.page_mode == "path":
-            return f"{index_url.rstrip('/')}/page/{page_num + 1}/"
+            from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+            parts = urlsplit(index_url)
+            path = parts.path.rstrip("/") + f"/page/{page_num + 1}/"
+            return urlunsplit((parts.scheme, parts.netloc, path, urlencode(parse_qsl(parts.query)), parts.fragment))
         separator = "&" if "?" in index_url else "?"
         return f"{index_url}{separator}{self.page_param}={page_num + 1}"
 
@@ -179,6 +182,34 @@ AGENTS = [
         max_pages=30,
         sitemap=None,
         search_path=None,
+        url_rules=(
+            ("/property/", "residential", None),
+        ),
+    ),
+
+    # Manxmove uses /properties/<sale|letting>/.../ for individual listings.
+    # The public search list is current and paginates as /page/2/, /page/3/.
+    # The letting taxonomy is also a live index of current rental listings.
+    # Keep both as index discovery so old sitemap entries are not the primary
+    # source of listings.
+    Agent(
+        key="mm",
+        name="Manxmove",
+        base="https://www.manxmove.im",
+        enabled=True,
+        property_path="/properties/",
+        index_paths=(
+            "/search-list/",
+            "/instruction-type/letting/",
+        ),
+        page_mode="path",
+        max_pages=30,
+        sitemap="/sitemap_index.xml",
+        search_path=None,
+        url_rules=(
+            ("/properties/letting/", "residential", "rent"),
+            ("/properties/sale/", "residential", "sale"),
+        ),
     ),
 ]
 

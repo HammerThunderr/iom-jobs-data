@@ -41,7 +41,7 @@ PROPERTY_TYPES = [
     "detached bungalow", "semi-detached", "end of terrace", "end-of-terrace",
     "mid terrace", "terraced", "detached", "bungalow", "apartment", "flat",
     "cottage", "townhouse", "maisonette", "farmhouse", "land", "commercial",
-    "penthouse",
+    "penthouse", "house",
 ]
 
 COMMERCIAL_WORDS = [
@@ -388,6 +388,7 @@ DEANWOOD_TYPE_RULES = (
     (r"\bflat\b", "flat"),
     (r"\bcottage\b", "cottage"),
     (r"\btownhouse\b", "townhouse"),
+    (r"\bhouse\b", "house"),
     (r"\bmaisonette\b", "maisonette"),
     (r"\b[m]ews\b", "mews"),
     (r"\bpenthouse\b", "penthouse"),
@@ -460,6 +461,108 @@ def _deanwood_price(body, status):
     return amount, qualifier, "sale"
 
 
+
+MANXMOVE_TYPE_RULES = (
+    (r"\bsemi[- ]detached\b", "semi-detached"),
+    (r"\bend[- ]of[- ]terrace\b", "end of terrace"),
+    (r"\bmid[- ]terrace\b", "mid terrace"),
+    (r"\bterraced\b", "terraced"),
+    (r"\bdetached\b", "detached"),
+    (r"\bbungalow\b", "bungalow"),
+    (r"\bapartment\b", "apartment"),
+    (r"\bflat\b", "flat"),
+    (r"\bcottage\b", "cottage"),
+    (r"\btownhouse\b", "townhouse"),
+    (r"\bhouse\b", "house"),
+    (r"\bmaisonette\b", "maisonette"),
+    (r"\bpenthouse\b", "penthouse"),
+    (r"\bmews\b", "mews"),
+    (r"\bbuilding plot\b|\bplot of land\b|\bland\b", "land"),
+    (r"\bgarage\b|\bgaraging\b", "garage"),
+)
+
+
+def _manxmove_status(text):
+    """Read Manxmove's status from the top of the property page."""
+    m = re.search(
+        r"\b(sold\s+stc|under\s+offer|let\s+agreed|for\s+sale|for\s+rent|to\s+let|sold|let)\b",
+        text[:1600],
+        flags=re.I,
+    )
+    return re.sub(r"\s+", "_", m.group(1).lower()) if m else None
+
+
+def _manxmove_type(header):
+    low = re.sub(r"\s+", " ", header.lower())
+    for pattern, value in MANXMOVE_TYPE_RULES:
+        if re.search(pattern, low):
+            return value
+    return None
+
+
+def _manxmove_price(header, status):
+    """Use the first/only headline amount from Manxmove's header."""
+    low = header.lower()
+    if re.search(r"\bpoa\b|price on application", low):
+        return None, "poa", "rent" if status in {"for_rent", "to_let", "let_agreed", "let"} else "sale"
+
+    is_rent = status in {"for_rent", "to_let", "let_agreed", "let"} or " pcm" in low
+    amounts = []
+    for m in _AMOUNT_RE.finditer(header):
+        amount = int(m.group(1).replace(",", ""))
+        after = header[m.end():m.end()+50].lower()
+        if is_rent:
+            if re.search(r"\bpcm\b|per (calendar )?month|\bpw\b|per week", after):
+                amounts.append((0, amount, "pcm"))
+            elif 100 <= amount <= 100000:
+                amounts.append((1, amount, "pcm"))
+        elif amount >= 20000:
+            amounts.append((0, amount, "guide" if "guide price" in low else "asking"))
+
+    if not amounts:
+        return None, "unknown", "rent" if is_rent else "sale"
+    rank, amount, qualifier = sorted(amounts, key=lambda x: (x[0], -x[1]))[0]
+    if not is_rent:
+        if "offers over" in low or "oio" in low:
+            qualifier = "oio"
+        elif "offers in excess" in low or "oieo" in low:
+            qualifier = "oieo"
+        elif "guide price" in low:
+            qualifier = "guide"
+    return amount, qualifier, "rent" if is_rent else "sale"
+
+
+def _manxmove_stats(header, body):
+    """Extract beds/baths from header/body without counting marketing text.
+
+    The Manxmove property header reliably gives the bedroom count as '<n> Bed'.
+    Bathroom counts are usually present in compact wording such as '2 bathrooms'
+    or '2 bathrooms' in the description; when absent we leave the field null
+    rather than guessing from mentions of a singular family bathroom.
+    """
+    beds = parse_int(header, BEDS)
+    bath = None
+    for text in (header, body[:5000]):
+        m = re.search(r"\b(\d+)\s+(?:bath(?:room)?s?)\b", text, flags=re.I)
+        if m:
+            bath = int(m.group(1))
+            break
+    if bath is None:
+        m = re.search(r"\b(\d+)\s+(?:en[- ]?suite|ensuite)s?\b", body[:5000], flags=re.I)
+        if m:
+            bath = int(m.group(1))
+    return beds, bath
+
+
+def _manxmove_category(prop_type, header, url):
+    low = f"{header} {url}".lower()
+    if prop_type in {"land", "garage"} or re.search(r"\bbuilding plot\b|\bplot of land\b", low):
+        return "land" if prop_type == "land" or "plot" in low else "commercial"
+    if prop_type in {"office", "retail", "industrial", "warehouse", "restaurant", "pub / bar"}:
+        return "commercial"
+    return "residential"
+
+
 def _deanwood_category(prop_type, header, body):
     """Classify DeanWood pages without letting footer/contact text decide."""
     blob = f"{header} {body[:3500]}".lower()
@@ -507,6 +610,23 @@ def scrape_listing(agent, url):
         # unclassified path. This must be assigned in the Chrystals branch
         # because the result dictionary below always expects ``category``.
         category = url_category or parse_category(f"{address} {head_blob}")
+    elif agent.key == "mm":
+        address = _clean_address(
+            heading or title.split("|")[0].strip() or address_from_slug(url),
+            agent.name,
+        )
+        locality = parse_place(address)
+        postcode = parse_postcode(url, body)
+
+        header_end = body.lower().find("book a viewing")
+        header_region = body[:header_end if header_end > 0 else 1800]
+        status = _manxmove_status(header_region)
+        bedrooms, bathrooms = _manxmove_stats(header_region, body)
+        prop_type = _manxmove_type(header_region)
+        price, qualifier, listing_type = _manxmove_price(header_region, status)
+        if price is None and qualifier == "unknown":
+            price, qualifier, listing_type = parse_price(header_region, type_hint)
+        category = _manxmove_category(prop_type, header_region, url)
     elif agent.key == "dw":
         address = _clean_address(
             heading or title.split("|")[0].strip() or address_from_slug(url),

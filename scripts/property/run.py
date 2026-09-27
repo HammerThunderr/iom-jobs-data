@@ -6,8 +6,8 @@ Discovery order is intentionally:
   2. sitemap (if configured)
   3. site's own search endpoint (fallback)
 
-This matters for Chrystals because its sitemap contains many archived/dead
-property URLs, while its section indexes expose the current catalogue.
+This matters for Chrystals and Manxmove because their public section/index
+pages are a better source of current listings than relying only on archived sitemap URLs.
 """
 
 import json
