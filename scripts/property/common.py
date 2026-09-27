@@ -365,6 +365,117 @@ def _chrystals_status(body):
     return None
 
 
+def _deanwood_status(text):
+    """Read the status from DeanWood's property header."""
+    m = re.search(
+        r"\b(sold\s+stc|under\s+offer|let\s+agreed|to\s+let|for\s+sale|sold|let)\b",
+        text[:2500],
+        flags=re.I,
+    )
+    if not m:
+        return None
+    return re.sub(r"\s+", "_", m.group(1).lower())
+
+
+DEANWOOD_TYPE_RULES = (
+    (r"\bsemi[- ]detached\b", "semi-detached"),
+    (r"\bend[- ]of[- ]terrace\b", "end of terrace"),
+    (r"\bmid[- ]terrace\b", "mid terrace"),
+    (r"\bterraced\b", "terraced"),
+    (r"\bdetached\b", "detached"),
+    (r"\bbungalow\b", "bungalow"),
+    (r"\bapartment\b", "apartment"),
+    (r"\bflat\b", "flat"),
+    (r"\bcottage\b", "cottage"),
+    (r"\btownhouse\b", "townhouse"),
+    (r"\bmaisonette\b", "maisonette"),
+    (r"\b[m]ews\b", "mews"),
+    (r"\bpenthouse\b", "penthouse"),
+    (r"\bfarmhouse\b", "farmhouse"),
+    (r"\bblock of flats\b", "block of flats"),
+    (r"\boffice(?:s)?\b", "office"),
+    (r"\bretail(?: premises)?\b", "retail"),
+    (r"\bindustrial\b", "industrial"),
+    (r"\bwarehouse\b", "warehouse"),
+    (r"\brestaurant\s*/\s*café\b|\brestaurant\b|\bcafe\b", "restaurant / cafe"),
+    (r"\bpub\s*/\s*bar\b|\bpub\b", "pub / bar"),
+    (r"\bleisure\s*/\s*hospitality\b", "leisure / hospitality"),
+    (r"\bparking\s*/\s*garage\b", "parking / garage"),
+    (r"\bbuilding plot\b|\bplot of land\b|\bland\b", "land"),
+)
+
+
+def _deanwood_type(header):
+    """Extract the property type from the compact header, not the description."""
+    low = re.sub(r"\s+", " ", header.lower())
+    for pattern, value in DEANWOOD_TYPE_RULES:
+        if re.search(pattern, low):
+            return value
+    return None
+
+
+def _deanwood_price(body, status):
+    """Parse DeanWood prices, including residential pcm and commercial pa rates."""
+    low = body.lower()
+    if re.search(r"\bpoa\b|price on application", low[:3000]):
+        kind = "rent" if status in {"to_let", "let", "let_agreed"} else "sale"
+        return None, "poa", kind
+
+    is_rent = status in {"to_let", "let", "let_agreed"}
+    candidates = []
+    for m in _AMOUNT_RE.finditer(body[:3500]):
+        amount = int(m.group(1).replace(",", ""))
+        after = body[m.end():m.end() + 45].lower()
+        before = body[max(0, m.start() - 20):m.start()].lower()
+        if is_rent:
+            if re.search(r"\bpcm\b|per (calendar )?month|per week|\bpw\b", after):
+                candidates.append((0, amount, "pcm"))
+            elif re.search(r"\bpa\b|per annum|per year", after):
+                candidates.append((1, amount, "pa"))
+            elif re.search(r"per sq ?ft|per square foot|psf", after):
+                candidates.append((2, amount, "psf"))
+            else:
+                candidates.append((9, amount, "rent"))
+        else:
+            # For a sale page such as "£425,000 £9,000 pa", ignore the annual
+            # secondary figure and keep the actual sale consideration.
+            if re.search(r"\bpa\b|per annum|per year|\bpcm\b|per month", after):
+                continue
+            candidates.append((0, amount, "asking"))
+
+    if not candidates:
+        return None, "unknown", "rent" if is_rent else "sale"
+
+    if is_rent:
+        candidates.sort(key=lambda x: (x[0], -x[1]))
+        _, amount, qualifier = candidates[0]
+        return amount, qualifier, "rent"
+
+    amount = max(amount for _, amount, _ in candidates)
+    qualifier = "guide" if "guide price" in low[:3500] else "asking"
+    if "offers over" in low[:3500] or "oio" in low[:3500]:
+        qualifier = "oio"
+    elif "offers in excess" in low[:3500] or "oieo" in low[:3500]:
+        qualifier = "oieo"
+    return amount, qualifier, "sale"
+
+
+def _deanwood_category(prop_type, header, body):
+    """Classify DeanWood pages without letting footer/contact text decide."""
+    blob = f"{header} {body[:3500]}".lower()
+    if prop_type in {
+        "office", "retail", "industrial", "warehouse", "restaurant / cafe",
+        "pub / bar", "leisure / hospitality", "parking / garage", "block of flats",
+    }:
+        return "commercial"
+    if prop_type == "land" or re.search(
+        r"\bbuilding plot\b|\bplot of land\b|\bdevelopment site\b|\bland for sale\b",
+        blob,
+    ):
+        return "land"
+    return "residential"
+
+
 def scrape_listing(agent, url):
     """Fetch one property page and pull out facts with provider-aware parsing."""
     res = get(url)
@@ -391,6 +502,29 @@ def scrape_listing(agent, url):
         bedrooms, bathrooms = _chrystals_stats(body)
         prop_type = parse_chrystals_type(body[:12000]) or parse_type(address)
         status = _chrystals_status(body)
+    elif agent.key == "dw":
+        address = _clean_address(
+            heading or title.split("|")[0].strip() or address_from_slug(url),
+            agent.name,
+        )
+        locality = parse_place(address)
+        postcode = parse_postcode(url, body)
+
+        # DeanWood puts the useful listing facts together before the viewing
+        # controls. Keeping this window narrow avoids bedroom/type words from
+        # the long description overwriting the header facts.
+        header_end = body.lower().find("book a viewing")
+        header_region = body[:header_end if header_end > 0 else 2500]
+        status = _deanwood_status(header_region)
+        bedrooms = parse_int(header_region, BEDS)
+        bathrooms = parse_int(header_region, BATHS)
+        prop_type = _deanwood_type(header_region)
+        price, qualifier, listing_type = _deanwood_price(
+            header_region, status
+        )
+        if price is None and qualifier == "unknown":
+            price, qualifier, listing_type = _deanwood_price(body[:5000], status)
+        category = _deanwood_category(prop_type, header_region, body)
     else:
         address = _clean_address(heading or title.split("|")[0].strip() or address_from_slug(url), agent.name)
         locality = parse_place(address)
@@ -399,9 +533,9 @@ def scrape_listing(agent, url):
         bathrooms = parse_int(head_blob, BATHS) or parse_int(body, BATHS)
         prop_type = parse_type(f"{address} {head_blob}")
         status = None
+        category = url_category or parse_category(address)
 
     listing_type = type_hint or listing_type
-    category = url_category or parse_category(address)
 
     item = {
         "id": f"{agent.key}-{slug}",

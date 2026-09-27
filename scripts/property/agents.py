@@ -60,6 +60,8 @@ class Agent:
         if self.page_mode == "offset":
             separator = "&" if "?" in index_url else "?"
             return f"{index_url}{separator}{self.offset_param}={page_num * self.page_size}"
+        if self.page_mode == "path":
+            return f"{index_url.rstrip('/')}/page/{page_num + 1}/"
         separator = "&" if "?" in index_url else "?"
         return f"{index_url}{separator}{self.page_param}={page_num + 1}"
 
@@ -156,6 +158,27 @@ AGENTS = [
             ("/properties-to-rent/", "residential", "rent"),
             ("/properties-to-let/", "residential", "rent"),
         ),
+    ),
+
+    # DeanWood uses individual property pages at /property/<slug>/ and
+    # current section indexes with URL-path pagination (/page/2/, /page/3/).
+    # Keeping this as an Agent entry means there is no separate DeanWood
+    # scraper module. The shared parser has a DeanWood branch for its header.
+    Agent(
+        key="dw",
+        name="DeanWood",
+        base="https://deanwood.im",
+        enabled=True,
+        property_path="/property/",
+        index_paths=(
+            "/search/department/residential-sales/",
+            "/search/department/residential-lettings/",
+            "/search/department/commercial/",
+        ),
+        page_mode="path",
+        max_pages=30,
+        sitemap=None,
+        search_path=None,
     ),
 ]
 
