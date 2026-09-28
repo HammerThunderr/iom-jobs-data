@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-28T12:21:40.279856+00:00",
-  "lastUpdated": "12:20 UTC",
+  "fetchedAt": "2026-09-28T12:25:42.711471+00:00",
+  "lastUpdated": "12:24 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -63,7 +63,7 @@
       "flightNo": "EZY234",
       "airline": "easyJet",
       "scheduled": "13:35",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Bristol",
       "statusType": "boarding"
     },
@@ -109,14 +109,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "07:50",
-      "status": "Arrived 07:22",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
@@ -230,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 27,
   "source": "airport.im"
 }
