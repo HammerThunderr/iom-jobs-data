@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-09-28T05:40:57.828728+00:00",
-  "lastUpdated": "05:40 UTC",
+  "fetchedAt": "2026-09-28T05:45:00.699871+00:00",
+  "lastUpdated": "05:44 UTC",
   "departures": [
     {
       "flightNo": "LM671",
       "airline": "Loganair",
       "scheduled": "06:55",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London City",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
