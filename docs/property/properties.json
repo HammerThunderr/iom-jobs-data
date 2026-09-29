@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated": "2026-09-29T00:27:46+00:00",
+    "generated": "2026-09-29T14:00:11+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 337,
-        "withPrice": 311,
+        "count": 338,
+        "withPrice": 312,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 441,
-        "withPrice": 434,
+        "count": 444,
+        "withPrice": 437,
         "status": "ok"
       },
       {
@@ -952,6 +952,24 @@
       "parish": "Douglas",
       "postcode": "IM1 1AJ",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-09-29"
+    },
+    {
+      "id": "chr-12910631-balderton-court-balthane-industrial-estate-ballasalla",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12910631-balderton-court-balthane-industrial-estate-ballasalla/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": 475,
+      "priceQualifier": "pcm",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Balderton Court, Balthane Industrial Estate, Ballasalla Annual Rental Of £15,996 Excl.",
+      "locality": "Ballasalla",
+      "parish": "Ballasalla",
+      "postcode": "IM9 2AJ",
+      "firstSeen": "2026-09-29",
       "lastSeen": "2026-09-29"
     },
     {
@@ -6005,7 +6023,6 @@
       "locality": "Union Mills",
       "parish": "Union Mills",
       "postcode": "IM4 4NZ",
-      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-09-29"
     },
@@ -6939,6 +6956,25 @@
       "lastSeen": "2026-09-29"
     },
     {
+      "id": "dw-14-marathon-road-douglas",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/14-marathon-road-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 849950,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "propertyType": "detached",
+      "address": "14, Marathon Road, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-09-29",
+      "lastSeen": "2026-09-29"
+    },
+    {
       "id": "dw-14-queens-avenue-douglas",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/14-queens-avenue-douglas/",
@@ -7832,6 +7868,25 @@
       "lastSeen": "2026-09-29"
     },
     {
+      "id": "dw-20-st-pauls-mews",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/20-st-pauls-mews/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 165000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "flat",
+      "address": "20 St Pauls Mews Ramsey",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-09-29",
+      "lastSeen": "2026-09-29"
+    },
+    {
       "id": "dw-21-23-25-castle-street",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/21-23-25-castle-street/",
@@ -8212,25 +8267,6 @@
       "lastSeen": "2026-09-29"
     },
     {
-      "id": "dw-28-rhenwyllan-close-port-st-mary-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/28-rhenwyllan-close-port-st-mary-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 439950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "bungalow",
-      "address": "28 Rhenwyllan Close, Port St. Mary, Isle of Man",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM9 1LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-09-29"
-    },
-    {
       "id": "dw-28810",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/28810/",
@@ -8437,6 +8473,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-29"
+    },
+    {
+      "id": "dw-3-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/3-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1200,
+      "priceQualifier": "pcm",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "cottage",
+      "address": "The Cottages, Ballavartyn Equestrian Centre, Santon, IM4 1HT",
+      "locality": "Santon",
+      "parish": "Santon",
+      "postcode": "IM4 1HT",
+      "status": "let",
+      "firstSeen": "2026-09-29",
       "lastSeen": "2026-09-29"
     },
     {
@@ -8953,6 +9008,25 @@
       "lastSeen": "2026-09-29"
     },
     {
+      "id": "dw-4-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/4-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1550,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "cottage",
+      "address": "The Cottages, Ballavartyn Equestrian Centre, Santon, IM4 1HT",
+      "locality": "Santon",
+      "parish": "Santon",
+      "postcode": "IM4 1HT",
+      "status": "let",
+      "firstSeen": "2026-09-29",
+      "lastSeen": "2026-09-29"
+    },
+    {
       "id": "dw-4-the-promenade-castletown-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/4-the-promenade-castletown-isle-of-man/",
@@ -9254,6 +9328,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-09-29"
+    },
+    {
+      "id": "dw-5-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/5-the-cottages-ballavartyn-equestrian-centre-santon-im4-1ht/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1900,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "cottage",
+      "address": "The Cottages, Ballavartyn Equestrian Centre, Santon, IM4 1HT",
+      "locality": "Santon",
+      "parish": "Santon",
+      "postcode": "IM4 1HT",
+      "status": "let",
+      "firstSeen": "2026-09-29",
       "lastSeen": "2026-09-29"
     },
     {
@@ -13278,25 +13371,6 @@
       "bathrooms": 1,
       "propertyType": "apartment",
       "address": "3, Saddle Mews, Douglas, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-09-29"
-    },
-    {
-      "id": "dw-saddle-mews-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/saddle-mews-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 172500,
-      "priceQualifier": "asking",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "91 Saddle Mews, Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LF",
