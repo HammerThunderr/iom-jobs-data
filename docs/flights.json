@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-01T07:22:29.399247+00:00",
-  "lastUpdated": "07:22 UTC",
+  "fetchedAt": "2026-10-01T07:26:31.862542+00:00",
+  "lastUpdated": "07:26 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -121,9 +121,9 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:10",
-      "status": "On-time",
+      "status": "Expected 08:51",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM638",
