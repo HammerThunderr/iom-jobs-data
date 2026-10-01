@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-01T07:34:36.406837+00:00",
-  "lastUpdated": "07:34 UTC",
+  "fetchedAt": "2026-10-01T07:38:38.755715+00:00",
+  "lastUpdated": "07:37 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,15 +113,15 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Delayed 09:16",
+      "status": "Expected 08:58",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:10",
-      "status": "Expected 08:45",
+      "status": "Expected 08:43",
       "origin": "Manchester",
       "statusType": "expected"
     },
