@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-02T20:16:38.056490+00:00",
-  "lastUpdated": "20:16 UTC",
+  "fetchedAt": "2026-10-02T20:20:40.407808+00:00",
+  "lastUpdated": "20:20 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -137,9 +137,9 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "20:20",
-      "status": "Delayed 21:22",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY715",
