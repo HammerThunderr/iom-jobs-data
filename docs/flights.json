@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-03T14:16:54.090884+00:00",
-  "lastUpdated": "14:16 UTC",
+  "fetchedAt": "2026-10-03T14:20:56.207319+00:00",
+  "lastUpdated": "14:20 UTC",
   "departures": [
-    {
-      "flightNo": "EZY716",
-      "airline": "easyJet",
-      "scheduled": "09:30",
-      "status": "Departed 09:30",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
