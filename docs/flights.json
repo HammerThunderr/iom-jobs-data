@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-04T20:27:22.561713+00:00",
-  "lastUpdated": "20:26 UTC",
+  "fetchedAt": "2026-10-04T20:31:25.123618+00:00",
+  "lastUpdated": "20:30 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "14:25",
-      "status": "Arrived 15:29",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
