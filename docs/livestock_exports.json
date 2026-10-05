@@ -1,7 +1,7 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generated": "2026-09-12",
+    "generated": "2026-10-05",
     "source": "Isle of Man Government (DEFA) - Cattle & Sheep Export Statistics",
     "sourceUrls": {
       "cattle": "https://www.gov.im/categories/business-and-industries/agriculture/cattle/cattle-export-statistics/",
@@ -62,7 +62,7 @@
           },
           {
             "month": "Aug",
-            "total": null,
+            "total": 112,
             "rearing": 0,
             "slaughter": 0
           },
@@ -91,10 +91,10 @@
             "slaughter": 0
           }
         ],
-        "totalToDate": 1034,
+        "totalToDate": 1146,
         "rearingToDate": 669,
         "slaughterToDate": 365,
-        "monthsReported": 7
+        "monthsReported": 8
       },
       {
         "year": 2025,
@@ -697,11 +697,11 @@
           },
           {
             "month": "Jul",
-            "total": 0
+            "total": 506
           },
           {
             "month": "Aug",
-            "total": null
+            "total": 513
           },
           {
             "month": "Sep",
@@ -720,8 +720,8 @@
             "total": null
           }
         ],
-        "totalToDate": 8054,
-        "monthsReported": 7
+        "totalToDate": 9073,
+        "monthsReported": 8
       },
       {
         "year": 2025,
