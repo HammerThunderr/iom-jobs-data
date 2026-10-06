@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-06T13:51:07.429325+00:00",
-  "lastUpdated": "13:50 UTC",
+  "fetchedAt": "2026-10-06T13:55:10.336911+00:00",
+  "lastUpdated": "13:54 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -31,9 +31,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY844",
