@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-06T14:13:52+00:00",
+    "generated": "2026-10-06T23:48:38+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,8 +10,8 @@
       },
       {
         "agent": "DeanWood",
-        "count": 439,
-        "withPrice": 432,
+        "count": 440,
+        "withPrice": 433,
         "status": "ok"
       },
       {
@@ -888,7 +888,7 @@
       "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12898690-loch-promenade-douglas/",
       "category": "commercial",
       "listingType": "rent",
-      "price": 340,
+      "price": 566,
       "priceQualifier": "pcm",
       "bedrooms": 0,
       "bathrooms": 0,
@@ -898,6 +898,7 @@
       "parish": "Douglas",
       "postcode": "IM1 2LZ",
       "firstSeen": "2026-09-20",
+      "previousPrice": 340,
       "lastSeen": "2026-10-06"
     },
     {
@@ -6774,6 +6775,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "id": "dw-14-links-view-onchan-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/14-links-view-onchan-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 749950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "propertyType": "bungalow",
+      "address": "14 Links View, Onchan, Isle of Man",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-06"
     },
     {
@@ -14709,7 +14729,7 @@
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/auldyn-6-greeba-avenue-glen-vine-im4-4ed/",
       "category": "residential",
       "listingType": "sale",
-      "price": 364950,
+      "price": 369950,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -14720,6 +14740,7 @@
       "postcode": "IM4 4ED",
       "status": "for_sale",
       "firstSeen": "2026-10-06",
+      "previousPrice": 364950,
       "lastSeen": "2026-10-06"
     },
     {
