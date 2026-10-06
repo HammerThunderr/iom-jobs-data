@@ -1,23 +1,23 @@
 {
   "meta": {
-    "generated": "2026-10-06T01:12:12+00:00",
+    "generated": "2026-10-06T14:13:52+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 334,
-        "withPrice": 308,
+        "count": 332,
+        "withPrice": 306,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 441,
-        "withPrice": 434,
+        "count": 439,
+        "withPrice": 432,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 31,
-        "withPrice": 31,
+        "count": 32,
+        "withPrice": 32,
         "status": "ok"
       }
     ],
@@ -2563,24 +2563,6 @@
       "lastSeen": "2026-10-06"
     },
     {
-      "id": "chr-12345356-the-boat-house-13-bank-street-castletown",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12345356-the-boat-house-13-bank-street-castletown/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 325000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "The Boat House, 13 Bank Street, Castletown",
-      "locality": "Castletown",
-      "parish": "Castletown",
-      "postcode": "IM9 1AT",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-06"
-    },
-    {
       "id": "chr-12348186-glen-view-glen-wyllin-kirk-michael",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12348186-glen-view-glen-wyllin-kirk-michael/",
@@ -4257,24 +4239,6 @@
       "lastSeen": "2026-10-06"
     },
     {
-      "id": "chr-12862798-41-cronk-cullyn-colby",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12862798-41-cronk-cullyn-colby/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 330000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "41 Cronk Cullyn, Colby",
-      "locality": "Colby",
-      "parish": "Colby",
-      "postcode": "IM9 4PS",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-06"
-    },
-    {
       "id": "chr-12862986-ballaholly-house-jurby-west",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12862986-ballaholly-house-jurby-west/",
@@ -5900,6 +5864,7 @@
       "locality": "Kirk Michael",
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
+      "status": "under_offer",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-10-06"
     },
@@ -6356,25 +6321,6 @@
       "lastSeen": "2026-10-06"
     },
     {
-      "id": "dw-1-sunnybank-west-baldwin",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/1-sunnybank-west-baldwin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 975000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "propertyType": "detached",
-      "address": "1, Sunnybank, West Baldwin",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-06"
-    },
-    {
       "id": "dw-1-tommy-clucas-avenue-peel",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/1-tommy-clucas-avenue-peel/",
@@ -6521,25 +6467,6 @@
       "address": "11 Berry Woods Avenue, Governors Hill, Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "id": "dw-11-glen-darragh-gardens-glen-vine",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/11-glen-darragh-gardens-glen-vine/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1050000,
-      "priceQualifier": "asking",
-      "bedrooms": 6,
-      "bathrooms": 5,
-      "propertyType": "detached",
-      "address": "11 Glen Darragh Gardens, Glen Vine",
-      "locality": "Glen Vine",
-      "parish": "Glen Vine",
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
@@ -6844,25 +6771,6 @@
       "address": "14 Harcroft Avenue, Saddlestone, Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-06"
-    },
-    {
-      "id": "dw-14-links-view-onchan-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/14-links-view-onchan-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 749950,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "bungalow",
-      "address": "14 Links View, Onchan, Isle of Man",
-      "locality": "Onchan",
-      "parish": "Onchan",
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
@@ -12894,6 +12802,25 @@
       "lastSeen": "2026-10-06"
     },
     {
+      "id": "dw-oakdale-governors-hill-douglas-isle-of-man-im2-7bt",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/oakdale-governors-hill-douglas-isle-of-man-im2-7bt/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1800,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "detached",
+      "address": "Oakdale, Governors Hill, Douglas, Isle of Man, IM2 7BT",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 7BT",
+      "status": "let",
+      "firstSeen": "2026-10-06",
+      "lastSeen": "2026-10-06"
+    },
+    {
       "id": "dw-old-castletown-road-douglas",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/old-castletown-road-douglas/",
@@ -14774,6 +14701,25 @@
       "postcode": "IM6 1HG",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-10-06"
+    },
+    {
+      "id": "mm-auldyn-6-greeba-avenue-glen-vine-im4-4ed",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/auldyn-6-greeba-avenue-glen-vine-im4-4ed/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 364950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "bungalow",
+      "address": "3  Bed  Bungalow For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 4ED",
+      "status": "for_sale",
+      "firstSeen": "2026-10-06",
       "lastSeen": "2026-10-06"
     },
     {
