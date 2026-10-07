@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-07T02:42:27.027676+00:00",
-  "lastUpdated": "02:41 UTC",
+  "fetchedAt": "2026-10-07T02:46:29.859574+00:00",
+  "lastUpdated": "02:45 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -148,8 +148,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM698",
+      "airline": "Loganair",
+      "scheduled": "17:45",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 19,
   "source": "airport.im"
 }
