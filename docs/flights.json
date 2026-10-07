@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-07T16:46:17.059563+00:00",
-  "lastUpdated": "16:45 UTC",
+  "fetchedAt": "2026-10-07T16:50:19.372781+00:00",
+  "lastUpdated": "16:49 UTC",
   "departures": [
     {
       "flightNo": "EI3213",
@@ -55,9 +55,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM681",
