@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-09T13:59:35.724524+00:00",
-  "lastUpdated": "13:59 UTC",
+  "fetchedAt": "2026-10-09T14:03:38.259765+00:00",
+  "lastUpdated": "14:03 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -169,7 +169,7 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "15:05",
-      "status": "Delayed 15:28",
+      "status": "Delayed 15:13",
       "origin": "Birmingham",
       "statusType": "delayed"
     },
@@ -177,9 +177,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "On-time",
+      "status": "Delayed 15:38",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY715",
