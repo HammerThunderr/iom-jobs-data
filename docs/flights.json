@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-09T23:29:22.659677+00:00",
-  "lastUpdated": "23:28 UTC",
+  "fetchedAt": "2026-10-09T23:33:24.363229+00:00",
+  "lastUpdated": "23:32 UTC",
   "departures": [
-    {
-      "flightNo": "EZY844",
-      "airline": "easyJet",
-      "scheduled": "18:30",
-      "status": "Departed 18:40",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
@@ -126,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 14,
   "source": "airport.im"
 }
