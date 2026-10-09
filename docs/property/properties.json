@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-10-09T00:17:12+00:00",
+    "generated": "2026-10-09T14:15:55+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 331,
-        "withPrice": 306,
+        "count": 330,
+        "withPrice": 305,
         "status": "ok"
       },
       {
@@ -1546,24 +1546,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2EB",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "id": "chr-12863368-1-laureston-view-and-1-2-st-mary-s-road-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12863368-1-laureston-view-and-1-2-st-mary-s-road-douglas/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": 399000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "1 Laureston View and 1 & 2 St Mary's Road, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 5DA",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-09"
     },
@@ -5145,7 +5127,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12896900-ballamoar-house-ballamoar-lane-ballaugh/",
       "category": "residential",
       "listingType": "sale",
-      "price": 525000,
+      "price": 450000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -5155,6 +5137,7 @@
       "parish": "Ballaugh",
       "postcode": "IM7 5EE",
       "firstSeen": "2026-09-23",
+      "previousPrice": 525000,
       "lastSeen": "2026-10-09"
     },
     {
@@ -8106,6 +8089,25 @@
       "lastSeen": "2026-10-09"
     },
     {
+      "id": "dw-28-reayrt-carnane-tromode-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/28-reayrt-carnane-tromode-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 495000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "detached",
+      "address": "28 Reayrt Carnane, Tromode, Isle of Man",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-09",
+      "lastSeen": "2026-10-09"
+    },
+    {
       "id": "dw-28810",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/28810/",
@@ -9071,25 +9073,6 @@
       "parish": "Glen Vine",
       "postcode": "IM1 2LF",
       "status": "for_sale",
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-09"
-    },
-    {
-      "id": "dw-5-mona-terrace-douglas-isle-of-man-im1-3na-2",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/5-mona-terrace-douglas-isle-of-man-im1-3na-2/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 800,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "5 Mona Terrace, Douglas, Isle of Man, IM1 3NA",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 3NA",
-      "status": "let",
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-09"
     },
@@ -13001,7 +12984,7 @@
       "bedrooms": 1,
       "bathrooms": 1,
       "propertyType": "flat",
-      "address": "Peel Road, Douglas, Isle Of Man",
+      "address": "Flat 4, 35 Peel Road, Douglas, Isle Of Man",
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LF",
