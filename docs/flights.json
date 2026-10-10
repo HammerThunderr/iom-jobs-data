@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-10T08:53:38.913433+00:00",
-  "lastUpdated": "08:52 UTC",
+  "fetchedAt": "2026-10-10T08:57:40.727372+00:00",
+  "lastUpdated": "08:56 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -81,9 +81,9 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "09:00",
-      "status": "Final approach",
+      "status": "Landed 09:55",
       "origin": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM694",
