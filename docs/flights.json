@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-09T23:41:27.607263+00:00",
-  "lastUpdated": "23:40 UTC",
+  "fetchedAt": "2026-10-10T02:27:54.086485+00:00",
+  "lastUpdated": "02:27 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -50,25 +50,25 @@
       "status": "On-time",
       "destination": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4535",
+      "airline": "British Airways",
+      "scheduled": "14:50",
+      "status": "On-time",
+      "destination": "Malaga",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3217",
+      "airline": "Aer Lingus",
+      "scheduled": "17:20",
+      "status": "On-time",
+      "destination": "Dublin",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM678",
-      "airline": "Loganair",
-      "scheduled": "20:10",
-      "status": "Arrived 19:56",
-      "origin": "London City",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "LM688",
-      "airline": "Loganair",
-      "scheduled": "20:20",
-      "status": "Arrived 20:24",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY715",
       "airline": "easyJet",
@@ -116,8 +116,24 @@
       "status": "On-time",
       "origin": "Malaga",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:10",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 16,
   "source": "airport.im"
 }
