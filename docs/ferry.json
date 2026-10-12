@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-12T08:45:00.968718+00:00",
-  "lastUpdated": "07:00 12/10/26",
+  "fetchedAt": "2026-10-12T18:13:46.205571+00:00",
+  "lastUpdated": "18:07 12/10/26",
   "totalCount": 12,
   "days": [
     {
@@ -10,38 +10,38 @@
         {
           "departTime": "06:30",
           "departPort": "Douglas",
-          "arriveTime": "09:15",
+          "arriveTime": "09:24",
           "arrivePort": "Larne",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "10:31",
+          "departPort": "Larne",
+          "arriveTime": "13:12",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "14:45",
+          "departPort": "Douglas",
+          "arriveTime": "17:30",
+          "arrivePort": "Liverpool",
           "ferry": "Manannan",
           "status": "Departed",
           "statusType": "departed"
         },
         {
-          "departTime": "10:45",
-          "departPort": "Larne",
-          "arriveTime": "13:30",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
-        },
-        {
-          "departTime": "15:00",
-          "departPort": "Douglas",
-          "arriveTime": "17:45",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
-        },
-        {
-          "departTime": "19:15",
+          "departTime": "19:04",
           "departPort": "Liverpool",
-          "arriveTime": "22:00",
+          "arriveTime": "17:22",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         }
       ]
     },
