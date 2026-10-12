@@ -1,1 +1,14 @@
-{"success": false, "error": "403 Client Error: Forbidden for url: https://www.gov.im/weather/current-shipping-forecast/RssCurrentShippingForecast", "items": []}
+{
+  "success": true,
+  "feedTitle": "Shipping forecast for the North Irish Sea",
+  "lastUpdated": "",
+  "fetchedAt": "2026-10-12T02:34:02.713654+00:00",
+  "items": [
+    {
+      "title": "Shipping forecast updated as of 11 October 2026 10:15pm",
+      "description": "##Current shipping forecast##\n\nValid for 24 HoursIssued on Sunday, 11 October 2026 at 10:15pm by Ronaldsway Met Office\n##Warning##\n\nStrong winds.\n\n\n##Synopsis##\n\nLow pressure in the Atlantic will drive frontal troughs across the area overnight and tomorrow.\n\n\n##Wind##\n\nSoutheast 4 or 5, increasing 5 or 6 overnight, decreasing 4 or 5 through tomorrow morning, veering south or southwest 5 or 6 in the evening.\n\n\n##State of Sea##\n\nSlight or moderate.\n\n\n##Weather##\n\nFair at first, then occasional rain or drizzle arriving. Areas of mist and isolated fog patches later.\n\n\n##Visibility##\n\nGood, falling moderate or poor in rain/drizzle/mist. Very poor in fog patches.\n\n\n##Outlook for the following 24 hours##\n\n\n##Wind##\n\nSouth or southwest 5 or 6, increasing 6 or 7 overnight, veering west or southwest 5 or 6 Tuesday morning.\n\n\n##State of Sea##\n\nSlight or moderate, soon building moderate or rough, then slight or moderate again later.\n\n\n##Weather##\n\nOccasional rain/drizzle/mist clearing to isolated showers later. Small risk of fog patches until later.\n\n\n##Visibility##\n\nGood, falling moderate or poor in rain/drizzle/mist. Very poor in any fog patches.\n\n\n####\n\n\nHigh water\n\nToday 12:49am (7.2m)\n\n\n\nLow water\n\nToday 7:20am (0.6m)\n\n\n\nHigh water\n\nToday 1:14pm (6.6m)\n\n\n\nLow water\n\nToday 7:25pm (1.2m)\n\n\n(heights in metres above Chart Datum)",
+      "pubDate": "Sun 11 Oct 2026, 21:15",
+      "link": "https://www.gov.im/weather/current-shipping-forecast/"
+    }
+  ]
+}

@@ -1,1 +1,14 @@
-{"success": false, "error": "403 Client Error: Forbidden for url: https://www.gov.im/weather/RssCurrentForecast", "items": []}
+{
+  "success": true,
+  "feedTitle": "Weather forecast for the Isle of Man",
+  "lastUpdated": "",
+  "fetchedAt": "2026-10-12T02:34:01.844548+00:00",
+  "items": [
+    {
+      "title": "Weather forecast updated as of 11 October 2026 10:17pm",
+      "description": "##Weather##\n\nIssued on Sunday, 11 October 2026 at 10:15pm by Ronaldsway Met Office\n##Detailed forecast##\n\nCloudy with outbreaks of rain or drizzle developing overnight. Fresh southeast winds, minimum temperature of 10°C.\n\nOutbreaks of rain or drizzle quickly becoming light and patchy tomorrow morning but still generally cloudy for the rest of the day with hill fog and coastal mist developing in places. Moderate or fresh south or southeast winds strengthening later, top temperature 16°C.\n\n\n##Outlook##\n\nTurning wet and windy overnight into Tuesday but soon clearing to sunny spells in the morning with a fresh west to southwest wind. Highest temperature 15°C.\n\n\n##Sunrise##\n\n7:40am Today\n\n\n##Sunset##\n\n6:29pm Today",
+      "pubDate": "Sun 11 Oct 2026, 21:17",
+      "link": "https://www.gov.im/weather/"
+    }
+  ]
+}
