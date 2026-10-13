@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-13T16:09:22.367699+00:00",
-  "lastUpdated": "16:08 UTC",
+  "fetchedAt": "2026-10-13T16:13:24.458377+00:00",
+  "lastUpdated": "16:12 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -105,9 +105,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Expected 17:14",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY843",
