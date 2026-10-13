@@ -1,9 +1,32 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-13T15:00:25.151272+00:00",
-  "lastUpdated": "12:45 13/10/26",
-  "totalCount": 8,
+  "fetchedAt": "2026-10-13T20:38:57.562041+00:00",
+  "lastUpdated": "18:04 13/10/26",
+  "totalCount": 10,
   "days": [
+    {
+      "date": "Wednesday, 14 October 2026",
+      "sailings": [
+        {
+          "departTime": "06:45",
+          "departPort": "Douglas",
+          "arriveTime": "09:30",
+          "arrivePort": "Larne",
+          "ferry": "Manannan",
+          "status": "Cancelled",
+          "statusType": "cancelled"
+        },
+        {
+          "departTime": "10:45",
+          "departPort": "Larne",
+          "arriveTime": "13:30",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Cancelled",
+          "statusType": "cancelled"
+        }
+      ]
+    },
     {
       "date": "Thursday, 15 October 2026",
       "sailings": [
