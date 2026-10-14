@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-14T10:29:57.854774+00:00",
-  "lastUpdated": "10:29 UTC",
+  "fetchedAt": "2026-10-14T10:33:59.566380+00:00",
+  "lastUpdated": "10:32 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -31,9 +31,9 @@
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "11:35",
-      "status": "Gate closed",
+      "status": "Taxied 11:30",
       "destination": "London Heathrow",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3213",
