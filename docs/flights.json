@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-14T10:25:55.857909+00:00",
-  "lastUpdated": "10:24 UTC",
+  "fetchedAt": "2026-10-14T10:29:57.854774+00:00",
+  "lastUpdated": "10:29 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -113,9 +113,9 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:40",
-      "status": "On-time",
+      "status": "Delayed 12:16",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3212",
