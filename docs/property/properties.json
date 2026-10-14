@@ -1,23 +1,23 @@
 {
   "meta": {
-    "generated": "2026-10-14T12:58:36+00:00",
+    "generated": "2026-10-14T22:49:21+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 323,
-        "withPrice": 299,
+        "count": 326,
+        "withPrice": 300,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 446,
-        "withPrice": 439,
+        "count": 444,
+        "withPrice": 437,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 35,
-        "withPrice": 35,
+        "count": 34,
+        "withPrice": 34,
         "status": "ok"
       }
     ],
@@ -935,6 +935,42 @@
       "lastSeen": "2026-10-14"
     },
     {
+      "id": "chr-12920892-jurby-industrial-estate-jurby",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12920892-jurby-industrial-estate-jurby/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Jurby Industrial Estate, Jurby",
+      "locality": "Jurby",
+      "parish": "Jurby",
+      "postcode": "IM7 3BD",
+      "firstSeen": "2026-10-14",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "id": "chr-12920893-jurby-industrial-estate-jurby",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12920893-jurby-industrial-estate-jurby/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Jurby Industrial Estate, Jurby",
+      "locality": "Jurby",
+      "parish": "Jurby",
+      "postcode": "IM7 3BD",
+      "firstSeen": "2026-10-14",
+      "lastSeen": "2026-10-14"
+    },
+    {
       "id": "chr-6643112-hope-street-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/6643112-hope-street-douglas/",
@@ -1626,7 +1662,7 @@
       "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12898241-station-road-port-erin-port-erin/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 585000,
+      "price": 575000,
       "priceQualifier": "asking",
       "bedrooms": 0,
       "bathrooms": 0,
@@ -1636,6 +1672,7 @@
       "parish": "Port Erin",
       "postcode": "IM9 6AE",
       "firstSeen": "2026-09-20",
+      "previousPrice": 585000,
       "lastSeen": "2026-10-14"
     },
     {
@@ -4093,24 +4130,6 @@
       "lastSeen": "2026-10-14"
     },
     {
-      "id": "chr-12858600-wireless-station-phildraw-road-ballasalla",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12858600-wireless-station-phildraw-road-ballasalla/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 690000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "Wireless Station, Phildraw Road, Ballasalla",
-      "locality": "Ballasalla",
-      "parish": "Ballasalla",
-      "postcode": "IM9 3EH",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-14"
-    },
-    {
       "id": "chr-12860143-ballachree-main-road-ballaugh",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12860143-ballachree-main-road-ballaugh/",
@@ -5482,6 +5501,24 @@
       "lastSeen": "2026-10-14"
     },
     {
+      "id": "chr-12920729-10-carrick-court-bay-view-road-port-st-mary",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12920729-10-carrick-court-bay-view-road-port-st-mary/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 339000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "10 Carrick Court, Bay View Road, Port St Mary",
+      "locality": "Port St Mary",
+      "parish": "Port St Mary",
+      "postcode": "IM9 5AL",
+      "firstSeen": "2026-10-14",
+      "lastSeen": "2026-10-14"
+    },
+    {
       "id": "chr-6644240-bolivia-mount-the-dhoor-lezayre",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/6644240-bolivia-mount-the-dhoor-lezayre/",
@@ -5698,7 +5735,6 @@
       "locality": "Kirk Michael",
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
-      "status": "under_offer",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-10-14"
     },
@@ -5736,6 +5772,24 @@
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
       "firstSeen": "2026-09-29",
+      "lastSeen": "2026-10-14"
+    },
+    {
+      "id": "chr-12919508-10-bridge-street-peel",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12919508-10-bridge-street-peel/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1150,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "10 Bridge Street, Peel",
+      "locality": "Peel",
+      "parish": "Peel",
+      "postcode": "IM5 1NB",
+      "firstSeen": "2026-10-14",
       "lastSeen": "2026-10-14"
     },
     {
@@ -5828,6 +5882,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 3LH",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-14"
     },
@@ -7310,25 +7365,6 @@
       "parish": "Douglas",
       "postcode": "IM1 2LF",
       "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-14"
-    },
-    {
-      "id": "dw-2-laureston-view-ballaquayle-road-douglas-isle-of-man-im2-5da",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/2-laureston-view-ballaquayle-road-douglas-isle-of-man-im2-5da/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 825,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "2 Laureston View, Ballaquayle Road, Douglas, Isle of Man, IM2 5DA",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 5DA",
-      "status": "let",
       "firstSeen": "2026-09-27",
       "lastSeen": "2026-10-14"
     },
@@ -10801,7 +10837,7 @@
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
-      "propertyType": "cottage",
+      "propertyType": "detached",
       "address": "Bay View Cottage & 8 Acres, Glen Road, Colby",
       "locality": "Colby",
       "parish": "Colby",
@@ -14100,25 +14136,6 @@
       "lastSeen": "2026-10-14"
     },
     {
-      "id": "dw-vicarage-mews-farmhill-douglas-isle-of-man-im2-2nr",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/vicarage-mews-farmhill-douglas-isle-of-man-im2-2nr/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1450,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "end of terrace",
-      "address": "Vicarage Mews, Farmhill, Douglas, Isle of Man, IM2 2NR",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 2NR",
-      "status": "let",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-14"
-    },
-    {
       "id": "dw-victoria-avenue-douglas",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/victoria-avenue-douglas/",
@@ -14592,25 +14609,6 @@
       "postcode": "IM4 7NY",
       "status": "for_sale",
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-14"
-    },
-    {
-      "id": "mm-4-godred-court-kings-reach-ramsey-im8-3ny",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/4-godred-court-kings-reach-ramsey-im8-3ny/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 229950,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "2  Bed  Apartment For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM8 3NY",
-      "status": "for_sale",
-      "firstSeen": "2026-10-07",
       "lastSeen": "2026-10-14"
     },
     {
