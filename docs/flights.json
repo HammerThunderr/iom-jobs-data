@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-15T15:22:42.436900+00:00",
-  "lastUpdated": "15:22 UTC",
+  "fetchedAt": "2026-10-15T15:26:44.711604+00:00",
+  "lastUpdated": "15:26 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -47,9 +47,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "London City",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -113,7 +113,7 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Expected 16:29",
+      "status": "Expected 16:28",
       "origin": "Dublin",
       "statusType": "expected"
     },
