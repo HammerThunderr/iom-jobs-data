@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-15T06:03:47.693087+00:00",
-  "lastUpdated": "06:02 UTC",
+  "fetchedAt": "2026-10-15T06:07:50.121909+00:00",
+  "lastUpdated": "06:07 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
-      "status": "Taxied 06:56",
+      "status": "Departed 07:05",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:05",
-      "status": "Gate closed",
+      "status": "Taxied 07:05",
       "destination": "Newquay, via Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY716",
