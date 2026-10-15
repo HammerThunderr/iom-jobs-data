@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-15T12:28:14+00:00",
+    "generated": "2026-10-15T22:25:54+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,14 +10,14 @@
       },
       {
         "agent": "DeanWood",
-        "count": 444,
-        "withPrice": 437,
+        "count": 445,
+        "withPrice": 438,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 34,
-        "withPrice": 34,
+        "count": 33,
+        "withPrice": 33,
         "status": "ok"
       }
     ],
@@ -514,6 +514,24 @@
       "parish": "Douglas",
       "postcode": "IM1 5PD",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-10-15"
+    },
+    {
+      "id": "chr-12625192-billown-farm-ballasalla",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12625192-billown-farm-ballasalla/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": 500,
+      "priceQualifier": "pcm",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Billown Farm, Ballasalla Rent: £500 per month",
+      "locality": "Ballasalla",
+      "parish": "Ballasalla",
+      "postcode": "IM9 3DN",
+      "firstSeen": "2026-10-15",
       "lastSeen": "2026-10-15"
     },
     {
@@ -5845,25 +5863,6 @@
       "parish": "Douglas",
       "postcode": "IM2 4AA",
       "firstSeen": "2026-10-02",
-      "lastSeen": "2026-10-15"
-    },
-    {
-      "id": "chr-6951610-fairways-crescent-santon-isle-of-man",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/6951610-fairways-crescent-santon-isle-of-man/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 2000,
-      "priceQualifier": "pcm",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "Fairways Crescent, Santon, Isle Of Man",
-      "locality": "Santon",
-      "parish": "Santon",
-      "postcode": "IM4 2JJ",
-      "status": "let_stc",
-      "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-15"
     },
     {
@@ -11988,6 +11987,25 @@
       "lastSeen": "2026-10-15"
     },
     {
+      "id": "dw-hamilton-terrace-lower-foxdale-isle-of-man-im4-3bb",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/hamilton-terrace-lower-foxdale-isle-of-man-im4-3bb/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1250,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "detached",
+      "address": "Hamilton Terrace, Lower Foxdale, Isle of Man, IM4 3BB",
+      "locality": "Foxdale",
+      "parish": "Foxdale",
+      "postcode": "IM4 3BB",
+      "status": "let",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
       "id": "dw-hazelcroft-95-malew-street-castletown",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/hazelcroft-95-malew-street-castletown/",
@@ -14458,6 +14476,25 @@
       "lastSeen": "2026-10-15"
     },
     {
+      "id": "mm-flat-3-11-fort-william-douglas-im1-5bq",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/letting/isle-of-man/isle-of-man/flat-3-11-fort-william-douglas-im1-5bq/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1600,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "2  Bed  Apartment For  Rent",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM1 5BQ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-15",
+      "lastSeen": "2026-10-15"
+    },
+    {
       "id": "mm-flat-3-12-derby-road-douglas-im2-3et",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/letting/isle-of-man/isle-of-man/flat-3-12-derby-road-douglas-im2-3et/",
@@ -14955,25 +14992,6 @@
       "lastSeen": "2026-10-15"
     },
     {
-      "id": "mm-building-plot-alberta-drive-onchan-isle-of-man-im3-1lt",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/building-plot-alberta-drive-onchan-isle-of-man-im3-1lt/",
-      "category": "land",
-      "listingType": "sale",
-      "price": 175000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "land",
-      "address": "GARAGE / STORAGE  Plot For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM3 1LT",
-      "status": "for_sale",
-      "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-15"
-    },
-    {
       "id": "mm-harwood-court-flat-4-north-shore-road-ramsey-isle-of-man-im8-3an",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/harwood-court-flat-4-north-shore-road-ramsey-isle-of-man-im8-3an/",
@@ -15010,25 +15028,6 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
-      "lastSeen": "2026-10-15"
-    },
-    {
-      "id": "mm-the-beary-laurel-bank-st-johns-isle-of-man-im4-3nj",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/the-beary-laurel-bank-st-johns-isle-of-man-im4-3nj/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 345000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "4  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM4 3NJ",
-      "status": "for_sale",
-      "firstSeen": "2026-09-30",
       "lastSeen": "2026-10-15"
     }
   ]
