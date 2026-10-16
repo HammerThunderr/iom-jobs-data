@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-16T23:47:28.416033+00:00",
-  "lastUpdated": "23:47 UTC",
+  "fetchedAt": "2026-10-16T23:51:30.603022+00:00",
+  "lastUpdated": "23:50 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -49,6 +49,14 @@
       "scheduled": "14:05",
       "status": "On-time",
       "destination": "London Gatwick",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4535",
+      "airline": "British Airways",
+      "scheduled": "14:50",
+      "status": "On-time",
+      "destination": "Malaga",
       "statusType": "ontime"
     }
   ],
@@ -118,6 +126,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
