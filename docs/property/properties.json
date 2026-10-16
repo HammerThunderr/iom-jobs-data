@@ -1,23 +1,23 @@
 {
   "meta": {
-    "generated": "2026-10-16T12:11:42+00:00",
+    "generated": "2026-10-16T21:54:11+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 328,
-        "withPrice": 302,
+        "count": 329,
+        "withPrice": 303,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 444,
-        "withPrice": 437,
+        "count": 446,
+        "withPrice": 439,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 35,
-        "withPrice": 35,
+        "count": 36,
+        "withPrice": 36,
         "status": "ok"
       }
     ],
@@ -3661,24 +3661,6 @@
       "lastSeen": "2026-10-16"
     },
     {
-      "id": "chr-12831743-39-cronk-view-crescent-ballakilley-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12831743-39-cronk-view-crescent-ballakilley-port-erin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 365000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "39 Cronk View Crescent, Ballakilley, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6DU",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-16"
-    },
-    {
       "id": "chr-12835185-waverley-main-road-colby",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12835185-waverley-main-road-colby/",
@@ -5502,6 +5484,24 @@
       "lastSeen": "2026-10-16"
     },
     {
+      "id": "chr-12918141-53-erin-way-port-erin",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12918141-53-erin-way-port-erin/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 365000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "53 Erin Way, Port Erin",
+      "locality": "Port Erin",
+      "parish": "Port Erin",
+      "postcode": "IM9 6EF",
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
+    },
+    {
       "id": "chr-12920729-10-carrick-court-bay-view-road-port-st-mary",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12920729-10-carrick-court-bay-view-road-port-st-mary/",
@@ -5848,6 +5848,24 @@
       "lastSeen": "2026-10-16"
     },
     {
+      "id": "chr-12921365-cooil-drive-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12921365-cooil-drive-douglas/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1400,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "Cooil Drive, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 2HB",
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
+    },
+    {
       "id": "chr-6643088-3-the-level-colby",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/6643088-3-the-level-colby/",
@@ -5955,7 +5973,6 @@
       "locality": "Baldrine",
       "parish": "Baldrine",
       "postcode": "IM4 6AF",
-      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-16"
     },
@@ -7823,6 +7840,25 @@
       "lastSeen": "2026-10-16"
     },
     {
+      "id": "dw-24-st-pauls-mews-ramsey-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/24-st-pauls-mews-ramsey-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 155000,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "semi-detached",
+      "address": "24 St. Pauls Mews, Ramsey, Isle Of Man",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
+    },
+    {
       "id": "dw-25-rectory-court-ramsey-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/25-rectory-court-ramsey-isle-of-man/",
@@ -7972,6 +8008,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-16"
+    },
+    {
+      "id": "dw-27-riverbank-road-ramsey-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/27-riverbank-road-ramsey-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 525000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "detached",
+      "address": "27 Riverbank Road, Ramsey, Isle Of Man",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-16",
       "lastSeen": "2026-10-16"
     },
     {
@@ -9989,6 +10044,25 @@
       "lastSeen": "2026-10-16"
     },
     {
+      "id": "dw-all-saints-park-lonan-isle-of-man-im4-7la",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/all-saints-park-lonan-isle-of-man-im4-7la/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1300,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "semi-detached",
+      "address": "All Saints Park, Lonan, Isle of Man, IM4 7LA",
+      "locality": "Lonan",
+      "parish": "Lonan",
+      "postcode": "IM4 7LA",
+      "status": "let",
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
+    },
+    {
       "id": "dw-altadale-lezayre-road-ramsey-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/altadale-lezayre-road-ramsey-isle-of-man/",
@@ -11011,25 +11085,6 @@
       "locality": "Glen Vine",
       "parish": "Glen Vine",
       "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-16"
-    },
-    {
-      "id": "dw-burnbrae-ballakilpheric-colby-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/burnbrae-ballakilpheric-colby-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1600000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 4,
-      "propertyType": "detached",
-      "address": "Burnbrae, Ballakilpheric, Colby, Isle Of Man",
-      "locality": "Colby",
-      "parish": "Colby",
-      "postcode": "IM9 1LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
       "lastSeen": "2026-10-16"
@@ -15066,6 +15121,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
+      "lastSeen": "2026-10-16"
+    },
+    {
+      "id": "mm-valhalla-agneash-isle-of-man-im4-7np",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/valhalla-agneash-isle-of-man-im4-7np/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 499950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "propertyType": "house",
+      "address": "4  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 7NP",
+      "status": "for_sale",
+      "firstSeen": "2026-10-16",
       "lastSeen": "2026-10-16"
     }
   ]
