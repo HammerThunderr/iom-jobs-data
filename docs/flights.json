@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-17T14:20:41.803544+00:00",
-  "lastUpdated": "14:20 UTC",
+  "fetchedAt": "2026-10-17T14:24:43.494421+00:00",
+  "lastUpdated": "14:22 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -70,14 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "EZY715",
-      "airline": "easyJet",
-      "scheduled": "09:00",
-      "status": "Arrived 09:20",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:18",
@@ -142,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 16,
   "source": "airport.im"
 }
