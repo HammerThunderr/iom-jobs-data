@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-17T11:20:10.409314+00:00",
-  "lastUpdated": "11:19 UTC",
+  "fetchedAt": "2026-10-17T14:04:34.441558+00:00",
+  "lastUpdated": "14:03 UTC",
   "departures": [
-    {
-      "flightNo": "LM693",
-      "airline": "Loganair",
-      "scheduled": "07:00",
-      "status": "Departed 07:00",
-      "destination": "Manchester",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
@@ -39,25 +31,25 @@
       "flightNo": "EZY520",
       "airline": "easyJet",
       "scheduled": "12:25",
-      "status": "Gate closed",
+      "status": "Departed 12:35",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
-      "scheduled": "14:09",
-      "status": "On-time",
+      "scheduled": "14:05",
+      "status": "Departed 14:29",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "departed"
     },
     {
       "flightNo": "BA4535",
       "airline": "British Airways",
-      "scheduled": "14:50",
-      "status": "On-time",
+      "scheduled": "15:20",
+      "status": "Gate closed",
       "destination": "Malaga",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -110,20 +102,28 @@
       "statusType": "arrived"
     },
     {
+      "flightNo": "BA358",
+      "airline": "British Airways",
+      "scheduled": "13:23",
+      "status": "Arrived 14:23",
+      "origin": "Malaga",
+      "statusType": "arrived"
+    },
+    {
       "flightNo": "EZY841",
       "airline": "easyJet",
-      "scheduled": "13:07",
-      "status": "On-time",
+      "scheduled": "13:35",
+      "status": "Arrived 13:44",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "BA4536",
       "airline": "British Airways",
       "scheduled": "13:50",
-      "status": "On-time",
+      "status": "Arrived 14:22",
       "origin": "Malaga",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM676",
