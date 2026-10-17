@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-17T14:12:38.183879+00:00",
-  "lastUpdated": "14:11 UTC",
+  "fetchedAt": "2026-10-17T14:16:39.932991+00:00",
+  "lastUpdated": "14:15 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -78,14 +78,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "09:15",
-      "status": "Arrived 09:12",
-      "origin": "Manchester",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY519",
       "airline": "easyJet",
       "scheduled": "11:18",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
