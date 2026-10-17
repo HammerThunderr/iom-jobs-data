@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-17T19:49:16.415214+00:00",
-  "lastUpdated": "19:48 UTC",
+  "fetchedAt": "2026-10-17T19:53:18.486122+00:00",
+  "lastUpdated": "19:53 UTC",
   "departures": [
     {
       "flightNo": "BA4535",
@@ -84,8 +84,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "10:50",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 11,
   "source": "airport.im"
 }
