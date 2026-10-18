@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-18T15:10:20.761355+00:00",
-  "lastUpdated": "15:09 UTC",
+  "fetchedAt": "2026-10-18T15:14:23.067370+00:00",
+  "lastUpdated": "15:13 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -63,9 +63,9 @@
       "flightNo": "LM677",
       "airline": "Loganair",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "London City",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
@@ -145,7 +145,7 @@
       "flightNo": "EZY843",
       "airline": "easyJet",
       "scheduled": "16:05",
-      "status": "Delayed 16:37",
+      "status": "Delayed 16:36",
       "origin": "London Gatwick",
       "statusType": "delayed"
     },
@@ -169,7 +169,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Expected 16:40",
+      "status": "Expected 16:37",
       "origin": "London Heathrow",
       "statusType": "expected"
     },
