@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-18T21:58:49.821930+00:00",
-  "lastUpdated": "21:58 UTC",
+  "fetchedAt": "2026-10-18T22:02:52.194749+00:00",
+  "lastUpdated": "22:02 UTC",
   "departures": [
     {
       "flightNo": "EZY844",
@@ -188,8 +188,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY233",
+      "airline": "easyJet",
+      "scheduled": "13:00",
+      "status": "On-time",
+      "origin": "Bristol",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 23,
+  "totalCount": 24,
   "source": "airport.im"
 }
