@@ -1,1 +1,14 @@
-{"success": false, "error": "403 Client Error: Forbidden for url: https://www.gov.im/weather/current-shipping-forecast/RssCurrentShippingForecast", "items": []}
+{
+  "success": true,
+  "feedTitle": "Shipping forecast for the North Irish Sea",
+  "lastUpdated": "",
+  "fetchedAt": "2026-10-18T21:16:00.583221+00:00",
+  "items": [
+    {
+      "title": "Shipping forecast updated as of 18 October 2026 9:37pm",
+      "description": "##Current shipping forecast##\n\nValid for 24 HoursIssued on Sunday, 18 October 2026 at 9:30pm by Ronaldsway Met Office\n##Warning##\n\nNil.\n\n\n##Synopsis##\n\nHigh pressure covers the Irish Sea.\n\n\n##Wind##\n\nNortheast 3 or 4 gradually increasing 4 or 5 overnight. Veering east or southeast 3 or 4 tomorrow afternoon.\n\n\n##State of Sea##\n\nSlight\n\n\n##Weather##\n\nFair, patchy rain developing tomorrow morning.\n\n\n##Visibility##\n\nMainly good.\n\n\n##Outlook for the following 24 hours##\n\n\n##Wind##\n\nSoutheast 3 or 4, increasing 4 or 5 Tuesday morning.\n\n\n##State of Sea##\n\nSlight, building slight or moderate later.\n\n\n##Weather##\n\nMainly fair, occasional rain mainly in the east Tuesday afternoon.\n\n\n##Visibility##\n\nGood, possibly moderate in rain.\n\n\n####\n\n\nLow water\n\nTomorrow 12:02am (2.4m)\n\n\n\nHigh water\n\nTomorrow 6:14am (4.7m)\n\n\n\nLow water\n\nTomorrow 12:10pm (3.0m)\n\n\n\nHigh water\n\nTomorrow 6:21pm (5.4m)\n\n\n(heights in metres above Chart Datum)",
+      "pubDate": "Sun 18 Oct 2026, 20:37",
+      "link": "https://www.gov.im/weather/current-shipping-forecast/"
+    }
+  ]
+}
