@@ -1,15 +1,15 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-18T06:54:55.793615+00:00",
-  "lastUpdated": "06:54 UTC",
+  "fetchedAt": "2026-10-18T06:58:58.016678+00:00",
+  "lastUpdated": "06:58 UTC",
   "departures": [
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "08:05",
-      "status": "Gate closed",
+      "status": "Taxied 07:53",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM314",
@@ -41,14 +41,6 @@
       "scheduled": "12:15",
       "status": "On-time",
       "destination": "Dublin",
-      "statusType": "ontime"
-    },
-    {
-      "flightNo": "LM39D",
-      "airline": "Loganair",
-      "scheduled": "13:10",
-      "status": "On-time",
-      "destination": "London Heathrow",
       "statusType": "ontime"
     },
     {
@@ -246,6 +238,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 30,
+  "totalCount": 29,
   "source": "airport.im"
 }
