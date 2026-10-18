@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-18T01:54:39.216030+00:00",
-  "lastUpdated": "01:54 UTC",
+  "fetchedAt": "2026-10-18T01:58:41.088512+00:00",
+  "lastUpdated": "01:58 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -172,8 +172,16 @@
       "status": "On-time",
       "origin": "Dublin",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "16:55",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 22,
   "source": "airport.im"
 }
