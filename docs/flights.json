@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-19T08:12:35.202767+00:00",
-  "lastUpdated": "08:11 UTC",
+  "fetchedAt": "2026-10-19T08:16:37.215862+00:00",
+  "lastUpdated": "08:16 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -31,9 +31,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "10:00",
-      "status": "Boarding shortly",
+      "status": "Delayed 11:00",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM675",
@@ -47,17 +47,17 @@
       "flightNo": "EI3213",
       "airline": "Aer Lingus",
       "scheduled": "12:15",
-      "status": "On-time",
+      "status": "Delayed 12:35",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "12:25",
-      "status": "On-time",
+      "status": "Delayed 12:45",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM637",
@@ -137,17 +137,17 @@
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "09:30",
-      "status": "On-time",
+      "status": "Delayed 10:30",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EI3212",
       "airline": "Aer Lingus",
       "scheduled": "11:45",
-      "status": "On-time",
+      "status": "Delayed 12:05",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM694",
@@ -161,9 +161,9 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "11:55",
-      "status": "On-time",
+      "status": "Delayed 12:15",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY233",
