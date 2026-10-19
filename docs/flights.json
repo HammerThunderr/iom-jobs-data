@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-19T07:56:27.441894+00:00",
-  "lastUpdated": "07:55 UTC",
+  "fetchedAt": "2026-10-19T08:00:29.356290+00:00",
+  "lastUpdated": "07:59 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -92,14 +92,6 @@
       "statusType": "cancelled"
     },
     {
-      "flightNo": "EI17N",
-      "airline": "Aer Lingus",
-      "scheduled": "17:20",
-      "status": "On-time",
-      "destination": "Dublin",
-      "statusType": "ontime"
-    },
-    {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
@@ -134,20 +126,12 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "REV2140",
-      "airline": "RVL Group",
-      "scheduled": "08:41",
-      "status": "Arrived 08:54",
-      "origin": "East Midlands",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Final approach",
+      "status": "Landed 08:55",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
@@ -156,14 +140,6 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
-    },
-    {
-      "flightNo": "REV2143",
-      "airline": "RVL Group",
-      "scheduled": "11:30",
-      "status": "Expected 11:05",
-      "origin": "East Midlands",
-      "statusType": "expected"
     },
     {
       "flightNo": "EI3212",
@@ -214,14 +190,6 @@
       "statusType": "ontime"
     },
     {
-      "flightNo": "EI16M",
-      "airline": "Aer Lingus",
-      "scheduled": "16:31",
-      "status": "On-time",
-      "origin": "Dublin",
-      "statusType": "ontime"
-    },
-    {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
@@ -262,6 +230,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 32,
+  "totalCount": 28,
   "source": "airport.im"
 }
