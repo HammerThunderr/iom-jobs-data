@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-19T20:42:53.635149+00:00",
-  "lastUpdated": "20:42 UTC",
+  "fetchedAt": "2026-10-19T20:46:55.670350+00:00",
+  "lastUpdated": "20:46 UTC",
   "departures": [
     {
       "flightNo": "LM677",
@@ -124,8 +124,16 @@
       "status": "On-time",
       "origin": "London Gatwick",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EI3212",
+      "airline": "Aer Lingus",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "origin": "Dublin",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
