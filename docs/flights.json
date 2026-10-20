@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-20T18:29:24.059875+00:00",
-  "lastUpdated": "18:29 UTC",
+  "fetchedAt": "2026-10-20T18:33:25.966050+00:00",
+  "lastUpdated": "18:33 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -49,6 +49,14 @@
       "scheduled": "07:00",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "09:30",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -110,6 +118,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 13,
+  "totalCount": 14,
   "source": "airport.im"
 }
