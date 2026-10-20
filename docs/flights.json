@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-20T14:02:29.651376+00:00",
-  "lastUpdated": "14:01 UTC",
+  "fetchedAt": "2026-10-20T14:06:32.319906+00:00",
+  "lastUpdated": "14:05 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -31,7 +31,7 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "15:20",
-      "status": "Boarding now",
+      "status": "Gate closed",
       "destination": "Manchester",
       "statusType": "boarding"
     },
@@ -97,9 +97,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "15:25",
-      "status": "Final approach",
+      "status": "Arrived 15:05",
       "origin": "London Heathrow",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
