@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-21T15:25:19.443336+00:00",
-  "lastUpdated": "15:24 UTC",
+  "fetchedAt": "2026-10-21T15:29:21.994407+00:00",
+  "lastUpdated": "15:28 UTC",
   "departures": [
     {
       "flightNo": "LM675",
@@ -63,7 +63,7 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:25",
-      "status": "Delayed 18:50",
+      "status": "Delayed 18:40",
       "destination": "Liverpool",
       "statusType": "delayed"
     }
@@ -113,9 +113,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "Final approach",
+      "status": "Landed 16:25",
       "origin": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "LM698",
