@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-22T12:20:58.226304+00:00",
-  "lastUpdated": "12:20 UTC",
+  "fetchedAt": "2026-10-22T12:25:00.680903+00:00",
+  "lastUpdated": "12:24 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -87,9 +87,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "18:35",
-      "status": "Delayed 18:41",
+      "status": "On-time",
       "destination": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
