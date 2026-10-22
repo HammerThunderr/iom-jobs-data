@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-22T12:59:14+00:00",
+    "generated": "2026-10-22T22:57:44+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,8 +10,8 @@
       },
       {
         "agent": "DeanWood",
-        "count": 448,
-        "withPrice": 441,
+        "count": 449,
+        "withPrice": 442,
         "status": "ok"
       },
       {
@@ -2161,24 +2161,6 @@
       "locality": "Bride",
       "parish": "Bride",
       "postcode": "IM7 4BR",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-22"
-    },
-    {
-      "id": "chr-11085961-myrtle-cottage-the-darragh-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/11085961-myrtle-cottage-the-darragh-port-erin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 239000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "Myrtle Cottage, The Darragh, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6JB",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-22"
     },
@@ -5432,6 +5414,24 @@
       "lastSeen": "2026-10-22"
     },
     {
+      "id": "chr-12916926-25a-whitebridge-road-onchan",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12916926-25a-whitebridge-road-onchan/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 450000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "propertyType": "land",
+      "address": "25A Whitebridge Road, Onchan",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": "IM3 4HJ",
+      "firstSeen": "2026-10-22",
+      "lastSeen": "2026-10-22"
+    },
+    {
       "id": "chr-12918129-erinwood-bay-view-road-port-erin",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12918129-erinwood-bay-view-road-port-erin/",
@@ -5628,6 +5628,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LZ",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-22"
     },
@@ -5923,6 +5924,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 4AA",
+      "status": "under_offer",
       "firstSeen": "2026-10-02",
       "lastSeen": "2026-10-22"
     },
@@ -10177,8 +10179,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Andreas",
-      "parish": "Andreas",
+      "locality": "Lezayre",
+      "parish": "Lezayre",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
@@ -11950,8 +11952,8 @@
       "bathrooms": 1,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
+      "locality": "Michael",
+      "parish": "Michael",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -14388,6 +14390,25 @@
       "postcode": "IM1 2LF",
       "status": "let",
       "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-22"
+    },
+    {
+      "id": "dw-western-avenue-douglas-isle-of-man-im1-4ep",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/western-avenue-douglas-isle-of-man-im1-4ep/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1395,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "end of terrace",
+      "address": "Western Avenue, Douglas, Isle of Man, IM1 4EP",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 4EP",
+      "status": "let",
+      "firstSeen": "2026-10-22",
       "lastSeen": "2026-10-22"
     },
     {
