@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-23T20:47:08.371630+00:00",
-  "lastUpdated": "20:46 UTC",
+  "fetchedAt": "2026-10-23T20:51:10.602926+00:00",
+  "lastUpdated": "20:51 UTC",
   "departures": [
     {
       "flightNo": "EZY234",
@@ -93,14 +93,6 @@
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY233",
-      "airline": "easyJet",
-      "scheduled": "14:15",
-      "status": "Arrived 15:47",
-      "origin": "Bristol",
-      "statusType": "arrived"
-    },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
