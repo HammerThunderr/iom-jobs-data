@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-23T17:36:46.797196+00:00",
-  "lastUpdated": "17:35 UTC",
+  "fetchedAt": "2026-10-23T17:40:48.885161+00:00",
+  "lastUpdated": "17:39 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -9,14 +9,6 @@
       "scheduled": "12:30",
       "status": "Departed 15:02",
       "destination": "London Gatwick",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "12:35",
-      "status": "Departed 12:58",
-      "destination": "Birmingham",
       "statusType": "departed"
     },
     {
@@ -174,6 +166,6 @@
       "statusType": "delayed"
     }
   ],
-  "totalCount": 21,
+  "totalCount": 20,
   "source": "airport.im"
 }
