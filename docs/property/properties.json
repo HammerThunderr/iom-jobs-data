@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated": "2026-10-23T12:49:14+00:00",
+    "generated": "2026-10-23T22:38:59+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 329,
-        "withPrice": 303,
+        "count": 328,
+        "withPrice": 302,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 449,
-        "withPrice": 442,
+        "count": 450,
+        "withPrice": 443,
         "status": "ok"
       },
       {
@@ -4278,24 +4278,6 @@
       "lastSeen": "2026-10-23"
     },
     {
-      "id": "chr-12876639-1-athol-court-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12876639-1-athol-court-port-erin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 310000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "1 Athol Court, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6EJ",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-23"
-    },
-    {
       "id": "chr-12877617-4-magher-donnag-ponyfields-port-erin",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12877617-4-magher-donnag-ponyfields-port-erin/",
@@ -4791,7 +4773,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12893845-muirfield-bradda-west-road-port-erin/",
       "category": "residential",
       "listingType": "sale",
-      "price": 695000,
+      "price": 670000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 5,
@@ -4801,6 +4783,7 @@
       "parish": "Port Erin",
       "postcode": "IM9 6PL",
       "firstSeen": "2026-09-20",
+      "previousPrice": 695000,
       "lastSeen": "2026-10-23"
     },
     {
@@ -5873,6 +5856,7 @@
       "locality": "Castletown",
       "parish": "Castletown",
       "postcode": "IM9 1PE",
+      "status": "under_offer",
       "firstSeen": "2026-10-20",
       "lastSeen": "2026-10-23"
     },
@@ -5891,6 +5875,7 @@
       "locality": "Colby",
       "parish": "Colby",
       "postcode": "IM9 6AG",
+      "status": "under_offer",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-10-23"
     },
@@ -10145,8 +10130,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
@@ -12056,6 +12041,25 @@
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
+      "lastSeen": "2026-10-23"
+    },
+    {
+      "id": "dw-governors-hill-douglas-isle-of-man-im2-7ew",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/governors-hill-douglas-isle-of-man-im2-7ew/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1500,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "terraced",
+      "address": "Governors Hill, Douglas, Isle of Man, IM2 7EW",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 7EW",
+      "status": "let",
+      "firstSeen": "2026-10-23",
       "lastSeen": "2026-10-23"
     },
     {
