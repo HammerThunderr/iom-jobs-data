@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-23T07:53:05.268680+00:00",
-  "lastUpdated": "07:52 UTC",
+  "fetchedAt": "2026-10-23T07:57:07.805189+00:00",
+  "lastUpdated": "07:56 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,9 +47,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "12:30",
-      "status": "On-time",
+      "status": "Cancelled",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "LM637",
@@ -129,9 +129,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Expected 08:53",
+      "status": "On-time",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "ontime"
     },
     {
       "flightNo": "LM313",
@@ -161,9 +161,9 @@
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "12:00",
-      "status": "On-time",
+      "status": "Cancelled",
       "origin": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "EZY233",
