@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-24T23:30:36.807247+00:00",
-  "lastUpdated": "23:30 UTC",
+  "fetchedAt": "2026-10-24T23:34:39.140800+00:00",
+  "lastUpdated": "23:34 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -44,40 +44,7 @@
       "statusType": "ontime"
     }
   ],
-  "arrivals": [
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "19:45",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EZY515",
-      "airline": "easyJet",
-      "scheduled": "07:55",
-      "status": "On-time",
-      "origin": "Liverpool",
-      "statusType": "ontime"
-    },
-    {
-      "flightNo": "EZY835",
-      "airline": "easyJet",
-      "scheduled": "09:45",
-      "status": "On-time",
-      "origin": "London Gatwick",
-      "statusType": "ontime"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "10:30",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    }
-  ],
-  "totalCount": 9,
+  "arrivals": [],
+  "totalCount": 5,
   "source": "airport.im"
 }
