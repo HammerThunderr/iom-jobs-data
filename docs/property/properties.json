@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-24T12:10:58+00:00",
+    "generated": "2026-10-24T21:52:15+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,14 +10,14 @@
       },
       {
         "agent": "DeanWood",
-        "count": 449,
-        "withPrice": 442,
+        "count": 450,
+        "withPrice": 443,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 36,
-        "withPrice": 36,
+        "count": 37,
+        "withPrice": 37,
         "status": "ok"
       }
     ],
@@ -9511,6 +9511,25 @@
       "lastSeen": "2026-10-24"
     },
     {
+      "id": "dw-66-groudle-road-onchan",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/66-groudle-road-onchan/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1650000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "propertyType": "detached",
+      "address": "66 Groudle Road, Onchan",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-24",
+      "lastSeen": "2026-10-24"
+    },
+    {
       "id": "dw-66-saddle-mews-douglas",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/66-saddle-mews-douglas/",
@@ -10111,8 +10130,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Andreas",
-      "parish": "Andreas",
+      "locality": "Lezayre",
+      "parish": "Lezayre",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
@@ -11903,8 +11922,8 @@
       "bathrooms": 1,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
+      "locality": "Michael",
+      "parish": "Michael",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -15144,6 +15163,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 1000000,
+      "lastSeen": "2026-10-24"
+    },
+    {
+      "id": "mm-59-sunningdale-drive-onchan-isle-of-man-im3-1ej",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/59-sunningdale-drive-onchan-isle-of-man-im3-1ej/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 389950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "3  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM3 1EJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-24",
       "lastSeen": "2026-10-24"
     },
     {
