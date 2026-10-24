@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-24T16:26:55.505487+00:00",
-  "lastUpdated": "16:25 UTC",
+  "fetchedAt": "2026-10-24T18:52:25.671924+00:00",
+  "lastUpdated": "18:52 UTC",
   "departures": [
-    {
-      "flightNo": "LM675",
-      "airline": "Loganair",
-      "scheduled": "12:05",
-      "status": "Cancelled",
-      "destination": "London Heathrow",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "EZY520",
       "airline": "easyJet",
@@ -42,33 +34,25 @@
       "status": "Cancelled",
       "destination": "Manchester",
       "statusType": "cancelled"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "08:10",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "08:25",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM682",
-      "airline": "Loganair",
-      "scheduled": "11:35",
-      "status": "Arrived 11:41",
-      "origin": "Liverpool",
-      "statusType": "arrived"
-    },
-    {
-      "flightNo": "EZY519",
-      "airline": "easyJet",
-      "scheduled": "11:40",
-      "status": "Cancelled",
-      "origin": "Liverpool",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "EZY841",
-      "airline": "easyJet",
-      "scheduled": "13:35",
-      "status": "Cancelled",
-      "origin": "London Gatwick",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM676",
       "airline": "Loganair",
@@ -92,8 +76,16 @@
       "status": "Cancelled",
       "origin": "Manchester",
       "statusType": "cancelled"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "07:55",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 10,
   "source": "airport.im"
 }
