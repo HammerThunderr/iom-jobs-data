@@ -1,50 +1,9 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-23T22:27:15.020901+00:00",
-  "lastUpdated": "21:54 23/10/26",
+  "fetchedAt": "2026-10-24T00:55:37.951738+00:00",
+  "lastUpdated": "00:50 24/10/26",
   "totalCount": 12,
   "days": [
-    {
-      "date": "Friday, 23 October 2026",
-      "sailings": [
-        {
-          "departTime": "06:45",
-          "departPort": "Douglas",
-          "arriveTime": "09:30",
-          "arrivePort": "Larne",
-          "ferry": "Manannan",
-          "status": "Cancelled",
-          "statusType": "cancelled"
-        },
-        {
-          "departTime": "10:45",
-          "departPort": "Larne",
-          "arriveTime": "13:30",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Cancelled",
-          "statusType": "cancelled"
-        },
-        {
-          "departTime": "15:00",
-          "departPort": "Douglas",
-          "arriveTime": "17:45",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Cancelled",
-          "statusType": "cancelled"
-        },
-        {
-          "departTime": "19:15",
-          "departPort": "Liverpool",
-          "arriveTime": "22:00",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Cancelled",
-          "statusType": "cancelled"
-        }
-      ]
-    },
     {
       "date": "Saturday, 24 October 2026",
       "sailings": [
@@ -117,6 +76,47 @@
     {
       "date": "Tuesday, 27 October 2026",
       "sailings": [
+        {
+          "departTime": "15:00",
+          "departPort": "Douglas",
+          "arriveTime": "17:45",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Liverpool",
+          "arriveTime": "22:00",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Wednesday, 28 October 2026",
+      "sailings": [
+        {
+          "departTime": "06:45",
+          "departPort": "Douglas",
+          "arriveTime": "09:30",
+          "arrivePort": "Larne",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "10:45",
+          "departPort": "Larne",
+          "arriveTime": "13:30",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
         {
           "departTime": "15:00",
           "departPort": "Douglas",
