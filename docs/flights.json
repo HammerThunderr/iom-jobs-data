@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-24T18:52:25.671924+00:00",
-  "lastUpdated": "18:52 UTC",
+  "fetchedAt": "2026-10-24T18:56:28.267834+00:00",
+  "lastUpdated": "18:56 UTC",
   "departures": [
-    {
-      "flightNo": "EZY520",
-      "airline": "easyJet",
-      "scheduled": "12:10",
-      "status": "Cancelled",
-      "destination": "Liverpool",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -86,6 +78,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 9,
   "source": "airport.im"
 }
