@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-25T06:41:03.988501+00:00",
-  "lastUpdated": "06:40 UTC",
+  "fetchedAt": "2026-10-25T11:50:26.184140+00:00",
+  "lastUpdated": "11:50 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "12:45",
-      "status": "On-time",
+      "status": "Cancelled",
       "destination": "Edinburgh",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "LM697",
@@ -68,20 +68,28 @@
       "statusType": "cancelled"
     },
     {
+      "flightNo": "BT7814",
+      "airline": "Air Baltic",
+      "scheduled": "15:40",
+      "status": "Cancelled",
+      "destination": "Tenerife South",
+      "statusType": "cancelled"
+    },
+    {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "On-time",
+      "status": "Cancelled",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "On-time",
+      "status": "Cancelled",
       "destination": "Dublin",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "LM687",
@@ -161,25 +169,17 @@
       "flightNo": "LM313",
       "airline": "Loganair",
       "scheduled": "15:35",
-      "status": "On-time",
+      "status": "Cancelled",
       "origin": "Edinburgh",
-      "statusType": "ontime"
-    },
-    {
-      "flightNo": "EI16M",
-      "airline": "Aer Lingus",
-      "scheduled": "16:31",
-      "status": "On-time",
-      "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Cancelled",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     },
     {
       "flightNo": "LM698",
@@ -217,9 +217,9 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "19:50",
-      "status": "On-time",
+      "status": "Cancelled",
       "origin": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "cancelled"
     }
   ],
   "totalCount": 27,
