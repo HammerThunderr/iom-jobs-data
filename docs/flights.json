@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-25T18:44:39.469838+00:00",
-  "lastUpdated": "18:44 UTC",
+  "fetchedAt": "2026-10-25T18:48:41.622944+00:00",
+  "lastUpdated": "18:48 UTC",
   "departures": [
-    {
-      "flightNo": "LM314",
-      "airline": "Loganair",
-      "scheduled": "12:45",
-      "status": "Cancelled",
-      "destination": "Edinburgh",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM697",
       "airline": "Loganair",
@@ -230,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 28,
+  "totalCount": 27,
   "source": "airport.im"
 }
