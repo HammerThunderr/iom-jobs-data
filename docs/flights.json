@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-25T18:40:36.911073+00:00",
-  "lastUpdated": "18:39 UTC",
+  "fetchedAt": "2026-10-25T18:44:39.469838+00:00",
+  "lastUpdated": "18:44 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -71,9 +71,9 @@
       "flightNo": "EZY518",
       "airline": "easyJet",
       "scheduled": "18:10",
-      "status": "Gate closed",
+      "status": "Departed 18:43",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY842",
@@ -121,6 +121,14 @@
       "scheduled": "08:30",
       "status": "On-time",
       "destination": "Malaga",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY716",
+      "airline": "easyJet",
+      "scheduled": "08:40",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
@@ -222,6 +230,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 27,
+  "totalCount": 28,
   "source": "airport.im"
 }
