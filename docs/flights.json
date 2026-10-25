@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-25T18:28:29.941867+00:00",
-  "lastUpdated": "18:28 UTC",
+  "fetchedAt": "2026-10-25T18:32:32.303659+00:00",
+  "lastUpdated": "18:31 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -114,6 +114,14 @@
       "status": "On-time",
       "destination": "Tenerife South",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "BA4535",
+      "airline": "British Airways",
+      "scheduled": "08:30",
+      "status": "On-time",
+      "destination": "Malaga",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -177,9 +185,9 @@
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "19:35",
-      "status": "Delayed 19:45",
+      "status": "On-time",
       "origin": "London Gatwick",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "LM688",
@@ -214,6 +222,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 26,
+  "totalCount": 27,
   "source": "airport.im"
 }
