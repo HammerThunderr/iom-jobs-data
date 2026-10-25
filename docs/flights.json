@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-24T23:46:45.727550+00:00",
-  "lastUpdated": "23:46 UTC",
+  "fetchedAt": "2026-10-25T01:21:53.030093+00:00",
+  "lastUpdated": "01:21 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -42,17 +42,25 @@
       "status": "On-time",
       "destination": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM697",
+      "airline": "Loganair",
+      "scheduled": "14:35",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY716",
+      "airline": "easyJet",
+      "scheduled": "15:00",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "19:45",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "EZY515",
       "airline": "easyJet",
@@ -84,8 +92,24 @@
       "status": "Cancelled",
       "origin": "Birmingham",
       "statusType": "cancelled"
+    },
+    {
+      "flightNo": "EZY715",
+      "airline": "easyJet",
+      "scheduled": "14:30",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY839",
+      "airline": "easyJet",
+      "scheduled": "15:05",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 10,
+  "totalCount": 13,
   "source": "airport.im"
 }
