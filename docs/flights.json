@@ -1,24 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-25T15:28:37.831345+00:00",
-  "lastUpdated": "15:27 UTC",
+  "fetchedAt": "2026-10-25T18:28:29.941867+00:00",
+  "lastUpdated": "18:28 UTC",
   "departures": [
-    {
-      "flightNo": "EZY836",
-      "airline": "easyJet",
-      "scheduled": "10:15",
-      "status": "Cancelled",
-      "destination": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM637",
-      "airline": "Loganair",
-      "scheduled": "11:00",
-      "status": "Cancelled",
-      "destination": "Birmingham",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM314",
       "airline": "Loganair",
@@ -31,9 +15,9 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "14:35",
-      "status": "Gate closed",
+      "status": "Departed 16:10",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "EZY716",
@@ -79,7 +63,7 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Delayed 18:31",
+      "status": "Delayed 19:00",
       "destination": "Liverpool",
       "statusType": "delayed"
     },
@@ -87,9 +71,9 @@
       "flightNo": "EZY518",
       "airline": "easyJet",
       "scheduled": "18:10",
-      "status": "On-time",
+      "status": "Gate closed",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY842",
@@ -98,25 +82,41 @@
       "status": "Delayed 20:20",
       "destination": "London Gatwick",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM673",
+      "airline": "Loganair",
+      "scheduled": "07:25",
+      "status": "On-time",
+      "destination": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY516",
+      "airline": "easyJet",
+      "scheduled": "08:15",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "BT7814",
+      "airline": "Air Baltic",
+      "scheduled": "08:20",
+      "status": "On-time",
+      "destination": "Tenerife South",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
-    {
-      "flightNo": "EZY835",
-      "airline": "easyJet",
-      "scheduled": "09:45",
-      "status": "Cancelled",
-      "origin": "London Gatwick",
-      "statusType": "cancelled"
-    },
-    {
-      "flightNo": "LM694",
-      "airline": "Loganair",
-      "scheduled": "10:30",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
     {
       "flightNo": "LM638",
       "airline": "Loganair",
@@ -161,17 +161,17 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Delayed 17:25",
+      "status": "Landed 18:11",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "17:40",
-      "status": "On-time",
+      "status": "Arrived 17:58",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY841",
@@ -185,9 +185,9 @@
       "flightNo": "LM688",
       "airline": "Loganair",
       "scheduled": "19:40",
-      "status": "On-time",
+      "status": "Delayed 20:30",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM676",
@@ -196,8 +196,24 @@
       "status": "Cancelled",
       "origin": "London Heathrow",
       "statusType": "cancelled"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "07:45",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY715",
+      "airline": "easyJet",
+      "scheduled": "08:10",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 26,
   "source": "airport.im"
 }
