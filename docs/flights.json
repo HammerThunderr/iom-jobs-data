@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-26T23:30:11.501342+00:00",
-  "lastUpdated": "23:29 UTC",
+  "fetchedAt": "2026-10-26T23:34:13.994434+00:00",
+  "lastUpdated": "23:33 UTC",
   "departures": [
     {
       "flightNo": "EI3217",
@@ -70,14 +70,6 @@
       "statusType": "cancelled"
     },
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "19:50",
@@ -142,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 16,
   "source": "airport.im"
 }
