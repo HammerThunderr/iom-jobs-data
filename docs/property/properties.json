@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-10-26T13:53:45+00:00",
+    "generated": "2026-10-26T23:54:37+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 329,
-        "withPrice": 303,
+        "count": 327,
+        "withPrice": 301,
         "status": "ok"
       },
       {
@@ -5582,25 +5582,6 @@
       "lastSeen": "2026-10-26"
     },
     {
-      "id": "chr-11510672-kingswood-grove-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/11510672-kingswood-grove-douglas/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1850,
-      "priceQualifier": "pcm",
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "propertyType": "land",
-      "address": "Kingswood Grove, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 3LY",
-      "status": "let_stc",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-26"
-    },
-    {
       "id": "chr-11875803-46-loch-promenade-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/11875803-46-loch-promenade-douglas/",
@@ -5708,7 +5689,7 @@
       "locality": "Union Mills",
       "parish": "Union Mills",
       "postcode": "IM4 4NZ",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-26"
     },
@@ -5765,25 +5746,6 @@
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
       "firstSeen": "2026-09-29",
-      "lastSeen": "2026-10-26"
-    },
-    {
-      "id": "chr-12919508-10-bridge-street-peel",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/12919508-10-bridge-street-peel/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1150,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "10 Bridge Street, Peel",
-      "locality": "Peel",
-      "parish": "Peel",
-      "postcode": "IM5 1NB",
-      "status": "under_offer",
-      "firstSeen": "2026-10-14",
       "lastSeen": "2026-10-26"
     },
     {
@@ -5918,25 +5880,6 @@
       "lastSeen": "2026-10-26"
     },
     {
-      "id": "chr-7130416-osborne-terrace-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/7130416-osborne-terrace-douglas/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 975,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "Osborne Terrace, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 3LH",
-      "status": "let_stc",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-26"
-    },
-    {
       "id": "chr-7130465-osborne-terrace-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/7130465-osborne-terrace-douglas/",
@@ -5990,6 +5933,24 @@
       "parish": "Baldrine",
       "postcode": "IM4 6AF",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-10-26"
+    },
+    {
+      "id": "chr-9996791-ballaughton-lane-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/9996791-ballaughton-lane-douglas/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1250,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "Ballaughton Lane, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 1LA",
+      "firstSeen": "2026-10-26",
       "lastSeen": "2026-10-26"
     },
     {
@@ -10168,8 +10129,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
@@ -12790,7 +12751,7 @@
       "url": "https://deanwood.im/property/meadow-view-8-ellenbrook-drive-douglas/",
       "category": "residential",
       "listingType": "sale",
-      "price": 725000,
+      "price": 699950,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 3,
@@ -12801,6 +12762,7 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-12",
+      "previousPrice": 725000,
       "lastSeen": "2026-10-26"
     },
     {
