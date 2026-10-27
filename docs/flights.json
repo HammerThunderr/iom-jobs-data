@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-27T23:29:39.936413+00:00",
-  "lastUpdated": "23:28 UTC",
+  "fetchedAt": "2026-10-27T23:33:41.700394+00:00",
+  "lastUpdated": "23:32 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -70,14 +70,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM698",
-      "airline": "Loganair",
-      "scheduled": "17:30",
-      "status": "Cancelled",
-      "origin": "Manchester",
-      "statusType": "cancelled"
-    },
-    {
       "flightNo": "EZY841",
       "airline": "easyJet",
       "scheduled": "18:50",
@@ -142,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 17,
+  "totalCount": 16,
   "source": "airport.im"
 }
