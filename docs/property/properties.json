@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-27T13:31:14+00:00",
+    "generated": "2026-10-27T23:27:56+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,15 +10,15 @@
       },
       {
         "agent": "DeanWood",
-        "count": 448,
-        "withPrice": 441,
+        "count": 446,
+        "withPrice": 439,
         "status": "ok"
       },
       {
         "agent": "Manxmove",
-        "count": 37,
-        "withPrice": 37,
-        "status": "ok"
+        "count": 0,
+        "status": "failed",
+        "error": "no listing URLs discovered"
       }
     ],
     "disclaimer": "Listings collected from Isle of Man estate agent websites. Always confirm price, status and availability with the agent. Manx One is not an estate agent and is not affiliated with any agency listed."
@@ -5708,7 +5708,7 @@
       "locality": "Kirk Michael",
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-10-27"
     },
@@ -5799,7 +5799,7 @@
       "locality": "Foxdale",
       "parish": "Foxdale",
       "postcode": "IM4 3BB",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-10-15",
       "lastSeen": "2026-10-27"
     },
@@ -7265,44 +7265,6 @@
       "lastSeen": "2026-10-27"
     },
     {
-      "id": "dw-2-15-mount-murray-drive",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/2-15-mount-murray-drive/",
-      "category": "commercial",
-      "listingType": "rent",
-      "price": 54000,
-      "priceQualifier": "rent",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "parking / garage",
-      "address": "2 & 15 Mount Murray Drive",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM1 2LF",
-      "status": "let",
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-27"
-    },
-    {
-      "id": "dw-2-auckland-grove-douglas-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/2-auckland-grove-douglas-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 365000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "terraced",
-      "address": "2 Auckland Grove, Douglas, Isle of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-10-27"
-    },
-    {
       "id": "dw-2-chapel-terrace-glen-road-laxey",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/2-chapel-terrace-glen-road-laxey/",
@@ -7567,25 +7529,6 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-10-27"
-    },
-    {
-      "id": "dw-20-spectrum-apartments-central-promenade-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/20-spectrum-apartments-central-promenade-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 159000,
-      "priceQualifier": "asking",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "20 Spectrum Apartments, Central Promenade, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-01",
       "lastSeen": "2026-10-27"
     },
     {
@@ -10117,25 +10060,6 @@
       "lastSeen": "2026-10-27"
     },
     {
-      "id": "dw-andreas-road-the-dhoor-lezayre",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/andreas-road-the-dhoor-lezayre/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 875000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 5,
-      "propertyType": "detached",
-      "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
-      "postcode": "IM8 1AJ",
-      "status": "for_sale",
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-10-27"
-    },
-    {
       "id": "dw-annex-1-mount-auldyn-house-jurby-road-ramsey",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/annex-1-mount-auldyn-house-jurby-road-ramsey/",
@@ -11469,6 +11393,25 @@
       "postcode": "IM1 2LF",
       "status": "let",
       "firstSeen": "2026-10-01",
+      "lastSeen": "2026-10-27"
+    },
+    {
+      "id": "dw-dhoor-school-house-andreas-road-the-dhoor-lezayre",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/dhoor-school-house-andreas-road-the-dhoor-lezayre/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 875000,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "propertyType": "detached",
+      "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-27",
       "lastSeen": "2026-10-27"
     },
     {
@@ -14039,6 +13982,25 @@
       "lastSeen": "2026-10-27"
     },
     {
+      "id": "dw-thie-dhoo-woodlands-close-douglas-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/thie-dhoo-woodlands-close-douglas-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 589950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "propertyType": "bungalow",
+      "address": "Thie Dhoo, Woodlands Close, Douglas, Isle Of Man",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-27",
+      "lastSeen": "2026-10-27"
+    },
+    {
       "id": "dw-thie-dhorlish-rhenab-road-ramsey-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/thie-dhorlish-rhenab-road-ramsey-isle-of-man/",
@@ -14492,7 +14454,8 @@
       "postcode": "IM2 1HU",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-3-taubman-terrace-im1-5bb",
@@ -14511,7 +14474,8 @@
       "postcode": "IM1 5BB",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-128-maghergarran-port-erin-im9-6da",
@@ -14530,7 +14494,8 @@
       "postcode": "IM9 6DA",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-39-groudle-road-onchan-isle-of-man-im3-2ef",
@@ -14549,7 +14514,8 @@
       "postcode": "IM3 2EF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-46-maple-avenue-onchan-im3-3hn",
@@ -14568,7 +14534,8 @@
       "postcode": "IM3 3HN",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-flat-3-11-fort-william-douglas-im1-5bq",
@@ -14588,7 +14555,8 @@
       "status": "for_sale",
       "firstSeen": "2026-10-15",
       "previousPrice": 1600,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-flat-3-12-derby-road-douglas-im2-3et",
@@ -14607,7 +14575,8 @@
       "postcode": "IM2 3ET",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-tower-view-shore-road-port-erin-im9-6hh",
@@ -14626,7 +14595,8 @@
       "postcode": "IM9 6HH",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-46-ard-reayrt-laxey-isle-of-man-im4-7qp",
@@ -14645,7 +14615,8 @@
       "postcode": "IM4 7QP",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-baare-conney-minorca-hill-laxey-isle-of-man-im4-7eb",
@@ -14664,7 +14635,8 @@
       "postcode": "IM4 7EB",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-kiwi-lodge-ballamenagh-road-baldrine-isle-of-man-im4-6ah",
@@ -14683,7 +14655,8 @@
       "postcode": "IM4 6AH",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-beachway-derbyhaven-isle-of-man-im9-1ts",
@@ -14702,7 +14675,8 @@
       "postcode": "IM9 1TS",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-12-princes-street-isle-of-man-im1-1bd",
@@ -14722,7 +14696,8 @@
       "status": "for_sale",
       "firstSeen": "2026-09-27",
       "previousPrice": 320000,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-16-cronk-y-berry-mooar-isle-of-man-im2-6hj",
@@ -14741,7 +14716,8 @@
       "postcode": "IM2 6HJ",
       "status": "for_sale",
       "firstSeen": "2026-10-24",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-1-2-cliff-cottages-pinfold-hill-laxey-im4-7hl",
@@ -14760,7 +14736,8 @@
       "postcode": "IM4 7HL",
       "status": "for_sale",
       "firstSeen": "2026-10-16",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-14-stevenson-court-douglas-im2-2eh",
@@ -14779,7 +14756,8 @@
       "postcode": "IM2 2EH",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-2-selborne-road-douglas-im1-4bu",
@@ -14798,7 +14776,8 @@
       "postcode": "IM1 4BU",
       "status": "for_sale",
       "firstSeen": "2026-10-23",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-3-dumbells-terrace-laxey-im4-7ny",
@@ -14817,7 +14796,8 @@
       "postcode": "IM4 7NY",
       "status": "for_sale",
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-59-cronk-ny-greiney-douglas-im2-5lh",
@@ -14837,7 +14817,8 @@
       "status": "for_sale",
       "firstSeen": "2026-09-27",
       "previousPrice": 735000,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-69-cronk-liauyr-douglas-im2-5lx",
@@ -14856,7 +14837,8 @@
       "postcode": "IM2 5LX",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-9-cooil-drive-douglas-im2-2hg",
@@ -14875,7 +14857,8 @@
       "postcode": "IM2 2HG",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-alijo-37-cannan-avenue-kirk-michael-im6-1hg",
@@ -14894,7 +14877,8 @@
       "postcode": "IM6 1HG",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-auldyn-6-greeba-avenue-glen-vine-im4-4ed",
@@ -14914,7 +14898,8 @@
       "status": "for_sale",
       "firstSeen": "2026-10-06",
       "previousPrice": 364950,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-ballavane-fistard-port-st-mary-im9-5pq",
@@ -14933,7 +14918,8 @@
       "postcode": "IM9 5PQ",
       "status": "for_sale",
       "firstSeen": "2026-10-09",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-balley-beg-23a-douglas-street-peel-im5-1ba",
@@ -14952,7 +14938,8 @@
       "postcode": "IM5 1BA",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-building-plot-24-birch-hill-grove-onchan-im3-4en",
@@ -14971,7 +14958,8 @@
       "postcode": "IM3 4EN",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-eaton-lodge-fairfield-avenue-ramsey-im8-2ls",
@@ -14990,7 +14978,8 @@
       "postcode": "IM8 2LS",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-grosvenor-court-apartments-flat-8-1-central-promenade-douglas-im2-4ln",
@@ -15009,7 +14998,8 @@
       "postcode": "IM2 4LN",
       "status": "for_sale",
       "firstSeen": "2026-10-16",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-plaxtole-30-bowling-green-road-castletown-im9-1eb",
@@ -15028,7 +15018,8 @@
       "postcode": "IM9 1EB",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-rose-cottage-laxey-im4-7bu",
@@ -15047,7 +15038,8 @@
       "postcode": "IM4 7BU",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-second-floor-flat-36-castlemona-avenue-douglas-im2-4eg",
@@ -15066,7 +15058,8 @@
       "postcode": "IM2 4EG",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-southview-minorca-hill-laxey-im4-7dp",
@@ -15085,7 +15078,8 @@
       "postcode": "IM4 7DP",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-looking-for-an-iom-property-we-can-help-isle-of-man-im2-4hd",
@@ -15105,7 +15099,8 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 1000000,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-59-sunningdale-drive-onchan-isle-of-man-im3-1ej",
@@ -15124,7 +15119,8 @@
       "postcode": "IM3 1EJ",
       "status": "for_sale",
       "firstSeen": "2026-10-24",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-bluebell-cottage-ramsey-im7-4af",
@@ -15143,7 +15139,8 @@
       "postcode": "IM7 4AF",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-high-value-homes-wanted-cash-buyers-waiting-get-in-touch-isle-of-man-im2-4hd",
@@ -15163,7 +15160,8 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     },
     {
       "id": "mm-valhalla-agneash-isle-of-man-im4-7np",
@@ -15182,7 +15180,8 @@
       "postcode": "IM4 7NP",
       "status": "for_sale",
       "firstSeen": "2026-10-16",
-      "lastSeen": "2026-10-27"
+      "lastSeen": "2026-10-27",
+      "stale": true
     }
   ]
 }
