@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated": "2026-10-28T14:03:20+00:00",
+    "generated": "2026-10-28T23:55:14+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 328,
-        "withPrice": 301,
+        "count": 329,
+        "withPrice": 302,
         "status": "ok"
       },
       {
         "agent": "DeanWood",
-        "count": 448,
-        "withPrice": 441,
+        "count": 450,
+        "withPrice": 443,
         "status": "ok"
       },
       {
@@ -1530,6 +1530,24 @@
       "parish": "Douglas",
       "postcode": "IM2 4EF",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "id": "chr-12835584-albany-road-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12835584-albany-road-douglas/",
+      "category": "commercial",
+      "listingType": "sale",
+      "price": 499000,
+      "priceQualifier": "asking",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Albany Road, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 3AJ",
+      "firstSeen": "2026-10-28",
       "lastSeen": "2026-10-28"
     },
     {
@@ -6014,7 +6032,7 @@
       "url": "https://deanwood.im/property/1-college-green-castletown-isle-of-man/",
       "category": "residential",
       "listingType": "sale",
-      "price": 350000,
+      "price": 325000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -6025,6 +6043,7 @@
       "postcode": "IM9 1LF",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
+      "previousPrice": 350000,
       "lastSeen": "2026-10-28"
     },
     {
@@ -11050,6 +11069,25 @@
       "lastSeen": "2026-10-28"
     },
     {
+      "id": "dw-burn-brae-main-road-glen-vine-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/burn-brae-main-road-glen-vine-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 849950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "propertyType": "detached",
+      "address": "Burn Brae, Main Road, Glen Vine, Isle Of Man",
+      "locality": "Glen Vine",
+      "parish": "Glen Vine",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-28",
+      "lastSeen": "2026-10-28"
+    },
+    {
       "id": "dw-captains-quarters-41-scarlett-road-castletown-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/captains-quarters-41-scarlett-road-castletown-isle-of-man/",
@@ -11463,8 +11501,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -11528,25 +11566,6 @@
       "lastSeen": "2026-10-28"
     },
     {
-      "id": "dw-dreeym-beary-tromode-park-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/dreeym-beary-tromode-park-douglas/",
-      "category": "land",
-      "listingType": "sale",
-      "price": 190000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "land",
-      "address": "Dreeym Beary, Tromode Park, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-10-28"
-    },
-    {
       "id": "dw-duke-street",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/duke-street/",
@@ -11582,6 +11601,25 @@
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "id": "dw-east-ballabane-farmhouse-andreas-ramsey-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/east-ballabane-farmhouse-andreas-ramsey-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 829950,
+      "priceQualifier": "asking",
+      "bedrooms": 10,
+      "bathrooms": 10,
+      "propertyType": "cottage",
+      "address": "East Ballabane Farmhouse, Andreas, Ramsey, Isle Of Man",
+      "locality": "Andreas",
+      "parish": "Andreas",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-28",
       "lastSeen": "2026-10-28"
     },
     {
@@ -11919,8 +11957,8 @@
       "bathrooms": 1,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Michael",
-      "parish": "Michael",
+      "locality": "Douglas",
+      "parish": "Douglas",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -13445,6 +13483,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-10-28"
+    },
+    {
+      "id": "dw-skyrwyllin-main-road-union-mills",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/skyrwyllin-main-road-union-mills/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 595000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "bungalow",
+      "address": "Skyrwyllin, Main Road, Union Mills",
+      "locality": "Union Mills",
+      "parish": "Union Mills",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-10-28",
       "lastSeen": "2026-10-28"
     },
     {
