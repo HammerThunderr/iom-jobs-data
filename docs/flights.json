@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-28T08:54:35.496847+00:00",
-  "lastUpdated": "08:54 UTC",
+  "fetchedAt": "2026-10-28T08:58:37.554338+00:00",
+  "lastUpdated": "08:58 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,9 +23,9 @@
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "On-time",
+      "status": "Delayed 09:50",
       "destination": "Manchester",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY840",
@@ -113,9 +113,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "On-time",
+      "status": "Delayed 09:33",
       "origin": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "EZY839",
