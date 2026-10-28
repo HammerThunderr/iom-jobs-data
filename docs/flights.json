@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-28T15:41:09.017549+00:00",
-  "lastUpdated": "15:40 UTC",
+  "fetchedAt": "2026-10-28T15:45:14.308600+00:00",
+  "lastUpdated": "15:44 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -47,15 +47,15 @@
       "flightNo": "EI3017",
       "airline": "Aer Lingus",
       "scheduled": "15:30",
-      "status": "Gate closed",
+      "status": "Departed 15:42",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "London Heathrow",
       "statusType": "boarding"
     },
