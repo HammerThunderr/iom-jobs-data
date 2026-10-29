@@ -1,10 +1,10 @@
 {
   "meta": {
-    "generated": "2026-10-29T13:07:59+00:00",
+    "generated": "2026-10-29T23:10:33+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 329,
+        "count": 330,
         "withPrice": 302,
         "status": "ok"
       },
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 36,
-        "withPrice": 36,
+        "count": 37,
+        "withPrice": 37,
         "status": "ok"
       }
     ],
@@ -933,6 +933,24 @@
       "postcode": "IM1 1AJ",
       "status": "let_stc",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-10-29"
+    },
+    {
+      "id": "chr-12906928-parliament-street-ramsey",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12906928-parliament-street-ramsey/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Parliament Street, Ramsey",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 1AW",
+      "firstSeen": "2026-10-29",
       "lastSeen": "2026-10-29"
     },
     {
@@ -5930,7 +5948,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 3LH",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-29"
     },
@@ -6316,6 +6334,25 @@
       "lastSeen": "2026-10-29"
     },
     {
+      "id": "mm-23-mona-street-peel-im5-1hj",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/23-mona-street-peel-im5-1hj/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 295000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "4  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM5 1HJ",
+      "status": "for_sale",
+      "firstSeen": "2026-10-29",
+      "lastSeen": "2026-10-29"
+    },
+    {
       "id": "mm-3-dumbells-terrace-laxey-im4-7ny",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/3-dumbells-terrace-laxey-im4-7ny/",
@@ -6474,7 +6511,7 @@
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/eaton-lodge-fairfield-avenue-ramsey-im8-2ls/",
       "category": "residential",
       "listingType": "sale",
-      "price": 385000,
+      "price": 375000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": null,
@@ -6485,6 +6522,7 @@
       "postcode": "IM8 2LS",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
+      "previousPrice": 385000,
       "lastSeen": "2026-10-29"
     },
     {
