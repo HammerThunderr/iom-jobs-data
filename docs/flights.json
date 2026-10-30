@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-30T20:55:06.883249+00:00",
-  "lastUpdated": "20:54 UTC",
+  "fetchedAt": "2026-10-30T20:59:09.557346+00:00",
+  "lastUpdated": "20:58 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -196,8 +196,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY517",
+      "airline": "easyJet",
+      "scheduled": "10:55",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 25,
   "source": "airport.im"
 }
