@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-10-30T12:58:24+00:00",
+    "generated": "2026-10-30T22:38:51+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 331,
-        "withPrice": 303,
+        "count": 329,
+        "withPrice": 301,
         "status": "ok"
       },
       {
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 37,
-        "withPrice": 37,
+        "count": 38,
+        "withPrice": 38,
         "status": "ok"
       }
     ],
@@ -2403,24 +2403,6 @@
       "lastSeen": "2026-10-30"
     },
     {
-      "id": "chr-12028212-10-erin-lane-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12028212-10-erin-lane-port-erin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 489000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "propertyType": "land",
-      "address": "10 Erin Lane, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6EF",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-30"
-    },
-    {
       "id": "chr-12165782-27-st-ninians-court-st-ninians-road-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12165782-27-st-ninians-court-st-ninians-road-douglas/",
@@ -2833,24 +2815,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 6AN",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-30"
-    },
-    {
-      "id": "chr-12605717-37-droghadfayle-road-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12605717-37-droghadfayle-road-port-erin/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 525000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "propertyType": "land",
-      "address": "37 Droghadfayle Road, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6EN",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-10-30"
     },
@@ -5564,6 +5528,24 @@
       "lastSeen": "2026-10-30"
     },
     {
+      "id": "chr-12925784-1-erin-rise-port-erin",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12925784-1-erin-rise-port-erin/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 539000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "1 Erin Rise, Port Erin",
+      "locality": "Port Erin",
+      "parish": "Port Erin",
+      "postcode": "IM9 6FF",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
       "id": "chr-6644240-bolivia-mount-the-dhoor-lezayre",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/6644240-bolivia-mount-the-dhoor-lezayre/",
@@ -5763,25 +5745,6 @@
       "postcode": "IM4 4NZ",
       "status": "let_stc",
       "firstSeen": "2026-09-20",
-      "lastSeen": "2026-10-30"
-    },
-    {
-      "id": "chr-12914516-orrisdale-cottages-orrisdale-loop-road-kirk-michael",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/12914516-orrisdale-cottages-orrisdale-loop-road-kirk-michael/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1000,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "Orrisdale Cottages Orrisdale Loop Road, Kirk Michael",
-      "locality": "Kirk Michael",
-      "parish": "Kirk Michael",
-      "postcode": "IM6 2HP",
-      "status": "let_stc",
-      "firstSeen": "2026-09-29",
       "lastSeen": "2026-10-30"
     },
     {
@@ -6085,6 +6048,25 @@
       "lastSeen": "2026-10-30"
     },
     {
+      "id": "mm-23-cronk-drean-douglas-im2-6au",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/letting/isle-of-man/isle-of-man/23-cronk-drean-douglas-im2-6au/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 3250,
+      "priceQualifier": "pcm",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "propertyType": "detached",
+      "address": "5  Bed  Detached house For  Rent",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM2 6AU",
+      "status": "for_sale",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
       "id": "mm-39-groudle-road-onchan-isle-of-man-im3-2ef",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/letting/isle-of-man/isle-of-man/39-groudle-road-onchan-isle-of-man-im3-2ef/",
@@ -6315,25 +6297,6 @@
       "lastSeen": "2026-10-30"
     },
     {
-      "id": "mm-14-stevenson-court-douglas-im2-2eh",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/14-stevenson-court-douglas-im2-2eh/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 220000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "apartment",
-      "address": "2  Bed  Apartment For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM2 2EH",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-10-30"
-    },
-    {
       "id": "mm-2-selborne-road-douglas-im1-4bu",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/2-selborne-road-douglas-im1-4bu/",
@@ -6545,25 +6508,6 @@
       "lastSeen": "2026-10-30"
     },
     {
-      "id": "mm-grosvenor-court-apartments-flat-8-1-central-promenade-douglas-im2-4ln",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/grosvenor-court-apartments-flat-8-1-central-promenade-douglas-im2-4ln/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 179950,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "2  Bed  Apartment For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM2 4LN",
-      "status": "for_sale",
-      "firstSeen": "2026-10-16",
-      "lastSeen": "2026-10-30"
-    },
-    {
       "id": "mm-plaxtole-30-bowling-green-road-castletown-im9-1eb",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/plaxtole-30-bowling-green-road-castletown-im9-1eb/",
@@ -6698,6 +6642,25 @@
       "lastSeen": "2026-10-30"
     },
     {
+      "id": "mm-cronkould-bungalow-main-road-ballaugh-isle-of-man-im7-5ed",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/cronkould-bungalow-main-road-ballaugh-isle-of-man-im7-5ed/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 665000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "bungalow",
+      "address": "3  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM7 5ED",
+      "status": "for_sale",
+      "firstSeen": "2026-10-30",
+      "lastSeen": "2026-10-30"
+    },
+    {
       "id": "mm-high-value-homes-wanted-cash-buyers-waiting-get-in-touch-isle-of-man-im2-4hd",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/high-value-homes-wanted-cash-buyers-waiting-get-in-touch-isle-of-man-im2-4hd/",
@@ -6715,6 +6678,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
+      "lastSeen": "2026-10-30"
+    },
+    {
+      "id": "mm-the-old-bakery-6-christian-street-ramsey-isle-of-man-im8-1dg",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/the-old-bakery-6-christian-street-ramsey-isle-of-man-im8-1dg/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 700000,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "propertyType": "house",
+      "address": "5  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM8 1DG",
+      "status": "for_sale",
+      "firstSeen": "2026-10-30",
       "lastSeen": "2026-10-30"
     },
     {
