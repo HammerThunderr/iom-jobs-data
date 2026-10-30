@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-30T09:09:57.856466+00:00",
-  "lastUpdated": "09:09 UTC",
+  "fetchedAt": "2026-10-30T09:13:59.734960+00:00",
+  "lastUpdated": "09:13 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -23,9 +23,9 @@
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "09:30",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Manchester",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY516",
