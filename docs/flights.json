@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-31T20:15:41.554831+00:00",
-  "lastUpdated": "20:15 UTC",
+  "fetchedAt": "2026-10-31T20:19:43.953568+00:00",
+  "lastUpdated": "20:19 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -50,6 +50,14 @@
       "status": "On-time",
       "destination": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY836",
+      "airline": "easyJet",
+      "scheduled": "10:15",
+      "status": "On-time",
+      "destination": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -94,6 +102,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 11,
+  "totalCount": 12,
   "source": "airport.im"
 }
