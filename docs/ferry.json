@@ -1,32 +1,9 @@
 {
   "success": true,
-  "fetchedAt": "2026-10-31T22:26:48.435070+00:00",
-  "lastUpdated": "19:03 31/10/26",
-  "totalCount": 10,
+  "fetchedAt": "2026-11-01T01:19:55.202329+00:00",
+  "lastUpdated": "05:00 18/09/26",
+  "totalCount": 9,
   "days": [
-    {
-      "date": "Saturday, 31 October 2026",
-      "sailings": [
-        {
-          "departTime": "09:49",
-          "departPort": "Douglas",
-          "arriveTime": "12:23",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "19:02",
-          "departPort": "Liverpool",
-          "arriveTime": "21:45",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Departed",
-          "statusType": "departed"
-        }
-      ]
-    },
     {
       "date": "Sunday, 1 November 2026",
       "sailings": [
@@ -109,6 +86,20 @@
           "arriveTime": "13:30",
           "arrivePort": "Douglas",
           "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Thursday, 5 November 2026",
+      "sailings": [
+        {
+          "departTime": "19:15",
+          "departPort": "Douglas",
+          "arriveTime": "23:00",
+          "arrivePort": "Heysham",
+          "ferry": "Manxman",
           "status": "Scheduled",
           "statusType": "scheduled"
         }
