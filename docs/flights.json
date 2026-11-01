@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-01T20:38:31.445764+00:00",
-  "lastUpdated": "20:38 UTC",
+  "fetchedAt": "2026-11-01T20:42:34.032269+00:00",
+  "lastUpdated": "20:42 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -118,14 +118,6 @@
       "statusType": "arrived"
     },
     {
-      "flightNo": "BT7813",
-      "airline": "Air Baltic",
-      "scheduled": "14:40",
-      "status": "Arrived 14:40",
-      "origin": "Tenerife South",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY839",
       "airline": "easyJet",
       "scheduled": "15:05",
@@ -185,7 +177,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "19:50",
-      "status": "Delayed 21:07",
+      "status": "Delayed 21:03",
       "origin": "London Heathrow",
       "statusType": "delayed"
     },
@@ -222,6 +214,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 27,
+  "totalCount": 26,
   "source": "airport.im"
 }
