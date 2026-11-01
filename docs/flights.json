@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-01T09:43:24.202029+00:00",
-  "lastUpdated": "09:43 UTC",
+  "fetchedAt": "2026-11-01T09:47:26.595846+00:00",
+  "lastUpdated": "09:47 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -63,9 +63,9 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "15:35",
-      "status": "Cancelled",
+      "status": "Delayed 15:46",
       "destination": "London Gatwick",
-      "statusType": "cancelled"
+      "statusType": "delayed"
     },
     {
       "flightNo": "BT7814",
