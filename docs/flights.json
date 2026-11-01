@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-01T16:15:36.007828+00:00",
-  "lastUpdated": "16:14 UTC",
+  "fetchedAt": "2026-11-01T16:19:38.048545+00:00",
+  "lastUpdated": "16:18 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,9 +47,9 @@
       "flightNo": "BT7814",
       "airline": "Air Baltic",
       "scheduled": "15:40",
-      "status": "Taxied 16:11",
+      "status": "Departed 16:17",
       "destination": "Tenerife South",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -145,9 +145,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Expected 16:42",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "LM698",
