@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-01T16:27:41.875397+00:00",
-  "lastUpdated": "16:26 UTC",
+  "fetchedAt": "2026-11-01T16:31:44.041596+00:00",
+  "lastUpdated": "16:30 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -153,9 +153,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "16:55",
-      "status": "Delayed 17:11",
+      "status": "On-time",
       "origin": "Manchester",
-      "statusType": "delayed"
+      "statusType": "ontime"
     },
     {
       "flightNo": "EZY517",
