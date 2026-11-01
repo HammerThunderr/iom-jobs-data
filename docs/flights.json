@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-01T16:11:33.809103+00:00",
-  "lastUpdated": "16:10 UTC",
+  "fetchedAt": "2026-11-01T16:15:36.007828+00:00",
+  "lastUpdated": "16:14 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,15 +47,15 @@
       "flightNo": "BT7814",
       "airline": "Air Baltic",
       "scheduled": "15:40",
-      "status": "Gate closed",
+      "status": "Taxied 16:11",
       "destination": "Tenerife South",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "London Heathrow",
       "statusType": "boarding"
     },
