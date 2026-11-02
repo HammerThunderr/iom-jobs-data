@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-02T00:11:27.945912+00:00",
-  "lastUpdated": "00:10 UTC",
+  "fetchedAt": "2026-11-02T00:15:30.071207+00:00",
+  "lastUpdated": "00:14 UTC",
   "departures": [
-    {
-      "flightNo": "EZY518",
-      "airline": "easyJet",
-      "scheduled": "18:10",
-      "status": "Departed 18:24",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY842",
       "airline": "easyJet",
@@ -150,6 +142,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 18,
+  "totalCount": 17,
   "source": "airport.im"
 }
