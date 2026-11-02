@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-02T09:09:55.899040+00:00",
-  "lastUpdated": "07:55 02/11/26",
+  "fetchedAt": "2026-11-02T19:27:20.170144+00:00",
+  "lastUpdated": "19:17 02/11/26",
   "totalCount": 6,
   "days": [
     {
@@ -10,38 +10,38 @@
         {
           "departTime": "06:30",
           "departPort": "Douglas",
-          "arriveTime": "09:15",
+          "arriveTime": "09:30",
           "arrivePort": "Larne",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "10:33",
+          "departPort": "Larne",
+          "arriveTime": "13:10",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "14:45",
+          "departPort": "Douglas",
+          "arriveTime": "17:17",
+          "arrivePort": "Liverpool",
+          "ferry": "Manannan",
+          "status": "Arrived",
+          "statusType": "arrived"
+        },
+        {
+          "departTime": "19:03",
+          "departPort": "Liverpool",
+          "arriveTime": "21:48",
+          "arrivePort": "Douglas",
           "ferry": "Manannan",
           "status": "Departed",
           "statusType": "departed"
-        },
-        {
-          "departTime": "10:45",
-          "departPort": "Larne",
-          "arriveTime": "13:30",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
-        },
-        {
-          "departTime": "15:00",
-          "departPort": "Douglas",
-          "arriveTime": "17:45",
-          "arrivePort": "Liverpool",
-          "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
-        },
-        {
-          "departTime": "19:15",
-          "departPort": "Liverpool",
-          "arriveTime": "22:00",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
-          "status": "Scheduled",
-          "statusType": "scheduled"
         }
       ]
     },
