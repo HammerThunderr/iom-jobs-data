@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-03T01:09:27+00:00",
+    "generated": "2026-11-03T14:16:12+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 40,
-        "withPrice": 40,
+        "count": 39,
+        "withPrice": 39,
         "status": "ok"
       }
     ],
@@ -2190,7 +2190,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/10926561-carrick-bay-house-clifton-road-port-st-mary/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1250000,
+      "price": 1200000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 4,
@@ -2200,6 +2200,7 @@
       "parish": "Port St Mary",
       "postcode": "IM9 5EL",
       "firstSeen": "2026-09-20",
+      "previousPrice": 1250000,
       "lastSeen": "2026-11-03"
     },
     {
@@ -6316,25 +6317,6 @@
       "lastSeen": "2026-11-03"
     },
     {
-      "id": "mm-3-dumbells-terrace-laxey-im4-7ny",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/3-dumbells-terrace-laxey-im4-7ny/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 265000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "2  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM4 7NY",
-      "status": "for_sale",
-      "firstSeen": "2026-10-10",
-      "lastSeen": "2026-11-03"
-    },
-    {
       "id": "mm-59-cronk-ny-greiney-douglas-im2-5lh",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/59-cronk-ny-greiney-douglas-im2-5lh/",
@@ -6369,25 +6351,6 @@
       "locality": null,
       "parish": null,
       "postcode": "IM2 5LX",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-11-03"
-    },
-    {
-      "id": "mm-9-cooil-drive-douglas-im2-2hg",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/9-cooil-drive-douglas-im2-2hg/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 319950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "3  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM2 2HG",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
       "lastSeen": "2026-11-03"
@@ -6436,7 +6399,7 @@
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/balley-beg-23a-douglas-street-peel-im5-1ba/",
       "category": "residential",
       "listingType": "sale",
-      "price": 275000,
+      "price": 269000,
       "priceQualifier": "asking",
       "bedrooms": 2,
       "bathrooms": null,
@@ -6447,6 +6410,7 @@
       "postcode": "IM5 1BA",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "previousPrice": 275000,
       "lastSeen": "2026-11-03"
     },
     {
@@ -6486,6 +6450,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 385000,
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "id": "mm-harbour-view-back-shore-road-laxey-im4-7dq",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/harbour-view-back-shore-road-laxey-im4-7dq/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 374950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "2  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 7DQ",
+      "status": "for_sale",
+      "firstSeen": "2026-11-03",
       "lastSeen": "2026-11-03"
     },
     {
