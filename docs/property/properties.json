@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-03T14:16:12+00:00",
+    "generated": "2026-11-03T23:38:23+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 327,
-        "withPrice": 299,
+        "count": 326,
+        "withPrice": 298,
         "status": "ok"
       },
       {
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 39,
-        "withPrice": 39,
+        "count": 40,
+        "withPrice": 40,
         "status": "ok"
       }
     ],
@@ -1533,24 +1533,6 @@
       "lastSeen": "2026-11-03"
     },
     {
-      "id": "chr-12795939-castlemona-avenue-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12795939-castlemona-avenue-douglas/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": 475000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "Castlemona Avenue, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 4EF",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-03"
-    },
-    {
       "id": "chr-12835584-albany-road-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12835584-albany-road-douglas/",
@@ -1693,25 +1675,6 @@
       "postcode": "IM1 1AD",
       "firstSeen": "2026-09-20",
       "previousPrice": 550000,
-      "lastSeen": "2026-11-03"
-    },
-    {
-      "id": "chr-12898241-station-road-port-erin-port-erin",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12898241-station-road-port-erin-port-erin/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": 575000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "Station Road Port Erin, Port Erin",
-      "locality": "Port Erin",
-      "parish": "Port Erin",
-      "postcode": "IM9 6AE",
-      "firstSeen": "2026-09-20",
-      "previousPrice": 585000,
       "lastSeen": "2026-11-03"
     },
     {
@@ -5461,7 +5424,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12918328-shalmane-old-school-road-port-st-mary/",
       "category": "residential",
       "listingType": "sale",
-      "price": 369000,
+      "price": 345000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 2,
@@ -5471,6 +5434,25 @@
       "parish": "Port St Mary",
       "postcode": "IM9 5LR",
       "firstSeen": "2026-10-20",
+      "previousPrice": 369000,
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "id": "chr-12919531-25-reayrt-ny-crink-crosby",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12919531-25-reayrt-ny-crink-crosby/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 225000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "25 Reayrt Ny Crink, Crosby",
+      "locality": "Crosby",
+      "parish": "Crosby",
+      "postcode": "IM4 2EA",
+      "firstSeen": "2026-11-03",
       "lastSeen": "2026-11-03"
     },
     {
@@ -5490,6 +5472,24 @@
       "postcode": "IM9 5AL",
       "firstSeen": "2026-10-14",
       "previousPrice": 339000,
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "id": "chr-12923739-2-quay-west-bridge-road-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12923739-2-quay-west-bridge-road-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 229500,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "2 Quay West, Bridge Road, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2SE",
+      "firstSeen": "2026-11-03",
       "lastSeen": "2026-11-03"
     },
     {
@@ -5651,7 +5651,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LZ",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-03"
     },
@@ -5711,25 +5711,6 @@
       "lastSeen": "2026-11-03"
     },
     {
-      "id": "chr-12910466-snugborough-close-union-mills",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/12910466-snugborough-close-union-mills/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1600,
-      "priceQualifier": "pcm",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "Snugborough Close, Union Mills",
-      "locality": "Union Mills",
-      "parish": "Union Mills",
-      "postcode": "IM4 4NZ",
-      "status": "let_stc",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-03"
-    },
-    {
       "id": "chr-12914518-orrisdale-cottages-orrisdale-loop-road-kirk-michael",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/12914518-orrisdale-cottages-orrisdale-loop-road-kirk-michael/",
@@ -5744,7 +5725,7 @@
       "locality": "Kirk Michael",
       "parish": "Kirk Michael",
       "postcode": "IM6 2HP",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-09-29",
       "lastSeen": "2026-11-03"
     },
@@ -5912,7 +5893,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 5BY",
-      "status": "under_offer",
+      "status": "let_stc",
       "firstSeen": "2026-10-12",
       "lastSeen": "2026-11-03"
     },
@@ -6565,6 +6546,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 1000000,
+      "lastSeen": "2026-11-03"
+    },
+    {
+      "id": "mm-3-marlborough-terrace-douglas-isle-of-man-im2-3qj",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/3-marlborough-terrace-douglas-isle-of-man-im2-3qj/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 369950,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "4  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM2 3QJ",
+      "status": "for_sale",
+      "firstSeen": "2026-11-03",
       "lastSeen": "2026-11-03"
     },
     {
