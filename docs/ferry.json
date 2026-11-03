@@ -1,9 +1,32 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-03T01:43:01.759764+00:00",
-  "lastUpdated": "16:31 02/11/26",
-  "totalCount": 2,
+  "fetchedAt": "2026-11-03T08:35:34.765267+00:00",
+  "lastUpdated": "07:47 03/11/26",
+  "totalCount": 4,
   "days": [
+    {
+      "date": "Tuesday, 3 November 2026",
+      "sailings": [
+        {
+          "departTime": "07:45",
+          "departPort": "Douglas",
+          "arriveTime": "10:15",
+          "arrivePort": "Heysham",
+          "ferry": "Manannan",
+          "status": "Departed",
+          "statusType": "departed"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "16:15",
+          "arrivePort": "Douglas",
+          "ferry": "Manannan",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
     {
       "date": "Wednesday, 4 November 2026",
       "sailings": [
