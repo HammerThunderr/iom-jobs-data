@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-04T19:13:09.111363+00:00",
-  "lastUpdated": "19:11 UTC",
+  "fetchedAt": "2026-11-04T19:17:11.540135+00:00",
+  "lastUpdated": "19:15 UTC",
   "departures": [
     {
       "flightNo": "LM697",
@@ -47,9 +47,9 @@
       "flightNo": "EZY842",
       "airline": "easyJet",
       "scheduled": "20:10",
-      "status": "On-time",
+      "status": "Boarding shortly",
       "destination": "London Gatwick",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM681",
@@ -121,7 +121,7 @@
       "flightNo": "LM676",
       "airline": "Loganair",
       "scheduled": "19:50",
-      "status": "Expected 19:24",
+      "status": "Expected 19:19",
       "origin": "London Heathrow",
       "statusType": "expected"
     },
