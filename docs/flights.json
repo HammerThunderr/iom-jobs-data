@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-04T11:39:41.996450+00:00",
-  "lastUpdated": "11:39 UTC",
+  "fetchedAt": "2026-11-04T11:43:44.671215+00:00",
+  "lastUpdated": "11:43 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -47,9 +47,9 @@
       "flightNo": "LM314",
       "airline": "Loganair",
       "scheduled": "11:50",
-      "status": "Gate closed",
+      "status": "Taxied 11:39",
       "destination": "Edinburgh",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
