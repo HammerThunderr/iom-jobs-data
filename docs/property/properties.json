@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-05T14:43:33+00:00",
+    "generated": "2026-11-05T23:55:31+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 301,
-        "withPrice": 275,
+        "count": 302,
+        "withPrice": 276,
         "status": "ok"
       },
       {
@@ -404,6 +404,7 @@
       "locality": "Jurby",
       "parish": "Jurby",
       "postcode": "IM7 3AZ",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-05"
     },
@@ -2216,24 +2217,6 @@
       "locality": "Port Erin",
       "parish": "Port Erin",
       "postcode": "IM9 6LF",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-05"
-    },
-    {
-      "id": "chr-11616268-ann-s-cottage-bridge-road-ballasalla",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/11616268-ann-s-cottage-bridge-road-ballasalla/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 319950,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "propertyType": "land",
-      "address": "Ann's Cottage, Bridge Road, Ballasalla",
-      "locality": "Ballasalla",
-      "parish": "Ballasalla",
-      "postcode": "IM9 3DA",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-05"
     },
@@ -5240,6 +5223,24 @@
       "lastSeen": "2026-11-05"
     },
     {
+      "id": "chr-12637068-cronk-road-union-mills",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12637068-cronk-road-union-mills/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1900,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "Cronk Road, Union Mills",
+      "locality": "Union Mills",
+      "parish": "Union Mills",
+      "postcode": "IM4 4NJ",
+      "firstSeen": "2026-11-05",
+      "lastSeen": "2026-11-05"
+    },
+    {
       "id": "chr-12784416-fairfield-avenue-ramsey",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/12784416-fairfield-avenue-ramsey/",
@@ -5368,6 +5369,24 @@
       "postcode": "IM9 1PE",
       "status": "under_offer",
       "firstSeen": "2026-10-20",
+      "lastSeen": "2026-11-05"
+    },
+    {
+      "id": "chr-12926403-shore-road-port-erin",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12926403-shore-road-port-erin/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 2500,
+      "priceQualifier": "pcm",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "Shore Road, Port Erin",
+      "locality": "Port Erin",
+      "parish": "Port Erin",
+      "postcode": "IM9 6HH",
+      "firstSeen": "2026-11-05",
       "lastSeen": "2026-11-05"
     },
     {
