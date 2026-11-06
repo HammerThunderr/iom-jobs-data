@@ -1,8 +1,8 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-06T21:37:02+00:00",
- "lastUpdated": "21:37 UTC",
+ "fetchedAt": "2026-11-06T21:38:57+00:00",
+ "lastUpdated": "21:38 UTC",
  "totalCount": 174,
  "categories": {
   "Festive": 41,
@@ -41,16 +41,9 @@
    "name": "Erin Arts Centre",
    "count": 14,
    "status": "ok"
-  },
-  {
-   "key": "centenary",
-   "name": "Centenary Centre",
-   "count": 0,
-   "status": "failed",
-   "error": "403 Client Error: Forbidden for url: https://centenarycentre.com/events/"
   }
  ],
- "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre, Centenary Centre",
+ "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre",
  "disclaimer": "Events are collected from the organisers' own websites. Always check details and book with the organiser. Manx One is not affiliated with any venue or organiser listed.",
  "events": [
   {
