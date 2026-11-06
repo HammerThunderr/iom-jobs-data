@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-06T16:23:57.681171+00:00",
-  "lastUpdated": "16:22 UTC",
+  "fetchedAt": "2026-11-06T16:28:00.336104+00:00",
+  "lastUpdated": "16:26 UTC",
   "departures": [
     {
       "flightNo": "EZY516",
@@ -9,14 +9,6 @@
       "scheduled": "10:40",
       "status": "Departed 10:37",
       "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "10:40",
-      "status": "Departed 10:32",
-      "destination": "London Gatwick",
       "statusType": "departed"
     },
     {
@@ -153,7 +145,7 @@
       "flightNo": "EZY715",
       "airline": "easyJet",
       "scheduled": "16:40",
-      "status": "Expected 16:27",
+      "status": "Expected 16:26",
       "origin": "Manchester",
       "statusType": "expected"
     },
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
