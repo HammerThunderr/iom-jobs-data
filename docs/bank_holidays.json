@@ -1,15 +1,17 @@
 {
   "meta": {
     "schemaVersion": 1,
-    "generated": "2026-08-22",
+    "generated": "2026-11-06",
     "source": "Isle of Man Government - Bank holidays",
     "sourceUrl": "https://www.gov.im/categories/home-and-neighbourhood/bank-holidays/",
     "licence": "Open Government Licence",
     "attribution": "Contains public sector information licensed under the Open Government Licence. © Crown Copyright.",
     "note": "Isle of Man bank holidays differ from those in the UK - the Island has TT and Tynwald Day, and some shared dates fall differently.",
     "yearsIncluded": [
-      "2026"
-    ]
+      "2026",
+      "2027"
+    ],
+    "note2027": "2027 dates follow the Island's standard bank holiday rules (TT Bank Holiday on Senior Race Day, Friday 11 June, as confirmed in the TT 2027 schedule). Christmas Day and Boxing Day 2027 fall on a weekend, so the substitute days are Monday 27 and Tuesday 28 December. Confirm against gov.im once the Government publishes the 2027 list."
   },
   "years": [
     {
@@ -53,6 +55,51 @@
         },
         {
           "date": "2026-12-28",
+          "name": "Substitute for Boxing Day"
+        }
+      ]
+    },
+    {
+      "year": 2027,
+      "holidays": [
+        {
+          "date": "2027-01-01",
+          "name": "New Year's Day"
+        },
+        {
+          "date": "2027-03-26",
+          "name": "Good Friday"
+        },
+        {
+          "date": "2027-03-29",
+          "name": "Easter Monday"
+        },
+        {
+          "date": "2027-05-03",
+          "name": "Early May Bank Holiday"
+        },
+        {
+          "date": "2027-05-31",
+          "name": "Spring Bank Holiday"
+        },
+        {
+          "date": "2027-06-11",
+          "name": "TT Bank Holiday"
+        },
+        {
+          "date": "2027-07-05",
+          "name": "Tynwald Day Bank Holiday"
+        },
+        {
+          "date": "2027-08-30",
+          "name": "Summer Bank Holiday"
+        },
+        {
+          "date": "2027-12-27",
+          "name": "Substitute for Christmas Day"
+        },
+        {
+          "date": "2027-12-28",
           "name": "Substitute for Boxing Day"
         }
       ]
