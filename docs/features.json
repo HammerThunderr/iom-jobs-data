@@ -121,6 +121,14 @@
     "road_signs": {
       "enabled": true,
       "message": "Live road signs are temporarily unavailable."
+    },
+    "event_submissions": {
+      "enabled": true,
+      "message": "Adding events is paused for a moment. Please try again later."
+    },
+    "community_events": {
+      "enabled": true,
+      "message": "Community events are temporarily hidden."
     }
   },
   "banner": {
