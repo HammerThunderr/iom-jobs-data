@@ -2,7 +2,7 @@
  "meta": {
   "schemaVersion": 1,
   "season": "2026",
-  "generated": "2026-07-30",
+  "generated": "2026-11-06",
   "source": "Isle of Man Railways 2026 Timetable (rail.im)",
   "disclaimer": "Timetables from the Isle of Man Railways 2026 published timetable. Operational constraints may apply and services can change — always confirm at rail.im or /IoMRailways before travelling. Manx One is not affiliated with Isle of Man Railways.",
   "notes": "Each railway has a date→code calendar and a set of lettered timetables. Two letters (e.g. DE) mean both timetables run that day. A date absent from the calendar means no service.",
@@ -4605,12 +4605,30 @@
   {
    "date": "2026-11-21",
    "endDate": "2026-11-22",
-   "title": "MER services to Laxey Christmas Markets"
+   "title": "Laxey Christmas Market trams",
+   "detail": "MER from Derby Castle to Laxey. Standard fares; a dated paper ticket gives free entry to the fayre."
   },
   {
    "date": "2026-12-05",
    "title": "Steam into Christmas",
    "detail": "Christmas events begin with Isle of Man Railways."
+  },
+  {
+   "date": "2026-12-12",
+   "endDate": "2026-12-20",
+   "title": "Tinsel Trams to the Santa Trains",
+   "detail": "Sat 12, Sun 13, Sat 19 & Sun 20 Dec. MER from Derby Castle to Groudle for the Groudle Glen Santa Trains. Book in advance online."
+  },
+  {
+   "date": "2026-12-12",
+   "endDate": "2026-12-20",
+   "title": "Santa's Party Trains",
+   "detail": "Sat 12, Sat 19 & Sun 20 Dec. Book online, at the Welcome Centre or on 01624 662525."
+  },
+  {
+   "date": "2026-12-31",
+   "title": "Auld Lang Syne Hogmanay",
+   "detail": "New Year's Eve on the Dining Car. Book on 01624 697457 or steamdining@gov.im."
   }
  ],
  "goExplore": {
