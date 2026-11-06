@@ -723,21 +723,16 @@ def _jsonld_events(html: str) -> list[dict]:
 
 
 def source_centenary() -> list[dict]:
-    posts = []
-    for page in range(1, 6):
-        url = (f"{CENT}/wp-json/wp/v2/mec-events?per_page=100&page={page}"
-               "&orderby=date&order=desc&_fields=id,link,title,featured_media")
-        try:
-            batch = get(url).json()
-        except requests.HTTPError as e:
-            if e.response is not None and e.response.status_code == 400:
-                break                                 # past the last page
-            raise
-        if not batch:
-            break
-        posts.extend(batch)
-        if len(batch) < 100:
-            break
+    # Their API refuses requests from servers, so read the public events
+    # listing page instead and visit each event page it links to.
+    listing = get(f"{CENT}/events/").text
+    links = []
+    for m in re.finditer(r'href="(https://(?:www\.)?centenarycentre\.com/events/[^"#?]+/)"', listing):
+        u = m.group(1).replace("://www.", "://")
+        if u.rstrip("/").endswith("/events") or "/feed" in u or u in links:
+            continue
+        links.append(u)
+    posts = [{"link": u, "id": slug(urlparse(u).path.rstrip("/").split("/")[-1]), "title": {}} for u in links]
 
     out = []
     for p in posts[:CENT_MAX_PAGES_FETCHED]:
