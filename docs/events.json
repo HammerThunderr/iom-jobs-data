@@ -1,8 +1,8 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-06T21:34:23+00:00",
- "lastUpdated": "21:34 UTC",
+ "fetchedAt": "2026-11-06T21:37:02+00:00",
+ "lastUpdated": "21:37 UTC",
  "totalCount": 174,
  "categories": {
   "Festive": 41,
@@ -47,7 +47,7 @@
    "name": "Centenary Centre",
    "count": 0,
    "status": "failed",
-   "error": "403 Client Error: Forbidden for url: https://centenarycentre.com/wp-json/wp/v2/mec-events?per_page=100&page=1&orderby=date&order=desc&_fields=id,link,title,featured_media"
+   "error": "403 Client Error: Forbidden for url: https://centenarycentre.com/events/"
   }
  ],
  "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre, Centenary Centre",
