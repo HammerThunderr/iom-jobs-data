@@ -148,6 +148,8 @@ def html_to_text(s: str, limit: int = MAX_DESC) -> str:
         return ""
     text = BeautifulSoup(s, "html.parser").get_text(" ")
     text = clean(text)
+    # Boilerplate some sites put first.
+    text = re.sub(r"^(?:@\s*|show description\s*:?\s*|description\s*:\s*)+", "", text, flags=re.I)
     if len(text) > limit:
         cut = text[:limit].rsplit(" ", 1)[0]
         text = cut.rstrip(",.;:") + "…"
@@ -315,14 +317,26 @@ SOURCE_CATEGORY_MAP = {
 
 
 def categorise(source_cat: str, title: str, desc: str = "", default: str = "Other") -> tuple[str, list[str]]:
+    """The organiser's own category first, then keywords in the TITLE.
+    The description is only used when the title says nothing — descriptions
+    mention all sorts ("...in time for Christmas", "...a run through the
+    history of") and gave too many wrong categories."""
     tags: list[str] = []
-    sc = SOURCE_CATEGORY_MAP.get(clean(source_cat).lower())
-    if sc:
-        tags.append(sc)
-    blob = f"{title} {title} {desc[:300]}".lower()
+    for part in re.split(r"[,/|]", source_cat or ""):
+        sc = SOURCE_CATEGORY_MAP.get(clean(part).lower())
+        if sc and sc not in tags:
+            tags.append(sc)
+    title_l = title.lower()
     for cat, rx in KEYWORDS:
-        if cat not in tags and re.search(rx, blob):
+        if cat not in tags and re.search(rx, title_l):
             tags.append(cat)
+    if not tags and desc:
+        first = desc[:200].lower()
+        for cat, rx in KEYWORDS:
+            if cat != "Festive" and cat not in tags and re.search(rx, first):
+                tags.append(cat)
+                if len(tags) == 2:
+                    break
     if not tags:
         tags = [default]
     # Festive wins as the primary category in season — that's what people browse for.
@@ -824,27 +838,47 @@ def _overlap(a: dict, b: dict) -> bool:
     return a["startDate"] <= b["endDate"] and b["startDate"] <= a["endDate"]
 
 
+def _words(title: str) -> set[str]:
+    stop = {"the", "and", "with", "for", "from", "presents", "live", "exhibition",
+            "isle", "man", "manx", "of", "at"}
+    out = set()
+    for w in norm_title(title).split():
+        if len(w) < 3 or w in stop:
+            continue
+        out.add(re.sub(r"(es|s)$", "", w) if len(w) > 4 else w)
+    return out
+
+
+def _same_event(a: dict, b: dict) -> bool:
+    if norm_title(a["title"]) == norm_title(b["title"]):
+        return _overlap(a, b)
+    # Different wording for the same thing ("On the Buses" / "A Bus Service"):
+    # identical dates, same town, and the titles share words.
+    if a["startDate"] != b["startDate"] or a["endDate"] != b["endDate"]:
+        return False
+    if a.get("area") and b.get("area") and a["area"] != b["area"]:
+        return False
+    wa, wb = _words(a["title"]), _words(b["title"])
+    if not wa or not wb:
+        return False
+    return len(wa & wb) / len(wa | wb) >= 0.3
+
+
 def dedupe_across_sources(events: list[dict]) -> list[dict]:
     """The tourism calendar repeats many venue listings. Keep the venue's own
     version (better dates and booking link) and borrow anything it lacks."""
-    by_title: dict[str, list[dict]] = defaultdict(list)
-    for e in events:
-        by_title[norm_title(e["title"])].append(e)
-    result = []
-    for _, group in by_title.items():
-        group.sort(key=lambda e: -SOURCE_PRIORITY.get(e["sourceKey"], 0))
-        kept: list[dict] = []
-        for e in group:
-            dup = next((k for k in kept if k["sourceKey"] != e["sourceKey"] and _overlap(k, e)), None)
-            if dup:
-                for field in ("imageUrl", "price", "description", "address", "area", "bookingUrl"):
-                    if not dup.get(field) and e.get(field):
-                        dup[field] = e[field]
-                dup.setdefault("alsoListedOn", []).append(e["source"])
-            else:
-                kept.append(e)
-        result.extend(kept)
-    return result
+    ordered = sorted(events, key=lambda e: -SOURCE_PRIORITY.get(e["sourceKey"], 0))
+    kept: list[dict] = []
+    for e in ordered:
+        dup = next((k for k in kept if k["sourceKey"] != e["sourceKey"] and _same_event(k, e)), None)
+        if dup:
+            for field in ("imageUrl", "price", "description", "address", "area", "bookingUrl"):
+                if not dup.get(field) and e.get(field):
+                    dup[field] = e[field]
+            dup.setdefault("alsoListedOn", []).append(e["source"])
+        else:
+            kept.append(e)
+    return kept
 
 
 SOURCES = [
