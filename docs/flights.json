@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-06T01:55:36.157838+00:00",
-  "lastUpdated": "01:54 UTC",
+  "fetchedAt": "2026-11-06T01:59:38.109346+00:00",
+  "lastUpdated": "01:58 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -73,6 +73,14 @@
       "scheduled": "15:40",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY836",
+      "airline": "easyJet",
+      "scheduled": "15:55",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -158,6 +166,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 19,
+  "totalCount": 20,
   "source": "airport.im"
 }
