@@ -1,24 +1,34 @@
 # ─────────────────────────────────────────────────────────────
-# Events scraper workflow
-# Place at: .github/workflows/events.yml in iom-jobs-data repo
+# Events scraper — official sources (see scripts/scrape_events.py)
 #
-# Scrapes whatsoniom.im every 30 minutes.
+# Runs four times a day. Events don't change minute to minute, and the
+# venues' sites shouldn't be hammered. Also runs whenever the scraper itself
+# is changed, so a fix can be checked straight away.
+#
+# If every source fails, or the event count collapses, the scraper exits
+# with an error and the previous events.json is left untouched.
 # ─────────────────────────────────────────────────────────────
 
 name: Scrape Events
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # every 30 minutes
+    - cron: '17 5,11,17,23 * * *'   # 05:17, 11:17, 17:17, 23:17 UTC
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/scrape_events.py'
+      - '.github/workflows/events.yml'
 
 concurrency:
   group: events
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     permissions:
       contents: write
 
@@ -51,7 +61,9 @@ jobs:
           git commit -m "chore: update events $(date -u '+%Y-%m-%d %H:%M UTC')"
 
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push && break
+            git pull --rebase origin main && git push && exit 0
             echo "Push attempt $i failed, retrying..."
-            sleep 3
+            sleep 5
           done
+          echo "::error::Could not push events.json after 5 attempts"
+          exit 1
