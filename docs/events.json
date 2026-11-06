@@ -1,21 +1,21 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-06T21:38:57+00:00",
- "lastUpdated": "21:38 UTC",
- "totalCount": 174,
+ "fetchedAt": "2026-11-06T21:39:50+00:00",
+ "lastUpdated": "21:39 UTC",
+ "totalCount": 170,
  "categories": {
-  "Festive": 41,
-  "Family & Kids": 9,
+  "Festive": 34,
+  "Family & Kids": 6,
   "Music": 36,
-  "Theatre & Comedy": 31,
+  "Theatre & Comedy": 33,
   "Film": 15,
-  "Arts & Workshops": 10,
+  "Arts & Workshops": 9,
+  "Heritage": 1,
   "Talks & Learning": 15,
-  "Sport": 8,
-  "Markets & Fairs": 1,
+  "Sport": 10,
   "Community": 1,
-  "Other": 7
+  "Other": 10
  },
  "sources": [
   {
@@ -70,34 +70,10 @@
    "address": "House of Manannan",
    "bookingUrl": "",
    "soldOut": false,
-   "occurrences": []
-  },
-  {
-   "title": "On the Buses",
-   "venue": "House Of Manannan",
-   "startDate": "2026-09-26",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 57.0,
-   "tags": [
-    "Arts & Workshops",
-    "Sport"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": true,
-   "description": "An exhibition marking 50 Years of Bus Nationalisation on the Isle of Man hosted in partnership with Isle of Man Transport.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2Fdownload-5_1790408879.png&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/on-the-buses-p1808221",
-   "id": "visitiom-1808221",
-   "sourceKey": "visitiom",
-   "category": "Arts & Workshops",
-   "area": "Peel",
-   "address": "House Of Manannan, Mill Road, Peel, Isle of Man, IM5 1TA",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "A History of the Future",
@@ -134,9 +110,7 @@
    "isTbc": false,
    "duration": 575.0,
    "tags": [
-    "Arts & Workshops",
-    "Family & Kids",
-    "Theatre & Comedy"
+    "Arts & Workshops"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -162,8 +136,7 @@
    "isTbc": false,
    "duration": 148.0,
    "tags": [
-    "Arts & Workshops",
-    "Community"
+    "Arts & Workshops"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -192,8 +165,6 @@
    "isTbc": false,
    "duration": 209.0,
    "tags": [
-    "Family & Kids",
-    "Theatre & Comedy",
     "Heritage"
    ],
    "source": "Visit Isle of Man",
@@ -205,7 +176,7 @@
    "url": "https://www.visitisleofman.com/whats-on/the-nature-exploratorium-and-history-of-the-future-p1878291",
    "id": "visitiom-1878291",
    "sourceKey": "visitiom",
-   "category": "Family & Kids",
+   "category": "Heritage",
    "area": "Douglas",
    "address": "Manx Museum, Douglas, Douglas, Isle of Man, IM13LY",
    "bookingUrl": "",
@@ -253,7 +224,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Dracula, brought to you by the Service Players, is a spellbinding theatrical experience that will plunge you into a gothic world as the dark universe finally arrives on our shores. The play transforms the infamous Count into a mesmerizing stage presence—suave, predatory, and chillingly elegant. As the story unfolds, tension coils tighter with each whispered warning and each sudden appearance of the cape-cloaked vampire, drawing the audience into a battle of wits between mortal courage and immortal power. With its eerie atmosphere, dramatic confrontations, and haunting romance, Dracula on stage is not just a tale of horror—it’s a pulse-quickening spectacle that leaves hearts racing long after the curtain falls. Our Island has waited oceans of time for his arrival! USEFUL INFORMATION Age guidance Suitable for ages 13 and over. Under 16s must be accompanied by an adult…",
+   "description": "Dracula, brought to you by the Service Players, is a spellbinding theatrical experience that will plunge you into a gothic world as the dark universe finally arrives on our shores. The play transforms the infamous Count into a mesmerizing stage presence—suave, predatory, and chillingly elegant. As the story unfolds, tension coils tighter with each whispered warning and each sudden appearance of the cape-cloaked vampire, drawing the audience into a battle of wits between mortal courage and immortal power. With its eerie atmosphere, dramatic confrontations, and haunting romance, Dracula on stage is not just a tale of horror—it’s a pulse-quickening spectacle that leaves hearts racing long after the curtain falls. Our Island has waited oceans of time for his arrival! USEFUL INFORMATION Age guidance Suitable for ages 13 and over. Under 16s must be accompanied by an adult (18+) Seating…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/j8br53e3tas9fq4vv8eqk0kd1fhm/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -284,19 +255,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
     "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION A steady succession of self-released singles have seen The Cheap Thrills pricking up ears on both sides of the Atlantic, receiving support from BBC 6Music and Radio X, along with spins from Sirius XM and KX93.5 in the States, and high profile Spotify playlisting in amongst the likes of ‘Hot New Bands’, ‘The Indie List’ and 'Proper Belters’. The single ‘Codependence’ proved a tearaway hit, and was selected to soundtrack Liverpool FC’s European kit campaign, reaching an audience of LFC fans worldwide. The second half of 2025 saw the band selling out 1500 tickets in less than 12 hours for their headline show at Liverpool’s Grand Central Dome, before heading out on a six-date UK tour with The Slow Readers Club ahead of returning to the studio to put the finishing touches to their debut album. A single, ‘Walton Vale’, was released just ahead of the Dome show, once again…",
+   "description": "A steady succession of self-released singles have seen The Cheap Thrills pricking up ears on both sides of the Atlantic, receiving support from BBC 6Music and Radio X, along with spins from Sirius XM and KX93.5 in the States, and high profile Spotify playlisting in amongst the likes of ‘Hot New Bands’, ‘The Indie List’ and 'Proper Belters’. The single ‘Codependence’ proved a tearaway hit, and was selected to soundtrack Liverpool FC’s European kit campaign, reaching an audience of LFC fans worldwide. The second half of 2025 saw the band selling out 1500 tickets in less than 12 hours for their headline show at Liverpool’s Grand Central Dome, before heading out on a six-date UK tour with The Slow Readers Club ahead of returning to the studio to put the finishing touches to their debut album. A single, ‘Walton Vale’, was released just ahead of the Dome show, once again picking up support…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/9bl6ehbki5mxibr1cl5gi30wg2yh/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
    "url": "https://villagaiety.ticketsolve.com/shows/873689046/events",
    "id": "villagaiety-873689046",
    "sourceKey": "villagaiety",
-   "category": "Festive",
+   "category": "Music",
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873689046/events",
@@ -571,12 +541,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Arts & Workshops"
+    "Music"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Tickets £10 Join this year’s Biosphere Artist in Residence, Alice Dudley, for an evening of live music, special guests, and a pop-up art exhibition to celebrate the launch of her album Wild and Waiting Things. The culmination of a year-long residency, Wild and Waiting things is an album inspired by traditional Manx folk tales and based around the concept of an enchanted forest, featuring the voices of some familiar figures from Manx folklore. With each song inspired by a specific tale and set in an enchanted version of our landscape, Alice’s reimagining of classic Manx tales seeks to align the magic of folklore with the real-life magic of the natural world. As both a visual artist and a songwriter, Alice’s practice has been shaped by our Island and its stories. Her main goal this year was to encourage collaboration and connection with our Island and with each other, encouraging…",
+   "description": "Tickets £10 Join this year’s Biosphere Artist in Residence, Alice Dudley, for an evening of live music, special guests, and a pop-up art exhibition to celebrate the launch of her album Wild and Waiting Things. The culmination of a year-long residency, Wild and Waiting things is an album inspired by traditional Manx folk tales and based around the concept of an enchanted forest, featuring the voices of some familiar figures from Manx folklore. With each song inspired by a specific tale and set in an enchanted version of our landscape, Alice’s reimagining of classic Manx tales seeks to align the magic of folklore with the real-life magic of the natural world. As both a visual artist and a songwriter, Alice’s practice has been shaped by our Island and its stories. Her main goal this year was to encourage collaboration and connection with our Island and with each other, encouraging…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/alice-dudley-album-launch-nov-2026.jpg",
    "time": "19:00",
    "price": "£10",
@@ -607,7 +576,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Steve Steinman’s Anything For Love - The Meat Loaf Story ​​The highly acclaimed show producer and No.1 recording artist, Steve Steinman, brings you his brand-new production featuring over 25 of Meat Loaf and Jim Steinman’s greatest hits. The show includes Steve’s very own No.1 single “Everything They Said Was True” written by John Parr and Meat Loaf. For over 30 years Steve has toured the world with his productions Anything For Love and Vampires Rock and is now also touring his own original music. With an incredible stage set, ten-piece live band combined with Steve’s well known sense of humour and stage presence, the show can only be described as awesome. This show will have you shouting out for more as Steve and his cast of amazing singers and musicians take you on a nostalgic trip back in time. Anything For Love – Bat Out Of Hell – Paradise By The Dashboard Light –…",
+   "description": "Steve Steinman’s Anything For Love - The Meat Loaf Story ​​The highly acclaimed show producer and No.1 recording artist, Steve Steinman, brings you his brand-new production featuring over 25 of Meat Loaf and Jim Steinman’s greatest hits. The show includes Steve’s very own No.1 single “Everything They Said Was True” written by John Parr and Meat Loaf. For over 30 years Steve has toured the world with his productions Anything For Love and Vampires Rock and is now also touring his own original music. With an incredible stage set, ten-piece live band combined with Steve’s well known sense of humour and stage presence, the show can only be described as awesome. This show will have you shouting out for more as Steve and his cast of amazing singers and musicians take you on a nostalgic trip back in time. Anything For Love – Bat Out Of Hell – Paradise By The Dashboard Light – Took The Words…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/vzwmowzitd0imnjj5tqxrfkvqbuu/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -634,8 +603,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
-    "Arts & Workshops"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": false,
@@ -666,7 +634,7 @@
    "isTbc": false,
    "duration": 12.0,
    "tags": [
-    "Markets & Fairs"
+    "Other"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -677,7 +645,7 @@
    "url": "https://www.visitisleofman.com/whats-on/the-logos-hope-p1894531",
    "id": "visitiom-1894531",
    "sourceKey": "visitiom",
-   "category": "Markets & Fairs",
+   "category": "Other",
    "area": "Douglas",
    "address": "Douglas Harbour, Douglas, Douglas, IM1 2RF",
    "bookingUrl": "",
@@ -723,7 +691,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Inspired by the beloved TV phenomenon, The Great British Bake Off, this musical serves up a deliciously funny and heart-warming celebration of baking, friendship, and competition! Follow 8 amateur bakers as they whisk, knead, and sing their way through the nation's favourite baking competition, all under the watchful eyes of the judges and hosts. Packed with catchy songs, laugh-out-loud moments, and plenty of theatrical treats, this feel-good musical is perfect for the whole family. Expect cakes, chaos, and showstopping performances in a production guaranteed to leave audiences smiling. USEFUL INFORMATION Show Times This event will run for approximately 2 hours and 15 minutes, including interval. Age guidance Suitable for ages 12 and over - some mild bad language. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so…",
+   "description": "Inspired by the beloved TV phenomenon, The Great British Bake Off, this musical serves up a deliciously funny and heart-warming celebration of baking, friendship, and competition! Follow 8 amateur bakers as they whisk, knead, and sing their way through the nation's favourite baking competition, all under the watchful eyes of the judges and hosts. Packed with catchy songs, laugh-out-loud moments, and plenty of theatrical treats, this feel-good musical is perfect for the whole family. Expect cakes, chaos, and showstopping performances in a production guaranteed to leave audiences smiling. USEFUL INFORMATION Show Times This event will run for approximately 2 hours and 15 minutes, including interval. Age guidance Suitable for ages 12 and over - some mild bad language. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so please ensure…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/qe4vf29xqegsl4iqne667kpalb2t/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -767,7 +735,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Friday 13 November 7.30pm Tickets: £15 A double-bill premiere of original folk-poetry theatre and the official book launch of Sea Thief & Other Horrors by multi-award-winning writer and performer Jackie Morrey-Grace. Jackie’s first live production in over two years opens with a new folk-theatre adaptation of the title poem from her fourth Isle of Man Arts Council-funded poetry collection, Sea Thief & Other Horrors. Inspired by Jackie’s love of Dvořák’s symphonic poems, particularly The Noon Witch, this dark folk tale blends poetry, music and song. Alongside Jackie, it will feature Blue Vannin Jazz Club’s Musical Director John Stillman on violin, Jackie’s husband Ed Morrey on percussion, and opening scenes performed by jazz vocalist Lauren Gray, and sound artist Amy Howse. Part Two presents a full mask, music and movement production of Jackie’s second poetry publication, Asila’s Song…",
+   "description": "Friday 13 November 7.30pm Tickets: £15 A double-bill premiere of original folk-poetry theatre and the official book launch of Sea Thief & Other Horrors by multi-award-winning writer and performer Jackie Morrey-Grace. Jackie’s first live production in over two years opens with a new folk-theatre adaptation of the title poem from her fourth Isle of Man Arts Council-funded poetry collection, Sea Thief & Other Horrors. Inspired by Jackie’s love of Dvořák’s symphonic poems, particularly The Noon Witch, this dark folk tale blends poetry, music and song. Alongside Jackie, it will feature Blue Vannin Jazz Club’s Musical Director John Stillman on violin, Jackie’s husband Ed Morrey on percussion, and opening scenes performed by jazz vocalist Lauren Gray, and sound artist Amy Howse. Part Two presents a full mask, music and movement production of Jackie’s second poetry publication, Asila’s Song…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/08/sea-thief-jackie-morrey-grace-nov-2026-1.jpg",
    "time": "19:30",
    "price": "£15",
@@ -909,19 +877,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
     "Arts & Workshops"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Join local artist Ellie Baker for an afternoon exploring light, shadow and line. Working in your own concertina fold sketchbook, you will learn how to build a panoramic landscape in black, white and greys using acrylic paint, pens, ink and coloured pencil. Escape the pressure of the blank canvas and discover an expressive way to paint. All levels and styles welcome. Email springtreescontact@gmail.com to book or DM on instagram.com/elliebakerart Google Calendar iCalendar",
+   "description": "Join local artist Ellie Baker for an afternoon exploring light, shadow and line. Working in your own concertina fold sketchbook, you will learn how to build a panoramic landscape in black, white and greys using acrylic paint, pens, ink and coloured pencil. Escape the pressure of the blank canvas and discover an expressive way to paint. All levels and styles welcome. Email springtreescontact@gmail.com to book or DM on instagram.com/elliebakerart Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/ellie-baker-workshop-nov-2026.jpg",
    "time": "14:00 – 17:00",
    "price": "£50",
    "url": "https://www.erinartscentre.com/event/mixed-media-sketchbook-workshop-with-ellie-baker/",
    "id": "erin-11730",
    "sourceKey": "erin",
-   "category": "Music",
+   "category": "Arts & Workshops",
    "area": "Port Erin",
    "address": "Port Erin",
    "bookingUrl": "https://www.instagram.com/elliebakerart",
@@ -941,8 +908,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Family & Kids"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
@@ -978,7 +944,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Romeo Stodart (The Magic Numbers) returns to the Isle of Man for the first time since 2022, and this time he is accompanied the wonderful singer-songwriter Ren Harvieu. Romeo is an incredible singer and multi-instrumentalist who manages to captive an audience with his spellbinding performances. Together with his band The Magic Numbers, he was nominated for the Mercury Music Prize in 2005 for their self-titled debut album which included the songs, Love Me Like You, Forever Lost and Mornings Eleven. Ren is an English singer-songwriter known for her soulful blend of vintage pop, soul, and indie pop. Rising to fame with her debut album Through the Night in 2012, which reached No. 5 on the UK Albums Chart, she overcame a severe spinal injury before its release. Her follow-up, Revel in the Drama (2020), showcased her resilience and artistry, and was co-written with Romeo. This is our last…",
+   "description": "Romeo Stodart (The Magic Numbers) returns to the Isle of Man for the first time since 2022, and this time he is accompanied the wonderful singer-songwriter Ren Harvieu. Romeo is an incredible singer and multi-instrumentalist who manages to captive an audience with his spellbinding performances. Together with his band The Magic Numbers, he was nominated for the Mercury Music Prize in 2005 for their self-titled debut album which included the songs, Love Me Like You, Forever Lost and Mornings Eleven. Ren is an English singer-songwriter known for her soulful blend of vintage pop, soul, and indie pop. Rising to fame with her debut album Through the Night in 2012, which reached No. 5 on the UK Albums Chart, she overcame a severe spinal injury before its release. Her follow-up, Revel in the Drama (2020), showcased her resilience and artistry, and was co-written with Romeo. This is our last…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/09/but-first-ren-romeo-nov-2026-1.jpg",
    "time": "19:30",
    "price": "£29.50",
@@ -1050,8 +1016,6 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Family & Kids",
-    "Talks & Learning",
     "Sport"
    ],
    "source": "Visit Isle of Man",
@@ -1063,7 +1027,7 @@
    "url": "https://www.visitisleofman.com/whats-on/isle-of-man-orienteering-klubb-autumn-challenge-orienteering-event-chibbanagh-plantation-braaid-p1813391",
    "id": "visitiom-1813391",
    "sourceKey": "visitiom",
-   "category": "Family & Kids",
+   "category": "Sport",
    "area": "",
    "address": "Chibbanagh Plantation, Chibbanagh Plantation Car Park, Cooil Road, Braaid, Isle of Man, IM4 2AW",
    "bookingUrl": "",
@@ -1084,7 +1048,6 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Family & Kids",
     "Film"
    ],
    "source": "Manx National Heritage",
@@ -1117,8 +1080,7 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Family & Kids",
-    "Arts & Workshops"
+    "Markets & Fairs"
    ],
    "source": "Visit Isle of Man",
    "recurring": false,
@@ -1153,7 +1115,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Screenings at 2pm and 7.30pm Adults £8 / under 18s £2 Based on Bernard (Cal) MacLaverty’s excellent novel of the same name, Midwinter Break follows a retired couple’s revelatory trip to Amsterdam. Gerry and Stella (Ciarán Hinds and Lesley Manville) take a restorative break in the scenic Dutch city during which they discover that they know each other too well…and not well enough. After so much time and so many memories, long-held promises and hidden secrets force them to confront their future. Quiet and character driven, director Polly Findlay creates space for Hinds and Manville to give substantial, intimate, complex performances of the kind that most movies do not allow their leads. Midwinter Break is a stirring meditation on faith, commitment, and the enduring power of love – a chamber piece of resonance and power. UK Film Rating: 12 Google Calendar iCalendar",
+   "description": "Screenings at 2pm and 7.30pm Adults £8 / under 18s £2 Based on Bernard (Cal) MacLaverty’s excellent novel of the same name, Midwinter Break follows a retired couple’s revelatory trip to Amsterdam. Gerry and Stella (Ciarán Hinds and Lesley Manville) take a restorative break in the scenic Dutch city during which they discover that they know each other too well…and not well enough. After so much time and so many memories, long-held promises and hidden secrets force them to confront their future. Quiet and character driven, director Polly Findlay creates space for Hinds and Manville to give substantial, intimate, complex performances of the kind that most movies do not allow their leads. Midwinter Break is a stirring meditation on faith, commitment, and the enduring power of love – a chamber piece of resonance and power. UK Film Rating: 12 Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/midwinter-break-nov-2026-1-1.jpg",
    "time": "14:00 – 19:30",
    "price": "£8",
@@ -1252,7 +1214,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Parker & Snell Company proudly presents the Isle of Man premiere of Agatha Christie's classic thriller, Murder on the Orient Express . A luxury train. A snowbound journey. A brutal murder. When the world-famous Orient Express becomes trapped by deep snow, an American millionaire is found murdered in his locked compartment. With every passenger a suspect and no one able to leave the train, the world-famous Belgian detective Hercule Poirot must untangle a web of secrets, lies and hidden motives before the killer strikes again. Packed with suspense, intrigue and unforgettable characters, this gripping thriller builds towards one of the most celebrated finales in crime fiction. Stylish, witty and utterly compelling, Murder on the Orient Express is a timeless whodunnit that remains one of the greatest detective stories ever written. Join us for an unforgettable journey…",
+   "description": "Parker & Snell Company proudly presents the Isle of Man premiere of Agatha Christie's classic thriller, Murder on the Orient Express . A luxury train. A snowbound journey. A brutal murder. When the world-famous Orient Express becomes trapped by deep snow, an American millionaire is found murdered in his locked compartment. With every passenger a suspect and no one able to leave the train, the world-famous Belgian detective Hercule Poirot must untangle a web of secrets, lies and hidden motives before the killer strikes again. Packed with suspense, intrigue and unforgettable characters, this gripping thriller builds towards one of the most celebrated finales in crime fiction. Stylish, witty and utterly compelling, Murder on the Orient Express is a timeless whodunnit that remains one of the greatest detective stories ever written. Join us for an unforgettable journey aboard the Orient…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/crqwoij4uknjwoszcb2hp0lxqikp/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -1291,12 +1253,11 @@
    "isTbc": false,
    "duration": 2.0,
    "tags": [
-    "Theatre & Comedy",
-    "Community"
+    "Theatre & Comedy"
    ],
    "source": "Erin Arts Centre",
    "recurring": true,
-   "description": "@ Rushen Players present Good Things by Liz Lochhead Tickets: Adults £12, Over 65s £10, Under 18s £5 Good Things by Liz Lochead, first performed in 2004, is a romantic farce set in a charity shop. Suddenly single and with the dreaded Big Five-0 staring her in the face, Susan Love – a charity shop volunteer – also has to cope with a father in his second childhood, a daughter in the throes of aggravated adolescence and an ex who, unfortunately, still has the power to wound. Set in the charity shop on three different days in one year – 6th January, Valentine’s Day and Christmas Eve – Good Things is a poignant, hilarious and sympathetic play with a lot to say about finding love later in life while still retaining humour, sanity and dignity. Tickets Google Calendar iCalendar",
+   "description": "Rushen Players present Good Things by Liz Lochhead Tickets: Adults £12, Over 65s £10, Under 18s £5 Good Things by Liz Lochead, first performed in 2004, is a romantic farce set in a charity shop. Suddenly single and with the dreaded Big Five-0 staring her in the face, Susan Love – a charity shop volunteer – also has to cope with a father in his second childhood, a daughter in the throes of aggravated adolescence and an ex who, unfortunately, still has the power to wound. Set in the charity shop on three different days in one year – 6th January, Valentine’s Day and Christmas Eve – Good Things is a poignant, hilarious and sympathetic play with a lot to say about finding love later in life while still retaining humour, sanity and dignity. Tickets Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/09/goodthingsposter3.jpeg",
    "time": "",
    "price": "£12",
@@ -1318,8 +1279,7 @@
    "isTbc": false,
    "duration": 6.0,
    "tags": [
-    "Film",
-    "Family & Kids"
+    "Film"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
@@ -1374,9 +1334,7 @@
    "isTbc": false,
    "duration": 2.0,
    "tags": [
-    "Festive",
-    "Arts & Workshops",
-    "Markets & Fairs"
+    "Festive"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -1402,9 +1360,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
-    "Talks & Learning",
-    "Arts & Workshops"
+    "Festive"
    ],
    "source": "Manx National Heritage",
    "recurring": false,
@@ -1466,8 +1422,7 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Festive",
-    "Markets & Fairs"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -1561,7 +1516,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION A concert of classical music including Smetana's Vltava, Brahm's Fourth Symphony, and Bruch's Scottish Fantasy for violin and orchestra, with soloist Juliet Tranter. The event is supported by the Gough Ritchie Trust. USEFUL INFORMATION USEFUL INFORMATION Age guidance Suitable for all ages. Under 16s must be accompanied by an adult (18+) Seating Downstairs/Allocated Seating (Ground floor level) Dance Floor Seats: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Please note positions around each table are occupied on a first come, first served basis. Tiered Stalls: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible bookings online. To make a…",
+   "description": "A concert of classical music including Smetana's Vltava, Brahm's Fourth Symphony, and Bruch's Scottish Fantasy for violin and orchestra, with soloist Juliet Tranter. The event is supported by the Gough Ritchie Trust. USEFUL INFORMATION USEFUL INFORMATION Age guidance Suitable for all ages. Under 16s must be accompanied by an adult (18+) Seating Downstairs/Allocated Seating (Ground floor level) Dance Floor Seats: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Please note positions around each table are occupied on a first come, first served basis. Tiered Stalls: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible bookings online. To make a booking, please…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/k4pb2dcm8zvunwuhpacrvp40b9tl/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "14:30",
    "price": "",
@@ -1654,7 +1609,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Crown Ballet® Presents The Nutcracker – An eternal season favourite of classical ballet, performed live on stage The Nutcracker - a charming and kind fairy tale is one of the jewels of Tchaikovsky's repertoire. Prepare to enter a magical new world – the nutcracker in this ballet may be a handsome prince in disguise. The original Christmas story is based on The Nutcracker and the Mouse King written by E.T.A. Hoffmann. It tells the story of Marie, a sad little girl, whose godfather, Drosselmeier, gives her a Nutcracker doll as a present on Christmas Eve. In her lively imagination it turns into a prince and the magic starts… This eternal seasonal favourite will be an unforgettable journey and an ideal introduction to audiences of any age to the magic that is classical ballet. A wonderful treat full of glitter for the whole family! USEFUL INFORMATION Age guidance Suitable…",
+   "description": "Crown Ballet® Presents The Nutcracker – An eternal season favourite of classical ballet, performed live on stage The Nutcracker - a charming and kind fairy tale is one of the jewels of Tchaikovsky's repertoire. Prepare to enter a magical new world – the nutcracker in this ballet may be a handsome prince in disguise. The original Christmas story is based on The Nutcracker and the Mouse King written by E.T.A. Hoffmann. It tells the story of Marie, a sad little girl, whose godfather, Drosselmeier, gives her a Nutcracker doll as a present on Christmas Eve. In her lively imagination it turns into a prince and the magic starts… This eternal seasonal favourite will be an unforgettable journey and an ideal introduction to audiences of any age to the magic that is classical ballet. A wonderful treat full of glitter for the whole family! USEFUL INFORMATION Age guidance Suitable for all ages…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/3glu9g4xjm1l7a4cp1e5fu7dql5y/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -1713,12 +1668,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Music"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Crown Ballet® Presents Swan Lake: T he Magic of Classical Ballet – Performed Live on Stage Widely regarded as the most iconic ballet of all time, Swan Lake is a masterpiece of Tchaikovsky’s genius. Featuring some of the most memorable music and breath-taking choreography, this production brings to life a timeless tale of love, betrayal, and redemption. Swan Lake tells the captivating story of Odette, a beautiful princess cursed to live as a swan by day and a woman by night. When Prince Siegfried encounters a flock of swans while hunting, he is enchanted as one of them transforms into the lovely Odette. However, their love is tested when the devious Odile, who resembles Odette, threatens to destroy their bond. Will Siegfried’s love for Odette be powerful enough to break the curse? Filled with mystery, romance, and emotional depth, Swan Lake has captivated the hearts of…",
+   "description": "Crown Ballet® Presents Swan Lake: T he Magic of Classical Ballet – Performed Live on Stage Widely regarded as the most iconic ballet of all time, Swan Lake is a masterpiece of Tchaikovsky’s genius. Featuring some of the most memorable music and breath-taking choreography, this production brings to life a timeless tale of love, betrayal, and redemption. Swan Lake tells the captivating story of Odette, a beautiful princess cursed to live as a swan by day and a woman by night. When Prince Siegfried encounters a flock of swans while hunting, he is enchanted as one of them transforms into the lovely Odette. However, their love is tested when the devious Odile, who resembles Odette, threatens to destroy their bond. Will Siegfried’s love for Odette be powerful enough to break the curse? Filled with mystery, romance, and emotional depth, Swan Lake has captivated the hearts of audiences for…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/3idoutem1361hwfhsw13bbl909nk/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -1786,7 +1740,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Hospice Isle of Man will host Samantha Barks: A Candlelit Concert for Hospice, featuring an intimate evening of music and storytelling from internationally acclaimed Manx performer Samantha Barks. All proceeds will support Hospice Isle of Man. The evening is sponsored by Ramsey Crookall. USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Customer notice regarding Boxes: please note that for full stage productions, views of some parts of the stage (depending on which side of the auditorium you are seated) may be somewhat limited or restricted. This view restriction does not usually impact other performances. Wheelchair/accessible bookings Unfortunately, we aren't able to accept…",
+   "description": "Hospice Isle of Man will host Samantha Barks: A Candlelit Concert for Hospice, featuring an intimate evening of music and storytelling from internationally acclaimed Manx performer Samantha Barks. All proceeds will support Hospice Isle of Man. The evening is sponsored by Ramsey Crookall. USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Customer notice regarding Boxes: please note that for full stage productions, views of some parts of the stage (depending on which side of the auditorium you are seated) may be somewhat limited or restricted. This view restriction does not usually impact other performances. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/hym3unjs34k6mebowdrpvkjcaq4b/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -1877,8 +1831,7 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Film",
-    "Family & Kids"
+    "Film"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
@@ -1914,12 +1867,11 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Music",
-    "Arts & Workshops"
+    "Music"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Adults £12.50 / Under 18s £3 The Rushen Silver Band Christmas show kickstarts our festive celebrations and is always one of the most in-demand tickets in our calendar. Full of popular festive tunes, singalong carols and quite possibly a terrible joke or two, the event is guaranteed entertainment for all the family. They’ll be decking the halls, jingling the bells and inviting a special guest or two to join in the party so don’t miss out! Once again, due to previous sell-outs, the concert will be held twice! We’ll host both a matinee and evening performance, with an identical programme. This will allow families and people who would prefer not to be out at night to see the show. Bring your Christmas jumper and hat! Adults Google Calendar iCalendar",
+   "description": "Adults £12.50 / Under 18s £3 The Rushen Silver Band Christmas show kickstarts our festive celebrations and is always one of the most in-demand tickets in our calendar. Full of popular festive tunes, singalong carols and quite possibly a terrible joke or two, the event is guaranteed entertainment for all the family. They’ll be decking the halls, jingling the bells and inviting a special guest or two to join in the party so don’t miss out! Once again, due to previous sell-outs, the concert will be held twice! We’ll host both a matinee and evening performance, with an identical programme. This will allow families and people who would prefer not to be out at night to see the show. Bring your Christmas jumper and hat! Adults Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/rsb-christmas-concert-nov-2026.jpg",
    "time": "15:00 – 19:30",
    "price": "£12.50",
@@ -1950,7 +1902,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION 🥊 Merseyside Returns for the Manx Challenge Cup! 🥊 Merseyside is back in the ring to take on Manx ABC in the second edition of the Isle of Man Challenge Cup! Get ready for an action-packed night of Olympic-style amateur boxing, featuring a fantastic mix of talented boxers from across Merseyside going head-to-head with the local powerhouse, Manx ABC. From exciting skill bouts to elite-level amateur contests, the event will showcase incredible boxing talent across all age groups. 🌟 It promises to be a brilliant night of sport, community and entertainment, and one not to be missed on the local sporting calendar! Get your tickets now and come along to support our ever-growing local sporting community! Merseyside vs Manx ABC - let’s make it a night to remember! USEFUL INFORMATION Customer Warning Please note that this event features strobe lighting Age guidance Suitable for…",
+   "description": "🥊 Merseyside Returns for the Manx Challenge Cup! 🥊 Merseyside is back in the ring to take on Manx ABC in the second edition of the Isle of Man Challenge Cup! Get ready for an action-packed night of Olympic-style amateur boxing, featuring a fantastic mix of talented boxers from across Merseyside going head-to-head with the local powerhouse, Manx ABC. From exciting skill bouts to elite-level amateur contests, the event will showcase incredible boxing talent across all age groups. 🌟 It promises to be a brilliant night of sport, community and entertainment, and one not to be missed on the local sporting calendar! Get your tickets now and come along to support our ever-growing local sporting community! Merseyside vs Manx ABC - let’s make it a night to remember! USEFUL INFORMATION Customer Warning Please note that this event features strobe lighting Age guidance Suitable for all. Under 16s…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ix0o1pmmlgpaqc0wi34de21jtk5w/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:00",
    "price": "",
@@ -1981,7 +1933,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Vladimir & Anton Jablokov return to the Isle of Man for one night only! Expect an unforgettable evening of breathtaking violin virtuosity, iconic melodies, and electrifying energy, featuring favourites such as Bella Ciao, Those Were The Days, Bohemian Rhapsody, Viva La Vida, and music from The Godfather and some festive favourites. Born into a family of musicians, brothers Vladimir and Anton began playing the violin at the age of five. While Anton followed a traditional classical path, Vladimir took a very different route. At just 19, he left for Ireland, only to find himself busking on the streets of Dublin. It was there, performing for passers-by, that he rediscovered his love for music on his own terms. What followed is a truly remarkable story: from the streets to major concert halls across Europe, culminating in headlining Dublin’s iconic 3Arena for three…",
+   "description": "Vladimir & Anton Jablokov return to the Isle of Man for one night only! Expect an unforgettable evening of breathtaking violin virtuosity, iconic melodies, and electrifying energy, featuring favourites such as Bella Ciao, Those Were The Days, Bohemian Rhapsody, Viva La Vida, and music from The Godfather and some festive favourites. Born into a family of musicians, brothers Vladimir and Anton began playing the violin at the age of five. While Anton followed a traditional classical path, Vladimir took a very different route. At just 19, he left for Ireland, only to find himself busking on the streets of Dublin. It was there, performing for passers-by, that he rediscovered his love for music on his own terms. What followed is a truly remarkable story: from the streets to major concert halls across Europe, culminating in headlining Dublin’s iconic 3Arena for three consecutive years. Now…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/rwqmmhs33vwng3yj0q9ke6i6mjv1/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2040,9 +1992,7 @@
    "isTbc": false,
    "duration": 22.0,
    "tags": [
-    "Festive",
-    "Theatre & Comedy",
-    "Arts & Workshops"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -2072,7 +2022,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd December – from 2pm Knife by Salman Rushdie Speaking out for the first time in unforgettable detail about the traumatic events of 12th August 2022, Salman Rushdie answers violence with art and reminds us of the power of words to make sense of the unthinkable. Knife is a gripping, intimate, and ultimately life-afforming meditation on life, loss, love, art, and finding the strength to stand up again. Google Calendar iCalendar",
+   "description": "Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd December – from 2pm Knife by Salman Rushdie Speaking out for the first time in unforgettable detail about the traumatic events of 12th August 2022, Salman Rushdie answers violence with art and reminds us of the power of words to make sense of the unthinkable. Knife is a gripping, intimate, and ultimately life-afforming meditation on life, loss, love, art, and finding the strength to stand up again. Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/04/book-circle-DEC-2026.jpg",
    "time": "14:00",
    "price": "",
@@ -2100,8 +2050,7 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Arts & Workshops",
-    "Heritage"
+    "Arts & Workshops"
    ],
    "source": "Manx National Heritage",
    "recurring": false,
@@ -2133,12 +2082,11 @@
    "duration": 1.0,
    "tags": [
     "Festive",
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Manannan’s Winterfest returns to the Gaiety Theatre in a unique concert celebrating Manx Christmas traditions through a collaboration of the Island’s finest exponents of classical, folk, brass and choral music, with a sprinkle of local humour and drama added to the mix! The mighty Sea-God Manannan invites you to get into the Manx festive spirit and join him for this very special evening of entertainment! USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult. VIP Tickets Make a thing of it and come and join us in Manannan’s Winterfest Bar before the show starts, where you can enjoy a Festive cocktail or two soft drinks, mince pies & enjoy a little live music to ease you into the spirit! Served in the Dress Circle Bar from 6:30pm Warnings This show may feature strobe lighting Seating Theatre style - All seats are allocated/reserved so…",
+   "description": "Manannan’s Winterfest returns to the Gaiety Theatre in a unique concert celebrating Manx Christmas traditions through a collaboration of the Island’s finest exponents of classical, folk, brass and choral music, with a sprinkle of local humour and drama added to the mix! The mighty Sea-God Manannan invites you to get into the Manx festive spirit and join him for this very special evening of entertainment! USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult. VIP Tickets Make a thing of it and come and join us in Manannan’s Winterfest Bar before the show starts, where you can enjoy a Festive cocktail or two soft drinks, mince pies & enjoy a little live music to ease you into the spirit! Served in the Dress Circle Bar from 6:30pm Warnings This show may feature strobe lighting Seating Theatre style - All seats are allocated/reserved so please ensure…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/d6ngcgosy40a5fbtflo0wstjsori/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2191,6 +2139,7 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
+    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -2202,9 +2151,7 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Festive",
-    "Arts & Workshops",
-    "Heritage"
+    "Festive"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -2220,7 +2167,10 @@
    "address": "The Grove, Ramsey",
    "bookingUrl": "",
    "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "Meet Father Christmas at the Grove",
@@ -2230,8 +2180,7 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Festive",
-    "Heritage"
+    "Festive"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -2257,19 +2206,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
     "Theatre & Comedy"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Adults £15 / Under 18 £2 Saint-Saëns’s spectacular take on the biblical hero of legendary strength and the seductive Philistine whose beauty overpowers him returns in the Met’s larger-than-life production. Featuring a massive orchestra and chorus and some of opera’s most spellbinding tunes, this masterpiece is a feast for the eyes and ears. Giacomo Sagripanti conducts an electrifying cast led by the formidable star pairing of mezzosoprano Aigul Akhmetshina and tenor Clay Hilley, transmitted live to cinemas worldwide. These stunning, modern productions feature exclusive, live backstage footage and cast interviews shown during the intervals. Buffet served with interval drinks. Feel free to dress for the occasion! Google Calendar iCalendar",
+   "description": "Adults £15 / Under 18 £2 Saint-Saëns’s spectacular take on the biblical hero of legendary strength and the seductive Philistine whose beauty overpowers him returns in the Met’s larger-than-life production. Featuring a massive orchestra and chorus and some of opera’s most spellbinding tunes, this masterpiece is a feast for the eyes and ears. Giacomo Sagripanti conducts an electrifying cast led by the formidable star pairing of mezzosoprano Aigul Akhmetshina and tenor Clay Hilley, transmitted live to cinemas worldwide. These stunning, modern productions feature exclusive, live backstage footage and cast interviews shown during the intervals. Buffet served with interval drinks. Feel free to dress for the occasion! Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/07/met-opera-2026-2027-3.jpg",
    "time": "16:55",
    "price": "£15",
    "url": "https://www.erinartscentre.com/event/met-opera-samson-et-dalila/",
    "id": "erin-11233",
    "sourceKey": "erin",
-   "category": "Music",
+   "category": "Theatre & Comedy",
    "area": "Port Erin",
    "address": "Port Erin",
    "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
@@ -2293,7 +2241,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION The Manx Breast Cancer Support Group are really pleased to be bringing ‘Rule The World’ to the Isle of Man. Recognised as the Number 1 Take That tribute act in the world, t hey recently appeared alongside Nicole Kidman, Hugh Bonneville, Julie Walters and THE REAL TAKE THAT on BBC1’s ‘The Graham Norton Show’ . After hearing Dan Maines speak, a stunned Gary Barlow said in amazement “He sounds like me!”. Gary then also praised the band saying “These guys are good!”. They are the ONLY Take That tribute show in the land to have ever been praised by Take That’s lead singer! The band have performed at many prestigious events around the world, playing large outdoor festivals in Barcelona, Germany, Austria, Ireland and more. They have performed as a headline act on the Royal Caribbean cruise ships and have a big contract with Butlins Holiday Parks where they regularly perform…",
+   "description": "The Manx Breast Cancer Support Group are really pleased to be bringing ‘Rule The World’ to the Isle of Man. Recognised as the Number 1 Take That tribute act in the world, t hey recently appeared alongside Nicole Kidman, Hugh Bonneville, Julie Walters and THE REAL TAKE THAT on BBC1’s ‘The Graham Norton Show’ . After hearing Dan Maines speak, a stunned Gary Barlow said in amazement “He sounds like me!”. Gary then also praised the band saying “These guys are good!”. They are the ONLY Take That tribute show in the land to have ever been praised by Take That’s lead singer! The band have performed at many prestigious events around the world, playing large outdoor festivals in Barcelona, Germany, Austria, Ireland and more. They have performed as a headline act on the Royal Caribbean cruise ships and have a big contract with Butlins Holiday Parks where they regularly perform alongside S Club…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/920dtup2w5q0zcaie99hrdis9voz/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -2357,9 +2305,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
-    "Family & Kids",
-    "Arts & Workshops"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -2383,60 +2329,6 @@
    ]
   },
   {
-   "title": "Victorian Christmas at The Grove",
-   "venue": "The Grove Museum",
-   "startDate": "2026-12-05",
-   "endDate": "2026-12-06",
-   "isTbc": false,
-   "duration": 1.0,
-   "tags": [
-    "Festive",
-    "Heritage"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": true,
-   "description": "Step back in time and celebrate Christmas the Victorian way! Explore the sights, sounds, and smells of a traditional Victorian festive season.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FAnnotation_2021-10-13_112637_1400749008.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/victorian-christmas-at-the-grove-p1403201",
-   "id": "visitiom-1403201",
-   "sourceKey": "visitiom",
-   "category": "Festive",
-   "area": "Ramsey",
-   "address": "The Grove Museum, Ramsey, Ramsey, IM8 2UA",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
-  },
-  {
-   "title": "Wildlife Photographer of the Year Exhibition",
-   "venue": "House of Manannan",
-   "startDate": "2026-12-05",
-   "endDate": "2027-01-31",
-   "isTbc": false,
-   "duration": 57.0,
-   "tags": [
-    "Arts & Workshops",
-    "Heritage"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": true,
-   "description": "Experience the world-renowned Wildlife Photographer of the Year exhibition at the House of Manannan, On loan from London's Natural History Museum.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F_Federico_Veronesi_Wildlife_Photographer_of_the_Year_Image_17__56302788.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/wildlife-photographer-of-the-year-exhibition-p1888041",
-   "id": "visitiom-1888041",
-   "sourceKey": "visitiom",
-   "category": "Arts & Workshops",
-   "area": "Peel",
-   "address": "House of Manannan, Mill Road, Peel, Isle of Man, IM5 1TA",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
-  },
-  {
    "title": "Eric & Ern",
    "venue": "Gaiety Theatre",
    "startDate": "2026-12-07",
@@ -2444,12 +2336,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Family & Kids"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION The Production Garden in association with Cube Room Productions presents an evening of ERIC & ERN with Ian Ashpitel and Jonty Stephens. From the Olivier nominated duo behind the hugely celebrated critically acclaimed West End hit ERIC & LITTLE ERN. This is a show for all the family from 8 to 80! A brilliant homage crammed full of renditions of those famous comedy sketches, that hits all the right notes, celebrating the Centenary year of the nations favourite comedy legends Morecambe & Wise! From Greig's Piano concerto to Mr Memory, “Arsenal!” It’s a show full of Morecambe and Wise’s most loved routines, songs and sketches. This wonderful show evokes memories of times when whole families would huddle around the telly to watch those fantastic Christmas specials. You’ll feel you’ve experienced the real thing and been taken back to a world of sunshine and laughter. As seen…",
+   "description": "The Production Garden in association with Cube Room Productions presents an evening of ERIC & ERN with Ian Ashpitel and Jonty Stephens. From the Olivier nominated duo behind the hugely celebrated critically acclaimed West End hit ERIC & LITTLE ERN. This is a show for all the family from 8 to 80! A brilliant homage crammed full of renditions of those famous comedy sketches, that hits all the right notes, celebrating the Centenary year of the nations favourite comedy legends Morecambe & Wise! From Greig's Piano concerto to Mr Memory, “Arsenal!” It’s a show full of Morecambe and Wise’s most loved routines, songs and sketches. This wonderful show evokes memories of times when whole families would huddle around the telly to watch those fantastic Christmas specials. You’ll feel you’ve experienced the real thing and been taken back to a world of sunshine and laughter. As seen on The One show…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/5qlsq1fff4s2offif3kmj47a6sg2/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2480,7 +2371,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ 2 screenings: 2pm and 7.30pm Adults £8 / under 18s £2 It’s all gone epic in Midweek Movieland…. The Odyssey is here! Oppenheimer, Memento, Inception, The Batman Trilogy: Christopher Nolan is an old-school, powerhouse of a director and no stranger to a big story. Here he takes on Homer, reinventing epic poem The Odyssey (classical scholars look away!) as a colossal origin-myth tale of postwar disillusion. Odysseus, King of Ithaca (Matt Damon), embarks on a perilous journey home after the Trojan War while his wife Penelope (Anne Hathaway) and son Telemachus (Tom Holland) await his return in the precarious power vacuum he has left behind. His return is a mighty ordeal of effort punctuated by flashback episodes, hallucinations and confrontations with the arbitrary gods of dysfunction. This is a film with thrilling ambition, boldness and flair but perhaps it’s greatest achievement is it’s…",
+   "description": "2 screenings: 2pm and 7.30pm Adults £8 / under 18s £2 It’s all gone epic in Midweek Movieland…. The Odyssey is here! Oppenheimer, Memento, Inception, The Batman Trilogy: Christopher Nolan is an old-school, powerhouse of a director and no stranger to a big story. Here he takes on Homer, reinventing epic poem The Odyssey (classical scholars look away!) as a colossal origin-myth tale of postwar disillusion. Odysseus, King of Ithaca (Matt Damon), embarks on a perilous journey home after the Trojan War while his wife Penelope (Anne Hathaway) and son Telemachus (Tom Holland) await his return in the precarious power vacuum he has left behind. His return is a mighty ordeal of effort punctuated by flashback episodes, hallucinations and confrontations with the arbitrary gods of dysfunction. This is a film with thrilling ambition, boldness and flair but perhaps it’s greatest achievement is it’s…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/the-odyssey-dec-2026.jpg",
    "time": "14:00 – 19:30",
    "price": "£8",
@@ -2512,7 +2403,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Join Dr Peter Litman and the Cathedral Choir for an evening of fabulous sing-a-long Festive highlights, well known Carols, and all the descants you know! USEFUL INFORMATION Age guidance Suitable for all, under 16s must be accompanied by an adult (18+) Ticket fee All ticket prices for live performances only are subject to a 5% booking fee, which will be applied at the point of sale to all purchases, whether made online or in person at our Box Office.",
+   "description": "Join Dr Peter Litman and the Cathedral Choir for an evening of fabulous sing-a-long Festive highlights, well known Carols, and all the descants you know! USEFUL INFORMATION Age guidance Suitable for all, under 16s must be accompanied by an adult (18+) Ticket fee All ticket prices for live performances only are subject to a 5% booking fee, which will be applied at the point of sale to all purchases, whether made online or in person at our Box Office.",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/qr3p0mynst58zkfg7ipraz191rd5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2540,12 +2431,11 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Back for 2026, bigger and better, your Christmas starts here! Get ready to Step Into Christmas once again for the most magical, feel-good show of the year! After a sensational run, we’re back – bigger, brighter, and more festive than ever before. This spectacular Christmas concert is the ultimate way to kickstart your festive celebrations, guaranteed to fill your heart with holiday cheer and have you singing along from start to finish. Packed with all your favourite Christmas classics, the show brings the spirit of the season to life with dazzling performances, stunning festive visuals, and a sensational live band. From heartwarming ballads to upbeat festive anthems, it’s the perfect playlist for your Christmas celebrations. Whether you’re starting a new festive tradition or keeping the magic alive, Step Into Christmas is the ultimate feel-good Christmas spectacular…",
+   "description": "Back for 2026, bigger and better, your Christmas starts here! Get ready to Step Into Christmas once again for the most magical, feel-good show of the year! After a sensational run, we’re back – bigger, brighter, and more festive than ever before. This spectacular Christmas concert is the ultimate way to kickstart your festive celebrations, guaranteed to fill your heart with holiday cheer and have you singing along from start to finish. Packed with all your favourite Christmas classics, the show brings the spirit of the season to life with dazzling performances, stunning festive visuals, and a sensational live band. From heartwarming ballads to upbeat festive anthems, it’s the perfect playlist for your Christmas celebrations. Whether you’re starting a new festive tradition or keeping the magic alive, Step Into Christmas is the ultimate feel-good Christmas spectacular. USEFUL INFORMATION…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/zuu0k213e13j6c5plix9lyv6gdrv/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2573,12 +2463,11 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Following the success of their Victorious UK tour, Britain's Got Talent finalists, The D-Day Darlings, return direct from the Royal Albert Hall with their brand new festive spectacular, A Christmas to Remember - bigger, more magical and more heartwarming than ever. Fronted by founder and lead singer Katie Ashby, the Darlings bring their signature heartfelt harmonies to a sparkling collection of festive favourites, including White Christmas, Winter Wonderland, Jingle Bells and It's The Most Wonderful Time of the Year. Featuring brand new music from their Christmas 2026 album, including their original song Here Comes Christmas Again, the show blends fresh material with timeless classics to create a truly memorable festive experience. With selected performances featuring the D-Day Juniors and Voices Choir, alongside dazzling costumes, elegant staging and uplifting…",
+   "description": "Following the success of their Victorious UK tour, Britain's Got Talent finalists, The D-Day Darlings, return direct from the Royal Albert Hall with their brand new festive spectacular, A Christmas to Remember - bigger, more magical and more heartwarming than ever. Fronted by founder and lead singer Katie Ashby, the Darlings bring their signature heartfelt harmonies to a sparkling collection of festive favourites, including White Christmas, Winter Wonderland, Jingle Bells and It's The Most Wonderful Time of the Year. Featuring brand new music from their Christmas 2026 album, including their original song Here Comes Christmas Again, the show blends fresh material with timeless classics to create a truly memorable festive experience. With selected performances featuring the D-Day Juniors and Voices Choir, alongside dazzling costumes, elegant staging and uplifting choreography, this is a…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ocetdoitemdzzhimh6vds1cj1h1j/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2595,38 +2484,9 @@
      "date": "2026-12-10",
      "time": "19:30"
     }
-   ]
-  },
-  {
-   "title": "D-Day Darlings: Victorious",
-   "venue": "Gaiety Theatre",
-   "startDate": "2026-12-10",
-   "endDate": "2026-12-10",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Music",
-    "Theatre & Comedy"
    ],
-   "source": "Visit Isle of Man",
-   "recurring": false,
-   "description": "The D-Day Darlings, proudly present their brand-new stagespectacular, Victorious, fronted by founder and lead singer Katie Ashby.This uplifting show takes audiences on a nostalgic journey through thedefining sounds of the 20th century, from the…",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F4_2__579250993.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/d-day-darlings-victorious-p1884391",
-   "id": "visitiom-1884391",
-   "sourceKey": "visitiom",
-   "category": "Music",
-   "area": "Douglas",
-   "address": "Gaiety Theatre, Harris Promenade, Douglas, Isle of Man, IM1 2HP",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-12-10",
-     "time": ""
-    }
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -2641,7 +2501,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Join us for an intimate and inspiring evening with one of Britain’s most recognisable and beloved entertainers. In this special event, Ricky Tomlinson opens up about the remarkable journey that shaped him—long before his rise to television fame. Ricky begins by reflecting on his early life in Liverpool: a childhood of working-class grit, humour, and resilience. He shares vivid stories of the city that raised him, the jobs that shaped his outlook, and the strong community spirit that forged his character. From his formative years as a plasterer to becoming an active trade unionist, Ricky speaks candidly about the political convictions that led him to stand up for workers’ rights—passionately, loudly, and at great personal cost. His moving account of the 1970s building workers’ strike and the trials that followed reveals the depth of his principles, as well as the…",
+   "description": "Join us for an intimate and inspiring evening with one of Britain’s most recognisable and beloved entertainers. In this special event, Ricky Tomlinson opens up about the remarkable journey that shaped him—long before his rise to television fame. Ricky begins by reflecting on his early life in Liverpool: a childhood of working-class grit, humour, and resilience. He shares vivid stories of the city that raised him, the jobs that shaped his outlook, and the strong community spirit that forged his character. From his formative years as a plasterer to becoming an active trade unionist, Ricky speaks candidly about the political convictions that led him to stand up for workers’ rights—passionately, loudly, and at great personal cost. His moving account of the 1970s building workers’ strike and the trials that followed reveals the depth of his principles, as well as the lifelong impact of those…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ndy4spraoo2hpdxceeret86qlimk/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -2668,7 +2528,6 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
     "Theatre & Comedy"
    ],
    "source": "Visit Isle of Man",
@@ -2680,7 +2539,7 @@
    "url": "https://www.visitisleofman.com/whats-on/light-up-laxey-p1791801",
    "id": "visitiom-1791801",
    "sourceKey": "visitiom",
-   "category": "Festive",
+   "category": "Theatre & Comedy",
    "area": "Laxey",
    "address": "The Great Laxey Mine Railway, Valley Gardens, Laxey, Isle of Man, IM4 7QP",
    "bookingUrl": "",
@@ -2700,18 +2559,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music"
+    "Other"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ NEW DATE – RESCHEDULED FROM OCTOBER 24th. PLEASE REBOOK TICKETS Free Admission 11am start Please book your place to give us an idea of numbers The Piano Series opens the new season with a masterclass and recital by Aidan Modica. In this free masterclass, Aidan will be playing excerpts from and discussing his programme for the evening recital. These informal sessions allow a fascinating look inside the mind and technique of a professional musician and provide an ideal opportunity for aspiring pianists to meet and observe someone at the top of their craft. Tell all your keyboard playing friends! Aidan comes to us courtesy of The Keyboard Trust and his recital programme will be: Bach/Howells – O Mensch Bewein’ Dein’ Sünde Gross, BWV 622 Mozart – Rondo in A minor, KV511 Chopin – Etude, Op 25 No 7 Chopin – Nocturne in B major, Op 62 No 1 Beethoven – Sonata in C-sharp minor, Op 27 No 2…",
+   "description": "NEW DATE – RESCHEDULED FROM OCTOBER 24th. PLEASE REBOOK TICKETS Free Admission 11am start Please book your place to give us an idea of numbers The Piano Series opens the new season with a masterclass and recital by Aidan Modica. In this free masterclass, Aidan will be playing excerpts from and discussing his programme for the evening recital. These informal sessions allow a fascinating look inside the mind and technique of a professional musician and provide an ideal opportunity for aspiring pianists to meet and observe someone at the top of their craft. Tell all your keyboard playing friends! Aidan comes to us courtesy of The Keyboard Trust and his recital programme will be: Bach/Howells – O Mensch Bewein’ Dein’ Sünde Gross, BWV 622 Mozart – Rondo in A minor, KV511 Chopin – Etude, Op 25 No 7 Chopin – Nocturne in B major, Op 62 No 1 Beethoven – Sonata in C-sharp minor, Op 27 No 2…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/piano-series-Aidan-Modica-oct-2026.jpg",
    "time": "11:00 – 12:00",
    "price": "free",
    "url": "https://www.erinartscentre.com/event/piano-series-aidan-modica-new-date/",
    "id": "erin-11762",
    "sourceKey": "erin",
-   "category": "Music",
+   "category": "Other",
    "area": "Port Erin",
    "address": "Port Erin",
    "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
@@ -2770,7 +2629,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION An evening of festive music and popular classics performed by the Manx Youth Orchestras/Guitar Ensemble USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult Presale / Priority booking Presale / Priority bookings will be open 24th Oct until 4th Nov 2025 with promo code: MYOXPRI26 (Friends of the Manx Youth Orchestra have been supplied the code, code not to be made public) General Sale Open for general sale Wednesday 6th November 2024 @ 10am. Seating Downstairs/Allocated Seating (Ground floor level) - Orchestra Style Dance Floor Stalls - Seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Tiered Seating - Seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Upstairs/Allocated Seating (Dress circle level)…",
+   "description": "An evening of festive music and popular classics performed by the Manx Youth Orchestras/Guitar Ensemble USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult Presale / Priority booking Presale / Priority bookings will be open 24th Oct until 4th Nov 2025 with promo code: MYOXPRI26 (Friends of the Manx Youth Orchestra have been supplied the code, code not to be made public) General Sale Open for general sale Wednesday 6th November 2024 @ 10am. Seating Downstairs/Allocated Seating (Ground floor level) - Orchestra Style Dance Floor Stalls - Seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Tiered Seating - Seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Upstairs/Allocated Seating (Dress circle level) Seats are…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/o9qbt7whzdbwc59puhxv61xea0v7/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:00",
    "price": "",
@@ -2801,7 +2660,7 @@
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ NEW DATE-RESCHEDULED FROM OCTOBER 24th. ALL ORIGINAL TICKETS HAVE BEEN REFUNDED, PLEASE REBOOK ​HERE Tickets £15 / Under 18s £2 For the opening Piano Series of the season, we are delighted to welcome rising star, Aidan Modica. Aidan Módica was born in Dartford, Kent, in 2005. Three years after starting piano lessons at the age of thirteen, he was awarded a scholarship to study both piano and composition at Junior Trinity Laban Conservatoire of Music and Dance. In the Summer of 2023, he performed with the London Schools Symphony Orchestra on their UK tour, as well as giving a series of solo recitals. He is a graduate of Christ’s College, University of Cambridge, where he read Music, was Chair of the Music Society and sang in the chapel choir. Due to the high standard of performance in his first year, he was selected to continue his piano instruction at the Royal Academy of Music under…",
+   "description": "NEW DATE-RESCHEDULED FROM OCTOBER 24th. ALL ORIGINAL TICKETS HAVE BEEN REFUNDED, PLEASE REBOOK ​HERE Tickets £15 / Under 18s £2 For the opening Piano Series of the season, we are delighted to welcome rising star, Aidan Modica. Aidan Módica was born in Dartford, Kent, in 2005. Three years after starting piano lessons at the age of thirteen, he was awarded a scholarship to study both piano and composition at Junior Trinity Laban Conservatoire of Music and Dance. In the Summer of 2023, he performed with the London Schools Symphony Orchestra on their UK tour, as well as giving a series of solo recitals. He is a graduate of Christ’s College, University of Cambridge, where he read Music, was Chair of the Music Society and sang in the chapel choir. Due to the high standard of performance in his first year, he was selected to continue his piano instruction at the Royal Academy of Music under…",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/piano-series-Aidan-Modica-oct-2026.jpg",
    "time": "19:30",
    "price": "£15",
@@ -2828,8 +2687,7 @@
    "isTbc": false,
    "duration": 8.0,
    "tags": [
-    "Festive",
-    "Family & Kids"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -2855,9 +2713,7 @@
    "isTbc": false,
    "duration": 8.0,
    "tags": [
-    "Festive",
-    "Family & Kids",
-    "Theatre & Comedy"
+    "Festive"
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
@@ -2916,18 +2772,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive"
+    "Other"
    ],
    "source": "Erin Arts Centre",
    "recurring": false,
-   "description": "@ Adults £8 Under 18’s £2 Kickstart the festivities with a trip to the EAC and Bushy’s Yuletide institution. We look forward to this all year and can’t wait to see you. Happy Christmas to all our friends and supporters! We all know the story but it’s still a beautiful thing to watch it unfold and work it’s seasonal magic. An angel is sent from heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed. James Stewart, Donna Reed and Virginia Patton star in Frank Capra’s evergreen, Christmas classic. Martin and Debbie will be serving their special mulled wine and mince pies at the interval. Sponsored by Bushy’s brewery. Tickets Google Calendar iCalendar",
+   "description": "Adults £8 Under 18’s £2 Kickstart the festivities with a trip to the EAC and Bushy’s Yuletide institution. We look forward to this all year and can’t wait to see you. Happy Christmas to all our friends and supporters! We all know the story but it’s still a beautiful thing to watch it unfold and work it’s seasonal magic. An angel is sent from heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed. James Stewart, Donna Reed and Virginia Patton star in Frank Capra’s evergreen, Christmas classic. Martin and Debbie will be serving their special mulled wine and mince pies at the interval. Sponsored by Bushy’s brewery. Tickets Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/wonderful-life-2026.jpg",
    "time": "19:30",
    "price": "£8",
    "url": "https://www.erinartscentre.com/event/its-a-wonderful-life-2/",
    "id": "erin-11772",
    "sourceKey": "erin",
-   "category": "Festive",
+   "category": "Other",
    "area": "Port Erin",
    "address": "Port Erin",
    "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
@@ -2979,19 +2835,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
     "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION RS Promotions presents Retro Night featuring RETROSPECT It’s Party Time again, and it's also Black-Eye Friday, so come and enjoy a Christmas Party Night with the fabulous RETROSPECT , for an evening crammed with timeless soul & motown classics. Plus DJ Music playing all those 70s & 80s hits to make this a fab night out. USEFUL INFORMATION Age guidance Ages 16 and over advised. Under 16s must be accompanied by an adult (18+) Downstairs/Allocated Seating (Ground floor level) Tables: Cabaret style allocated/reserved seating on the Dance Floor Stalls. Please note positions around each table are occupied on a first come, first served basis. Tiered Stalls: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible bookings…",
+   "description": "RS Promotions presents Retro Night featuring RETROSPECT It’s Party Time again, and it's also Black-Eye Friday, so come and enjoy a Christmas Party Night with the fabulous RETROSPECT , for an evening crammed with timeless soul & motown classics. Plus DJ Music playing all those 70s & 80s hits to make this a fab night out. USEFUL INFORMATION Age guidance Ages 16 and over advised. Under 16s must be accompanied by an adult (18+) Downstairs/Allocated Seating (Ground floor level) Tables: Cabaret style allocated/reserved seating on the Dance Floor Stalls. Please note positions around each table are occupied on a first come, first served basis. Tiered Stalls: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible bookings online. To make a…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/q37kbzsw9sqrdb9mavd8cne5ezol/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
    "url": "https://villagaiety.ticketsolve.com/shows/873622319/events",
    "id": "villagaiety-873622319",
    "sourceKey": "villagaiety",
-   "category": "Festive",
+   "category": "Music",
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873622319/events",
@@ -3012,12 +2867,11 @@
    "duration": 13.0,
    "tags": [
     "Festive",
-    "Film",
-    "Music"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION A Spellbinding Tale As Old As Time… You’ve seen the film… You’ve seen the musical… But you’ve never seen it like this… This Christmas, Beauty and the Beast arrives at the Gaiety Theatre… bringing with it a dazzling mix of magic, mischief and magnificent mayhem. Brought to you by Stage-ed - the team behind recent smash-hit pantomimes Cinderella , Aladdin and Dick Whittington , comes a brand-new festive spectacular packed with big laughs, big spectacle and even bigger panto chaos. Join Belle as she sets out to rescue her sister from the mysterious Beast of Peel Castle, where secrets hide behind every enchanted door… But this is panto so…naturally… everything goes slightly off track. Will the wicked Duke of Douglas ruin Belle’s dreams of becoming a true Princess? Will Marigold and her long-suffering son Silly Billy ever perfect their Super Sloppy Soapy Cleaner … or just…",
+   "description": "A Spellbinding Tale As Old As Time… You’ve seen the film… You’ve seen the musical… But you’ve never seen it like this… This Christmas, Beauty and the Beast arrives at the Gaiety Theatre… bringing with it a dazzling mix of magic, mischief and magnificent mayhem. Brought to you by Stage-ed - the team behind recent smash-hit pantomimes Cinderella , Aladdin and Dick Whittington , comes a brand-new festive spectacular packed with big laughs, big spectacle and even bigger panto chaos. Join Belle as she sets out to rescue her sister from the mysterious Beast of Peel Castle, where secrets hide behind every enchanted door… But this is panto so…naturally… everything goes slightly off track. Will the wicked Duke of Douglas ruin Belle’s dreams of becoming a true Princess? Will Marigold and her long-suffering son Silly Billy ever perfect their Super Sloppy Soapy Cleaner … or just redecorate the…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/p7abvkwrjki2ssh7b0sntkg5swb3/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -3132,8 +2986,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
-    "Heritage"
+    "Festive"
    ],
    "source": "Manx National Heritage",
    "recurring": false,
@@ -3164,13 +3017,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Family & Kids",
-    "Heritage"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Castletown man Sam Naughton was killed during practise for the 2026 MGP. He leaves his wife Charlotte and four young children: Bonnie, Liam, Jesse, and Parker. The aim is to raise as much as possible to make their lives just a little bit more bearable following the tragic loss of the love of Charlotte's life, and the kids' Dad. Featuring FOUR of the Island's best Tribute Bands, we are proud to give you: Balla Sabbath Bon Jelski Bad Reputation Pigs on the Wing All the bands are very generously giving their services completely free of charge. So, join us for a night of music and madness. USEFUL INFORMATION Ticket Pricing Choose the ticket price you can afford to pay - £10, £15, or £20. We just want you to enjoy the evening and celebrate Sam's life. Age guidance Strictly for ages 14 and over. Under 16s must be accompanied by an adult (18+) Seating Downstairs/General…",
+   "description": "Castletown man Sam Naughton was killed during practise for the 2026 MGP. He leaves his wife Charlotte and four young children: Bonnie, Liam, Jesse, and Parker. The aim is to raise as much as possible to make their lives just a little bit more bearable following the tragic loss of the love of Charlotte's life, and the kids' Dad. Featuring FOUR of the Island's best Tribute Bands, we are proud to give you: Balla Sabbath Bon Jelski Bad Reputation Pigs on the Wing All the bands are very generously giving their services completely free of charge. So, join us for a night of music and madness. USEFUL INFORMATION Ticket Pricing Choose the ticket price you can afford to pay - £10, £15, or £20. We just want you to enjoy the evening and celebrate Sam's life. Age guidance Strictly for ages 14 and over. Under 16s must be accompanied by an adult (18+) Seating Downstairs/General Admission (Ground Floor…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/9r394fwvol36v9d90vwhgr7eblli/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3198,7 +3049,6 @@
    "duration": 0.0,
    "tags": [
     "Festive",
-    "Family & Kids",
     "Film"
    ],
    "source": "Manx National Heritage",
@@ -3261,7 +3111,6 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Family & Kids",
     "Sport"
    ],
    "source": "Visit Isle of Man",
@@ -3273,7 +3122,7 @@
    "url": "https://www.visitisleofman.com/whats-on/isle-of-man-orienteering-klubb-boxing-day-orienteering-event-archallagan-forest-p1813321",
    "id": "visitiom-1813321",
    "sourceKey": "visitiom",
-   "category": "Family & Kids",
+   "category": "Sport",
    "area": "Peel",
    "address": "Archallagan Forest, Southern Car Park, Eairy Kelly Road, Foxdale, Isle of Man, IM4 2HH",
    "bookingUrl": "",
@@ -3293,7 +3142,6 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
     "Family & Kids",
     "Sport"
    ],
@@ -3306,7 +3154,7 @@
    "url": "https://www.visitisleofman.com/whats-on/mince-pie-trains-p1809601",
    "id": "visitiom-1809601",
    "sourceKey": "visitiom",
-   "category": "Festive",
+   "category": "Family & Kids",
    "area": "Douglas",
    "address": "Groudle Glen Railway, Onchan, Isle of Man, IM32HA",
    "bookingUrl": "",
@@ -3425,7 +3273,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Following a sold-out 2026 UK and Ireland tour that saw over 200,000 tickets sold, ‘one of the world’s top comedians’ (The Sunday Times), Russell Howard, is inviting you back into the room for his 2027 tour extension: no phones, no distractions, just humans and jokes. Don’t tell the algorithm. “Howard is a megastar” The Times “A comedy King” Evening Standard “Superstar stand-up” Guardian “You’ll not find a slicker, more personable performer the length and breadth of the land” Mail On Sunday “completely irresistible…one of the most effective political stand-ups around. God, the man can put on a show. Howard is a brilliantly talented live performer” The Daily Telegraph ★★★★ ★★★★★ Mail On Sunday ★★★★★ Metro ★★★★★ Chortle ★★★★ Evening Standard ★★★★ The Times ★★★★ Time Out ★★★★ The Independent ★★★★ The Telegraph USEFUL INFORMATION Age guidance Recommended ages 14 and over…",
+   "description": "Following a sold-out 2026 UK and Ireland tour that saw over 200,000 tickets sold, ‘one of the world’s top comedians’ (The Sunday Times), Russell Howard, is inviting you back into the room for his 2027 tour extension: no phones, no distractions, just humans and jokes. Don’t tell the algorithm. “Howard is a megastar” The Times “A comedy King” Evening Standard “Superstar stand-up” Guardian “You’ll not find a slicker, more personable performer the length and breadth of the land” Mail On Sunday “completely irresistible…one of the most effective political stand-ups around. God, the man can put on a show. Howard is a brilliantly talented live performer” The Daily Telegraph ★★★★ ★★★★★ Mail On Sunday ★★★★★ Metro ★★★★★ Chortle ★★★★ Evening Standard ★★★★ The Times ★★★★ Time Out ★★★★ The Independent ★★★★ The Telegraph USEFUL INFORMATION Age guidance Recommended ages 14 and over. Under 16s must be…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/0023o3ai8s75nathc3rdyrjol2hp/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -3456,20 +3304,18 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Family & Kids",
-    "Music",
-    "Arts & Workshops"
+    "Music"
    ],
    "source": "Erin Arts Centre",
    "recurring": true,
-   "description": "@ Applications for next year’s Young Singer of Mann Competition at Erin Arts Centre are now open! The competition will take place on Saturday 30th and January 31st 2027. We intend to run the Intermediate class at 11am, followed by the Junior at 2pm on the Saturday with the Seniors singing on Sunday at 2pm, however this may change according to class sizes following the application process. Please read the application form carefully, there are some basic guidelines designed to help you. There is one important change to the form which requires that all sheet music be handed in here at EAC by the deadline date. Tell all your singing friends and family and we look forward to seeing you in the new year! Apply online: https://www.erinartscentre.com/ysom/ Google Calendar iCalendar",
+   "description": "Applications for next year’s Young Singer of Mann Competition at Erin Arts Centre are now open! The competition will take place on Saturday 30th and January 31st 2027. We intend to run the Intermediate class at 11am, followed by the Junior at 2pm on the Saturday with the Seniors singing on Sunday at 2pm, however this may change according to class sizes following the application process. Please read the application form carefully, there are some basic guidelines designed to help you. There is one important change to the form which requires that all sheet music be handed in here at EAC by the deadline date. Tell all your singing friends and family and we look forward to seeing you in the new year! Apply online: https://www.erinartscentre.com/ysom/ Google Calendar iCalendar",
    "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/ysom-2027-poster.jpg",
    "time": "",
    "price": "",
    "url": "https://www.erinartscentre.com/event/young-singer-of-mann-2027-applications-open/",
    "id": "erin-11698",
    "sourceKey": "erin",
-   "category": "Family & Kids",
+   "category": "Music",
    "area": "Port Erin",
    "address": "Port Erin",
    "bookingUrl": "https://www.erinartscentre.com/ysom/",
@@ -3516,8 +3362,7 @@
    "isTbc": false,
    "duration": 8.0,
    "tags": [
-    "Theatre & Comedy",
-    "Heritage"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
@@ -3568,7 +3413,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Disco is back on the Rock! Get ready to dust off your flares and hit the dance floor as the acclaimed Douglas Choral Union—the powerhouse creative team behind the sensational Chicago—brings the ultimate 1970s phenomenon, Saturday Night Fever, straight to the stage of the Gaiety Theatre. Set against the gritty backdrop of Brooklyn, this electrifying musical follows Tony Manero, a young paint store clerk who finds escape and glory as the undisputed king of the local discotheque. When he teams up with the talented Stephanie Mangano for a high-stakes dance competition, his world changes forever. Featuring spectacular choreography, era-defining swagger, and the legendary soundtrack written by the Isle of Man’s very own Manx-born icons, the Bee Gees, this high-energy production is packed with timeless anthems including \"Stayin' Alive,\" \"Night Fever,\" \"Tragedy,\" and \"How Deep…",
+   "description": "Disco is back on the Rock! Get ready to dust off your flares and hit the dance floor as the acclaimed Douglas Choral Union—the powerhouse creative team behind the sensational Chicago—brings the ultimate 1970s phenomenon, Saturday Night Fever, straight to the stage of the Gaiety Theatre. Set against the gritty backdrop of Brooklyn, this electrifying musical follows Tony Manero, a young paint store clerk who finds escape and glory as the undisputed king of the local discotheque. When he teams up with the talented Stephanie Mangano for a high-stakes dance competition, his world changes forever. Featuring spectacular choreography, era-defining swagger, and the legendary soundtrack written by the Isle of Man’s very own Manx-born icons, the Bee Gees, this high-energy production is packed with timeless anthems including \"Stayin' Alive,\" \"Night Fever,\" \"Tragedy,\" and \"How Deep Is Your Love.”…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/m3g0bujd4v94xbvmk533g6s6yyqj/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -3627,9 +3472,7 @@
    "isTbc": false,
    "duration": 127.0,
    "tags": [
-    "Arts & Workshops",
-    "Heritage",
-    "Sport"
+    "Arts & Workshops"
    ],
    "source": "Manx National Heritage",
    "recurring": true,
@@ -3755,12 +3598,11 @@
    "duration": 0.0,
    "tags": [
     "Talks & Learning",
-    "Theatre & Comedy",
     "Sport"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION HC Promotions proudly sponsored by Get the Ticket present an Audience with footballing icon Duncan Ferguson at The Gaiety Theatre, Isle of Man in Feb 2026. He began his career at Dundee United in 1990 and moved to Rangers in 1993 for what was then a British transfer record fee. He spent the remainder of his career in England, moving to Everton in 1994 before a stint with Newcastle United between 1998 and 2000, after which he returned to Everton, where he retired in 2006. During his career, Ferguson won the FA Cup with Everton in 1995. He was capped for Scotland seven times, playing at UEFA Euro 1992, but made himself unavailable for selection for the national team from 1997 due to a dispute with the Scottish Football Association. He has scored more goals than any other Scottish player in England’s Premier League since its creation in 1992. Ferguson’s aggressive style of…",
+   "description": "HC Promotions proudly sponsored by Get the Ticket present an Audience with footballing icon Duncan Ferguson at The Gaiety Theatre, Isle of Man in Feb 2026. He began his career at Dundee United in 1990 and moved to Rangers in 1993 for what was then a British transfer record fee. He spent the remainder of his career in England, moving to Everton in 1994 before a stint with Newcastle United between 1998 and 2000, after which he returned to Everton, where he retired in 2006. During his career, Ferguson won the FA Cup with Everton in 1995. He was capped for Scotland seven times, playing at UEFA Euro 1992, but made himself unavailable for selection for the national team from 1997 due to a dispute with the Scottish Football Association. He has scored more goals than any other Scottish player in England’s Premier League since its creation in 1992. Ferguson’s aggressive style of play resulted in…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/8eb27uzy68kgo1f2k9ttfd1q05hz/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3791,7 +3633,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION An Unforgettable Night Out with Friends Get ready for a night of big vocals, big energy and even bigger memories. The Big Pants Party is a high-energy live concert celebrating the songs that defined your friendships, the anthems you danced to, sang through heartbreak with, and blasted on unforgettable nights out. Performed by sensational vocalists and a powerhouse live band, this feel-good show brings the soundtrack of your life to the stage in one uplifting, joy-filled experience. From iconic sing-along moments to hands-in-the-air dancefloor classics, this is your chance to relive the music that shaped a lifetime of fun, love and friendship. Gather your squad. Dress to impress. And relive the soundtrack of your story. This isn’t just a concert, it’s a celebration of friendship, fun and unforgettable moments. This is your night. Don’t miss it . USEFUL INFORMATION Age…",
+   "description": "An Unforgettable Night Out with Friends Get ready for a night of big vocals, big energy and even bigger memories. The Big Pants Party is a high-energy live concert celebrating the songs that defined your friendships, the anthems you danced to, sang through heartbreak with, and blasted on unforgettable nights out. Performed by sensational vocalists and a powerhouse live band, this feel-good show brings the soundtrack of your life to the stage in one uplifting, joy-filled experience. From iconic sing-along moments to hands-in-the-air dancefloor classics, this is your chance to relive the music that shaped a lifetime of fun, love and friendship. Gather your squad. Dress to impress. And relive the soundtrack of your story. This isn’t just a concert, it’s a celebration of friendship, fun and unforgettable moments. This is your night. Don’t miss it . USEFUL INFORMATION Age guidance Suitable…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/j11au5xqyxigtmjtd2n5kapvli0d/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3818,13 +3660,11 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Family & Kids",
-    "Theatre & Comedy",
-    "Heritage"
+    "Family & Kids"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Back by roaring demand, the international smash hit Dinosaur World Live returns this summer! Don’t miss this award-winning interactive adventure for all the family – featuring the biggest and best dinosaur puppets live on stage! Step into a prehistoric world of astonishing (and remarkably life-like) creatures. Meet an incredible line-up of dinosaurs, including every child's favourite flesh-eating giant, the Tyrannosaurus Rex , alongside a Triceratops , Giraffatitan , Microraptor and Segnosaurus ! A special meet and greet after the show offers all our brave explorers the chance to make a new dinosaur friend. Packed with fun, dino-mite discoveries, this mind-expanding Jurassic adventure is not to be missed. Book now before tickets become extinct! ★★★★★ ‘Great fun. Highly recommended for all ages’ - What’s Good To Do ★★★★ 'A spectacular interactive show!' - OK! Magazine…",
+   "description": "Back by roaring demand, the international smash hit Dinosaur World Live returns this summer! Don’t miss this award-winning interactive adventure for all the family – featuring the biggest and best dinosaur puppets live on stage! Step into a prehistoric world of astonishing (and remarkably life-like) creatures. Meet an incredible line-up of dinosaurs, including every child's favourite flesh-eating giant, the Tyrannosaurus Rex , alongside a Triceratops , Giraffatitan , Microraptor and Segnosaurus ! A special meet and greet after the show offers all our brave explorers the chance to make a new dinosaur friend. Packed with fun, dino-mite discoveries, this mind-expanding Jurassic adventure is not to be missed. Book now before tickets become extinct! ★★★★★ ‘Great fun. Highly recommended for all ages’ - What’s Good To Do ★★★★ 'A spectacular interactive show!' - OK! Magazine ★★★★ ‘The perfect…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/dmte6jpf7g8vytehaumr0wvtt1sl/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -3859,12 +3699,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Talks & Learning",
-    "Theatre & Comedy"
+    "Talks & Learning"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Some people are built to Embrace the Chaos. Jason Fox is one of them, having survived some of the most hostile outposts on earth as an elite operator, documentary maker and expedition leader. Following the huge success of his new theatre show Embrace The Chaos , Jason returns with brand-new dates for 2027. He will share a series of never-told-before stories, his close brushes with enemy gunmen, terrorist bomb makers and cartel leaders, while revealing his strategies for surviving — and thriving — in environments as life-threatening as the Arctic Circle and Afghan badlands. Though, as you’ll learn, nothing is as terrifying as the rogue celebrity on SAS: Who Dares Wins… Using the principles from his elite military operations, this show will help you reboot your thinking, rebalance your life, and push you beyond your comfort zone. Challenge your limits, change your habits…",
+   "description": "Some people are built to Embrace the Chaos. Jason Fox is one of them, having survived some of the most hostile outposts on earth as an elite operator, documentary maker and expedition leader. Following the huge success of his new theatre show Embrace The Chaos , Jason returns with brand-new dates for 2027. He will share a series of never-told-before stories, his close brushes with enemy gunmen, terrorist bomb makers and cartel leaders, while revealing his strategies for surviving — and thriving — in environments as life-threatening as the Arctic Circle and Afghan badlands. Though, as you’ll learn, nothing is as terrifying as the rogue celebrity on SAS: Who Dares Wins… Using the principles from his elite military operations, this show will help you reboot your thinking, rebalance your life, and push you beyond your comfort zone. Challenge your limits, change your habits, and transform…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/rr8p0kgzzhbacazy8z4v68rtt76x/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3891,12 +3730,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Celebrate 70 Platinum Years of iconic hits Barry Steele and Friends – The Definitive Roy Orbison Concert Experience If you want the real deal, the name on the ticket is Barry Steele. Direct from the West End’s Adelphi Theatre and celebrating 21 years in the business, Barry Steele’s Roy Orbison Story takes you on a fantastic musical journey celebrating the Rock & Roll Hall of Fame legend and six-time Grammy-winning Roy “The Big O” Orbison, along with his iconic friends in the music world. Backed by a superb 5-piece band, this show transports you from the rockabilly Sun Records era right through to the Traveling Wilburys, delivering all the classic hits including “Pretty Woman,” “Crying,” “I Drove All Night,” “You Got It,” “Only the Lonely,” “In Dreams,” “California Blue,” “Rattled,” and “Handle with Care,” plus many more. Don’t miss one of the biggest nights of the year…",
+   "description": "Celebrate 70 Platinum Years of iconic hits Barry Steele and Friends – The Definitive Roy Orbison Concert Experience If you want the real deal, the name on the ticket is Barry Steele. Direct from the West End’s Adelphi Theatre and celebrating 21 years in the business, Barry Steele’s Roy Orbison Story takes you on a fantastic musical journey celebrating the Rock & Roll Hall of Fame legend and six-time Grammy-winning Roy “The Big O” Orbison, along with his iconic friends in the music world. Backed by a superb 5-piece band, this show transports you from the rockabilly Sun Records era right through to the Traveling Wilburys, delivering all the classic hits including “Pretty Woman,” “Crying,” “I Drove All Night,” “You Got It,” “Only the Lonely,” “In Dreams,” “California Blue,” “Rattled,” and “Handle with Care,” plus many more. Don’t miss one of the biggest nights of the year as this…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/mq2jovf9tg3744emc6sw60ld2d7w/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3927,7 +3765,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION A brand new, mind-blowing production for 2027. Introducing a sensational new lead Jessie Rivers - celebrating 60 years of sparkling Neil Diamond hits. In 1966, prolific singer/songwriter Neil Diamond release his debut album The Feel of Neil Diamond, and music was changed forever. This five-star production is the world's greatest celebration and tribute to his life and work. USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Seating Downstairs/Allocated Seating (Ground Floor Level) only. Tables: Cabaret style allocated/reserved seating on the Dance Floor. Please note that positions around table are occupied on a first come, first served basis . Tiered Stalls: Seats are allocated/reserved. Note: Please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately…",
+   "description": "A brand new, mind-blowing production for 2027. Introducing a sensational new lead Jessie Rivers - celebrating 60 years of sparkling Neil Diamond hits. In 1966, prolific singer/songwriter Neil Diamond release his debut album The Feel of Neil Diamond, and music was changed forever. This five-star production is the world's greatest celebration and tribute to his life and work. USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Seating Downstairs/Allocated Seating (Ground Floor Level) only. Tables: Cabaret style allocated/reserved seating on the Dance Floor. Please note that positions around table are occupied on a first come, first served basis . Tiered Stalls: Seats are allocated/reserved. Note: Please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/7e9155dwjg34sl0ne1o5rea1cvd5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -3989,13 +3827,11 @@
    "isTbc": false,
    "duration": 7.0,
    "tags": [
-    "Theatre & Comedy",
-    "Film",
-    "Music"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Get ready for a heavenly dose of music, laughter, and feel-good fun with Sister Act the Musical. Based on the hit film, this uplifting musical follows Deloris Van Cartier, an aspiring disco diva whose life takes an unexpected turn when she witnesses a crime and is place in witness protection in the one place nobody would think to look for her: a convent! Swapping the spotlight for a habit, Deloris finds herself surrounded by a group of nuns who are anything but ordinary. When she transforms their struggling choir into a incredible singing sensation, the convent is turned upside down, friendships blossom, and the community discovers the power of music. With a little faith, a lot of soul, and plenty of sparkle, this is one divine comedy you won't want to miss! USEFUL INFORMATION Customer Note Please note that the will be understudy performances for Dolores Van Cartier for…",
+   "description": "Get ready for a heavenly dose of music, laughter, and feel-good fun with Sister Act the Musical. Based on the hit film, this uplifting musical follows Deloris Van Cartier, an aspiring disco diva whose life takes an unexpected turn when she witnesses a crime and is place in witness protection in the one place nobody would think to look for her: a convent! Swapping the spotlight for a habit, Deloris finds herself surrounded by a group of nuns who are anything but ordinary. When she transforms their struggling choir into a incredible singing sensation, the convent is turned upside down, friendships blossom, and the community discovers the power of music. With a little faith, a lot of soul, and plenty of sparkle, this is one divine comedy you won't want to miss! USEFUL INFORMATION Customer Note Please note that the will be understudy performances for Dolores Van Cartier for the following…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/v4he1kham0u1wyn6c0or4opy9dne/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -4114,12 +3950,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Talks & Learning",
-    "Sport"
+    "Talks & Learning"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Sir Bradley Marc Wiggins, is a British former professional road and track racing cyclist, who competed professionally between 2001 and 2016. He began his cycling career on the track, but later made the transition to road cycling. He is the only rider to have won both World and Olympic championships on both the track and the road, as well as winning the Tour De France. He has won the leader’s jersey in each of the three Grand Tours of cycling, and held the world record in team pursuit on multiple occasions. He won a gold medal at four successive Olympic Games from 2004 to 2016, and held the record as Great Britain’s most decorated Olympian with 8 medals. Join the Tour De France and Olympic winning Medallist as he discusses his fantastic career, what brought him to cycling, his new book The Chain, and everything in-between! USEFUL INFORMATION Age guidance Suitable for 18+…",
+   "description": "Sir Bradley Marc Wiggins, is a British former professional road and track racing cyclist, who competed professionally between 2001 and 2016. He began his cycling career on the track, but later made the transition to road cycling. He is the only rider to have won both World and Olympic championships on both the track and the road, as well as winning the Tour De France. He has won the leader’s jersey in each of the three Grand Tours of cycling, and held the world record in team pursuit on multiple occasions. He won a gold medal at four successive Olympic Games from 2004 to 2016, and held the record as Great Britain’s most decorated Olympian with 8 medals. Join the Tour De France and Olympic winning Medallist as he discusses his fantastic career, what brought him to cycling, his new book The Chain, and everything in-between! USEFUL INFORMATION Age guidance Suitable for 18+ Show Times 18:00…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/8tdzd3lg30dcuicuocet4qujzux3/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4146,8 +3981,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Talks & Learning"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
@@ -4241,12 +4075,11 @@
    "duration": 0.0,
    "tags": [
     "Music",
-    "Family & Kids",
-    "Theatre & Comedy"
+    "Family & Kids"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION RS Promotions is excited to bring The Sound of Springsteen to the island. Experience the pure rock'n'roll euphoria of Bruce Springsteen as this outstanding show brings his iconic sound to life, taking you on a musical journey through the incredible catalogue from Greetings from Ashbury Park to 2020's Ghosts via the legendary hits Born in the USA and Born to Run. From high-octane vocals to the phenomenal stage production, every detail is meticulously created to transport you back to the golden age of rock'n'roll. Whether you're a lifetime Springsteen fan or discovering his music for the first time, you will be captivated by the thundering guitars, iconic saxophone, and powerful lyrics that defined generations. Get ready to experience the musical legacy of THE BOSS! USEFUL INFORMATION Age guidance Recommended for ages 16 and over. Under 16s must be accompanied by an adult…",
+   "description": "RS Promotions is excited to bring The Sound of Springsteen to the island. Experience the pure rock'n'roll euphoria of Bruce Springsteen as this outstanding show brings his iconic sound to life, taking you on a musical journey through the incredible catalogue from Greetings from Ashbury Park to 2020's Ghosts via the legendary hits Born in the USA and Born to Run. From high-octane vocals to the phenomenal stage production, every detail is meticulously created to transport you back to the golden age of rock'n'roll. Whether you're a lifetime Springsteen fan or discovering his music for the first time, you will be captivated by the thundering guitars, iconic saxophone, and powerful lyrics that defined generations. Get ready to experience the musical legacy of THE BOSS! USEFUL INFORMATION Age guidance Recommended for ages 16 and over. Under 16s must be accompanied by an adult (18+) Customer…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/k057fbvgfu2ygkait5f6z20qe4i2/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -4273,12 +4106,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION The Clarence Valley Orchestra (CVO) is a prominent regional ensemble based in Grafton, New South Wales, Australia. Under the baton of its Artistic Director and Conductor, Dr Greg Butcher, the orchestra is celebrated for being high-quality, large-scale musical performance to regional and outback Australia, as well as taking local talent to the international stage. The CVO specialises in engaging \"Pops\" style program. These concerts feature a dynamic, accessible mix of timeless classical pieces, big band ad jazz hits, and show-stopping theatrical scores from Broadway and film, including music from West Side Story to Cabaret-style melodies. Having toured international as far as Italy, Slovenia, and Vienna, the 45-piece orchestra are now touring the Isle of Man, Ireland, and Scotland, with a busy concert tour, raising funds for local Rotary Clubs and other Charities along…",
+   "description": "The Clarence Valley Orchestra (CVO) is a prominent regional ensemble based in Grafton, New South Wales, Australia. Under the baton of its Artistic Director and Conductor, Dr Greg Butcher, the orchestra is celebrated for being high-quality, large-scale musical performance to regional and outback Australia, as well as taking local talent to the international stage. The CVO specialises in engaging \"Pops\" style program. These concerts feature a dynamic, accessible mix of timeless classical pieces, big band ad jazz hits, and show-stopping theatrical scores from Broadway and film, including music from West Side Story to Cabaret-style melodies. Having toured international as far as Italy, Slovenia, and Vienna, the 45-piece orchestra are now touring the Isle of Man, Ireland, and Scotland, with a busy concert tour, raising funds for local Rotary Clubs and other Charities along the way. A show…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/4yed8qmbh7y7esl9nxv7pn5r4nat/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "14:00",
    "price": "",
@@ -4305,12 +4137,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Talks & Learning"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION RS Promotions are delighted to welcome Coldplace back to the Villa Marina. Coldplace are the world's leading tribute to Coldplay and, for over 20 years. have toured around the globe filling arenas with their iconic sound. Built on a passion for music, performance, and, of course, Coldplay. Taking you right back to the start, their show will spiral you into the Coldplay realm, dancing with your emotions as you follow their journey right up to the present day. Being the only tribute band to have worked with Coldplay themselves, their show leads you through all their favourite hits from their very first album to the latest, Moon Music. \" Thanks for flying the Coldplay flag. Coldplace are Pure Quality.\" - Phil Harvey, Coldplay USEFUL INFORMATION Age guidance Recommended for ages 16 and over. Customer Warning This show will feature strobe lighting. Seating Downstairs/General…",
+   "description": "RS Promotions are delighted to welcome Coldplace back to the Villa Marina. Coldplace are the world's leading tribute to Coldplay and, for over 20 years. have toured around the globe filling arenas with their iconic sound. Built on a passion for music, performance, and, of course, Coldplay. Taking you right back to the start, their show will spiral you into the Coldplay realm, dancing with your emotions as you follow their journey right up to the present day. Being the only tribute band to have worked with Coldplay themselves, their show leads you through all their favourite hits from their very first album to the latest, Moon Music. \" Thanks for flying the Coldplay flag. Coldplace are Pure Quality.\" - Phil Harvey, Coldplay USEFUL INFORMATION Age guidance Recommended for ages 16 and over. Customer Warning This show will feature strobe lighting. Seating Downstairs/General Admission…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/n3v9pbaoix7quvowdezfn09casjd/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:30",
    "price": "",
@@ -4342,7 +4173,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Jon Culshaw is taking to the road with a brand-new show for 2027. Join the star of BBC Radio 4’s Dead Ringers as he takes you on a whistle stop tour through an array of famous voices in an evening of stand-up, stories, sketches, and song! Jon is one of Britain's most critically acclaimed impressionists, comedians and actors with television credits ranging from such classic comedy series such as Spitting Image, The Impressions Show, and Newzoids, through to Channel 4’s award winning docudrama Partygate. On stage, in addition to his hugely successful solo comedy tour Imposter Syndrome, in recent years Jon has also played to packed houses in the one man play Les Dawson: Flying High, the Dead Ringers 25th Anniversary Tour, and the iconic London Palladium pantomime. Book now to see one of the country’s most renowned and diverse performers live! ‘ World class virtuoso ’ ****…",
+   "description": "Jon Culshaw is taking to the road with a brand-new show for 2027. Join the star of BBC Radio 4’s Dead Ringers as he takes you on a whistle stop tour through an array of famous voices in an evening of stand-up, stories, sketches, and song! Jon is one of Britain's most critically acclaimed impressionists, comedians and actors with television credits ranging from such classic comedy series such as Spitting Image, The Impressions Show, and Newzoids, through to Channel 4’s award winning docudrama Partygate. On stage, in addition to his hugely successful solo comedy tour Imposter Syndrome, in recent years Jon has also played to packed houses in the one man play Les Dawson: Flying High, the Dead Ringers 25th Anniversary Tour, and the iconic London Palladium pantomime. Book now to see one of the country’s most renowned and diverse performers live! ‘ World class virtuoso ’ **** - The Times ‘…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/r57ty42wxi3ob6q9qba3ffkannrk/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4369,13 +4200,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Talks & Learning",
-    "Theatre & Comedy",
-    "Sport"
+    "Talks & Learning"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION A Night Every Liverpool Fan Will Remember! Step into the incredible world of one of Liverpool Football Club's greatest ever players as we present An Evening with John Barnes . Widely regarded as one of the most gifted footballers of his generation, John thrilled the Anfield faithful for a decade, helping Liverpool dominate English football and achieve unforgettable success on the European stage. During his illustrious career with the Reds, he won two League Championships, two FA Cups, a League Cup, and the 1992 UEFA Super Cup , while also playing a key role in Liverpool's memorable European campaigns. Now's your chance to hear the stories behind the trophies, the dressing room, the rivalries, the unforgettable nights under the Anfield lights, and the characters who made Liverpool one of the greatest teams in world football. Whether you witnessed John Barnes in his prime…",
+   "description": "A Night Every Liverpool Fan Will Remember! Step into the incredible world of one of Liverpool Football Club's greatest ever players as we present An Evening with John Barnes . Widely regarded as one of the most gifted footballers of his generation, John thrilled the Anfield faithful for a decade, helping Liverpool dominate English football and achieve unforgettable success on the European stage. During his illustrious career with the Reds, he won two League Championships, two FA Cups, a League Cup, and the 1992 UEFA Super Cup , while also playing a key role in Liverpool's memorable European campaigns. Now's your chance to hear the stories behind the trophies, the dressing room, the rivalries, the unforgettable nights under the Anfield lights, and the characters who made Liverpool one of the greatest teams in world football. Whether you witnessed John Barnes in his prime or simply want…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/gtapwo7kx9lwz2cocon1hq1hj8u5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4428,13 +4257,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Music",
-    "Heritage"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Set in a playful neo-Victorian world of worker bees, this inventive new production of The Importance of Being Earnest transforms Oscar Wilde's comedy into a thrilling feat of ensemble theatre. Six actor musicians perform every role through breath-taking doublings and inventive performance theatrics. Featuring original English parlour songs, handcrafted costumes, live music, and inventive stagecraft, no two performances are ever quite the same. Created through rehearsals in London and an artistic residency in rural Normandy, the production embraces the spirit of European repertory theatre: artists living, creating, and touring together as one company. Following it's premier, the production embarks on an international tour of twelve countries and more than 150 performances, celebrating Wilde's wit with generosity, imagination, and infectious theatrical joy. USEFUL…",
+   "description": "Set in a playful neo-Victorian world of worker bees, this inventive new production of The Importance of Being Earnest transforms Oscar Wilde's comedy into a thrilling feat of ensemble theatre. Six actor musicians perform every role through breath-taking doublings and inventive performance theatrics. Featuring original English parlour songs, handcrafted costumes, live music, and inventive stagecraft, no two performances are ever quite the same. Created through rehearsals in London and an artistic residency in rural Normandy, the production embraces the spirit of European repertory theatre: artists living, creating, and touring together as one company. Following it's premier, the production embarks on an international tour of twelve countries and more than 150 performances, celebrating Wilde's wit with generosity, imagination, and infectious theatrical joy. USEFUL INFORMATION Age guidance…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/6xy6a31343lwoe6qfqv3dp6ou6de/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4465,7 +4292,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Dare to believe in magic as the UK's #1 magic show returns with a completely new and uplifting production for 2025. You're invited to a night of wonder, as secrets unravel and the impossible becomes possible. Following an unprecedented 5 years of sold-out shows around the world - this five star magic show guarantees to leave you aching with laughter & dizzy in disbelief. Presented by world-renowned award winning magician James Phelan, the first magician in history to sell out a solo-run at The Magic Circle - and most infamous for jamming the BBC switchboard after he correctly predicted the lottery. Don't miss what The Standard calls \" An unforgettable evening we can't stop talking about \". All new material for 2025. Tickets limited and will sell out quickly. ‘ Joel Dommett meets David Blaine ’ (The Sun) ‘Barely skips a beat. One to watch in the world of magic’ (The…",
+   "description": "Dare to believe in magic as the UK's #1 magic show returns with a completely new and uplifting production for 2025. You're invited to a night of wonder, as secrets unravel and the impossible becomes possible. Following an unprecedented 5 years of sold-out shows around the world - this five star magic show guarantees to leave you aching with laughter & dizzy in disbelief. Presented by world-renowned award winning magician James Phelan, the first magician in history to sell out a solo-run at The Magic Circle - and most infamous for jamming the BBC switchboard after he correctly predicted the lottery. Don't miss what The Standard calls \" An unforgettable evening we can't stop talking about \". All new material for 2025. Tickets limited and will sell out quickly. ‘ Joel Dommett meets David Blaine ’ (The Sun) ‘Barely skips a beat. One to watch in the world of magic’ (The List) ★★★★★ ‘This…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/4yfwgkv716ram8h3iunxbfr3q74j/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4496,7 +4323,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION THE LEGENDS OF AMERICAN COUNTRY SHOW RETURNS TO THUNDEROUS APPLAUSE ACROSS EUROPE! Europe’s No.1 Country Music Tribute Show Celebrates Unstoppable Success with over 350,000 Fans and 2,000 Five-Star Reviews Prepare for a boot-stomping, heart-thumping journey through the golden age of country music! The Legends of American Country Show , Europe’s most celebrated tribute to classic and contemporary country stars, continues to dazzle audiences across the continent. This award-winning production has been hailed as the Best Country Tribute Show , captivating over 350,000 fans and racking up more than 2,000 five-star reviews along the way. Featuring stunning renditions of legendary hits from Dolly Parton, Johnny Cash, Willie Nelson, Tammy Wynette, Kenny Rogers, Hank Williams, Garth Brooks, Shania Twain, Alan Jackson, Luke Combs , and many more, this unforgettable night of…",
+   "description": "THE LEGENDS OF AMERICAN COUNTRY SHOW RETURNS TO THUNDEROUS APPLAUSE ACROSS EUROPE! Europe’s No.1 Country Music Tribute Show Celebrates Unstoppable Success with over 350,000 Fans and 2,000 Five-Star Reviews Prepare for a boot-stomping, heart-thumping journey through the golden age of country music! The Legends of American Country Show , Europe’s most celebrated tribute to classic and contemporary country stars, continues to dazzle audiences across the continent. This award-winning production has been hailed as the Best Country Tribute Show , captivating over 350,000 fans and racking up more than 2,000 five-star reviews along the way. Featuring stunning renditions of legendary hits from Dolly Parton, Johnny Cash, Willie Nelson, Tammy Wynette, Kenny Rogers, Hank Williams, Garth Brooks, Shania Twain, Alan Jackson, Luke Combs , and many more, this unforgettable night of music brings…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/phblk5uqsb2d2hpfz91t115yyyzt/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4527,7 +4354,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Welcome to The Dusty Show, The celebration of a true British pop icon. An unforgettable evening of wall-to-wall hits and classics spanning the success of Dusty Springfield’s life and music. Singer Louise Anne Masters takes you on a journey to remember, through the years of Dusty’s career with the utmost authenticity, grace, and a stunning vocal performance that is second to none. Accompanied by her 9-piece band, Louise takes you from the debut ‘I Only Want To Be With You’ and ‘Stay A While’ through to the ‘Ready Steady Go’ Motown era, Dusty in Memphis’ ‘Son Of A Preacher Man’, the psychedelic ‘Ain’t No Sun Since You Been Gone’ to the pinnacle ‘You Don’t Have To Say You Love Me’ and so many more. The Dusty Show is the ultimate definition of a musical legacy that touches the soul, and a life story that warms the heart. Join us in reminiscing with the very best tribute to…",
+   "description": "Welcome to The Dusty Show, The celebration of a true British pop icon. An unforgettable evening of wall-to-wall hits and classics spanning the success of Dusty Springfield’s life and music. Singer Louise Anne Masters takes you on a journey to remember, through the years of Dusty’s career with the utmost authenticity, grace, and a stunning vocal performance that is second to none. Accompanied by her 9-piece band, Louise takes you from the debut ‘I Only Want To Be With You’ and ‘Stay A While’ through to the ‘Ready Steady Go’ Motown era, Dusty in Memphis’ ‘Son Of A Preacher Man’, the psychedelic ‘Ain’t No Sun Since You Been Gone’ to the pinnacle ‘You Don’t Have To Say You Love Me’ and so many more. The Dusty Show is the ultimate definition of a musical legacy that touches the soul, and a life story that warms the heart. Join us in reminiscing with the very best tribute to our very own…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/d58dqag83lvwic4wc9n6j357xzc4/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4554,12 +4381,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Talks & Learning",
-    "Theatre & Comedy"
+    "Talks & Learning"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Are you ready to bring one of the UK's leading crime presenters and bestselling authors to your stage? Emma Kenny, the nation’s trusted expert on criminal psychology, is embarking on a brand-new live tour with Murderous Minds —a captivating show delving into the most notorious British murder cases of our time. Emma has already wowed audiences with two sell out shows ‘The serial killer Next Door’ and ‘Killer Couples’. About the Show Murderous Minds isn’t just a retelling of crimes—it’s an unflinching journey into the psyche of killers, exploring the dark motives and life circumstances that led them to commit unthinkable acts. Known for her work dissecting real-life cases on platforms like ITV’s This Morning and her popular YouTube channel, Emma brings her unique ability to balance chilling facts with compassionate storytelling, ensuring the audience leaves informed…",
+   "description": "Are you ready to bring one of the UK's leading crime presenters and bestselling authors to your stage? Emma Kenny, the nation’s trusted expert on criminal psychology, is embarking on a brand-new live tour with Murderous Minds —a captivating show delving into the most notorious British murder cases of our time. Emma has already wowed audiences with two sell out shows ‘The serial killer Next Door’ and ‘Killer Couples’. About the Show Murderous Minds isn’t just a retelling of crimes—it’s an unflinching journey into the psyche of killers, exploring the dark motives and life circumstances that led them to commit unthinkable acts. Known for her work dissecting real-life cases on platforms like ITV’s This Morning and her popular YouTube channel, Emma brings her unique ability to balance chilling facts with compassionate storytelling, ensuring the audience leaves informed, fascinated, and…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/wdr3r4zwj2ve9e7861mj8supdkyt/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4590,7 +4416,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Don your deerstalker, grab your magnifying glass and get your ‘finger of suspicion’ at the ready because Edinburgh Fringe favourites, Degrees of Error, are bringing back their multiple sell-out show for your sleuthing pleasure. They’ll create a classic murder mystery on-the-spot in this ingenious improvised comedy. You, the audience, become the author as the cast act out your very own Agatha Christie-inspired masterpiece live on stage. At each show this extraordinarily talented company use audience suggestions to create a unique, original and extremely comical murder mystery just for you. All you have to do... is solve it! Ms Gold poisoned at a synchronised swimming gala? Dr Blue exploded by cannon during a hot air balloon race? Professor Violet crushed to death at a Love Island recoupling? You decide! But will you guess whodunnit before the killer is revealed? ★★★★★…",
+   "description": "Don your deerstalker, grab your magnifying glass and get your ‘finger of suspicion’ at the ready because Edinburgh Fringe favourites, Degrees of Error, are bringing back their multiple sell-out show for your sleuthing pleasure. They’ll create a classic murder mystery on-the-spot in this ingenious improvised comedy. You, the audience, become the author as the cast act out your very own Agatha Christie-inspired masterpiece live on stage. At each show this extraordinarily talented company use audience suggestions to create a unique, original and extremely comical murder mystery just for you. All you have to do... is solve it! Ms Gold poisoned at a synchronised swimming gala? Dr Blue exploded by cannon during a hot air balloon race? Professor Violet crushed to death at a Love Island recoupling? You decide! But will you guess whodunnit before the killer is revealed? ★★★★★ 'Outstanding…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/52qvmmdbwsjnq2p736jh274p3vm5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4736,12 +4562,11 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Family & Kids",
-    "Theatre & Comedy"
+    "Family & Kids"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION The Very Hungry Caterpillar Show has been dazzling audiences around the globe for over ten years, faithfully bringing Eric Carle’s timeless classics to the stage. Created by Jonathan Rockefeller, the critically acclaimed show features a menagerie of over 75 magical and larger-than-life puppets, including the star of the show –The Very Hungry Caterpillar. Alongside The Very Hungry Caterpillar , the show features three other Eric Carle stories. These beloved tales are brought to life by a captivating cast of storytellers, sweeping original music, and stunning puppetry. Celebrating 10 years on stage, the multi-award-winning and nominated show, has performed in over 20 countries to more than 3 million children, receiving universal acclaim from The New York Times, The Chicago Tribune, Time Out, The Huffington Post and more. We invite you and your loved ones on an…",
+   "description": "The Very Hungry Caterpillar Show has been dazzling audiences around the globe for over ten years, faithfully bringing Eric Carle’s timeless classics to the stage. Created by Jonathan Rockefeller, the critically acclaimed show features a menagerie of over 75 magical and larger-than-life puppets, including the star of the show –The Very Hungry Caterpillar. Alongside The Very Hungry Caterpillar , the show features three other Eric Carle stories. These beloved tales are brought to life by a captivating cast of storytellers, sweeping original music, and stunning puppetry. Celebrating 10 years on stage, the multi-award-winning and nominated show, has performed in over 20 countries to more than 3 million children, receiving universal acclaim from The New York Times, The Chicago Tribune, Time Out, The Huffington Post and more. We invite you and your loved ones on an unforgettable journey that…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/v9wp5j56kloqlzzkgef7pcc5oj64/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -4780,7 +4605,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Lord Ian Botham, the former England captain, was one of the most impactful all-rounders of his generation with 14 centuries and 383 wickets in a career that spanned over 15 years. Through the 1980s, he was part of a golden generation of all-rounders in world cricket. The 1981 Ashes, which England won 3-1, have since come to be known as Botham’s Ashes for his starring performances with bat and ball. In 2007, Botham was knighted for his services to cricket and to charity. Prolific with both bat and ball, Ian Botham was the fastest to the double of 1000 runs and 100 wickets. He broke the World Record for most Test wickets, and finished his career with 5,200 runs and 383 wickets. Join Lord Ian, as he discusses his amazing career, and everything in between. Your host for the evening: Cricket legend Geoff Miller OBE USEFUL INFORMATION Age guidance Suitable for ages 16 and…",
+   "description": "Lord Ian Botham, the former England captain, was one of the most impactful all-rounders of his generation with 14 centuries and 383 wickets in a career that spanned over 15 years. Through the 1980s, he was part of a golden generation of all-rounders in world cricket. The 1981 Ashes, which England won 3-1, have since come to be known as Botham’s Ashes for his starring performances with bat and ball. In 2007, Botham was knighted for his services to cricket and to charity. Prolific with both bat and ball, Ian Botham was the fastest to the double of 1000 runs and 100 wickets. He broke the World Record for most Test wickets, and finished his career with 5,200 runs and 383 wickets. Join Lord Ian, as he discusses his amazing career, and everything in between. Your host for the evening: Cricket legend Geoff Miller OBE USEFUL INFORMATION Age guidance Suitable for ages 16 and over due to strong…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/hjpnjlpvmc44nmq1zz28mw6w8h8r/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4811,7 +4636,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Gabrielle’s 1999 #1 album ‘Rise’ was one of the most successful of the era and has been certified 4 x Platinum, a status matched by the compilation ‘Dreams Can Come True, Greatest Hits’. In total, six of her albums have reached the Top 10, including 2018’s ‘Under My Skin’. Gabrielle released her latest and eagerly anticipated album to critical acclaim ‘A Place In Your Heart’ in 2024. One of the UK’s most influential singer-songwriters, Gabrielle has achieved a succession of major awards with highlights including two BRITs, two MOBO Awards and an Ivor Novello Award. After earning a new generation of fans during her show-stealing performances on the 2021 edition of ‘The Masked Singer’, Gabrielle has gone on to perform with some of the biggest artists and had a notable appearance in Stormzy's symbolic music video \"Mel Made Me Do It\" in 2022. From joining Adele as special…",
+   "description": "Gabrielle’s 1999 #1 album ‘Rise’ was one of the most successful of the era and has been certified 4 x Platinum, a status matched by the compilation ‘Dreams Can Come True, Greatest Hits’. In total, six of her albums have reached the Top 10, including 2018’s ‘Under My Skin’. Gabrielle released her latest and eagerly anticipated album to critical acclaim ‘A Place In Your Heart’ in 2024. One of the UK’s most influential singer-songwriters, Gabrielle has achieved a succession of major awards with highlights including two BRITs, two MOBO Awards and an Ivor Novello Award. After earning a new generation of fans during her show-stealing performances on the 2021 edition of ‘The Masked Singer’, Gabrielle has gone on to perform with some of the biggest artists and had a notable appearance in Stormzy's symbolic music video \"Mel Made Me Do It\" in 2022. From joining Adele as special guest at her two…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/disfd5wyaum73x7p2kk801vlgtbs/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -4869,7 +4694,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Lucy Beaumont has had quite the year. She lost a contestant £79,000 on The Wheel, forgot to revise for Mastermind, and generally confirmed she's terrible at quiz shows. So she's sticking with what she does best - this autumn, she's back on the road with a brand new show. Following the success of her sell-out debut UK tour, Lucy returns with Bad at Quiz Shows, Good with Weirdos - an evening packed with chaotic brilliance, mayhem, and beautifully surreal storytelling that's made her one of the UK's most beloved comedians. Expect tales of going into hiding after Celebrity Traitors, creating cow udder couture on The Great British Sewing Bee, and navigating life as someone for whom \"normal\" has never made much of an appearance. Whether you loved her on Taskmaster, know her from her award-winning sitcom, or just appreciate someone who turns everyday disasters into comedic…",
+   "description": "Lucy Beaumont has had quite the year. She lost a contestant £79,000 on The Wheel, forgot to revise for Mastermind, and generally confirmed she's terrible at quiz shows. So she's sticking with what she does best - this autumn, she's back on the road with a brand new show. Following the success of her sell-out debut UK tour, Lucy returns with Bad at Quiz Shows, Good with Weirdos - an evening packed with chaotic brilliance, mayhem, and beautifully surreal storytelling that's made her one of the UK's most beloved comedians. Expect tales of going into hiding after Celebrity Traitors, creating cow udder couture on The Great British Sewing Bee, and navigating life as someone for whom \"normal\" has never made much of an appearance. Whether you loved her on Taskmaster, know her from her award-winning sitcom, or just appreciate someone who turns everyday disasters into comedic gold, this is the…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/nf9pk83nyz4az0kbp6eo1c3ep99j/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -4896,12 +4721,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Ben Portsmouth brings you his jaw-dropping tribute to the King of Rock ‘n’ Roll! With global success in over 20 countries including sellout performances on the same Vegas stage as Elvis, to London's West End, don’t miss Ben Portsmouth: This is Elvis , at the Alhambra Theatre. Making history in 2012, Ben broke records becoming the first European to be crowned by Elvis Presley Enterprises as the ‘Worldwide Ultimate Elvis Tribute Artist’ in Memphis, which swiftly followed with an invite to headline a special Elvis week on the Late Show with David Letterman. Celebrating the life of an iconic showman, Ben and the Taking Care of Elvis Band will take you on a trip down memory lane with many of Elvis' most loved songs from all eras including the 1950s, the iconic '68 Comeback Special, and Ben's personal favourite, the 1970s Vegas concerts. With his looks, charm and charisma…",
+   "description": "Ben Portsmouth brings you his jaw-dropping tribute to the King of Rock ‘n’ Roll! With global success in over 20 countries including sellout performances on the same Vegas stage as Elvis, to London's West End, don’t miss Ben Portsmouth: This is Elvis , at the Alhambra Theatre. Making history in 2012, Ben broke records becoming the first European to be crowned by Elvis Presley Enterprises as the ‘Worldwide Ultimate Elvis Tribute Artist’ in Memphis, which swiftly followed with an invite to headline a special Elvis week on the Late Show with David Letterman. Celebrating the life of an iconic showman, Ben and the Taking Care of Elvis Band will take you on a trip down memory lane with many of Elvis' most loved songs from all eras including the 1950s, the iconic '68 Comeback Special, and Ben's personal favourite, the 1970s Vegas concerts. With his looks, charm and charisma, Ben is recognised…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/5aigbd89erselle082jot5elrovf/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4958,7 +4782,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION As a society we love stuff, it’s a statement about who we are and who we want to be. But apparently, this message is at odds with the looming environmental crisis. We’re now struggling to balance these worlds, to focus on the things that bring us real connections and nourish the soul. Award-winning Comedian and Award-winning Product Designer, Scott Bennett is desperately trying to cleanse his life of stuff, but is this even possible anymore? Tour support for Micky Flanagan, Rob Brydon Jason Manford, and John Bishop. The star of Live at the Apollo, The News Quiz, The Now Show, The Ultimate Choice and Chortle Best Club Comedian Nominee 2022. “Without doubt live comedy’s best kept secret” - Evening Standard \"Great material, great delivery, a very funny man\" - Rob Brydon \"Brilliantly funny, a joy to watch\" - Chris Ramsey “Bennett is a stand-up in fine control of his…",
+   "description": "As a society we love stuff, it’s a statement about who we are and who we want to be. But apparently, this message is at odds with the looming environmental crisis. We’re now struggling to balance these worlds, to focus on the things that bring us real connections and nourish the soul. Award-winning Comedian and Award-winning Product Designer, Scott Bennett is desperately trying to cleanse his life of stuff, but is this even possible anymore? Tour support for Micky Flanagan, Rob Brydon Jason Manford, and John Bishop. The star of Live at the Apollo, The News Quiz, The Now Show, The Ultimate Choice and Chortle Best Club Comedian Nominee 2022. “Without doubt live comedy’s best kept secret” - Evening Standard \"Great material, great delivery, a very funny man\" - Rob Brydon \"Brilliantly funny, a joy to watch\" - Chris Ramsey “Bennett is a stand-up in fine control of his material, his delivery…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/dt0cc56jppaww56gf1kq5obs69sq/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -4985,12 +4809,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION 35 Years of Rock ’n ’ Rolling the World — on TV, Radio & in Venues Worldwide! For more than three decades, this sensational show has Rock ’n’ Rolled audiences on TV, radio and in theatres and outdoor venues across the globe — from Croydon to California, Barking to Bangkok and Swindon to Sweden. With standing ovations every night, it’s hard to imagine the show getting any better… but for 2027, it just has. The brand-new Rock ’n ’ Roll Legends Show celebrates all of Buddy Holly’s best-loved songs, alongside the biggest hits from fellow 50s icons including Elvis Presley, Jerry Lee Lewis, Little Richard, Chuck Berry, Eddie Cochran, The Everly Brothers and Ray Charles. With 35 years of sell-out UK and international touring, Buddy Holly and The Cricketers has firmly established itself as the ultimate live rock ’n’ roll experience. Featuring five top actor-musicians, the show…",
+   "description": "35 Years of Rock ’n ’ Rolling the World — on TV, Radio & in Venues Worldwide! For more than three decades, this sensational show has Rock ’n’ Rolled audiences on TV, radio and in theatres and outdoor venues across the globe — from Croydon to California, Barking to Bangkok and Swindon to Sweden. With standing ovations every night, it’s hard to imagine the show getting any better… but for 2027, it just has. The brand-new Rock ’n ’ Roll Legends Show celebrates all of Buddy Holly’s best-loved songs, alongside the biggest hits from fellow 50s icons including Elvis Presley, Jerry Lee Lewis, Little Richard, Chuck Berry, Eddie Cochran, The Everly Brothers and Ray Charles. With 35 years of sell-out UK and international touring, Buddy Holly and The Cricketers has firmly established itself as the ultimate live rock ’n’ roll experience. Featuring five top actor-musicians, the show was endorsed as…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/0u7a1vmtiqhq7z7ssjn310zb5pc8/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -5021,7 +4844,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Look up, and discover a universe bursting with possibility… The Night Sky Show – A Sky Full of Hope is a spectacular, inclusive journey across the universe with astronomer and author Adrian West. Following the phenomenal success of The Night Sky Show, this new production uses dazzling 4K visuals, LED cinema screens, and cinematic flythroughs to take stargazers of all ages on a fast-paced adventure around the cosmos. Breaking the boundaries of traditional astronomy, Adrian blends science with imagination, pop culture and storytelling. Alongside celestial destinations, you'll dive into the age of dinosaurs, discover how life spreads through the universe and encounter the mysteries of alien worlds. From the International Space Station and nebulae to telescopes, our solar system, and humanity's future among the stars, hope is woven throughout, reminding us of the endless…",
+   "description": "Look up, and discover a universe bursting with possibility… The Night Sky Show – A Sky Full of Hope is a spectacular, inclusive journey across the universe with astronomer and author Adrian West. Following the phenomenal success of The Night Sky Show, this new production uses dazzling 4K visuals, LED cinema screens, and cinematic flythroughs to take stargazers of all ages on a fast-paced adventure around the cosmos. Breaking the boundaries of traditional astronomy, Adrian blends science with imagination, pop culture and storytelling. Alongside celestial destinations, you'll dive into the age of dinosaurs, discover how life spreads through the universe and encounter the mysteries of alien worlds. From the International Space Station and nebulae to telescopes, our solar system, and humanity's future among the stars, hope is woven throughout, reminding us of the endless possibilities when…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/6i7dshpdwcp5q8hqakzc26v9pnjb/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5083,7 +4906,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION They planned the murder. They covered their tracks. They thought they had got away with it. They almost did. In The Makings of a Murderer: Fatal Mistake , award-winning investigative journalist and broadcaster Donal MacIntyre examines the extraordinary true stories of killers who came terrifyingly close to escaping justice. These are the murderers who lied convincingly, destroyed evidence, created false alibis and, in some cases, remained free for years. But somewhere, something went wrong. A tiny forensic trace. A forgotten witness. A change in behaviour. A piece of CCTV. A phone call. A contradiction. One mistake that finally began to unravel everything. Drawing on some of the most compelling murder investigations of modern times, Donal takes audiences inside the hunt for killers who believed they had committed the perfect crime. How did they avoid suspicion for so…",
+   "description": "They planned the murder. They covered their tracks. They thought they had got away with it. They almost did. In The Makings of a Murderer: Fatal Mistake , award-winning investigative journalist and broadcaster Donal MacIntyre examines the extraordinary true stories of killers who came terrifyingly close to escaping justice. These are the murderers who lied convincingly, destroyed evidence, created false alibis and, in some cases, remained free for years. But somewhere, something went wrong. A tiny forensic trace. A forgotten witness. A change in behaviour. A piece of CCTV. A phone call. A contradiction. One mistake that finally began to unravel everything. Drawing on some of the most compelling murder investigations of modern times, Donal takes audiences inside the hunt for killers who believed they had committed the perfect crime. How did they avoid suspicion for so long? What finally…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ywyfpkml0rkibbk8hyscgtw0hno0/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5114,7 +4937,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Queen of the Night – A Tribute to Whitney Houston returns in 2027 for another show-stopping celebration, following sold-out tours across the UK, including an arena tour and iconic venues such as the Royal Albert Hall and The London Palladium. Established as the UK’s biggest Whitney Houston tribute, this breath-taking production honours the music, legacy, and unmatched talent of the legendary Whitney Houston. Celebrate Whitney’s remarkable musical repertoire in an electrifying production that honours her timeless songs with sensational vocalists and a full live band. Prepare to be captivated by an extraordinary journey through three decades of all-time hits such as I Wanna Dance With Somebody, One Moment In Time, I’m Every Woman, I Will Always Love You, My Love Is Your Love, So Emotional, Run To You, Saving All My Love, How Will I Know, Million Dollar Bill, The Greatest…",
+   "description": "Queen of the Night – A Tribute to Whitney Houston returns in 2027 for another show-stopping celebration, following sold-out tours across the UK, including an arena tour and iconic venues such as the Royal Albert Hall and The London Palladium. Established as the UK’s biggest Whitney Houston tribute, this breath-taking production honours the music, legacy, and unmatched talent of the legendary Whitney Houston. Celebrate Whitney’s remarkable musical repertoire in an electrifying production that honours her timeless songs with sensational vocalists and a full live band. Prepare to be captivated by an extraordinary journey through three decades of all-time hits such as I Wanna Dance With Somebody, One Moment In Time, I’m Every Woman, I Will Always Love You, My Love Is Your Love, So Emotional, Run To You, Saving All My Love, How Will I Know, Million Dollar Bill, The Greatest Love Of All , and…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/m53k1d2l1sid9exxock7m40gm7x8/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5141,12 +4964,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION OH WHAT A NIGHT! takes you back in time on a musical journey through the incredible career of Frankie Valli & The Four Seasons. Valli’s unmistakable voice dominated the airwaves for more than two decades with classics such as Sherry, Let’s Hang On, Big Girls Don’t Cry, Can’t Take My Eyes Off You, My Eyes Adored You, December 63 (Oh What A Night), Bye Bye Baby, Who Loves You and many, many more. Selling over 100 million records worldwide, Frankie Valli & The Four Seasons secured their place in the Rock & Roll Hall of Fame in 1990. OH WHAT A NIGHT! combines infectious personalities, amazing vocals, slick harmonies and even slicker dance moves to deliver a show full of energy and nostalgia which always leaves audiences wanting more. Don’t miss the ultimate celebration of one of the world’s greatest Rock & Roll bands! USEFUL INFORMATION Age guidance Suitable for all ages…",
+   "description": "OH WHAT A NIGHT! takes you back in time on a musical journey through the incredible career of Frankie Valli & The Four Seasons. Valli’s unmistakable voice dominated the airwaves for more than two decades with classics such as Sherry, Let’s Hang On, Big Girls Don’t Cry, Can’t Take My Eyes Off You, My Eyes Adored You, December 63 (Oh What A Night), Bye Bye Baby, Who Loves You and many, many more. Selling over 100 million records worldwide, Frankie Valli & The Four Seasons secured their place in the Rock & Roll Hall of Fame in 1990. OH WHAT A NIGHT! combines infectious personalities, amazing vocals, slick harmonies and even slicker dance moves to deliver a show full of energy and nostalgia which always leaves audiences wanting more. Don’t miss the ultimate celebration of one of the world’s greatest Rock & Roll bands! USEFUL INFORMATION Age guidance Suitable for all ages. Under 16s must be…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/taxnq1zm7q5cvvokmxj1ve6j5cm1/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5173,20 +4995,18 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Festive",
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Relive the magic up close with the only show to be endorsed by Jon Bon Jovi himself. Direct from London’s West End, the show returns for its epic 33 rd year, cementing its place as one of the UK’s longest-running tribute shows. Get ready to rock through an unforgettable journey with The Bon Jovi Experience – a phenomenal celebration of timeless classics, packed with the magic, passion, and energy of true stadium rock. The Bon Jovi Experience features smash-hits such as ' Livin’ On a Prayer,’ ' Always’, ‘It ’ s My Life ‘, ' You Give Love a Bad Name ‘, ' Bad Medicine ‘ and many more. Backed by a powerhouse live band, charismatic front man, Tony Pearce, leads an authentic, high-energy show that will have you singing and dancing all night. Whether you’re a lifelong Bon Jovi fan or new to the music, this show promises an unforgettable experience. “The best Bon Jovi tribute…",
+   "description": "Relive the magic up close with the only show to be endorsed by Jon Bon Jovi himself. Direct from London’s West End, the show returns for its epic 33 rd year, cementing its place as one of the UK’s longest-running tribute shows. Get ready to rock through an unforgettable journey with The Bon Jovi Experience – a phenomenal celebration of timeless classics, packed with the magic, passion, and energy of true stadium rock. The Bon Jovi Experience features smash-hits such as ' Livin’ On a Prayer,’ ' Always’, ‘It ’ s My Life ‘, ' You Give Love a Bad Name ‘, ' Bad Medicine ‘ and many more. Backed by a powerhouse live band, charismatic front man, Tony Pearce, leads an authentic, high-energy show that will have you singing and dancing all night. Whether you’re a lifelong Bon Jovi fan or new to the music, this show promises an unforgettable experience. “The best Bon Jovi tribute band I’ve ever…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/zsbgo0cwazt1rae23eprh8777x4d/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
    "url": "https://villagaiety.ticketsolve.com/shows/873689948/events",
    "id": "villagaiety-873689948",
    "sourceKey": "villagaiety",
-   "category": "Festive",
+   "category": "Music",
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873689948/events",
@@ -5294,12 +5114,11 @@
    "isTbc": false,
    "duration": 13.0,
    "tags": [
-    "Theatre & Comedy",
-    "Music"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "SHOW DESCRIPTION Experience the magic, mystery, and romance of Phantom of the Opera, one of the world’s most beloved musical theatre productions. Taylorian Productions proudly presents our version of Andrew Lloyd Webber’s incredible musical at the Gaiety Theatre from 1 st -14 th August 2027. Set beneath the grandeur of the Paris Opera House, this captivating story follows the talented young soprano Christina Daaé (Alexandra Slater) whose extraordinary voice captures the attention of a mysterious masked figure known as the Phantom (Damian Kneale). Living in the shadows beneath the opera house, he becomes Christine’s secret mentor, but his growing obsession leads to a thrilling tale of love, jealousy, and intrigue. Featuring unforgettable music, dramatic storytelling, and a hauntingly beautiful atmosphere, Phantom of the Opera promises a mesmerising experience filled with emotion…",
+   "description": "Experience the magic, mystery, and romance of Phantom of the Opera, one of the world’s most beloved musical theatre productions. Taylorian Productions proudly presents our version of Andrew Lloyd Webber’s incredible musical at the Gaiety Theatre from 1 st -14 th August 2027. Set beneath the grandeur of the Paris Opera House, this captivating story follows the talented young soprano Christina Daaé (Alexandra Slater) whose extraordinary voice captures the attention of a mysterious masked figure known as the Phantom (Damian Kneale). Living in the shadows beneath the opera house, he becomes Christine’s secret mentor, but his growing obsession leads to a thrilling tale of love, jealousy, and intrigue. Featuring unforgettable music, dramatic storytelling, and a hauntingly beautiful atmosphere, Phantom of the Opera promises a mesmerising experience filled with emotion, suspense, and spectacle…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/hxjjr71hfck9c5udjnaedmbns5m0/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -5378,8 +5197,7 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Arts & Workshops"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
@@ -5410,8 +5228,7 @@
    "isTbc": false,
    "duration": 1.0,
    "tags": [
-    "Theatre & Comedy",
-    "Arts & Workshops"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
@@ -5481,7 +5298,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION HE'S BACK! After well over 50 years in entertainment Roy \" Chubby Brown\" is still the undoubted undisputed KING OF BRITISH COMEDY. \"Why is Roy still performing at his age?\" is a question constantly asked but the answer is quite simple; nothing gives Roy greater pleasure than performing for you, doing what he does best, making you laugh and putting a huge smile on your faces. Roy has no plans to retire but the reality is nothing lasts forever so don't miss out! Come and join him for what could possibly be his last ever Isle Of Man performance. Whether your one of Roy's regular army of fans, a Chubby virgin, or just turned 18 and now old enough, come along for his brand new 2027 show. It's guaranteed the only tears you'll shed will be tears of laughter, it's a must see, a night not to be missed. NO OFFENCE MEANT IT'S SIMPLY COMEDY USEFUL INFORMATION Age guidance Strictly…",
+   "description": "HE'S BACK! After well over 50 years in entertainment Roy \" Chubby Brown\" is still the undoubted undisputed KING OF BRITISH COMEDY. \"Why is Roy still performing at his age?\" is a question constantly asked but the answer is quite simple; nothing gives Roy greater pleasure than performing for you, doing what he does best, making you laugh and putting a huge smile on your faces. Roy has no plans to retire but the reality is nothing lasts forever so don't miss out! Come and join him for what could possibly be his last ever Isle Of Man performance. Whether your one of Roy's regular army of fans, a Chubby virgin, or just turned 18 and now old enough, come along for his brand new 2027 show. It's guaranteed the only tears you'll shed will be tears of laughter, it's a must see, a night not to be missed. NO OFFENCE MEANT IT'S SIMPLY COMEDY USEFUL INFORMATION Age guidance Strictly for ages 18 and…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/1p847dzuvez4ppncz1dej8m8f3oz/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5659,7 +5476,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Calling all musical lovers! The ultimate sing-along celebration of stage and screen is back, bursting with brand-new songs, exciting new medleys and all your show-stopping favourites! Led by a live band of talent and energy the West End can only dream of, the entire crowd becomes the star of the show, singing along to giant-screen lyrics in an unforgettable night of musical magic. With a freshly updated setlist packed with new surprises alongside beloved classics, Sing The Musicals is bigger, bolder and more fabulous than ever. Whether you're joining us for the first time or coming back for an encore, there's plenty to get your jazz hands excited about! Featuring hits from HAMILTON, WICKED, LES MISÉRABLES, THE LION KING, CHICAGO, THE GREATEST SHOWMAN, FROZEN, DIRTY DANCING, OLIVER!, THE SOUND OF MUSIC, MAMMA MIA!, WE WILL ROCK YOU, MARY POPPINS and many more… Bring the…",
+   "description": "Calling all musical lovers! The ultimate sing-along celebration of stage and screen is back, bursting with brand-new songs, exciting new medleys and all your show-stopping favourites! Led by a live band of talent and energy the West End can only dream of, the entire crowd becomes the star of the show, singing along to giant-screen lyrics in an unforgettable night of musical magic. With a freshly updated setlist packed with new surprises alongside beloved classics, Sing The Musicals is bigger, bolder and more fabulous than ever. Whether you're joining us for the first time or coming back for an encore, there's plenty to get your jazz hands excited about! Featuring hits from HAMILTON, WICKED, LES MISÉRABLES, THE LION KING, CHICAGO, THE GREATEST SHOWMAN, FROZEN, DIRTY DANCING, OLIVER!, THE SOUND OF MUSIC, MAMMA MIA!, WE WILL ROCK YOU, MARY POPPINS and many more… Bring the sing! ★★★★★ ‘…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ew85yru4f2c0rt9oya5987fzfkqx/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5716,7 +5533,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION The definitive insight into the real lives of Britain’s most notorious gangsters. For decades, they ruled the London underworld with fear and violence. But in 1969, the reign of Ronnie Kray and Reggie Kray came crashing down when both were sentenced to life imprisonment at the Old Bailey. Reggie would spend years behind bars in some of Britain’s toughest prisons, while Ronnie was confined to Broadmoor, his mental illness controlled only by heavy medication. Chosen by the twins themselves to tell their official story, TV legend Fred Dinenage became one of the very few people ever granted access to their inner circle - gaining extraordinary insight into the real lives behind the headlines. Now appearing live on stage, Fred Dinenage shares untold stories and rare moments never revealed before - including recordings made during his visits to Ronnie at Broadmoor. Hosted by…",
+   "description": "The definitive insight into the real lives of Britain’s most notorious gangsters. For decades, they ruled the London underworld with fear and violence. But in 1969, the reign of Ronnie Kray and Reggie Kray came crashing down when both were sentenced to life imprisonment at the Old Bailey. Reggie would spend years behind bars in some of Britain’s toughest prisons, while Ronnie was confined to Broadmoor, his mental illness controlled only by heavy medication. Chosen by the twins themselves to tell their official story, TV legend Fred Dinenage became one of the very few people ever granted access to their inner circle - gaining extraordinary insight into the real lives behind the headlines. Now appearing live on stage, Fred Dinenage shares untold stories and rare moments never revealed before - including recordings made during his visits to Ronnie at Broadmoor. Hosted by broadcaster Alex…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/psnx76nqcwxpqmaahf8b4o7xnm9c/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5743,12 +5560,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Film"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION An Intimate Evening With… A singer and actor, a TV host and author, a multiple BRIT Award nominee and a film star – Toyah has worn many hats during a remarkable career spanning more than 50 years. The High Priestess of Punk burst onto the scene in 1976 as she forged dual careers as a musician and actress who featured at The National Theatre and London’s Royal Court. Her role in Quadrophenia made her a household name and soon after she gatecrashed the charts with It’s A Mystery, I Want To Be Free, and Thunder In The Mountains, as the album, Anthem, earned a gold disc and BRIT nominations for Best Female and British Breakthrough Act. She married King Crimson guitarist Robert Fripp in 1986 and she starred opposite Sir Laurence Olivier and The Who’s Roger Daltrey, among others. Acting, presenting, performing, headlining tours, and releasing 16 studio albums continued her…",
+   "description": "An Intimate Evening With… A singer and actor, a TV host and author, a multiple BRIT Award nominee and a film star – Toyah has worn many hats during a remarkable career spanning more than 50 years. The High Priestess of Punk burst onto the scene in 1976 as she forged dual careers as a musician and actress who featured at The National Theatre and London’s Royal Court. Her role in Quadrophenia made her a household name and soon after she gatecrashed the charts with It’s A Mystery, I Want To Be Free, and Thunder In The Mountains, as the album, Anthem, earned a gold disc and BRIT nominations for Best Female and British Breakthrough Act. She married King Crimson guitarist Robert Fripp in 1986 and she starred opposite Sir Laurence Olivier and The Who’s Roger Daltrey, among others. Acting, presenting, performing, headlining tours, and releasing 16 studio albums continued her unique story and…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/bs85qy6yvjrbtkfv2ntsk2sbur1f/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5775,12 +5591,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Music",
-    "Theatre & Comedy"
+    "Music"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION The UK's most celebrated tenor, Russell Watson, will return to the stage of the country's best-loved theatres next year for a new concert tour. He will bring a breath-taking new production of hits, operatic masterworks, and West End anthems to major theatres nationwide. The four-time Classical BRIT Award winner is currently on his most intimate tour, sharing songs and stories from his career to sell-out crowds. His next tour will see Russell's powerful vocals accompanied by a live orchestral ensemble in what will be a captivating stage show. The Power of The Voice Tour promises an evening spanning the full breadth of his career: from the immortal Italian arias that launched his rise (\"Nessun Dorma,\" \"Volare\") to showstopping West End staples (\"Music of the Night\") and contemporary crossover hits. Russell said: \"Performing in Britain's historic theatres holds a magic…",
+   "description": "The UK's most celebrated tenor, Russell Watson, will return to the stage of the country's best-loved theatres next year for a new concert tour. He will bring a breath-taking new production of hits, operatic masterworks, and West End anthems to major theatres nationwide. The four-time Classical BRIT Award winner is currently on his most intimate tour, sharing songs and stories from his career to sell-out crowds. His next tour will see Russell's powerful vocals accompanied by a live orchestral ensemble in what will be a captivating stage show. The Power of The Voice Tour promises an evening spanning the full breadth of his career: from the immortal Italian arias that launched his rise (\"Nessun Dorma,\" \"Volare\") to showstopping West End staples (\"Music of the Night\") and contemporary crossover hits. Russell said: \"Performing in Britain's historic theatres holds a magic like nowhere else…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/2hd97r6j3yidn6k7lxkzqaq3n9y1/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
@@ -5842,7 +5657,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Steve Steinman, the world’s virtuoso of Meat Loaf’s music and an acclaimed recording artist and show producer, returns with his biggest and most spectacular live concert experience, touring across the UK and Ireland and Northern Ireland. Celebrating the 50th anniversary of the legendary multi-million-selling album Bat Out of Hell, this epic production brings one of the greatest rock albums of all time to life, performed in its entirety with the power, passion, and drama it deserves. Experience all the iconic anthems that defined a generation, alongside a powerhouse collection of Meat Loaf and Jim Steinman’s greatest hits, including Dead Ringer for Love, I’d Do Anything for Love (But I Won’t Do That), Two Out of Three Ain’t Bad, Paradise by the Dashboard Light, and many more. Together with an outstanding cast of exceptional vocalists, electrifying dancers, and…",
+   "description": "Steve Steinman, the world’s virtuoso of Meat Loaf’s music and an acclaimed recording artist and show producer, returns with his biggest and most spectacular live concert experience, touring across the UK and Ireland and Northern Ireland. Celebrating the 50th anniversary of the legendary multi-million-selling album Bat Out of Hell, this epic production brings one of the greatest rock albums of all time to life, performed in its entirety with the power, passion, and drama it deserves. Experience all the iconic anthems that defined a generation, alongside a powerhouse collection of Meat Loaf and Jim Steinman’s greatest hits, including Dead Ringer for Love, I’d Do Anything for Love (But I Won’t Do That), Two Out of Three Ain’t Bad, Paradise by the Dashboard Light, and many more. Together with an outstanding cast of exceptional vocalists, electrifying dancers, and world-class musicians, they…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/k5puv9qzqz33gwsxlk810gi4c847/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -5873,7 +5688,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION In comedy, 'killing' is a good thing. Everywhere else, it's frowned upon. Jimmy has confirmed kills in over 50 countries and on 13 specials. Eyewitnesses describe it as 'a brutal, hilarious, life affirming night out’. The brand-new show is packed with fast, dark one-liners about all kinds of terrible things. But they are just jokes. They're not the terrible things. Jokes are like magnets. They attract some people and repel others. You can joke about anything, but not with anyone. If you’re attracted to Jimmy's brand of comedy and think you can take the jokes, then by all means come out and play. If you think you'd be offended, then stay away. At this point, being offended at a Jimmy Carr show is like buying a ticket to a horror movie and complaining you got scared. Don’t be a dummy. Look, if you’ve read this far, we know you want to come. So hurry up and buy a ticket…",
+   "description": "In comedy, 'killing' is a good thing. Everywhere else, it's frowned upon. Jimmy has confirmed kills in over 50 countries and on 13 specials. Eyewitnesses describe it as 'a brutal, hilarious, life affirming night out’. The brand-new show is packed with fast, dark one-liners about all kinds of terrible things. But they are just jokes. They're not the terrible things. Jokes are like magnets. They attract some people and repel others. You can joke about anything, but not with anyone. If you’re attracted to Jimmy's brand of comedy and think you can take the jokes, then by all means come out and play. If you think you'd be offended, then stay away. At this point, being offended at a Jimmy Carr show is like buying a ticket to a horror movie and complaining you got scared. Don’t be a dummy. Look, if you’ve read this far, we know you want to come. So hurry up and buy a ticket. It’ll sell out, so…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/d78rsvf9jiz4iov470s5rxnp2t6f/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -5935,12 +5750,11 @@
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Theatre & Comedy",
-    "Talks & Learning"
+    "Theatre & Comedy"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Chris McCausland, purveyor of the finest in comedy waffle, is heading back out on the road with a brand-new stand-up show. He's got loads of funny stuff to talk about and he needs people to say it to. Chris loves being on tour. He's especially looking forward to the hotel breakfasts, not being woken at 7am by his family every morning - Oh and to spending some quality time with you of course. He's a panel show regular, a BAFTA winner, and the 2024 Strictly champion, just in case you forgot about that. Please don't forget about that!! So get your tickets now for an incredible night of laughter with no serious bits. Warning: May contain waffle. \"Deceptively sharp-witted behind his affable air\". - The Times USEFUL INFORMATION Age guidance Suitable for ages 16 and over. Seating Theatre Style: All seats are allocated/reserved so please ensure you check your section/ row and…",
+   "description": "Chris McCausland, purveyor of the finest in comedy waffle, is heading back out on the road with a brand-new stand-up show. He's got loads of funny stuff to talk about and he needs people to say it to. Chris loves being on tour. He's especially looking forward to the hotel breakfasts, not being woken at 7am by his family every morning - Oh and to spending some quality time with you of course. He's a panel show regular, a BAFTA winner, and the 2024 Strictly champion, just in case you forgot about that. Please don't forget about that!! So get your tickets now for an incredible night of laughter with no serious bits. Warning: May contain waffle. \"Deceptively sharp-witted behind his affable air\". - The Times USEFUL INFORMATION Age guidance Suitable for ages 16 and over. Seating Theatre Style: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/2t9q4h7qp8df1pr8bza4oqo1awud/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "20:00",
    "price": "",
@@ -5971,7 +5785,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "SHOW DESCRIPTION Direct from London’s West End, Bowie Experience is a spectacular concert celebrating the sound and vision of David Bowie. A must see for all Bowie fans, the latest production features all the hits from A to Ziggy. Bowie Experience continues to amaze audiences with an astounding attention to detail, bringing the golden years of David Bowie to the stage . So, put on your red shoes and Let’s Dance! \"Electric, spectacular...don’t miss your chance to see this spectacular show.\" - Wales 247 “Unmistakably Bowie!” “Absolutely fantastic” “Bowie is back like never before” “Unmissable” USEFUL INFORMATION Age guidance Suitable for ages 14+ . Under 16s must be accompanied by an adult. Warnings This show may feature strobe lighting Seating Theatre style - All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Customer…",
+   "description": "Direct from London’s West End, Bowie Experience is a spectacular concert celebrating the sound and vision of David Bowie. A must see for all Bowie fans, the latest production features all the hits from A to Ziggy. Bowie Experience continues to amaze audiences with an astounding attention to detail, bringing the golden years of David Bowie to the stage . So, put on your red shoes and Let’s Dance! \"Electric, spectacular...don’t miss your chance to see this spectacular show.\" - Wales 247 “Unmistakably Bowie!” “Absolutely fantastic” “Bowie is back like never before” “Unmissable” USEFUL INFORMATION Age guidance Suitable for ages 14+ . Under 16s must be accompanied by an adult. Warnings This show may feature strobe lighting Seating Theatre style - All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Customer notice regarding…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/qhmcf30e8m70r2eo1ugdkjz9jmj2/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "19:30",
    "price": "",
