@@ -10,7 +10,7 @@ dates missing). Every event now comes from the venue or organiser itself:
   Manx National Heritage     manxnationalheritage.im/whats-on/ (+ each event page)
   Visit Isle of Man          visitisleofman.com/whats-on?p=N  (official tourism)
   Erin Arts Centre           The Events Calendar REST API  /wp-json/tribe/events/v1/events
-  Centenary Centre, Peel     WordPress REST list + schema.org Event data on each page
+  (Centenary Centre, Peel — off: their site refuses automated visitors)
 
 These are the same sites the Isle of Man Government's own "Event Directory"
 page points people to.
@@ -852,7 +852,11 @@ SOURCES = [
     ("mnh", "Manx National Heritage", source_mnh),
     ("visitiom", "Visit Isle of Man", source_visitiom),
     ("erin", "Erin Arts Centre", source_erin),
-    ("centenary", "Centenary Centre", source_centenary),
+    # Centenary Centre, Peel: switched off. Their site (behind Cloudflare)
+    # answers 403 to automated visitors on every page, so they have chosen
+    # not to be collected. Many of their shows still arrive via Visit Isle of
+    # Man. The parser is kept in case they ever allow it.
+    # ("centenary", "Centenary Centre", source_centenary),
 ]
 
 
@@ -915,7 +919,7 @@ def main() -> int:
         "totalCount": len(events),
         "categories": {c: categories[c] for c in CATEGORIES if categories.get(c)},
         "sources": report,
-        "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre, Centenary Centre",
+        "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre",
         "disclaimer": ("Events are collected from the organisers' own websites. Always check "
                        "details and book with the organiser. Manx One is not affiliated with "
                        "any venue or organiser listed."),
