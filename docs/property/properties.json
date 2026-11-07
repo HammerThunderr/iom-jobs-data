@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-07T13:40:38+00:00",
+    "generated": "2026-11-07T22:41:45+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 39,
-        "withPrice": 39,
+        "count": 40,
+        "withPrice": 40,
         "status": "ok"
       }
     ],
@@ -10994,8 +10994,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -11450,8 +11450,8 @@
       "bathrooms": 2,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
+      "locality": "Michael",
+      "parish": "Michael",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -14695,6 +14695,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
+      "lastSeen": "2026-11-07"
+    },
+    {
+      "id": "mm-lilac-cottage-minorca-hill-laxey-isle-of-man-im4-7ds",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/lilac-cottage-minorca-hill-laxey-isle-of-man-im4-7ds/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 225000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "cottage",
+      "address": "3  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 7DS",
+      "status": "for_sale",
+      "firstSeen": "2026-11-07",
       "lastSeen": "2026-11-07"
     },
     {
