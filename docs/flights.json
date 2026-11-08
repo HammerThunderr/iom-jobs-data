@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-08T15:41:11.488632+00:00",
-  "lastUpdated": "15:40 UTC",
+  "fetchedAt": "2026-11-08T15:45:13.708381+00:00",
+  "lastUpdated": "15:44 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -71,9 +71,9 @@
       "flightNo": "EZY518",
       "airline": "easyJet",
       "scheduled": "16:20",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "Liverpool",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EI3217",
