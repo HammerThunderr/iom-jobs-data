@@ -1,23 +1,23 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-08T08:14:41.752752+00:00",
-  "lastUpdated": "08:13 UTC",
+  "fetchedAt": "2026-11-08T08:18:43.912267+00:00",
+  "lastUpdated": "08:17 UTC",
   "departures": [
     {
       "flightNo": "LM693",
       "airline": "Loganair",
       "scheduled": "07:30",
-      "status": "Boarding shortly",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY516",
       "airline": "easyJet",
       "scheduled": "08:25",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY836",
