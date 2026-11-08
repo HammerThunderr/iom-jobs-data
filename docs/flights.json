@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-08T15:29:04.370000+00:00",
-  "lastUpdated": "15:28 UTC",
+  "fetchedAt": "2026-11-08T15:33:06.837424+00:00",
+  "lastUpdated": "15:32 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -161,9 +161,9 @@
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "15:50",
-      "status": "Expected 15:32",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3216",
