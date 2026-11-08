@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-08T01:47:34.599005+00:00",
-  "lastUpdated": "01:46 UTC",
+  "fetchedAt": "2026-11-08T01:51:37.079651+00:00",
+  "lastUpdated": "01:51 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -132,8 +132,16 @@
       "status": "On-time",
       "origin": "Edinburgh",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY517",
+      "airline": "easyJet",
+      "scheduled": "15:50",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 16,
+  "totalCount": 17,
   "source": "airport.im"
 }
