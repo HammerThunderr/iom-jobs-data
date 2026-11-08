@@ -1,14 +1,14 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-07T20:52:40+00:00",
- "lastUpdated": "20:52 UTC",
- "totalCount": 175,
+ "fetchedAt": "2026-11-08T02:28:57+00:00",
+ "lastUpdated": "02:28 UTC",
+ "totalCount": 171,
  "categories": {
-  "Festive": 40,
+  "Festive": 39,
   "Family & Kids": 6,
-  "Music": 35,
-  "Theatre & Comedy": 33,
+  "Music": 33,
+  "Theatre & Comedy": 32,
   "Film": 15,
   "Arts & Workshops": 9,
   "Heritage": 1,
@@ -21,7 +21,7 @@
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 103,
+   "count": 101,
    "status": "ok"
   },
   {
@@ -33,13 +33,13 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 47,
+   "count": 46,
    "status": "ok"
   },
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 14,
+   "count": 13,
    "status": "ok"
   }
  ],
@@ -215,10 +215,10 @@
   {
    "title": "Monster Mia",
    "venue": "Broadway Cinema",
-   "startDate": "2026-11-07",
+   "startDate": "2026-11-08",
    "endDate": "2026-11-15",
    "isTbc": false,
-   "duration": 8.0,
+   "duration": 7.0,
    "tags": [
     "Film"
    ],
@@ -238,10 +238,6 @@
    "soldOut": false,
    "occurrences": [
     {
-     "date": "2026-11-07",
-     "time": "14:30"
-    },
-    {
      "date": "2026-11-08",
      "time": "14:30"
     },
@@ -256,136 +252,12 @@
    ]
   },
   {
-   "title": "Album Launch: Wild and Waiting Things by Alice Dudley",
-   "venue": "Erin Arts Centre",
-   "startDate": "2026-11-07",
-   "endDate": "2026-11-07",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Music"
-   ],
-   "source": "Erin Arts Centre",
-   "recurring": false,
-   "description": "Tickets £10 Join this year’s Biosphere Artist in Residence, Alice Dudley, for an evening of live music, special guests, and a pop-up art exhibition to celebrate the launch of her album Wild and Waiting Things. The culmination of a year-long residency, Wild and Waiting things is an album inspired by traditional Manx folk tales and based around the concept of an enchanted forest, featuring the voices of some familiar figures from Manx folklore. With each song inspired by a specific tale and set in an enchanted version of our landscape, Alice’s reimagining of classic Manx tales seeks to align the magic of folklore with the real-life magic of the natural world. As both a visual artist and a songwriter, Alice’s practice has been shaped by our Island and its stories. Her main goal this year was to encourage collaboration and connection with our Island and with each other, encouraging…",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/alice-dudley-album-launch-nov-2026.jpg",
-   "time": "19:00",
-   "price": "£10",
-   "url": "https://www.erinartscentre.com/event/album-launch-wild-and-waiting-things-by-alice-dudley/",
-   "id": "erin-11693",
-   "sourceKey": "erin",
-   "category": "Music",
-   "area": "Port Erin",
-   "address": "Port Erin",
-   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-07",
-     "time": "19:00"
-    }
-   ]
-  },
-  {
-   "title": "Dracula - The Service Players",
-   "venue": "Gaiety Theatre",
-   "startDate": "2026-11-07",
-   "endDate": "2026-11-07",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Theatre & Comedy"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Dracula, brought to you by the Service Players, is a spellbinding theatrical experience that will plunge you into a gothic world as the dark universe finally arrives on our shores. The play transforms the infamous Count into a mesmerizing stage presence—suave, predatory, and chillingly elegant. As the story unfolds, tension coils tighter with each whispered warning and each sudden appearance of the cape-cloaked vampire, drawing the audience into a battle of wits between mortal courage and immortal power. With its eerie atmosphere, dramatic confrontations, and haunting romance, Dracula on stage is not just a tale of horror—it’s a pulse-quickening spectacle that leaves hearts racing long after the curtain falls. Our Island has waited oceans of time for his arrival! USEFUL INFORMATION Age guidance Suitable for ages 13 and over. Under 16s must be accompanied by an adult (18+) Seating…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/j8br53e3tas9fq4vv8eqk0kd1fhm/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "19:30",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873684364/events",
-   "id": "villagaiety-873684364",
-   "sourceKey": "villagaiety",
-   "category": "Theatre & Comedy",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873684364/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-07",
-     "time": "19:30"
-    }
-   ]
-  },
-  {
-   "title": "Anything For Love - The Meat Loaf Story",
-   "venue": "Villa Marina Royal Hall",
-   "startDate": "2026-11-07",
-   "endDate": "2026-11-07",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Music"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Steve Steinman’s Anything For Love - The Meat Loaf Story ​​The highly acclaimed show producer and No.1 recording artist, Steve Steinman, brings you his brand-new production featuring over 25 of Meat Loaf and Jim Steinman’s greatest hits. The show includes Steve’s very own No.1 single “Everything They Said Was True” written by John Parr and Meat Loaf. For over 30 years Steve has toured the world with his productions Anything For Love and Vampires Rock and is now also touring his own original music. With an incredible stage set, ten-piece live band combined with Steve’s well known sense of humour and stage presence, the show can only be described as awesome. This show will have you shouting out for more as Steve and his cast of amazing singers and musicians take you on a nostalgic trip back in time. Anything For Love – Bat Out Of Hell – Paradise By The Dashboard Light – Took The Words…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/vzwmowzitd0imnjj5tqxrfkvqbuu/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "20:00",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873665645/events",
-   "id": "villagaiety-873665645",
-   "sourceKey": "villagaiety",
-   "category": "Music",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873665645/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-07",
-     "time": "20:00"
-    }
-   ]
-  },
-  {
-   "title": "Bake Your Own Christmas Cake",
-   "venue": "Juliette's",
-   "startDate": "2026-11-07",
-   "endDate": "2026-11-07",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": false,
-   "description": "We'll provide all the essentials, from ingredients to equipment, and guide you step-by-step right through the whole process. And yes, we'll even bake for you right there in our workshop, so you can just focus on enjoying the process.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FBake_Your_Own_Christmas_Cake_800_x_600_px_2__679890907.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/bake-your-own-christmas-cake-p1895931",
-   "id": "visitiom-1895931",
-   "sourceKey": "visitiom",
-   "category": "Festive",
-   "area": "Peel",
-   "address": "Juliette's, 7 a Michael Street, Peel, Isle of Man, IM5 1HA",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-07",
-     "time": ""
-    }
-   ]
-  },
-  {
    "title": "Wicker",
    "venue": "Broadway Cinema",
-   "startDate": "2026-11-07",
+   "startDate": "2026-11-08",
    "endDate": "2026-11-12",
    "isTbc": false,
-   "duration": 5.0,
+   "duration": 4.0,
    "tags": [
     "Film"
    ],
@@ -404,10 +276,6 @@
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691423/events",
    "soldOut": false,
    "occurrences": [
-    {
-     "date": "2026-11-07",
-     "time": "19:00"
-    },
     {
      "date": "2026-11-08",
      "time": "19:00"
