@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-08T15:33:06.837424+00:00",
-  "lastUpdated": "15:32 UTC",
+  "fetchedAt": "2026-11-08T15:37:09.000988+00:00",
+  "lastUpdated": "15:36 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -55,9 +55,9 @@
       "flightNo": "BT7814",
       "airline": "Air Baltic",
       "scheduled": "15:40",
-      "status": "Taxied 15:23",
+      "status": "Departed 15:34",
       "destination": "Tenerife South",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
@@ -161,9 +161,9 @@
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "15:50",
-      "status": "Final approach",
+      "status": "Landed 15:32",
       "origin": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EI3216",
