@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-09T03:03:18.695908+00:00",
-  "lastUpdated": "03:02 UTC",
+  "fetchedAt": "2026-11-09T03:07:20.817380+00:00",
+  "lastUpdated": "03:06 UTC",
   "departures": [
-    {
-      "flightNo": "EZY842",
-      "airline": "easyJet",
-      "scheduled": "20:05",
-      "status": "Departed 21:11",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM681",
       "airline": "Loganair",
@@ -166,6 +158,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 20,
+  "totalCount": 19,
   "source": "airport.im"
 }
