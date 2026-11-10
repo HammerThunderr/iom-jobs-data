@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-10T15:24:07+00:00",
+    "generated": "2026-11-10T23:55:40+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 300,
-        "withPrice": 273,
+        "count": 299,
+        "withPrice": 272,
         "status": "ok"
       },
       {
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 37,
-        "withPrice": 37,
+        "count": 39,
+        "withPrice": 39,
         "status": "ok"
       }
     ],
@@ -860,43 +860,6 @@
       "postcode": "IM1 2LZ",
       "firstSeen": "2026-09-20",
       "previousPrice": 340,
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "chr-12906259-st-georges-street-douglas-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12906259-st-georges-street-douglas-douglas/",
-      "category": "commercial",
-      "listingType": "rent",
-      "price": 1800,
-      "priceQualifier": "pcm",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "St Georges Street Douglas, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 1AJ",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "chr-12906260-st-georges-street-douglas-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12906260-st-georges-street-douglas-douglas/",
-      "category": "commercial",
-      "listingType": "rent",
-      "price": 1800,
-      "priceQualifier": "pcm",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "St Georges Street Douglas, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 1AJ",
-      "status": "let_stc",
-      "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-10"
     },
     {
@@ -5186,6 +5149,24 @@
       "lastSeen": "2026-11-10"
     },
     {
+      "id": "chr-12244826-ballaughton-park-saddlestone-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12244826-ballaughton-park-saddlestone-douglas/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1800,
+      "priceQualifier": "pcm",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "Ballaughton Park Saddlestone, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM2 1LA",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
       "id": "chr-12523180-glen-dhoo-hillberry-onchan",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/12523180-glen-dhoo-hillberry-onchan/",
@@ -8143,25 +8124,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-01",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "dw-39-the-promenade-castletown-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/39-the-promenade-castletown-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 295000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "terraced",
-      "address": "39, The Promenade, Castletown, Isle Of Man",
-      "locality": "Castletown",
-      "parish": "Castletown",
-      "postcode": "IM9 1LF",
       "status": "for_sale",
       "firstSeen": "2026-10-01",
       "lastSeen": "2026-11-10"
@@ -12392,6 +12354,25 @@
       "lastSeen": "2026-11-10"
     },
     {
+      "id": "dw-nyn-ayrn-cottage-foxdale-road-ballasalla",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/nyn-ayrn-cottage-foxdale-road-ballasalla/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 425000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "detached",
+      "address": "Nyn-Ayrn Cottage, Foxdale Road, Ballasalla",
+      "locality": "Ballasalla",
+      "parish": "Ballasalla",
+      "postcode": "IM9 1LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
       "id": "dw-oakdale-governors-hill-douglas-isle-of-man-im2-7bt",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/oakdale-governors-hill-douglas-isle-of-man-im2-7bt/",
@@ -14257,6 +14238,25 @@
       "lastSeen": "2026-11-10"
     },
     {
+      "id": "mm-12-bemahague-avenue-onchan-im3-4as",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/12-bemahague-avenue-onchan-im3-4as/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 319950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "3  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM3 4AS",
+      "status": "for_sale",
+      "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-10"
+    },
+    {
       "id": "mm-69-cronk-liauyr-douglas-im2-5lx",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/69-cronk-liauyr-douglas-im2-5lx/",
@@ -14505,6 +14505,25 @@
       "postcode": "IM2 3QJ",
       "status": "for_sale",
       "firstSeen": "2026-11-03",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "id": "mm-5-callows-croft-church-road-lonan-isle-of-man-im4-7hg",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/5-callows-croft-church-road-lonan-isle-of-man-im4-7hg/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 350000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "house",
+      "address": "3  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 7HG",
+      "status": "for_sale",
+      "firstSeen": "2026-11-10",
       "lastSeen": "2026-11-10"
     },
     {
