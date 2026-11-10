@@ -1,9 +1,9 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-10T13:28:09+00:00",
- "lastUpdated": "13:28 UTC",
- "totalCount": 175,
+ "fetchedAt": "2026-11-10T22:22:50+00:00",
+ "lastUpdated": "22:22 UTC",
+ "totalCount": 176,
  "categories": {
   "Festive": 39,
   "Family & Kids": 8,
@@ -12,10 +12,10 @@
   "Film": 15,
   "Arts & Workshops": 9,
   "Heritage": 1,
-  "Talks & Learning": 15,
+  "Talks & Learning": 14,
   "Sport": 10,
   "Community": 1,
-  "Other": 10
+  "Other": 12
  },
  "sources": [
   {
@@ -33,7 +33,7 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 47,
+   "count": 48,
    "status": "ok"
   },
   {
@@ -1430,26 +1430,25 @@
    ]
   },
   {
-   "title": "Isle of Man Arts Council Creative Sessions - Communicating a Sense of Place in your Creative Practise",
+   "title": "Creative Sector Sessions - Communicating a Sense of Place in your Creative Practice",
    "venue": "Villa Marina Colonnade Suite",
    "startDate": "2026-11-26",
    "endDate": "2026-11-26",
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Talks & Learning",
-    "Arts & Workshops"
+    "Other"
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "EVENT DESCRIPTION In a collaboration with Culture Vannin this session focusses on the use of Manx language in a contemporary practise. It’s ability to engage with audiences and how other nations have embraced their language on an international scale. From Kneecap’s use of Gaelic to the rise and engagement of foreign language cinema (Korean film Parasite winning best film at the 2019 Oscars.) USEFUL INFORMATION Event Overview This event will consist of an initial talk which will last approximately 45 minutes, followed by at least 30 minutes allocated to questions. The event will finish by 19:30 at the latest. Age guidance Suitable for all ages. Under 16s must be accompanied by an adult (18+) General Admission ONLY Tickets for this event are general admission standing. Tickets are free but there is a maximum capacity of 50 per event.",
+   "description": "EVENT DESCRIPTION In collaboration with Culture Vannin, this session explores how Manx can live and thrive in contemporary creative work. We’ll look at its power to engage audiences and at how other nations have taken their languages to the world, from Kneecap’s bold use of Irish to the global rise of foreign-language cinema, including Korean film Parasite , which won Best Picture at the Oscars. Join us to discuss what’s possible for Manx in your own practice. Brought to you by the Isle of Man Arts Council. USEFUL INFORMATION Event Overview This event will consist of an initial talk which will last approximately 45 minutes, followed by at least 30 minutes allocated to a Q&A. The event is estimated to finish around 19:30. Age guidance Suitable for all ages. Under 16s must be accompanied by an adult (18+) General Admission ONLY Tickets for this event are general admission standing…",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/2nucjeuow2x5zrg6anbxnjc083hi/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "18:00",
    "price": "",
    "url": "https://villagaiety.ticketsolve.com/shows/873692399/events",
    "id": "villagaiety-873692399",
    "sourceKey": "villagaiety",
-   "category": "Talks & Learning",
+   "category": "Other",
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873692399/events",
@@ -5108,6 +5107,32 @@
      "time": "19:30"
     }
    ]
+  },
+  {
+   "title": "Manx National 2 Day Trial",
+   "venue": "Douglas Rugby Club",
+   "startDate": "2027-07-17",
+   "endDate": "2027-07-18",
+   "isTbc": false,
+   "duration": 1.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": true,
+   "description": "One of the premier off road motorcycle trials competitions held in the British Isles, with approximately 300 competitors competing on solo and sidecar machines. The trial is held over 2 days across numerous locations on our beautiful Island.",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F437539686_874366027826621_3215543635144286885_n_1__1957468848.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/manx-national-2-day-trial-p1904771",
+   "id": "visitiom-1904771",
+   "sourceKey": "visitiom",
+   "category": "Other",
+   "area": "Douglas",
+   "address": "Douglas Rugby Club, Port-E-Chee, Douglas, Isle of Man, IM2 2RA",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": []
   },
   {
    "title": "The Bon Jovi Experience",
