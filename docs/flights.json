@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-10T11:43:00.409902+00:00",
-  "lastUpdated": "11:42 UTC",
+  "fetchedAt": "2026-11-10T11:47:02.503299+00:00",
+  "lastUpdated": "11:46 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -39,9 +39,9 @@
       "flightNo": "LM637",
       "airline": "Loganair",
       "scheduled": "11:50",
-      "status": "Gate closed",
+      "status": "Taxied 11:43",
       "destination": "Birmingham",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
@@ -113,7 +113,7 @@
       "flightNo": "LM694",
       "airline": "Loganair",
       "scheduled": "11:50",
-      "status": "Delayed 12:05",
+      "status": "Delayed 12:03",
       "origin": "Manchester",
       "statusType": "delayed"
     },
