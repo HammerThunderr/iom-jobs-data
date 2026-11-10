@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-10T02:22:08+00:00",
+    "generated": "2026-11-10T15:24:07+00:00",
     "sources": [
       {
         "agent": "Chrystals",
         "count": 300,
-        "withPrice": 274,
+        "withPrice": 273,
         "status": "ok"
       },
       {
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 40,
-        "withPrice": 40,
+        "count": 37,
+        "withPrice": 37,
         "status": "ok"
       }
     ],
@@ -987,6 +987,24 @@
       "parish": "Jurby",
       "postcode": "IM7 3BD",
       "firstSeen": "2026-10-14",
+      "lastSeen": "2026-11-10"
+    },
+    {
+      "id": "chr-12928212-hope-street-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12928212-hope-street-douglas/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Hope Street, Douglas Annual Rental Of £23,000",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 1AR",
+      "firstSeen": "2026-11-10",
       "lastSeen": "2026-11-10"
     },
     {
@@ -3372,24 +3390,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM4 2AE",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "chr-12848096-6-falcon-cliff-apartments-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12848096-6-falcon-cliff-apartments-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 185000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "6 Falcon Cliff Apartments, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 4LD",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-10"
     },
@@ -7981,7 +7981,7 @@
       "url": "https://deanwood.im/property/32-groudle-road-onchan/",
       "category": "residential",
       "listingType": "sale",
-      "price": 435000,
+      "price": 410000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -7992,6 +7992,7 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-01",
+      "previousPrice": 435000,
       "lastSeen": "2026-11-10"
     },
     {
@@ -14253,64 +14254,6 @@
       "postcode": "IM3 1BT",
       "status": "for_sale",
       "firstSeen": "2026-10-28",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "mm-12-bemahague-avenue-onchan-im3-4as",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/12-bemahague-avenue-onchan-im3-4as/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 319950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "3  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM3 4AS",
-      "status": "for_sale",
-      "firstSeen": "2026-10-31",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "mm-23-mona-street-peel-im5-1hj",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/23-mona-street-peel-im5-1hj/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 295000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "4  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM5 1HJ",
-      "status": "for_sale",
-      "firstSeen": "2026-10-29",
-      "lastSeen": "2026-11-10"
-    },
-    {
-      "id": "mm-59-cronk-ny-greiney-douglas-im2-5lh",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/59-cronk-ny-greiney-douglas-im2-5lh/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 719950,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "5  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM2 5LH",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "previousPrice": 735000,
       "lastSeen": "2026-11-10"
     },
     {
