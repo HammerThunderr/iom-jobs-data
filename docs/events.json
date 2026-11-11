@@ -1,19 +1,20 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-11T12:42:42+00:00",
- "lastUpdated": "12:42 UTC",
- "totalCount": 180,
+ "fetchedAt": "2026-11-11T23:28:14+00:00",
+ "lastUpdated": "23:28 UTC",
+ "totalCount": 182,
  "categories": {
   "Festive": 39,
   "Family & Kids": 8,
   "Music": 35,
   "Theatre & Comedy": 32,
   "Film": 15,
-  "Arts & Workshops": 9,
+  "Arts & Workshops": 10,
   "Heritage": 1,
   "Talks & Learning": 15,
   "Sport": 12,
+  "Markets & Fairs": 1,
   "Community": 1,
   "Other": 13
  },
@@ -33,7 +34,7 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 66,
+   "count": 68,
    "status": "ok"
   },
   {
@@ -4105,7 +4106,7 @@
    ],
    "source": "Visit Isle of Man",
    "recurring": true,
-   "description": "**Experience the Thrill of Motorcycle Racing at Jurby!**Join Andreas Racing Association (ARA) at Jurby Race Circuit for an action-packed day of motorcycle and sidecar racing on the Isle of Man.Watch riders battle it out across a variety of…",
+   "description": "Join Andreas Racing Association (ARA) at Jurby Race Circuit for an action-packed day of motorcycle and sidecar racing on the Isle of Man. Watch riders battle it out across a variety of classes in exciting ACU Championship races, featuring both…",
    "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FAndreas_Racing_at_Jurby_Circuit_57174857.png&action=ProductListGallery",
    "time": "",
    "price": "",
@@ -4279,6 +4280,33 @@
      "time": "20:00"
     }
    ]
+  },
+  {
+   "title": "14th CAMRA Isle of Man Beer and Cider Festival",
+   "venue": "Royal Hall",
+   "startDate": "2027-04-08",
+   "endDate": "2027-04-10",
+   "isTbc": false,
+   "duration": 2.0,
+   "tags": [
+    "Markets & Fairs",
+    "Arts & Workshops"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": true,
+   "description": "The island's own Beer and Cider Festival featuring approx. 100 'Real' cask-conditioned ales, 20 'Real' Craft Keg Ales, 50 'Real' ciders & perries (All as defined by CAMRA - the Campaign for Real Ale) together with fruit wines and meads, and a…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F1000007616_1__1914134481.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/14th-camra-isle-of-man-beer-and-cider-festival-p1901031",
+   "id": "visitiom-1901031",
+   "sourceKey": "visitiom",
+   "category": "Arts & Workshops",
+   "area": "Douglas",
+   "address": "Royal Hall, Villa Marina, Harris Promenade, Douglas, Isle of Man, IM1 2HP",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": []
   },
   {
    "title": "Clarence Valley Orchestra - An Afternoon at the Proms",
@@ -5383,6 +5411,37 @@
    ]
   },
   {
+   "title": "Southern District Agricultural Show",
+   "venue": "Orrisdale Farm",
+   "startDate": "2027-07-31",
+   "endDate": "2027-07-31",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Markets & Fairs"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Celebrating the very best of Manx agriculture, the Southern Show has something for everyone, from livestock and equestrian competitions to vintage machinery, local food, crafts, entertainment and plenty of activities for all ages.",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FSouthernShow2026_187__1231408280.JPG&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/southern-district-agricultural-show-p1905641",
+   "id": "visitiom-1905641",
+   "sourceKey": "visitiom",
+   "category": "Markets & Fairs",
+   "area": "Castletown",
+   "address": "Orrisdale Farm, Ballasalla, Isle of Man, Isle of Man, IM9 3AE",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-07-31",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Phantom of the Opera",
    "venue": "Gaiety Theatre",
    "startDate": "2027-08-01",
@@ -5636,7 +5695,7 @@
    ],
    "source": "Visit Isle of Man",
    "recurring": false,
-   "description": "**Jurby Day – A Celebration of Isle of Man Motorsport!**Experience the excitement of Jurby Day at Jurby Race Circuit, organised by Andreas Racing Association (ARA).A highlight of the Manx Grand Prix festival, Jurby Day brings together an…",
+   "description": "A highlight of the Manx Grand Prix festival, Jurby Day brings together an incredible variety of racing motorcycles, classic and vintage machines, sidecars and special guests for a fantastic celebration of the Island's rich motorsport heritage.",
    "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FJurby_Day_Motorcycle_Racing_Poster_377424439.png&action=ProductListGallery",
    "time": "",
    "price": "",
