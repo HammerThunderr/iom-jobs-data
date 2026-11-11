@@ -1,9 +1,9 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-11T02:47:24+00:00",
- "lastUpdated": "02:47 UTC",
- "totalCount": 176,
+ "fetchedAt": "2026-11-11T12:42:42+00:00",
+ "lastUpdated": "12:42 UTC",
+ "totalCount": 180,
  "categories": {
   "Festive": 39,
   "Family & Kids": 8,
@@ -12,10 +12,10 @@
   "Film": 15,
   "Arts & Workshops": 9,
   "Heritage": 1,
-  "Talks & Learning": 14,
-  "Sport": 10,
+  "Talks & Learning": 15,
+  "Sport": 12,
   "Community": 1,
-  "Other": 12
+  "Other": 13
  },
  "sources": [
   {
@@ -33,13 +33,13 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 48,
+   "count": 66,
    "status": "ok"
   },
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 13,
+   "count": 14,
    "status": "ok"
   }
  ],
@@ -100,7 +100,10 @@
    "address": "Manx Museum, Douglas, Isle of Man",
    "bookingUrl": "",
    "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "The Nature Exploratorium",
@@ -629,6 +632,9 @@
      "date": "2026-11-14",
      "time": "11:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -869,6 +875,37 @@
    ]
   },
   {
+   "title": "Disney and Pixar's Toy Story 5",
+   "venue": "Manx Museum",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-15",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Woody, Buzz Lightyear, Jessie and the rest of the gang are back for another big-screen adventure. This time, the toys find themselves facing a brand-new challenge when Bonnie's attention turns to Lilypad, a clever new tablet toy with some very…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FToy-Story-5-Landscape-Poster_392884329.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/disney-and-pixars-toy-story-5-p1904921",
+   "id": "visitiom-1904921",
+   "sourceKey": "visitiom",
+   "category": "Other",
+   "area": "Douglas",
+   "address": "Manx Museum, Douglas, Douglas, Isle of Man, IM13LY",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-15",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Manxmas - Christmas Market on the Links",
    "venue": "Peel Golf Club",
    "startDate": "2026-11-15",
@@ -961,6 +998,9 @@
      "date": "2026-11-18",
      "time": "19:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -1178,6 +1218,9 @@
      "date": "2026-11-21",
      "time": "14:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -1299,6 +1342,9 @@
      "date": "2026-11-22",
      "time": "10:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -2121,6 +2167,9 @@
      "date": "2026-12-02",
      "time": "19:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -2219,6 +2268,7 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
+    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -2246,7 +2296,10 @@
    "address": "The Grove, Ramsey",
    "bookingUrl": "https://manxnationalheritage.im/shop/product/meet-father-christmas-at-the-grove-5th-or-6th-december-between-11am-and-3pm/",
    "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "Met Opera: Samson et Dalila",
@@ -2401,6 +2454,37 @@
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873682336/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-12-07",
+     "time": "19:30"
+    }
+   ]
+  },
+  {
+   "title": "RHT: From The Brink of Extinction: How Man Gaelic Defied The Odds – An Illustrated Talk by Phil Gawne",
+   "venue": "Erin Arts Centre",
+   "startDate": "2026-12-07",
+   "endDate": "2026-12-07",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Talks & Learning"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £7 / Friends of RHT £5 The most remarkable part of the story of Gaelg, the Manx language, is that it exists at all. From Welsh kings to Vikings, battles for control between Scotland and England, an economic explosion in the 18th century, mass tourism in the 19th and 20th century, and being pronounced dead in the 1970s, the language’s survival and revitalisation is an incredible story of resilience against overwhelming odds. Tickets Google Calendar iCalendar",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/rht-phil-gawne-dec-2026-1.jpg",
+   "time": "19:30",
+   "price": "£7",
+   "url": "https://www.erinartscentre.com/event/rht-from-the-brink-of-extinction-how-man-gaelic-defied-the-odds-an-illustrated-talk-by-phil-gawne/",
+   "id": "erin-11778",
+   "sourceKey": "erin",
+   "category": "Talks & Learning",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
    "soldOut": false,
    "occurrences": [
     {
@@ -2663,6 +2747,9 @@
      "date": "2026-12-12",
      "time": "11:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -2812,6 +2899,9 @@
      "date": "2026-12-13",
      "time": "14:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -3057,6 +3147,9 @@
      "date": "2026-12-19",
      "time": "14:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -3120,6 +3213,9 @@
      "date": "2026-12-20",
      "time": "14:00"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -3241,7 +3337,10 @@
    "address": "Manx Museum",
    "bookingUrl": "",
    "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "Exhibition on screen Renoir & Love",
@@ -3569,7 +3668,10 @@
    "address": "House of Manannan",
    "bookingUrl": "",
    "soldOut": false,
-   "occurrences": []
+   "occurrences": [],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
   },
   {
    "title": "Clinton Baptiste: Spectral Intercourse",
@@ -3988,6 +4090,37 @@
     {
      "date": "2027-03-18",
      "time": "18:00"
+    }
+   ]
+  },
+  {
+   "title": "ARA Motorcycle & Sidecar Race Meeting",
+   "venue": "Jurby Race Circuit",
+   "startDate": "2027-03-21",
+   "endDate": "2027-07-18",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Sport"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": true,
+   "description": "**Experience the Thrill of Motorcycle Racing at Jurby!**Join Andreas Racing Association (ARA) at Jurby Race Circuit for an action-packed day of motorcycle and sidecar racing on the Isle of Man.Watch riders battle it out across a variety of…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FAndreas_Racing_at_Jurby_Circuit_57174857.png&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/ara-motorcycle-and-sidecar-race-meeting-p1905551",
+   "id": "visitiom-1905551",
+   "sourceKey": "visitiom",
+   "category": "Sport",
+   "area": "Ramsey",
+   "address": "Jurby Race Circuit, Jurby Airfield, Coast Road,, Jurby, Isle of Man, IM7 3BD",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-03-21",
+     "time": ""
     }
    ]
   },
@@ -5488,6 +5621,37 @@
     {
      "date": "2027-08-21",
      "time": "20:00"
+    }
+   ]
+  },
+  {
+   "title": "JURBY DAY",
+   "venue": "Jurby Race Circuit",
+   "startDate": "2027-08-29",
+   "endDate": "2027-08-29",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Sport"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "**Jurby Day – A Celebration of Isle of Man Motorsport!**Experience the excitement of Jurby Day at Jurby Race Circuit, organised by Andreas Racing Association (ARA).A highlight of the Manx Grand Prix festival, Jurby Day brings together an…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FJurby_Day_Motorcycle_Racing_Poster_377424439.png&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/jurby-day-p1905571",
+   "id": "visitiom-1905571",
+   "sourceKey": "visitiom",
+   "category": "Sport",
+   "area": "Ramsey",
+   "address": "Jurby Race Circuit, Jurby Airfield, Coast Road,, Jurby, Isle of Man, IM7 3BD",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-08-29",
+     "time": ""
     }
    ]
   },
