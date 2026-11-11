@@ -1,8 +1,8 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-10T22:22:50+00:00",
- "lastUpdated": "22:22 UTC",
+ "fetchedAt": "2026-11-11T02:47:24+00:00",
+ "lastUpdated": "02:47 UTC",
  "totalCount": 176,
  "categories": {
   "Festive": 39,
@@ -239,53 +239,6 @@
    "occurrences": []
   },
   {
-   "title": "Wicker",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-10",
-   "endDate": "2026-11-12",
-   "isTbc": false,
-   "duration": 2.0,
-   "tags": [
-    "Film"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": true,
-   "description": "Certificate: 15 No-one under 15 is allowed to see a 15 film at the cinema Running time: 1hr 45min BBFC Criteria: Synopsis: When a basket maker constructs a wicker husband for a local fisherwoman, he proves more spectacular than she ever could have imagined. His soulful spirit and unique prowess soon awakens something inside her, setting off a wave of jealousy, fascination and upheaval that threatens the very fabric of her village. ** Snack and Screen Information Join us this November as our hugely popular ‘Snack & Screen’ returns with the comedy romance ‘Wicker’. We are delighted that this time, the team from ‘Artisan Platters’ will be on hand to serve up a delightful array of sandwiches and sweet treats before guests make their way to Broadway Cinema for this mid-week movie special. Join us in the Colonnade Suite, Villa Marina on Tuesday 3rd & 4th November between 1.15pm and 2.15pm for…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/eq3ezlql8d43m271sx6zobmns237/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691423/events",
-   "id": "villagaiety-873691423",
-   "sourceKey": "villagaiety",
-   "category": "Film",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691423/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-10",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-11",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-11",
-     "time": "19:00"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-12",
-     "time": "19:00"
-    }
-   ]
-  },
-  {
    "title": "2026 IPA Grand Finals",
    "venue": "Comis Hotel",
    "startDate": "2026-11-11",
@@ -310,6 +263,49 @@
    "bookingUrl": "",
    "soldOut": false,
    "occurrences": []
+  },
+  {
+   "title": "Wicker",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-11-11",
+   "endDate": "2026-11-12",
+   "isTbc": false,
+   "duration": 1.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": true,
+   "description": "Certificate: 15 No-one under 15 is allowed to see a 15 film at the cinema Running time: 1hr 45min BBFC Criteria: Synopsis: When a basket maker constructs a wicker husband for a local fisherwoman, he proves more spectacular than she ever could have imagined. His soulful spirit and unique prowess soon awakens something inside her, setting off a wave of jealousy, fascination and upheaval that threatens the very fabric of her village. ** Snack and Screen Information Join us this November as our hugely popular ‘Snack & Screen’ returns with the comedy romance ‘Wicker’. We are delighted that this time, the team from ‘Artisan Platters’ will be on hand to serve up a delightful array of sandwiches and sweet treats before guests make their way to Broadway Cinema for this mid-week movie special. Join us in the Colonnade Suite, Villa Marina on Tuesday 3rd & 4th November between 1.15pm and 2.15pm for…",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/eq3ezlql8d43m271sx6zobmns237/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691423/events",
+   "id": "villagaiety-873691423",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691423/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-11",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-11-11",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-11-12",
+     "time": "19:00"
+    }
+   ]
   },
   {
    "title": "The Great British Bake Off - The Musical",
