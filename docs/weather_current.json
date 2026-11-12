@@ -1,1 +1,14 @@
-{"success": false, "error": "404 Client Error: Not Found for url: https://www.gov.im/weather/RssCurrentForecast", "items": []}
+{
+  "success": true,
+  "feedTitle": "Weather forecast for the Isle of Man",
+  "lastUpdated": "",
+  "fetchedAt": "2026-11-12T18:41:14.275990+00:00",
+  "items": [
+    {
+      "title": "Weather forecast updated as of 12 November 2026 5:00pm",
+      "description": "##Weather##\n\nIssued on Thursday, 12 November 2026 at 5:00pm by Ronaldsway Met Office\n##Detailed forecast##\n\nRemaining dry with clear skies this evening and much of the night, but with the small risk of isolated showers later in the night. Temperatures will soon fall rather quickly leading to a risk of some minor hoar frost, however with largely dry conditions any hoar frost should be limited. Minimum air temperatures of 2°C are expected for most places around the island, but with the mountain road and central valley near or slightly below ZERO. Any places that do see any isolated showers later tonight or at first tomorrow will also be at risk of ice, but again should be fairly limited.\n\nClear at first with a touch of frost, then more cloud cover, with a few showers likely for a time in the morning. Light to moderate west or northwest winds and a highest temperature of 9°C.\n\n\n##Outlook##\n\nLargely cloudy with a few showery outbreaks of rain at times. Moderate to fresh southwest wind, steadily strengthening through the day, highest temperature 11°C.\n\n\n##Sunrise##\n\n7:41am Tomorrow\n\n\n##Sunset##\n\n4:22pm Tomorrow",
+      "pubDate": "Thu 12 Nov 2026, 17:00",
+      "link": "https://weather.gov.im"
+    }
+  ]
+}
