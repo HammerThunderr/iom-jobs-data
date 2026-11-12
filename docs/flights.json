@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-12T17:05:55.999789+00:00",
-  "lastUpdated": "17:05 UTC",
+  "fetchedAt": "2026-11-12T17:09:58.323398+00:00",
+  "lastUpdated": "17:09 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,9 +47,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Last call",
+      "status": "Gate closed",
       "destination": "Dublin",
-      "statusType": "scheduled"
+      "statusType": "boarding"
     },
     {
       "flightNo": "LM687",
@@ -129,9 +129,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Expected 17:12",
+      "status": "Final approach",
       "origin": "Manchester",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EZY841",
