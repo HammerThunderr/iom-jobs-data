@@ -1,14 +1,1 @@
-{
-  "success": true,
-  "feedTitle": "Shipping forecast for the North Irish Sea",
-  "lastUpdated": "",
-  "fetchedAt": "2026-11-12T02:41:27.533270+00:00",
-  "items": [
-    {
-      "title": "Shipping forecast updated as of 11 November 2026 10:33pm",
-      "description": "##Current shipping forecast##\n\nValid for 24 HoursIssued on Wednesday, 11 November 2026 at 10:30pm by Ronaldsway Met Office\n##Warning##\n\nStrong winds.\n\n\n##Synopsis##\n\nHigh pressure to the south of Iceland and a deepening area of low pressure running south into the North Sea.\n\n\n##Wind##\n\nNorth 4 or 5, increasing 5 or 6 tonight over central and western parts tonight, then becoming 4 or 5 again in all waters tomorrow afternoon or evening.\n\n\n##State of Sea##\n\nSlight or moderate.\n\n\n##Weather##\n\nFair.\n\n\n##Visibility##\n\nGood.\n\n\n##Outlook for the following 24 hours##\n\n\n##Wind##\n\nNorth 4 or 5, backing North or Northwest 3 or 4 overnight into Friday, backing West or Northwest on Friday morning.\n\n\n##State of Sea##\n\nSlight or moderate, becoming slight.\n\n\n##Weather##\n\nFair at first, then occasional showers for a time.\n\n\n##Visibility##\n\nGood, possibly moderate in showers.\n\n\n####\n\n\nHigh water\n\nToday 12:32am (6.2m)\n\n\n\nLow water\n\nToday 6:47am (1.2m)\n\n\n\nHigh water\n\nToday 12:52pm (6.6m)\n\n\n\nLow water\n\nToday 7:21pm (1.6m)\n\n\n(heights in metres above Chart Datum)",
-      "pubDate": "Wed 11 Nov 2026, 22:33",
-      "link": "https://www.gov.im/weather/current-shipping-forecast/"
-    }
-  ]
-}
+{"success": false, "error": "404 Client Error: Not Found for url: https://www.gov.im/weather/current-shipping-forecast/RssCurrentShippingForecast", "items": []}
