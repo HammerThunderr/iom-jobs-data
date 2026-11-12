@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-12T01:10:05+00:00",
+    "generated": "2026-11-12T15:51:24+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 302,
-        "withPrice": 275,
+        "count": 301,
+        "withPrice": 274,
         "status": "ok"
       },
       {
@@ -16,8 +16,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 34,
-        "withPrice": 34,
+        "count": 33,
+        "withPrice": 33,
         "status": "ok"
       }
     ],
@@ -532,6 +532,7 @@
       "locality": "Ballasalla",
       "parish": "Ballasalla",
       "postcode": "IM9 3DN",
+      "status": "let_stc",
       "firstSeen": "2026-10-15",
       "lastSeen": "2026-11-12"
     },
@@ -2349,24 +2350,6 @@
       "lastSeen": "2026-11-12"
     },
     {
-      "id": "chr-12306585-1-eleanora-gardens-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12306585-1-eleanora-gardens-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 550000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "1 Eleanora Gardens, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 3NR",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-12"
-    },
-    {
       "id": "chr-12313749-thie-ny-chibbyr-surby-road-surby-port-erin",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12313749-thie-ny-chibbyr-surby-road-surby-port-erin/",
@@ -2571,7 +2554,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12571086-belle-abbey-manor-ballakilpheric-colby/",
       "category": "residential",
       "listingType": "sale",
-      "price": 1250000,
+      "price": 1175000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 4,
@@ -2581,6 +2564,7 @@
       "parish": "Colby",
       "postcode": "IM9 4AB",
       "firstSeen": "2026-09-20",
+      "previousPrice": 1250000,
       "lastSeen": "2026-11-12"
     },
     {
@@ -4433,7 +4417,7 @@
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12898416-27-farmhill-meadows-douglas/",
       "category": "residential",
       "listingType": "sale",
-      "price": 345000,
+      "price": 340000,
       "priceQualifier": "asking",
       "bedrooms": 3,
       "bathrooms": 1,
@@ -4443,6 +4427,7 @@
       "parish": "Douglas",
       "postcode": "IM2 2LJ",
       "firstSeen": "2026-09-21",
+      "previousPrice": 345000,
       "lastSeen": "2026-11-12"
     },
     {
@@ -5182,6 +5167,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 4LQ",
+      "status": "under_offer",
       "firstSeen": "2026-11-06",
       "lastSeen": "2026-11-12"
     },
@@ -10259,6 +10245,25 @@
       "lastSeen": "2026-11-12"
     },
     {
+      "id": "dw-auldyn-walk-ramsey-im8-2tn",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/auldyn-walk-ramsey-im8-2tn/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1200,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "end of terrace",
+      "address": "Auldyn Walk, Ramsey, IM8 2TN",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 2TN",
+      "status": "let",
+      "firstSeen": "2026-11-12",
+      "lastSeen": "2026-11-12"
+    },
+    {
       "id": "dw-ballabenna-lhoobs-road-foxdale-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/ballabenna-lhoobs-road-foxdale-isle-of-man/",
@@ -10446,25 +10451,6 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-12"
-    },
-    {
-      "id": "dw-ballavarteen-holiday-cottage-ballavarteen-farm-nassau-road-regaby-isle-of-man-im7-4aj",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/ballavarteen-holiday-cottage-ballavarteen-farm-nassau-road-regaby-isle-of-man-im7-4aj/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1200,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "cottage",
-      "address": "Ballavarteen Holiday Cottage, Ballavarteen Farm, Nassau Road, Regaby, Isle of Man, IM7 4AJ",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM7 4AJ",
-      "status": "let",
-      "firstSeen": "2026-09-27",
       "lastSeen": "2026-11-12"
     },
     {
@@ -11626,6 +11612,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-11-12"
+    },
+    {
+      "id": "dw-high-view-road-douglas-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/high-view-road-douglas-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 394500,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "propertyType": "semi-detached",
+      "address": "50 High View Road, Douglas, Isle Of Man",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-12",
       "lastSeen": "2026-11-12"
     },
     {
@@ -13797,25 +13802,6 @@
       "lastSeen": "2026-11-12"
     },
     {
-      "id": "dw-water-street-ramsey-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/water-street-ramsey-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 310000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "terraced",
-      "address": "9 Marine Gardens, Ramsey, Isle Of Man",
-      "locality": "Ramsey",
-      "parish": "Ramsey",
-      "postcode": "IM8 1AJ",
-      "status": "for_sale",
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-12"
-    },
-    {
       "id": "dw-waterloo-road-ramsey",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/waterloo-road-ramsey/",
@@ -14424,25 +14410,6 @@
       "locality": null,
       "parish": null,
       "postcode": "IM4 7BU",
-      "status": "for_sale",
-      "firstSeen": "2026-09-30",
-      "lastSeen": "2026-11-12"
-    },
-    {
-      "id": "mm-second-floor-flat-36-castlemona-avenue-douglas-im2-4eg",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/second-floor-flat-36-castlemona-avenue-douglas-im2-4eg/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 137500,
-      "priceQualifier": "asking",
-      "bedrooms": 1,
-      "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "1  Bed  Apartment For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM2 4EG",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "lastSeen": "2026-11-12"
