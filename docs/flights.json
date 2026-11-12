@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-12T16:57:50.866744+00:00",
-  "lastUpdated": "16:57 UTC",
+  "fetchedAt": "2026-11-12T17:01:53.456231+00:00",
+  "lastUpdated": "17:01 UTC",
   "departures": [
-    {
-      "flightNo": "EZY840",
-      "airline": "easyJet",
-      "scheduled": "11:15",
-      "status": "Departed 11:10",
-      "destination": "London Gatwick",
-      "statusType": "departed"
-    },
     {
       "flightNo": "LM637",
       "airline": "Loganair",
@@ -74,6 +66,14 @@
       "status": "Delayed 19:35",
       "destination": "London Gatwick",
       "statusType": "delayed"
+    },
+    {
+      "flightNo": "LM681",
+      "airline": "Loganair",
+      "scheduled": "07:00",
+      "status": "On-time",
+      "destination": "Liverpool",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
