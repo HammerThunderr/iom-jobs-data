@@ -1,9 +1,9 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-13T03:25:21+00:00",
- "lastUpdated": "03:25 UTC",
- "totalCount": 182,
+ "fetchedAt": "2026-11-13T13:05:55+00:00",
+ "lastUpdated": "13:05 UTC",
+ "totalCount": 183,
  "categories": {
   "Festive": 39,
   "Family & Kids": 8,
@@ -12,7 +12,7 @@
   "Film": 14,
   "Arts & Workshops": 10,
   "Heritage": 1,
-  "Talks & Learning": 15,
+  "Talks & Learning": 16,
   "Sport": 12,
   "Markets & Fairs": 1,
   "Community": 1,
@@ -22,7 +22,7 @@
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 104,
+   "count": 105,
    "status": "ok"
   },
   {
@@ -3073,7 +3073,7 @@
    ]
   },
   {
-   "title": "The Berk Farm Jet Necklace",
+   "title": "Extraordinary Manx Treasures: The Berk Farm Jet Necklace",
    "venue": "Manx Museum, Douglas",
    "startDate": "2026-12-19",
    "endDate": "2026-12-19",
@@ -6185,6 +6185,37 @@
    "occurrences": [
     {
      "date": "2028-03-04",
+     "time": "19:30"
+    }
+   ]
+  },
+  {
+   "title": "Shaun Ryder - You're Twisitin' my Melon, Man",
+   "venue": "Villa Marina Promenade Suite",
+   "startDate": "2028-03-25",
+   "endDate": "2028-03-25",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Talks & Learning"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": false,
+   "description": "He’s the wild man of rock who became a national treasure. Happy Mondays and Black Grape frontman Shaun Ryder is hitting the road for a new, spoken word tour. The star of more-TV-shows-than-anyone-has-a-right-to-feature-on – including Celebrity Gogglebox, and I'm A Celebrity Get Me Out Of Here, among many others – redefined the sex’n’drugs’n’rock’n’roll lifestyle during the halcyon age of Madchester. He’s touring in support of his new book: Shaun Ryder – 24-Hour Party Person. Fans can look forward to a carnival of excess, wild tales, and improbable truths, as they enjoy the talents of a unique rock'n'roll star dubbed Britpop's answer to WB Yeats. Strap yourselves in and say Hallelujah for Shaun. USEFUL INFORMATION Approx. Timings Doors Open (Meet & Greet) - 17:45 Meet & Greet Start - 18:00 Doors Open (Other Customers) - 19:00 1st Half Start - 19:30 Interval - 20:15pm Start 2nd Half -…",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/u1tftny26ue57uk1er2djupt8mh7/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "19:30",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873692437/events",
+   "id": "villagaiety-873692437",
+   "sourceKey": "villagaiety",
+   "category": "Talks & Learning",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873692437/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2028-03-25",
      "time": "19:30"
     }
    ]
