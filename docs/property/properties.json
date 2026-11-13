@@ -1,11 +1,11 @@
 {
   "meta": {
-    "generated": "2026-11-13T00:12:45+00:00",
+    "generated": "2026-11-13T15:13:56+00:00",
     "sources": [
       {
         "agent": "Chrystals",
-        "count": 300,
-        "withPrice": 273,
+        "count": 298,
+        "withPrice": 271,
         "status": "ok"
       },
       {
@@ -2442,24 +2442,6 @@
       "lastSeen": "2026-11-13"
     },
     {
-      "id": "chr-12549221-34-ballacottier-meadow-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12549221-34-ballacottier-meadow-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 220000,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "34 Ballacottier Meadow, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 2QX",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-13"
-    },
-    {
       "id": "chr-12556710-flat-3-57-bucks-road-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12556710-flat-3-57-bucks-road-douglas/",
@@ -2925,24 +2907,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 3LP",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-13"
-    },
-    {
-      "id": "chr-12770385-86-spectrum-apartments-central-promenade-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12770385-86-spectrum-apartments-central-promenade-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 195000,
-      "priceQualifier": "asking",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "86 Spectrum Apartments, Central Promenade, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 4JL",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-13"
     },
@@ -4214,6 +4178,24 @@
       "lastSeen": "2026-11-13"
     },
     {
+      "id": "chr-12893908-hillcrest-cregneash-port-st-mary",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12893908-hillcrest-cregneash-port-st-mary/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 499000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "Hillcrest, Cregneash, Port St Mary",
+      "locality": "Port St Mary",
+      "parish": "Port St Mary",
+      "postcode": "IM9 5PS",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
       "id": "chr-12893929-18-bowling-green-road-castletown",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12893929-18-bowling-green-road-castletown/",
@@ -4625,7 +4607,7 @@
       "address": "20 Creggan Lea, Port St Mary",
       "locality": "Port St Mary",
       "parish": "Port St Mary",
-      "postcode": "IM9 5BD",
+      "postcode": "IM9 5BE",
       "firstSeen": "2026-10-06",
       "lastSeen": "2026-11-13"
     },
@@ -5064,24 +5046,6 @@
       "lastSeen": "2026-11-13"
     },
     {
-      "id": "chr-9606174-ravenscliffe-fort-anne-road-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/9606174-ravenscliffe-fort-anne-road-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 3250000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "Ravenscliffe, Fort Anne Road, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 5BN",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-13"
-    },
-    {
       "id": "chr-9690510-cronklands-howe-road-port-st-mary",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/9690510-cronklands-howe-road-port-st-mary/",
@@ -5468,6 +5432,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 1LA",
+      "status": "under_offer",
       "firstSeen": "2026-10-26",
       "lastSeen": "2026-11-13"
     },
@@ -5887,6 +5852,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "id": "dw-10-york-road-douglas-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/10-york-road-douglas-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 450000,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "propertyType": "terraced",
+      "address": "10 York Road, Douglas, Isle of Man",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-13",
       "lastSeen": "2026-11-13"
     },
     {
@@ -6495,6 +6479,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "id": "dw-16-hillberry-lakes-douglas",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/16-hillberry-lakes-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 249950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "end of terrace",
+      "address": "16 Hillberry Lakes, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-13",
       "lastSeen": "2026-11-13"
     },
     {
@@ -8210,6 +8213,25 @@
       "lastSeen": "2026-11-13"
     },
     {
+      "id": "dw-4-berry-woods-avenue-douglas",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/4-berry-woods-avenue-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 259950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "semi-detached",
+      "address": "4 Berry Woods Avenue, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
       "id": "dw-4-cairn-drive-slieau-whallian-view-peel",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/4-cairn-drive-slieau-whallian-view-peel/",
@@ -8701,6 +8723,25 @@
       "postcode": "IM9 1LF",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
+      "lastSeen": "2026-11-13"
+    },
+    {
+      "id": "dw-52-castle-court-farrants-way-castletown",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/52-castle-court-farrants-way-castletown/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 209950,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "apartment",
+      "address": "52 Castle Court, Farrants Way, Castletown",
+      "locality": "Castletown",
+      "parish": "Castletown",
+      "postcode": "IM9 1LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-13",
       "lastSeen": "2026-11-13"
     },
     {
@@ -9484,6 +9525,25 @@
       "lastSeen": "2026-11-13"
     },
     {
+      "id": "dw-9-marine-gardens-ramsey-isle-of-man-im8-1en",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/9-marine-gardens-ramsey-isle-of-man-im8-1en/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1250,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "propertyType": "house",
+      "address": "9 Marine Gardens, Ramsey, Isle of Man, IM8 1EN",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM8 1EN",
+      "status": "let",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
       "id": "dw-9-the-kirkway-onchan",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/9-the-kirkway-onchan/",
@@ -9576,25 +9636,6 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-11-13"
-    },
-    {
-      "id": "dw-alexander-drive-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/alexander-drive-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 595000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "propertyType": "semi-detached",
-      "address": "Mayville, Alexander Drive, Douglas, IM2 3QN",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 3QN",
-      "status": "for_sale",
-      "firstSeen": "2026-10-19",
       "lastSeen": "2026-11-13"
     },
     {
@@ -11864,25 +11905,6 @@
       "lastSeen": "2026-11-13"
     },
     {
-      "id": "dw-jurby-road-ramsey",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/jurby-road-ramsey/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 535000,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "bungalow",
-      "address": "Cummal Beg Jurby Road, Ramsey",
-      "locality": "Ramsey",
-      "parish": "Ramsey",
-      "postcode": "IM8 1AJ",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-11-13"
-    },
-    {
       "id": "dw-kerrow-moar-plantation-road-port-st-mary",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/kerrow-moar-plantation-road-port-st-mary/",
@@ -12089,25 +12111,6 @@
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-13"
-    },
-    {
-      "id": "dw-main-road-laxey-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/main-road-laxey-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 275000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "cottage",
-      "address": "Poppy Cottage, Main Road, Laxey, Isle Of Man",
-      "locality": "Laxey",
-      "parish": "Laxey",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-28",
       "lastSeen": "2026-11-13"
     },
     {
@@ -12644,25 +12647,6 @@
       "lastSeen": "2026-11-13"
     },
     {
-      "id": "dw-port-e-chee-avenue-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/port-e-chee-avenue-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 345000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "semi-detached",
-      "address": "29, Port E Chee Avenue, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-13"
-    },
-    {
       "id": "dw-quines-corner-douglas-im1-4lf",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/quines-corner-douglas-im1-4lf/",
@@ -13092,25 +13076,6 @@
       "bathrooms": 1,
       "propertyType": "semi-detached",
       "address": "18, St. Catherines Drive, Douglas, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-13"
-    },
-    {
-      "id": "dw-st-ninians-court-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/st-ninians-court-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 312500,
-      "priceQualifier": "asking",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "Apartment 21, St Ninians Court, Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM1 2LF",
@@ -14437,6 +14402,25 @@
       "lastSeen": "2026-11-13"
     },
     {
+      "id": "mm-2-royal-avenue-west-onchan-isle-of-man-im3-1hb",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/2-royal-avenue-west-onchan-isle-of-man-im3-1hb/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 400000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "apartment",
+      "address": "2  Bed  Apartment For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM3 1HB",
+      "status": "for_sale",
+      "firstSeen": "2026-11-13",
+      "lastSeen": "2026-11-13"
+    },
+    {
       "id": "mm-59-sunningdale-drive-onchan-isle-of-man-im3-1ej",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/59-sunningdale-drive-onchan-isle-of-man-im3-1ej/",
@@ -14549,25 +14533,6 @@
       "postcode": "IM8 1DG",
       "status": "for_sale",
       "firstSeen": "2026-10-30",
-      "lastSeen": "2026-11-13"
-    },
-    {
-      "id": "mm-valhalla-agneash-isle-of-man-im4-7np",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/valhalla-agneash-isle-of-man-im4-7np/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 499950,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "house",
-      "address": "4  Bed  House For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM4 7NP",
-      "status": "for_sale",
-      "firstSeen": "2026-10-16",
       "lastSeen": "2026-11-13"
     }
   ]
