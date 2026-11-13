@@ -1,9 +1,9 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-13T13:05:55+00:00",
- "lastUpdated": "13:05 UTC",
- "totalCount": 183,
+ "fetchedAt": "2026-11-13T22:37:01+00:00",
+ "lastUpdated": "22:37 UTC",
+ "totalCount": 184,
  "categories": {
   "Festive": 39,
   "Family & Kids": 8,
@@ -16,7 +16,7 @@
   "Sport": 12,
   "Markets & Fairs": 1,
   "Community": 1,
-  "Other": 13
+  "Other": 14
  },
  "sources": [
   {
@@ -40,7 +40,7 @@
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 14,
+   "count": 15,
    "status": "ok"
   }
  ],
@@ -3625,6 +3625,37 @@
    "occurrences": [],
    "alsoListedOn": [
     "Visit Isle of Man"
+   ]
+  },
+  {
+   "title": "But First Promotions: Dave McCabe with support from James Jay Lewis",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-02-13",
+   "endDate": "2027-02-13",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "We are very excited to announce that our first show of 2027 will be the sensational Dave McCabe (The Zutons) together with very special guest, James Jay Lewis. This show is brought to you in association with Strada Music International. After recently stepping out with his debut solo single “When You’re Young”, Dave McCabe is heading back on the road in 2027 for a third run of UK dates, joined once again by special guest, James Jay Lewis. Best known as the voice and songwriter behind The Zutons, McCabe’s move into solo territory has already made a strong impression. “When You’re Young” has been tremendously well received and already a firm live favourite. McCabe’s set draws from material throughout his rich writing career, from Zutons classics, to songs he wrote for other artists and glimpses of his new music. Jay Lewis is a perfect fit for the bill. A Liverpool-born…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/but-first-dave-mccabe-feb-2027.jpg",
+   "time": "19:30",
+   "price": "£32.50",
+   "url": "https://www.erinartscentre.com/event/but-first-promotions-dave-mccabe-with-support-from-james-jay-lewis/",
+   "id": "erin-11784",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/butfirstpromotions",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-02-13",
+     "time": "19:30"
+    }
    ]
   },
   {
