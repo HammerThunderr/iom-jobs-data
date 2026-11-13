@@ -29,6 +29,7 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: write
+      issues: write
 
     steps:
       - name: Checkout
@@ -60,3 +61,29 @@ jobs:
             sleep $((i * 5))
           done
           exit 1
+
+      # gov.im blocks automatic downloads, so the PDF is uploaded by hand.
+      # When the newest list has run out, open a GitHub issue — GitHub emails
+      # the repo owner — and close it again once a new list is in.
+      - name: Remind when a new list is needed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Road closures: upload the new list"
+          TO=$(python -c "import json;d=json.load(open('docs/road_closures.json'));l=d.get('latestList') or {};print(l.get('to',''))")
+          TODAY=$(date -u +%F)
+          OPEN=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          if [ -z "$TO" ] || [[ "$TO" < "$TODAY" ]]; then
+            if [ -n "$TO" ]; then WHAT="ran to $TO"; else WHAT="has not been added yet"; fi
+            if [ -z "$OPEN" ]; then
+              gh issue create --title "$TITLE" --body "The newest road closures list $WHAT.
+
+          1. Open https://www.gov.im/about-the-government/departments/infrastructure/highway-services/upcoming-roadworks-and-events-on-roads/
+          2. Download the newest PDF (Isle of Man upcoming TTRNs ...).
+          3. Upload it to the roads/lists folder of this repo (Add file > Upload files > Commit changes).
+
+          This issue closes itself once the new list is in."
+            fi
+          elif [ -n "$OPEN" ]; then
+            gh issue close "$OPEN" --comment "New list added (runs to $TO). Thanks!"
+          fi
