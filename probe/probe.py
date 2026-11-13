@@ -1,20 +1,23 @@
-import json, requests, pathlib
-UA = "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"
+import json, requests, pathlib, re
 out = pathlib.Path("probe/out"); out.mkdir(parents=True, exist_ok=True)
+H = {"User-Agent": "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"}
 log = {}
-urls = {
- "pdf2024": "https://www.gov.im/media/1384484/iom-upcoming-ttrns-6-july-19-july-2024.pdf",
- "pdf2025": "https://www.gov.im/media/1385989/iom-upcoming-ttrns-4-january-2025-17-january-2025.pdf",
- "robots": "https://www.gov.im/robots.txt",
- "rss": "https://www.gov.im/news/rss/",
- "rss2": "https://www.gov.im/rss/news/",
- "nogov": "https://gov.im/roadwatch",
-}
-for k, u in urls.items():
+r = requests.get("https://web.archive.org/cdx/search/cdx",
+    params={"url": "gov.im/media/*", "output": "json", "filter": ["original:.*ttrn.*", "statuscode:200"], "collapse": "urlkey", "limit": "5000"},
+    headers=H, timeout=120)
+log["cdx_status"] = r.status_code
+rows = r.json()[1:] if r.status_code == 200 and r.text.strip() else []
+rows.sort(key=lambda x: x[1])
+log["count"] = len(rows)
+log["rows"] = [[x[1], x[2]] for x in rows]
+for x in rows[-3:] + rows[:1]:
+    ts, orig = x[1], x[2]
+    u = f"https://web.archive.org/web/{ts}id_/{orig}"
     try:
-        r = requests.get(u, headers={"User-Agent": UA}, timeout=30, allow_redirects=False)
-        log[k] = [r.status_code, r.headers.get("location"), len(r.content), r.headers.get("content-type"), r.headers.get("server"), r.headers.get("cf-mitigated")]
-        (out / f"p2_{k}.bin").write_bytes(r.content[:200000])
+        p = requests.get(u, headers=H, timeout=120)
+        name = "s_" + re.sub(r"[^a-z0-9.-]", "_", orig.rsplit('/',1)[-1].lower())[:90]
+        (out / name).write_bytes(p.content)
+        log[name] = [p.status_code, len(p.content), p.headers.get("content-type")]
     except Exception as e:
-        log[k] = str(e)
-(out / "log2.json").write_text(json.dumps(log, indent=1))
+        log[u] = str(e)
+(out / "log3.json").write_text(json.dumps(log, indent=1))
