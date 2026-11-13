@@ -73,7 +73,8 @@ jobs:
           TO=$(python -c "import json;d=json.load(open('docs/road_closures.json'));l=d.get('latestList') or {};print(l.get('to',''))")
           TODAY=$(date -u +%F)
           OPEN=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
-          if [ -z "$TO" ] || [[ "$TO" < "$TODAY" ]]; then
+          # Remind on the last day of the current list (the next one is due).
+          if [ -z "$TO" ] || [[ ! "$TO" > "$TODAY" ]]; then
             if [ -n "$TO" ]; then WHAT="ran to $TO"; else WHAT="has not been added yet"; fi
             if [ -z "$OPEN" ]; then
               gh issue create --title "$TITLE" --body "The newest road closures list $WHAT.
@@ -82,7 +83,9 @@ jobs:
           2. Download the newest PDF (Isle of Man upcoming TTRNs ...).
           3. Upload it to the roads/lists folder of this repo (Add file > Upload files > Commit changes).
 
-          This issue closes itself once the new list is in."
+          This issue closes itself once the new list is in.
+
+          @HammerThunderr"
             fi
           elif [ -n "$OPEN" ]; then
             gh issue close "$OPEN" --comment "New list added (runs to $TO). Thanks!"
