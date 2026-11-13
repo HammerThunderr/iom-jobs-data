@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-13T23:52:21.407592+00:00",
-  "lastUpdated": "23:52 UTC",
+  "fetchedAt": "2026-11-13T23:56:23.656003+00:00",
+  "lastUpdated": "23:56 UTC",
   "departures": [
     {
       "flightNo": "LM687",
@@ -124,8 +124,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY835",
+      "airline": "easyJet",
+      "scheduled": "13:55",
+      "status": "On-time",
+      "origin": "London Gatwick",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
