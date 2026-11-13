@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────────────────────
+# Road closures — reads the DoI's fortnightly TTRN PDFs in roads/lists/
+# and writes docs/road_closures.json (see scripts/roads/build_road_closures.py).
+#
+# Runs when a PDF is uploaded, and daily so finished works drop off.
+# If a PDF can't be read the job fails and the old JSON is kept.
+# ─────────────────────────────────────────────────────────────
+
+name: Road closures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'roads/lists/**'
+      - 'scripts/roads/build_road_closures.py'
+      - '.github/workflows/road_closures.yml'
+  schedule:
+    - cron: '41 3 * * *'   # 03:41 UTC daily
+  workflow_dispatch:
+
+concurrency:
+  group: road-closures
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pdfplumber==0.11.4
+
+      - name: Build road_closures.json
+        run: python scripts/roads/build_road_closures.py
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/road_closures.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "chore: update road closures $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
