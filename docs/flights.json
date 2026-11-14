@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-14T17:17:35.382760+00:00",
-  "lastUpdated": "17:17 UTC",
+  "fetchedAt": "2026-11-14T17:21:37.697226+00:00",
+  "lastUpdated": "17:20 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -39,9 +39,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Gate closed",
+      "status": "Taxied 17:16",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM697",
