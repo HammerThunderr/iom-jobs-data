@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-14T17:29:41.700082+00:00",
-  "lastUpdated": "17:28 UTC",
+  "fetchedAt": "2026-11-14T17:33:43.590590+00:00",
+  "lastUpdated": "17:33 UTC",
   "departures": [
     {
       "flightNo": "EZY716",
@@ -47,9 +47,17 @@
       "flightNo": "LM697",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "Gate closed",
+      "status": "Departed 17:32",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "departed"
+    },
+    {
+      "flightNo": "LM693",
+      "airline": "Loganair",
+      "scheduled": "07:30",
+      "status": "On-time",
+      "destination": "Manchester",
+      "statusType": "ontime"
     }
   ],
   "arrivals": [
@@ -102,6 +110,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 12,
+  "totalCount": 13,
   "source": "airport.im"
 }
