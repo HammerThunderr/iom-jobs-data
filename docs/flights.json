@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-14T11:09:08.736223+00:00",
-  "lastUpdated": "11:08 UTC",
+  "fetchedAt": "2026-11-14T11:13:10.672668+00:00",
+  "lastUpdated": "11:12 UTC",
   "departures": [
     {
       "flightNo": "LM693",
@@ -39,9 +39,9 @@
       "flightNo": "EZY716",
       "airline": "easyJet",
       "scheduled": "11:45",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Manchester",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM637",
