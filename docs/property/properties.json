@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-14T14:07:45+00:00",
+    "generated": "2026-11-14T22:59:51+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -11022,8 +11022,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -11478,8 +11478,8 @@
       "bathrooms": 2,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Douglas",
-      "parish": "Douglas",
+      "locality": "Michael",
+      "parish": "Michael",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -11624,7 +11624,7 @@
       "url": "https://deanwood.im/property/grianane-back-shore-road-laxey/",
       "category": "residential",
       "listingType": "sale",
-      "price": 594950,
+      "price": 584950,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 2,
@@ -11635,6 +11635,7 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "previousPrice": 594950,
       "lastSeen": "2026-11-14"
     },
     {
@@ -14438,6 +14439,25 @@
       "lastSeen": "2026-11-14"
     },
     {
+      "id": "mm-plot-southview-minorca-hill-laxey-im4-7dp",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/plot-southview-minorca-hill-laxey-im4-7dp/",
+      "category": "land",
+      "listingType": "sale",
+      "price": 200000,
+      "priceQualifier": "asking",
+      "bedrooms": null,
+      "bathrooms": null,
+      "propertyType": "garage",
+      "address": "GARAGE / STORAGE  Plot For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 7DP",
+      "status": "for_sale",
+      "firstSeen": "2026-11-14",
+      "lastSeen": "2026-11-14"
+    },
+    {
       "id": "mm-rose-cottage-laxey-im4-7bu",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/rose-cottage-laxey-im4-7bu/",
@@ -14452,25 +14472,6 @@
       "locality": null,
       "parish": null,
       "postcode": "IM4 7BU",
-      "status": "for_sale",
-      "firstSeen": "2026-09-30",
-      "lastSeen": "2026-11-14"
-    },
-    {
-      "id": "mm-southview-minorca-hill-laxey-im4-7dp",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/southview-minorca-hill-laxey-im4-7dp/",
-      "category": "land",
-      "listingType": "sale",
-      "price": 200000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "garage",
-      "address": "GARAGE / STORAGE  Plot For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM4 7DP",
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "lastSeen": "2026-11-14"
