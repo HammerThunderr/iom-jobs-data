@@ -1,19 +1,19 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-14T21:28:28+00:00",
- "lastUpdated": "21:28 UTC",
- "totalCount": 182,
+ "fetchedAt": "2026-11-15T02:39:45+00:00",
+ "lastUpdated": "02:39 UTC",
+ "totalCount": 176,
  "categories": {
-  "Festive": 39,
+  "Festive": 38,
   "Family & Kids": 8,
-  "Music": 35,
-  "Theatre & Comedy": 31,
+  "Music": 34,
+  "Theatre & Comedy": 29,
   "Film": 14,
-  "Arts & Workshops": 10,
+  "Arts & Workshops": 9,
   "Heritage": 1,
   "Talks & Learning": 16,
-  "Sport": 12,
+  "Sport": 11,
   "Markets & Fairs": 1,
   "Community": 1,
   "Other": 14
@@ -22,25 +22,25 @@
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 104,
+   "count": 102,
    "status": "ok"
   },
   {
    "key": "mnh",
    "name": "Manx National Heritage",
-   "count": 22,
+   "count": 21,
    "status": "ok"
   },
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 68,
+   "count": 66,
    "status": "ok"
   },
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 14,
+   "count": 12,
    "status": "ok"
   }
  ],
@@ -269,330 +269,6 @@
    "occurrences": []
   },
   {
-   "title": "Advanced Booking Closed. Little Makers – Christmas Stars",
-   "venue": "House of Manannan, Peel",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive",
-    "Family & Kids",
-    "Arts & Workshops"
-   ],
-   "source": "Manx National Heritage",
-   "recurring": false,
-   "description": "Kindly note that advanced booking for this event is now closed. Limited tickets may be sold at the door, subject to availability. Get creative this Christmas with a festive Little Makers workshop! Design and decorate your very own ceramic Christmas star using colourful acrylic paint markers, sparkly embellishments and festive decorations. Choose your colours, create your own patterns and add as much sparkle as you like. At the end of the workshop, you’ll have your own handmade ceramic star to take home and hang on the Christmas tree or display at home. This is a child-focused workshop, but grown-ups are welcome to join in too. Come along and get creative together, or let little makers enjoy making their own festive creation. A relaxed Christmas craft session for anyone who enjoys making, decorating and getting creative. Useful information Suitable for primary school children and their…",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/09/IMG_7314-1000x575.jpg",
-   "time": "11am or 1pm",
-   "price": "£10 per child (1 accompanying adult free) plus optional donation to our Charity",
-   "url": "https://manxnationalheritage.im/whats-on/detail/little-makers-christmas-stars/",
-   "id": "mnh-little-makers-christmas-stars",
-   "sourceKey": "mnh",
-   "category": "Festive",
-   "area": "Peel",
-   "address": "House of Manannan, Peel",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "11:00"
-    }
-   ],
-   "alsoListedOn": [
-    "Visit Isle of Man"
-   ]
-  },
-  {
-   "title": "Mixed Media Sketchbook Workshop with Ellie Baker",
-   "venue": "Erin Arts Centre",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Arts & Workshops"
-   ],
-   "source": "Erin Arts Centre",
-   "recurring": false,
-   "description": "Join local artist Ellie Baker for an afternoon exploring light, shadow and line. Working in your own concertina fold sketchbook, you will learn how to build a panoramic landscape in black, white and greys using acrylic paint, pens, ink and coloured pencil. Escape the pressure of the blank canvas and discover an expressive way to paint. All levels and styles welcome. Email springtreescontact@gmail.com to book or DM on instagram.com/elliebakerart Google Calendar iCalendar",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/10/ellie-baker-workshop-nov-2026.jpg",
-   "time": "14:00 – 17:00",
-   "price": "£50",
-   "url": "https://www.erinartscentre.com/event/mixed-media-sketchbook-workshop-with-ellie-baker/",
-   "id": "erin-11730",
-   "sourceKey": "erin",
-   "category": "Arts & Workshops",
-   "area": "Port Erin",
-   "address": "Port Erin",
-   "bookingUrl": "https://www.instagram.com/elliebakerart",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "14:00 – 17:00"
-    }
-   ]
-  },
-  {
-   "title": "Monster Mia",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-15",
-   "isTbc": false,
-   "duration": 1.0,
-   "tags": [
-    "Film"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": true,
-   "description": "Certificate: U A U film should be suitable for audiences aged four years and over. Running time: 1hr 22min BBFC Criteria: very mild scenes, rude humour, violence, upsetting scenes Synopsis: Expelled student Mia and her pet rat Quentin arrive at Rotwood Academy, where she's the only human among monster classmates. With Principal Van Vlad's hatred of humans, she must team up with monsters to thwart his schemes. ** Relaxed screening - Saturday 14th November 2:30pm",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/33xr0cpzfrdsvz49gh2s44guq891/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "14:30",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691731/events",
-   "id": "villagaiety-873691731",
-   "sourceKey": "villagaiety",
-   "category": "Film",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691731/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-15",
-     "time": "14:30"
-    }
-   ]
-  },
-  {
-   "title": "IOM DTA Ballroom Dancing Competition",
-   "venue": "Villa Marina Royal Hall",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Theatre & Comedy"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Downstairs/General Admission ONLY (Ground floor level) Tickets for this event are general admission and as such, seating will be unreserved allowing ticket holders, parents, guardians and children to choose where they wish to sit when they arrive around the edge of the dance floor, in our tiered seating area. There are approx. 460 seats available in the tiered stalls and are available on a first-come, first-served basis. Ticket fee All ticket prices for live performances only are subject to a 5% booking fee, which will be applied at the point of sale to all purchases, whether made online or in person at our Box Office. ------------------------------------------------------------------------------ EVENT INFORMATION Ballroom Dancing Competitions for Children & Young Adults.",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/d62ieuj3fe8qt6b6a3757jj7zya7/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "16:30",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873522695/events",
-   "id": "villagaiety-873522695",
-   "sourceKey": "villagaiety",
-   "category": "Theatre & Comedy",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873522695/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "16:30"
-    }
-   ]
-  },
-  {
-   "title": "But First Promotions: Ren Harvieu & Romeo Stodart",
-   "venue": "Erin Arts Centre",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Music",
-    "Theatre & Comedy"
-   ],
-   "source": "Erin Arts Centre",
-   "recurring": false,
-   "description": "Romeo Stodart (The Magic Numbers) returns to the Isle of Man for the first time since 2022, and this time he is accompanied the wonderful singer-songwriter Ren Harvieu. Romeo is an incredible singer and multi-instrumentalist who manages to captive an audience with his spellbinding performances. Together with his band The Magic Numbers, he was nominated for the Mercury Music Prize in 2005 for their self-titled debut album which included the songs, Love Me Like You, Forever Lost and Mornings Eleven. Ren is an English singer-songwriter known for her soulful blend of vintage pop, soul, and indie pop. Rising to fame with her debut album Through the Night in 2012, which reached No. 5 on the UK Albums Chart, she overcame a severe spinal injury before its release. Her follow-up, Revel in the Drama (2020), showcased her resilience and artistry, and was co-written with Romeo. This is our last…",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/09/but-first-ren-romeo-nov-2026-1.jpg",
-   "time": "19:30",
-   "price": "£29.50",
-   "url": "https://www.erinartscentre.com/event/but-first-promotions-ren-harvieu-romeo-stodart/",
-   "id": "erin-11617",
-   "sourceKey": "erin",
-   "category": "Music",
-   "area": "Port Erin",
-   "address": "Port Erin",
-   "bookingUrl": "https://www.ticketsource.com/butfirstpromotions",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "19:30"
-    }
-   ]
-  },
-  {
-   "title": "Festive Fun with Peppa Cinema Experience",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 8.0,
-   "tags": [
-    "Festive",
-    "Film",
-    "Family & Kids"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": true,
-   "description": "Festive Fun with Peppa Cinema Experience Certificate: U Run time: 60mins Join Peppa Pig and her family at the cinema for a festive big-screen experience as they celebrate Evie’s first Christmas! Share in the excitement of Christmas Day as the family of five reflect on treasured seasonal memories. From snowy adventures and festive plays to decorating the tree, this hour-long cinema experience brings together 7 classic festive-themed Peppa Pig episodes and 4 brand-new songs that little ones can dance and sing along to. Filled with laughter, music and heartwarming moments, this special cinema experience is the perfect family day out during the Christmas season. So grab your hats, scarves and gloves and enjoy the magic of the season along with your favourite piggies at the Festive Fun with Pepper Cinema Experience ALL TICKETS £6",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ia09ka661ch6p8k18l9h9uo93ur4/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691320/events",
-   "id": "villagaiety-873691320",
-   "sourceKey": "villagaiety",
-   "category": "Festive",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691320/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "11:00"
-    },
-    {
-     "date": "2026-11-15",
-     "time": "11:00"
-    },
-    {
-     "date": "2026-11-21",
-     "time": "13:00"
-    },
-    {
-     "date": "2026-11-22",
-     "time": "13:00"
-    }
-   ]
-  },
-  {
-   "title": "Isle of Man Orienteering Klubb - Autumn Challenge Orienteering Event - Chibbanagh Plantation, Braaid.",
-   "venue": "Chibbanagh Plantation",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Sport"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": false,
-   "description": "Family friendly orienteering activity suitable for all ages. 3 Courses to choose from (Short / Medium / Long) of different distances & number of markers to visit.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FFamily_pin-punching_757543716.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/isle-of-man-orienteering-klubb-autumn-challenge-orienteering-event-chibbanagh-plantation-braaid-p1813391",
-   "id": "visitiom-1813391",
-   "sourceKey": "visitiom",
-   "category": "Sport",
-   "area": "",
-   "address": "Chibbanagh Plantation, Chibbanagh Plantation Car Park, Cooil Road, Braaid, Isle of Man, IM4 2AW",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": ""
-    }
-   ]
-  },
-  {
-   "title": "The Great British Bake Off - The Musical",
-   "venue": "Gaiety Theatre",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-14",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Theatre & Comedy",
-    "Music"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Inspired by the beloved TV phenomenon, The Great British Bake Off, this musical serves up a deliciously funny and heart-warming celebration of baking, friendship, and competition! Follow 8 amateur bakers as they whisk, knead, and sing their way through the nation's favourite baking competition, all under the watchful eyes of the judges and hosts. Packed with catchy songs, laugh-out-loud moments, and plenty of theatrical treats, this feel-good musical is perfect for the whole family. Expect cakes, chaos, and showstopping performances in a production guaranteed to leave audiences smiling. USEFUL INFORMATION Show Times This event will run for approximately 2 hours and 15 minutes, including interval. Age guidance Suitable for ages 12 and over - some mild bad language. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so please ensure…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/qe4vf29xqegsl4iqne667kpalb2t/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873689417/events",
-   "id": "villagaiety-873689417",
-   "sourceKey": "villagaiety",
-   "category": "Theatre & Comedy",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873689417/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-14",
-     "time": "19:30"
-    }
-   ]
-  },
-  {
-   "title": "Verity",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-14",
-   "endDate": "2026-11-19",
-   "isTbc": false,
-   "duration": 5.0,
-   "tags": [
-    "Film"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": true,
-   "description": "Certificate: 15 No-one under 15 is allowed to see a 15 film at the cinema Running time: 1hr 57min BBFC Criteria: very strong language, strong sex, violence, bloody images Synopsis: Hired to be a ghostwriter for renowned author Verity Crawford, Lowen Ashleigh's assignment takes a dark turn when she discovers chilling autobiographical notes. As she wrestles with disturbing and twisted confessions about Verity's husband, she soon finds it hard to separate fiction from reality, manipulation from attraction, and opportunity from obsession.",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/yxeq15omezitwm791mpp7qd641k5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691385/events",
-   "id": "villagaiety-873691385",
-   "sourceKey": "villagaiety",
-   "category": "Film",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691385/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-14",
-     "time": "19:00"
-    },
-    {
-     "date": "2026-11-15",
-     "time": "19:00"
-    },
-    {
-     "date": "2026-11-18",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-18",
-     "time": "19:00"
-    },
-    {
-     "date": "2026-11-19",
-     "time": "14:30"
-    }
-   ]
-  },
-  {
    "title": "Online Booking Closed. Little Festive Cinema – Toy Story 5",
    "venue": "Manx Museum, Douglas",
    "startDate": "2026-11-15",
@@ -621,6 +297,37 @@
     {
      "date": "2026-11-15",
      "time": "14:00"
+    }
+   ]
+  },
+  {
+   "title": "Monster Mia",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-15",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": false,
+   "description": "Certificate: U A U film should be suitable for audiences aged four years and over. Running time: 1hr 22min BBFC Criteria: very mild scenes, rude humour, violence, upsetting scenes Synopsis: Expelled student Mia and her pet rat Quentin arrive at Rotwood Academy, where she's the only human among monster classmates. With Principal Van Vlad's hatred of humans, she must team up with monsters to thwart his schemes. ** Relaxed screening - Saturday 14th November 2:30pm",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/33xr0cpzfrdsvz49gh2s44guq891/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "14:30",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691731/events",
+   "id": "villagaiety-873691731",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691731/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-15",
+     "time": "14:30"
     }
    ]
   },
@@ -656,6 +363,47 @@
    ]
   },
   {
+   "title": "Festive Fun with Peppa Cinema Experience",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-22",
+   "isTbc": false,
+   "duration": 7.0,
+   "tags": [
+    "Festive",
+    "Film",
+    "Family & Kids"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": true,
+   "description": "Festive Fun with Peppa Cinema Experience Certificate: U Run time: 60mins Join Peppa Pig and her family at the cinema for a festive big-screen experience as they celebrate Evie’s first Christmas! Share in the excitement of Christmas Day as the family of five reflect on treasured seasonal memories. From snowy adventures and festive plays to decorating the tree, this hour-long cinema experience brings together 7 classic festive-themed Peppa Pig episodes and 4 brand-new songs that little ones can dance and sing along to. Filled with laughter, music and heartwarming moments, this special cinema experience is the perfect family day out during the Christmas season. So grab your hats, scarves and gloves and enjoy the magic of the season along with your favourite piggies at the Festive Fun with Pepper Cinema Experience ALL TICKETS £6",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ia09ka661ch6p8k18l9h9uo93ur4/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691320/events",
+   "id": "villagaiety-873691320",
+   "sourceKey": "villagaiety",
+   "category": "Festive",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691320/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-15",
+     "time": "11:00"
+    },
+    {
+     "date": "2026-11-21",
+     "time": "13:00"
+    },
+    {
+     "date": "2026-11-22",
+     "time": "13:00"
+    }
+   ]
+  },
+  {
    "title": "Manxmas - Christmas Market on the Links",
    "venue": "Peel Golf Club",
    "startDate": "2026-11-15",
@@ -684,6 +432,49 @@
     {
      "date": "2026-11-15",
      "time": ""
+    }
+   ]
+  },
+  {
+   "title": "Verity",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-11-15",
+   "endDate": "2026-11-19",
+   "isTbc": false,
+   "duration": 4.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": true,
+   "description": "Certificate: 15 No-one under 15 is allowed to see a 15 film at the cinema Running time: 1hr 57min BBFC Criteria: very strong language, strong sex, violence, bloody images Synopsis: Hired to be a ghostwriter for renowned author Verity Crawford, Lowen Ashleigh's assignment takes a dark turn when she discovers chilling autobiographical notes. As she wrestles with disturbing and twisted confessions about Verity's husband, she soon finds it hard to separate fiction from reality, manipulation from attraction, and opportunity from obsession.",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/yxeq15omezitwm791mpp7qd641k5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691385/events",
+   "id": "villagaiety-873691385",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691385/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-15",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-11-18",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-11-19",
+     "time": "14:30"
     }
    ]
   },
@@ -2143,7 +1934,6 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
-    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -2173,6 +1963,7 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
+    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
