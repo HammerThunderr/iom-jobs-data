@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-16T06:56:31.733703+00:00",
-  "lastUpdated": "06:56 UTC",
+  "fetchedAt": "2026-11-16T07:00:34.145899+00:00",
+  "lastUpdated": "07:00 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -15,9 +15,9 @@
       "flightNo": "LM673",
       "airline": "Loganair",
       "scheduled": "07:25",
-      "status": "On-time",
+      "status": "Boarding now",
       "destination": "London Heathrow",
-      "statusType": "ontime"
+      "statusType": "boarding"
     },
     {
       "flightNo": "EZY716",
