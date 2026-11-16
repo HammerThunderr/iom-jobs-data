@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-16T16:32:47.731434+00:00",
-  "lastUpdated": "16:31 UTC",
+  "fetchedAt": "2026-11-16T16:36:50.195939+00:00",
+  "lastUpdated": "16:36 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -68,7 +68,80 @@
       "statusType": "ontime"
     }
   ],
-  "arrivals": [],
-  "totalCount": 8,
+  "arrivals": [
+    {
+      "flightNo": "LM674",
+      "airline": "Loganair",
+      "scheduled": "11:15",
+      "status": "Arrived 11:05",
+      "origin": "London Heathrow",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM694",
+      "airline": "Loganair",
+      "scheduled": "11:50",
+      "status": "Arrived 11:52",
+      "origin": "Manchester",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "LM638",
+      "airline": "Loganair",
+      "scheduled": "14:20",
+      "status": "Arrived 14:11",
+      "origin": "Birmingham",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "EZY841",
+      "airline": "easyJet",
+      "scheduled": "15:05",
+      "status": "Arrived 14:56",
+      "origin": "London Gatwick",
+      "statusType": "arrived"
+    },
+    {
+      "flightNo": "EI3216",
+      "airline": "Aer Lingus",
+      "scheduled": "16:50",
+      "status": "Expected 16:41",
+      "origin": "Dublin",
+      "statusType": "expected"
+    },
+    {
+      "flightNo": "LM698",
+      "airline": "Loganair",
+      "scheduled": "17:35",
+      "status": "On-time",
+      "origin": "Manchester",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY517",
+      "airline": "easyJet",
+      "scheduled": "18:35",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM676",
+      "airline": "Loganair",
+      "scheduled": "19:50",
+      "status": "On-time",
+      "origin": "London Heathrow",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM688",
+      "airline": "Loganair",
+      "scheduled": "20:00",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
+    }
+  ],
+  "totalCount": 17,
   "source": "airport.im"
 }
