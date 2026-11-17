@@ -1,21 +1,21 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-17T14:22:48+00:00",
- "lastUpdated": "14:22 UTC",
- "totalCount": 175,
+ "fetchedAt": "2026-11-17T23:51:24+00:00",
+ "lastUpdated": "23:51 UTC",
+ "totalCount": 179,
  "categories": {
   "Festive": 38,
   "Family & Kids": 8,
-  "Music": 35,
+  "Music": 36,
   "Theatre & Comedy": 28,
   "Film": 14,
-  "Arts & Workshops": 9,
-  "Heritage": 1,
+  "Arts & Workshops": 10,
+  "Heritage": 2,
   "Talks & Learning": 16,
   "Sport": 11,
   "Markets & Fairs": 1,
-  "Community": 1,
+  "Community": 2,
   "Other": 13
  },
  "sources": [
@@ -28,13 +28,13 @@
   {
    "key": "mnh",
    "name": "Manx National Heritage",
-   "count": 20,
+   "count": 21,
    "status": "ok"
   },
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 63,
+   "count": 66,
    "status": "ok"
   },
   {
@@ -688,40 +688,6 @@
    ]
   },
   {
-   "title": "Meet the Neighbours: A Cosmic Christmas Voyage",
-   "venue": "Manx Museum, Douglas",
-   "startDate": "2026-11-21",
-   "endDate": "2026-11-21",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive"
-   ],
-   "source": "Manx National Heritage",
-   "recurring": false,
-   "description": "Join astronomer Howard Parkin MBE for another Manx National Heritage special Christmas lecture exploring the incredible story of space exploration and the spacecraft that have travelled through our solar system. From Mercury to Neptune and beyond, find out how we have managed to send spacecraft to every planet, what they discovered when they arrived and how these missions have changed our understanding of the planets around us. Howard will bring the story of space exploration to life, including at least two Manx links and sharing some of the most fascinating discoveries, surprising facts, and remarkable achievements from decades of missions to our cosmic neighbours. The lecture will include exciting details of happenings at Mercury on this very date! Howard is a Fellow of the Royal Astronomical Society, Vice-Chairman of the IOM Astronomical Society, the IOM Advocate of DarkSky…",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/10/IMG_7480-1000x575.jpeg",
-   "time": "14:00",
-   "price": "£10 per person plus optional donation to our Charity",
-   "url": "https://manxnationalheritage.im/whats-on/detail/meet-the-neighbours-a-cosmic-christmas-voyage/",
-   "id": "mnh-meet-the-neighbours-a-cosmic-christmas-voyage",
-   "sourceKey": "mnh",
-   "category": "Festive",
-   "area": "Douglas",
-   "address": "Manx Museum, Douglas",
-   "bookingUrl": "https://manxnationalheritage.im/shop/product/meet-the-neighbours-a-cosmic-christmas-voyage-21st-november-2pm/",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-21",
-     "time": "14:00"
-    }
-   ],
-   "alsoListedOn": [
-    "Visit Isle of Man"
-   ]
-  },
-  {
    "title": "Heathen Chemistry",
    "venue": "Villa Marina Promenade Suite",
    "startDate": "2026-11-21",
@@ -800,6 +766,37 @@
    "category": "Sport",
    "area": "Douglas",
    "address": "Comis Hotel & Spa, Douglas, Isle of Man, IM4 2HT",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-21",
+     "time": ""
+    }
+   ]
+  },
+  {
+   "title": "Meet the Neighbours – A Cosmic Christmas Voyage",
+   "venue": "Manx Museum",
+   "startDate": "2026-11-21",
+   "endDate": "2026-11-21",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Festive"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Join astronomer Howard Parkin MBE for another Manx National Heritage special Christmas lecture exploring the incredible story of space exploration and the spacecraft that have travelled through our solar system.",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FIMG_7480_145199968.jpeg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/meet-the-neighbours-a-cosmic-christmas-voyage-p1905191",
+   "id": "visitiom-1905191",
+   "sourceKey": "visitiom",
+   "category": "Festive",
+   "area": "Douglas",
+   "address": "Manx Museum, Douglas, Isle of Man, IM13LY",
    "bookingUrl": "",
    "soldOut": false,
    "occurrences": [
@@ -1774,6 +1771,37 @@
    ]
   },
   {
+   "title": "Opening Night Tickets: Wildlife Photographer of the Year",
+   "venue": "House of Manannan, Peel",
+   "startDate": "2026-12-04",
+   "endDate": "2026-12-04",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Arts & Workshops"
+   ],
+   "source": "Manx National Heritage",
+   "recurring": false,
+   "description": "Be among the first to experience the wonder of Wildlife Photographer of the Year. Join us for an exclusive opening night preview of this world-renowned exhibition and enjoy early access before it opens to the public. Discover breathtaking, award-winning images that capture the beauty, drama and diversity of the natural world, while enjoying a relaxed evening at the House of Manannan. Your ticket includes exclusive access to the exhibition, after-hours shopping in the museum shop, and complimentary light refreshments. Whether you’re a photography enthusiast, a nature lover, or simply looking for a memorable evening out, this special preview event offers the opportunity to be one of the first to experience one of the world’s most prestigious photography exhibitions. Tickets are limited – book now to secure your place. * Family tickets are available for 2 adults and 2 children. Concessions…",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/11/©-Audun-Rikardsen-Wildlife-Photographer-of-the-Year-Image-18-1000x575.jpg",
+   "time": "17:00 – 20:00",
+   "price": "Family: £22, Adults: £8, Children, students and concessions: £4*.",
+   "url": "https://manxnationalheritage.im/whats-on/detail/opening-night-tickets-wildlife-photographer-of-the-year/",
+   "id": "mnh-opening-night-tickets-wildlife-photographer-of-the-year",
+   "sourceKey": "mnh",
+   "category": "Arts & Workshops",
+   "area": "Peel",
+   "address": "House of Manannan, Peel",
+   "bookingUrl": "https://manxnationalheritage.im/shop/product/opening-night-tickets-wildlife-photographer-of-the-year-4th-december/",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-12-04",
+     "time": "17:00"
+    }
+   ]
+  },
+  {
    "title": "The Hunger Games: Sunrise on the Reaping",
    "venue": "Broadway Cinema",
    "startDate": "2026-12-04",
@@ -2112,6 +2140,9 @@
      "date": "2026-12-07",
      "time": "19:30"
     }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
    ]
   },
   {
@@ -2961,6 +2992,37 @@
    "occurrences": [],
    "alsoListedOn": [
     "Visit Isle of Man"
+   ]
+  },
+  {
+   "title": "Ships, mounds, and holes in the ground: various ways to bury a Viking on the Isle of Man",
+   "venue": "Manx Museum, Douglas",
+   "startDate": "2027-01-16",
+   "endDate": "2027-01-16",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Heritage"
+   ],
+   "source": "Manx National Heritage",
+   "recurring": false,
+   "description": "Venture into the Manx Viking Age with Allison Fox as she explores the rich variety of Viking burial traditions found across the Isle of Man. Inspired by the Manx Museum’s upcoming exhibition on the luxurious vararfeldr woollen cloaks, this illustrated talk draws on archaeological discoveries from across the Island to reveal how Viking graves offer unique insights into identity, status, belief, ritual and community over a thousand years ago. Accessibility Information for The Manx Museum: please click here Please note: Tickets are non refundable, more information available here Your purchase helps to look after our historic sites, countryside and treasures. Thank you for your support. Isle of Man Registered Charity no. 603",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/09/Bdoole-1000x575.jpg",
+   "time": "14:00",
+   "price": "£10 per person plus optional donation to our Charity",
+   "url": "https://manxnationalheritage.im/whats-on/detail/ships-mounds-and-holes-in-the-ground-various-ways-to-bury-a-viking-on-the-isle-of-man/",
+   "id": "mnh-ships-mounds-and-holes-in-the-ground-various-ways-to-bury-a-",
+   "sourceKey": "mnh",
+   "category": "Heritage",
+   "area": "Douglas",
+   "address": "Manx Museum, Douglas",
+   "bookingUrl": "https://manxnationalheritage.im/shop/product/ships-mounds-and-holes-in-the-ground-various-ways-to-bury-a-viking-on-the-isle-of-man-16th-january-2pm/",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-01-16",
+     "time": "14:00"
+    }
    ]
   },
   {
@@ -3870,6 +3932,38 @@
    ]
   },
   {
+   "title": "Bop Katz & friends Charity live music extravaganza",
+   "venue": "Manx Legion Club",
+   "startDate": "2027-03-27",
+   "endDate": "2027-03-27",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Music",
+    "Community"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "The Bop Katz are a 5-piece band based in the Isle of Man, playing a mix of classics—primarily from the 1950s and '60s, alongside select '80s rockabilly hits—and original tracks.For The Bop Katz and Friends gig, they will be joined throughout the…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FBop_Katz_charity_promo_poster_255687038.jpeg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/bop-katz-and-friends-charity-live-music-extravaganza-p1907851",
+   "id": "visitiom-1907851",
+   "sourceKey": "visitiom",
+   "category": "Music",
+   "area": "Douglas",
+   "address": "Manx Legion Club, Market Hall, Market Hill,, Douglas,, Isle of Man, IM1 2BQ",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-03-27",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Manx Mountain Marathon and Half Mountain Marathon",
    "venue": "MMM Start is Market Square",
    "startDate": "2027-03-27",
@@ -4200,6 +4294,37 @@
     {
      "date": "2027-04-24",
      "time": "19:30"
+    }
+   ]
+  },
+  {
+   "title": "Black Tie & Bling Charity Ball",
+   "venue": "Comis Hotel",
+   "startDate": "2027-04-24",
+   "endDate": "2027-04-24",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Community"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Join us at our Black Tie & Bing Charity Ball at the Comis Hotel on 24/04/2027. At 7 pm the guests will be welcomed with a drink, there will a 3-course meal, photo opportunities with a professional photographer, Entertainment from NOVA, so pack your…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F2027_Ball_Poster_931275940.png&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/black-tie-and-bling-charity-ball-p1907861",
+   "id": "visitiom-1907861",
+   "sourceKey": "visitiom",
+   "category": "Community",
+   "area": "Douglas",
+   "address": "Comis Hotel, Mount Murray Back Road, Douglas, Isle of Man, IM4 2HT",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-04-24",
+     "time": ""
     }
    ]
   },
