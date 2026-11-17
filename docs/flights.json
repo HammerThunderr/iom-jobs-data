@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-17T18:01:06.276166+00:00",
-  "lastUpdated": "18:00 UTC",
+  "fetchedAt": "2026-11-17T18:05:08.679565+00:00",
+  "lastUpdated": "18:04 UTC",
   "departures": [
     {
       "flightNo": "LM637",
@@ -47,9 +47,9 @@
       "flightNo": "LM687",
       "airline": "Loganair",
       "scheduled": "18:00",
-      "status": "Taxied 17:51",
+      "status": "Departed 18:00",
       "destination": "Liverpool",
-      "statusType": "scheduled"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM681",
