@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-18T16:53:58.570203+00:00",
-  "lastUpdated": "16:52 UTC",
+  "fetchedAt": "2026-11-18T16:58:00.669216+00:00",
+  "lastUpdated": "16:57 UTC",
   "departures": [
     {
       "flightNo": "LM314",
@@ -31,9 +31,9 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Dublin",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM687",
@@ -89,9 +89,9 @@
       "flightNo": "LM698",
       "airline": "Loganair",
       "scheduled": "17:30",
-      "status": "On-time",
+      "status": "Expected 17:13",
       "origin": "Manchester",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY517",
@@ -116,8 +116,16 @@
       "status": "On-time",
       "origin": "Liverpool",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY515",
+      "airline": "easyJet",
+      "scheduled": "06:55",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 14,
+  "totalCount": 15,
   "source": "airport.im"
 }
