@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-18T01:48:37+00:00",
+    "generated": "2026-11-18T16:19:14+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,8 +10,8 @@
       },
       {
         "agent": "DeanWood",
-        "count": 448,
-        "withPrice": 441,
+        "count": 447,
+        "withPrice": 440,
         "status": "ok"
       },
       {
@@ -951,6 +951,24 @@
       "parish": "Douglas",
       "postcode": "IM1 1AR",
       "firstSeen": "2026-11-10",
+      "lastSeen": "2026-11-18"
+    },
+    {
+      "id": "chr-12929834-mezzanine-floor-10-12-prospect-hill-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12929834-mezzanine-floor-10-12-prospect-hill-douglas/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": 12750,
+      "priceQualifier": "pcm",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "Mezzanine Floor, 10-12 Prospect Hill, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 1EJ",
+      "firstSeen": "2026-11-18",
       "lastSeen": "2026-11-18"
     },
     {
@@ -2492,24 +2510,6 @@
       "locality": "Port St Mary",
       "parish": "Port St Mary",
       "postcode": "IM9 5AF",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-18"
-    },
-    {
-      "id": "chr-12589508-the-penthouse-viking-longhouse-mariners-wharf-peel",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12589508-the-penthouse-viking-longhouse-mariners-wharf-peel/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 895000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "propertyType": "land",
-      "address": "The Penthouse, Viking Longhouse Mariners Wharf, Peel",
-      "locality": "Peel",
-      "parish": "Peel",
-      "postcode": "IM5 1AR",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-18"
     },
@@ -5132,7 +5132,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 3NJ",
-      "status": "under_offer",
       "firstSeen": "2026-09-25",
       "lastSeen": "2026-11-18"
     },
@@ -8878,6 +8877,25 @@
       "lastSeen": "2026-11-18"
     },
     {
+      "id": "dw-6-hilltop-view-douglas-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/6-hilltop-view-douglas-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 410000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "bungalow",
+      "address": "6 Hilltop View, Douglas, Isle of Man",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-18",
+      "lastSeen": "2026-11-18"
+    },
+    {
       "id": "dw-6-lakeside-road-governors-hill-douglas",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/6-lakeside-road-governors-hill-douglas/",
@@ -9540,25 +9558,6 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
-      "lastSeen": "2026-11-18"
-    },
-    {
-      "id": "dw-alexander-drive-douglas",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/alexander-drive-douglas/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 595000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "propertyType": "semi-detached",
-      "address": "Mayville, Alexander Drive, Douglas, IM2 3QN",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 3QN",
-      "status": "for_sale",
-      "firstSeen": "2026-11-16",
       "lastSeen": "2026-11-18"
     },
     {
@@ -10802,25 +10801,6 @@
       "lastSeen": "2026-11-18"
     },
     {
-      "id": "dw-clay-head-road-baldrine-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/clay-head-road-baldrine-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 499950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "detached",
-      "address": "Adwalton, Clay Head Road, Baldrine, Isle Of Man",
-      "locality": "Baldrine",
-      "parish": "Baldrine",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-11-16",
-      "lastSeen": "2026-11-18"
-    },
-    {
       "id": "dw-clifton-drive-ramsey-isle-of-man",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/clifton-drive-ramsey-isle-of-man/",
@@ -11351,25 +11331,6 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-18"
-    },
-    {
-      "id": "dw-flat-6-9-tynwald-street-douglas-isle-of-man-im1-1bf",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/flat-6-9-tynwald-street-douglas-isle-of-man-im1-1bf/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 775,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "Flat 6, 9 Tynwald Street, Douglas, Isle of Man, IM1 1BF",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 1BF",
-      "status": "let",
-      "firstSeen": "2026-11-06",
       "lastSeen": "2026-11-18"
     },
     {
@@ -12074,25 +12035,6 @@
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-18"
-    },
-    {
-      "id": "dw-main-road-laxey-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/main-road-laxey-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 275000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "cottage",
-      "address": "Poppy Cottage, Main Road, Laxey, Isle Of Man",
-      "locality": "Laxey",
-      "parish": "Laxey",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-11-16",
       "lastSeen": "2026-11-18"
     },
     {
@@ -12933,6 +12875,25 @@
       "lastSeen": "2026-11-18"
     },
     {
+      "id": "dw-skerries-main-road-kirk-michael-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/skerries-main-road-kirk-michael-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 385000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "propertyType": "detached",
+      "address": "Skerries Main Road, Kirk Michael, Isle Of Man",
+      "locality": "Kirk Michael",
+      "parish": "Kirk Michael",
+      "postcode": "IM8 1AJ",
+      "status": "for_sale",
+      "firstSeen": "2026-11-18",
+      "lastSeen": "2026-11-18"
+    },
+    {
       "id": "dw-skyrwyllin-main-road-union-mills",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/skyrwyllin-main-road-union-mills/",
@@ -13272,6 +13233,25 @@
       "postcode": "IM9 1LF",
       "status": "let",
       "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-18"
+    },
+    {
+      "id": "dw-the-ballacooiley-estaste-dollagh-ballaugh-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/the-ballacooiley-estaste-dollagh-ballaugh-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 8000000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 6,
+      "propertyType": "detached",
+      "address": "The Ballacooiley Estaste, Dollagh, Ballaugh, Isle Of Man",
+      "locality": "Ballaugh",
+      "parish": "Ballaugh",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-18",
       "lastSeen": "2026-11-18"
     },
     {
