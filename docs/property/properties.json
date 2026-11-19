@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-19T00:54:52+00:00",
+    "generated": "2026-11-19T16:29:12+00:00",
     "sources": [
       {
         "agent": "Chrystals",
@@ -10,8 +10,8 @@
       },
       {
         "agent": "DeanWood",
-        "count": 447,
-        "withPrice": 440,
+        "count": 448,
+        "withPrice": 441,
         "status": "ok"
       },
       {
@@ -331,24 +331,6 @@
       "address": "9.82 acres Port Lewaigue, Maughold",
       "locality": "Maughold",
       "parish": "Maughold",
-      "postcode": "IM1 2SE",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-19"
-    },
-    {
-      "id": "chr-12893235-for-sale-by-informal-tender-lime-kilns-farm-land-at-strand-hall-shore-road",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/agricultural/property/12893235-for-sale-by-informal-tender-lime-kilns-farm-land-at-strand-hall-shore-road/",
-      "category": "land",
-      "listingType": "sale",
-      "price": 4000000,
-      "priceQualifier": "guide",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "FOR SALE BY INFORMAL TENDER, Lime Kilns Farm & Land at Strand Hall, Shore Road",
-      "locality": null,
-      "parish": null,
       "postcode": "IM1 2SE",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-19"
@@ -5009,6 +4991,24 @@
       "lastSeen": "2026-11-19"
     },
     {
+      "id": "chr-12931168-",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12931168-/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 1525000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "propertyType": "land",
+      "address": "Asking Price £1,525,000",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM1 2SE",
+      "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-19"
+    },
+    {
       "id": "chr-6644240-bolivia-mount-the-dhoor-lezayre",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/6644240-bolivia-mount-the-dhoor-lezayre/",
@@ -5168,6 +5168,7 @@
       "locality": "Onchan",
       "parish": "Onchan",
       "postcode": "IM4 5BJ",
+      "status": "under_offer",
       "firstSeen": "2026-10-08",
       "lastSeen": "2026-11-19"
     },
@@ -11383,8 +11384,8 @@
       "bathrooms": 2,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Michael",
-      "parish": "Michael",
+      "locality": "Douglas",
+      "parish": "Douglas",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
@@ -11940,6 +11941,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "id": "dw-lakeside-road-governors-hill-douglas",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/lakeside-road-governors-hill-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 285000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "terraced",
+      "address": "46 Lakeside Road, Governors Hill, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-19",
       "lastSeen": "2026-11-19"
     },
     {
@@ -13189,7 +13209,7 @@
       "bedrooms": 2,
       "bathrooms": 1,
       "propertyType": "bungalow",
-      "address": "Summerhill Road, Onchan",
+      "address": "23 Summerhill Road, Onchan, Isle of Man",
       "locality": "Onchan",
       "parish": "Onchan",
       "postcode": "IM1 2LF",
@@ -13598,25 +13618,6 @@
       "lastSeen": "2026-11-19"
     },
     {
-      "id": "dw-two-ways-1-cronk-road-union-mills-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/two-ways-1-cronk-road-union-mills-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 625000,
-      "priceQualifier": "asking",
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "propertyType": "bungalow",
-      "address": "Two Ways, 1 Cronk Road, Union Mills, Isle of Man",
-      "locality": "Union Mills",
-      "parish": "Union Mills",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-09-27",
-      "lastSeen": "2026-11-19"
-    },
-    {
       "id": "dw-unit-0-harcourt-drive",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/unit-0-harcourt-drive/",
@@ -13671,6 +13672,25 @@
       "postcode": "IM1 2LF",
       "status": "let",
       "firstSeen": "2026-11-06",
+      "lastSeen": "2026-11-19"
+    },
+    {
+      "id": "dw-unit-3a-middle-river-industrial-estate",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/unit-3a-middle-river-industrial-estate/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": 39000,
+      "priceQualifier": "pa",
+      "bedrooms": null,
+      "bathrooms": null,
+      "propertyType": "industrial",
+      "address": "Unit 3A Middle River Industrial Estate",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM1 2LF",
+      "status": "let",
+      "firstSeen": "2026-11-19",
       "lastSeen": "2026-11-19"
     },
     {
