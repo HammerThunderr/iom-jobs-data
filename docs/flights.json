@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-19T13:53:01.731504+00:00",
-  "lastUpdated": "13:52 UTC",
+  "fetchedAt": "2026-11-19T13:57:04.233183+00:00",
+  "lastUpdated": "13:56 UTC",
   "departures": [
     {
       "flightNo": "LM681",
@@ -129,9 +129,9 @@
       "flightNo": "LM638",
       "airline": "Loganair",
       "scheduled": "14:20",
-      "status": "On-time",
+      "status": "Expected 14:14",
       "origin": "Birmingham",
-      "statusType": "ontime"
+      "statusType": "expected"
     },
     {
       "flightNo": "EZY517",
