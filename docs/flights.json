@@ -1,21 +1,13 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-19T13:40:55.135942+00:00",
-  "lastUpdated": "13:40 UTC",
+  "fetchedAt": "2026-11-19T13:44:57.388322+00:00",
+  "lastUpdated": "13:44 UTC",
   "departures": [
     {
       "flightNo": "LM681",
       "airline": "Loganair",
       "scheduled": "07:00",
       "status": "Departed 11:37",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
-    {
-      "flightNo": "EZY516",
-      "airline": "easyJet",
-      "scheduled": "07:25",
-      "status": "Departed 07:50",
       "destination": "Liverpool",
       "statusType": "departed"
     },
@@ -105,9 +97,9 @@
       "flightNo": "LM682",
       "airline": "Loganair",
       "scheduled": "09:00",
-      "status": "Delayed 13:32",
+      "status": "Landed 13:40",
       "origin": "Liverpool",
-      "statusType": "delayed"
+      "statusType": "arrived"
     },
     {
       "flightNo": "EZY839",
@@ -198,6 +190,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 24,
+  "totalCount": 23,
   "source": "airport.im"
 }
