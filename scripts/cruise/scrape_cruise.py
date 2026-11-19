@@ -81,6 +81,17 @@ def find_pdf_url():
             candidates.append(href)
 
     if not candidates:
+        # Off-season: after the season Visit Isle of Man takes the PDF down
+        # and says when the next one is coming (Nov 2026: "The 2027 Cruise
+        # Scheulde will be released in the New Year."). That's normal, not a
+        # failure: keep the existing cruise.json (the app already shows
+        # "season has finished") and exit cleanly so no error email is sent.
+        page_text = " ".join(soup.get_text(" ", strip=True).split())
+        notice = re.search(r"[^.]*\bwill be (?:released|published|available)[^.]*\.?",
+                           page_text, re.I)
+        if notice:
+            print(f"Off-season, nothing to update. Page says: {notice.group(0).strip()}")
+            sys.exit(0)
         sys.exit("ABORT: no cruise schedule PDF link found on the page.")
 
     # Prefer the highest version number if several are listed.
