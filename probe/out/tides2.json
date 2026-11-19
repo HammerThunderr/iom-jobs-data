@@ -1,0 +1,24 @@
+{
+ "urls": [
+  "http://www.gov.im/categories/travel-traffic-and-motoring/harbours/tides-and-flapgates",
+  "http://www.gov.im/categories/travel-traffic-and-motoring/harbours/tides-and-flapgates/"
+ ],
+ "http://www.gov.im/categories/travel-traffic-and-motoring/harbours/tides-and-flapgates": {
+  "status": 200,
+  "len": 29317,
+  "challenge": false,
+  "tideTable": false
+ },
+ "http://www.gov.im/categories/travel-traffic-and-motoring/harbours/tides-and-flapgates/": {
+  "status": 200,
+  "len": 29317,
+  "challenge": false,
+  "tideTable": false
+ },
+ "https://www.gov.im/weather/RssCurrentForecast": {
+  "status": 200,
+  "len": 2153,
+  "challenge": false,
+  "tideTable": false
+ }
+}
