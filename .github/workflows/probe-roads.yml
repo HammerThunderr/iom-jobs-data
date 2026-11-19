@@ -10,7 +10,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - run: pip install requests
+      - run: pip install requests beautifulsoup4
       - run: python probe/probe.py
       - run: |
           git config user.name "github-actions[bot]"
