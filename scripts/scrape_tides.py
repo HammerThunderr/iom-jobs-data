@@ -45,10 +45,11 @@ except Exception:                                   # noqa: BLE001
 INDEX_URL = ("https://www.gov.im/categories/travel-traffic-and-motoring/"
              "harbours/tides-and-flapgates/")
 
+# Identify honestly. From November 2026 gov.im's firewall challenges requests
+# that claim to be an old Chrome (this used to say Chrome/120), which broke
+# the scraper; a plain, honest app name is let through.
 HEADERS = {
-    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                   "AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36"),
-    "Referer": "https://www.gov.im/",
+    "User-Agent": "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
 }
 
