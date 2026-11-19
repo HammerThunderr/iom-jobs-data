@@ -1,28 +1,28 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-19T14:25:46+00:00",
- "lastUpdated": "14:25 UTC",
- "totalCount": 177,
+ "fetchedAt": "2026-11-19T23:35:08+00:00",
+ "lastUpdated": "23:35 UTC",
+ "totalCount": 184,
  "categories": {
   "Festive": 37,
   "Family & Kids": 8,
   "Music": 36,
-  "Theatre & Comedy": 28,
-  "Film": 13,
+  "Theatre & Comedy": 31,
+  "Film": 14,
   "Arts & Workshops": 10,
   "Heritage": 2,
   "Talks & Learning": 16,
   "Sport": 11,
   "Markets & Fairs": 1,
   "Community": 2,
-  "Other": 13
+  "Other": 16
  },
  "sources": [
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 105,
+   "count": 106,
    "status": "ok"
   },
   {
@@ -40,7 +40,7 @@
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 11,
+   "count": 17,
    "status": "ok"
   }
  ],
@@ -145,7 +145,7 @@
    "source": "Manx National Heritage",
    "recurring": true,
    "description": "Jeihosphere is a celebration of our ten years as a UNESCO Biosphere Reserve – ‘jeih’ rhymes with the ‘bi’ of ‘biosphere’ and is Manx Gaelic for ‘ten’. From our designation in 2016 to the present day, we have each played a role in making our Biosphere a place where our community, environment, and economy can all thrive. This exhibition highlights some of the key achievements of the past ten years. Leave feeling proud of our community and ready for the next ten years of Biosphere Isle of Man, and beyond! For more information visit: https://www.biosphere.im/ Image credit: Culture Vannin",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/08/54746867512_285ca44ac1_o-1000x575.jpg",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/08/1_002-1000x575.png",
    "time": "",
    "price": "FREE",
    "url": "https://manxnationalheritage.im/whats-on/detail/jeihosphere/",
@@ -2892,6 +2892,69 @@
    ]
   },
   {
+   "title": "EAC Book Circle: Adam Bede by George Eliot",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-01-06",
+   "endDate": "2027-01-06",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 6th January – from 2pm Adam Bede by George Eliot The first novel of Mary Ann Evans under her pen-name George Eliot. Set in rural Hayslope in 1799, it follows a love story among four characters: the virtuous carpenter Adam Bede, the beautiful but vain Hetty Sorrel, the charming young squire Arthur Donnithorne, and the devout Methodist preacher Dinah Morris. Google Calendar iCalendar",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/book-circle-2027-2.jpg",
+   "time": "14:00",
+   "price": "",
+   "url": "https://www.erinartscentre.com/event/eac-book-circle-adam-bede-by-george-eliot/",
+   "id": "erin-11790",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-01-06",
+     "time": "14:00"
+    }
+   ]
+  },
+  {
+   "title": "National Theatre Live: Hay Fever",
+   "venue": "Broadway Cinema",
+   "startDate": "2027-01-14",
+   "endDate": "2027-01-14",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Film",
+    "Theatre & Comedy"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": false,
+   "description": "National Theatre Live: Hay Fever Date: Thursday 14th January 2027 Time: 7pm Running time: 160min Certificate: 12A Hay Fever by Noël Coward directed by Emily Burns. Emmy and Tony winner Christine Baranski makes her West End debut alongside Academy Award-nominated stage and screen legend Richard E. Grant in Noël Coward’s irresistible comedy. Judith Bliss retired from her life-on-stage and she misses the applause. Idling away at their country home, the rest of the family are too self-involved to be a good audience. So, Judith invites a young fan as her guest for the weekend. But unbeknownst to her, each of the Blisses has a guest of their own arriving at the very same time. Filmed live from the West End, Emily Burns directs this stinging new production.",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/mbmhvbpf63lwhroo1nltxzppf4lv/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "19:00",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691337/events",
+   "id": "villagaiety-873691337",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691337/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-01-14",
+     "time": "19:00"
+    }
+   ]
+  },
+  {
    "title": "Varafeldur: Weaving New Life into Archaeology",
    "venue": "Manx Museum",
    "startDate": "2027-01-16",
@@ -3021,6 +3084,37 @@
    ]
   },
   {
+   "title": "NY Met Opera: La Fanciulla del West (Puccini)",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-01-23",
+   "endDate": "2027-01-23",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Theatre & Comedy"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £15 / Under 18 £2 Puccini’s exhilarating drama of the Wild West returns in a new staging by celebrated British director Richard Jones, marking the company’s first new production of La Fanciulla del West in more than 30 years. Soprano Vida Miknevičiūtė adds to her already remarkable Met repertoire, making her role debut as Minnie, the tough tavern owner with a heart of gold who finds love when she least expects it. Tenor SeokJong Baek is the dashing bandit who rambles into the remote California mining town to steal her heart, opposite baritone Christopher Maltman as the lawman determined to deliver rough justice—and win Minnie for himself. Maestro Keri-Lynn Wilson takes the podium to conduct one of opera’s most action-packed adventures, live from the Met stage to cinemas worldwide. This live cinema transmission is part of The Met: Live in HD series, bringing opera to movie…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/met-opera-2026-2027.jpg",
+   "time": "17:55",
+   "price": "£15",
+   "url": "https://www.erinartscentre.com/event/ny-met-opera-la-fanciulla-del-west-puccini/",
+   "id": "erin-11808",
+   "sourceKey": "erin",
+   "category": "Theatre & Comedy",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-01-23",
+     "time": "17:55"
+    }
+   ]
+  },
+  {
    "title": "Russell Howard - Don't Tell the Algorithm",
    "venue": "Villa Marina Royal Hall",
    "startDate": "2027-01-23",
@@ -3109,6 +3203,37 @@
    "occurrences": [
     {
      "date": "2027-01-31",
+     "time": "14:00"
+    }
+   ]
+  },
+  {
+   "title": "EAC Book Circle: The Penguin Lessons by Tom Michell",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-02-03",
+   "endDate": "2027-02-03",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd December – from 2pm Knife by Salman Rushdie The book recounts Michell’s experiences in 1975, when he rescued a Magellanic penguin from an oil spill in Uruguay and brought it back to a boarding school in Argentina, where he was teaching. The penguin, named Juan Salvador, became a beloved figure among the students and staff. Google Calendar iCalendar",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/book-circle-2027-1-1.jpg",
+   "time": "14:00",
+   "price": "",
+   "url": "https://www.erinartscentre.com/event/eac-book-circle-the-penguin-lessons-by-tom-michell/",
+   "id": "erin-11798",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-02-03",
      "time": "14:00"
     }
    ]
@@ -3577,6 +3702,37 @@
    ]
   },
   {
+   "title": "EAC Book Circle: Invisible Child by Andrea Elliott",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-03-03",
+   "endDate": "2027-03-03",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd December – from 2pm Knife by Salman Rushdie Elliott weaves the real-life story of Dasani Coate’s childhood with the history of her ancestors, tracing their passage from slavery to the Great Migration north. As Dasani comes of age, she must guide her siblings through a world of hunger, violence, racism, drug addiction, and the threat of foster care. Google Calendar iCalendar",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/04/book-circle-DEC-2026.jpg",
+   "time": "14:00",
+   "price": "",
+   "url": "https://www.erinartscentre.com/event/eac-book-circle-invisible-child-by-andrea-elliott/",
+   "id": "erin-11802",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-03-03",
+     "time": "14:00"
+    }
+   ]
+  },
+  {
    "title": "Hello Again - The Neil Diamond Songbook",
    "venue": "Villa Marina Royal Hall",
    "startDate": "2027-03-05",
@@ -3766,6 +3922,37 @@
    ]
   },
   {
+   "title": "NY Met Opera: Silent Night (Puts)",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-03-20",
+   "endDate": "2027-03-20",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Theatre & Comedy"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £15 / Under 18 £2 Following his smash-hit company debut with The Hours, composer Kevin Puts returns to the Met with his Pulitzer Prize–winning first opera. Inspired by the true events of the 1914 Christmas truce when soldiers spontaneously set aside the horrors of the First World War and crossed the trenches to mingle, exchange gifts, and sing carols with the enemy. A poignant depiction of shared humanity in the most inhumane circumstances, Puts’ grand, cinematic opera — with a libretto by Mark Campbell based on the film Joyeux Noël — has been widely acclaimed since its 2011 premiere, hailed as “an overwhelming emotive experience” by The Guardian. Silent Night receives an evocative staging by James Robinson that takes the audience directly to the battlefields of the Western Front. The star-studded cast, featuring soprano Elza van den Heever and tenors Ben Bliss and Rolando…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/met-opera-2026-2027-1.jpg",
+   "time": "16:55",
+   "price": "£15",
+   "url": "https://www.erinartscentre.com/event/ny-met-opera-silent-night-puts/",
+   "id": "erin-11811",
+   "sourceKey": "erin",
+   "category": "Theatre & Comedy",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-03-20",
+     "time": "16:55"
+    }
+   ]
+  },
+  {
    "title": "ARA Motorcycle & Sidecar Race Meeting",
    "venue": "Jurby Race Circuit",
    "startDate": "2027-03-21",
@@ -3949,6 +4136,37 @@
     {
      "date": "2027-03-27",
      "time": ""
+    }
+   ]
+  },
+  {
+   "title": "NY Met Opera: Manon (Massenet)",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-04-03",
+   "endDate": "2027-04-03",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Theatre & Comedy"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £15 / Under 18 £2 Following her radiant performance in Gounod’s Roméo et Juliette, which garnered raves for “high notes that spun like liquid gold” (The New York Times), superstar soprano Nadine Sierra takes on another alluring French heroin. She plays the irresistible title character of Massenet’s passionate drama, live from the Met stage to cinemas worldwide. Leading tenor Matthew Polenzani is her idealistic lover, the Chevalier des Grieux, with rising-star baritone Andrzej Filończyk as her stalwart cousin, Lescaut, in a breathtaking Belle Époque staging by director Laurent Pelly. This live cinema transmission is part of The Met: Live in HD series, bringing opera to movie theaters across the globe. This stunning, modern production features exclusive, live backstage footage and cast interviews shown during the intervals. Buffet served with interval drinks. Feel free to dress for…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/met-opera-2026-2027-2.jpg",
+   "time": "16:55",
+   "price": "£15",
+   "url": "https://www.erinartscentre.com/event/ny-met-opera-manon-massenet/",
+   "id": "erin-11815",
+   "sourceKey": "erin",
+   "category": "Theatre & Comedy",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-04-03",
+     "time": "16:55"
     }
    ]
   },
