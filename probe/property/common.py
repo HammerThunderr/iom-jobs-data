@@ -619,17 +619,35 @@ def _bgc(body, heading, title, type_hint):
         listing_type = "rent" if crumb.group(2).lower() in ("rent", "let") else "sale"
     region = _between(body, heading or "", ("Key Features", "Description", "Interested in"), 1200)
     price, qualifier, lt = parse_price(region, listing_type or type_hint)
+    note = None
+    # Commercial rents are quoted per year ("£97,782 per annum excl"). The
+    # app shows rents per month, so convert, and keep the original wording.
+    annual = re.search(r"£\s*([\d,]+)(?:\.\d\d)?\s*(?:per annum|p\.a\.|pa\b|per year)", region, re.I)
+    if annual and (listing_type or lt) == "rent":
+        yearly = int(annual.group(1).replace(",", ""))
+        price, qualifier = round(yearly / 12), "pcm"
+        note = f"£{yearly:,} per year"
     beds = re.search(r"\b(\d+)\s*Bed\b", region, re.I)
     baths = re.search(r"\b(\d+)\s*Bath\b", region, re.I)
     features = _between(body, "Key Features", ("Description",), 1500)
+    if category == "commercial":
+        # "Commercial Rent Office 4,548 Sq Ft" -> "office"
+        kind = re.search(r"Commercial\s+(?:Buy|Rent|Let)\s+([A-Z][A-Za-z ]{2,20}?)\s+(?:\d|1/|View|£)", region)
+        prop_type = kind.group(1).strip().lower() if kind else None
+        if prop_type is None and re.search(r"\b(acres?|land at|building plot)\b", f"{heading} {region}", re.I):
+            prop_type = "land"
+    else:
+        prop_type = parse_type(f"{features} {heading}")
+    if prop_type == "land":
+        category = "land"
     return {
         "category": category,
         "listing_type": listing_type or lt,
-        "price": price, "qualifier": qualifier,
+        "price": price, "qualifier": qualifier, "note": note,
         "bedrooms": int(beds.group(1)) if beds else None,
         "bathrooms": int(baths.group(1)) if baths else None,
         "status": _status_in(region),
-        "prop_type": parse_type(f"{features} {heading}"),
+        "prop_type": prop_type,
     }
 
 
@@ -638,12 +656,21 @@ def _grays(body, heading, type_hint):
     9 Car ... Make an enquiry"."""
     low = body.lower()
     end = low.find("make an enquiry")
-    start = low.rfind("£", 0, end if end > 0 else len(body))
-    region = body[max(0, start - 120): end if end > 0 else start + 600] if start >= 0 else body[:1500]
+    if end < 0:
+        end = min(len(body), 2500)
+    # The header block: "Let £1,600 pcm £369 pw Barregarrow, ... 3 Bed 2 Bath".
+    # Take the FIRST £ in the ~400 characters before "Make an enquiry", so the
+    # monthly rent wins over the weekly one.
+    start = low.find("£", max(0, end - 400), end)
+    region = body[max(0, start - 40): end] if start >= 0 else body[max(0, end - 400): end]
     price, qualifier, lt = parse_price(region, type_hint)
     beds = re.search(r"\b(\d+)\s*Bed\b", region, re.I)
     baths = re.search(r"\b(\d+)\s*Bath\b", region, re.I)
-    head_status = _status_in(body[:max(end, 0) + 50]) if end > 0 else None
+    head_status = _status_in(region)
+    if not head_status and re.search(r"\bLet\s+£", region):
+        head_status = "Let Agreed"
+    if not head_status and re.search(r"\bSold\s+£", region):
+        head_status = "Sold"
     return {
         "price": price, "qualifier": qualifier, "listing_type": lt,
         "bedrooms": int(beds.group(1)) if beds else None,
@@ -656,11 +683,11 @@ def _partners_from_slug(url):
     """/property/2-bed-semi-detached-house-to-rent-in-hailwood-avenue-douglas-im2/750096
     -> (2, "semi-detached house", "rent", "hailwood avenue douglas im2")"""
     slug = url.rstrip("/").split("/")[-2].lower()
-    m = re.match(r"(?:(\d+)-bed-)?(.*?)-(for-sale|to-rent|to-let)-in-(.*)$", slug)
+    m = re.match(r"(?:(\d+)-bed-)?(?:(.*?)-)?(for-sale|to-rent|to-let)-in-(.*)$", slug)
     if not m:
         return None, None, None, None
     beds = int(m.group(1)) if m.group(1) else None
-    kind = m.group(2).replace("-", " ")
+    kind = (m.group(2) or "").replace("-", " ")
     listing_type = "sale" if m.group(3) == "for-sale" else "rent"
     return beds, kind, listing_type, m.group(4).replace("-", " ")
 
@@ -749,6 +776,7 @@ def scrape_listing(agent, url):
         prop_type = f["prop_type"]
         status = f["status"]
         category = f["category"] or url_category or parse_category(address)
+        price_note = f["note"]
     elif agent.key == "grays":
         # "Slieu Lewaigue, Isle Of Man, IM7 1" -> "Slieu Lewaigue"
         address = re.sub(r",?\s*Isle Of Man.*$", "", heading or "", flags=re.I).strip() \
@@ -765,9 +793,13 @@ def scrape_listing(agent, url):
     elif agent.key == "pre":
         slug_beds, slug_kind, slug_type, slug_place = _partners_from_slug(url)
         type_hint = type_hint or slug_type
-        address = _clean_address(heading or title.split("|")[0].strip() or (slug_place or ""), agent.name)
+        # The page heading is the price; the title has the address:
+        # "4 bed detached house for sale in Mannin Veen, Lheaney Road, Ramsey, IM8 2JF | Partners"
+        tm = re.search(r"\b(?:for sale|to rent|to let) in (.+?)\s*(?:\||$)", title, re.I)
+        address = _clean_address(tm.group(1) if tm else (slug_place or "").title(), agent.name)
+        address = re.sub(r",?\s*IM\d{1,2}(?:\s*\d[A-Z]{2})?\s*$", "", address).strip(" ,")
         locality = parse_place(f"{address} {slug_place or ''}")
-        postcode = parse_postcode(url, f"{heading} {slug_place or ''}")
+        postcode = parse_postcode(url, f"{title} {slug_place or ''}")
         if price is None:
             price, qualifier, listing_type = parse_price(body[:5000], type_hint)
         bedrooms = slug_beds or parse_int(head_blob, BEDS)
@@ -776,8 +808,14 @@ def scrape_listing(agent, url):
             .replace("end of terrace", "end-of-terrace")
         prop_type = parse_type(kind) or parse_type(f"{address} {head_blob}")
         status = _status_in(f"{heading} {body[:2500]}")
-        commercial = "/commercial" in url or (slug_kind and any(w in slug_kind for w in COMMERCIAL_WORDS))
-        category = "commercial" if commercial else (url_category or parse_category(address) or "residential")
+        origin = agent.origin.get(url, "")
+        commercial = "commercial" in origin or (slug_kind and any(w in slug_kind for w in COMMERCIAL_WORDS))
+        if slug_kind and re.search(r"\b(plot|land)\b", slug_kind):
+            category, prop_type = "land", "land"
+        else:
+            category = "commercial" if commercial else (url_category or "residential")
+        if commercial and prop_type in ("house", None):
+            prop_type = None
     else:
         address = _clean_address(heading or title.split("|")[0].strip() or address_from_slug(url), agent.name)
         locality = parse_place(address)
@@ -810,6 +848,8 @@ def scrape_listing(agent, url):
     }
     if status:
         item["status"] = status
+    if locals().get("price_note"):
+        item["priceNote"] = price_note
     return item
 
 # ---------------------------------------------------------------------------

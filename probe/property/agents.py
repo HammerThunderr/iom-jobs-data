@@ -42,6 +42,9 @@ class Agent:
     # /listings/residential_sale-RX123-isle-of-man).
     listing_pattern: Optional[str] = None
 
+    # Filled in during discovery: listing URL -> index URL it was found on.
+    origin: dict = field(default_factory=dict)
+
     def classify(self, url):
         path = urlparse(url).path
         for fragment, category, listing_type in self.url_rules:
@@ -231,7 +234,7 @@ AGENTS = [
         listing_pattern=r"^/listings/[a-z_]+-RX\d+",
         index_paths=(
             "/listings",
-            "/listings?status=available&saleOrRental=Rental",
+            "/listings?saleOrRental=Rental",
         ),
         page_mode="page",
         page_param="page",

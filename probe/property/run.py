@@ -66,6 +66,11 @@ def discover_via_index(agent):
             print(f"    page {page_num + 1}: +{len(fresh)}")
             if not fresh:
                 break
+            # Remember the section each listing was found in (e.g.
+            # "commercial-properties-to-rent") for agents whose listing URLs
+            # don't say whether they're commercial.
+            for u in fresh:
+                agent.origin.setdefault(u, index_url)
 
             urls |= fresh
             seen_on_section |= found
