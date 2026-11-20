@@ -20,6 +20,10 @@ on:
         description: "Skip the drop-detection guard (use after enabling/disabling an agent)"
         type: boolean
         default: false
+  # Also run when the scraper itself changes (e.g. a new agent is added).
+  push:
+    branches: [main]
+    paths: ['scripts/property/**', '.github/workflows/scrape-property.yml']
 
 # Never let two runs overlap and fight over the same commit.
 concurrency:

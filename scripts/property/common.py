@@ -627,6 +627,12 @@ def _bgc(body, heading, title, type_hint):
         yearly = int(annual.group(1).replace(",", ""))
         price, qualifier = round(yearly / 12), "pcm"
         note = f"£{yearly:,} per year"
+    elif (category == "commercial" and (listing_type or lt) == "rent" and price
+          and price > 5000 and not re.search(r"pcm|per month|per calendar month|p/m", region, re.I)):
+        # Commercial rents without a stated period are annual figures on
+        # BGC (e.g. "£80,000 + VAT"); no Manx unit lets for that a month.
+        note = f"£{price:,} per year"
+        price, qualifier = round(price / 12), "pcm"
     beds = re.search(r"\b(\d+)\s*Bed\b", region, re.I)
     baths = re.search(r"\b(\d+)\s*Bath\b", region, re.I)
     features = _between(body, "Key Features", ("Description",), 1500)
@@ -790,6 +796,10 @@ def scrape_listing(agent, url):
         prop_type = parse_type(f"{title} {body[:4000]}")
         status = f["status"]
         category = url_category or parse_category(address)
+        if status == "Sold":
+            # Grays' list also shows completed sales ("Sold £365,000");
+            # those are no longer for sale.
+            return None
     elif agent.key == "pre":
         slug_beds, slug_kind, slug_type, slug_place = _partners_from_slug(url)
         type_hint = type_hint or slug_type
@@ -811,7 +821,7 @@ def scrape_listing(agent, url):
         origin = agent.origin.get(url, "")
         commercial = "commercial" in origin or (slug_kind and any(w in slug_kind for w in COMMERCIAL_WORDS))
         if slug_kind and re.search(r"\b(plot|land)\b", slug_kind):
-            category, prop_type = "land", "land"
+            category, prop_type, bedrooms = "land", "land", None
         else:
             category = "commercial" if commercial else (url_category or "residential")
         if commercial and prop_type in ("house", None):
