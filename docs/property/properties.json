@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-20T13:31:01+00:00",
+    "generated": "2026-11-20T16:37:05+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -3610,6 +3610,7 @@
       "locality": "Laxey",
       "parish": "Laxey",
       "postcode": null,
+      "status": "Sold STC",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-20"
     },
@@ -4208,7 +4209,6 @@
       "locality": "Peel",
       "parish": "Peel",
       "postcode": null,
-      "status": "Sold STC",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-20"
     },
@@ -6810,24 +6810,6 @@
       "lastSeen": "2026-11-20"
     },
     {
-      "id": "chr-12762346-6-clifton-terrace-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12762346-6-clifton-terrace-douglas/",
-      "category": "commercial",
-      "listingType": "sale",
-      "price": 670000,
-      "priceQualifier": "asking",
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "propertyType": "land",
-      "address": "6 Clifton Terrace, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 3HU",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-20"
-    },
-    {
       "id": "chr-12835584-albany-road-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12835584-albany-road-douglas/",
@@ -6923,7 +6905,7 @@
       "url": "https://www.chrystals.co.im/commercial/commercial-sales/property/12893558-2-victoria-buildings-parliament-street-ramsey/",
       "category": "commercial",
       "listingType": "sale",
-      "price": 79000,
+      "price": 60000,
       "priceQualifier": "asking",
       "bedrooms": 0,
       "bathrooms": 0,
@@ -6933,6 +6915,7 @@
       "parish": "Ramsey",
       "postcode": "IM8 1AY",
       "firstSeen": "2026-09-20",
+      "previousPrice": 79000,
       "lastSeen": "2026-11-20"
     },
     {
@@ -10354,6 +10337,24 @@
       "parish": null,
       "postcode": "IM1 2SE",
       "firstSeen": "2026-11-19",
+      "lastSeen": "2026-11-20"
+    },
+    {
+      "id": "chr-12931871-ramsey",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/12931871-ramsey/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 2000000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "propertyType": "land",
+      "address": "Ramsey",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM1 2SE",
+      "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-20"
     },
     {
@@ -16257,8 +16258,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Andreas",
-      "parish": "Andreas",
+      "locality": "Lezayre",
+      "parish": "Lezayre",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -16694,8 +16695,8 @@
       "bathrooms": 2,
       "propertyType": "apartment",
       "address": "FOR SALE BY PUBLIC AUCTION, Flat 3 The Cornerhouse, Michael Street/Douglas Street, Peel, Isle Of Man",
-      "locality": "Michael",
-      "parish": "Michael",
+      "locality": "Douglas",
+      "parish": "Douglas",
       "postcode": "IM1 1LD",
       "status": "for_sale",
       "firstSeen": "2026-10-21",
