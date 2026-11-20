@@ -1,32 +1,38 @@
-import json, requests, pathlib, re
-out = pathlib.Path("probe/out/agents"); out.mkdir(parents=True, exist_ok=True)
+import json, requests, pathlib, re, time
+from bs4 import BeautifulSoup
+out = pathlib.Path("probe/out/agents2"); out.mkdir(parents=True, exist_ok=True)
 H = {"User-Agent": "ManxOneBot/1.0 (+mailto:hammerpunch786@gmail.com)"}
-sites = {
- "bgc": ["https://www.blackgracecowley.com", ["/search/?PropertySearch%5BsearchType%5D=1", "/property-search/", "/properties/"]],
- "cg": ["https://www.cowleygroves.com", ["/property-search/", "/properties/", "/search/"]],
- "gg": ["https://www.garforthgray.im", ["/sales/", "/rentals/"]],
- "pw": ["https://www.propertywise.co.im", ["/", "/properties/", "/property-search/"]],
- "grays1": ["https://www.graysestateagents.com", ["/"]],
- "grays2": ["https://www.graysestateagents.co.im", ["/"]],
- "grays3": ["https://www.grays.im", ["/"]],
- "grays4": ["https://graysestateagents.im", ["/"]],
-}
 log = {}
-for key, (base, paths) in sites.items():
-    entry = {}
+def save(key, url):
     try:
-        r = requests.get(base + "/robots.txt", headers=H, timeout=20)
-        entry["robots"] = [r.status_code, r.text[:1200]]
+        r = requests.get(url, headers=H, timeout=30)
     except Exception as e:
-        entry["robots"] = str(e)[:200]
-    for p in paths:
-        try:
-            r = requests.get(base + p, headers=H, timeout=25)
-            name = key + re.sub(r"[^a-z0-9]+", "_", p.lower())[:40] + ".html"
-            (out / name).write_bytes(r.content)
-            links = sorted(set(re.findall(r'href="([^"]+)"', r.text)))
-            entry[p] = {"status": r.status_code, "final": r.url, "len": len(r.content), "links": [l for l in links if re.search(r"propert|listing|for-sale|to-let|rent|sale", l, re.I)][:40]}
-        except Exception as e:
-            entry[p] = str(e)[:200]
-    log[key] = entry
+        log[key] = str(e)[:200]; return None
+    (out / f"{key}.html").write_bytes(r.content)
+    log[key] = {"url": url, "status": r.status_code, "final": r.url, "len": len(r.content)}
+    time.sleep(1.5)
+    return r
+r = save("bgc_robots", "https://bgc.im/robots.txt")
+pages = {
+ "bgc_res_buy": "https://bgc.im/residential/buy/", "bgc_res_rent": "https://bgc.im/residential/rent/",
+ "cg_sales": "https://www.cowleygroves.com/sales", "cg_rentals": "https://www.cowleygroves.com/rentals",
+ "gg_sales": "https://www.garforthgray.im/sales", "gg_rentals": "https://www.garforthgray.im/rentals",
+ "pre_sale": "https://www.partners.co.im/property-for-sale", "pre_rent": "https://www.partners.co.im/property-to-rent",
+ "grays_list": "https://graysestateagents.com/listings",
+}
+for k, u in pages.items():
+    r = save(k, u)
+    if r is None or r.status_code != 200: continue
+    soup = BeautifulSoup(r.text, "html.parser")
+    hrefs = sorted({a["href"] for a in soup.find_all("a", href=True)})
+    log[k]["hrefs"] = [h for h in hrefs if re.search(r"propert|listing|/\d{4,}|page|start=|offset", h, re.I)][:60]
+# one sample listing each (first matching href)
+pat = {"bgc_res_buy": r"/property/", "cg_sales": r"propert|/sales/", "gg_sales": r"^/[a-z0-9-]+-\d+|propert", "pre_sale": r"/property/", "grays_list": r"/listings/"}
+for k, p in pat.items():
+    hs = [h for h in log.get(k, {}).get("hrefs", []) if re.search(p, h)]
+    hs = [h for h in hs if not re.search(r"page|search|sales$|rentals$", h)]
+    if hs:
+        base = log[k]["final"]
+        from urllib.parse import urljoin
+        save(k + "_item", urljoin(base, hs[0]))
 (out / "log.json").write_text(json.dumps(log, indent=1))
