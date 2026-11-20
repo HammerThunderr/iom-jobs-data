@@ -5,6 +5,8 @@ For each provider, verify robots.txt and the listing URL pattern before enabling
 Chrystals is currently the active provider and uses the site's section indexes.
 """
 
+import os
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 from urllib.parse import urlparse
@@ -34,6 +36,14 @@ class Agent:
     page_size: int = 20
 
     url_rules: tuple = ()
+
+    # Optional regex on the URL path that marks a listing page. Used when the
+    # listing pages share a prefix with the index (Grays: /listings and
+    # /listings/residential_sale-RX123-isle-of-man).
+    listing_pattern: Optional[str] = None
+
+    # Filled in during discovery: listing URL -> index URL it was found on.
+    origin: dict = field(default_factory=dict)
 
     def classify(self, url):
         path = urlparse(url).path
@@ -74,6 +84,8 @@ class Agent:
             return False
         if any(path.startswith(prefix) for prefix in self.exclude_paths):
             return False
+        if self.listing_pattern:
+            return re.search(self.listing_pattern, path) is not None
         if self.property_path:
             return self.property_path in path
         if self.root_level_slugs:
@@ -82,27 +94,26 @@ class Agent:
 
 
 AGENTS = [
-    # robots.txt checked previously: listings crawlable. Paused while testing
-    # providers one at a time.
+    # Black Grace Cowley moved to bgc.im (Nov 2026). robots.txt allows
+    # everything except /wp-admin/. Section indexes paginate /page/2/ ...;
+    # listings live at /property/<slug>/. The page breadcrumb says
+    # "Residential / Buy" etc., which the parser uses for category and type.
     Agent(
         key="bgc",
         name="Black Grace Cowley",
-        base="https://www.blackgracecowley.com",
-        enabled=False,
+        base="https://bgc.im",
+        enabled=True,
         property_path="/property/",
-        sitemap="/wp-sitemap.xml",
-        search_path="/search/",
-        search_params={
-            "PropertySearch[searchType]": "1",
-            "PropertySearch[minPrice]": "0",
-            "PropertySearch[maxPrice]": "99999999",
-            "PropertySearch[term]": "",
-            "PropertySearch[sortOrder]": "",
-            "PropertySearch[bedroom]": "",
-            "PropertySearch[reception]": "",
-            "PropertySearch[propertyType]": "",
-            "PropertySearch[area]": "",
-        },
+        index_paths=(
+            "/residential/buy/",
+            "/residential/rent/",
+            "/commercial/buy/",
+            "/commercial/rent/",
+        ),
+        page_mode="path",
+        max_pages=30,
+        sitemap=None,
+        search_path=None,
     ),
 
     Agent(
@@ -211,8 +222,62 @@ AGENTS = [
             ("/properties/sale/", "residential", "sale"),
         ),
     ),
+
+    # Grays Estate Agents, Peel (Rex website). robots.txt allows everything.
+    # /listings paginates with ?page=2; each listing's slug says what it is:
+    # /listings/residential_sale-RX826035-isle-of-man.
+    Agent(
+        key="grays",
+        name="Grays Estate Agents",
+        base="https://graysestateagents.com",
+        enabled=True,
+        listing_pattern=r"^/listings/[a-z_]+-RX\d+",
+        index_paths=(
+            "/listings",
+            "/listings?saleOrRental=Rental",
+        ),
+        page_mode="page",
+        page_param="page",
+        max_pages=20,
+        sitemap=None,
+        search_path=None,
+        url_rules=(
+            ("/listings/residential_sale", "residential", "sale"),
+            ("/listings/residential_rental", "residential", "rent"),
+            ("/listings/commercial_sale", "commercial", "sale"),
+            ("/listings/commercial_rental", "commercial", "rent"),
+            ("/listings/land_sale", "land", "sale"),
+            ("/listings/rural_sale", "land", "sale"),
+        ),
+    ),
+
+    # Partners Real Estate, Douglas (formerly Property Wise; propertywise.co.im
+    # now redirects here). No robots.txt rules. Sections paginate ?page=2;
+    # listings are /property/<n>-bed-for-sale-in-<address>/<id>.
+    Agent(
+        key="pre",
+        name="Partners Real Estate",
+        base="https://www.partners.co.im",
+        enabled=True,
+        listing_pattern=r"^/property/[^/]+/\d+/?$",
+        exclude_paths=("/estateapps/",),
+        index_paths=(
+            "/property-for-sale",
+            "/property-to-rent",
+            "/commercial-property-for-sale",
+            "/commercial-properties-to-rent",
+        ),
+        page_mode="page",
+        page_param="page",
+        max_pages=20,
+        sitemap=None,
+        search_path=None,
+    ),
 ]
 
 
 def active_agents():
-    return [a for a in AGENTS if a.enabled]
+    """Enabled agents. PROPERTY_AGENTS=bgc,grays limits a run to those keys
+    (for testing a new agent without re-scraping everyone)."""
+    only = {k.strip() for k in os.environ.get("PROPERTY_AGENTS", "").split(",") if k.strip()}
+    return [a for a in AGENTS if a.enabled and (not only or a.key in only)]
