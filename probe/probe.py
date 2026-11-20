@@ -25,6 +25,8 @@ def save(key, url):
         cleaned = re.sub(r"(?i)(key|token|secret)=[A-Za-z0-9_\-]{12,}", r"\1=REDACTED", str(soup))
     except Exception:
         cleaned = ""
+    for pat in (r"AIza[0-9A-Za-z_\-]{20,}", r"pk\.[A-Za-z0-9_\-\.]{20,}", r"[A-Za-z0-9_\-]{32,}"):
+        cleaned = re.sub(pat, "REDACTED", cleaned)
     (out / f"{key}.html").write_text(cleaned)
     log[key] = {"url": url, "status": r.status_code, "final": r.url, "len": len(r.content)}
     time.sleep(1.5)
