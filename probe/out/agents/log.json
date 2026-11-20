@@ -1,0 +1,258 @@
+{
+ "bgc": {
+  "robots": [
+   200,
+   "User-agent: *\nDisallow: /wp-admin/\nAllow: /wp-admin/admin-ajax.php\nDisallow: /search/\n\nSitemap: https://www.blackgracecowley.com/wp-sitemap.xml"
+  ],
+  "/search/?PropertySearch%5BsearchType%5D=1": {
+   "status": 200,
+   "final": "https://bgc.im/",
+   "len": 269989,
+   "links": [
+    "https://bgc.im/commercial/rent/",
+    "https://bgc.im/property/mount-gawne-road-port-st-mary-isle-of-man/",
+    "https://bgc.im/property/thorny-road-douglas/",
+    "https://bgc.im/property/tromode-road-tromode-douglas/",
+    "https://bgc.im/renting-with-bgc/",
+    "https://bgc.im/residential/rent/"
+   ]
+  },
+  "/property-search/": {
+   "status": 200,
+   "final": "https://bgc.im/",
+   "len": 269989,
+   "links": [
+    "https://bgc.im/commercial/rent/",
+    "https://bgc.im/property/mount-gawne-road-port-st-mary-isle-of-man/",
+    "https://bgc.im/property/thorny-road-douglas/",
+    "https://bgc.im/property/tromode-road-tromode-douglas/",
+    "https://bgc.im/renting-with-bgc/",
+    "https://bgc.im/residential/rent/"
+   ]
+  },
+  "/properties/": {
+   "status": 200,
+   "final": "https://bgc.im/",
+   "len": 269989,
+   "links": [
+    "https://bgc.im/commercial/rent/",
+    "https://bgc.im/property/mount-gawne-road-port-st-mary-isle-of-man/",
+    "https://bgc.im/property/thorny-road-douglas/",
+    "https://bgc.im/property/tromode-road-tromode-douglas/",
+    "https://bgc.im/renting-with-bgc/",
+    "https://bgc.im/residential/rent/"
+   ]
+  }
+ },
+ "cg": {
+  "robots": [
+   200,
+   "User-agent: *\nDisallow:\n"
+  ],
+  "/property-search/": {
+   "status": 404,
+   "final": "https://www.cowleygroves.com/property-search",
+   "len": 10126,
+   "links": [
+    "https://www.cowleygroves.com/commercials?sel_rent=Rental",
+    "https://www.cowleygroves.com/commercials?sel_rent=Sale",
+    "https://www.cowleygroves.com/property-management-services-and-testimonials",
+    "https://www.cowleygroves.com/rentals",
+    "https://www.cowleygroves.com/renting",
+    "https://www.cowleygroves.com/sales",
+    "mailto:rentals@cowleygroves.com"
+   ]
+  },
+  "/properties/": {
+   "status": 404,
+   "final": "https://www.cowleygroves.com/properties",
+   "len": 10126,
+   "links": [
+    "https://www.cowleygroves.com/commercials?sel_rent=Rental",
+    "https://www.cowleygroves.com/commercials?sel_rent=Sale",
+    "https://www.cowleygroves.com/property-management-services-and-testimonials",
+    "https://www.cowleygroves.com/rentals",
+    "https://www.cowleygroves.com/renting",
+    "https://www.cowleygroves.com/sales",
+    "mailto:rentals@cowleygroves.com"
+   ]
+  },
+  "/search/": {
+   "status": 500,
+   "final": "https://www.cowleygroves.com/search",
+   "len": 10177,
+   "links": [
+    "https://www.cowleygroves.com/commercials?sel_rent=Rental",
+    "https://www.cowleygroves.com/commercials?sel_rent=Sale",
+    "https://www.cowleygroves.com/property-management-services-and-testimonials",
+    "https://www.cowleygroves.com/rentals",
+    "https://www.cowleygroves.com/renting",
+    "https://www.cowleygroves.com/sales",
+    "mailto:rentals@cowleygroves.com"
+   ]
+  }
+ },
+ "gg": {
+  "robots": [
+   200,
+   "User-Agent: *\r\nDisallow:\r\n\r\nSitemap: https://www.garforthgray.im/sitemap.php\r\n"
+  ],
+  "/sales/": {
+   "status": 200,
+   "final": "https://www.garforthgray.im/sales/",
+   "len": 79382,
+   "links": [
+    "/auth/?&state=/sales/",
+    "/auth/?&state=/sales/?m=bookValuation",
+    "/commercial-properties-isle-of-man",
+    "/luxury-homes-for-sale-isle-of-man",
+    "/rent-your-property",
+    "/rentals",
+    "/sales",
+    "/sell-a-property"
+   ]
+  },
+  "/rentals/": {
+   "status": 404,
+   "final": "https://www.garforthgray.im/rentals/",
+   "len": 1103,
+   "links": []
+  }
+ },
+ "pw": {
+  "robots": [
+   200,
+   "<!DOCTYPE html><html\nxmlns=\"https://www.w3.org/1999/xhtml\" xml:lang=\"en-GB\" lang=\"en-GB\" class=\"no-js\"><head><meta\ncharset=\"UTF-8\" /><meta\nhttp-equiv=\"X-UA-Compatible\" content=\"IE=edge\" /><meta\nname=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"><title>Estate &amp; Letting Agents covering the Isle of Man | Partners Real Estate</title><meta\nname=\"csrf-param\" content=\"_csrf\"><meta\nname=\"csrf-token\" content=\"AGqbQSL8eUckyWhGbgza49xEI4Y7D_i5qe3vMC6i5ZljU9oKWsoVKV38CQU9T5SIiS5KwlBBlc7AuMJESeqqqA==\"><meta\nproperty=\"og:url\" content=\"https://www.partners.co.im/\"><meta\nproperty=\"og:type\" content=\"website\"><meta\nproperty=\"og:title\" content=\"Estate &amp; Letting Agents covering the Isle of Man\"><meta\nproperty=\"og:image\" content=\"https://www.partners.co.im/assets/38915c2e/images/partners-fb-share.png\" /><meta\nname=\"twitter:image\" content=\"https://www.partners.co.im/assets/38915c2e/images/partners-fb-share.png\" /><meta\nname=\"twitter:card\" content=\"summary\"><meta\nname=\"twitter:url\" content=\"https://www.partners.co.im/\"><meta\nname=\"twitter:title\" content=\"Estate &amp; Letting Agents covering the Isle of Man\">\n<!--[if lt IE 9]> <script src=\"https://cdnjs.cloudflare.com/"
+  ],
+  "/": {
+   "status": 200,
+   "final": "https://www.partners.co.im/",
+   "len": 47801,
+   "links": [
+    "/buying-property",
+    "/commercial-properties-to-rent",
+    "/commercial-property",
+    "/commercial-property-for-sale",
+    "/letting-property",
+    "/property-for-sale",
+    "/property-to-rent",
+    "/property/15-bed-for-sale-in-wavecrest-12-empress-drive-douglas-im2/733389",
+    "/property/19-bed-for-sale-in-empress-drive-douglas-im2/657996",
+    "/property/2-bed-for-sale-in-willow-creek-12-gainsborough-crescent-ramsey-im8-3nh/740033",
+    "/property/4-bed-for-sale-in-mannin-veen-lheaney-road-ramsey-im8-2jf/712771",
+    "/property/5-bed-for-sale-in-la-vista-11-royal-avenue-west-onchan-im3-1hb/733546",
+    "/property/5-bed-for-sale-in-rose-garth-7-st-olaves-close-ramsey-im8/753308",
+    "/property/6-bed-for-sale-in-howe-road-onchan-im3/716698",
+    "/property/6-bed-for-sale-in-woodbourne-road-douglas-im2/679951",
+    "/register-for-property-alerts",
+    "/renting-property",
+    "/selling-property",
+    "/successfully-let-property",
+    "/successfully-sold-property",
+    "/value-my-property"
+   ]
+  },
+  "/properties/": {
+   "status": 200,
+   "final": "https://www.partners.co.im/",
+   "len": 47801,
+   "links": [
+    "/buying-property",
+    "/commercial-properties-to-rent",
+    "/commercial-property",
+    "/commercial-property-for-sale",
+    "/letting-property",
+    "/property-for-sale",
+    "/property-to-rent",
+    "/property/15-bed-for-sale-in-wavecrest-12-empress-drive-douglas-im2/733389",
+    "/property/19-bed-for-sale-in-empress-drive-douglas-im2/657996",
+    "/property/2-bed-for-sale-in-willow-creek-12-gainsborough-crescent-ramsey-im8-3nh/740033",
+    "/property/4-bed-for-sale-in-mannin-veen-lheaney-road-ramsey-im8-2jf/712771",
+    "/property/5-bed-for-sale-in-la-vista-11-royal-avenue-west-onchan-im3-1hb/733546",
+    "/property/5-bed-for-sale-in-rose-garth-7-st-olaves-close-ramsey-im8/753308",
+    "/property/6-bed-for-sale-in-howe-road-onchan-im3/716698",
+    "/property/6-bed-for-sale-in-woodbourne-road-douglas-im2/679951",
+    "/register-for-property-alerts",
+    "/renting-property",
+    "/selling-property",
+    "/successfully-let-property",
+    "/successfully-sold-property",
+    "/value-my-property"
+   ]
+  },
+  "/property-search/": {
+   "status": 200,
+   "final": "https://www.partners.co.im/",
+   "len": 47801,
+   "links": [
+    "/buying-property",
+    "/commercial-properties-to-rent",
+    "/commercial-property",
+    "/commercial-property-for-sale",
+    "/letting-property",
+    "/property-for-sale",
+    "/property-to-rent",
+    "/property/15-bed-for-sale-in-wavecrest-12-empress-drive-douglas-im2/733389",
+    "/property/19-bed-for-sale-in-empress-drive-douglas-im2/657996",
+    "/property/2-bed-for-sale-in-willow-creek-12-gainsborough-crescent-ramsey-im8-3nh/740033",
+    "/property/4-bed-for-sale-in-mannin-veen-lheaney-road-ramsey-im8-2jf/712771",
+    "/property/5-bed-for-sale-in-la-vista-11-royal-avenue-west-onchan-im3-1hb/733546",
+    "/property/5-bed-for-sale-in-rose-garth-7-st-olaves-close-ramsey-im8/753308",
+    "/property/6-bed-for-sale-in-howe-road-onchan-im3/716698",
+    "/property/6-bed-for-sale-in-woodbourne-road-douglas-im2/679951",
+    "/register-for-property-alerts",
+    "/renting-property",
+    "/selling-property",
+    "/successfully-let-property",
+    "/successfully-sold-property",
+    "/value-my-property"
+   ]
+  }
+ },
+ "grays1": {
+  "robots": [
+   200,
+   "User-agent: *\nDisallow: \n"
+  ],
+  "/": {
+   "status": 200,
+   "final": "https://graysestateagents.com",
+   "len": 469459,
+   "links": [
+    "/listings",
+    "/listings/commercial_rental-RX728320-isle-of-man",
+    "/listings/residential_rental-RX425964-isle-of-man",
+    "/listings/residential_rental-RX581065-isle-of-man",
+    "/listings/residential_rental-RX581458-isle-of-man",
+    "/listings/residential_rental-RX763683-isle-of-man",
+    "/listings/residential_rental-RX822851-isle-of-man",
+    "/listings/residential_rental-RX829684-isle-of-man",
+    "/listings/residential_sale-RX400683-isle-of-man",
+    "/listings/residential_sale-RX480335-isle-of-man",
+    "/listings/residential_sale-RX551908-isle-of-man",
+    "/listings/residential_sale-RX600509-isle-of-man",
+    "/listings/residential_sale-RX630887-isle-of-man",
+    "/listings/residential_sale-RX635955-isle-of-man",
+    "/listings/residential_sale-RX843633-isle-of-man",
+    "/listings/residential_sale-RX847819-isle-of-man",
+    "/listings/residential_sale-RX852487-isle-of-man",
+    "/listings/residential_sale-RX852808-isle-of-man",
+    "/listings/residential_sale-RX856296-isle-of-man",
+    "/listings/residential_sale-RX857649-isle-of-man",
+    "https://02ae4472-d186-11ee-b08d-d285a5f67bc3.sites.eu.siteloft.com/listings?status=available&amp;saleOrRental=Rental&amp;viewType=gallery"
+   ]
+  }
+ },
+ "grays2": {
+  "robots": "HTTPSConnectionPool(host='www.graysestateagents.co.im', port=443): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError(\"HTTPSConnection(host='www.graysestateagents.co.im', port=4",
+  "/": "HTTPSConnectionPool(host='www.graysestateagents.co.im', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.graysestateagents.co.im', port=443): Faile"
+ },
+ "grays3": {
+  "robots": "HTTPSConnectionPool(host='www.grays.im', port=443): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError(\"HTTPSConnection(host='www.grays.im', port=443): Failed to resolve 'www.gr",
+  "/": "HTTPSConnectionPool(host='www.grays.im', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.grays.im', port=443): Failed to resolve 'www.grays.im' (["
+ },
+ "grays4": {
+  "robots": "HTTPSConnectionPool(host='graysestateagents.im', port=443): Max retries exceeded with url: /robots.txt (Caused by ConnectTimeoutError(<HTTPSConnection(host='graysestateagents.im', port=443) at 0x786dc",
+  "/": "HTTPSConnectionPool(host='graysestateagents.im', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='graysestateagents.im', port=443) at 0x786dc80df250>, "
+ }
+}
