@@ -212,7 +212,20 @@ def main():
                 "error": str(exc),
             })
 
-    merged = common.merge(all_listings, previous, failed)
+    # An agent that suddenly returns far fewer listings than last time most
+    # likely had pages time out, not a mass sell-off. Keep its earlier
+    # listings (marked stale) instead of dropping them from the app.
+    keep_old = list(failed)
+    for src in sources:
+        if src["status"] != "ok":
+            continue
+        before = sum(1 for p in previous if p.get("agent") == src["agent"] and not p.get("stale"))
+        if before >= 20 and src["count"] < before * 0.6:
+            print(f"  ?? {src['agent']}: {src['count']} now vs {before} last run — keeping earlier listings")
+            src["status"] = "partial"
+            keep_old.append(src["agent"])
+
+    merged = common.merge(all_listings, previous, keep_old)
     payload = {
         "meta": {
             "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),

@@ -59,17 +59,29 @@ WORD_NUMBERS = {
 # HTTP
 # ---------------------------------------------------------------------------
 
+# Waits before retrying a page that timed out or got a "busy" answer
+# (429 / 5xx). A 404 is a real answer (e.g. past the last index page) and
+# is not retried.
+RETRY_WAITS = (15, 45)
+
+
 def get(url, params=None):
-    try:
-        res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
-        time.sleep(DELAY_SECONDS)
-        if res.status_code != 200:
+    for attempt in range(len(RETRY_WAITS) + 1):
+        try:
+            res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
+            time.sleep(DELAY_SECONDS)
+            if res.status_code == 200:
+                return res
             print(f"    ! HTTP {res.status_code} for {url}")
-            return None
-        return res
-    except requests.RequestException as exc:
-        print(f"    ! {url} -> {exc}")
-        return None
+            if res.status_code != 429 and res.status_code < 500:
+                return None
+        except requests.RequestException as exc:
+            print(f"    ! {url} -> {exc}")
+        if attempt < len(RETRY_WAITS):
+            wait = RETRY_WAITS[attempt]
+            print(f"    … retrying in {wait}s")
+            time.sleep(wait)
+    return None
 
 # ---------------------------------------------------------------------------
 # Text helpers
