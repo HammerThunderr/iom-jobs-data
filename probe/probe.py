@@ -16,7 +16,16 @@ def save(key, url):
     except Exception as e:
         log[key] = str(e)[:200]
         return None
-    (out / f"{key}.html").write_bytes(r.content)
+    # Scripts removed before saving: they hold map/API keys, and GitHub's
+    # secret scanning refuses pushes that contain them.
+    try:
+        soup = BeautifulSoup(r.text, "html.parser")
+        for t in soup(["script", "style", "noscript", "svg", "iframe"]):
+            t.decompose()
+        cleaned = re.sub(r"(?i)(key|token|secret)=[A-Za-z0-9_\-]{12,}", r"\1=REDACTED", str(soup))
+    except Exception:
+        cleaned = ""
+    (out / f"{key}.html").write_text(cleaned)
     log[key] = {"url": url, "status": r.status_code, "final": r.url, "len": len(r.content)}
     time.sleep(1.5)
     return r
