@@ -140,8 +140,12 @@ def extract_sailings_from_block(text):
         r'(' + time_pat + r')\s+'                  # arrive time
         r'([A-Za-z][A-Za-z\s]+?)\s+'               # arrive port
         r'Ferry\s+'
-        r'([A-Za-z][A-Za-z\s]+?)\s+'               # ferry name
-        r'(Arrived|Departed|Scheduled|Cancelled|Delayed|Boarding|Loading|Diverted)'  # status2 (matches start)
+        # Ferry name: letters plus hyphens/apostrophes ("Ben-My-Chree" — the
+        # old letters-and-spaces pattern silently dropped every Ben-my-Chree
+        # sailing). Ends at the next sailing's status word or end of block,
+        # so the last sailing of the day is kept too.
+        r"([A-Za-z][A-Za-z'\-\s]*?[A-Za-z])"
+        r'(?=\s+(?:Arrived|Departed|Scheduled|Cancelled|Delayed|Boarding|Loading|Diverted)\b|\s*$)'
     )
 
     for m in re.finditer(pattern, text, re.IGNORECASE):
