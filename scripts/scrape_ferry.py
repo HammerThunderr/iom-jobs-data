@@ -119,6 +119,30 @@ def parse_sailings(html):
     return days, last_updated
 
 
+def parse_notice(html):
+    """The Steam Packet's amber "Important information" banner, as one line:
+    "Manxman Dry dock Extension update. If your travel plans have been ..."
+
+    Layout (Nov 2026): div.contentWrapper > span.title > span.strong
+    ("Important information:") + span.light (the headline), then div.text
+    with the details. Returns "" when no banner is showing.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    for box in soup.select("div.contentWrapper"):
+        title = box.select_one("span.title")
+        if not title:
+            continue
+        label = clean(title.select_one("span.strong").get_text()) if title.select_one("span.strong") else ""
+        if "important" not in label.lower() and "information" not in label.lower():
+            continue
+        headline = clean(title.select_one("span.light").get_text()) if title.select_one("span.light") else ""
+        body = box.select_one("div.text")
+        detail = clean(body.get_text(" ")) if body else ""
+        parts = [p.rstrip(".") + "." for p in (headline, detail) if p]
+        return " ".join(parts)[:600]
+    return ""
+
+
 def extract_sailings_from_block(text):
     """
     Pull individual sailings from a block of text.
@@ -200,6 +224,7 @@ def main():
             "lastUpdated": last_updated or datetime.now(timezone.utc).strftime("%H:%M UTC"),
             "totalCount":  total,
             "days":        days,
+            "notice":      parse_notice(html),
             "source":      "steam-packet.com",
         }
 
