@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-21T00:40:02.350883+00:00",
-  "lastUpdated": "00:39 UTC",
+  "fetchedAt": "2026-11-21T00:44:04.274194+00:00",
+  "lastUpdated": "00:43 UTC",
   "departures": [
     {
       "flightNo": "EZY842",
@@ -57,6 +57,14 @@
       "scheduled": "14:25",
       "status": "On-time",
       "destination": "Birmingham",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY836",
+      "airline": "easyJet",
+      "scheduled": "14:40",
+      "status": "On-time",
+      "destination": "London Gatwick",
       "statusType": "ontime"
     }
   ],
@@ -126,6 +134,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 15,
+  "totalCount": 16,
   "source": "airport.im"
 }
