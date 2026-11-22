@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-22T16:00:43.295651+00:00",
-  "lastUpdated": "16:00 UTC",
+  "fetchedAt": "2026-11-22T16:04:44.933914+00:00",
+  "lastUpdated": "16:03 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -63,9 +63,9 @@
       "flightNo": "EZY518",
       "airline": "easyJet",
       "scheduled": "16:20",
-      "status": "Boarding now",
+      "status": "Last call",
       "destination": "Liverpool",
-      "statusType": "boarding"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "EI3217",
@@ -145,9 +145,9 @@
       "flightNo": "EI3216",
       "airline": "Aer Lingus",
       "scheduled": "16:50",
-      "status": "On-time",
+      "status": "Delayed 18:35",
       "origin": "Dublin",
-      "statusType": "ontime"
+      "statusType": "delayed"
     },
     {
       "flightNo": "LM698",
