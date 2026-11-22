@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-22T15:44:35.614946+00:00",
-  "lastUpdated": "15:43 UTC",
+  "fetchedAt": "2026-11-22T15:48:37.914390+00:00",
+  "lastUpdated": "15:47 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -47,15 +47,15 @@
       "flightNo": "EZY840",
       "airline": "easyJet",
       "scheduled": "15:35",
-      "status": "Gate closed",
+      "status": "Departed 15:44",
       "destination": "London Gatwick",
-      "statusType": "boarding"
+      "statusType": "departed"
     },
     {
       "flightNo": "LM675",
       "airline": "Loganair",
       "scheduled": "16:10",
-      "status": "Boarding shortly",
+      "status": "Boarding now",
       "destination": "London Heathrow",
       "statusType": "boarding"
     },
@@ -71,7 +71,7 @@
       "flightNo": "EI3217",
       "airline": "Aer Lingus",
       "scheduled": "17:20",
-      "status": "Delayed 18:25",
+      "status": "Delayed 19:05",
       "destination": "Dublin",
       "statusType": "delayed"
     },
@@ -137,7 +137,7 @@
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "15:50",
-      "status": "Landed 15:42",
+      "status": "Arrived 15:46",
       "origin": "Liverpool",
       "statusType": "arrived"
     },
