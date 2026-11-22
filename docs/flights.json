@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-22T21:25:33.384739+00:00",
-  "lastUpdated": "21:24 UTC",
+  "fetchedAt": "2026-11-22T21:29:35.435801+00:00",
+  "lastUpdated": "21:28 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -102,14 +102,6 @@
   ],
   "arrivals": [
     {
-      "flightNo": "LM313",
-      "airline": "Loganair",
-      "scheduled": "15:35",
-      "status": "Arrived 15:25",
-      "origin": "Edinburgh",
-      "statusType": "arrived"
-    },
-    {
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "15:50",
@@ -206,6 +198,6 @@
       "statusType": "ontime"
     }
   ],
-  "totalCount": 25,
+  "totalCount": 24,
   "source": "airport.im"
 }
