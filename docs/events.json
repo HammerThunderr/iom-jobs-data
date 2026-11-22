@@ -1,8 +1,8 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-22T13:20:14+00:00",
- "lastUpdated": "13:20 UTC",
+ "fetchedAt": "2026-11-22T22:28:31+00:00",
+ "lastUpdated": "22:28 UTC",
  "totalCount": 179,
  "categories": {
   "Festive": 36,
@@ -1081,11 +1081,12 @@
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873692674/events",
-   "soldOut": false,
+   "soldOut": true,
    "occurrences": [
     {
      "date": "2026-11-29",
-     "time": "10:00"
+     "time": "10:00",
+     "soldOut": true
     }
    ]
   },
@@ -1339,7 +1340,8 @@
     },
     {
      "date": "2026-11-29",
-     "time": "13:45"
+     "time": "13:45",
+     "soldOut": true
     },
     {
      "date": "2026-11-29",
