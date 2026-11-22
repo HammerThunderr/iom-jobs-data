@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-22T09:09:47.705484+00:00",
-  "lastUpdated": "07:20 22/11/26",
+  "fetchedAt": "2026-11-22T17:06:25.852725+00:00",
+  "lastUpdated": "13:25 22/11/26",
   "totalCount": 20,
   "days": [
     {
@@ -19,11 +19,11 @@
         {
           "departTime": "07:05",
           "departPort": "Douglas",
-          "arriveTime": "11:35",
+          "arriveTime": "11:42",
           "arrivePort": "Liverpool",
           "ferry": "Ben-My-Chree",
-          "status": "Departed",
-          "statusType": "departed"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
           "departTime": "13:30",
