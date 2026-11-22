@@ -26,8 +26,11 @@ touching it.
 
 HOW IT READS THE PDF
 --------------------
-The PDFs are Word tables with cells that wrap over several lines, so plain
-table extraction splits cells apart. Instead, every row is anchored on its
+First it reads the table grid (the cell borders). That keeps text that wraps
+over several lines inside its own row, and is used whenever it finds at
+least as many rows as the fallback below.
+
+Fallback, for lists without usable borders: every row is anchored on its
 pair of dd/mm/yyyy dates; the words within half a row-gap above and below the
 anchor belong to that row, and each word goes to the column whose header it
 sits under. The one.network link is matched to the row by its position.
@@ -76,7 +79,9 @@ HEADER_WORDS = {
     "end": {"End"},
     "activity": {"Activity"},
     "phone": {"Telephone", "helpline"},
-    "link": {"Causeway", "One.Network", "Watch", "link"},
+    # "Causeway/One.Network link" in older lists, "Map showing restrictions"
+    # from the 21 Nov 2026 list on.
+    "link": {"Causeway", "One.Network", "Watch", "link", "showing", "restrictions"},
 }
 COLS = list(HEADER_WORDS)
 
@@ -189,6 +194,74 @@ def column_of(x: float, bounds: list) -> str:
     return bounds[-1][0]
 
 
+def _cell(c) -> str:
+    return tidy((c or "").replace("\n", " "))
+
+
+def parse_tables(pdf) -> list[dict]:
+    """Read the rows from the PDF's table grid (cell borders). Used first:
+    when the table has borders this keeps wrapped cell text with its own row,
+    which the position-based reader below can't always do."""
+    rows: list[dict] = []
+    cols = None  # column index for each field, from the header row
+    for page in pdf.pages:
+        links = [h for h in page.hyperlinks if "one.network" in (h.get("uri") or "")]
+        for table in page.find_tables():
+            data = table.extract()
+            for ri, raw in enumerate(data):
+                cells = [_cell(c) for c in raw]
+                joined = " ".join(cells)
+                if "Locality" in joined and ("Start" in joined or "Proposed" in joined):
+                    idx = {}
+                    for i, c in enumerate(cells):
+                        for key, word in (("promoter", "Promoter"), ("road", "Road"),
+                                          ("locality", "Locality"), ("start", "Start"),
+                                          ("end", "End"), ("activity", "Activity"),
+                                          ("phone", "Telephone")):
+                            if word in c and key not in idx:
+                                idx[key] = i
+                        if ("Map" in c or "link" in c or "Watch" in c) and "link" not in idx:
+                            idx["link"] = i
+                    if {"locality", "start", "end", "activity"} <= idx.keys():
+                        cols = (idx, len(cells))
+                    continue
+                if not cols:
+                    continue
+                idx, n = cols
+                if len(cells) != n:
+                    continue
+                start, end = cells[idx["start"]], cells[idx["end"]]
+                if not (DATE_RE.match(start) and DATE_RE.match(end)):
+                    # A wrapped "Prohibited / Parking" type spills into an
+                    # otherwise empty row: add it to the row above.
+                    extra = " ".join(c for c in cells if c)
+                    if rows and extra and not any(cells[idx[k]] for k in ("start", "end")):
+                        if extra.lower() in {"parking", "waiting", "limit", "speed limit"}:
+                            rows[-1]["typeLabel"] = tidy(rows[-1]["typeLabel"] + " " + extra)
+                    continue
+                type_cells = cells[idx["locality"] + 1:idx["start"]]
+                link = ""
+                bbox = table.rows[ri].bbox if ri < len(table.rows) else None
+                if bbox:
+                    for h in links:
+                        yc = (h["top"] + h["bottom"]) / 2
+                        if bbox[1] - 1 <= yc <= bbox[3] + 1:
+                            link = h["uri"]
+                            break
+                rows.append({
+                    "promoter": cells[idx["promoter"]] if "promoter" in idx else "",
+                    "road": cells[idx["road"]] if "road" in idx else "",
+                    "locality": cells[idx["locality"]],
+                    "typeLabel": tidy(" ".join(c for c in type_cells if c)),
+                    "start": start,
+                    "end": end,
+                    "activity": cells[idx["activity"]],
+                    "phone": cells[idx["phone"]] if "phone" in idx else "",
+                    "link": link,
+                })
+    return rows
+
+
 def parse_pdf(path: Path) -> tuple[list[dict], dict]:
     rows: list[dict] = []
     period = {}
@@ -204,6 +277,8 @@ def parse_pdf(path: Path) -> tuple[list[dict], dict]:
                 period = {"from": frm.isoformat(), "to": to.isoformat()}
             except (KeyError, ValueError):
                 pass
+
+        table_rows = parse_tables(pdf)
 
         for page in pdf.pages:
             words = page.extract_words(keep_blank_chars=False)
@@ -266,6 +341,9 @@ def parse_pdf(path: Path) -> tuple[list[dict], dict]:
                     "phone": text["phone"],
                     "link": link,
                 })
+    # Prefer the table grid when it found at least as many rows.
+    if table_rows and len(table_rows) >= len(rows):
+        return table_rows, period
     return rows, period
 
 
