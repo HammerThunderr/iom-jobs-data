@@ -306,10 +306,21 @@ def coming_up(today):
                     when = "today" if sd == today else nice(sd)
                     lines.append(f"🎒 Schools: {ev.get('label')} {when}")
     bins = load("bins.json") or {}
+    names = {a.get("key"): a.get("name") for a in bins.get("authorities", [])}
     for ex in bins.get("exceptions", []):
-        sd = d(ex.get("date"))
+        if ex.get("example"):
+            continue
+        frm, to = d(ex.get("movedFrom")), d(ex.get("movedTo"))
+        sd = frm or to
         if sd and 0 <= (sd - today).days <= 2:
-            lines.append(f"🗑️ Bin change {nice(sd)}: {cut(ex.get('note') or ex.get('label') or '', 120)}")
+            who = names.get(ex.get("authority"), ex.get("authority", ""))
+            if frm and to:
+                what = f"{nice(frm)} collection moves to {nice(to)}"
+            elif frm:
+                what = f"no collection on {nice(frm)}"
+            else:
+                what = f"extra collection on {nice(to)}"
+            lines.append(f"🗑️ Bins — {who}: {what}")
     return "\n".join(lines) or None
 
 
