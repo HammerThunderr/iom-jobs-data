@@ -20,7 +20,8 @@ Output:
 
 Posting: if FB_PAGE_ID and FB_PAGE_TOKEN are set (GitHub secrets), the text
 is posted to that Facebook Page. Without them the script only writes the
-files. DRY_RUN=1 never posts. SOCIAL_DATE=YYYY-MM-DD fakes "today" for tests.
+files. DRY_RUN=1 only prints a preview (never posts, never writes files).
+SOCIAL_DATE=YYYY-MM-DD fakes "today" for tests — use it with DRY_RUN.
 """
 
 from __future__ import annotations
@@ -403,15 +404,17 @@ def main():
     text, sections, state = build(today)
     print(text)
     print(f"\n({len(text)} characters)")
+    if os.environ.get("DRY_RUN"):
+        print("DRY_RUN: preview only, files and state left as they were.")
+        return
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(json.dumps({"date": today.isoformat(), "text": text,
                                     "sections": dict(sections)}, indent=1, ensure_ascii=False) + "\n",
                         encoding="utf-8")
     OUT_TXT.write_text(text + "\n", encoding="utf-8")
     post_to_facebook(text)
-    if not os.environ.get("DRY_RUN"):
-        STATE.parent.mkdir(parents=True, exist_ok=True)
-        STATE.write_text(json.dumps(state, indent=0) + "\n", encoding="utf-8")
+    STATE.parent.mkdir(parents=True, exist_ok=True)
+    STATE.write_text(json.dumps(state, indent=0) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":
