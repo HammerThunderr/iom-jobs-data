@@ -1,50 +1,9 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-21T21:45:37.257011+00:00",
-  "lastUpdated": "19:20 21/11/26",
+  "fetchedAt": "2026-11-22T01:50:25.220529+00:00",
+  "lastUpdated": "01:40 22/11/26",
   "totalCount": 20,
   "days": [
-    {
-      "date": "Saturday, 21 November 2026",
-      "sailings": [
-        {
-          "departTime": "01:45",
-          "departPort": "Heysham",
-          "arriveTime": "06:16",
-          "arrivePort": "Douglas",
-          "ferry": "Ben-My-Chree",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "07:32",
-          "departPort": "Douglas",
-          "arriveTime": "11:55",
-          "arrivePort": "Liverpool",
-          "ferry": "Ben-My-Chree",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "13:25",
-          "departPort": "Liverpool",
-          "arriveTime": "17:42",
-          "arrivePort": "Douglas",
-          "ferry": "Ben-My-Chree",
-          "status": "Arrived",
-          "statusType": "arrived"
-        },
-        {
-          "departTime": "19:30",
-          "departPort": "Douglas",
-          "arriveTime": "23:15",
-          "arrivePort": "Heysham",
-          "ferry": "Ben-My-Chree",
-          "status": "Scheduled",
-          "statusType": "scheduled"
-        }
-      ]
-    },
     {
       "date": "Sunday, 22 November 2026",
       "sailings": [
@@ -203,6 +162,47 @@
           "departPort": "Douglas",
           "arriveTime": "23:00",
           "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Thursday, 26 November 2026",
+      "sailings": [
+        {
+          "departTime": "02:15",
+          "departPort": "Heysham",
+          "arriveTime": "06:00",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "08:00",
+          "departPort": "Douglas",
+          "arriveTime": "11:45",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "17:30",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:00",
+          "departPort": "Douglas",
+          "arriveTime": "00:00",
+          "arrivePort": "Larne",
           "ferry": "Ben-My-Chree",
           "status": "Scheduled",
           "statusType": "scheduled"
