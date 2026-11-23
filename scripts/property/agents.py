@@ -116,24 +116,43 @@ AGENTS = [
         search_path=None,
     ),
 
+    # Cowley Groves (Douglas & Ramsey). robots.txt allows everything. The
+    # search pages fill in by JavaScript, but sitemap.xml lists every
+    # property page; each page shows its status, and completed sales/lets
+    # are skipped by the parser.
     Agent(
         key="cg",
         name="Cowley Groves",
         base="https://www.cowleygroves.com",
-        enabled=False,
+        enabled=True,
         property_path="/property/",
         sitemap="/sitemap.xml",
     ),
 
+    # Garforth Gray. robots.txt allows everything. The /sales, /rentals and
+    # commercial pages load their results from the site's own public results
+    # URL (the same one the page calls), which paginates with &page=N and
+    # links to listings at /<area>-<street>/.
     Agent(
         key="gg",
         name="Garforth Gray",
         base="https://www.garforthgray.im",
-        enabled=False,
-        root_level_slugs=True,
-        require_lastmod=True,
-        exclude_paths=("/sales/", "/rentals/", "/dashboard/", "/commercials/"),
-        sitemap="/sitemap.php",
+        enabled=True,
+        listing_pattern=r"^/[a-z0-9]+(?:-[a-z0-9]+)+/$",
+        exclude_paths=("/dashboard", "/sales", "/rentals", "/commercial", "/auth",
+                       "/about", "/awards", "/careers", "/contact", "/cookie",
+                       "/disclaimer", "/privacy", "/terms", "/complaints",
+                       "/anti-bribery", "/luxury", "/rent-your", "/sell-a", "/assets"),
+        index_paths=(
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetSaleResults=1&excludeSold=1",
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1",
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetCommercialResults=1",
+        ),
+        page_mode="page",
+        page_param="page",
+        max_pages=30,
+        sitemap=None,
+        search_path=None,
     ),
 
     # Chrystals / Expert Agent.
