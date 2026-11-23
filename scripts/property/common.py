@@ -599,6 +599,7 @@ _STATUS_WORDS = (
     ("sold subject to contract", "Sold STC"), ("sold stc", "Sold STC"),
     ("under offer", "Under Offer"), ("let agreed", "Let Agreed"),
     ("let stc", "Let Agreed"), ("reserved", "Reserved"),
+    ("offer accepted", "Offer Accepted"),
 )
 
 
@@ -710,6 +711,138 @@ def _partners_from_slug(url):
     return beds, kind, listing_type, m.group(4).replace("-", " ")
 
 
+
+# ---------------------------------------------------------------------------
+# Garforth Gray (garforthgray.im) and Cowley Groves (cowleygroves.com)
+# Both pages have tidy HTML, so read the elements rather than flattened text.
+# ---------------------------------------------------------------------------
+
+def _annual_to_pcm(price, text):
+    """Commercial rents quoted per year -> per month, with a note."""
+    if price and re.search(r"per annum|\bp\.?a\.?\b|per year|annual", text, re.I):
+        return round(price / 12), f"£{price:,} per year"
+    return price, None
+
+
+def _garforth(html, url, agent):
+    soup = BeautifulSoup(html, "html.parser")
+    main = soup.select_one(".main-data") or soup
+    h1 = main.find("h1")
+    loc_el = main.select_one(".head-location")
+    address = loc_el.get_text(" ", strip=True) if loc_el else ""
+    stats = {}
+    for hl in main.select(".highlights"):
+        num = hl.select_one(".number")
+        img = hl.find("img")
+        icon = (img.get("data-src") or img.get("src") or "") if img else ""
+        if num and num.get_text(strip=True).isdigit():
+            for key in ("bed", "bath", "sofa"):
+                if f"icon-{key}" in icon:
+                    stats[key] = int(num.get_text(strip=True))
+    price_el = main.select_one(".head-price")
+    price_text = price_el.get_text(" ", strip=True) if price_el else ""
+    header_text = main.get_text(" ", strip=True)[:1500]
+
+    origin = agent.origin.get(url, "")
+    commercial = "Commercial" in origin
+    if "Rentals" in origin:
+        hint = "rent"
+    elif "Sale" in origin:
+        hint = "sale"
+    else:  # commercial: decide from the price wording
+        hint = "rent" if re.search(r"per annum|\bp\.?a\.?\b|pcm|per month|per year|rent",
+                                   price_text, re.I) else "sale"
+    price, qualifier, listing_type = parse_price(price_text, hint)
+    note = None
+    if commercial and hint == "rent":
+        price, note = _annual_to_pcm(price, price_text)
+
+    district = None
+    m = re.search(r"within the\s*(IM\d{1,2})\s*postcode", soup.get_text(" ", strip=True))
+    if m:
+        district = m.group(1)
+    kf = soup.find(string=re.compile(r"Key features", re.I))
+    features = kf.find_parent().find_next("ul").get_text(" ", strip=True) if kf and kf.find_parent() and kf.find_parent().find_next("ul") else ""
+    title = h1.get_text(" ", strip=True) if h1 else ""
+    summary = ""
+    sm = soup.find(string=re.compile(r"^\s*Summary\s*$"))
+    if sm and sm.find_parent():
+        nxt = sm.find_parent().find_next("p")
+        summary = nxt.get_text(" ", strip=True) if nxt else ""
+    prop_type = parse_type(f"{title} {features[:600]}") or parse_type(summary[:500])
+    category = "commercial" if commercial else (
+        "land" if re.search(r"\b(building plot|plot of land|land)\b", title, re.I) and not stats.get("bed")
+        else "residential")
+    return {
+        "address": address or title,
+        "postcode": district,
+        "price": price, "qualifier": qualifier, "listing_type": hint or listing_type,
+        "bedrooms": None if commercial else stats.get("bed"),
+        "bathrooms": stats.get("bath"),
+        "prop_type": None if commercial else prop_type,
+        "status": _status_in(header_text),
+        "category": category,
+        "note": note,
+    }
+
+
+def _cowley(html, url):
+    soup = BeautifulSoup(html, "html.parser")
+    details = soup.select_one("#details") or soup
+    status_el = details.select_one(".status")
+    raw_status = status_el.get_text(" ", strip=True) if status_el else ""
+    h2 = details.find("h2")
+    full_address = h2.get_text(" ", strip=True) if h2 else ""
+    price_el = details.select_one(".price")
+    price_text = price_el.get_text(" ", strip=True) if price_el else ""
+
+    # "Property Details" is label/value pairs: Location, Property Type, Bedrooms...
+    facts = {}
+    body = soup.get_text("\n", strip=True)
+    i = body.find("Property Details")
+    if i >= 0:
+        lines = body[i:i + 1500].split("\n")[1:]
+        for a, b in zip(lines, lines[1:]):
+            if a in ("Location", "Property Type", "Bedrooms", "Bedroom", "Bathroom", "Bathrooms",
+                     "Reception", "Furnished", "Tenure", "Size") and a not in facts:
+                facts[a] = b
+
+    rent = re.search(r"per calendar month|pcm|per month|per week|per annum|per year", price_text, re.I)
+    hint = "rent" if rent else "sale"
+    price, qualifier, _ = parse_price(price_text, hint)
+    ptype_raw = facts.get("Property Type", "")
+    commercial = any(w in ptype_raw.lower() for w in COMMERCIAL_WORDS) or \
+        bool(re.search(r"\b(office|retail|shop|warehouse|industrial|unit|commercial|hotel|"
+                       r"guest house|pub|restaurant|investment|premises|business)\b", ptype_raw, re.I))
+    note = None
+    if hint == "rent" and re.search(r"per annum|per year", price_text, re.I):
+        price, note = _annual_to_pcm(price, price_text)
+    if re.search(r"per week", price_text, re.I) and price:
+        note = f"£{price:,} per week"
+        price = round(price * 52 / 12)
+
+    def num(key):
+        v = facts.get(key, "")
+        return int(v) if v.isdigit() else None
+
+    postcode = parse_postcode(url, full_address)
+    address = re.sub(r",?\s*IM\d{1,2}\s*\d[A-Z]{2}\s*$", "", full_address).strip(" ,")
+    beds = num("Bedrooms") or num("Bedroom")
+    land = not beds and bool(re.search(r"\b(land|plot|field|site)\b", f"{ptype_raw} {address}", re.I))
+    return {
+        "raw_status": raw_status,
+        "address": address,
+        "locality": facts.get("Location") or parse_place(address),
+        "postcode": postcode,
+        "price": price, "qualifier": qualifier, "listing_type": hint,
+        "bedrooms": None if commercial else beds,
+        "bathrooms": num("Bathroom") or num("Bathrooms"),
+        "prop_type": None if commercial else (parse_type(ptype_raw) or parse_type(address)),
+        "category": "commercial" if commercial else ("land" if land else "residential"),
+        "note": note,
+    }
+
+
 def scrape_listing(agent, url):
     """Fetch one property page and pull out facts with provider-aware parsing."""
     res = get(url)
@@ -812,6 +945,38 @@ def scrape_listing(agent, url):
             # Grays' list also shows completed sales ("Sold £365,000");
             # those are no longer for sale.
             return None
+    elif agent.key == "gg":
+        if "/rentals/" in url:
+            slug = f"rent-{slug}"  # a rental and a sale can share a street slug
+        f = _garforth(res.text, url, agent)
+        address = _clean_address(f["address"], agent.name)
+        locality = parse_place(address)
+        postcode = f["postcode"]
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = f["prop_type"]
+        status = f["status"]
+        category = f["category"]
+        price_note = f["note"]
+    elif agent.key == "cg":
+        f = _cowley(res.text, url)
+        raw = f["raw_status"].lower()
+        # Completed sales/lets stay on the site (and in its sitemap) for a
+        # while; they're no longer available, so leave them out.
+        if raw in ("sold", "let", "completed", "withdrawn") or raw.startswith("sold ") and "stc" not in raw \
+                and "subject" not in raw:
+            return None
+        address = _clean_address(f["address"], agent.name)
+        locality = f["locality"]
+        postcode = f["postcode"]
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = f["prop_type"]
+        status = _status_in(f["raw_status"])
+        category = f["category"]
+        price_note = f["note"]
     elif agent.key == "pre":
         slug_beds, slug_kind, slug_type, slug_place = _partners_from_slug(url)
         type_hint = type_hint or slug_type
