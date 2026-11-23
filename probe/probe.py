@@ -1,12 +1,11 @@
-import os, re, sys, json
+import os, re, sys
 import requests
 from bs4 import BeautifulSoup
 
 sys.path.insert(0, "scripts/property")
 import common  # noqa: E402
-from agents import AGENTS  # noqa: E402
 
-OUT = "probe/out/agents4"
+OUT = "probe/out/agents5"
 os.makedirs(OUT, exist_ok=True)
 UA = {"User-Agent": common.USER_AGENT}
 lines = []
@@ -14,57 +13,52 @@ lines = []
 def log(s):
     print(s); lines.append(str(s))
 
-gg = next(a for a in AGENTS if a.name == "Garforth Gray")
-pat = re.compile(r"^(https://www\.garforthgray\.im)?/(rentals/)?[a-z0-9]+(-[a-z0-9]+)+/?$")
+pat = re.compile(r"^(https://www\.garforthgray\.im)?/rentals/[a-z0-9]+(-[a-z0-9]+)+/?$")
 
 def collect(url):
-    urls = set()
-    for p in range(1, 40):
+    urls, cards = set(), {}
+    for p in range(1, 20):
         r = requests.get(url + f"&page={p}", headers=UA, timeout=30)
         soup = BeautifulSoup(r.text, "html.parser")
-        found = {a["href"] for a in soup.select("a[href]") if pat.match(a["href"])}
+        found = set()
+        for a in soup.select("a[href]"):
+            if pat.match(a["href"]):
+                u = a["href"] if a["href"].startswith("http") else "https://www.garforthgray.im" + a["href"]
+                found.add(u)
+                card = a.find_parent(["div", "li", "article"])
+                for _ in range(3):
+                    if card is not None and len(card.get_text(" ", strip=True)) < 60:
+                        card = card.find_parent(["div", "li", "article"])
+                if card is not None:
+                    cards.setdefault(u, card.get_text(" | ", strip=True)[:220])
         if not found - urls: break
         urls |= found
-    return {u if u.startswith("http") else "https://www.garforthgray.im" + u for u in urls}
+    return urls, cards
 
-B = "https://www.garforthgray.im/assets/inc/ajax.php?submitform=1&order=latest&keyword="
-for kind, flag in (("Sale", "excludeSold"), ("Rentals", "excludeRented")):
-    a = collect(B + f"&ajaxGet{kind}Results=1&{flag}=1")
-    b = collect(B + f"&ajaxGet{kind}Results=1")
-    extra = sorted(b - a)
-    log(f"GG {kind}: filtered {len(a)}, all {len(b)}, extra {len(extra)}")
-    idx = B + f"&ajaxGet{kind}Results=1"
-    stat = {}
-    for u in extra[:60]:
-        u = u.rstrip("/") + "/"
-        gg.origin[u] = idx
-        try:
-            item = common.scrape_listing(gg, u)
-        except Exception as e:
-            log(f"  {u} err {e}"); continue
-        if not item:
-            stat["skipped"] = stat.get("skipped", 0) + 1; continue
-        k = f"{item.get('listingType')}|{item.get('status')}"
-        stat[k] = stat.get(k, 0) + 1
-    log(f"  sample of {min(60, len(extra))} extra: {stat}")
-    if extra:
-        r = requests.get(extra[0], headers=UA, timeout=30)
-        open(f"{OUT}/gg_{kind}_extra.html", "w").write(r.text[:80000])
+B = "https://www.garforthgray.im/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1"
+a, _ = collect(B + "&excludeRented=1")
+b, cards = collect(B)
+for u in sorted(b - a):
+    r = requests.get(u, headers=UA, timeout=30)
+    s = BeautifulSoup(r.text, "html.parser")
+    m = s.select_one(".main-data")
+    head = m.get_text(" | ", strip=True)[:200] if m else "?"
+    badges = [e.get_text(" ", strip=True) for e in s.select("[class*=status],[class*=badge],[class*=label],[class*=sticker],[class*=ribbon]")][:6]
+    log(f"{u}\n   page: {head}\n   badges: {badges}\n   card: {cards.get(u, '')}")
 
-# Chapman Chartered Surveyors
-for path in ("/", "/robots.txt", "/sitemap.xml", "/sitemap_index.xml", "/property-search/", "/?s=&post_type=property"):
-    try:
-        r = requests.get("https://www.chapman.im" + path, headers=UA, timeout=30)
-    except Exception as e:
-        log(f"chapman {path} err {e}"); continue
-    log(f"chapman {path}: {r.status_code} {r.url} {len(r.text)}")
-    name = path.strip("/").replace("/", "_").replace("?", "q") or "home"
-    open(f"{OUT}/chapman_{name}.txt", "w").write(r.text[:100000])
-    if path == "/":
-        soup = BeautifulSoup(r.text, "html.parser")
-        links = sorted({a["href"] for a in soup.select("a[href]")})
-        log("  links: " + " ".join(links[:80]))
-        forms = [(f.get("action"), f.get("method"), [i.get("name") for i in f.select("input,select")]) for f in soup.select("form")]
-        log(f"  forms: {forms}")
+# Chapman commercial property list
+for path in ("/commercial-property/",):
+    r = requests.get("https://www.chapman.im" + path, headers=UA, timeout=30)
+    log(f"chapman {path}: {r.status_code} {len(r.text)}")
+    open(f"{OUT}/chapman_list.html", "w").write(r.text[:300000])
+    soup = BeautifulSoup(r.text, "html.parser")
+    links = sorted({a["href"] for a in soup.select("a[href]") if "chapman.im" in a["href"] or a["href"].startswith("/")})
+    log("  links: " + "\n   ".join(links))
+    first = [l for l in links if "/property/" in l or "/commercial-property/" in l and l.rstrip("/").count("/") > 3]
+    for l in first[:2]:
+        rr = requests.get(l, headers=UA, timeout=30)
+        nm = l.rstrip("/").rsplit("/", 1)[-1]
+        open(f"{OUT}/chapman_item_{nm}.html", "w").write(rr.text[:200000])
+        log(f"  item {l}: {rr.status_code}")
 
 open(f"{OUT}/summary.txt", "w").write("\n".join(lines) + "\n")
