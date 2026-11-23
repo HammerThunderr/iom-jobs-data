@@ -1,5 +1,5 @@
 import os, subprocess, json, re, requests
-OUT = "probe/out/prop4"
+OUT = "probe/out/prop5"
 os.makedirs(OUT, exist_ok=True)
 UA = {"User-Agent": "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"}
 for k, u in {
