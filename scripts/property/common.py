@@ -1002,8 +1002,10 @@ def scrape_listing(agent, url):
         if "/rentals/" in url:
             slug = f"rent-{slug}"  # a rental and a sale can share a street slug
         f = _garforth(res.text, url, agent)
-        if f["raw_status"].strip().lower() in ("let", "sold", "completed", "withdrawn"):
-            return None  # already let / sold, no longer available
+        # "Let" / "Sold" badges mean it's gone; "Sold Subject to Contract"
+        # and "Offer Accepted" stay, like the other agents' Sold STC.
+        if f["raw_status"].strip().lower() in ("let", "sold", "completed", "withdrawn") and not f["status"]:
+            return None
         address = _clean_address(f["address"], agent.name)
         locality = parse_place(address)
         postcode = f["postcode"]
