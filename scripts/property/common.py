@@ -59,17 +59,29 @@ WORD_NUMBERS = {
 # HTTP
 # ---------------------------------------------------------------------------
 
+# Waits before retrying a page that timed out or got a "busy" answer
+# (429 / 5xx). A 404 is a real answer (e.g. past the last index page) and
+# is not retried.
+RETRY_WAITS = (15, 45)
+
+
 def get(url, params=None):
-    try:
-        res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
-        time.sleep(DELAY_SECONDS)
-        if res.status_code != 200:
+    for attempt in range(len(RETRY_WAITS) + 1):
+        try:
+            res = requests.get(url, params=params, headers=HEADERS, timeout=TIMEOUT)
+            time.sleep(DELAY_SECONDS)
+            if res.status_code == 200:
+                return res
             print(f"    ! HTTP {res.status_code} for {url}")
-            return None
-        return res
-    except requests.RequestException as exc:
-        print(f"    ! {url} -> {exc}")
-        return None
+            if res.status_code != 429 and res.status_code < 500:
+                return None
+        except requests.RequestException as exc:
+            print(f"    ! {url} -> {exc}")
+        if attempt < len(RETRY_WAITS):
+            wait = RETRY_WAITS[attempt]
+            print(f"    … retrying in {wait}s")
+            time.sleep(wait)
+    return None
 
 # ---------------------------------------------------------------------------
 # Text helpers
@@ -579,6 +591,255 @@ def _deanwood_category(prop_type, header, body):
     return "residential"
 
 
+# ---------------------------------------------------------------------------
+# Black Grace Cowley, Grays, Partners (added Nov 2026)
+# ---------------------------------------------------------------------------
+
+_STATUS_WORDS = (
+    ("sold subject to contract", "Sold STC"), ("sold stc", "Sold STC"),
+    ("under offer", "Under Offer"), ("let agreed", "Let Agreed"),
+    ("let stc", "Let Agreed"), ("reserved", "Reserved"),
+)
+
+
+def _status_in(text):
+    low = text.lower()
+    for needle, label in _STATUS_WORDS:
+        if needle in low:
+            return label
+    return None
+
+
+def _between(body, start_marker, end_markers, default_len=1500):
+    """The slice of body from start_marker to the first end marker."""
+    low = body.lower()
+    i = low.find(start_marker.lower()) if start_marker else 0
+    i = max(i, 0)
+    ends = [low.find(m.lower(), i + 1) for m in end_markers]
+    ends = [e for e in ends if e > i]
+    j = min(ends) if ends else i + default_len
+    return body[i:j]
+
+
+def _bgc(body, heading, title, type_hint):
+    """bgc.im: breadcrumb "Residential / Buy / <address>", then
+    "3 Bed 2 Bath 3 Reception", status, "£499,500", then "Key Features"."""
+    crumb = re.search(r"\b(Residential|Commercial|Land)\s*/\s*(Buy|Rent|Let)\b", body, re.I)
+    category = crumb.group(1).lower() if crumb else None
+    listing_type = None
+    if crumb:
+        listing_type = "rent" if crumb.group(2).lower() in ("rent", "let") else "sale"
+    region = _between(body, heading or "", ("Key Features", "Description", "Interested in"), 1200)
+    price, qualifier, lt = parse_price(region, listing_type or type_hint)
+    note = None
+    # Commercial rents are quoted per year ("£97,782 per annum excl"). The
+    # app shows rents per month, so convert, and keep the original wording.
+    annual = re.search(r"£\s*([\d,]+)(?:\.\d\d)?\s*(?:per annum|p\.a\.|pa\b|per year)", region, re.I)
+    if annual and (listing_type or lt) == "rent":
+        yearly = int(annual.group(1).replace(",", ""))
+        price, qualifier = round(yearly / 12), "pcm"
+        note = f"£{yearly:,} per year"
+    elif (category == "commercial" and (listing_type or lt) == "rent" and price
+          and price > 5000 and not re.search(r"pcm|per month|per calendar month|p/m", region, re.I)):
+        # Commercial rents without a stated period are annual figures on
+        # BGC (e.g. "£80,000 + VAT"); no Manx unit lets for that a month.
+        note = f"£{price:,} per year"
+        price, qualifier = round(price / 12), "pcm"
+    beds = re.search(r"\b(\d+)\s*Bed\b", region, re.I)
+    baths = re.search(r"\b(\d+)\s*Bath\b", region, re.I)
+    features = _between(body, "Key Features", ("Description",), 1500)
+    if category == "commercial":
+        # "Commercial Rent Office 4,548 Sq Ft" -> "office"
+        kind = re.search(r"Commercial\s+(?:Buy|Rent|Let)\s+([A-Z][A-Za-z ]{2,20}?)\s+(?:\d|1/|View|£)", region)
+        prop_type = kind.group(1).strip().lower() if kind else None
+        if prop_type is None and re.search(r"\b(acres?|land at|building plot)\b", f"{heading} {region}", re.I):
+            prop_type = "land"
+    else:
+        prop_type = parse_type(f"{features} {heading}")
+    if prop_type == "land":
+        category = "land"
+    return {
+        "category": category,
+        "listing_type": listing_type or lt,
+        "price": price, "qualifier": qualifier, "note": note,
+        "bedrooms": int(beds.group(1)) if beds else None,
+        "bathrooms": int(baths.group(1)) if baths else None,
+        "status": _status_in(region),
+        "prop_type": prop_type,
+    }
+
+
+def _grays(body, heading, type_hint):
+    """graysestateagents.com (Rex): "£1,750,000 <address> 6 Bed 6 Bath
+    9 Car ... Make an enquiry"."""
+    low = body.lower()
+    end = low.find("make an enquiry")
+    if end < 0:
+        end = min(len(body), 2500)
+    # The header block: "Let £1,600 pcm £369 pw Barregarrow, ... 3 Bed 2 Bath".
+    # Take the FIRST £ in the ~400 characters before "Make an enquiry", so the
+    # monthly rent wins over the weekly one.
+    start = low.find("£", max(0, end - 400), end)
+    region = body[max(0, start - 40): end] if start >= 0 else body[max(0, end - 400): end]
+    price, qualifier, lt = parse_price(region, type_hint)
+    beds = re.search(r"\b(\d+)\s*Bed\b", region, re.I)
+    baths = re.search(r"\b(\d+)\s*Bath\b", region, re.I)
+    head_status = _status_in(region)
+    if not head_status and re.search(r"\bLet\s+£", region):
+        head_status = "Let Agreed"
+    if not head_status and re.search(r"\bSold\s+£", region):
+        head_status = "Sold"
+    return {
+        "price": price, "qualifier": qualifier, "listing_type": lt,
+        "bedrooms": int(beds.group(1)) if beds else None,
+        "bathrooms": int(baths.group(1)) if baths else None,
+        "status": head_status,
+    }
+
+
+def _partners_from_slug(url):
+    """/property/2-bed-semi-detached-house-to-rent-in-hailwood-avenue-douglas-im2/750096
+    -> (2, "semi-detached house", "rent", "hailwood avenue douglas im2")"""
+    slug = url.rstrip("/").split("/")[-2].lower()
+    m = re.match(r"(?:(\d+)-bed-)?(?:(.*?)-)?(for-sale|to-rent|to-let)-in-(.*)$", slug)
+    if not m:
+        return None, None, None, None
+    beds = int(m.group(1)) if m.group(1) else None
+    kind = (m.group(2) or "").replace("-", " ")
+    listing_type = "sale" if m.group(3) == "for-sale" else "rent"
+    return beds, kind, listing_type, m.group(4).replace("-", " ")
+
+
+
+# ---------------------------------------------------------------------------
+# Garforth Gray (garforthgray.im) and Cowley Groves (cowleygroves.com)
+# Both pages have tidy HTML, so read the elements rather than flattened text.
+# ---------------------------------------------------------------------------
+
+def _annual_to_pcm(price, text):
+    """Commercial rents quoted per year -> per month, with a note."""
+    if price and re.search(r"per annum|\bp\.?a\.?\b|per year|annual", text, re.I):
+        return round(price / 12), f"£{price:,} per year"
+    return price, None
+
+
+def _garforth(html, url, agent):
+    soup = BeautifulSoup(html, "html.parser")
+    main = soup.select_one(".main-data") or soup
+    h1 = main.find("h1")
+    loc_el = main.select_one(".head-location")
+    address = loc_el.get_text(" ", strip=True) if loc_el else ""
+    stats = {}
+    for hl in main.select(".highlights"):
+        num = hl.select_one(".number")
+        img = hl.find("img")
+        icon = (img.get("data-src") or img.get("src") or "") if img else ""
+        if num and num.get_text(strip=True).isdigit():
+            for key in ("bed", "bath", "sofa"):
+                if f"icon-{key}" in icon:
+                    stats[key] = int(num.get_text(strip=True))
+    price_el = main.select_one(".head-price")
+    price_text = price_el.get_text(" ", strip=True) if price_el else ""
+    header_text = main.get_text(" ", strip=True)[:1500]
+
+    origin = agent.origin.get(url, "")
+    commercial = "Commercial" in origin
+    if "Rentals" in origin:
+        hint = "rent"
+    elif "Sale" in origin:
+        hint = "sale"
+    else:  # commercial: decide from the price wording
+        hint = "rent" if re.search(r"per annum|\bp\.?a\.?\b|pcm|per month|per year|rent",
+                                   price_text, re.I) else "sale"
+    price, qualifier, listing_type = parse_price(price_text, hint)
+    note = None
+    if commercial and hint == "rent":
+        price, note = _annual_to_pcm(price, price_text)
+
+    district = None
+    m = re.search(r"within the\s*(IM\d{1,2})\s*postcode", soup.get_text(" ", strip=True))
+    if m:
+        district = m.group(1)
+    kf = soup.find(string=re.compile(r"Key features", re.I))
+    features = kf.find_parent().find_next("ul").get_text(" ", strip=True) if kf and kf.find_parent() and kf.find_parent().find_next("ul") else ""
+    title = h1.get_text(" ", strip=True) if h1 else ""
+    summary = ""
+    sm = soup.find(string=re.compile(r"^\s*Summary\s*$"))
+    if sm and sm.find_parent():
+        nxt = sm.find_parent().find_next("p")
+        summary = nxt.get_text(" ", strip=True) if nxt else ""
+    prop_type = parse_type(f"{title} {features[:600]}") or parse_type(summary[:500])
+    category = "commercial" if commercial else (
+        "land" if re.search(r"\b(building plot|plot of land|land)\b", title, re.I) and not stats.get("bed")
+        else "residential")
+    return {
+        "address": address or title,
+        "postcode": district,
+        "price": price, "qualifier": qualifier, "listing_type": hint or listing_type,
+        "bedrooms": None if commercial else stats.get("bed"),
+        "bathrooms": stats.get("bath"),
+        "prop_type": None if commercial else prop_type,
+        "status": _status_in(header_text),
+        "category": category,
+        "note": note,
+    }
+
+
+def _cowley(html, url):
+    soup = BeautifulSoup(html, "html.parser")
+    details = soup.select_one("#details") or soup
+    status_el = details.select_one(".status")
+    raw_status = status_el.get_text(" ", strip=True) if status_el else ""
+    h2 = details.find("h2")
+    full_address = h2.get_text(" ", strip=True) if h2 else ""
+    price_el = details.select_one(".price")
+    price_text = price_el.get_text(" ", strip=True) if price_el else ""
+
+    # "Property Details" is label/value pairs: Location, Property Type, Bedrooms...
+    facts = {}
+    body = soup.get_text("\n", strip=True)
+    i = body.find("Property Details")
+    if i >= 0:
+        lines = body[i:i + 1500].split("\n")[1:]
+        for a, b in zip(lines, lines[1:]):
+            if a in ("Location", "Property Type", "Bedrooms", "Bathroom", "Bathrooms",
+                     "Reception", "Furnished", "Tenure", "Size") and a not in facts:
+                facts[a] = b
+
+    rent = re.search(r"per calendar month|pcm|per month|per week|per annum|per year", price_text, re.I)
+    hint = "rent" if rent else "sale"
+    price, qualifier, _ = parse_price(price_text, hint)
+    ptype_raw = facts.get("Property Type", "")
+    commercial = any(w in ptype_raw.lower() for w in COMMERCIAL_WORDS) or \
+        bool(re.search(r"\b(office|retail|shop|warehouse|industrial|unit|commercial)\b", ptype_raw, re.I))
+    note = None
+    if hint == "rent" and re.search(r"per annum|per year", price_text, re.I):
+        price, note = _annual_to_pcm(price, price_text)
+    if re.search(r"per week", price_text, re.I) and price:
+        note = f"£{price:,} per week"
+        price = round(price * 52 / 12)
+
+    def num(key):
+        v = facts.get(key, "")
+        return int(v) if v.isdigit() else None
+
+    postcode = parse_postcode(url, full_address)
+    address = re.sub(r",?\s*IM\d{1,2}\s*\d[A-Z]{2}\s*$", "", full_address).strip(" ,")
+    land = bool(re.search(r"\b(land|plot)\b", ptype_raw, re.I))
+    return {
+        "raw_status": raw_status,
+        "address": address,
+        "locality": facts.get("Location") or parse_place(address),
+        "postcode": postcode,
+        "price": price, "qualifier": qualifier, "listing_type": hint,
+        "bedrooms": None if commercial else (num("Bedrooms")),
+        "bathrooms": num("Bathroom") or num("Bathrooms"),
+        "prop_type": None if commercial else (parse_type(ptype_raw) or parse_type(address)),
+        "category": "commercial" if commercial else ("land" if land else "residential"),
+        "note": note,
+    }
+
+
 def scrape_listing(agent, url):
     """Fetch one property page and pull out facts with provider-aware parsing."""
     res = get(url)
@@ -650,6 +911,93 @@ def scrape_listing(agent, url):
         if price is None and qualifier == "unknown":
             price, qualifier, listing_type = _deanwood_price(body[:5000], status)
         category = _deanwood_category(prop_type, header_region, body)
+    elif agent.key == "bgc":
+        address = _clean_address(heading or title.split("–")[0].strip(), agent.name)
+        locality = parse_place(address)
+        # Only the listing header: the footer carries the office postcodes.
+        postcode = parse_postcode(url, _between(body, heading or "", ("Key Features",), 800))
+        f = _bgc(body, heading, title, type_hint)
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = type_hint or f["listing_type"]
+        listing_type = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = f["prop_type"]
+        status = f["status"]
+        category = f["category"] or url_category or parse_category(address)
+        price_note = f["note"]
+    elif agent.key == "grays":
+        # "Slieu Lewaigue, Isle Of Man, IM7 1" -> "Slieu Lewaigue"
+        address = re.sub(r",?\s*Isle Of Man.*$", "", heading or "", flags=re.I).strip() \
+            or address_from_slug(url)
+        locality = parse_place(f"{address} {title}")
+        # The heading may carry a full postcode; the footer has the office's.
+        postcode = parse_postcode(url, heading or "")
+        f = _grays(body, heading, type_hint)
+        price, qualifier = f["price"], f["qualifier"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = parse_type(f"{title} {body[:4000]}")
+        status = f["status"]
+        category = url_category or parse_category(address)
+        if status == "Sold":
+            # Grays' list also shows completed sales ("Sold £365,000");
+            # those are no longer for sale.
+            return None
+    elif agent.key == "gg":
+        f = _garforth(res.text, url, agent)
+        address = _clean_address(f["address"], agent.name)
+        locality = parse_place(address)
+        postcode = f["postcode"]
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = f["prop_type"]
+        status = f["status"]
+        category = f["category"]
+        price_note = f["note"]
+    elif agent.key == "cg":
+        f = _cowley(res.text, url)
+        raw = f["raw_status"].lower()
+        # Completed sales/lets stay on the site (and in its sitemap) for a
+        # while; they're no longer available, so leave them out.
+        if raw in ("sold", "let", "completed", "withdrawn") or raw.startswith("sold ") and "stc" not in raw \
+                and "subject" not in raw:
+            return None
+        address = _clean_address(f["address"], agent.name)
+        locality = f["locality"]
+        postcode = f["postcode"]
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
+        prop_type = f["prop_type"]
+        status = _status_in(f["raw_status"])
+        category = f["category"]
+        price_note = f["note"]
+    elif agent.key == "pre":
+        slug_beds, slug_kind, slug_type, slug_place = _partners_from_slug(url)
+        type_hint = type_hint or slug_type
+        # The page heading is the price; the title has the address:
+        # "4 bed detached house for sale in Mannin Veen, Lheaney Road, Ramsey, IM8 2JF | Partners"
+        tm = re.search(r"\b(?:for sale|to rent|to let) in (.+?)\s*(?:\||$)", title, re.I)
+        address = _clean_address(tm.group(1) if tm else (slug_place or "").title(), agent.name)
+        address = re.sub(r",?\s*IM\d{1,2}(?:\s*\d[A-Z]{2})?\s*$", "", address).strip(" ,")
+        locality = parse_place(f"{address} {slug_place or ''}")
+        postcode = parse_postcode(url, f"{title} {slug_place or ''}")
+        if price is None:
+            price, qualifier, listing_type = parse_price(body[:5000], type_hint)
+        bedrooms = slug_beds or parse_int(head_blob, BEDS)
+        bathrooms = parse_int(body[:5000], BATHS)
+        kind = (slug_kind or "").replace("semi detached", "semi-detached") \
+            .replace("end of terrace", "end-of-terrace")
+        prop_type = parse_type(kind) or parse_type(f"{address} {head_blob}")
+        status = _status_in(f"{heading} {body[:2500]}")
+        origin = agent.origin.get(url, "")
+        commercial = "commercial" in origin or (slug_kind and any(w in slug_kind for w in COMMERCIAL_WORDS))
+        if slug_kind and re.search(r"\b(plot|land)\b", slug_kind):
+            category, prop_type, bedrooms = "land", "land", None
+        else:
+            category = "commercial" if commercial else (url_category or "residential")
+        if commercial and prop_type in ("house", None):
+            prop_type = None
     else:
         address = _clean_address(heading or title.split("|")[0].strip() or address_from_slug(url), agent.name)
         locality = parse_place(address)
@@ -682,6 +1030,8 @@ def scrape_listing(agent, url):
     }
     if status:
         item["status"] = status
+    if locals().get("price_note"):
+        item["priceNote"] = price_note
     return item
 
 # ---------------------------------------------------------------------------
