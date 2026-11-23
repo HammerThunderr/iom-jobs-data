@@ -145,8 +145,8 @@ AGENTS = [
                        "/disclaimer", "/privacy", "/terms", "/complaints",
                        "/anti-bribery", "/luxury", "/rent-your", "/sell-a", "/assets"),
         index_paths=(
-            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetSaleResults=1&excludeSold=1",
-            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1&excludeRented=1",
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetSaleResults=1",
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1",
             "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetCommercialResults=1",
         ),
         page_mode="page",
@@ -292,6 +292,20 @@ AGENTS = [
         max_pages=20,
         sitemap=None,
         search_path=None,
+    ),
+    # Chapman Chartered Surveyors (commercial agency, Douglas). robots.txt
+    # only blocks /wp-admin/. /commercial-property/ lists every property
+    # (9 a page, &wpv_paged=N) and links to /office/<slug>/ pages.
+    Agent(
+        key="chp",
+        name="Chapman",
+        base="https://www.chapman.im",
+        enabled=True,
+        listing_pattern=r"^/office/[a-z0-9-]+/$",
+        index_paths=("/commercial-property/?wpv_view_count=762",),
+        page_mode="page",
+        page_param="wpv_paged",
+        max_pages=15,
     ),
 ]
 
