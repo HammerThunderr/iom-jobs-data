@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-23T11:48:40.110220+00:00",
-  "lastUpdated": "11:41 23/11/26",
+  "fetchedAt": "2026-11-23T23:10:26.379858+00:00",
+  "lastUpdated": "19:50 23/11/26",
   "totalCount": 18,
   "days": [
     {
@@ -31,17 +31,17 @@
           "arriveTime": "17:30",
           "arrivePort": "Douglas",
           "ferry": "Ben-My-Chree",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Arrived",
+          "statusType": "arrived"
         },
         {
-          "departTime": "19:15",
+          "departTime": "19:28",
           "departPort": "Douglas",
-          "arriveTime": "23:00",
+          "arriveTime": "23:15",
           "arrivePort": "Heysham",
           "ferry": "Ben-My-Chree",
-          "status": "Scheduled",
-          "statusType": "scheduled"
+          "status": "Departed",
+          "statusType": "departed"
         }
       ]
     },
