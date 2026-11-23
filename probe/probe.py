@@ -15,6 +15,7 @@ URLS = {
  "ar_home": "https://www.arragon.co.im/",
  "ar_home2": "https://arragon.im/",
 }
+os.makedirs(OUT, exist_ok=True)
 log = {}
 def red(t):
     return re.sub(r"[A-Za-z0-9_\-]{32,}", "[x]", t)
