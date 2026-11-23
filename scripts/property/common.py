@@ -599,6 +599,7 @@ _STATUS_WORDS = (
     ("sold subject to contract", "Sold STC"), ("sold stc", "Sold STC"),
     ("under offer", "Under Offer"), ("let agreed", "Let Agreed"),
     ("let stc", "Let Agreed"), ("reserved", "Reserved"),
+    ("offer accepted", "Offer Accepted"),
 )
 
 
@@ -802,7 +803,7 @@ def _cowley(html, url):
     if i >= 0:
         lines = body[i:i + 1500].split("\n")[1:]
         for a, b in zip(lines, lines[1:]):
-            if a in ("Location", "Property Type", "Bedrooms", "Bathroom", "Bathrooms",
+            if a in ("Location", "Property Type", "Bedrooms", "Bedroom", "Bathroom", "Bathrooms",
                      "Reception", "Furnished", "Tenure", "Size") and a not in facts:
                 facts[a] = b
 
@@ -811,7 +812,8 @@ def _cowley(html, url):
     price, qualifier, _ = parse_price(price_text, hint)
     ptype_raw = facts.get("Property Type", "")
     commercial = any(w in ptype_raw.lower() for w in COMMERCIAL_WORDS) or \
-        bool(re.search(r"\b(office|retail|shop|warehouse|industrial|unit|commercial)\b", ptype_raw, re.I))
+        bool(re.search(r"\b(office|retail|shop|warehouse|industrial|unit|commercial|hotel|"
+                       r"guest house|pub|restaurant|investment|premises|business)\b", ptype_raw, re.I))
     note = None
     if hint == "rent" and re.search(r"per annum|per year", price_text, re.I):
         price, note = _annual_to_pcm(price, price_text)
@@ -825,14 +827,15 @@ def _cowley(html, url):
 
     postcode = parse_postcode(url, full_address)
     address = re.sub(r",?\s*IM\d{1,2}\s*\d[A-Z]{2}\s*$", "", full_address).strip(" ,")
-    land = bool(re.search(r"\b(land|plot)\b", ptype_raw, re.I))
+    beds = num("Bedrooms") or num("Bedroom")
+    land = not beds and bool(re.search(r"\b(land|plot|field|site)\b", f"{ptype_raw} {address}", re.I))
     return {
         "raw_status": raw_status,
         "address": address,
         "locality": facts.get("Location") or parse_place(address),
         "postcode": postcode,
         "price": price, "qualifier": qualifier, "listing_type": hint,
-        "bedrooms": None if commercial else (num("Bedrooms")),
+        "bedrooms": None if commercial else beds,
         "bathrooms": num("Bathroom") or num("Bathrooms"),
         "prop_type": None if commercial else (parse_type(ptype_raw) or parse_type(address)),
         "category": "commercial" if commercial else ("land" if land else "residential"),
@@ -943,6 +946,8 @@ def scrape_listing(agent, url):
             # those are no longer for sale.
             return None
     elif agent.key == "gg":
+        if "/rentals/" in url:
+            slug = f"rent-{slug}"  # a rental and a sale can share a street slug
         f = _garforth(res.text, url, agent)
         address = _clean_address(f["address"], agent.name)
         locality = parse_place(address)

@@ -138,14 +138,15 @@ AGENTS = [
         name="Garforth Gray",
         base="https://www.garforthgray.im",
         enabled=True,
-        listing_pattern=r"^/[a-z0-9]+(?:-[a-z0-9]+)+/$",
-        exclude_paths=("/dashboard", "/sales", "/rentals", "/commercial", "/auth",
+        # Sales: /<area>-<street>/ ; rentals: /rentals/<area>-<street>/
+        listing_pattern=r"^/(?:rentals/)?[a-z0-9]+(?:-[a-z0-9]+)+/$",
+        exclude_paths=("/dashboard", "/sales", "/commercial", "/auth",
                        "/about", "/awards", "/careers", "/contact", "/cookie",
                        "/disclaimer", "/privacy", "/terms", "/complaints",
                        "/anti-bribery", "/luxury", "/rent-your", "/sell-a", "/assets"),
         index_paths=(
             "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetSaleResults=1&excludeSold=1",
-            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1",
+            "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1&excludeRented=1",
             "/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetCommercialResults=1",
         ),
         page_mode="page",
