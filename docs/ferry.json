@@ -1,32 +1,197 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-04T22:36:50.707707+00:00",
-  "lastUpdated": "19:19 04/11/26",
-  "totalCount": 2,
+  "fetchedAt": "2026-11-23T11:48:40.110220+00:00",
+  "lastUpdated": "11:41 23/11/26",
+  "totalCount": 18,
   "days": [
     {
-      "date": "Wednesday, 4 November 2026",
+      "date": "Monday, 23 November 2026",
       "sailings": [
         {
-          "departTime": "06:30",
-          "departPort": "Douglas",
-          "arriveTime": "09:17",
-          "arrivePort": "Larne",
-          "ferry": "Manannan",
+          "departTime": "01:00",
+          "departPort": "Larne",
+          "arriveTime": "05:50",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
           "status": "Arrived",
           "statusType": "arrived"
         },
         {
-          "departTime": "10:27",
-          "departPort": "Larne",
-          "arriveTime": "13:15",
-          "arrivePort": "Douglas",
-          "ferry": "Manannan",
+          "departTime": "07:52",
+          "departPort": "Douglas",
+          "arriveTime": "11:40",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
           "status": "Arrived",
           "statusType": "arrived"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "17:30",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Douglas",
+          "arriveTime": "23:00",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Tuesday, 24 November 2026",
+      "sailings": [
+        {
+          "departTime": "02:15",
+          "departPort": "Heysham",
+          "arriveTime": "06:00",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Douglas",
+          "arriveTime": "23:00",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Wednesday, 25 November 2026",
+      "sailings": [
+        {
+          "departTime": "02:15",
+          "departPort": "Heysham",
+          "arriveTime": "06:00",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "08:00",
+          "departPort": "Douglas",
+          "arriveTime": "11:45",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "17:30",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Douglas",
+          "arriveTime": "23:00",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Thursday, 26 November 2026",
+      "sailings": [
+        {
+          "departTime": "02:15",
+          "departPort": "Heysham",
+          "arriveTime": "06:00",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "08:00",
+          "departPort": "Douglas",
+          "arriveTime": "11:45",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "17:30",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:00",
+          "departPort": "Douglas",
+          "arriveTime": "00:00",
+          "arrivePort": "Larne",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        }
+      ]
+    },
+    {
+      "date": "Friday, 27 November 2026",
+      "sailings": [
+        {
+          "departTime": "01:00",
+          "departPort": "Larne",
+          "arriveTime": "05:45",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "08:00",
+          "departPort": "Douglas",
+          "arriveTime": "11:45",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "13:45",
+          "departPort": "Heysham",
+          "arriveTime": "17:30",
+          "arrivePort": "Douglas",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
+        },
+        {
+          "departTime": "19:15",
+          "departPort": "Douglas",
+          "arriveTime": "23:00",
+          "arrivePort": "Heysham",
+          "ferry": "Ben-My-Chree",
+          "status": "Scheduled",
+          "statusType": "scheduled"
         }
       ]
     }
   ],
+  "notice": "Manxman Dry dock Extension update. If your travel plans have been affected by the extension of Manxman’s dry dock programme, If you have already contacted our Reservations Team, please be assured that we are reviewing and responding to all enquiries. All passengers booked during the affected period have been notified of any sailing amendments. We appreciate your patience while we contact all affected passengers.",
   "source": "steam-packet.com"
 }

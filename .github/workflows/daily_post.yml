@@ -1,0 +1,59 @@
+name: Daily community post
+
+# Every morning: build "Today on the Island" from the data files and, once the
+# Facebook Page secrets (FB_PAGE_ID, FB_PAGE_TOKEN) are added, post it to the
+# Manx One Facebook Page. Without the secrets it only writes
+# docs/social/today.txt, ready to copy and share by hand.
+
+on:
+  schedule:
+    - cron: "40 6 * * *"   # 06:40 UTC = 06:40 Isle of Man in winter, 07:40 in summer
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/social/**
+      - .github/workflows/daily_post.yml
+
+concurrency:
+  group: daily-post
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Build (and post) today's round-up
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          # A code change shouldn't post to Facebook: only the morning run does.
+          DRY_RUN: ${{ github.event_name == 'push' && '1' || '' }}
+        run: python scripts/social/daily_post.py
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/social social/state.json 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "chore: daily post $(date -u '+%Y-%m-%d')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

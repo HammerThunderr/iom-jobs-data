@@ -14,6 +14,9 @@ on:
   schedule:
         - cron: "20 3 * * *"   
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/cruise/**', '.github/workflows/scrape-cruise.yml']
 
 concurrency:
   group: scrape-cruise

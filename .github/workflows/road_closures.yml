@@ -1,0 +1,92 @@
+# ─────────────────────────────────────────────────────────────
+# Road closures — reads the DoI's fortnightly TTRN PDFs in roads/lists/
+# and writes docs/road_closures.json (see scripts/roads/build_road_closures.py).
+#
+# Runs when a PDF is uploaded, and daily so finished works drop off.
+# If a PDF can't be read the job fails and the old JSON is kept.
+# ─────────────────────────────────────────────────────────────
+
+name: Road closures
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'roads/lists/**'
+      - 'scripts/roads/build_road_closures.py'
+      - '.github/workflows/road_closures.yml'
+  schedule:
+    - cron: '41 3 * * *'   # 03:41 UTC daily
+  workflow_dispatch:
+
+concurrency:
+  group: road-closures
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pdfplumber==0.11.4
+
+      - name: Build road_closures.json
+        run: python scripts/roads/build_road_closures.py
+
+      - name: Commit and push (with retry)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/road_closures.json
+          if git diff --staged --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "chore: update road closures $(date -u '+%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+      # gov.im blocks automatic downloads, so the PDF is uploaded by hand.
+      # When the newest list has run out, open a GitHub issue — GitHub emails
+      # the repo owner — and close it again once a new list is in.
+      - name: Remind when a new list is needed
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Road closures: upload the new list"
+          TO=$(python -c "import json;d=json.load(open('docs/road_closures.json'));l=d.get('latestList') or {};print(l.get('to',''))")
+          TODAY=$(date -u +%F)
+          OPEN=$(gh issue list --state open --search "\"$TITLE\" in:title" --json number --jq '.[0].number')
+          # Remind on the last day of the current list (the next one is due).
+          if [ -z "$TO" ] || [[ ! "$TO" > "$TODAY" ]]; then
+            if [ -n "$TO" ]; then WHAT="ran to $TO"; else WHAT="has not been added yet"; fi
+            if [ -z "$OPEN" ]; then
+              gh issue create --title "$TITLE" --body "The newest road closures list $WHAT.
+
+          1. Open https://www.gov.im/about-the-government/departments/infrastructure/highway-services/upcoming-roadworks-and-events-on-roads/
+          2. Download the newest PDF (Isle of Man upcoming TTRNs ...).
+          3. Upload it to the roads/lists folder of this repo (Add file > Upload files > Commit changes).
+
+          This issue closes itself once the new list is in.
+
+          @HammerThunderr"
+            fi
+          elif [ -n "$OPEN" ]; then
+            gh issue close "$OPEN" --comment "New list added (runs to $TO). Thanks!"
+          fi

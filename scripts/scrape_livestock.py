@@ -46,8 +46,9 @@ SHEEP_URL = ("https://www.gov.im/categories/business-and-industries/"
              "agriculture/sheep-goats/sheep-export-statistics/")
 OUT_PATH = os.environ.get("LIVESTOCK_OUT", "docs/livestock_exports.json")
 
-UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-      "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
+# Honest app name: since November 2026 gov.im challenges requests that
+# claim to be an old Chrome, while this one is let through.
+UA = "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"
 
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

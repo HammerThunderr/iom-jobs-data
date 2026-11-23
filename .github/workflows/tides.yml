@@ -15,6 +15,9 @@ on:
   schedule:
     - cron: '30 4 * * *'   # daily at 4:30am UTC — uncomment when parser is ready
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/scrape_tides.py', '.github/workflows/tides.yml']
 concurrency:
   group: tides
   cancel-in-progress: true

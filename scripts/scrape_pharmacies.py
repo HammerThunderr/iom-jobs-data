@@ -173,6 +173,91 @@ def parse_block(block):
     return rec
 
 
+LABEL_RE = re.compile(r"(?i)^(telephone|tel|phone|fax|email|e-mail|website)\b")
+
+
+def parse_card(card, area):
+    """One pharmacy card, as gov.im lays it out (Nov 2026):
+
+        <div><h3>Name</h3>
+             <p>Line 1<br>Town<br>IM9 2DA<br><strong>Telephone:</strong> +44 ...</p>
+             <h4>Opening hours</h4>
+             <p><strong>Monday to Friday:</strong> 9am to 6pm<br>...</p>
+             <ul><li>Service</li>...</ul></div>
+
+    The cards sit inside an accordion whose <h2> is the town ("Ballasalla").
+    The heading-walker below treated those town headings as pharmacies
+    (copying the first card's phone) and dropped every address, because the
+    address lines share a <p> with the Telephone label.
+    """
+    name = clean(card.find("h3").get_text())
+    rec = {"phone": "", "hours": {"monFri": "", "sat": "", "sun": ""},
+           "address_lines": [], "services": []}
+
+    for node in card.find_all(["p", "ul"]):
+        if node.name == "ul":
+            rec["services"] += [clean(li.get_text()) for li in node.find_all("li")
+                                if clean(li.get_text())]
+            continue
+        has_day = False
+        for strong in node.find_all(["strong", "b"]):
+            label = clean(strong.get_text()).lower().rstrip(":").strip()
+            value = value_after_strong(strong)
+            if label.startswith(("telephone", "tel", "phone")) and value and not rec["phone"]:
+                rec["phone"] = norm_phone(value)
+            for key, slot in DAY_LABELS:
+                if label.startswith(key):
+                    has_day = True
+                    if value and not rec["hours"][slot]:
+                        rec["hours"][slot] = value
+                    break
+        if has_day:
+            continue
+        # Address = the lines of this paragraph before the first label.
+        for line in (clean(x) for x in node.get_text("\n").split("\n")):
+            if not line:
+                continue
+            if LABEL_RE.match(line):
+                break
+            rec["address_lines"].append(fix_postcode(line))
+
+    postcode = ""
+    for ln in rec["address_lines"]:
+        m = POSTCODE_RE.search(ln)
+        if m:
+            postcode = m.group(0)
+            break
+    addr = [ln for ln in rec["address_lines"] if ln != postcode]
+    full = ", ".join(addr + ([postcode] if postcode else []) + ["Isle of Man"])
+    return {
+        "name": name,
+        "area": area or "",
+        "address": addr,
+        "postcode": postcode,
+        "addressText": ", ".join(addr + ([postcode] if postcode else [])),
+        "phone": rec["phone"],
+        "phoneDisplay": pretty_phone(rec["phone"]) if rec["phone"] else None,
+        "hours": rec["hours"],
+        "services": rec["services"],
+        "mapsQuery": f"{name}, {full}",
+    }
+
+
+def scrape_cards(root):
+    """Card layout: every <h3> is a pharmacy; its town is the <h2> before it."""
+    out = []
+    for h3 in root.find_all("h3"):
+        title = clean(h3.get_text())
+        if not title or title.lower() in SKIP_HEADINGS:
+            continue
+        card = h3.parent
+        if not POSTCODE_RE.search(card.get_text(" ")):
+            continue
+        h2 = h3.find_previous("h2")
+        out.append(parse_card(card, clean(h2.get_text()) if h2 else ""))
+    return out
+
+
 def scrape(debug=False):
     resp = requests.get(SOURCE_URL, headers={"User-Agent": USER_AGENT}, timeout=30)
     resp.raise_for_status()
@@ -180,9 +265,16 @@ def scrape(debug=False):
     root = (soup.find("div", id="content") or soup.find("main")
             or soup.find("article") or soup.body)
 
-    pharmacies, area = [], None
+    # Current gov.im layout first; the heading-walker below is the fallback
+    # for older or future layouts.
+    pharmacies = scrape_cards(root)
+    if len(pharmacies) >= EXPECTED_MIN:
+        print("Using the card layout (h2 town > h3 pharmacy).")
+    else:
+        pharmacies = []
+    area = None
 
-    for heading in root.find_all(HEADINGS):
+    for heading in ([] if pharmacies else root.find_all(HEADINGS)):
         title = clean(heading.get_text())
         if not title or title.lower() in SKIP_HEADINGS:
             continue
@@ -272,6 +364,12 @@ def scrape(debug=False):
             f"Only parsed {len(pharmacies)} pharmacies (expected >= {EXPECTED_MIN}). "
             "Refusing to overwrite.")
 
+    with_addr = sum(1 for p in pharmacies if p["postcode"])
+    if with_addr / max(len(pharmacies), 1) < MIN_HOURS_RATIO:
+        _dump()
+        raise RuntimeError(
+            f"Only {with_addr}/{len(pharmacies)} records have an address. "
+            "Refusing to overwrite.")
     if with_hours / max(len(pharmacies), 1) < MIN_HOURS_RATIO:
         _dump()
         raise RuntimeError(

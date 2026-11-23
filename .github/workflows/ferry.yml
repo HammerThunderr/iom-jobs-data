@@ -11,6 +11,9 @@ on:
   schedule:
     - cron: '*/15 * * * *'   # every 15 minutes
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/scrape_ferry.py', '.github/workflows/ferry.yml']
 
 concurrency:
   group: ferry
