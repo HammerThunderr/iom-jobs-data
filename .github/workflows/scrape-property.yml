@@ -36,7 +36,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 120    # polite 2s delay per page across all agents
+    timeout-minutes: 240    # polite 2s delay per page across all agents (~2h for 9 agents)
 
     steps:
       - name: Checkout
