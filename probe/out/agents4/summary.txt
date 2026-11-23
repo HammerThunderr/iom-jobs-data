@@ -1,0 +1,12 @@
+GG Sale: filtered 66, all 241, extra 175
+  sample of 60 extra: {'sale|Offer Accepted': 10, 'sale|Sold STC': 50}
+GG Rentals: filtered 1, all 27, extra 26
+  sample of 26 extra: {'rent|Offer Accepted': 4, 'rent|None': 22}
+chapman /: 200 https://www.chapman.im/ 89345
+  links: # http://caldes.co.uk/ http://www.chapman.im/#about_us http://www.chapman.im/#people http://www.chapman.im/#services http://www.chapman.im/Chapman _Co_TCs_and_Privacy_Policy.pdf https://www.chapman.im/ https://www.chapman.im/commercial-property/ https://www.chapman.im/contact/ https://www.chapman.im/wp-content/uploads/Client-Money-Handling-Procedure-updated-November-2026.pdf https://www.facebook.com/chapmancharteredsurveyors/ mailto:info@chapman.im
+  forms: [('https://www.chapman.im/', 'get', ['s']), ('https://www.chapman.im/commercial-property/', 'get', [None, 'wpv-property-type', 'wpv-wpcf-size-range-search-min', 'wpv-wpcf-size-range-search-max', 'wpv-wpcf-tenure', 'wpv-wpcf-address-1', 'wpv_filter_submit']), ('https://www.chapman.im/', 'post', ['et_pb_contact_name_1', 'et_pb_contact_email_1', 'et_pb_contactform_submit_0', 'et_pb_contactform_validate_0', '_wpnonce-et-pb-contact-form-submitted', '_wp_http_referer'])]
+chapman /robots.txt: 200 https://www.chapman.im/robots.txt 67
+chapman /sitemap.xml: 404 https://www.chapman.im/sitemap.xml 54748
+chapman /sitemap_index.xml: 404 https://www.chapman.im/sitemap_index.xml 54748
+chapman /property-search/: 404 https://www.chapman.im/property-search/ 54748
+chapman /?s=&post_type=property: 200 https://www.chapman.im/?s=&post_type=property 75497
