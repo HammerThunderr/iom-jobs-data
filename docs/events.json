@@ -1,40 +1,40 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-22T22:28:31+00:00",
- "lastUpdated": "22:28 UTC",
- "totalCount": 179,
+ "fetchedAt": "2026-11-23T03:43:17+00:00",
+ "lastUpdated": "03:43 UTC",
+ "totalCount": 170,
  "categories": {
-  "Festive": 36,
+  "Festive": 32,
   "Family & Kids": 8,
-  "Music": 36,
+  "Music": 35,
   "Theatre & Comedy": 29,
-  "Film": 13,
-  "Arts & Workshops": 10,
+  "Film": 12,
+  "Arts & Workshops": 9,
   "Heritage": 2,
   "Talks & Learning": 16,
-  "Sport": 10,
+  "Sport": 9,
   "Markets & Fairs": 1,
   "Community": 2,
-  "Other": 16
+  "Other": 15
  },
  "sources": [
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 104,
+   "count": 101,
    "status": "ok"
   },
   {
    "key": "mnh",
    "name": "Manx National Heritage",
-   "count": 20,
+   "count": 17,
    "status": "ok"
   },
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 63,
+   "count": 58,
    "status": "ok"
   },
   {
@@ -47,35 +47,6 @@
  "source": "Villa Marina & Gaiety, Manx National Heritage, Visit Isle of Man, Erin Arts Centre",
  "disclaimer": "Events are collected from the organisers' own websites. Always check details and book with the organiser. Manx One is not affiliated with any venue or organiser listed.",
  "events": [
-  {
-   "title": "A BUS SERVICE",
-   "venue": "House of Manannan",
-   "startDate": "2026-09-26",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 57.0,
-   "tags": [
-    "Arts & Workshops"
-   ],
-   "source": "Manx National Heritage",
-   "recurring": true,
-   "description": "An exhibition in partnership with bus vannin, celebrating 50 years of public ownership and how buses on the Isle of Man have evolved over the past five decades. Image credit: Thurstan Denne.",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2025/08/IMG_6732-1000x575.jpg",
-   "time": "09:30 – 16:30",
-   "price": "Free, donations welcome.",
-   "url": "https://manxnationalheritage.im/whats-on/detail/on-the-buses/",
-   "id": "mnh-on-the-buses",
-   "sourceKey": "mnh",
-   "category": "Arts & Workshops",
-   "area": "Peel",
-   "address": "House of Manannan",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [],
-   "alsoListedOn": [
-    "Visit Isle of Man"
-   ]
-  },
   {
    "title": "A History of the Future",
    "venue": "Manx Museum, Douglas, Isle of Man",
@@ -214,290 +185,6 @@
    "occurrences": [],
    "alsoListedOn": [
     "Visit Isle of Man"
-   ]
-  },
-  {
-   "title": "The Logos Hope",
-   "venue": "Douglas Harbour",
-   "startDate": "2026-11-10",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 12.0,
-   "tags": [
-    "Other"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": true,
-   "description": "The Logos Hope is the world's largest floating bookfair. It is coming to the Isle of Man and will be berthed in Douglas Harbour. It is open to the public for an entrance fee of £1. It has over 5000 titles in the book fair, a cafe, cultural events,…",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FLogos_hope2_1001456346.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/the-logos-hope-p1894531",
-   "id": "visitiom-1894531",
-   "sourceKey": "visitiom",
-   "category": "Other",
-   "area": "Douglas",
-   "address": "Douglas Harbour, Douglas, Douglas, IM1 2RF",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
-  },
-  {
-   "title": "Christmas Hygge with Artreach Studios 2026",
-   "venue": "House of Manannan, Artreach Studios and Pilates IOM, Peel",
-   "startDate": "2026-11-20",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 2.0,
-   "tags": [
-    "Festive"
-   ],
-   "source": "Manx National Heritage",
-   "recurring": true,
-   "description": "Step into the festive spirit with Christmas Hygge 2026, a weekend of Christmas atmosphere, local creativity and beautifully handcrafted gifts. Explore a Christmas art experience, browse the Artisan Makers Market for luxury handcrafted gifts and discover delicious local gourmet treats from Parish Pantry + Filbey’s. Take your time exploring a special art exhibition, with plenty of inspiration for those all-important Christmas gifts. Join us for a Friday late-night shopping launch, with the festive atmosphere turned up a little higher with mulled wine and more. From unique handmade treasures and local artwork to delicious treats and festive indulgence, it’s the perfect opportunity to shop local, discover something special and get Christmas wrapped up in style.",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/09/Christmas-Hygge-1000x575.png",
-   "time": "Friday 5pm - 9.30pm; Saturday and Sunday 10am - 4.30pm",
-   "price": "",
-   "url": "https://manxnationalheritage.im/whats-on/detail/christmas-hygge-with-artreach-studios-2026/",
-   "id": "mnh-christmas-hygge-with-artreach-studios-2026",
-   "sourceKey": "mnh",
-   "category": "Festive",
-   "area": "Peel",
-   "address": "House of Manannan, Artreach Studios and Pilates IOM, Peel",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
-  },
-  {
-   "title": "Christmas Trains",
-   "venue": "The Great Laxey Mine Railway",
-   "startDate": "2026-11-21",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 1.0,
-   "tags": [
-    "Festive"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": true,
-   "description": "Running the same weekend as The Laxey Christmas Markets, come down and meet all your favourite Christmas characters whilst you ride the train",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FChristmas_Trains_28_and_29_November_1167490940.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/christmas-trains-p1793231",
-   "id": "visitiom-1793231",
-   "sourceKey": "visitiom",
-   "category": "Festive",
-   "area": "Laxey",
-   "address": "The Great Laxey Mine Railway, Valley Gardens, Laxey, Isle of Man, IM4 7QP",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": []
-  },
-  {
-   "title": "Online Booking Closed – Little Makers: Magical Christmas Bracelets",
-   "venue": "Manx Museum, Douglas",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive",
-    "Family & Kids",
-    "Theatre & Comedy"
-   ],
-   "source": "Manx National Heritage",
-   "recurring": false,
-   "description": "Kindly note that online booking has now closed. Tickets may be purchased at the Manx Museum Shop subject to availability. Add a little sparkle to your Christmas with a magical friendship bracelet workshop! Choose from colourful beads, Christmas themed beads, letter beads and pretty cords to create your own Christmas-inspired bracelets. Pick your favourite colours, add festive words, initials or names, and create a design that is completely your own. Make a bracelet to wear throughout the Christmas season, create a matching one for a best friend or make a special gift for someone you love. You could even make a few to tuck into Christmas stockings. With plenty of colours, festive beads and decorations to choose from, you can let your imagination run wild and create something full of Christmas sparkle. Useful information Suitable for primary school children All materials are provided All…",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/09/B7FFC23A-F76E-4429-94D1-547A60A352B6-1000x575.jpg",
-   "time": "10am, 12pm or 2pm",
-   "price": "£10 per person plus optional donation to our Charity",
-   "url": "https://manxnationalheritage.im/whats-on/detail/little-makers-magical-christmas-bracelets/",
-   "id": "mnh-little-makers-magical-christmas-bracelets",
-   "sourceKey": "mnh",
-   "category": "Festive",
-   "area": "Douglas",
-   "address": "Manx Museum, Douglas",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": "10:00"
-    }
-   ],
-   "alsoListedOn": [
-    "Visit Isle of Man"
-   ]
-  },
-  {
-   "title": "Festive Fun with Peppa Cinema Experience",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive",
-    "Film",
-    "Family & Kids"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Festive Fun with Peppa Cinema Experience Certificate: U Run time: 60mins Join Peppa Pig and her family at the cinema for a festive big-screen experience as they celebrate Evie’s first Christmas! Share in the excitement of Christmas Day as the family of five reflect on treasured seasonal memories. From snowy adventures and festive plays to decorating the tree, this hour-long cinema experience brings together 7 classic festive-themed Peppa Pig episodes and 4 brand-new songs that little ones can dance and sing along to. Filled with laughter, music and heartwarming moments, this special cinema experience is the perfect family day out during the Christmas season. So grab your hats, scarves and gloves and enjoy the magic of the season along with your favourite piggies at the Festive Fun with Pepper Cinema Experience ALL TICKETS £6",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/ia09ka661ch6p8k18l9h9uo93ur4/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "13:00",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691320/events",
-   "id": "villagaiety-873691320",
-   "sourceKey": "villagaiety",
-   "category": "Festive",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691320/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": "13:00"
-    }
-   ]
-  },
-  {
-   "title": "Isle of Man Symphony Orchestra - Gala Concert",
-   "venue": "Villa Marina Royal Hall",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Music"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "A concert of classical music including Smetana's Vltava, Brahm's Fourth Symphony, and Bruch's Scottish Fantasy for violin and orchestra, with soloist Juliet Tranter. The event is supported by the Gough Ritchie Trust. USEFUL INFORMATION USEFUL INFORMATION Age guidance Suitable for all ages. Under 16s must be accompanied by an adult (18+) Seating Downstairs/Allocated Seating (Ground floor level) Dance Floor Seats: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Please note positions around each table are occupied on a first come, first served basis. Tiered Stalls: All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Wheelchair/accessible bookings Unfortunately, we aren't able to accept wheelchair/accessible bookings online. To make a booking, please…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/k4pb2dcm8zvunwuhpacrvp40b9tl/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "14:30",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873541686/events",
-   "id": "villagaiety-873541686",
-   "sourceKey": "villagaiety",
-   "category": "Music",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873541686/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": "14:30"
-    }
-   ]
-  },
-  {
-   "title": "Giant - The Play",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Film",
-    "Theatre & Comedy"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Giant - The Play Dates: Thursday 19th 7pm and Sunday 22nd November 3pm Running time: 136min Certificate: 15 GIANT, the 5-star critically acclaimed play starring John Lithgow (Killers of the Flower Moon, The Crown) as Roald Dahl, comes to the big screen. Winner of 3 Olivier Awards® including Best Play and a Tony Award® for Best Actor in a Play (John Lithgow), the production was filmed live in London’s West End ahead of its sold-out Broadway run. The stellar cast includes Aya Cash (The Boys, The Franchise, You’re the Worst), Elliot Levey (Cold War, Patriots, Good) and Rachael Stirling (The Divine Mrs S). A world-famous children’s author under threat. A battle of wills in the wake of scandal. And one chance to make amends...It’s the summer of 1983, The Witches is about to hit the shelves and Roald Dahl is making last-minute edits. But the outcry at his recent, explicitly antisemitic…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/3cd2eq5dtqb4pb8bpnnsdi6447xd/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "15:00",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873688505/events",
-   "id": "villagaiety-873688505",
-   "sourceKey": "villagaiety",
-   "category": "Film",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873688505/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": "15:00"
-    }
-   ]
-  },
-  {
-   "title": "Ghosts the Possession of Button House",
-   "venue": "Broadway Cinema",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-26",
-   "isTbc": false,
-   "duration": 4.0,
-   "tags": [
-    "Film"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": true,
-   "description": "Certificate: PG PG film is suitable for general viewing, but some scenes may be unsuitable for young children. Running time: 1hr 37min BBFC Criteria: mild scary scenes, rude humour, violence, language, drug references Synopsis: Three friends attempt to communicate with the spirits occupying a haunted house, and become embroiled in a supernatural adventure.",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/p65bwtwb1mceox5nxfwbd9f0a9al/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873691682/events",
-   "id": "villagaiety-873691682",
-   "sourceKey": "villagaiety",
-   "category": "Film",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691682/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": "19:30"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "19:30"
-    },
-    {
-     "date": "2026-11-26",
-     "time": "14:30"
-    }
-   ]
-  },
-  {
-   "title": "Syd Quirk Half Marathon",
-   "venue": "Ronaldsway",
-   "startDate": "2026-11-22",
-   "endDate": "2026-11-22",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Sport"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": false,
-   "description": "Half Marathon Run/Walk",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fimages%2Fnoimage.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/syd-quirk-half-marathon-p1813131",
-   "id": "visitiom-1813131",
-   "sourceKey": "visitiom",
-   "category": "Sport",
-   "area": "Castletown",
-   "address": "Ronaldsway, Douglas, Castletown, Ronaldsway, IM23QZ",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-22",
-     "time": ""
-    }
    ]
   },
   {
@@ -668,6 +355,45 @@
     {
      "date": "2026-11-25",
      "time": "19:30"
+    }
+   ]
+  },
+  {
+   "title": "Ghosts the Possession of Button House",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-11-25",
+   "endDate": "2026-11-26",
+   "isTbc": false,
+   "duration": 1.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": true,
+   "description": "Certificate: PG PG film is suitable for general viewing, but some scenes may be unsuitable for young children. Running time: 1hr 37min BBFC Criteria: mild scary scenes, rude humour, violence, language, drug references Synopsis: Three friends attempt to communicate with the spirits occupying a haunted house, and become embroiled in a supernatural adventure.",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/p65bwtwb1mceox5nxfwbd9f0a9al/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691682/events",
+   "id": "villagaiety-873691682",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691682/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-25",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-11-25",
+     "time": "19:30"
+    },
+    {
+     "date": "2026-11-26",
+     "time": "14:30"
     }
    ]
   },
@@ -1081,12 +807,11 @@
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873692674/events",
-   "soldOut": true,
+   "soldOut": false,
    "occurrences": [
     {
      "date": "2026-11-29",
-     "time": "10:00",
-     "soldOut": true
+     "time": "10:00"
     }
    ]
   },
@@ -1627,6 +1352,7 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
+    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -1656,7 +1382,6 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
-    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -1760,7 +1485,7 @@
    ]
   },
   {
-   "title": "Biscuit Decorating with Santa",
+   "title": "Biscuit Decorating With Santa",
    "venue": "Juliette's",
    "startDate": "2026-12-05",
    "endDate": "2026-12-05",
@@ -1772,15 +1497,15 @@
    "source": "Visit Isle of Man",
    "recurring": true,
    "description": "This fun and festive workshop begins with children decorating delicious homemade biscuits and crafting Christmassy keepsakes. Then the excitement will build as we welcome a very special visitor... Father Christmas himself!",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FChristmas_Biscuits_with_Santa_Visit_Isle_of_Man_2__1009126800.jpg&action=ProductListGallery",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FChristmas_Biscuits_with_Santa_Visit_Isle_of_Man_3__706591602.jpg&action=ProductListGallery",
    "time": "",
    "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/biscuit-decorating-with-santa-p1895941",
-   "id": "visitiom-1895941",
+   "url": "https://www.visitisleofman.com/whats-on/biscuit-decorating-with-santa-p1903251",
+   "id": "visitiom-1903251",
    "sourceKey": "visitiom",
    "category": "Festive",
    "area": "Peel",
-   "address": "Juliette's, 7 a Michael Street, Peel, Isle of Man, IM5 1HA",
+   "address": "Juliette's, 7a Michael Street, Peel, Isle of Man, IM5 1HA",
    "bookingUrl": "",
    "soldOut": false,
    "occurrences": [
