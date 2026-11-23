@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://www.cowleygroves.com/favicon.ico" />
+    <link id="skin-default" rel="stylesheet" href="https://www.cowleygroves.com/bootstrap/3.3.5/css/bootstrap.css">
+    <link id="skin-default" rel="stylesheet" href="https://www.cowleygroves.com/css/style.css?v=1795431804">
+    <link id="skin-default" rel="stylesheet" href="https://www.cowleygroves.com/css/cowley_groves.css?v=1795431804">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Cowley Groves - The Isle of Man’s Leading Independent Estate Agent </title>
+<meta name="description" value="Cowley Groves is a long established family run firm of estate agents offering a thoroughly professional, yet friendly and approachable service when it comes to buying, selling and letting property on the Isle of Man."/>
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+
+    <meta name="google-site-verification" content="[x]" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PGTT0GB3X9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-PGTT0GB3X9');
+    </script>
+
+
+</head>
+<body>
+
+<div id="wrapper">
+<div>
+
+    <!-- mobile menu -->
+    <div class="visible-xs">
+
+        <button type="button" id="trigger-overlay" class="c-hamburger c-hamburger--htx overlay_toggle"><span></span></button>
+
+        <div class="overlay overlay-screen overlay-hugeinc">
+            <nav>
+                <ul id="mobile_menu">                        <li class="/"><a href="https://www.cowleygroves.com">Homepage</a></li>
+                                            <li class="/latest"><a href="https://www.cowleygroves.com/latest">Latest</a></li>
+                                            <li class="/sales"><a href="https://www.cowleygroves.com/sales">Buying</a></li>
+                                            <li class="https://www.cowleygroves.com/selling"><a href="https://www.cowleygroves.com/selling">Sell your property</a></li>
+                                            <li class="[x]"><a href="https://www.cowleygroves.com/[x]">Selling services &amp; testimonials</a></li>
+                                            <li class="commercials"><a href="https://www.cowleygroves.com/commercials">Commercials</a></li>
+                                            <li class="/rentals"><a href="https://www.cowleygroves.com/rentals">Rentals</a></li>
+                                            <li class="https://www.cowleygroves.com/renting"><a href="https://www.cowleygroves.com/renting">Rent your property</a></li>
+                                            <li class="[x]"><a href="https://www.cowleygroves.com/[x]">Property management services &amp; testimonials</a></li>
+                                            <li class="/emergency-repairs"><a href="https://www.cowleygroves.com/emergency-repairs">Emergency property repair reporting</a></li>
+                                            <li class="/about-us"><a href="https://www.cowleygroves.com/about-us">About Us</a></li>
+                                            <li class="/contact-us"><a href="https://www.cowleygroves.com/contact-us">Contact Us</a></li>
+                                        <li><a class="account rounded upper anim-200" href="https://www.cowleygroves.com/account">Sign in / Register</a></li>
+                </ul>            </nav>
+        </div>
+    </div>
+    <!-- /mobile menu -->
+
+
+<div id="top-bar" class="hidden-xs">
+    <div class="address">
+<h3 class="upper bold">Douglas</h3><a href="01624 625888">01624 625888</a><span>18 Victoria Street, Douglas, IM1 2LQ</span>
+    </div>
+    <div class="address">
+<h3 class="upper bold">Ramsey</h3><a href="01624 812823">01624 812823</a><span>9 Parliament Street, Ramsey, IM8 1AS</span>
+    </div>
+    <div class="social">
+        <a target="_blank" class="anim-300 fa fa-facebook facebook social-icon" href="https:\\www.facebook.com\CowleyGrovesiom"></a>
+        <a target="_blank" class="anim-300 fa fa-instagram instagram social-icon" href="https://www.instagram.com/cowleygroves/"></a>
+        <a target="_blank" class="anim-300 fa fa-twitter twitter social-icon" href="https:\\twitter.com\CowleyGrovesiom"></a>
+    </div>
+</div>
+
+<div id="header" class="anim-200">
+
+            <a class="logo anim-200" href="https://www.cowleygroves.com"><img src="https://www.cowleygroves.com/images/logo_white.svg" /></a>
+    
+
+<a class="account rounded upper anim-200" href="https://www.cowleygroves.com/account">Sign in / Register</a>
+
+<ul id="main_menu" class="anim-200"><li class="/"><a class="upper" href="https://www.cowleygroves.com">Home</a>
+ </li>
+<li class="/sales"><a class="upper" href="https://www.cowleygroves.com/sales">Sales</a>
+<ul class="rounded shadow anim-200">
+<li><a class="anim-200" href="https://www.cowleygroves.com/sales">Properties for sale</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/selling">Sell your property</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/[x]">Selling services &amp; testimonials</a>
+ </ul>  </li>
+<li class="buyers-service"><a class="upper" href="https://www.cowleygroves.com/buyers-service">Buyers Service</a>
+ </li>
+<li class="/rentals"><a class="upper" href="https://www.cowleygroves.com/rentals">Rentals</a>
+<ul class="rounded shadow anim-200">
+<li><a class="anim-200" href="https://www.cowleygroves.com/rentals">Properties for rent</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/renting">Rent your property</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/emergency-repairs">Emergency repair reporting</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/[x]">Property management services &amp; testimonials</a>
+ </ul>  </li>
+<li class="commercials?sel_rent=Sale"><a class="upper" href="https://www.cowleygroves.com/commercials?sel_rent=Sale">Commercials</a>
+<ul class="rounded shadow anim-200">
+<li><a class="anim-200" href="https://www.cowleygroves.com/commercials?sel_rent=Sale">Commercial sales</a>
+<li><a class="anim-200" href="https://www.cowleygroves.com/commercials?sel_rent=Rental">Commercial rentals</a>
+ </ul>  </li>
+<li class="latest"><a class="upper" href="https://www.cowleygroves.com/latest">Latest</a>
+ </li>
+<li class="/about-us"><a class="upper" href="https://www.cowleygroves.com/about-us">About Us</a>
+ </li>
+<li class="/contact-us"><a class="upper" href="https://www.cowleygroves.com/contact-us">Contact Us</a>
+ </li>
+</ul>
+</div>
+
+<div id="main-content" class="content tr-gone">
+
+
+<div id="slider">
+ <!--<div class="image b-lazy b-loaded" data-src="https://www.cowleygroves.com/imager/1920-700" style="background-image:url('https://www.cowleygroves.com/imager/1920-700')"></div>-->
+
+<div class="scroll"><img class="bounce mouse" src="https://www.cowleygroves.com/images/scroll.png"/><span class="serif">Scroll to Continue</span></div>
+
+                <div class="videobg off">
+                    <div class="videobg-width">
+                        <div class="videobg-aspect">
+                            <div class="videobg-make-height">
+                                <div class="videobg-hide-controls">
+                                    <iframe allow="autoplay; fullscreen" src="https://player.vimeo.com/video/569296906?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <div class="info">
+                <h1 class="upper">The Isle of Man’s Leading Award Winning Independent Estate Agent</h1>
+        <h2 class="">Register with us today for instant property alerts, experienced professional 
+service, viewing &amp; offer tracking and much more.</h2>
+    </div>
+
+
+<div id="home_search">
+<ul>
+<li><a class="active" href="#" data-target="residential">Residential</a></li>
+<li><a class="" href="#" data-target="commercial">Commercial</a></li>
+<li><a class="" href="#" data-target="rental">Rental</a></li>
+</ul>
+
+<div class="search_panel active" id="residential">
+<form class="no-smoothState" accept-charset="UTF-8" action="https://www.cowleygroves.com/sales" enctype="multipart/form-data" method="GET">
+<input type="hidden" name="_token" value="[x]" autocomplete="off">
+<div class="form-group"><label class="form-label">Keywords</label><input placeholder="Eg. Street or house name" name="keywords" type="text" class="form-control " value=""/></div>
+<div class="form-group "><label class="form-label">Locations</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Filter by area or location" data-search="on" class="form-control form-select-multiple form-select " name="locations[]"><option></option><option  value="East">All East</option><option  value="North">All North</option><option  value="South">All South</option><option  value="West">All West</option><optgroup label="East" class="select2-result-selectable"  value="East"><option  value="103">Abbeylands</option><option  value="159">Agneash</option><option  value="104">Baldrine</option><option  value="105">Baldwin</option><option  value="106">Braddan</option><option  value="108">Cronk Y Berry</option><option  value="109">Crosby</option><option  value="110">Douglas</option><option  value="111">Farmhill</option><option  value="112">Glen Vine</option><option  value="113">Governors Hill</option><option  value="161">Groudle</option><option  value="114">Laxey</option><option  value="115">Lonan</option><option  value="167">Marown</option><option  value="116">Onchan</option><option  value="117">Port Soderick</option><option  value="118">Saddlestone</option><option  value="119">Santon</option><option  value="120">Strang</option><option  value="121">Tromode</option><option  value="122">Union Mills</option><option  value="123">West Baldwin</option></optgroup><optgroup label="North" class="select2-result-selectable"  value="North"><option  value="128">Andreas</option><option  value="129">Ballaugh</option><option  value="130">Bride</option><option  value="131">Glen Mona</option><option  value="132">Jurby</option><option  value="169">Jurby East</option><option  value="133">Kirk Michael</option><option  value="134">Lezayre</option><option  value="135">Maughold</option><option  value="136">Ramsey</option><option  value="137">Sulby</option></optgroup><optgroup label="South" class="select2-result-selectable"  value="South"><option  value="138">Arbory</option><option  value="139">Ballabeg</option><option  value="164">Ballafesson</option><option  value="140">Ballasalla</option><option  value="165">Bradda</option><option  value="141">Castletown</option><option  value="142">Colby</option><option  value="143">Derbyhaven</option><option  value="144">Gansey</option><option  value="166">Malew</option><option  value="145">Port Erin</option><option  value="146">Port St. Mary</option><option  value="147">Ronague</option><option  value="148">Rushen</option><option  value="149">St. Mark's</option><option  value="150">Surby</option></optgroup><optgroup label="West" class="select2-result-selectable"  value="West"><option  value="151">Dalby</option><option  value="152">Foxdale</option><option  value="160">German</option><option  value="153">Glen Maye</option><option  value="154">Greeba</option><option  value="155">Patrick</option><option  value="156">Peel</option><option  value="157">St. John's</option></optgroup></select></div>
+<div class="form-group   min_price-parent"><label class="form-label">Min Price</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select min_price_element " name="min_price"><option></option><option  value="£50,000">£50,000</option><option  value="£100,000">£100,000</option><option  value="£150,000">£150,000</option><option  value="£200,000">£200,000</option><option  value="£250,000">£250,000</option><option  value="£300,000">£300,000</option><option  value="£350,000">£350,000</option><option  value="£400,000">£400,000</option><option  value="£450,000">£450,000</option><option  value="£500,000">£500,000</option><option  value="£550,000">£550,000</option><option  value="£600,000">£600,000</option><option  value="£650,000">£650,000</option><option  value="£700,000">£700,000</option><option  value="£750,000">£750,000</option><option  value="£800,000">£800,000</option><option  value="£850,000">£850,000</option><option  value="£900,000">£900,000</option><option  value="£950,000">£950,000</option><option  value="£1,000,000">£1,000,000</option><option  value="£1,100,000">£1,100,000</option><option  value="£1,200,000">£1,200,000</option><option  value="£1,300,000">£1,300,000</option><option  value="£1,400,000">£1,400,000</option><option  value="£1,500,000">£1,500,000</option><option  value="£2,000,000">£2,000,000</option></select></div>
+<div class="form-group   max_price-parent"><label class="form-label">Max Price</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select max_price_element " name="max_price"><option></option><option  value="£50,000">£50,000</option><option  value="£100,000">£100,000</option><option  value="£150,000">£150,000</option><option  value="£200,000">£200,000</option><option  value="£250,000">£250,000</option><option  value="£300,000">£300,000</option><option  value="£350,000">£350,000</option><option  value="£400,000">£400,000</option><option  value="£450,000">£450,000</option><option  value="£500,000">£500,000</option><option  value="£550,000">£550,000</option><option  value="£600,000">£600,000</option><option  value="£650,000">£650,000</option><option  value="£700,000">£700,000</option><option  value="£750,000">£750,000</option><option  value="£800,000">£800,000</option><option  value="£850,000">£850,000</option><option  value="£900,000">£900,000</option><option  value="£950,000">£950,000</option><option  value="£1,000,000">£1,000,000</option><option  value="£1,100,000">£1,100,000</option><option  value="£1,200,000">£1,200,000</option><option  value="£1,300,000">£1,300,000</option><option  value="£1,400,000">£1,400,000</option><option  value="£1,500,000">£1,500,000</option><option  value="£2,000,000">£2,000,000</option><option  value="£5,000,000+">£5,000,000+</option></select></div>
+<div class="form-group "><label class="form-label">Property Type</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Any" data-search="on" class="form-control form-select-multiple form-select " name="property_types[]"><option></option><option  value="Apartment">Apartment</option><option  value="Terraced">Terraced</option><option  value="Semi-Detached">Semi-Detached</option><option  value="Detached">Detached</option><option  value="Bungalow">Bungalow</option><option  value="Cottage">Cottage</option><option  value="Building Plot">Building Plot</option><option  value="Land">Land</option><option  value="House">House</option><option  value="Parking/Garaging">Parking/Garaging</option><option  value="Development Opportunity">Development Opportunity</option></select></div>
+<div class="form-group"><div class=""><input type="submit" class="btn-primary btn" value="Search"/></div></div>
+</form>
+</div>
+
+<div class="search_panel" id="commercial">
+<form class="no-smoothState" accept-charset="UTF-8" action="https://www.cowleygroves.com/commercials" enctype="multipart/form-data" method="GET">
+<input type="hidden" name="_token" value="[x]" autocomplete="off">
+<div class="form-group"><label class="form-label">Keywords</label><input placeholder="Eg. Street or house name" name="keywords" type="text" class="form-control " value=""/></div>
+<div class="form-group "><label class="form-label">Locations</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Filter by area or location" data-search="on" class="form-control form-select-multiple form-select " name="locations[]"><option></option><option  value="East">All East</option><option  value="North">All North</option><option  value="South">All South</option><option  value="West">All West</option><optgroup label="East" class="select2-result-selectable"  value="East"><option  value="103">Abbeylands</option><option  value="159">Agneash</option><option  value="104">Baldrine</option><option  value="105">Baldwin</option><option  value="106">Braddan</option><option  value="108">Cronk Y Berry</option><option  value="109">Crosby</option><option  value="110">Douglas</option><option  value="111">Farmhill</option><option  value="112">Glen Vine</option><option  value="113">Governors Hill</option><option  value="161">Groudle</option><option  value="114">Laxey</option><option  value="115">Lonan</option><option  value="167">Marown</option><option  value="116">Onchan</option><option  value="117">Port Soderick</option><option  value="118">Saddlestone</option><option  value="119">Santon</option><option  value="120">Strang</option><option  value="121">Tromode</option><option  value="122">Union Mills</option><option  value="123">West Baldwin</option></optgroup><optgroup label="North" class="select2-result-selectable"  value="North"><option  value="128">Andreas</option><option  value="129">Ballaugh</option><option  value="130">Bride</option><option  value="131">Glen Mona</option><option  value="132">Jurby</option><option  value="169">Jurby East</option><option  value="133">Kirk Michael</option><option  value="134">Lezayre</option><option  value="135">Maughold</option><option  value="136">Ramsey</option><option  value="137">Sulby</option></optgroup><optgroup label="South" class="select2-result-selectable"  value="South"><option  value="138">Arbory</option><option  value="139">Ballabeg</option><option  value="164">Ballafesson</option><option  value="140">Ballasalla</option><option  value="165">Bradda</option><option  value="141">Castletown</option><option  value="142">Colby</option><option  value="143">Derbyhaven</option><option  value="144">Gansey</option><option  value="166">Malew</option><option  value="145">Port Erin</option><option  value="146">Port St. Mary</option><option  value="147">Ronague</option><option  value="148">Rushen</option><option  value="149">St. Mark's</option><option  value="150">Surby</option></optgroup><optgroup label="West" class="select2-result-selectable"  value="West"><option  value="151">Dalby</option><option  value="152">Foxdale</option><option  value="160">German</option><option  value="153">Glen Maye</option><option  value="154">Greeba</option><option  value="155">Patrick</option><option  value="156">Peel</option><option  value="157">St. John's</option></optgroup></select></div>
+<div class="form-group   min_price-parent"><label class="form-label">Min Price</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select min_price_element " name="min_price"><option></option><option  value="£50,000">£50,000</option><option  value="£100,000">£100,000</option><option  value="£150,000">£150,000</option><option  value="£200,000">£200,000</option><option  value="£250,000">£250,000</option><option  value="£300,000">£300,000</option><option  value="£350,000">£350,000</option><option  value="£400,000">£400,000</option><option  value="£450,000">£450,000</option><option  value="£500,000">£500,000</option><option  value="£550,000">£550,000</option><option  value="£600,000">£600,000</option><option  value="£650,000">£650,000</option><option  value="£700,000">£700,000</option><option  value="£750,000">£750,000</option><option  value="£800,000">£800,000</option><option  value="£850,000">£850,000</option><option  value="£900,000">£900,000</option><option  value="£950,000">£950,000</option><option  value="£1,000,000">£1,000,000</option><option  value="£1,100,000">£1,100,000</option><option  value="£1,200,000">£1,200,000</option><option  value="£1,300,000">£1,300,000</option><option  value="£1,400,000">£1,400,000</option><option  value="£1,500,000">£1,500,000</option><option  value="£2,000,000">£2,000,000</option></select></div>
+<div class="form-group   max_price-parent"><label class="form-label">Max Price</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select max_price_element " name="max_price"><option></option><option  value="£50,000">£50,000</option><option  value="£100,000">£100,000</option><option  value="£150,000">£150,000</option><option  value="£200,000">£200,000</option><option  value="£250,000">£250,000</option><option  value="£300,000">£300,000</option><option  value="£350,000">£350,000</option><option  value="£400,000">£400,000</option><option  value="£450,000">£450,000</option><option  value="£500,000">£500,000</option><option  value="£550,000">£550,000</option><option  value="£600,000">£600,000</option><option  value="£650,000">£650,000</option><option  value="£700,000">£700,000</option><option  value="£750,000">£750,000</option><option  value="£800,000">£800,000</option><option  value="£850,000">£850,000</option><option  value="£900,000">£900,000</option><option  value="£950,000">£950,000</option><option  value="£1,000,000">£1,000,000</option><option  value="£1,100,000">£1,100,000</option><option  value="£1,200,000">£1,200,000</option><option  value="£1,300,000">£1,300,000</option><option  value="£1,400,000">£1,400,000</option><option  value="£1,500,000">£1,500,000</option><option  value="£2,000,000">£2,000,000</option><option  value="£5,000,000+">£5,000,000+</option></select></div>
+<div class="form-group "><label class="form-label">Property Type</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Any" data-search="on" class="form-control form-select-multiple form-select " name="property_types[]"><option></option><option  value="Business">Business</option><option  value="Office">Office</option><option  value="Investment">Investment</option><option  value="Retail">Retail</option><option  value="Hotel">Hotel</option><option  value="Guest House">Guest House</option><option  value="Warehouse">Warehouse</option><option  value="Development Opportunity">Development Opportunity</option><option  value="Dwelling">Dwelling</option><option  value="Land">Land</option><option  value="Agricultural Premises">Agricultural Premises</option><option  value="Public House">Public House</option></select></div>
+<div class="form-group"><div class=""><input type="submit" class="btn-primary btn" value="Search"/></div></div>
+</form>
+</div>
+
+<div class="search_panel" id="rental">
+<form class="no-smoothState" accept-charset="UTF-8" action="https://www.cowleygroves.com/rentals" enctype="multipart/form-data" method="GET">
+<input type="hidden" name="_token" value="[x]" autocomplete="off">
+<div class="form-group"><label class="form-label">Keywords</label><input placeholder="Eg. Street or house name" name="keywords" type="text" class="form-control " value=""/></div>
+<div class="form-group "><label class="form-label">Locations</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Filter by area or location" data-search="on" class="form-control form-select-multiple form-select " name="locations[]"><option></option><option  value="East">All East</option><option  value="North">All North</option><option  value="South">All South</option><option  value="West">All West</option><optgroup label="East" class="select2-result-selectable"  value="East"><option  value="103">Abbeylands</option><option  value="159">Agneash</option><option  value="104">Baldrine</option><option  value="105">Baldwin</option><option  value="106">Braddan</option><option  value="108">Cronk Y Berry</option><option  value="109">Crosby</option><option  value="110">Douglas</option><option  value="111">Farmhill</option><option  value="112">Glen Vine</option><option  value="113">Governors Hill</option><option  value="161">Groudle</option><option  value="114">Laxey</option><option  value="115">Lonan</option><option  value="167">Marown</option><option  value="116">Onchan</option><option  value="117">Port Soderick</option><option  value="118">Saddlestone</option><option  value="119">Santon</option><option  value="120">Strang</option><option  value="121">Tromode</option><option  value="122">Union Mills</option><option  value="123">West Baldwin</option></optgroup><optgroup label="North" class="select2-result-selectable"  value="North"><option  value="128">Andreas</option><option  value="129">Ballaugh</option><option  value="130">Bride</option><option  value="131">Glen Mona</option><option  value="132">Jurby</option><option  value="169">Jurby East</option><option  value="133">Kirk Michael</option><option  value="134">Lezayre</option><option  value="135">Maughold</option><option  value="136">Ramsey</option><option  value="137">Sulby</option></optgroup><optgroup label="South" class="select2-result-selectable"  value="South"><option  value="138">Arbory</option><option  value="139">Ballabeg</option><option  value="164">Ballafesson</option><option  value="140">Ballasalla</option><option  value="165">Bradda</option><option  value="141">Castletown</option><option  value="142">Colby</option><option  value="143">Derbyhaven</option><option  value="144">Gansey</option><option  value="166">Malew</option><option  value="145">Port Erin</option><option  value="146">Port St. Mary</option><option  value="147">Ronague</option><option  value="148">Rushen</option><option  value="149">St. Mark's</option><option  value="150">Surby</option></optgroup><optgroup label="West" class="select2-result-selectable"  value="West"><option  value="151">Dalby</option><option  value="152">Foxdale</option><option  value="160">German</option><option  value="153">Glen Maye</option><option  value="154">Greeba</option><option  value="155">Patrick</option><option  value="156">Peel</option><option  value="157">St. John's</option></optgroup></select></div>
+<div class="form-group   min_price-parent"><label class="form-label">Min Price PCM</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select min_price_element " name="min_price"><option></option><option  value="£500">£500</option><option  value="£550">£550</option><option  value="£600">£600</option><option  value="£625">£625</option><option  value="£650">£650</option><option  value="£675">£675</option><option  value="£700">£700</option><option  value="£725">£725</option><option  value="£750">£750</option><option  value="£775">£775</option><option  value="£800">£800</option><option  value="£825">£825</option><option  value="£850">£850</option><option  value="£875">£875</option><option  value="£900">£900</option><option  value="£925">£925</option><option  value="£950">£950</option><option  value="£975">£975</option><option  value="£1,000">£1,000</option><option  value="£1,050">£1,050</option><option  value="£1,100">£1,100</option><option  value="£1,150">£1,150</option><option  value="£1,200">£1,200</option><option  value="£1,250">£1,250</option><option  value="£1,300">£1,300</option><option  value="£1,350">£1,350</option><option  value="£1,400">£1,400</option><option  value="£1,450">£1,450</option><option  value="£1,500">£1,500</option><option  value="£1,550">£1,550</option><option  value="£1,600">£1,600</option><option  value="£1,650">£1,650</option><option  value="£1,700">£1,700</option><option  value="£1,750">£1,750</option><option  value="£1,800">£1,800</option><option  value="£1,850">£1,850</option><option  value="£1,900">£1,900</option><option  value="£1,950">£1,950</option><option  value="£2,000+">£2,000+</option></select></div>
+<div class="form-group   max_price-parent"><label class="form-label">Max Price PCM</label><select autocomplete="off" data-allow-clear="true" data-placeholder="Any" data-search="on" class="form-control form-select max_price_element " name="max_price"><option></option><option  value="£500">£500</option><option  value="£550">£550</option><option  value="£600">£600</option><option  value="£625">£625</option><option  value="£650">£650</option><option  value="£675">£675</option><option  value="£700">£700</option><option  value="£725">£725</option><option  value="£750">£750</option><option  value="£775">£775</option><option  value="£800">£800</option><option  value="£825">£825</option><option  value="£850">£850</option><option  value="£875">£875</option><option  value="£900">£900</option><option  value="£925">£925</option><option  value="£950">£950</option><option  value="£975">£975</option><option  value="£1,000">£1,000</option><option  value="£1,050">£1,050</option><option  value="£1,100">£1,100</option><option  value="£1,150">£1,150</option><option  value="£1,200">£1,200</option><option  value="£1,250">£1,250</option><option  value="£1,300">£1,300</option><option  value="£1,350">£1,350</option><option  value="£1,400">£1,400</option><option  value="£1,450">£1,450</option><option  value="£1,500">£1,500</option><option  value="£1,550">£1,550</option><option  value="£1,600">£1,600</option><option  value="£1,650">£1,650</option><option  value="£1,700">£1,700</option><option  value="£1,750">£1,750</option><option  value="£1,800">£1,800</option><option  value="£1,850">£1,850</option><option  value="£1,900">£1,900</option><option  value="£1,950">£1,950</option><option  value="£2,000+">£2,000+</option></select></div>
+<div class="form-group "><label class="form-label">Property Type</label><select autocomplete="off" multiple data-close-on-select="false" data-placeholder="Any" data-search="on" class="form-control form-select-multiple form-select " name="property_types[]"><option></option><option  value="Apartment">Apartment</option><option  value="Terraced">Terraced</option><option  value="Semi-Detached">Semi-Detached</option><option  value="Detached">Detached</option><option  value="Bungalow">Bungalow</option><option  value="Cottage">Cottage</option><option  value="Building Plot">Building Plot</option><option  value="Land">Land</option><option  value="House">House</option><option  value="Parking/Garaging">Parking/Garaging</option><option  value="Development Opportunity">Development Opportunity</option></select></div>
+<div class="form-group"><div class=""><input type="submit" class="btn-primary btn" value="Search"/></div></div>
+</form>
+</div>
+
+</div>
+
+</div><!-- /slider -->
+
+</div>
+
+<div id="property-alert-banner">
+    <div>
+        <h2>Register on our mailing list today to begin receiving property alerts and stay up to date with the latest residential and commercial listings to buy and rent</h2>
+        <a class="save_button" data-toggle="modal" data-target="#saveSearch" href="#">Get Started</a>
+    </div>
+</div>
+
+<div id="featured_properties">
+<h2 class="title">Featured Properties</h2>
+<div id="properties">
+                                <li class="" style="--animation-order: 1;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+<img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4672/TWQW2140 - Copy_grid.JPG"/>
+</div>
+<span class="status New Listing">New Listing</span><div>
+<h4>Kerrocoar, Lezayre Road, Ramsey, IM8 2TD</h4>
+
+            <span class="price">
+            £485,000
+                        </span>
+    
+    <span class="attr bathrooms"><i class="cg-font icon-02"></i>2<b>Bathrooms</b></span><span class="attr bedrooms"><i class="cg-font icon-19"></i>5<b>Bedrooms</b></span>
+</div></a></li>
+                                <li class="" style="--animation-order: 2;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+<img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4696/dji_20260910162919_0018_d_grid.jpg"/>
+</div>
+<span class="status New Listing">New Listing</span><div>
+<h4>Huxley, 37 Westminster Drive, Douglas, IM1 4EJ</h4>
+
+            <span class="price">
+            £380,000
+                        </span>
+    
+    <span class="attr bathrooms"><i class="cg-font icon-02"></i>1<b>Bathrooms</b></span><span class="attr bedrooms"><i class="cg-font icon-19"></i>4<b>Bedrooms</b></span>
+</div></a></li>
+                                <li class="" style="--animation-order: 3;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+<img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4700/20260916_090956_grid.jpg"/>
+</div>
+<span class="status New Listing">New Listing</span><div>
+<h4>39 Governors Road, Onchan, IM3 1AY</h4>
+
+            <span class="price">
+            £1,795
+            <small>Per Calendar Month</small>            </span>
+    
+    <span class="attr bathrooms"><i class="cg-font icon-02"></i>1<b>Bathrooms</b></span><span class="attr bedrooms"><i class="cg-font icon-19"></i>3<b>Bedrooms</b></span>
+</div></a></li>
+                                <li class="" style="--animation-order: 4;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+<img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4727/dji_20261102230232_0052_d_grid.jpg"/>
+</div>
+<span class="status New Listing">New Listing</span><div>
+<h4>Apt. 2, 24 Demesne Road, Douglas, IM1 3LX</h4>
+
+            <span class="price">
+            £175,000
+                        </span>
+    
+    <span class="attr bathrooms"><i class="cg-font icon-02"></i>1<b>Bathrooms</b></span><span class="attr bedrooms"><i class="cg-font icon-19"></i>2<b>Bedrooms</b></span>
+</div></a></li>
+</div>
+</div>
+
+
+    <div id="valuation">
+        <div>
+            <div class="info">
+                <h2 class="title">start with your free valuation</h2>
+                <p>Our selling process is quick and simple, fill in the form below and a member of the CG team will be in touch as soon as possible.</p>
+                <form class="no-smoothState" enctype="multipart/form-data" name="ContactForm" id="ContactForm" action="https://www.cowleygroves.com/email" method="POST">
+                    <input type="hidden" name="to" value="douglas@cowleygroves.com">
+                    <input type="hidden" name="enq" value="Cowley Groves - Property Valuation Request">
+                    <fieldset>
+                        <input type="hidden" name="_token" value="[x]" autocomplete="off">
+                        <input type="text" name="first_name" required placeholder="Your name"/>
+                        <input type="text" name="email" required placeholder="Email"/>
+                        <input type="text" name="phone" required placeholder="Telephone"/>
+                        <button class="g-recaptcha" data-sitekey="[x]" data-callback='onSubmit'>Get Started</button>
+                    </fieldset>
+                </form>
+            </div>
+            <img src="https://www.cowleygroves.com/imager/800-500/photos/1/AdobeStock_216108278.jpg"/>
+        </div>
+    </div>
+
+    <div id="buying_service">
+        <div>
+            <div class="info">
+                <h2 class="title">Expert buying service</h2>
+                <p>We have vast experience acting as buyer’s agents, charging just 1.0%+VAT, the savings through expert negotiation and industry knowledge for you, as a buyer, can be significant.</p>
+                <a class="btn btn-primary" href="/buyers-service">Find out more</a>
+            </div>
+            <img src="https://www.cowleygroves.com/imager/800-500/photos/1/AdobeStock_301964911.jpeg"/>
+        </div>
+    </div>
+
+
+<div id="latest_properties">
+    <h2 class="title">Latest Properties</h2>
+    <div id="properties">
+                                                                    <li class="" style="--animation-order: 1;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+                                                    <img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4700/20260916_090956_grid.jpg"/>
+                                            </div>
+                    <span class="status New Listing">New Listing</span>                    <div>
+                        <h4>39 Governors Road, Onchan, IM3 1AY</h4>
+
+                                                    <span class="price">
+            £1,795
+                                <small>Per Calendar Month</small>            </span>
+                        
+                                                <span class="attr bathrooms"><i class="cg-font icon-02"></i>1<b>Bathrooms</b></span>                        <span class="attr bedrooms"><i class="cg-font icon-03"></i>3<b>Bedrooms</b></span>
+                    </div></a></li>
+                                                                        <li class="" style="--animation-order: 2;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+                                                    <img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4733/IMG_0873_grid.jpeg"/>
+                                            </div>
+                    <span class="status New Listing">New Listing</span>                    <div>
+                        <h4>Gramercy, Church Road, Port Lewaigue, Ramsey, IM7 1AG</h4>
+
+                                                    <span class="price">
+            £2,250
+                                <small>Per Calendar Month</small>            </span>
+                        
+                                                <span class="attr bathrooms"><i class="cg-font icon-02"></i>3<b>Bathrooms</b></span>                        <span class="attr bedrooms"><i class="cg-font icon-03"></i>4<b>Bedrooms</b></span>
+                    </div></a></li>
+                                                                        <li class="" style="--animation-order: 3;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+                                                    <img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4731/dji_20261110000518_0120_d_grid.jpg"/>
+                                            </div>
+                    <span class="status New Listing">New Listing</span>                    <div>
+                        <h4>Apt 410 - 411, Kings Court, Ramsey, IM8 1LN</h4>
+
+                                                    <span class="price">
+            £229,995
+                                            </span>
+                        
+                                                <span class="attr bathrooms"><i class="cg-font icon-02"></i>1<b>Bathrooms</b></span>                        <span class="attr bedrooms"><i class="cg-font icon-03"></i>3<b>Bedrooms</b></span>
+                    </div></a></li>
+                                                                        <li class="" style="--animation-order: 4;"><a href="https://www.cowleygroves.com/property/[x]"><div class="img-holder"><img class="holder" src="https://www.cowleygroves.com/imager/380-255/images/grid_holder.jpg"/>
+                                                    <img onload="this.className='animate'" class="" loading="lazy" src="https://cowleygroves.s3.eu-west-2.amazonaws.com/images/properties/4672/TWQW2140 - Copy_grid.JPG"/>
+                                            </div>
+                    <span class="status New Listing">New Listing</span>                    <div>
+                        <h4>Kerrocoar, Lezayre Road, Ramsey, IM8 2TD</h4>
+
+                                                    <span class="price">
+            £485,000
+                                            </span>
+                        
+                                                <span class="attr bathrooms"><i class="cg-font icon-02"></i>2<b>Bathrooms</b></span>                        <span class="attr bedrooms"><i class="cg-font icon-03"></i>5<b>Bedrooms</b></span>
+                    </div></a></li>
+                </div>
+    <a class="latest-link" href="/latest">View More</a>
+</div>
+
+<div id="latest_properties">
+    <h2 class="title">CG Red Latest Properties</h2>
+    <div id="properties">
+            </div>
+    <a class="latest-link" href="https://www.cgred.im/sales">View More</a>
+</div>
+
+
+<div id="features">
+<div>
+
+<div class="info">
+<h2 class="title">Established · Trusted · Dedicated</h2>
+<p>Cowley Groves is a long established family run firm of estate agents offering a thoroughly professional, yet friendly and approachable service when it comes to buying, selling and letting homes on the Isle of Man. We are a leading estate agency in our field and recognised for our will-do, can-do approach to our business. We are also at the forefront of technological advances in our industry as this web site testifies.</p>
+<a href="/about-us">Discover <i class="fa fa-chevron-right"></i></a>
+</div>
+
+<div class="video">
+<iframe src="https://player.vimeo.com/video/569302333" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+</div>
+</div>
+
+
+
+<div id="stats">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul>
+                    <li><div class="number"><span class="countup">35</span><i>+ Years</i></div><small>In business</small></li>
+                    <li><div class="number"><span class="countup">12500</span><i>+</i></div><small>Facebook Followers</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="usps">
+<h2 class="title">everything you need to sell your home</h2>
+<ul>
+<li>
+<div class="feature">
+<div class="image"><img onload="this.className='animate'" class="" loading="lazy" src="https://www.cowleygroves.com/photos/1/01.svg"/></div>
+<h2>Market Appraisal via Experienced Agents</h2>
+</div>
+</li>
+<li>
+<div class="feature">
+<div class="image"><img onload="this.className='animate'" class="" loading="lazy" src="https://www.cowleygroves.com/photos/1/02.svg"/></div>
+<h2>Professional Quality Photography</h2>
+</div>
+</li>
+<li>
+<div class="feature">
+<div class="image"><img onload="this.className='animate'" class="" loading="lazy" src="https://www.cowleygroves.com/photos/1/03.svg"/></div>
+<h2>First Class Service from Registration to Completion</h2>
+</div>
+</li>
+<li>
+<div class="feature">
+<div class="image"><img onload="this.className='animate'" class="" loading="lazy" src="https://www.cowleygroves.com/photos/1/04.svg"/></div>
+<h2>24/7 Access to the CG Team</h2>
+</div>
+</li>
+</ul>
+</div>
+
+
+
+<!-- Save Search Modal -->
+<div class="modal fade" id="saveSearch" tabindex="-1" role="dialog" aria-labelledby="saveSearchLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
+    </div>
+</div>
+
+</div>
+
+<div id="footer" class="tr-gone">
+
+    <div class="container footer_address">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3">
+       <h3 class="upper bold">Douglas</h3><a href="01624 625888">01624 625888</a><span>18 Victoria Street<br/>Douglas<br/>IM1 2LQ<br/></span>
+            <a href="mailto:douglas@cowleygroves.com">douglas@cowleygroves.com</a>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+         <h3 class="upper bold">Commercial & Rentals</h3><a href="01624 625888">01624 625888</a><span>18 Victoria Street<br/>Douglas<br/>IM1 2LQ<br/></span>
+            <a href="mailto:rentals@cowleygroves.com">rentals@cowleygroves.com</a>
+            <a href="mailto:commercial@cowleygroves.com">commercial@cowleygroves.com</a>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+         <h3 class="upper bold">Ramsey</h3><a href="01624 812823">01624 812823</a><span>9 Parliament Street<br/>Ramsey<br/>IM8 1AS<br/></span>
+            <a href="mailto:ramsey@cowleygroves.com">ramsey@cowleygroves.com</a>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <img src="https://www.cowleygroves.com/images/bronze.png" />
+        </div>
+
+    </div>
+    </div>
+
+    <ul id="footer_menu">    <li><a class="anim-200" href="https://www.cowleygroves.com/contact-us">Contact Us</a></li>
+        <li><a class="anim-200" href="https://www.cowleygroves.com/privacy-policy">Privacy Policy</a></li>
+    </ul>
+        <div class="social">
+            <a target="_blank" class="anim-300 fa fa-facebook facebook social-icon" href="https:\\www.facebook.com\CowleyGrovesiom"></a>
+            <a target="_blank" class="anim-300 fa fa-twitter twitter social-icon" href="https:\\twitter.com\CowleyGrovesiom"></a>
+        </div>
+
+
+    <div class="disclaimer">
+        <span id="copyright">&copy; Cowley Groves 2026</span>
+        <span  id="scorch"><a target="_blank" href="http://www.scorch.im" title="Scorch">Web design & development by Scorch Isle of Man</a></span>
+    </div>
+
+</div>
+
+</div>
+</div><!-- wrapper -->
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://www.cowleygroves.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://www.cowleygroves.com/js/jquery.smoothState.js"></script>
+<script src="https://s3.eu-west-2.amazonaws.com/scorch-js/blazy.js"></script>
+<script src="https://www.cowleygroves.com/js/waypoints.min.js"></script>
+<script src="https://www.cowleygroves.com/js/init.js?v=1"></script>
+
+<script>
+
+    jQuery('.videobg').removeClass('off');
+
+    // Video Background
+    var timeoutId;
+    var $videoBgAspect = jQuery(".videobg-aspect");
+    var $videoBgWidth = jQuery(".videobg-width");
+    var videoAspect = $videoBgAspect.outerHeight() / $videoBgAspect.outerWidth();
+
+    function videobgEnlarge() {
+        windowAspect = (jQuery(window).height() / jQuery(window).width());
+        if (windowAspect > videoAspect) {
+            $videoBgWidth.width((windowAspect / videoAspect) * 100 + '%');
+        } else {
+            $videoBgWidth.width(100 + "%")
+        }
+    }
+
+    jQuery(window).resize(function() {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(videobgEnlarge, 100);
+    });
+
+    jQuery(function() {
+        videobgEnlarge();
+    });
+
+        jQuery.ajax({
+            url: "https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js",
+            dataType: "script",
+            cache: true
+        }).done(function () {
+            jQuery(document).ready(function () {
+                jQuery('.form-select').select2();
+            });
+        });
+
+
+jQuery('#home_search ul li a').click(function(e){
+    e.preventDefault();
+    var target = jQuery(this).data('target');
+    jQuery('#home_search ul li a,.search_panel').removeClass('active');
+    jQuery(this).addClass('active');
+    jQuery('#'+target).addClass('active');
+});
+
+</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+    function validateHomeValuationForm() {
+        const form = $('#ContactForm');
+        const requiredFields = ['first_name', 'email', 'phone'];
+        let isValid = true;
+
+        // Clear previous error states and restore original placeholders
+        form.find('input').each(function(){
+            const $inp = $(this);
+            if ($inp.data('origPlaceholder') !== undefined) {
+                $inp.attr('placeholder', $inp.data('origPlaceholder'));
+            }
+            $inp.removeClass('has-error');
+        });
+
+        requiredFields.forEach(field => {
+            const input = form.find(`[name="${field}"]`);
+            const val = input.val();
+            if (!val || !val.toString().trim()) {
+                isValid = false;
+                if (input.data('origPlaceholder') === undefined) {
+                    input.data('origPlaceholder', input.attr('placeholder'));
+                }
+                input.addClass('has-error');
+                input.attr('placeholder', 'This field is required');
+            }
+        });
+
+        return isValid;
+    }
+
+    function onSubmit(token) {
+        var form = $('#ContactForm');
+        var url = form.attr('action');
+
+        if (!validateHomeValuationForm()) {
+            try { grecaptcha.reset(); } catch (e) {}
+            $('.g-recaptcha').prop('disabled', false);
+            return false;
+        }
+
+        // Prevent multiple submissions
+        if (form.data('submitting')) { return false; }
+        form.data('submitting', true);
+        var $btn = form.find('.g-recaptcha');
+        $btn.prop('disabled', true).addClass('disabled');
+        form.addClass('is-submitting').animate({ opacity: 0.5 }, 200);
+
+        $.ajax({
+            type: "POST",
+            url: url,
+            data: form.serialize(),
+            success: function(data) {
+                if(data == 'true'){
+                    $('#ContactForm').html('<div class=\"alert alert-success\"><h2>Thank you, your message has been sent</h2></div>');
+                }else{
+                    $('#ContactForm').append('<div class=\"alert alert-danger\"><h2>Sorry, something went wrong</h2></div>');
+                    form.removeClass('is-submitting').animate({ opacity: 1 }, 200);
+                    $btn.prop('disabled', false).removeClass('disabled');
+                    form.data('submitting', false);
+                    try { grecaptcha.reset(); } catch (e) {}
+                }
+            },
+            error: function(){
+                $('#ContactForm').append('<div class=\"alert alert-danger\"><h2>Sorry, something went wrong</h2></div>');
+                form.removeClass('is-submitting').animate({ opacity: 1 }, 200);
+                $btn.prop('disabled', false).removeClass('disabled');
+                form.data('submitting', false);
+                try { grecaptcha.reset(); } catch (e) {}
+            }
+        });
+    }
+</script>
+<style>
+    input.has-error { border-color:#dc3545; }
+    .is-submitting { pointer-events: none; }
+</style>
+
+
+<script>
+    jQuery(document).on('submit','#searchSave',function(e){
+        e.preventDefault();
+        $.ajax({
+            url:"https://www.cowleygroves.com/save-search",
+            method:'POST',
+            headers: { 'X-CSRF-TOKEN': jQuery(this).find('input[name="_token"]').val() },
+            data:$("#FilterForm").serialize() + $( "#searchSave" ).serialize(),
+            success: function(html,textStatus) {
+                jQuery('#saveSearch .modal-body').html('<div class="notice">Your property alert has been created, you can access this alert at any time from your account page.</div>');
+            }
+        })
+    });
+
+
+    jQuery('.save_button').click(function(e){
+        e.preventDefault();
+        console.log('save clicked');
+                $.ajax({
+            url:"https://www.cowleygroves.com/modals/auth",
+            method:'GET',
+            success: function(html) {jQuery('#saveSearch .modal-content').html(html); }
+        });
+            });
+</script>
+
+<script>
+    const animationDuration = 1500;
+    const frameDuration = 1000 / 60;
+    const totalFrames = Math.round( animationDuration / frameDuration );
+    const easeOutQuad = t => t * ( 2 - t );
+    const animateCountUp = el => {
+        let frame = 0;
+        const countTo = parseInt( el.innerHTML, 10 );
+        const counter = setInterval( () => {
+            frame++;
+            const progress = easeOutQuad( frame / totalFrames );
+            const currentCount = Math.round( countTo * progress );
+            if ( parseInt( el.innerHTML, 10 ) !== currentCount ) { el.innerHTML = currentCount.toLocaleString(); }
+            if ( frame === totalFrames ) { clearInterval( counter ); }
+        }, frameDuration );
+    };
+    const runAnimations = () => {
+        jQuery('#stats').addClass('in');
+        const countupEls = document.querySelectorAll('.countup');
+        countupEls.forEach( animateCountUp );
+    };
+
+
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth));
+    }
+    const box = document.querySelector('#stats');
+    document.addEventListener('scroll', function () {if(isInViewport(box) && !jQuery('#stats').hasClass('in')){ runAnimations(); console.log('in'); }}, {passive: true});
+
+</script>
+<!-- EU cookie law -->
+<link rel="stylesheet" href="https://www.cowleygroves.com/css/cookie.css">
+<script src="https://www.cowleygroves.com/js/cookie.js" type="text/javascript"></script>
+</body>
+</html>
