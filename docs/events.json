@@ -1,21 +1,21 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-23T03:43:17+00:00",
- "lastUpdated": "03:43 UTC",
- "totalCount": 170,
+ "fetchedAt": "2026-11-23T15:57:06+00:00",
+ "lastUpdated": "15:57 UTC",
+ "totalCount": 174,
  "categories": {
-  "Festive": 32,
+  "Festive": 33,
   "Family & Kids": 8,
   "Music": 35,
   "Theatre & Comedy": 29,
   "Film": 12,
-  "Arts & Workshops": 9,
+  "Arts & Workshops": 10,
   "Heritage": 2,
   "Talks & Learning": 16,
-  "Sport": 9,
+  "Sport": 10,
   "Markets & Fairs": 1,
-  "Community": 2,
+  "Community": 3,
   "Other": 15
  },
  "sources": [
@@ -34,13 +34,13 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 58,
+   "count": 62,
    "status": "ok"
   },
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 16,
+   "count": 17,
    "status": "ok"
   }
  ],
@@ -398,6 +398,32 @@
    ]
   },
   {
+   "title": "Southern Photographic Society Anniversary Exhibition: Favourites at 55",
+   "venue": "Erin Arts Centre",
+   "startDate": "2026-11-25",
+   "endDate": "2027-01-15",
+   "isTbc": false,
+   "duration": 51.0,
+   "tags": [
+    "Arts & Workshops"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": true,
+   "description": "Southern Photographic Society’s 55th Anniversary Exhibition For more than half a century, members of the Southern Photographic Society have gathered with the same simple purpose: to look closely at the world and make something lasting from what they see. To mark the Colby club’s 55th anniversary, the current members are bringing new work onto the wall. ‘Favourites At 55’ is an exhibition of printed images created by our members, with each photographer choosing a few of their own favourites to share. Landscape and portrait, street and studio, quiet detail and sweeping view: each frame is a moment someone noticed, and a picture they are proud of. Come and see the world as our photographers see it now. Stand close enough to take in the detail, then step back and let the whole picture come into focus. Preview Evening: Wednesday 25th November 6.30 pm – 8 pm Exhibition Runs: 25th November to…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/southern-photographic-exhibition-nov-2026.jpg",
+   "time": "",
+   "price": "",
+   "url": "https://www.erinartscentre.com/event/southern-photographic-society-anniversary-exhibition-favourites-at-55/",
+   "id": "erin-11819",
+   "sourceKey": "erin",
+   "category": "Arts & Workshops",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://southernphotographicsociety.org/",
+   "soldOut": false,
+   "occurrences": []
+  },
+  {
    "title": "Creative Sector Sessions - Communicating a Sense of Place in your Creative Practice",
    "venue": "Villa Marina Colonnade Suite",
    "startDate": "2026-11-26",
@@ -540,7 +566,7 @@
    ],
    "source": "Villa Marina & Gaiety",
    "recurring": true,
-   "description": "Certificate: 12A No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Running time: 1hr 56min BBFC Criteria: moderate horror, threat, violence Synopsis: A bitter and miserly old man is visited by three spirits who aim to show him the error of his ways in this retelling of Charles Dickens' A Christmas Carol. Captioned screening: Sunday 28th November 2:30pm",
+   "description": "Certificate: 12A No one younger than 12 may see a 12A film in a cinema unless accompanied by an adult. Running time: 1hr 56min BBFC Criteria: moderate horror, threat, violence Synopsis: A bitter and miserly old man is visited by three spirits who aim to show him the error of his ways in this retelling of Charles Dickens' A Christmas Carol. Captioned screening: Sunday 28th November 2:30pm Parent & Baby: Tuesday 1st December 10:30am",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/zajn3csdq0elqu6ydh7mw1z3oslx/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
    "time": "",
    "price": "",
@@ -1511,6 +1537,39 @@
    "occurrences": [
     {
      "date": "2026-12-05",
+     "time": ""
+    }
+   ]
+  },
+  {
+   "title": "Teens and Tweens Christmas Creative Workshop",
+   "venue": "Juliette's",
+   "startDate": "2026-12-06",
+   "endDate": "2026-12-06",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Festive",
+    "Family & Kids",
+    "Arts & Workshops"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "This one's all about getting creative! You'll each have your own natural wreath to decorate and personalise, with a whole stash of festive goodies to choose from… ribbons, baubles, flowers, berries, pine cones and lots more. Go all out with…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FTeens_and_Tweens_Christmas_Crafts_800_x_600_px__733205260.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/teens-and-tweens-christmas-creative-workshop-p1908821",
+   "id": "visitiom-1908821",
+   "sourceKey": "visitiom",
+   "category": "Festive",
+   "area": "Peel",
+   "address": "Juliette's, 7a Michael Street, Peel, Isle of Man, IM5 1HA",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-12-06",
      "time": ""
     }
    ]
@@ -4106,6 +4165,37 @@
    ]
   },
   {
+   "title": "RunThrough Isle of Man Run the TT Grandstand Half Marathon & 10k",
+   "venue": "TT Grandstand Pit Lane",
+   "startDate": "2027-05-01",
+   "endDate": "2027-05-01",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Sport"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "The Run the TT Grandstand Half Marathon and 10k aims to: Provide the local running community with the opportunity to run a mass-participation event distances at this iconic venue. Attract visitors over to the island and the local area. Provide…",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FScreenshot_2026-11-11_at_17.50.40_1__1669749631.png&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/runthrough-isle-of-man-run-the-tt-grandstand-half-marathon-and-10k-p1909331",
+   "id": "visitiom-1909331",
+   "sourceKey": "visitiom",
+   "category": "Sport",
+   "area": "Douglas",
+   "address": "TT Grandstand Pit Lane, Glencrutchery Road, Douglas,, Isle of Man, IM2 6DA",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-05-01",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Isle of Man British and Irish Classic Sports Car Weekend 2027",
    "venue": "TT Grandstand",
    "startDate": "2027-05-05",
@@ -4541,6 +4631,37 @@
    ]
   },
   {
+   "title": "Celebrate Our Swifts",
+   "venue": "Market Square",
+   "startDate": "2027-06-27",
+   "endDate": "2027-06-27",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Community"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Join Manx Bird Club and Manx BirdLife for a community celebration to raise awareness of Swifts on the Isle of Man and share ways we can help their declining population.",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FCelebrate_Our_Swifts_Photo_for_Visit_Isle_of_Man_1__2053667699.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/celebrate-our-swifts-p1908831",
+   "id": "visitiom-1908831",
+   "sourceKey": "visitiom",
+   "category": "Community",
+   "area": "Castletown",
+   "address": "Market Square, Castletown, Isle of Man, IM9 1LQ",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-06-27",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Scott Bennett - Stuff",
    "venue": "Gaiety Theatre",
    "startDate": "2027-06-30",
@@ -4603,7 +4724,7 @@
    ]
   },
   {
-   "title": "The Night Sky Show - A Sky Full of Hope",
+   "title": "The Night Sky Show: A Sky Full of Hope",
    "venue": "Villa Marina Royal Hall",
    "startDate": "2027-07-03",
    "endDate": "2027-07-03",
