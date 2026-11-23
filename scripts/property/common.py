@@ -742,6 +742,9 @@ def _garforth(html, url, agent):
     price_el = main.select_one(".head-price")
     price_text = price_el.get_text(" ", strip=True) if price_el else ""
     header_text = main.get_text(" ", strip=True)[:1500]
+    # The first thing in the header is the badge: "Let", "Sold",
+    # "Offer Accepted", "Sold Subject to Contract"...
+    first = main.get_text(" | ", strip=True).split(" | ", 1)[0]
 
     origin = agent.origin.get(url, "")
     commercial = "Commercial" in origin
@@ -781,6 +784,7 @@ def _garforth(html, url, agent):
         "bathrooms": stats.get("bath"),
         "prop_type": None if commercial else prop_type,
         "status": _status_in(header_text),
+        "raw_status": first if len(first) < 40 else "",
         "category": category,
         "note": note,
     }
@@ -839,6 +843,55 @@ def _cowley(html, url):
         "bathrooms": num("Bathroom") or num("Bathrooms"),
         "prop_type": None if commercial else (parse_type(ptype_raw) or parse_type(address)),
         "category": "commercial" if commercial else ("land" if land else "residential"),
+        "note": note,
+    }
+
+
+def _chapman(html, url):
+    """Chapman Chartered Surveyors (commercial). Page layout:
+    h1 "Unit 7, Villa Marina Arcade – Douglas"; .contentsp has the price,
+    tenure (Freehold = for sale, Leasehold = to let) and use classes."""
+    soup = BeautifulSoup(html, "html.parser")
+    art = soup.select_one("article") or soup
+    h1 = art.find("h1")
+    heading = h1.get_text(" ", strip=True) if h1 else ""
+    name, _, town = heading.rpartition("–") if "–" in heading else (heading, "", "")
+    name, town = name.strip(" -–"), town.strip(" -–")
+    name = re.sub(r"\s*[–-]\s*investment sale\s*$", "", name, flags=re.I)
+    box = art.select_one(".contentsp")
+    box_text = box.get_text(" ", strip=True) if box else ""
+    price_el = art.select_one(".contentsp .price") or art.select_one(".price")
+    price_text = price_el.get_text(" ", strip=True) if price_el else ""
+    uses = art.select_one(".contentsp .smalltxt")
+    uses = uses.get_text(" ", strip=True) if uses else ""
+    content = art.select_one(".property-content")
+    content = content.get_text(" ", strip=True) if content else ""
+
+    low = f"{box_text} {price_text}".lower()
+    if "leasehold" in low or re.search(r"pcm|per annum|\bp\.?a\.?\b|per sq|to let|rent", price_text, re.I):
+        hint = "rent"
+    else:
+        hint = "sale"
+    note = None
+    if re.search(r"per\s*sq\.?\s*f", price_text, re.I):
+        # Quoted per square foot: no monthly figure to show.
+        price, qualifier = None, "unknown"
+        note = price_text.replace("Sq Ft", "sq ft")
+    else:
+        price, qualifier, _ = parse_price(price_text, hint)
+        if hint == "rent":
+            price, note = _annual_to_pcm(price, price_text)
+
+    residential = uses.strip().lower() == "residential"
+    address = f"{name}, {town}" if town and town.lower() not in name.lower() else name
+    return {
+        "address": address,
+        "town": town,
+        "price": price, "qualifier": qualifier, "listing_type": hint,
+        "status": _status_in(f"{heading} {box_text} {content[:400]}"),
+        "category": "residential" if residential else "commercial",
+        "bedrooms": parse_int(content, BEDS) if residential else None,
+        "uses": uses,
         "note": note,
     }
 
@@ -949,6 +1002,10 @@ def scrape_listing(agent, url):
         if "/rentals/" in url:
             slug = f"rent-{slug}"  # a rental and a sale can share a street slug
         f = _garforth(res.text, url, agent)
+        # "Let" / "Sold" badges mean it's gone; "Sold Subject to Contract"
+        # and "Offer Accepted" stay, like the other agents' Sold STC.
+        if f["raw_status"].strip().lower() in ("let", "sold", "completed", "withdrawn") and not f["status"]:
+            return None
         address = _clean_address(f["address"], agent.name)
         locality = parse_place(address)
         postcode = f["postcode"]
@@ -975,6 +1032,18 @@ def scrape_listing(agent, url):
         bedrooms, bathrooms = f["bedrooms"], f["bathrooms"]
         prop_type = f["prop_type"]
         status = _status_in(f["raw_status"])
+        category = f["category"]
+        price_note = f["note"]
+    elif agent.key == "chp":
+        f = _chapman(res.text, url)
+        address = _clean_address(f["address"], agent.name)
+        locality = parse_place(f"{address} {f['town']}")
+        postcode = None
+        price, qualifier = f["price"], f["qualifier"]
+        type_hint = f["listing_type"]
+        bedrooms, bathrooms = f["bedrooms"], None
+        prop_type = None
+        status = f["status"]
         category = f["category"]
         price_note = f["note"]
     elif agent.key == "pre":
