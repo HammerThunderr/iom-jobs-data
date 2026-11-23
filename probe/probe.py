@@ -1,12 +1,13 @@
-import os, subprocess, json, shutil, collections
-OUT = "probe/out/prop3"
+import os, subprocess, json, re, requests
+OUT = "probe/out/prop4"
 os.makedirs(OUT, exist_ok=True)
-env = dict(os.environ, PROPERTY_AGENTS="cg,gg")
+UA = {"User-Agent": "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"}
+for k, u in {
+  "rent_plain": "https://www.garforthgray.im/assets/inc/ajax.php?submitform=1&order=latest&keyword=&ajaxGetRentalsResults=1",
+  "rent_excl": "https://www.garforthgray.im/assets/inc/ajax.php?submitform=1&order=latest&page=1&keyword=&ajaxGetRentalsResults=1&excludeRented=1",
+}.items():
+    r = requests.get(u, headers=UA, timeout=30)
+    open(f"{OUT}/{k}.txt", "w").write(re.sub(r"[A-Za-z0-9_\-]{32,}", "[x]", r.text[:200000]))
+env = dict(os.environ, PROPERTY_AGENTS="cg,gg", OUTPUT_PATH=os.path.abspath(f"{OUT}/out.json"))
 p = subprocess.run(["python", "run.py"], cwd="scripts/property", env=env, capture_output=True, text=True, timeout=3000)
-open(f"{OUT}/log.txt", "w").write(p.stdout[-60000:] + "\n---STDERR---\n" + p.stderr[-8000:])
-try:
-    d = json.load(open("docs/property/properties.json"))
-    keep = [x for x in d["listings"] if x["agent"] in ("Cowley Groves", "Garforth Gray")]
-    json.dump({"meta": d.get("meta"), "listings": keep}, open(f"{OUT}/out.json", "w"), indent=1)
-except Exception as e:
-    open(f"{OUT}/err.txt", "w").write(str(e))
+open(f"{OUT}/log.txt", "w").write(p.stdout[-30000:] + "\n---STDERR---\n" + p.stderr[-8000:])
