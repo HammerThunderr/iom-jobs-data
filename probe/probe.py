@@ -1,27 +1,51 @@
 import requests, os, re, json
-from bs4 import BeautifulSoup
-OUT = "probe/out/health"
-os.makedirs(OUT, exist_ok=True)
-URLS = {
- "csw": "https://publichealth.gov.im/community-safety-wellbeing-information-and-support/",
- "support": "https://publichealth.gov.im/support-and-contacts/",
- "esjcr": "https://www.gov.im/about-the-government/departments/home-affairs/communications-division/emergency-services-joint-control-room/",
- "esjcr_contact": "https://www.gov.im/about-the-government/departments/home-affairs/communications-division/emergency-services-joint-control-room/contact-us/",
+from urllib.parse import urljoin, urlparse
+OUT = "probe/out/agents"; os.makedirs(OUT, exist_ok=True)
+UA = {"User-Agent": "ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"}
+SITES = {
+ "cg": "https://www.cowleygroves.com/",
+ "gg": "https://www.garforthgray.im/",
+ "koops": "https://koopsandco.com/",
+ "pros": "https://www.prosearch.co.im/",
+ "mm": "https://www.manxmove.im/search-list/",
 }
-UAS = ["ManxOneBot/1.0 (+https://manxone.hammerlabs.app)"]
+KEY = re.compile(r"propert|sale|rent|let|search|listing|buy|homes", re.I)
+def red(t):
+    t = re.sub(r"AIza[0-9A-Za-z_\-]{20,}", "[k]", t)
+    t = re.sub(r"(?<![/\w.-])[A-Za-z0-9_\-+=]{32,}(?![\w.-]*\.(?:jpg|png|webp|js|css))", "[x]", t)
+    return t
 log = {}
-for k, u in URLS.items():
-    for ua in UAS:
+for key, home in SITES.items():
+    host = urlparse(home).netloc
+    entry = log.setdefault(key, {})
+    try:
+        r = requests.get(urljoin(home, "/robots.txt"), headers=UA, timeout=25)
+        entry["robots"] = [r.status_code, r.text[:1500]]
+    except Exception as e:
+        entry["robots"] = str(e)
+    seen, queue = set(), [home]
+    pages = []
+    while queue and len(pages) < 7:
+        u = queue.pop(0)
+        if u in seen: continue
+        seen.add(u)
         try:
-            r = requests.get(u, headers={"User-Agent": ua}, timeout=30)
-            soup = BeautifulSoup(r.text, "html.parser")
-            for t in soup(["script", "style", "noscript", "svg"]): t.decompose()
-            main = soup.find("main") or soup.body or soup
-            txt = main.get_text("\n", strip=True)
-            txt = re.sub(r"[A-Za-z0-9_\-]{32,}", "[x]", txt)
-            open(f"{OUT}/{k}.txt", "w").write(txt)
-            log[k] = [r.status_code, len(txt), txt[:120]]
+            r = requests.get(u, headers=UA, timeout=30)
         except Exception as e:
-            log[k] = str(e)
+            pages.append([u, str(e)]); continue
+        html = r.text
+        fn = f"{OUT}/{key}_{len(pages)}.html"
+        open(fn, "w").write(red(html))
+        apis = sorted(set(re.findall(r"""["'](https?://[^"'\s]*(?:api|ajax|json|feed|graphql|search)[^"'\s]*)["']""", html, re.I)))[:30]
+        apis += sorted(set(re.findall(r"""["'](/[^"'\s]*(?:api|ajax|json|wp-json|feed)[^"'\s]*)["']""", html, re.I)))[:30]
+        pages.append([u, r.status_code, len(html), fn, apis])
+        links = []
+        for a in re.findall(r'href="([^"#]+)"', html):
+            full = urljoin(u, a)
+            if urlparse(full).netloc == host and KEY.search(urlparse(full).path) and full not in seen:
+                links.append(full)
+        for l in links[:40]:
+            if l not in queue: queue.append(l)
+    entry["pages"] = pages
 json.dump(log, open(f"{OUT}/log.json", "w"), indent=1)
-print(json.dumps(log, indent=1))
+print(json.dumps(log, indent=1)[:5000])
