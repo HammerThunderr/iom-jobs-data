@@ -1,15 +1,15 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-24T03:20:32+00:00",
- "lastUpdated": "03:20 UTC",
- "totalCount": 174,
+ "fetchedAt": "2026-11-24T15:51:56+00:00",
+ "lastUpdated": "15:51 UTC",
+ "totalCount": 175,
  "categories": {
   "Festive": 33,
   "Family & Kids": 8,
   "Music": 35,
   "Theatre & Comedy": 29,
-  "Film": 12,
+  "Film": 13,
   "Arts & Workshops": 10,
   "Heritage": 2,
   "Talks & Learning": 16,
@@ -22,13 +22,13 @@
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 101,
+   "count": 102,
    "status": "ok"
   },
   {
    "key": "mnh",
    "name": "Manx National Heritage",
-   "count": 17,
+   "count": 18,
    "status": "ok"
   },
   {
@@ -436,12 +436,11 @@
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873688072/events",
-   "soldOut": true,
+   "soldOut": false,
    "occurrences": [
     {
      "date": "2026-11-27",
-     "time": "19:30",
-     "soldOut": true
+     "time": "19:30"
     }
    ]
   },
@@ -677,6 +676,42 @@
    ]
   },
   {
+   "title": "Castletown Christmas Light Switch On and Late Night Shopping at 1 Market Square",
+   "venue": "Castletown Market Square",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Festive",
+    "Heritage",
+    "Markets & Fairs"
+   ],
+   "source": "Manx National Heritage",
+   "recurring": false,
+   "description": "4.30pm – 6.30pm – late night shopping at 1 Market Square 5:30pm – Christmas Lights Switch On Featuring special performances and highlights: Lantern Parade Castletown Metropolitan Silver Band Performances from Castle Rushen High School Maddie Brookfield Alyth Braithwaite Bring your family and friends down to share in the magic. We can’t wait to see you there!",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2017/12/MMChristmas-tree-closeup-1000x575.jpg",
+   "time": "16:30 – 18:30",
+   "price": "FREE",
+   "url": "https://manxnationalheritage.im/whats-on/detail/castletown-christmas-light-switch-on/",
+   "id": "mnh-castletown-christmas-light-switch-on",
+   "sourceKey": "mnh",
+   "category": "Festive",
+   "area": "Castletown",
+   "address": "Castletown Market Square",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-28",
+     "time": "16:30"
+    }
+   ],
+   "alsoListedOn": [
+    "Visit Isle of Man"
+   ]
+  },
+  {
    "title": "Manx ABC vs Merseyside - A Night of Olympic-Style Amateur Boxing",
    "venue": "Villa Marina Royal Hall",
    "startDate": "2026-11-28",
@@ -735,38 +770,6 @@
     {
      "date": "2026-11-28",
      "time": "19:30"
-    }
-   ]
-  },
-  {
-   "title": "Castletown Christmas Lights Switch On",
-   "venue": "Market Square",
-   "startDate": "2026-11-28",
-   "endDate": "2026-11-28",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Festive",
-    "Heritage"
-   ],
-   "source": "Visit Isle of Man",
-   "recurring": false,
-   "description": "Castletown Town Commissioners Christmas Lights Switch On.",
-   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fimages%2Fnoimage.jpg&action=ProductListGallery",
-   "time": "",
-   "price": "",
-   "url": "https://www.visitisleofman.com/whats-on/castletown-christmas-lights-switch-on-p1817691",
-   "id": "visitiom-1817691",
-   "sourceKey": "visitiom",
-   "category": "Festive",
-   "area": "Castletown",
-   "address": "Market Square, Castletown, Isle of Man, IM9 1NR",
-   "bookingUrl": "",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-28",
-     "time": ""
     }
    ]
   },
@@ -1370,7 +1373,6 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
-    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -1400,6 +1402,7 @@
    "soldOut": false,
    "occurrences": [],
    "alsoListedOn": [
+    "Visit Isle of Man",
     "Visit Isle of Man"
    ]
   },
@@ -1789,6 +1792,73 @@
     {
      "date": "2026-12-11",
      "time": "19:30"
+    }
+   ]
+  },
+  {
+   "title": "Hexed",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-12-11",
+   "endDate": "2026-12-17",
+   "isTbc": false,
+   "duration": 6.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": true,
+   "description": "Certificate: PG PG film is suitable for general viewing, but some scenes may be unsuitable for young children. Running time: 1hr 49min BBFC Criteria: Synopsis: In DISNEY’S HEXED, an impulsive and unconventional teenage girl named Billie Doe (voiced by Hailee Steinfeld) discovers secret magical abilities which, once unleashed, hurtle her out of suburbia and into a spectacle-filled journey through a vast witch realm called Hexe. Forced to team up with her cautious mother, Alice (voiced by Rashida Jones), they uncover family mysteries that could change the world of witches forever. Relaxed screening - Sunday 13th December 2:30pm",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/pch397wahb8iu35aj4umbjib87v5/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873691958/events",
+   "id": "villagaiety-873691958",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873691958/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-12-11",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-12-12",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-12-12",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-12-13",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-12-14",
+     "time": "16:15"
+    },
+    {
+     "date": "2026-12-15",
+     "time": "16:15"
+    },
+    {
+     "date": "2026-12-16",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-12-16",
+     "time": "19:00"
+    },
+    {
+     "date": "2026-12-17",
+     "time": "14:30"
+    },
+    {
+     "date": "2026-12-17",
+     "time": "19:00"
     }
    ]
   },
