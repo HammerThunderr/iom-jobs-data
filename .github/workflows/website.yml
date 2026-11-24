@@ -1,0 +1,82 @@
+name: Website (build & publish)
+
+# Builds the Manx One website in web/ from the data in docs/ and publishes
+# it to Cloudflare Pages (project "manxone-web").
+#
+# Publishing needs two repository secrets (Settings -> Secrets and variables
+# -> Actions):
+#   CLOUDFLARE_API_TOKEN   an API token with "Cloudflare Pages: Edit"
+#   CLOUDFLARE_ACCOUNT_ID  your Cloudflare account ID
+# Without them the site is still built and checked, just not published.
+#
+# Optional repository variable SITE_URL sets the public address used for
+# canonical links and the sitemap (default https://manxone-web.pages.dev).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/website.yml'
+  schedule:
+    # Every 2 hours, so jobs, events and property pages stay current.
+    - cron: '23 */2 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: website
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: web
+    env:
+      SITE_URL: ${{ vars.SITE_URL || 'https://manxone-web.pages.dev' }}
+      CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check the icon font loads
+        run: |
+          URL=$(grep -o 'https://fonts.googleapis.com/css2?family=Material+Symbols[^"]*' dist/index.html | head -1 | sed 's/&amp;/\&/g')
+          CODE=$(curl -s -o /dev/null -w '%{http_code}' -A 'Mozilla/5.0 Chrome/120' "$URL")
+          echo "Icon font: $CODE"
+          test "$CODE" = "200"
+
+      - name: Check pages
+        run: |
+          COUNT=$(find dist -name index.html | wc -l)
+          echo "Pages: $COUNT"
+          test "$COUNT" -gt 300
+          test -s dist/sitemap.xml
+
+      - name: Publish to Cloudflare Pages
+        if: env.CF_TOKEN != ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@3.114.17 pages project create manxone-web --production-branch=main 2>/dev/null || true
+          npx --yes wrangler@3.114.17 pages deploy dist --project-name=manxone-web --branch=main --commit-dirty=true
+
+      - name: Not published
+        if: env.CF_TOKEN == ''
+        run: echo "::notice::Website built but not published - add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID secrets to publish."

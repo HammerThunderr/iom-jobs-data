@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import SaveButton from '../../components/SaveButton.astro';
+import { jobs, type Job } from '../../lib/jobs';
+import { excerpt, richText, telHref, fmtDate, isoDay } from '../../lib/format';
+
+export function getStaticPaths() {
+  return jobs().map((job) => ({ params: { slug: job.slug }, props: { job } }));
+}
+const { job } = Astro.props as { job: Job };
+const closed = job.closingIso && job.closingIso < isoDay();
+const related = jobs()
+  .filter((j) => j.id !== job.id && j.category === job.category && (!j.closingIso || j.closingIso >= isoDay()))
+  .slice(0, 5);
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title: job.title,
+  description: `<p>${job.notes.replace(/\n+/g, '</p><p>')}</p>`,
+  datePosted: isoDay(),
+  ...(job.closingIso ? { validThrough: `${job.closingIso}T23:59:59+00:00` } : {}),
+  employmentType: /part/i.test(job.hours) ? 'PART_TIME' : /full/i.test(job.hours) ? 'FULL_TIME' : /temp|fixed/i.test(job.duration) ? 'TEMPORARY' : 'OTHER',
+  hiringOrganization: { '@type': 'Organization', name: job.employer || 'Confidential' },
+  jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: job.address || 'Isle of Man', addressRegion: 'Isle of Man', addressCountry: 'IM' } },
+  identifier: { '@type': 'PropertyValue', name: 'Isle of Man JobCentre', value: job.id },
+  directApply: false,
+  url: job.url,
+};
+---
+<Layout title={`${job.title}${job.employer ? ` at ${job.employer}` : ''}`} description={excerpt(`${job.title} — ${job.employer}. ${job.hours}. ${job.notes}`, 155)} section="jobs" jsonld={jsonld}>
+  <PageHead title={job.title} sub={job.employer} icon="work" crumbs={[{ href: '/jobs/', label: 'Jobs' }]} />
+  <div class="wrap">
+    <div class="split">
+      <article class="card pad-lg">
+        {closed && <div class="notice warn"><Icon name="warning" /><p>The closing date for this vacancy has passed.</p></div>}
+        <div class="tags">
+          {job.category && <span class="tag info">{job.category}</span>}
+          {job.duration && <span class="tag">{job.duration}</span>}
+          {job.number && job.number !== '1' && <span class="tag">{job.number} positions</span>}
+        </div>
+        <div class="prose" set:html={richText(job.notes || 'See the full advert for details.')} />
+      </article>
+      <aside class="stack sticky">
+        <div class="card">
+          <dl class="kv">
+            {job.hours && <><dt>Hours</dt><dd>{job.hours}</dd></>}
+            {job.salary && <><dt>Salary</dt><dd>{job.salary}</dd></>}
+            {job.closing && <><dt>Closes</dt><dd>{job.closingIso ? fmtDate(job.closingIso + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' }) : job.closing}</dd></>}
+            {job.address && <><dt>Address</dt><dd>{job.address}</dd></>}
+            {job.contactName && <><dt>Contact</dt><dd>{job.contactName}</dd></>}
+            {job.phone && <><dt>Phone</dt><dd><a href={telHref(job.phone)}>{job.phone}</a></dd></>}
+            {job.email && <><dt>Email</dt><dd><a href={`mailto:${job.email}?subject=${encodeURIComponent(job.title)}`}>{job.email}</a></dd></>}
+            <dt>Reference</dt><dd>{job.id}</dd>
+          </dl>
+          <div class="btn-row">
+            <a class="btn" href={job.url} target="_blank" rel="noopener"><Icon name="open_in_new" /> View & apply</a>
+            <SaveButton kind="job" id={job.id} title={job.title} sub={job.employer} href={`/jobs/${job.slug}/`} />
+            <button class="btn ghost sm" type="button" data-share><Icon name="share" /> Share</button>
+          </div>
+          <p class="tiny muted mb0">Apply through the JobCentre advert. Manx One is not the employer or an agency.</p>
+        </div>
+        {related.length > 0 && (
+          <div class="card">
+            <h3>More in {job.category}</h3>
+            <ul class="plain-list">
+              {related.map((r) => <li><a href={`/jobs/${r.slug}/`}>{r.title}</a><br /><span class="tiny muted">{r.employer}</span></li>)}
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Layout>
+<script>
+  import { wireSaveButtons } from '../../lib/saved';
+  import { wireShare } from '../../lib/share';
+  wireSaveButtons();
+  wireShare();
+</script>

@@ -1,0 +1,83 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import Off from '../../components/Off.astro';
+import SaveButton from '../../components/SaveButton.astro';
+import { govJobs } from '../../lib/jobs';
+import { featureOff, load } from '../../lib/data';
+import { fmtDateTime, isoDay } from '../../lib/format';
+
+const off = featureOff('govJobs');
+const today = isoDay();
+const list = govJobs()
+  .filter((j) => !j.closingIso || j.closingIso >= today)
+  .sort((a, b) => String(a.closingIso ?? '9').localeCompare(String(b.closingIso ?? '9')));
+const depts = [...new Set(list.map((j) => j.department).filter(Boolean))].sort();
+const updated = load<any>('gov_jobs.json')?.lastUpdated || load<any>('gov_jobs.json')?.fetchedAt;
+const short = (d: string | null) => (d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '');
+---
+<Layout title="Isle of Man Government Jobs" description={`${list.length} Isle of Man Government and public service vacancies from JobTrain.`} section="govJobs">
+  <PageHead title="Government jobs" sub={`${list.length} public service vacancies from JobTrain`} icon="account_balance">
+    <span slot="meta">{updated && `Updated ${fmtDateTime(updated)}`}</span>
+    <span slot="meta"><a href="/jobs/">All JobCentre jobs →</a></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="toolbar">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Role, department or keyword" aria-label="Search government jobs" /></div>
+          <select class="input" id="dept" aria-label="Department">
+            <option value="all">All departments</option>
+            {depts.map((d) => <option value={d}>{d}</option>)}
+          </select>
+        </div>
+        <p class="count-line"><span id="count">{list.length}</span> vacancies, closing soonest first</p>
+        <div class="rows" id="list">
+          {list.map((j) => (
+            <div class="item" data-dept={j.department} data-closing={j.closingIso ?? '9999'} data-search={`${j.title} ${j.department} ${j.location} ${j.salary}`.toLowerCase()}>
+              <a class="grow" href={`/gov-jobs/${j.slug}/`}>
+                <div class="strong">{j.title}</div>
+                <div class="small muted">{j.department}</div>
+                <div class="meta-line">
+                  {j.salary && <span><Icon name="payments" />{j.salary}</span>}
+                  {j.location && <span><Icon name="location_on" />{j.location}</span>}
+                  {j.type && <span><Icon name="schedule" />{j.type}{j.hours && ` · ${j.hours}`}</span>}
+                  {j.closingIso && <span><Icon name="event_busy" />Closes {short(j.closingIso)}</span>}
+                </div>
+              </a>
+              <SaveButton kind="gov" id={j.id} title={j.title} sub={j.department} href={`/gov-jobs/${j.slug}/`} />
+            </div>
+          ))}
+        </div>
+        <p class="empty" id="empty" hidden><Icon name="search_off" />No vacancies match.</p>
+        <p class="source">Source: <a href="https://www.jobtrain.co.uk/iomgovjobs/" target="_blank" rel="noopener">Isle of Man Government vacancies (JobTrain)</a>. Apply through the official advert.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<script>
+  import { $$ } from '../../lib/client';
+  import { wireSaveButtons } from '../../lib/saved';
+  if (document.getElementById('list')) {
+    wireSaveButtons();
+    const q = document.getElementById('q') as HTMLInputElement;
+    const dept = document.getElementById('dept') as HTMLSelectElement;
+    const items = $$('#list > .item');
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+    const run = () => {
+      const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let n = 0;
+      for (const el of items) {
+        const ok = words.every((w) => el.dataset.search!.includes(w)) && (dept.value === 'all' || el.dataset.dept === dept.value) && el.dataset.closing! >= today;
+        el.hidden = !ok;
+        if (ok) n++;
+      }
+      document.getElementById('count')!.textContent = String(n);
+      document.getElementById('empty')!.hidden = n > 0;
+    };
+    q.addEventListener('input', run);
+    dept.addEventListener('change', run);
+    run();
+  }
+</script>

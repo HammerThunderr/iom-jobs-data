@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { telHref } from '../lib/format';
+
+const d = load<any>('driving.json');
+const list = (d?.instructors ?? []).sort((a: any, b: any) => a.name.replace(/^(Mr|Mrs|Ms|Miss|Dr)\.?\s+\S+\s+/, '').localeCompare(b.name.replace(/^(Mr|Mrs|Ms|Miss|Dr)\.?\s+\S+\s+/, '')));
+const areas = [...new Set(list.flatMap((i: any) => i.areas))].sort() as string[];
+const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6})$/, '$1 $2');
+---
+<Layout title="Driving Instructors on the Isle of Man" description={`${list.length} approved driving instructors on the Isle of Man, with areas covered, manual or automatic, motorcycle training and contact details.`} section="driving">
+  <PageHead title="Learn to drive" sub={`${list.length} approved driving instructors and how tests work`} icon="directions_car" />
+  <div class="wrap">
+    <div class="grid two" style="margin-bottom:18px">
+      <div class="card">
+        <h2>Useful numbers</h2>
+        <div class="rows">
+          {(d?.contacts ?? []).map((c: any) => <a href={telHref(c.phone)}><span class="grow"><strong>{c.name}</strong><br /><span class="small muted">{c.detail}</span></span><span class="nowrap"><Icon name="call" /> {fmtPhone(c.phone)}</span></a>)}
+        </div>
+      </div>
+      <div class="card">
+        <h2>Good to know</h2>
+        <ul class="small">{(d?.notes ?? []).map((n: string) => <li>{n}</li>)}</ul>
+        <p class="small muted mb0">{d?.registrarNote}</p>
+      </div>
+    </div>
+    <div class="toolbar">
+      <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Instructor name" aria-label="Search instructors" /></div>
+      <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map((a) => <option>{a}</option>)}</select>
+    </div>
+    <div class="chips" id="type">
+      <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" data-value="manual" aria-pressed="false">Manual</button>
+      <button class="chip" type="button" data-value="automatic" aria-pressed="false">Automatic</button>
+      <button class="chip" type="button" data-value="motorcycle" aria-pressed="false">Motorcycle</button>
+    </div>
+    <p class="count-line"><span id="count">{list.length}</span> instructors</p>
+    <div class="grid" id="list">
+      {list.map((i: any) => (
+        <div class="card" data-areas={i.areas.join('|')} data-type={[...i.transmissions, i.motorcycle ? 'motorcycle' : ''].join('|')} data-search={`${i.name} ${i.areaLabel} ${i.category}`.toLowerCase()}>
+          <h3>{i.name}</h3>
+          <div class="tags">
+            {i.transmissions.map((t: string) => <span class="tag info" style="text-transform:capitalize">{t}</span>)}
+            {i.motorcycle && <span class="tag warn">Motorcycle</span>}
+            {i.qualifiedSince && <span class="tag">Since {i.qualifiedSince}</span>}
+          </div>
+          <p class="small muted"><Icon name="location_on" /> {i.areaLabel}</p>
+          <div class="btn-row">
+            {i.mobile && <a class="btn ghost sm" href={telHref(i.mobile)}><Icon name="call" /> {fmtPhone(i.mobile)}</a>}
+            {i.landline && <a class="btn ghost sm" href={telHref(i.landline)}><Icon name="call" /> {fmtPhone(i.landline)}</a>}
+            {i.email && <a class="btn ghost sm" href={`mailto:${i.email}`}><Icon name="mail" /> Email</a>}
+            {i.website && <a class="btn ghost sm" href={/^https?:/.test(i.website) ? i.website : `https://${i.website}`} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}
+          </div>
+        </div>
+      ))}
+    </div>
+    <p class="empty" id="empty" hidden>No instructors match.</p>
+    <p class="source">Source: <a href={d?.sourceUrl ?? d?.meta?.sourceUrl} target="_blank" rel="noopener">{d?.meta?.source}</a> (register dated {d?.meta?.registerDate}). {d?.meta?.disclaimer} {d?.meta?.licence}</p>
+  </div>
+</Layout>
+<script>
+  import { $$ } from '../lib/client';
+  const items = $$('#list > .card');
+  const q = document.getElementById('q') as HTMLInputElement;
+  const area = document.getElementById('area') as HTMLSelectElement;
+  let type = 'all';
+  const run = () => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const el of items) {
+      const ok = (!area.value || el.dataset.areas!.split('|').includes(area.value)) && (type === 'all' || el.dataset.type!.split('|').includes(type)) && words.every((w) => el.dataset.search!.includes(w));
+      el.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('count')!.textContent = String(n);
+    document.getElementById('empty')!.hidden = n > 0;
+  };
+  const chips = $$('#type .chip');
+  chips.forEach((c) => c.addEventListener('click', () => { type = c.dataset.value!; chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c))); run(); }));
+  q.addEventListener('input', run);
+  area.addEventListener('change', run);
+</script>

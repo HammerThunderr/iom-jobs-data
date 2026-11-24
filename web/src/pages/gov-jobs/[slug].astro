@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import SaveButton from '../../components/SaveButton.astro';
+import { govJobs, type GovJob } from '../../lib/jobs';
+import { excerpt, richText, telHref, fmtDate, isoDay } from '../../lib/format';
+
+export function getStaticPaths() {
+  return govJobs().map((job) => ({ params: { slug: job.slug }, props: { job } }));
+}
+const { job } = Astro.props as { job: GovJob };
+const closed = job.closingIso && job.closingIso < isoDay();
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title: job.title,
+  description: `<p>${job.advert.replace(/\n+/g, '</p><p>')}</p>`,
+  datePosted: isoDay(),
+  ...(job.closingIso ? { validThrough: `${job.closingIso}T23:59:59+00:00` } : {}),
+  employmentType: /part/i.test(job.hours) ? 'PART_TIME' : /full/i.test(job.hours) ? 'FULL_TIME' : /temp|fixed/i.test(job.type) ? 'TEMPORARY' : 'FULL_TIME',
+  hiringOrganization: { '@type': 'Organization', name: job.department || 'Isle of Man Government', sameAs: 'https://www.gov.im' },
+  jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: job.location || 'Isle of Man', addressRegion: 'Isle of Man', addressCountry: 'IM' } },
+  identifier: { '@type': 'PropertyValue', name: 'Isle of Man Government', value: job.reference || job.id },
+  url: job.url,
+};
+---
+<Layout title={`${job.title} — ${job.department}`} description={excerpt(`${job.title}, ${job.department}. ${job.salary}. ${job.advert}`, 155)} section="govJobs" jsonld={jsonld}>
+  <PageHead title={job.title} sub={job.department} icon="account_balance" crumbs={[{ href: '/gov-jobs/', label: 'Government jobs' }]} />
+  <div class="wrap">
+    <div class="split">
+      <article class="card pad-lg">
+        {closed && <div class="notice warn"><Icon name="warning" /><p>The closing date for this vacancy has passed.</p></div>}
+        <div class="prose" set:html={richText(job.advert || 'See the full advert for details.')} />
+      </article>
+      <aside class="stack sticky">
+        <div class="card">
+          <dl class="kv">
+            {job.salary && <><dt>Salary</dt><dd>{job.salary}</dd></>}
+            {job.type && <><dt>Type</dt><dd>{job.type}</dd></>}
+            {job.hours && <><dt>Hours</dt><dd>{job.hours}</dd></>}
+            {job.location && <><dt>Location</dt><dd>{job.location}</dd></>}
+            {job.closing && <><dt>Closes</dt><dd>{job.closingIso ? fmtDate(job.closingIso + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'long', year: 'numeric' }) : job.closing}</dd></>}
+            {job.reference && <><dt>Reference</dt><dd>{job.reference}</dd></>}
+            {job.phone && <><dt>Phone</dt><dd><a href={telHref(job.phone)}>{job.phone}</a></dd></>}
+            {job.email && <><dt>Email</dt><dd><a href={`mailto:${job.email}`}>{job.email}</a></dd></>}
+          </dl>
+          <div class="btn-row">
+            <a class="btn" href={job.url} target="_blank" rel="noopener"><Icon name="open_in_new" /> Apply on JobTrain</a>
+            <SaveButton kind="gov" id={job.id} title={job.title} sub={job.department} href={`/gov-jobs/${job.slug}/`} />
+            <button class="btn ghost sm" type="button" data-share><Icon name="share" /> Share</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</Layout>
+<script>
+  import { wireSaveButtons } from '../../lib/saved';
+  import { wireShare } from '../../lib/share';
+  wireSaveButtons();
+  wireShare();
+</script>

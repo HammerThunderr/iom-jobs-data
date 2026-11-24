@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import Off from '../../components/Off.astro';
+import SaveButton from '../../components/SaveButton.astro';
+import { jobs } from '../../lib/jobs';
+import { featureOff, load } from '../../lib/data';
+import { fmtDateTime, isoDay, excerpt } from '../../lib/format';
+
+const off = featureOff('jobs');
+const today = isoDay();
+const list = jobs()
+  .filter((j) => !j.closingIso || j.closingIso >= today)
+  .sort((a, b) => Number(b.id) - Number(a.id));
+const cats = Object.entries(
+  list.reduce<Record<string, number>>((m, j) => ((m[j.category || 'Other'] = (m[j.category || 'Other'] || 0) + 1), m), {}),
+).sort((a, b) => a[0].localeCompare(b[0]));
+const hoursKind = (h: string) => (/part/i.test(h) ? 'part' : /full/i.test(h) ? 'full' : 'other');
+const updated = load<any>('jobs.json')?.lastUpdated;
+const short = (d: string | null) => (d ? new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '');
+---
+<Layout title="Isle of Man Jobs" description={`${list.length} current Isle of Man job vacancies from the JobCentre, searchable by category, hours and employer.`} section="jobs">
+  <PageHead title="Jobs" sub={`${list.length} vacancies from the Isle of Man JobCentre`} icon="work">
+    <span slot="meta">{updated && `Updated ${fmtDateTime(updated)}`}</span>
+    <span slot="meta"><a href="/gov-jobs/">Government jobs →</a></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="toolbar">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Job title, employer or keyword" aria-label="Search jobs" /></div>
+          <select class="input" id="cat" aria-label="Category">
+            <option value="all">All categories</option>
+            {cats.map(([c, n]) => <option value={c}>{c} ({n})</option>)}
+          </select>
+          <select class="input" id="sort" aria-label="Sort">
+            <option value="new">Newest first</option>
+            <option value="closing">Closing soonest</option>
+            <option value="az">A–Z</option>
+          </select>
+        </div>
+        <div class="chips" id="hours">
+          <button class="chip" type="button" data-value="all" aria-pressed="true">Any hours</button>
+          <button class="chip" type="button" data-value="full" aria-pressed="false">Full time</button>
+          <button class="chip" type="button" data-value="part" aria-pressed="false">Part time</button>
+          <button class="chip" type="button" data-value="other" aria-pressed="false">Flexible / casual</button>
+          <button class="chip" type="button" data-value="saved" aria-pressed="false"><Icon name="bookmark" /> Saved</button>
+        </div>
+        <p class="count-line"><span id="count">{list.length}</span> jobs</p>
+        <div class="rows" id="list">
+          {list.map((j) => (
+            <div class="item" data-cat={j.category || 'Other'} data-hours={hoursKind(j.hours)} data-id={j.id} data-closing={j.closingIso ?? '9999'} data-title={j.title.toLowerCase()}
+               data-search={`${j.title} ${j.employer} ${j.category} ${j.notes.slice(0, 400)}`.toLowerCase()}>
+              <a class="grow" href={`/jobs/${j.slug}/`}>
+                <div class="strong">{j.title}</div>
+                <div class="small muted">{j.employer || 'Employer not named'}</div>
+                <div class="meta-line">
+                  {j.hours && <span><Icon name="schedule" />{j.hours}</span>}
+                  {j.salary && !/to be advised/i.test(j.salary) && <span><Icon name="payments" />{excerpt(j.salary, 40)}</span>}
+                  {j.closingIso && <span><Icon name="event_busy" />Closes {short(j.closingIso)}</span>}
+                  {j.category && <span class="tag">{j.category}</span>}
+                </div>
+              </a>
+              <SaveButton kind="job" id={j.id} title={j.title} sub={j.employer} href={`/jobs/${j.slug}/`} />
+            </div>
+          ))}
+        </div>
+        <p class="empty" id="empty" hidden><Icon name="search_off" />No jobs match. Try fewer words or another category.</p>
+        <p class="source">Source: <a href="https://services.gov.im/job-search/" target="_blank" rel="noopener">Isle of Man Government JobCentre</a>. Always apply through the original advert. Closed vacancies are removed automatically.</p>
+      </>
+    )}
+  </div>
+</Layout>
+
+<script>
+  import { $$ } from '../../lib/client';
+  import { savedList, wireSaveButtons } from '../../lib/saved';
+  const list = document.getElementById('list');
+  if (list) {
+    wireSaveButtons();
+    const q = document.getElementById('q') as HTMLInputElement;
+    const cat = document.getElementById('cat') as HTMLSelectElement;
+    const sort = document.getElementById('sort') as HTMLSelectElement;
+    const chips = $$('#hours .chip');
+    const items = $$('#list > .item');
+    let hours = 'all';
+    const params = new URLSearchParams(location.search);
+    if (params.get('q')) q.value = params.get('q')!;
+    if (params.get('cat')) cat.value = params.get('cat')!;
+    const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+    const run = () => {
+      const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const saved = new Set(savedList().filter((s) => s.kind === 'job').map((s) => s.id));
+      let n = 0;
+      for (const el of items) {
+        const ok =
+          words.every((w) => el.dataset.search!.includes(w)) &&
+          (cat.value === 'all' || el.dataset.cat === cat.value) &&
+          (hours === 'all' || (hours === 'saved' ? saved.has(el.dataset.id!) : el.dataset.hours === hours)) &&
+          el.dataset.closing! >= today;
+        el.hidden = !ok;
+        if (ok) n++;
+      }
+      document.getElementById('count')!.textContent = String(n);
+      document.getElementById('empty')!.hidden = n > 0;
+    };
+    const order = () => {
+      const by = sort.value;
+      const sorted = [...items].sort((a, b) =>
+        by === 'closing' ? a.dataset.closing!.localeCompare(b.dataset.closing!) : by === 'az' ? a.dataset.title!.localeCompare(b.dataset.title!) : Number(b.dataset.id) - Number(a.dataset.id),
+      );
+      sorted.forEach((el) => list.appendChild(el));
+    };
+    q.addEventListener('input', run);
+    cat.addEventListener('change', run);
+    sort.addEventListener('change', order);
+    chips.forEach((c) =>
+      c.addEventListener('click', () => {
+        hours = c.dataset.value!;
+        chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+        run();
+      }),
+    );
+    run();
+  }
+</script>

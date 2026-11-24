@@ -1,0 +1,21 @@
+---
+import Icon from './Icon.astro';
+interface Props { title: string; sub?: string; icon?: string; crumbs?: { href: string; label: string }[] }
+const { title, sub, icon, crumbs = [] } = Astro.props;
+---
+<div class="page-head">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a>{crumbs.map((c) => <> › <a href={c.href}>{c.label}</a></>)}
+    </nav>
+    <div class="row">
+      {icon && <div class="badge-icon"><Icon name={icon} /></div>}
+      <div>
+        <h1>{title}</h1>
+        {sub && <p class="sub">{sub}</p>}
+      </div>
+    </div>
+    <div class="meta"><slot name="meta" /></div>
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import { EVENT_STYLE } from '../../lib/events';
+import { AREAS } from '../../lib/community';
+---
+<Layout title="Add your event" description="Add a community event to Manx One's What's On listings. Every event is checked before it appears." section="events">
+  <PageHead title="Add your event" sub="Free for community groups, clubs and venues. Every event is checked before it goes live." icon="add" crumbs={[{ href: '/events/', label: "What's On" }]} />
+  <div class="wrap narrow">
+    <div id="auth"><p class="loading">Loading…</p></div>
+    <form id="form" class="card pad-lg stack" hidden novalidate>
+      <div class="flex between"><p class="small muted mb0" id="who"></p><button class="linkish small" type="button" id="out">Sign out</button></div>
+      <label class="field"><span>Event name *</span><input class="input" name="title" required minlength="3" maxlength="120" /></label>
+      <div class="form-grid">
+        <label class="field"><span>Venue *</span><input class="input" name="venue" required minlength="2" maxlength="120" /></label>
+        <label class="field"><span>Area *</span><select class="input" name="area" required style="width:100%">{AREAS.map((a) => <option>{a}</option>)}</select></label>
+        <label class="field"><span>Category *</span><select class="input" name="category" required style="width:100%">{Object.keys(EVENT_STYLE).map((c) => <option selected={c === 'Community'}>{c}</option>)}</select></label>
+      </div>
+      <div class="form-grid">
+        <label class="field"><span>Start date *</span><input class="input" type="date" name="startDate" required /></label>
+        <label class="field"><span>End date</span><input class="input" type="date" name="endDate" /><small>Leave empty for a one-day event</small></label>
+        <label class="field"><span>Start time</span><input class="input" type="time" name="startTime" /></label>
+        <label class="field"><span>End time</span><input class="input" type="time" name="endTime" /></label>
+      </div>
+      <label class="field"><span>Description *</span><textarea class="input" name="description" required minlength="20" maxlength="2000" rows="6"></textarea><small><span id="desc-n">0</span> / 2000 characters (at least 20)</small></label>
+      <div class="form-grid">
+        <label class="field"><span>Price</span><input class="input" name="price" maxlength="60" placeholder="Free, £5, £10/£8 concessions" /></label>
+        <label class="field"><span>Organiser *</span><input class="input" name="organiser" required minlength="2" maxlength="80" /></label>
+        <label class="field"><span>Contact email *</span><input class="input" type="email" name="contactEmail" required maxlength="200" /><small>Only the Manx One team sees this</small></label>
+      </div>
+      <div class="form-grid">
+        <label class="field"><span>Website or tickets link</span><input class="input" type="url" name="url" maxlength="300" placeholder="https://" /></label>
+        <label class="field"><span>Image link</span><input class="input" type="url" name="imageUrl" maxlength="500" placeholder="https://" /><small>A link to a poster or photo you're allowed to use</small></label>
+      </div>
+      <div id="msg"></div>
+      <div class="btn-row"><button class="btn" type="submit"><Icon name="send" /> Send for review</button><a class="btn ghost" href="/events/my/">My submissions</a></div>
+      <p class="tiny muted mb0">By sending this you confirm the details are accurate and you're allowed to share them. Events are usually reviewed within a couple of days.</p>
+    </form>
+    <div id="done" class="card pad-lg" hidden>
+      <h2><Icon name="check_circle" /> Thanks — your event has been sent</h2>
+      <p>It'll appear in What's On once it's been checked. You can follow its progress in My submissions.</p>
+      <div class="btn-row"><a class="btn" href="/events/my/">My submissions</a><button class="btn ghost" type="button" id="another">Add another event</button></div>
+    </div>
+  </div>
+</Layout>
+<script>
+  import { requireVerifiedUser, submitEvent, friendlyError, signOutNow } from '../../lib/community-auth';
+  import { esc, ic } from '../../lib/client';
+  const form = document.getElementById('form') as HTMLFormElement;
+  const msg = document.getElementById('msg')!;
+  const done = document.getElementById('done')!;
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+  (form.elements.namedItem('startDate') as HTMLInputElement).min = today;
+  (form.elements.namedItem('endDate') as HTMLInputElement).min = today;
+  const desc = form.elements.namedItem('description') as HTMLTextAreaElement;
+  desc.addEventListener('input', () => (document.getElementById('desc-n')!.textContent = String(desc.value.length)));
+  document.getElementById('out')!.addEventListener('click', () => signOutNow());
+  let user: any = null;
+  requireVerifiedUser(
+    document.getElementById('auth')!,
+    (u) => {
+      user = u;
+      document.getElementById('who')!.textContent = `Signed in as ${u.email}`;
+      const ce = form.elements.namedItem('contactEmail') as HTMLInputElement;
+      if (!ce.value) ce.value = u.email || '';
+      form.hidden = false;
+    },
+    () => (form.hidden = true),
+  );
+  const check = (f: Record<string, string>): string | null => {
+    if (f.title.trim().length < 3) return 'Give the event a name (at least 3 characters).';
+    if (f.venue.trim().length < 2) return 'Add the venue.';
+    if (!/^20\d\d-\d\d-\d\d$/.test(f.startDate)) return 'Pick a start date.';
+    if (f.startDate < today) return 'The start date is in the past.';
+    if (f.endDate && f.endDate < f.startDate) return 'The end date is before the start date.';
+    if (f.description.trim().length < 20) return 'The description needs at least 20 characters.';
+    if (f.organiser.trim().length < 2) return 'Add the organiser’s name.';
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(f.contactEmail.trim())) return 'Add a contact email.';
+    for (const k of ['url', 'imageUrl']) if (f[k].trim() && !/^https:\/\/.+/.test(f[k].trim())) return 'Links must start with https://';
+    return null;
+  };
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const f = Object.fromEntries(new FormData(form)) as Record<string, string>;
+    const problem = check(f);
+    if (problem) {
+      msg.innerHTML = `<p class="notice bad">${ic('error')}<span>${esc(problem)}</span></p>`;
+      return;
+    }
+    const btn = form.querySelector('button[type=submit]') as HTMLButtonElement;
+    btn.disabled = true;
+    msg.innerHTML = '';
+    try {
+      await submitEvent(user, f);
+      form.hidden = true;
+      done.hidden = false;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      msg.innerHTML = `<p class="notice bad">${ic('error')}<span>${esc(friendlyError(err))}</span></p>`;
+    } finally {
+      btn.disabled = false;
+    }
+  });
+  document.getElementById('another')!.addEventListener('click', () => {
+    form.reset();
+    (form.elements.namedItem('contactEmail') as HTMLInputElement).value = user?.email || '';
+    done.hidden = true;
+    form.hidden = false;
+  });
+</script>

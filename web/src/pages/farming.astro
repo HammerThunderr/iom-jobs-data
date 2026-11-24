@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { fmtDate, isoDay, telHref } from '../lib/format';
+
+const contacts = load<any>('farm_contacts.json');
+const diseases = load<any>('farm_diseases.json');
+const schemes = load<any>('farm_schemes.json');
+const ex = load<any>('livestock_exports.json');
+const today = isoDay();
+const d = (s: string) => fmtDate(s + 'T12:00:00Z', { day: 'numeric', month: 'short', year: 'numeric' });
+
+// Livestock exports: monthly bars for the latest year, plus year totals.
+const species = [
+  { key: 'cattle', label: 'Cattle', data: ex?.cattle },
+  { key: 'sheep', label: 'Sheep', data: ex?.sheep },
+].filter((s) => s.data?.years?.length);
+const chart = (years: any[]) => {
+  const latest = years[0];
+  const prev = years.find((y: any) => y.year === latest.year - 1);
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const val = (y: any, m: string) => y?.months?.find((x: any) => x.month === m)?.total ?? null;
+  const max = Math.max(1, ...months.flatMap((m) => [val(latest, m) ?? 0, val(prev, m) ?? 0]));
+  return { latest, prev, months, val, max };
+};
+---
+<Layout title="Isle of Man Farming: Grants, Disease Reporting and Livestock Exports" description="Isle of Man farming information: DEFA grants and deadlines, notifiable animal disease reporting, key contacts and live cattle and sheep export statistics." section="farming">
+  <PageHead title="Farming" sub="Grants & deadlines, animal disease, contacts and livestock exports" icon="agriculture" />
+  <div class="wrap">
+    <nav class="chips"><a class="chip" href="#disease">Animal disease</a><a class="chip" href="#schemes">Grants & deadlines</a><a class="chip" href="#contacts">Key contacts</a><a class="chip" href="#exports">Livestock exports</a></nav>
+
+    <section class="section" id="disease">
+      <div class="card pad-lg report">
+        <h2><Icon name="warning" /> Report on suspicion</h2>
+        <p>{diseases?.meta?.duty}</p>
+        <a class="btn" href={telHref(diseases?.meta?.reportPhone)}><Icon name="call" /> Call DEFA {diseases?.meta?.reportPhoneDisplay}</a>
+      </div>
+      <h3 style="margin-top:18px">Current watch list</h3>
+      <div class="grid">
+        {(diseases?.watchList ?? []).map((x: any) => (
+          <div class="card">
+            <div class="flex between"><h3 class="mb0">{x.name}</h3>{x.priority === 'high' && <span class="tag bad">High priority</span>}</div>
+            <p class="small muted" style="margin-top:6px">Affects: {x.affects}</p>
+            <p class="small mb0"><strong>Signs:</strong> {x.signs}</p>
+          </div>
+        ))}
+      </div>
+      <p class="small muted">{diseases?.meta?.fullListNote} <a href={diseases?.meta?.sourceUrl} target="_blank" rel="noopener">Full list on gov.im</a></p>
+    </section>
+
+    <section class="section" id="schemes">
+      <h2>Grants & deadlines</h2>
+      <div class="grid lg">
+        {(schemes?.schemes ?? []).map((s: any) => (
+          <div class="card">
+            <span class="tag info">{s.short}</span>
+            <h3 style="margin-top:8px">{s.name}</h3>
+            <p class="small">{s.summary}</p>
+            {s.deadlines?.length > 0 && (
+              <div class="rows">
+                {s.deadlines.map((dl: any) => <div class={dl.date < today ? 'past' : ''}><span class="grow small">{dl.label}</span><span class="small nowrap strong">{d(dl.date)}</span></div>)}
+              </div>
+            )}
+            <div class="btn-row"><a class="btn ghost sm" href={s.url} target="_blank" rel="noopener"><Icon name="open_in_new" /> Details on gov.im</a></div>
+          </div>
+        ))}
+      </div>
+      <p class="small muted">{schemes?.meta?.note}</p>
+    </section>
+
+    <section class="section" id="contacts">
+      <h2>Key contacts</h2>
+      <div class="rows">
+        {(contacts?.contacts ?? []).map((c: any) => (
+          <a href={telHref(c.phone)}><span class="grow"><strong>{c.name}</strong> {c.urgent && <span class="tag bad">Report at once</span>}<br /><span class="small muted">{c.detail}</span></span><span class="nowrap strong">{String(c.phone).replace(/^\+44/, "0").replace(/^(0\d{4})(\d{6})$/, "$1 $2")}</span></a>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="exports">
+      <h2>Live livestock exports</h2>
+      <p class="small muted">{ex?.meta?.note}</p>
+      <div class="grid two">
+        {species.map((s) => {
+          const c = chart(s.data.years);
+          const W = 520, H = 200, pad = 26, bw = (W - pad) / 12;
+          return (
+            <div class="card">
+              <div class="flex between"><h3 class="mb0">{s.label} — {c.latest.year}</h3><span class="small muted">{c.latest.totalToDate.toLocaleString('en-GB')} head{c.latest.monthsReported < 12 && ` (${c.latest.monthsReported} months)`}</span></div>
+              <svg viewBox={`0 0 ${W} ${H + 22}`} class="bars" role="img" aria-label={`${s.label} exports per month in ${c.latest.year}`}>
+                {[0.5, 1].map((f) => <line x1={pad} x2={W} y1={H - f * (H - 10)} y2={H - f * (H - 10)} class="grid-line" />)}
+                {[0.5, 1].map((f) => <text x={pad - 4} y={H - f * (H - 10) + 4} text-anchor="end" class="axis">{Math.round(f * c.max).toLocaleString('en-GB')}</text>)}
+                <line x1={pad} x2={W} y1={H} y2={H} class="base" />
+                {c.months.map((m, i) => {
+                  const v = c.val(c.latest, m), p = c.val(c.prev, m);
+                  const x = pad + i * bw;
+                  const h = v != null ? Math.max(2, (v / c.max) * (H - 10)) : 0;
+                  const hp = p != null ? (p / c.max) * (H - 10) : 0;
+                  return (
+                    <g>
+                      {p != null && <line x1={x + 3} x2={x + bw - 3} y1={H - hp} y2={H - hp} class="prev" />}
+                      {v != null && <path d={`M${x + bw * 0.22},${H} V${H - h + 4} q0,-4 4,-4 H${x + bw * 0.78 - 4} q4,0 4,4 V${H} Z`} class="bar"><title>{`${m} ${c.latest.year}: ${v.toLocaleString('en-GB')}${p != null ? ` (${c.prev.year}: ${p.toLocaleString('en-GB')})` : ''}`}</title></path>}
+                      <text x={x + bw / 2} y={H + 16} text-anchor="middle" class="axis">{m.slice(0, 1)}</text>
+                    </g>
+                  );
+                })}
+              </svg>
+              <p class="tiny muted mb0"><span class="key bar-key"></span> {c.latest.year} &nbsp; <span class="key prev-key"></span> {c.prev?.year ?? ''}</p>
+              <details class="small" style="margin-top:8px"><summary>Totals by year</summary>
+                <table class="table"><thead><tr><th>Year</th><th class="num">Head</th>{s.key === 'cattle' && <><th class="num">Rearing</th><th class="num">Slaughter</th></>}</tr></thead>
+                  <tbody>{s.data.years.map((y: any) => <tr><td>{y.year}{y.monthsReported < 12 && ` (${y.monthsReported} mo)`}</td><td class="num">{y.totalToDate.toLocaleString('en-GB')}</td>{s.key === 'cattle' && <><td class="num">{y.rearingToDate?.toLocaleString('en-GB') ?? '—'}</td><td class="num">{y.slaughterToDate?.toLocaleString('en-GB') ?? '—'}</td></>}</tr>)}</tbody></table>
+              </details>
+            </div>
+          );
+        })}
+      </div>
+      <p class="source">Sources: Isle of Man Government (DEFA) — <a href={ex?.meta?.sourceUrls?.cattle} target="_blank" rel="noopener">cattle</a> and <a href={ex?.meta?.sourceUrls?.sheep} target="_blank" rel="noopener">sheep</a> export statistics, grants and disease guidance. {ex?.meta?.attribution}</p>
+    </section>
+  </div>
+</Layout>
+<style>
+  .report { border-color: color-mix(in srgb, var(--bad) 40%, var(--border)); background: color-mix(in srgb, var(--bad-bg) 60%, var(--surface)); }
+  .report h2 .ms { color: var(--bad); }
+  .rows .past { opacity: 0.45; }
+  .bars { width: 100%; height: auto; margin-top: 10px; }
+  .bars .bar { fill: var(--accent); }
+  .bars .bar:hover { fill: color-mix(in srgb, var(--accent) 75%, #000); }
+  .bars .prev { stroke: var(--text-2); stroke-width: 2; stroke-dasharray: 3 3; }
+  .bars .grid-line { stroke: var(--border); stroke-width: 1; }
+  .bars .base { stroke: var(--text-2); stroke-width: 1; }
+  .bars .axis { fill: var(--text-2); font-size: 11px; }
+  .key { display: inline-block; width: 12px; height: 10px; vertical-align: middle; border-radius: 2px; }
+  .bar-key { background: var(--accent); }
+  .prev-key { border-top: 2px dashed var(--text-2); height: 0; }
+</style>

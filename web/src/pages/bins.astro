@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { telHref } from '../lib/format';
+
+const off = featureOff('bins');
+const b = load<any>('bins.json');
+const rec = b?.recycling;
+---
+<Layout title="Isle of Man Bin Collection Days" description="Find your bin collection day in Douglas, Onchan, Braddan, Ramsey, Peel and Castletown, add reminders to your calendar, and check what can be recycled." section="bins">
+  <PageHead title="Bin day" sub="Your next collections, calendar reminders and what goes where" icon="delete" />
+  <div class="wrap narrow">
+    {off ? <Off message={off} /> : (
+      <>
+        <section class="card pad-lg" id="mine" hidden>
+          <div class="flex between"><h2 class="mb0" id="mine-title"></h2><button class="linkish small" type="button" id="change">Change street</button></div>
+          <p class="small muted" id="mine-sub"></p>
+          <div id="mine-next"></div>
+          <div class="btn-row">
+            <button class="btn" type="button" id="ics"><Icon name="calendar_add_on" /> Add reminders to my calendar</button>
+          </div>
+          <p class="tiny muted mb0">Adds a repeating event to Google, Apple or Outlook calendar with an alert the evening before. If the council changes a date, check again here.</p>
+          <div id="mine-auth" class="small" style="margin-top:10px"></div>
+        </section>
+
+        <section class="card pad-lg" id="find">
+          <h2>Find your collection day</h2>
+          <div class="search picker"><Icon name="search" /><input id="street" type="search" placeholder="Type your street, e.g. Ballaquayle Road" aria-label="Your street" autocomplete="off" />
+            <div class="picker-list" id="street-list" hidden></div></div>
+          <div id="pick-day" hidden style="margin-top:14px"></div>
+          <p class="small muted" style="margin-top:12px">Covers Douglas, Onchan, Braddan, Ramsey and Castletown streets we have lists for. Elsewhere, check with your commissioners below.</p>
+        </section>
+
+        <section class="section">
+          <h2>What goes in which bin?</h2>
+          <div class="search"><Icon name="search" /><input id="item" type="search" placeholder="e.g. pizza box, glass jar, batteries" aria-label="Search an item" /></div>
+          <div class="rows" id="items" style="margin-top:10px"></div>
+          <p class="small muted">{rec?.note} {rec?.timing} {rec?.plasticsNote}</p>
+        </section>
+
+        <section class="section">
+          <h2>Local authorities</h2>
+          <div class="stack">
+            {(b?.authorities ?? []).map((a: any) => (
+              <div class="card">
+                <div class="flex between"><h3 class="mb0">{a.name}</h3><div class="flex">{a.phone && <a class="btn ghost sm" href={telHref(a.phone)}><Icon name="call" /> {a.phone}</a>}{a.url && <a class="btn ghost sm" href={a.url} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}</div></div>
+                <p class="small muted mb0" style="margin-top:6px">{a.note}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <p class="source">{b?.meta?.disclaimer}</p>
+        <script type="application/json" id="bins-data" set:html={JSON.stringify(b)} />
+      </>
+    )}
+  </div>
+</Layout>
+<style is:global>
+  .picker { position: relative; }
+  .picker-list { position: absolute; left: 0; right: 0; top: calc(100% + 4px); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow-lg); z-index: 20; max-height: 320px; overflow-y: auto; }
+  .picker-list button { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; padding: 10px 14px; border: none; background: none; cursor: pointer; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+  .picker-list button:hover { background: var(--surface-2); }
+  .next-big { display: flex; gap: 16px; align-items: center; padding: 14px; border-radius: 14px; background: color-mix(in srgb, var(--accent) 12%, var(--surface)); margin: 10px 0; }
+  .next-big .ms { font-size: 2.6rem; width: auto; color: var(--accent); }
+  .next-big strong { font-size: 1.4rem; display: block; }
+</style>
+<script>
+  import { esc, ic, store, isoDay } from '../lib/client';
+  const dataEl = document.getElementById('bins-data');
+  if (dataEl) {
+    const B = JSON.parse(dataEl.textContent!);
+    const $ = (id: string) => document.getElementById(id) as any;
+    const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+    const addDays = (iso: string, n: number) => { const d = new Date(iso + 'T12:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+    const next = (z: any, from = isoDay(), count = 6) => {
+      let d = z.anchorDate;
+      const step = z.intervalDays || 7;
+      if (d < from) {
+        const gap = Math.ceil((Date.parse(from) - Date.parse(d)) / 86400000 / step) * step;
+        d = addDays(d, gap);
+      } else while (addDays(d, -step) >= from) d = addDays(d, -step);
+      const out: { date: string; moved: boolean }[] = [];
+      for (let i = 0; i < count; i++) {
+        const ex = (B.exceptions || []).find((e: any) => e.authority === z.authority && !e.example && e.movedFrom === d);
+        out.push({ date: ex ? ex.movedTo : d, moved: !!ex });
+        d = addDays(d, step);
+      }
+      return out;
+    };
+    const fmt = (iso: string) => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+    const rel = (iso: string) => { const n = Math.round((Date.parse(iso) - Date.parse(isoDay())) / 86400000); return n === 0 ? 'Today' : n === 1 ? 'Tomorrow' : `In ${n} days`; };
+
+    // Index every street → zone(s)
+    type Hit = { street: string; zoneId?: string; group?: any };
+    const index: Hit[] = [];
+    for (const z of B.zones) for (const s of z.streets || []) index.push({ street: s, zoneId: z.id });
+    for (const g of B.streetGroups || []) for (const s of g.streets || []) index.push({ street: s, group: g });
+
+    const showMine = () => {
+      const saved = store.get<{ zoneId: string; street: string } | null>('bins:zone', null);
+      const z = saved && B.zones.find((x: any) => x.id === saved.zoneId);
+      $('mine').hidden = !z;
+      $('find').hidden = !!z;
+      if (!z) return;
+      const auth = B.authorities.find((a: any) => a.key === z.authority);
+      const dates = next(z);
+      $('mine-title').textContent = saved!.street;
+      $('mine-sub').textContent = `${z.label} · every ${z.intervalDays === 14 ? 'two weeks' : z.intervalDays === 7 ? 'week' : z.intervalDays + ' days'} on ${z.day}${z.verified === false ? ' · not yet confirmed by the council' : ''}`;
+      $('mine-next').innerHTML = `<div class="next-big">${ic('delete')}<div><span class="small muted">Next collection</span><strong>${fmt(dates[0].date)}</strong><span class="small">${rel(dates[0].date)}${dates[0].moved ? ' · moved for a bank holiday' : ''}</span></div></div>
+        <div class="rows">${dates.slice(1).map((d) => `<div><span class="grow">${fmt(d.date)}</span><span class="small muted">${d.moved ? '<span class="tag warn">Moved</span> ' : ''}${rel(d.date)}</span></div>`).join('')}</div>`;
+      $('mine-auth').innerHTML = auth ? `${esc(auth.name)}${auth.phone ? ` · <a href="tel:${esc(auth.phone.replace(/\s/g, ''))}">${esc(auth.phone)}</a>` : ''} · <a href="${esc(auth.url)}" target="_blank" rel="noopener">Council website</a>` : '';
+      $('ics').onclick = () => {
+        const d0 = dates[0].date.replace(/-/g, '');
+        const eve = addDays(dates[0].date, -1).replace(/-/g, '');
+        const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Manx One//Bins//EN', 'BEGIN:VEVENT', `UID:bins-${z.id}@manxone`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '')}`,
+          `DTSTART;TZID=Europe/London:${eve}T190000`, `DTEND;TZID=Europe/London:${eve}T191500`, `RRULE:FREQ=DAILY;INTERVAL=${z.intervalDays}`,
+          `SUMMARY:Put the bin out (collection ${z.day})`, `DESCRIPTION:Bin collection tomorrow for ${saved!.street}. Check manxone for bank holiday changes.`,
+          'BEGIN:VALARM', 'ACTION:DISPLAY', 'DESCRIPTION:Bin day tomorrow', 'TRIGGER:PT0M', 'END:VALARM', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar' }));
+        a.download = 'bin-day.ics';
+        a.click();
+        void d0;
+      };
+    };
+    const save = (zoneId: string, street: string) => {
+      store.set('bins:zone', { zoneId, street });
+      $('pick-day').hidden = true;
+      $('street').value = '';
+      showMine();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+    $('change').addEventListener('click', () => {
+      store.set('bins:zone', null);
+      showMine();
+      $('street').focus();
+    });
+    const list = $('street-list');
+    $('street').addEventListener('input', () => {
+      const q = $('street').value.trim().toLowerCase();
+      if (q.length < 2) return void (list.hidden = true);
+      const hits = index.filter((h) => h.street.toLowerCase().includes(q)).sort((a, b) => a.street.length - b.street.length).slice(0, 12);
+      list.innerHTML = hits.length
+        ? hits.map((h, i) => { const z = h.zoneId && B.zones.find((x: any) => x.id === h.zoneId); return `<button type="button" data-i="${i}">${ic('home')}<span>${esc(h.street)}<br><span class="tiny muted">${esc(z ? z.label : `Douglas — ${h.group.label}`)}</span></span></button>`; }).join('')
+        : '<div class="small muted" style="padding:12px">No match. Try part of the name, or check with your local authority below.</div>';
+      list.hidden = false;
+      list.querySelectorAll('button').forEach((btn: HTMLButtonElement) =>
+        btn.addEventListener('click', () => {
+          const h = hits[Number(btn.dataset.i)];
+          list.hidden = true;
+          $('street').value = h.street;
+          if (h.zoneId) return save(h.zoneId, h.street);
+          // Douglas: the week is known, the day isn't published per street.
+          const zones = B.zones.filter((z: any) => z.id.startsWith(h.group.zonePrefix));
+          $('pick-day').hidden = false;
+          $('pick-day').innerHTML = `<p><strong>${esc(h.street)}</strong> is in Douglas <strong>${esc(h.group.label)}</strong>. Douglas City Council doesn't publish the day for each street — which day is your bin usually collected?</p>
+            <div class="chips wrap-chips">${DAYS.map((d) => { const z = zones.find((x: any) => x.day === d); return z ? `<button class="chip" type="button" data-z="${z.id}">${d}</button>` : ''; }).join('')}</div>`;
+          $('pick-day').querySelectorAll('[data-z]').forEach((c: HTMLElement) => c.addEventListener('click', () => save(c.dataset.z!, h.street)));
+        }),
+      );
+    });
+    $('street').addEventListener('blur', () => setTimeout(() => (list.hidden = true), 200));
+    showMine();
+
+    // Recycling search
+    const STATUS: Record<string, [string, string]> = { kerbside: ['Kerbside recycling', 'ok'], site: ['Take to a recycling centre', 'warn'], no: ['General waste / not recyclable', 'bad'] };
+    const paintItems = () => {
+      const q = $('item').value.trim().toLowerCase();
+      const items = (B.recycling?.items || []).filter((i: any) => !q || i.name.toLowerCase().includes(q) || (i.aliases || []).some((a: string) => a.includes(q)));
+      $('items').innerHTML = (q ? items : items.slice(0, 8))
+        .map((i: any) => { const [l, k] = STATUS[i.status] ?? STATUS.no; return `<div><span class="grow"><strong>${esc(i.name)}</strong>${i.note ? `<br><span class="small muted">${esc(i.note)}</span>` : ''}</span><span class="tag ${k}">${i.stream ? esc(i.stream) : l}</span></div>`; })
+        .join('') || '<div class="muted">Not in our list. Check <a href="https://www.recyclenow.im" target="_blank" rel="noopener">recyclenow.im</a>.</div>';
+    };
+    $('item').addEventListener('input', paintItems);
+    paintItems();
+  }
+  /*icons*/ ['home', 'delete'];
+</script>

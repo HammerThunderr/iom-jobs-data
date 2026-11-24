@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { telHref } from '../lib/format';
+
+const d = load<any>('volunteers.json');
+const orgs = (d?.organisations ?? []).filter((o: any) => o.isActive !== false).sort((a: any, b: any) => a.name.localeCompare(b.name));
+const cats: string[] = d?.categories ?? [];
+---
+<Layout title="Volunteer on the Isle of Man" description={`${orgs.length} Isle of Man charities and groups looking for volunteers, from health and care to wildlife, sport and the arts.`} section="volunteer">
+  <PageHead title="Volunteer" sub={`${orgs.length} local organisations that welcome volunteers`} icon="volunteer_activism" />
+  <div class="wrap">
+    <div class="notice"><Icon name="info" /><p>Not sure where to start? <strong>CIRCA</strong> matches volunteers with Isle of Man charities — call <a href="tel:01624613713">01624 613713</a> or visit <a href="https://www.circa.org.im/volunteering/" target="_blank" rel="noopener">circa.org.im</a>.</p></div>
+    <div class="toolbar"><div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Search organisations or interests" aria-label="Search organisations" /></div></div>
+    <div class="chips" id="cats"><button class="chip" type="button" data-value="all" aria-pressed="true">All</button>{cats.map((c) => <button class="chip" type="button" data-value={c} aria-pressed="false">{c}</button>)}</div>
+    <div class="chips" id="flags">
+      <button class="chip" type="button" data-flag="flexible" aria-pressed="false">Flexible hours</button>
+      <button class="chip" type="button" data-flag="nodbs" aria-pressed="false">No DBS check needed</button>
+    </div>
+    <p class="count-line"><span id="count">{orgs.length}</span> organisations</p>
+    <div class="grid lg" id="list">
+      {orgs.map((o: any) => (
+        <article class="card" data-cat={o.category} data-flexible={o.flexible ? '1' : ''} data-nodbs={o.requiresDBS ? '' : '1'} data-search={`${o.name} ${o.description} ${o.category} ${(o.tags || []).join(' ')}`.toLowerCase()}>
+          <span class="tag info">{o.category}</span>
+          <h3 style="margin-top:8px">{o.name}</h3>
+          <p class="small">{o.description}</p>
+          <div class="tags">
+            {o.flexible && <span class="tag ok">Flexible</span>}
+            {o.requiresDBS && <span class="tag warn">DBS check</span>}
+            {(o.tags || []).slice(0, 4).map((t: string) => <span class="tag">{t}</span>)}
+          </div>
+          <div class="btn-row">
+            {o.phone && <a class="btn ghost sm" href={telHref(o.phone)}><Icon name="call" /> {o.phone}</a>}
+            {o.email && <a class="btn ghost sm" href={`mailto:${o.email}`}><Icon name="mail" /> Email</a>}
+            {o.website && <a class="btn ghost sm" href={o.website} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}
+          </div>
+        </article>
+      ))}
+    </div>
+    <p class="empty" id="empty" hidden>No organisations match.</p>
+    <p class="source">{d?.source}. Contact organisations directly about current opportunities.</p>
+  </div>
+</Layout>
+<script>
+  import { $$ } from '../lib/client';
+  const items = $$('#list > article');
+  const q = document.getElementById('q') as HTMLInputElement;
+  let cat = 'all';
+  const flags = new Set<string>();
+  const run = () => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const el of items) {
+      const ok = (cat === 'all' || el.dataset.cat === cat) && [...flags].every((f) => el.dataset[f]) && words.every((w) => el.dataset.search!.includes(w));
+      el.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('count')!.textContent = String(n);
+    document.getElementById('empty')!.hidden = n > 0;
+  };
+  const chips = $$('#cats .chip');
+  chips.forEach((c) => c.addEventListener('click', () => { cat = c.dataset.value!; chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c))); run(); }));
+  $$('#flags .chip').forEach((c) => c.addEventListener('click', () => { const f = c.dataset.flag!; flags.has(f) ? flags.delete(f) : flags.add(f); c.setAttribute('aria-pressed', String(flags.has(f))); run(); }));
+  q.addEventListener('input', run);
+</script>

@@ -1,0 +1,324 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import { sections, GROUPS } from '../lib/nav';
+import { features, load } from '../lib/data';
+import { news } from '../lib/news';
+import { jobs } from '../lib/jobs';
+import { upcoming, dateLabel, styleFor, isLongRun } from '../lib/events';
+import { govSections } from '../lib/weather';
+import { excerpt, fmtTime } from '../lib/format';
+import { priceText, typeLabel, place, statusLabel, type Listing } from '../lib/property';
+
+const all = sections(features());
+const groups = Object.entries(GROUPS).map(([g, label]) => ({ key: g, label, items: all.filter((s) => s.group === g) }));
+
+const { items: newsItems } = await news();
+const topNews = newsItems.slice(0, 6);
+const latestJobs = [...jobs()].sort((a, b) => Number(b.id) - Number(a.id)).slice(0, 6);
+const soon = upcoming().filter((e) => !isLongRun(e)).slice(0, 6);
+const props: Listing[] = (load<any>('property/properties.json')?.listings ?? [])
+  .filter((l: Listing) => !statusLabel(l.status) && l.category === 'residential')
+  .sort((a: Listing, b: Listing) => String(b.firstSeen).localeCompare(String(a.firstSeen)))
+  .slice(0, 6);
+
+const wx = load<any>('weather_current.json')?.items?.[0];
+const wxSecs = govSections(wx?.description ?? '');
+const wxDetail = wxSecs.find((s) => /detailed/i.test(s.heading))?.text.split('\n\n')[0] ?? '';
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Manx One',
+  url: Astro.site?.toString(),
+  description: 'Isle of Man jobs, property, news, travel and local services in one place.',
+};
+---
+<Layout title="Manx One" jsonld={jsonld}>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow" id="greet">Isle of Man</p>
+        <h1>The whole island,<br /><span>in one place.</span></h1>
+        <p class="lead">Jobs, property, news, buses, ferries, flights, weather, what's on and local services — gathered from official and local sources, updated through the day.</p>
+        <div class="search hero-search">
+          <Icon name="search" />
+          <input id="tile-search" type="search" placeholder="Find a section: bins, ferry, pharmacy…" aria-label="Find a section" autocomplete="off" />
+        </div>
+      </div>
+      <a class="card wx-card" href="/weather/">
+        <div class="flex between">
+          <span class="muted small strong">Weather now · Douglas</span>
+          <Icon name="arrow_forward" />
+        </div>
+        <div class="wx-now">
+          <span class="ms wx-icon" id="wx-icon" aria-hidden="true">cloud</span>
+          <div>
+            <div class="wx-temp" id="wx-temp">–°</div>
+            <div class="muted small" id="wx-label">Loading…</div>
+          </div>
+        </div>
+        {wxDetail && <p class="small clamp-3 mb0">{wxDetail}</p>}
+        {wx && <p class="tiny muted mb0" style="margin-top:6px">Ronaldsway Met Office · {wx.pubDate}</p>}
+      </a>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="live-strip" aria-label="Right now">
+      <a class="card live" href="/ferry/"><Icon name="directions_boat" /><div><div class="tiny muted">Next ferry</div><div class="strong" id="live-ferry">—</div></div></a>
+      <a class="card live" href="/flights/"><Icon name="flight_takeoff" /><div><div class="tiny muted">Next departure</div><div class="strong" id="live-flight">—</div></div></a>
+      <a class="card live" href="/events/"><Icon name="event" /><div><div class="tiny muted">On today</div><div class="strong" id="live-events">—</div></div></a>
+      <a class="card live" href="/bins/"><Icon name="delete" /><div><div class="tiny muted">Bin day</div><div class="strong" id="live-bins">Check your street</div></div></a>
+    </div>
+
+    {groups.map((g) => (
+      <section class="section tiles-group" data-group={g.key}>
+        <h2 class="group-title">{g.label}</h2>
+        <div class="tiles">
+          {g.items.map((s) => (
+            <a class="tile" href={s.href} style={`--c:${s.color}`} data-search={`${s.title} ${s.subtitle} ${s.key}`.toLowerCase()}>
+              <span class="tile-ic"><Icon name={s.icon} /></span>
+              <span class="tile-t">{s.title}</span>
+              <span class="tile-s">{s.subtitle}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+    <p class="empty" id="tiles-empty" hidden>No section matches that. Try another word, or open <a href="#" id="open-menu">all sections</a>.</p>
+
+    <div class="grid two section">
+      <section>
+        <div class="section-title"><h2>Latest news</h2><a href="/news/">All news →</a></div>
+        <div class="rows">
+          {topNews.map((n) => (
+            <a href={n.link} target="_blank" rel="noopener">
+              {n.image ? <img class="news-thumb" src={n.image} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" /> : null}
+              <div class="grow">
+                <div class="strong clamp-2">{n.title}</div>
+                <div class="tiny muted">{n.source} · <time datetime={n.published} data-ago>{fmtTime(n.published)}</time></div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+      <section>
+        <div class="section-title"><h2>New jobs</h2><a href="/jobs/">All {jobs().length} jobs →</a></div>
+        <div class="rows">
+          {latestJobs.map((j) => (
+            <a href={`/jobs/${j.slug}/`}>
+              <span class="dot-ic" style="--c:#1E88E5"><Icon name="work" /></span>
+              <div class="grow">
+                <div class="strong clamp-2">{j.title}</div>
+                <div class="tiny muted">{j.employer}{j.hours && ` · ${j.hours}`}</div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    </div>
+
+    <section class="section">
+      <div class="section-title"><h2>Coming up</h2><a href="/events/">What's on →</a></div>
+      <div class="grid">
+        {soon.map((e) => (
+          <a class="card ev" href={`/events/${e.slug}/`} style={`--accent:${styleFor(e.category).color}`}>
+            {e.image ? <img class="thumb" src={e.image} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()" /> : null}
+            <span class="tag" style={`background:color-mix(in srgb, ${styleFor(e.category).color} 14%, transparent);color:${styleFor(e.category).color}`}>{e.category}</span>
+            <h3 class="clamp-2" style="margin-top:8px">{e.title}</h3>
+            <div class="meta-line"><span><Icon name="calendar_month" />{dateLabel(e)}</span><span><Icon name="location_on" />{e.venue}</span></div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    {props.length > 0 && (
+      <section class="section">
+        <div class="section-title"><h2>Just listed</h2><a href="/property/">All property →</a></div>
+        <div class="grid">
+          {props.map((l) => {
+            const p = priceText(l);
+            return (
+              <a class="card" href={l.url} target="_blank" rel="noopener">
+                <div class="strong" style="font-size:1.2rem">{p.prefix && <span class="tiny muted">{p.prefix} </span>}{p.main}</div>
+                <div class="small" style="text-transform:capitalize">{typeLabel(l)}{place(l) && ` · ${place(l)}`}</div>
+                <div class="tiny muted clamp-2">{l.address}</div>
+                <div class="tiny muted" style="margin-top:6px">{l.agent}</div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <section class="section card pad-lg app-cta">
+      <div>
+        <h2>Take Manx One with you</h2>
+        <p class="muted mb0">The Android app adds bin-day reminders, saved jobs and live bus tracking on the go.</p>
+      </div>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.manxone.app" target="_blank" rel="noopener"><Icon name="android" /> Get it on Google Play</a>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(1200px 400px at 85% -10%, color-mix(in srgb, var(--gold) 28%, transparent), transparent 60%),
+      linear-gradient(160deg, color-mix(in srgb, var(--red) 12%, var(--bg)), var(--bg) 65%);
+    border-bottom: 1px solid var(--border);
+    padding: 40px 0 34px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 28px;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: minmax(0, 1fr); }
+  }
+  .eyebrow { font-weight: 700; color: var(--red); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; margin-bottom: 8px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 14px; }
+  .hero h1 span { color: var(--red); }
+  .lead { font-size: 1.08rem; color: var(--text-2); max-width: 600px; }
+  .hero-search { max-width: 560px; margin-top: 18px; }
+  .hero-search input { height: 52px; font-size: 1rem; border-radius: 14px; box-shadow: var(--shadow); }
+  .wx-card { display: block; }
+  .wx-now { display: flex; align-items: center; gap: 14px; margin: 10px 0; }
+  .wx-icon { font-size: 3.2rem; width: auto; color: var(--blue); }
+  .wx-temp { font-size: 2.4rem; font-weight: 800; line-height: 1; }
+  .live-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 20px 0 8px; }
+  @media (max-width: 860px) { .live-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .live { display: flex !important; gap: 12px; align-items: center; padding: 12px 14px; }
+  .live > .ms { font-size: 1.6rem; color: var(--red); }
+  .live .strong { font-size: 0.95rem; line-height: 1.3; }
+  .group-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-2); margin-bottom: 10px; }
+  .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 168px), 1fr)); gap: 10px; }
+  .tile {
+    display: grid; grid-template-columns: 40px 1fr; grid-template-rows: auto auto; column-gap: 10px; align-items: center;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 12px; color: var(--text);
+    transition: transform .15s, box-shadow .15s, border-color .15s;
+  }
+  .tile:hover { text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: color-mix(in srgb, var(--c) 45%, var(--border)); }
+  .tile-ic { grid-row: 1 / 3; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; color: #fff; background: var(--c); font-size: 1.1rem; }
+  .tile-t { font-weight: 700; font-size: 0.95rem; line-height: 1.2; }
+  .tile-s { font-size: 0.76rem; color: var(--text-2); line-height: 1.25; }
+  .news-thumb { width: 64px; height: 48px; object-fit: cover; border-radius: 8px; flex-shrink: 0; background: var(--surface-2); }
+  .dot-ic { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--c) 14%, transparent); color: var(--c); flex-shrink: 0; }
+  .ev .thumb { aspect-ratio: 2 / 1; }
+  .app-cta { display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+</style>
+
+<script>
+  import { getData, getJson, isoDay, ago, store } from '../lib/client';
+  import { wmo } from '../lib/weather';
+
+  const h = new Date().toLocaleString('en-GB', { timeZone: 'Europe/London', hour: 'numeric', hour12: false });
+  const hr = Number(h);
+  const greet = hr < 12 ? 'Good morning' : hr < 18 ? 'Good afternoon' : 'Good evening';
+  document.getElementById('greet')!.textContent = `${greet} · ${new Date().toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'long', day: 'numeric', month: 'long' })}`;
+  document.querySelectorAll<HTMLTimeElement>('time[data-ago]').forEach((t) => (t.textContent = ago(t.dateTime)));
+
+  // Section search
+  const input = document.getElementById('tile-search') as HTMLInputElement;
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let any = false;
+    document.querySelectorAll<HTMLElement>('.tiles-group').forEach((g) => {
+      let n = 0;
+      g.querySelectorAll<HTMLElement>('.tile').forEach((t) => {
+        const ok = !q || t.dataset.search!.includes(q);
+        t.hidden = !ok;
+        if (ok) n++;
+      });
+      g.hidden = n === 0;
+      if (n) any = true;
+    });
+    document.getElementById('tiles-empty')!.hidden = any;
+  });
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      const t = document.querySelector<HTMLAnchorElement>('.tile:not([hidden])');
+      if (t && input.value.trim()) location.href = t.href;
+    }
+  });
+  document.getElementById('open-menu')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('menu-btn')!.click();
+  });
+
+  // Weather now
+  getJson<any>('https://api.open-meteo.com/v1/forecast?latitude=54.152&longitude=-4.486&current=temperature_2m,apparent_temperature,weather_code,is_day,wind_speed_10m&wind_speed_unit=mph&timezone=Europe%2FLondon')
+    .then((d) => {
+      const c = d.current;
+      const w = wmo(c.weather_code, c.is_day === 1);
+      document.getElementById('wx-temp')!.textContent = `${Math.round(c.temperature_2m)}°C`;
+      document.getElementById('wx-label')!.textContent = `${w.label} · feels ${Math.round(c.apparent_temperature)}° · wind ${Math.round(c.wind_speed_10m)} mph`;
+      document.getElementById('wx-icon')!.textContent = w.icon;
+    })
+    .catch(() => (document.getElementById('wx-label')!.textContent = 'See the full forecast'));
+
+  // Next ferry
+  getData<any>('ferry.json')
+    .then((f) => {
+      const now = Date.now();
+      for (const day of f.days || []) {
+        const date = new Date(day.date.replace(/^\w+,\s*/, '') + ' 12:00');
+        for (const s of day.sailings || []) {
+          const [hh, mm] = String(s.departTime).split(':').map(Number);
+          const when = new Date(date);
+          when.setHours(hh, mm, 0, 0);
+          if (when.getTime() > now && !/cancel/i.test(s.status)) {
+            const sameDay = isoDay(when) === isoDay();
+            document.getElementById('live-ferry')!.textContent = `${s.departPort} → ${s.arrivePort}, ${sameDay ? '' : when.toLocaleDateString('en-GB', { weekday: 'short' }) + ' '}${s.departTime}`;
+            return;
+          }
+        }
+      }
+      document.getElementById('live-ferry')!.textContent = 'See sailings';
+    })
+    .catch(() => {});
+
+  // Next flight departure
+  getData<any>('flights.json')
+    .then((f) => {
+      const nowHM = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+      const next = (f.departures || []).find((d: any) => d.scheduled >= nowHM && !/departed|cancel/i.test(d.status));
+      document.getElementById('live-flight')!.textContent = next ? `${next.scheduled} to ${next.destination}` : 'See arrivals & departures';
+    })
+    .catch(() => {});
+
+  // Bin day, if a street has been saved on the Bin Day page
+  const binZone = store.get<{ zoneId: string; street: string } | null>('bins:zone', null);
+  if (binZone) {
+    getData<any>('bins.json')
+      .then((b) => {
+        const z = (b.zones || []).find((x: any) => x.id === binZone.zoneId);
+        if (!z) return;
+        const today = isoDay();
+        const step = z.intervalDays || 7;
+        let d = new Date(z.anchorDate + 'T12:00:00Z');
+        const t = new Date(today + 'T12:00:00Z');
+        if (d < t) d = new Date(d.getTime() + Math.ceil((t.getTime() - d.getTime()) / 86400000 / step) * step * 86400000);
+        const iso = d.toISOString().slice(0, 10);
+        const n = Math.round((d.getTime() - t.getTime()) / 86400000);
+        document.getElementById('live-bins')!.textContent = n === 0 ? 'Today' : n === 1 ? 'Tomorrow' : d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'short' });
+        void iso;
+      })
+      .catch(() => {});
+  }
+
+  // Events today
+  getData<any>('events.json')
+    .then((d) => {
+      const today = isoDay();
+      const n = (d.events || []).filter((e: any) => {
+        const occ = Array.isArray(e.occurrences) ? e.occurrences : [];
+        if (occ.length) return occ.some((o: any) => o.date === today);
+        return e.startDate && e.startDate <= today && (e.endDate || e.startDate) >= today;
+      }).length;
+      document.getElementById('live-events')!.textContent = n ? `${n} event${n === 1 ? '' : 's'}` : 'See what’s coming up';
+    })
+    .catch(() => {});
+</script>

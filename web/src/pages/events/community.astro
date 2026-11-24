@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Layout title="Community event" section="events">
+  <div class="page-head"><div class="wrap"><nav class="crumbs"><a href="/">Home</a> › <a href="/events/">What's On</a></nav>
+    <div class="row"><div class="badge-icon"><Icon name="groups" /></div><div><h1 id="t">Community event</h1><p class="sub" id="s"></p></div></div></div></div>
+  <div class="wrap">
+    <div id="body"><p class="loading">Loading…</p></div>
+  </div>
+</Layout>
+<script>
+  import { loadCommunityEvent } from '../../lib/community';
+  import { esc, ic } from '../../lib/client';
+  import { downloadIcs } from '../../lib/ics';
+  const id = new URLSearchParams(location.search).get('id') || '';
+  const body = document.getElementById('body')!;
+  loadCommunityEvent(id)
+    .then((e) => {
+      if (!e || !e.title) throw new Error();
+      document.title = `${e.title} | Manx One`;
+      const when = new Date(e.startDate + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      const end = e.endDate && e.endDate !== e.startDate ? ' – ' + new Date(e.endDate + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }) : '';
+      document.getElementById('t')!.textContent = e.title;
+      document.getElementById('s')!.textContent = `${when}${end} · ${e.venue}`;
+      body.innerHTML = `<div class="split"><article class="card pad-lg">
+        ${/^https:/.test(e.imageUrl) ? `<img src="${esc(e.imageUrl)}" alt="" style="width:100%;max-height:420px;object-fit:cover;border-radius:12px;margin-bottom:14px" referrerpolicy="no-referrer">` : ''}
+        <div class="tags"><span class="tag">${esc(e.category)}</span><span class="tag ok">Community event</span></div>
+        <p class="prewrap">${esc(e.description)}</p></article>
+        <aside class="card"><dl class="kv"><dt>When</dt><dd>${when}${end}</dd>${e.startTime ? `<dt>Time</dt><dd>${esc(e.startTime)}${e.endTime ? '–' + esc(e.endTime) : ''}</dd>` : ''}
+        <dt>Where</dt><dd>${esc(e.venue)}, ${esc(e.area)}</dd>${e.price ? `<dt>Price</dt><dd>${esc(e.price)}</dd>` : ''}<dt>Organiser</dt><dd>${esc(e.organiser)}</dd></dl>
+        <div class="btn-row">${/^https:/.test(e.url) ? `<a class="btn" href="${esc(e.url)}" target="_blank" rel="noopener nofollow">${ic('open_in_new')} More info</a>` : ''}
+        <a class="btn ghost sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(e.venue + ', ' + e.area + ', Isle of Man')}">${ic('map')} Map</a>
+        <button class="btn ghost sm" id="ics" type="button">${ic('calendar_add_on')} Add to calendar</button></div>
+        <p class="tiny muted mb0">Added by the organiser and checked by Manx One.</p></aside></div>`;
+      document.getElementById('ics')!.addEventListener('click', () => downloadIcs({ title: e.title, date: e.startDate, endDate: e.startTime ? undefined : e.endDate, time: e.startTime || undefined, where: `${e.venue}, ${e.area}`, url: e.url }));
+    })
+    .catch(() => (body.innerHTML = '<div class="card empty"><p>This event couldn’t be found. It may have finished or been removed.</p><a class="btn" href="/events/">Back to What’s On</a></div>'));
+</script>

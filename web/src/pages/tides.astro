@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { fmtDate } from '../lib/format';
+
+const off = featureOff('tides');
+const t = load<any>('tides.json');
+const ports = t?.ports ?? [];
+const day = (d: string) => fmtDate(d + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'short' });
+---
+<Layout title="Isle of Man Tide Times" description="High and low tide times and heights for Douglas, Peel, Port Erin, Port St Mary and Ramsey for the week ahead." section="tides">
+  <PageHead title="Tides" sub="High and low water for the week ahead" icon="waves" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="chips" id="ports">
+          {ports.map((p: any, i: number) => <button class="chip" type="button" data-i={i} aria-pressed={i === 0 ? 'true' : 'false'}>{p.name}</button>)}
+        </div>
+        <div class="grid two">
+          <section class="card pad-lg">
+            <h2 id="now-title">Right now</h2>
+            <div id="now" class="muted">Working out the tide…</div>
+            <svg id="curve" viewBox="0 0 600 180" preserveAspectRatio="none" role="img" aria-label="Today's tide curve" style="width:100%;height:180px;margin-top:10px"></svg>
+            <div class="flex between tiny muted"><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>24:00</span></div>
+          </section>
+          <section class="card pad-lg">
+            <h2>Good to know</h2>
+            <ul class="small">
+              <li>Heights are in metres above chart datum.</li>
+              <li>Times are local (GMT in winter, BST in summer).</li>
+              <li>Wind and air pressure can make the real tide earlier, later, higher or lower.</li>
+              <li>Spring tides (the biggest range) come a day or two after full and new moon.</li>
+            </ul>
+            <p class="small mb0">Heading out? Check the <a href="/weather/">sea conditions and coastal forecast</a>.</p>
+          </section>
+        </div>
+        {ports.map((p: any, i: number) => (
+          <section class="section" data-port={i} hidden={i !== 0}>
+            <h2>{p.name}</h2>
+            <div class="table-wrap">
+              <table class="table">
+                <thead><tr><th>Day</th><th>Tides</th></tr></thead>
+                <tbody>
+                  {p.days.map((d: any) => (
+                    <tr data-date={d.date}>
+                      <td class="nowrap"><strong>{day(d.date)}</strong></td>
+                      <td>
+                        <div class="tide-row">
+                          {d.tides.map((x: any) => (
+                            <span class={`tide ${x.type}`}><Icon name={x.type === 'high' ? 'arrow_upward' : 'arrow_downward'} /><strong>{x.time}</strong> <span class="muted">{x.type === 'high' ? 'High' : 'Low'} {x.height_m?.toFixed(1)} m</span></span>
+                          ))}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
+        <p class="source">Source: {t?.source}. Tidal predictions are for guidance only and must not be used for navigation.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<style is:global>
+  .tide-row { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+  .tide { white-space: nowrap; }
+  .tide.high .ms { color: var(--accent); }
+  .tide.low .ms { color: var(--text-2); }
+  tr.past { opacity: 0.45; }
+</style>
+<script>
+  import { getData, isoDay } from '../lib/client';
+  const chips = Array.from(document.querySelectorAll<HTMLElement>('#ports .chip'));
+  if (chips.length) {
+    let ports: any[] = [];
+    let cur = 0;
+    const toMin = (hm: string) => Number(hm.slice(0, 2)) * 60 + Number(hm.slice(3, 5));
+    const paint = () => {
+      const port = ports[cur];
+      document.querySelectorAll<HTMLElement>('[data-port]').forEach((s) => (s.hidden = Number(s.dataset.port) !== cur));
+      const today = isoDay();
+      document.querySelectorAll<HTMLElement>('tr[data-date]').forEach((tr) => tr.classList.toggle('past', tr.dataset.date! < today));
+      if (!port) return;
+      // Flatten extremes into minutes from today's midnight.
+      const ext: { m: number; h: number; type: string; time: string }[] = [];
+      for (const d of port.days) {
+        const offset = Math.round((Date.parse(d.date) - Date.parse(today)) / 86400000) * 1440;
+        for (const x of d.tides) ext.push({ m: offset + toMin(x.time), h: x.height_m, type: x.type, time: x.time });
+      }
+      ext.sort((a, b) => a.m - b.m);
+      const nowHM = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+      const now = toMin(nowHM);
+      const heightAt = (m: number) => {
+        const i = ext.findIndex((e) => e.m > m);
+        if (i <= 0) return null;
+        const a = ext[i - 1], b = ext[i];
+        const f = (m - a.m) / (b.m - a.m);
+        return a.h + (b.h - a.h) * (1 - Math.cos(Math.PI * f)) / 2;
+      };
+      const next = ext.find((e) => e.m > now);
+      const prev = [...ext].reverse().find((e) => e.m <= now);
+      const h = heightAt(now);
+      const nowEl = document.getElementById('now')!;
+      document.getElementById('now-title')!.textContent = `Right now in ${port.name}`;
+      if (next && h != null) {
+        const mins = next.m - now;
+        const rising = next.type === 'high';
+        nowEl.innerHTML = `<div class="flex" style="gap:14px"><span class="ms" style="font-size:2.6rem;width:auto;color:var(--accent)">${rising ? 'trending_up' : 'trending_down'}</span>
+          <div><div style="font-size:1.5rem;font-weight:800;color:var(--text)">${rising ? 'Rising' : 'Falling'} · about ${h.toFixed(1)} m</div>
+          <div>${next.type === 'high' ? 'High' : 'Low'} water at <strong style="color:var(--text)">${next.time}</strong> (${next.h.toFixed(1)} m), in ${Math.floor(mins / 60)} h ${mins % 60} min${prev ? ` · last ${prev.type} at ${prev.time}` : ''}</div></div></div>`;
+      } else nowEl.textContent = 'No tide data for today.';
+      // Curve for today
+      const pts: string[] = [];
+      const hs = ext.map((e) => e.h);
+      const max = Math.max(...hs, 7.5), min = Math.min(...hs, 0);
+      const y = (v: number) => 170 - ((v - min) / (max - min)) * 160;
+      for (let m = 0; m <= 1440; m += 10) {
+        const v = heightAt(m);
+        if (v != null) pts.push(`${(m / 1440) * 600},${y(v).toFixed(1)}`);
+      }
+      const nx = (now / 1440) * 600;
+      const marks = ext.filter((e) => e.m >= 0 && e.m <= 1440).map((e) => `<circle cx="${(e.m / 1440) * 600}" cy="${y(e.h)}" r="4" fill="var(--accent)"/><text x="${(e.m / 1440) * 600}" y="${e.type === 'high' ? y(e.h) - 8 : y(e.h) + 16}" text-anchor="middle" font-size="12" fill="var(--text-2)">${e.time}</text>`).join('');
+      document.getElementById('curve')!.innerHTML = pts.length
+        ? `<polygon points="0,180 ${pts.join(' ')} 600,180" fill="color-mix(in srgb, var(--accent) 18%, transparent)"/><polyline points="${pts.join(' ')}" fill="none" stroke="var(--accent)" stroke-width="2.5"/>${marks}<line x1="${nx}" x2="${nx}" y1="0" y2="180" stroke="var(--red)" stroke-dasharray="4 4"/><text x="${Math.min(570, nx + 4)}" y="12" font-size="11" fill="var(--red)">now</text>`
+        : '';
+    };
+    chips.forEach((c) =>
+      c.addEventListener('click', () => {
+        cur = Number(c.dataset.i);
+        chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+        paint();
+      }),
+    );
+    getData<any>('tides.json').then((d) => {
+      ports = d.ports || [];
+      paint();
+    });
+  }
+</script>

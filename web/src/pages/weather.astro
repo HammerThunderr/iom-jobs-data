@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import GovForecast from '../components/GovForecast.astro';
+import { featureOff, load } from '../lib/data';
+import { LOCATIONS } from '../lib/weather';
+
+const off = featureOff('weather');
+const feeds = [
+  { key: 'current', label: 'Today & tomorrow', file: 'weather_current.json' },
+  { key: '5day', label: '5-day', file: 'weather_5day.json' },
+  { key: 'coastal', label: 'Coastal', file: 'weather_coastal.json' },
+  { key: 'shipping', label: 'Shipping', file: 'weather_shipping.json' },
+].map((f) => ({ ...f, item: load<any>(f.file)?.items?.[0] }));
+---
+<Layout title="Isle of Man Weather" description="Live Isle of Man weather: current conditions, hourly and 7-day forecasts for every town, wind across the island, sea conditions and the Ronaldsway Met Office forecasts." section="weather">
+  <PageHead title="Weather" sub="Live conditions and forecasts for every corner of the island" icon="cloud" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="chips" id="locs">
+          {LOCATIONS.map((l, i) => <button class="chip" type="button" data-i={i} aria-pressed={i === 0 ? 'true' : 'false'}>{l.name}</button>)}
+        </div>
+
+        <div class="grid two">
+          <section class="card pad-lg now">
+            <div class="flex between"><h2 class="mb0" id="loc-name">Douglas</h2><span class="tiny muted" id="now-time"></span></div>
+            <div class="now-main">
+              <span class="ms big-ic" id="now-ic" aria-hidden="true">cloud</span>
+              <div><div class="big-t" id="now-t">–°</div><div class="muted" id="now-l">Loading…</div></div>
+            </div>
+            <div class="grid sm stats" id="now-stats"></div>
+          </section>
+          <section class="card pad-lg">
+            <h2>Next 7 days</h2>
+            <div id="daily" class="daily"><p class="loading">Loading…</p></div>
+          </section>
+        </div>
+
+        <section class="section">
+          <h2>Next 24 hours</h2>
+          <div class="hourly card" id="hourly"><p class="loading">Loading…</p></div>
+        </section>
+
+        <div class="grid two section">
+          <section class="card pad-lg">
+            <div class="flex between"><h2 class="mb0">Wind around the island</h2><Icon name="air" /></div>
+            <p class="small muted">Right now, in mph. Gusts in brackets.</p>
+            <div class="rows" id="wind"><p class="loading">Loading…</p></div>
+          </section>
+          <section class="card pad-lg">
+            <div class="flex between"><h2 class="mb0">Sea conditions</h2><Icon name="waves" /></div>
+            <p class="small muted">Waves, swell and sea temperature off each coast.</p>
+            <div class="rows" id="sea"><p class="loading">Loading…</p></div>
+            <p class="tiny muted" style="margin-top:8px">Model estimates. Check the coastal forecast and <a href="/tides/">tide times</a> before going on or in the water.</p>
+          </section>
+        </div>
+
+        <section class="section card pad-lg" id="air-card" hidden>
+          <h2>Air quality</h2>
+          <div class="grid sm" id="air"></div>
+        </section>
+
+        <section class="section">
+          <h2>Ronaldsway Met Office forecasts</h2>
+          <div class="tabs" role="tablist">
+            {feeds.filter((f) => f.item).map((f, i) => <button class="tab" role="tab" type="button" data-feed={f.key} aria-selected={i === 0 ? 'true' : 'false'}>{f.label}</button>)}
+          </div>
+          {feeds.filter((f) => f.item).map((f, i) => (
+            <div class="card pad-lg" data-panel={f.key} hidden={i !== 0}>
+              <p class="tiny muted">{f.item.title}</p>
+              <GovForecast desc={f.item.description} />
+            </div>
+          ))}
+        </section>
+        <p class="source">Live data: <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (CC BY 4.0). Forecast text: <a href="https://www.gov.im/weather/" target="_blank" rel="noopener">Isle of Man Government Met Office</a>. For warnings always check <a href="https://www.gov.im/weather/" target="_blank" rel="noopener">gov.im/weather</a>.</p>
+      </>
+    )}
+  </div>
+</Layout>
+
+<style is:global>
+  .now-main { display: flex; gap: 16px; align-items: center; margin: 14px 0; }
+  .big-ic { font-size: 4.2rem; width: auto; color: var(--accent); }
+  .big-t { font-size: 3.2rem; font-weight: 800; line-height: 1; }
+  .stats { grid-template-columns: repeat(auto-fill, minmax(min(100%, 130px), 1fr)) !important; gap: 8px !important; }
+  .stats .stat { padding: 10px 12px; }
+  .stats .stat .v { font-size: 1.15rem; }
+  .daily { display: flex; flex-direction: column; }
+  .daily .d { display: grid; grid-template-columns: 74px 30px 1fr auto; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 0.93rem; }
+  .daily .d:last-child { border-bottom: none; }
+  .daily .bar { height: 6px; border-radius: 4px; background: linear-gradient(90deg, #64b5f6, #ffb74d); position: relative; }
+  .hourly { display: flex; overflow-x: auto; gap: 0; padding: 8px; }
+  .hourly .h { min-width: 72px; text-align: center; padding: 8px 4px; border-right: 1px solid var(--border); font-size: 0.85rem; }
+  .hourly .h:last-child { border-right: none; }
+  .hourly .h .ms { font-size: 1.6rem; color: var(--accent); margin: 4px 0; }
+  .arrow { display: inline-block; transition: transform 0.3s; color: var(--accent); }
+</style>
+
+<script>
+  import { getJson, ic } from '../lib/client';
+  import { LOCATIONS, SEA_AREAS, wmo, compass, beaufort } from '../lib/weather';
+
+  const $ = (id: string) => document.getElementById(id)!;
+  const OM = 'https://api.open-meteo.com/v1/forecast';
+  const tz = 'timezone=Europe%2FLondon';
+  const stat = (v: string, l: string) => `<div class="stat"><div class="v">${v}</div><div class="l">${l}</div></div>`;
+  const arrow = (deg: number) => `<span class="arrow" style="transform:rotate(${deg + 180}deg)">${ic('north')}</span>`;
+
+  async function loadLocation(i: number) {
+    const l = LOCATIONS[i];
+    $('loc-name').textContent = l.name;
+    const url = `${OM}?latitude=${l.lat}&longitude=${l.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,precipitation_probability,weather_code,wind_speed_10m,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max,precipitation_sum,wind_speed_10m_max,wind_gusts_10m_max,uv_index_max&wind_speed_unit=mph&forecast_days=7&${tz}`;
+    try {
+      const d = await getJson<any>(url);
+      const c = d.current;
+      const w = wmo(c.weather_code, c.is_day === 1);
+      $('now-ic').textContent = w.icon;
+      $('now-t').textContent = `${Math.round(c.temperature_2m)}°C`;
+      $('now-l').textContent = `${w.label} · feels like ${Math.round(c.apparent_temperature)}°`;
+      $('now-time').textContent = 'As of ' + new Date(c.time).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+      const today = d.daily;
+      const sun = (s: string) => s.slice(11, 16);
+      $('now-stats').innerHTML = [
+        stat(`${arrow(c.wind_direction_10m)} ${Math.round(c.wind_speed_10m)} mph`, `Wind ${compass(c.wind_direction_10m)} · ${beaufort(c.wind_speed_10m)}`),
+        stat(`${Math.round(c.wind_gusts_10m)} mph`, 'Gusts'),
+        stat(`${c.relative_humidity_2m}%`, 'Humidity'),
+        stat(`${Math.round(c.surface_pressure)} hPa`, 'Pressure'),
+        stat(`${c.precipitation} mm`, 'Rain now'),
+        stat(`${sun(today.sunrise[0])} / ${sun(today.sunset[0])}`, 'Sunrise / sunset'),
+        stat(`${Math.round(today.uv_index_max[0] ?? 0)}`, 'UV index (max)'),
+      ].join('');
+      const lo = Math.min(...today.temperature_2m_min), hi = Math.max(...today.temperature_2m_max);
+      $('daily').innerHTML = today.time
+        .map((t: string, k: number) => {
+          const wd = wmo(today.weather_code[k]);
+          const a = ((today.temperature_2m_min[k] - lo) / (hi - lo || 1)) * 100, b = ((today.temperature_2m_max[k] - lo) / (hi - lo || 1)) * 100;
+          return `<div class="d"><strong>${k === 0 ? 'Today' : new Date(t + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric' })}</strong>
+            <span class="ms" title="${wd.label}" style="color:var(--accent)">${wd.icon}</span>
+            <div><div class="tiny muted">${wd.label} · ${today.precipitation_probability_max[k] ?? 0}% rain · wind ${Math.round(today.wind_speed_10m_max[k])} mph</div>
+            <div style="background:var(--surface-2);border-radius:4px;height:6px;position:relative"><div class="bar" style="position:absolute;left:${a}%;width:${Math.max(4, b - a)}%;top:0;bottom:0"></div></div></div>
+            <span class="nowrap"><span class="muted">${Math.round(today.temperature_2m_min[k])}°</span> <strong>${Math.round(today.temperature_2m_max[k])}°</strong></span></div>`;
+        })
+        .join('');
+      const h = d.hourly;
+      const nowIdx = Math.max(0, h.time.findIndex((t: string) => t >= c.time.slice(0, 13)));
+      $('hourly').innerHTML = h.time
+        .slice(nowIdx, nowIdx + 24)
+        .map((t: string, k: number) => {
+          const j = nowIdx + k;
+          const wd = wmo(h.weather_code[j], h.is_day[j] === 1);
+          return `<div class="h"><div class="muted">${k === 0 ? 'Now' : t.slice(11, 16)}</div><span class="ms" title="${wd.label}">${wd.icon}</span><div><strong>${Math.round(h.temperature_2m[j])}°</strong></div><div class="tiny muted">${h.precipitation_probability[j] ?? 0}%</div><div class="tiny muted">${Math.round(h.wind_speed_10m[j])} mph</div></div>`;
+        })
+        .join('');
+    } catch {
+      $('now-l').textContent = 'Live weather is unavailable right now. The Met Office forecast is below.';
+      $('daily').innerHTML = '<p class="muted">Unavailable right now.</p>';
+      $('hourly').innerHTML = '<p class="muted" style="padding:8px">Unavailable right now.</p>';
+    }
+    // Air quality (optional)
+    try {
+      const a = await getJson<any>(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${l.lat}&longitude=${l.lon}&current=european_aqi,pm2_5,pm10,nitrogen_dioxide,ozone&${tz}`);
+      const c = a.current;
+      const aqi = c.european_aqi;
+      const band = aqi <= 20 ? 'Good' : aqi <= 40 ? 'Fair' : aqi <= 60 ? 'Moderate' : aqi <= 80 ? 'Poor' : aqi <= 100 ? 'Very poor' : 'Extremely poor';
+      $('air').innerHTML = [stat(`${aqi} · ${band}`, 'European AQI'), stat(`${c.pm2_5} µg/m³`, 'PM2.5'), stat(`${c.pm10} µg/m³`, 'PM10'), stat(`${c.nitrogen_dioxide} µg/m³`, 'Nitrogen dioxide'), stat(`${c.ozone} µg/m³`, 'Ozone')].join('');
+      $('air-card').hidden = false;
+    } catch {}
+  }
+
+  async function loadWind() {
+    try {
+      const d = await getJson<any[]>(`${OM}?latitude=${LOCATIONS.map((l) => l.lat).join(',')}&longitude=${LOCATIONS.map((l) => l.lon).join(',')}&current=wind_speed_10m,wind_direction_10m,wind_gusts_10m&wind_speed_unit=mph&${tz}`);
+      const list = Array.isArray(d) ? d : [d];
+      $('wind').innerHTML = list
+        .map((r, i) => {
+          const c = r.current;
+          return `<div><span class="grow"><strong>${LOCATIONS[i].name}</strong><br><span class="tiny muted">${beaufort(c.wind_speed_10m)} from the ${compass(c.wind_direction_10m)}</span></span>${arrow(c.wind_direction_10m)}<span class="nowrap"><strong>${Math.round(c.wind_speed_10m)}</strong> <span class="muted">(${Math.round(c.wind_gusts_10m)})</span></span></div>`;
+        })
+        .join('');
+    } catch {
+      $('wind').innerHTML = '<p class="muted" style="padding:12px">Unavailable right now.</p>';
+    }
+  }
+
+  async function loadSea() {
+    try {
+      const d = await getJson<any[]>(`https://marine-api.open-meteo.com/v1/marine?latitude=${SEA_AREAS.map((a) => a.lat).join(',')}&longitude=${SEA_AREAS.map((a) => a.lon).join(',')}&current=wave_height,wave_direction,wave_period,swell_wave_height,sea_surface_temperature&${tz}`);
+      const list = Array.isArray(d) ? d : [d];
+      $('sea').innerHTML = list
+        .map((r, i) => {
+          const c = r.current;
+          const wh = c.wave_height ?? 0;
+          const state = wh < 0.1 ? 'Calm' : wh < 0.5 ? 'Smooth' : wh < 1.25 ? 'Slight' : wh < 2.5 ? 'Moderate' : wh < 4 ? 'Rough' : 'Very rough';
+          return `<div><span class="grow"><strong>${SEA_AREAS[i].name}</strong><br><span class="tiny muted">${SEA_AREAS[i].desc}</span></span><span class="small" style="text-align:right">${state} · ${wh.toFixed(1)} m waves<br><span class="tiny muted">swell ${(c.swell_wave_height ?? 0).toFixed(1)} m · sea ${c.sea_surface_temperature != null ? Math.round(c.sea_surface_temperature) + '°C' : '–'}</span></span></div>`;
+        })
+        .join('');
+    } catch {
+      $('sea').innerHTML = '<p class="muted" style="padding:12px">Unavailable right now.</p>';
+    }
+  }
+
+  if (document.getElementById('locs')) {
+    const chips = Array.from(document.querySelectorAll<HTMLElement>('#locs .chip'));
+    chips.forEach((c) =>
+      c.addEventListener('click', () => {
+        chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+        loadLocation(Number(c.dataset.i));
+      }),
+    );
+    document.querySelectorAll<HTMLElement>('.tab[data-feed]').forEach((t) =>
+      t.addEventListener('click', () => {
+        document.querySelectorAll('.tab[data-feed]').forEach((o) => o.setAttribute('aria-selected', String(o === t)));
+        document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.feed));
+      }),
+    );
+    loadLocation(0);
+    loadWind();
+    loadSea();
+  }
+</script>

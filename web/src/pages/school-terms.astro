@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { fmtDate } from '../lib/format';
+
+const s = load<any>('school_terms.json');
+const years = s?.years ?? [];
+const d = (x: string) => fmtDate(x + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+const kind: Record<string, [string, string]> = { term_start: ['Open to pupils', 'ok'], term_end: ['Closes', 'warn'], half_term: ['Half term', 'info'], in_service: ['In-service (closed to pupils)', ''], bank_holiday: ['Bank holiday', ''] };
+---
+<Layout title="Isle of Man School Term Dates" description="Isle of Man school term dates, half terms, holidays and in-service days from the Department of Education, Sport and Culture." section="school_terms">
+  <PageHead title="School terms" sub="Term dates, half terms and in-service days for Isle of Man schools" icon="school" />
+  <div class="wrap narrow">
+    <div id="now"></div>
+    {years.map((y: any) => (
+      <section class="section">
+        <div class="flex between"><h2 class="mb0">{y.year}</h2>{y.pupilDays && <span class="small muted">{y.pupilDays} pupil days</span>}</div>
+        {y.terms.map((t: any) => (
+          <div class="card" style="margin-top:12px">
+            <h3>{t.name}</h3>
+            <div class="rows" style="border:none">
+              {t.events.map((e: any) => (
+                <div data-start={e.start} data-end={e.end || e.start}>
+                  <span class="grow"><strong>{e.label}</strong>{e.note && <><br /><span class="tiny muted">{e.note}</span></>}</span>
+                  <span class="small nowrap" style="text-align:right">{d(e.start)}{e.end && e.end !== e.start && <><br />to {d(e.end)}</>}</span>
+                  <span class={`tag ${kind[e.type]?.[1] ?? ''}`}>{kind[e.type]?.[0] ?? e.type}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    ))}
+    {s?.missing && <div class="notice"><Icon name="info" /><p>{s.missing}</p></div>}
+    <ul class="small muted">{(s?.meta?.notes ?? []).map((n: string) => <li>{n}</li>)}</ul>
+    <p class="source">Source: <a href={s?.meta?.sourceUrl} target="_blank" rel="noopener">{s?.meta?.source}</a> (<a href={s?.meta?.sourcePdf} target="_blank" rel="noopener">PDF</a>, published {s?.meta?.published}). {s?.meta?.attribution}</p>
+  </div>
+</Layout>
+<script>
+  import { $$, isoDay } from '../lib/client';
+  const today = isoDay();
+  let found = false;
+  $$('[data-start]').forEach((r) => {
+    if (r.dataset.end! < today) r.style.opacity = '0.45';
+    if (!found && r.dataset.start! >= today) {
+      found = true;
+      r.style.background = 'color-mix(in srgb, var(--accent) 10%, transparent)';
+      const days = Math.round((Date.parse(r.dataset.start!) - Date.parse(today)) / 86400000);
+      document.getElementById('now')!.innerHTML = `<div class="notice"><span class="ms" aria-hidden="true">event</span><p>Next: <strong>${r.querySelector('strong')!.textContent}</strong> ${days === 0 ? 'today' : days === 1 ? 'tomorrow' : `in ${days} days`}.</p></div>`;
+    }
+  });
+</script>

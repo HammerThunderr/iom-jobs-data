@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+---
+<Layout title="Review events" section="events" noindex>
+  <PageHead title="Review events" sub="Approve or reject community submissions" icon="fact_check" crumbs={[{ href: '/events/', label: "What's On" }]} />
+  <div class="wrap narrow">
+    <div id="auth"><p class="loading">Loading…</p></div>
+    <div id="panel" hidden>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-status="pending" type="button">Waiting</button>
+        <button class="tab" role="tab" aria-selected="false" data-status="approved" type="button">Live</button>
+      </div>
+      <div id="list" class="stack"></div>
+    </div>
+    <div id="denied" class="card empty" hidden><p>Only the Manx One admin can review events.</p></div>
+  </div>
+</Layout>
+<script>
+  import { requireVerifiedUser, isAdmin, byStatus, approve, reject, unpublish, friendlyError, type Submission } from '../../lib/community-auth';
+  import { esc } from '../../lib/client';
+  const list = document.getElementById('list')!;
+  let status = 'pending';
+  let items: Submission[] = [];
+  const row = (s: Submission) => {
+    const when = new Date(s.startDate + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+    const end = s.endDate && s.endDate !== s.startDate ? ' – ' + new Date(s.endDate + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short' }) : '';
+    return `<div class="card" data-id="${esc(s.id)}">
+      <h3>${esc(s.title)}</h3>
+      <div class="meta-line"><span>${when}${end}${s.startTime ? ' · ' + esc(s.startTime) + (s.endTime ? '–' + esc(s.endTime) : '') : ''}</span><span>${esc(s.venue)}, ${esc(s.area)}</span><span>${esc(s.category)}</span>${s.price ? `<span>${esc(s.price)}</span>` : ''}</div>
+      <p class="prewrap small">${esc(s.description)}</p>
+      <dl class="kv small"><dt>Organiser</dt><dd>${esc(s.organiser)}</dd><dt>Contact</dt><dd><a href="mailto:${esc(s.contactEmail)}">${esc(s.contactEmail)}</a></dd><dt>Sent by</dt><dd>${esc(s.submitterEmail)}</dd>
+      ${s.url ? `<dt>Link</dt><dd><a href="${esc(s.url)}" target="_blank" rel="noopener nofollow">${esc(s.url)}</a></dd>` : ''}
+      ${s.imageUrl ? `<dt>Image</dt><dd><a href="${esc(s.imageUrl)}" target="_blank" rel="noopener nofollow">Open image</a></dd>` : ''}</dl>
+      <div class="btn-row">${status === 'pending' ? '<button class="btn sm" data-act="approve" type="button">Approve</button><button class="btn ghost sm" data-act="reject" type="button">Reject…</button>' : '<button class="btn ghost sm" data-act="unpublish" type="button">Take down</button>'}</div></div>`;
+  };
+  const paint = async () => {
+    list.innerHTML = '<p class="loading">Loading…</p>';
+    try {
+      items = await byStatus(status);
+      list.innerHTML = items.length ? items.map(row).join('') : `<div class="card empty"><p>${status === 'pending' ? 'Nothing waiting. 🎉' : 'No live community events.'}</p></div>`;
+    } catch (e) {
+      list.innerHTML = `<p class="notice bad"><span>${esc(friendlyError(e))}</span></p>`;
+    }
+  };
+  list.addEventListener('click', async (e) => {
+    const b = (e.target as HTMLElement).closest('button[data-act]') as HTMLButtonElement | null;
+    if (!b) return;
+    const s = items.find((x) => x.id === b.closest<HTMLElement>('[data-id]')!.dataset.id)!;
+    try {
+      b.disabled = true;
+      if (b.dataset.act === 'approve') await approve(s);
+      else if (b.dataset.act === 'reject') {
+        const reason = prompt('Reason (the sender will see this):', '');
+        if (reason === null) return void (b.disabled = false);
+        await reject(s, reason);
+      } else if (confirm('Take this event down?')) await unpublish(s);
+      else return void (b.disabled = false);
+      paint();
+    } catch (err) {
+      alert(friendlyError(err));
+      b.disabled = false;
+    }
+  });
+  document.querySelectorAll<HTMLButtonElement>('.tab').forEach((t) =>
+    t.addEventListener('click', () => {
+      status = t.dataset.status!;
+      document.querySelectorAll('.tab').forEach((o) => o.setAttribute('aria-selected', String(o === t)));
+      paint();
+    }),
+  );
+  requireVerifiedUser(document.getElementById('auth')!, (u) => {
+    if (!isAdmin(u)) {
+      document.getElementById('denied')!.hidden = false;
+      return;
+    }
+    document.getElementById('panel')!.hidden = false;
+    paint();
+  });
+</script>

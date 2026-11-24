@@ -1,0 +1,25 @@
+---
+import Icon from './Icon.astro';
+import { styleFor, dateLabel, days, type Ev } from '../lib/events';
+const { e } = Astro.props as { e: Ev };
+const s = styleFor(e.category);
+const ds = days(e);
+---
+<a class="card ev-card" href={`/events/${e.slug}/`} style={`--accent:${s.color}`}
+   data-start={e.start} data-end={e.end || e.start} data-dates={e.occurrences.length ? ds.join(',') : ''}
+   data-cat={[e.category, ...e.tags].join('|')} data-area={e.area}
+   data-search={`${e.title} ${e.venue} ${e.area} ${e.category} ${e.description.slice(0, 300)}`.toLowerCase()}>
+  {e.image
+    ? <img class="thumb" src={e.image} alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'thumb ph'}))" />
+    : <div class="thumb ph"><Icon name={s.icon} /></div>}
+  <div class="flex between" style="gap:6px">
+    <span class="tag" style={`background:color-mix(in srgb, ${s.color} 14%, transparent);color:${s.color}`}><Icon name={s.icon} /> {e.category}</span>
+    {e.soldOut && <span class="tag bad">Sold out</span>}
+  </div>
+  <h3 class="clamp-2" style="margin-top:8px">{e.title}</h3>
+  <div class="meta-line" style="flex-direction:column;gap:2px">
+    <span><Icon name="calendar_month" />{dateLabel(e)}{e.time && ` · ${e.time}`}</span>
+    {e.venue && <span class="clamp-2"><Icon name="location_on" />{e.venue}</span>}
+    {e.price && <span><Icon name="confirmation_number" />{e.price}</span>}
+  </div>
+</a>

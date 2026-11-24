@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { telHref, mapsHref } from '../lib/format';
+
+const off = featureOff('places');
+const d = load<any>('places.json');
+const places = (d?.places ?? []).sort((a: any, b: any) => Number(!!b.mustVisit) - Number(!!a.mustVisit) || a.name.localeCompare(b.name));
+const cats: string[] = d?.categories ?? [];
+const towns = [...new Set(places.map((p: any) => p.town).filter(Boolean))].sort() as string[];
+const catIcon: Record<string, string> = { Restaurants: 'restaurant', 'Bars & Pubs': 'sports_bar', Hotels: 'hotel', 'Car Rental': 'car_rental', Cafes: 'local_cafe', Distilleries: 'liquor', 'Ice Cream': 'icecream' };
+---
+<Layout title="Places to Eat, Drink and Stay on the Isle of Man" description="Restaurants, pubs, cafes, hotels, distilleries and car hire around the Isle of Man, with opening hours and contact details." section="places">
+  <PageHead title="Places" sub="Where to eat, drink and stay around the island" icon="restaurant" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="toolbar">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Name, food or feature (e.g. seafood, view)" aria-label="Search places" /></div>
+          <select class="input" id="town" aria-label="Town"><option value="">All towns</option>{towns.map((t) => <option>{t}</option>)}</select>
+        </div>
+        <div class="chips" id="cats">
+          <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+          {cats.map((c) => <button class="chip" type="button" data-value={c} aria-pressed="false"><span class="ms" aria-hidden="true">{catIcon[c] ?? 'location_on'}</span> {c}</button>)}
+        </div>
+        <label class="small flex" style="margin:-4px 0 12px"><input type="checkbox" id="veg" /> Vegetarian options</label>
+        <p class="count-line"><span id="count">{places.length}</span> places</p>
+        <div class="grid lg" id="list">
+          {places.map((p: any) => (
+            <article class="card" data-cat={p.category} data-town={p.town} data-veg={p.vegetarianOptions ? '1' : ''} data-search={`${p.name} ${p.subcategory} ${p.description} ${p.town} ${(p.tags || []).join(' ')}`.toLowerCase()}>
+              <div class="flex between"><span class="tag info"><span class="ms" aria-hidden="true">{catIcon[p.category] ?? 'location_on'}</span> {p.subcategory || p.category}</span>{p.priceRange && <span class="small muted">{p.priceRange}</span>}</div>
+              <h3 style="margin-top:8px">{p.name} {p.mustVisit && <span class="tag warn">Must visit</span>}</h3>
+              <p class="small">{p.description}</p>
+              <div class="meta-line" style="flex-direction:column;gap:3px">
+                {p.address && <span><Icon name="location_on" />{p.address}</span>}
+                {p.openingHours && <span><Icon name="schedule" />{p.openingHours}</span>}
+              </div>
+              {p.tags?.length > 0 && <div class="tags">{p.tags.slice(0, 5).map((t: string) => <span class="tag">{t}</span>)}{p.vegetarianOptions && <span class="tag ok">Vegetarian</span>}</div>}
+              <div class="btn-row">
+                {p.phone && <a class="btn ghost sm" href={telHref(p.phone)}><Icon name="call" /> {p.phone}</a>}
+                {p.website && <a class="btn ghost sm" href={p.website} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}
+                <a class="btn ghost sm" href={mapsHref(`${p.name}, ${p.address || p.town}, Isle of Man`)} target="_blank" rel="noopener"><Icon name="map" /> Map</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="empty" id="empty" hidden>No places match.</p>
+        <p class="source">A Manx One guide{d?.lastUpdated && `, last checked ${d.lastUpdated}`}. Opening times change — check with the venue before you go.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<script>
+  import { $$ } from '../lib/client';
+  const items = $$('#list > article');
+  const q = document.getElementById('q') as HTMLInputElement;
+  const town = document.getElementById('town') as HTMLSelectElement;
+  const veg = document.getElementById('veg') as HTMLInputElement;
+  let cat = 'all';
+  const run = () => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const el of items) {
+      const ok = (cat === 'all' || el.dataset.cat === cat) && (!town.value || el.dataset.town === town.value) && (!veg.checked || el.dataset.veg) && words.every((w) => el.dataset.search!.includes(w));
+      el.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('count')!.textContent = String(n);
+    document.getElementById('empty')!.hidden = n > 0;
+  };
+  const chips = $$('#cats .chip');
+  chips.forEach((c) => c.addEventListener('click', () => { cat = c.dataset.value!; chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c))); run(); }));
+  [q, town, veg].forEach((el) => el.addEventListener(el === q ? 'input' : 'change', run));
+</script>

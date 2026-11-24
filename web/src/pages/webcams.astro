@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+
+const off = featureOff('webcams');
+const w = load<any>('webcams.json');
+const base = load<any>('config.json')?.webcam_base ?? 'https://raw.githubusercontent.com/HammerThunderr/iom-jobs-data/webcams';
+const cams = (w?.webcams ?? []).map((c: any) => ({
+  ...c,
+  src: c.type === 'gov_image' ? `https://images.gov.im/webcams/${c.file}` : c.url,
+  fallback: c.type === 'gov_image' ? `${base}/${c.file}` : '',
+}));
+const stills = cams.filter((c: any) => c.type !== 'video');
+const live = cams.filter((c: any) => c.type === 'video');
+---
+<Layout title="Isle of Man Webcams" description="Live Isle of Man webcams: the Mountain Road at the Bungalow, Douglas Promenade, harbours at Peel, Ramsey, Port Erin and Castletown, and live video streams." section="webcams">
+  <PageHead title="Webcams" sub="Still cameras refresh every minute; live streams play on demand" icon="videocam">
+    <span slot="meta" id="refreshed"></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="grid lg" id="stills">
+          {stills.map((c: any) => (
+            <figure class="card cam">
+              <a href={c.src} target="_blank" rel="noopener" class="cam-img">
+                <img src={c.src} data-src={c.src} data-fallback={c.fallback} alt={`Webcam: ${c.name}`} loading="lazy" referrerpolicy="no-referrer" />
+              </a>
+              <figcaption class="flex between"><strong>{c.name}</strong><span class="tiny muted">Still image</span></figcaption>
+            </figure>
+          ))}
+        </div>
+        {live.length > 0 && (
+          <section class="section">
+            <h2>Live streams</h2>
+            <div class="grid lg">
+              {live.map((c: any) => (
+                <figure class="card cam">
+                  <div class="cam-img player" data-url={c.url}>
+                    <button class="play" type="button" aria-label={`Play ${c.name}`}><Icon name="play_circle" /></button>
+                  </div>
+                  <figcaption class="flex between"><strong>{c.name}</strong><span class="tag bad">Live</span></figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
+        <p class="source">Sources: {w?.source}. Images belong to their owners and are shown as published.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<style is:global>
+  .cam { padding: 0; overflow: hidden; margin: 0; }
+  .cam-img { display: block; aspect-ratio: 16 / 9; background: #0f1419; position: relative; }
+  .cam-img img, .cam-img video, .cam-img iframe { width: 100%; height: 100%; object-fit: cover; display: block; border: 0; }
+  .cam figcaption { padding: 10px 14px; }
+  .cam .play { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2332, #0f1419); color: #fff; border: 0; cursor: pointer; font-size: 3.4rem; }
+  .cam .play .ms { width: auto; }
+  .cam-img .err { position: absolute; inset: 0; display: grid; place-items: center; color: #8b95a7; font-size: 0.9rem; }
+</style>
+<script>
+  const imgs = Array.from(document.querySelectorAll<HTMLImageElement>('#stills img'));
+  const bust = () => `t=${Math.floor(Date.now() / 60000)}`;
+  imgs.forEach((img) => {
+    img.addEventListener('error', () => {
+      const fb = img.dataset.fallback;
+      if (fb && !img.src.startsWith(fb)) img.src = `${fb}?${bust()}`;
+      else {
+        img.style.display = 'none';
+        img.parentElement!.insertAdjacentHTML('beforeend', '<span class="err">Camera unavailable</span>');
+      }
+    });
+  });
+  const refresh = () => {
+    imgs.forEach((img) => {
+      if (img.style.display === 'none') return;
+      const src = img.dataset.src!;
+      img.src = `${src}${src.includes('?') ? '&' : '?'}${bust()}`;
+    });
+    const el = document.getElementById('refreshed');
+    if (el) el.textContent = `Refreshed ${new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })}`;
+  };
+  refresh();
+  setInterval(() => document.visibilityState === 'visible' && refresh(), 60000);
+
+  document.querySelectorAll<HTMLElement>('.player').forEach((box) =>
+    box.querySelector('.play')!.addEventListener('click', async () => {
+      const url = box.dataset.url!;
+      if (url.includes('.m3u8')) {
+        const video = document.createElement('video');
+        video.controls = true;
+        video.muted = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        box.innerHTML = '';
+        box.appendChild(video);
+        const src = url.includes('camsecure.uk') ? 'https://manxone-hls.hammerpunch786.workers.dev/?url=' + encodeURIComponent(url) : url;
+        if (video.canPlayType('application/vnd.apple.mpegurl')) video.src = src;
+        else {
+          const { default: Hls } = await import('hls.js');
+          if (Hls.isSupported()) {
+            const hls = new Hls({ lowLatencyMode: true, liveSyncDurationCount: 3 });
+            hls.loadSource(src);
+            hls.attachMedia(video);
+            hls.on(Hls.Events.ERROR, (_e: any, d: any) => {
+              if (d.fatal) box.innerHTML = '<span class="err">Stream unavailable right now</span>';
+            });
+          }
+        }
+      } else {
+        box.innerHTML = `<iframe src="${url}" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Live webcam"></iframe>`;
+      }
+    }),
+  );
+</script>

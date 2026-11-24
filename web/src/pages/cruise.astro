@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { fmtDate } from '../lib/format';
+
+const c = load<any>('cruise.json');
+const calls = (c?.calls ?? []).sort((a: any, b: any) => a.date.localeCompare(b.date) || a.eta.localeCompare(b.eta));
+const totalPax = calls.reduce((n: number, x: any) => n + (x.passengers || 0), 0);
+const months = [...new Set(calls.map((x: any) => x.date.slice(0, 7)))] as string[];
+---
+<Layout title="Isle of Man Cruise Ship Schedule" description={`${calls.length} cruise ship calls to the Isle of Man in ${c?.meta?.season}: ships, dates, times and passenger numbers.`} section="cruise">
+  <PageHead title="Cruise ships" sub={`${c?.meta?.season} season: ${calls.length} calls, around ${totalPax.toLocaleString('en-GB')} passengers`} icon="sailing" />
+  <div class="wrap">
+    <div id="today"></div>
+    {c?.meta?.localNote && <div class="notice"><Icon name="info" /><p>{c.meta.localNote}</p></div>}
+    <label class="small flex" style="margin:4px 0 14px"><input type="checkbox" id="past" /> Show past calls</label>
+    {months.map((m) => (
+      <section class="section" data-month={m}>
+        <h2>{fmtDate(m + '-15T12:00:00Z', { month: 'long', year: 'numeric' })}</h2>
+        <div class="table-wrap">
+          <table class="table">
+            <thead><tr><th>Date</th><th>Ship</th><th>Port</th><th>In port</th><th class="num hide-sm">Passengers</th></tr></thead>
+            <tbody>
+              {calls.filter((x: any) => x.date.startsWith(m)).map((x: any) => (
+                <tr data-date={x.date}>
+                  <td class="nowrap"><strong>{fmtDate(x.date + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'short' })}</strong></td>
+                  <td><strong>{x.ship}</strong><div class="tiny muted">{x.line}</div></td>
+                  <td>{x.port}</td>
+                  <td class="nowrap">{x.eta}–{x.etd}</td>
+                  <td class="num hide-sm">{x.passengers ? x.passengers.toLocaleString('en-GB') : '—'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    ))}
+    <p class="empty" id="empty" hidden>No more calls this season. The next season's schedule usually appears in the autumn.</p>
+    <p class="source">Source: <a href={c?.meta?.sourceUrl} target="_blank" rel="noopener">{c?.meta?.source}</a> ({c?.meta?.scheduleVersion}). {c?.meta?.disclaimer}</p>
+  </div>
+</Layout>
+<script>
+  import { isoDay, esc } from '../lib/client';
+  const today = isoDay();
+  const box = document.getElementById('past') as HTMLInputElement;
+  const paint = () => {
+    let any = false;
+    document.querySelectorAll<HTMLElement>('tr[data-date]').forEach((tr) => {
+      const past = tr.dataset.date! < today;
+      tr.hidden = past && !box.checked;
+      tr.style.opacity = past ? '0.5' : '';
+      if (!past) any = true;
+    });
+    document.querySelectorAll<HTMLElement>('[data-month]').forEach((s) => (s.hidden = !s.querySelector('tr[data-date]:not([hidden])')));
+    document.getElementById('empty')!.hidden = any || box.checked;
+  };
+  box.addEventListener('change', paint);
+  paint();
+  const todayRows = Array.from(document.querySelectorAll<HTMLElement>(`tr[data-date="${today}"]`));
+  if (todayRows.length) {
+    document.getElementById('today')!.innerHTML = `<div class="notice warn"><span class="ms" aria-hidden="true">sailing</span><p><strong>In port today:</strong> ${todayRows.map((r) => esc(r.querySelector('td:nth-child(2) strong')!.textContent)).join(', ')}. Expect busier streets and buses around ${esc(todayRows[0].querySelector('td:nth-child(3)')!.textContent)}.</p></div>`;
+  }
+</script>

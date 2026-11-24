@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { fmtDate, fmtDateTime, telHref } from '../lib/format';
+
+const off = featureOff('road_closures');
+const r = load<any>('road_closures.json');
+const items = (r?.items ?? []).sort((a: any, b: any) => a.startDate.localeCompare(b.startDate));
+const areas = ['Douglas', 'North', 'East', 'South', 'West', 'Various'].filter((a) => items.some((x: any) => x.area === a));
+const d = (s: string) => fmtDate(s + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'short' });
+const kindIcon: Record<string, string> = { closure: 'block', parking: 'local_parking', footpath: 'directions_walk' };
+---
+<Layout title="Isle of Man Road Closures and Roadworks" description="Planned Isle of Man road closures, roadworks and parking restrictions from the Department of Infrastructure's traffic notices." section="road_closures">
+  <PageHead title="Road closures" sub="Planned closures, roadworks and parking restrictions" icon="remove_road">
+    <span slot="meta">{r?.updated && `Updated ${fmtDateTime(r.updated)}`}</span>
+    {r?.latestList && <span slot="meta">Current list: {fmtDate(r.latestList.from + 'T12:00:00Z', { day: 'numeric', month: 'short' })} – {fmtDate(r.latestList.to + 'T12:00:00Z', { day: 'numeric', month: 'short', year: 'numeric' })}</span>}
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="notice warn"><Icon name="info" /><p>{r?.note} <a href={r?.roadwatchUrl} target="_blank" rel="noopener">Open Roadwatch</a> · <a href="/road-signs/">Live road signs</a></p></div>
+        <div class="toolbar">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Road, village or reason" aria-label="Search closures" /></div>
+        </div>
+        <div class="chips" id="area">
+          <button class="chip" type="button" data-value="all" aria-pressed="true">All areas</button>
+          {areas.map((a) => <button class="chip" type="button" data-value={a} aria-pressed="false">{a}</button>)}
+        </div>
+        <div class="chips" id="when">
+          <button class="chip" type="button" data-value="all" aria-pressed="true">Any time</button>
+          <button class="chip" type="button" data-value="today" aria-pressed="false">In force today</button>
+          <button class="chip" type="button" data-value="week" aria-pressed="false">Next 7 days</button>
+        </div>
+        <p class="count-line"><span id="count">{items.length}</span> notices</p>
+        <div class="grid lg" id="list">
+          {items.map((x: any) => (
+            <article class="card" data-area={x.area} data-start={x.startDate} data-end={x.endDate || x.startDate} data-search={`${x.road} ${x.locality} ${x.reason} ${x.promoter} ${x.type}`.toLowerCase()}>
+              <div class="flex between">
+                <span class={`tag ${x.kind === 'closure' ? 'bad' : 'warn'}`}><Icon name={kindIcon[x.kind] ?? 'warning'} /> {x.type}</span>
+                <span class="tag now" hidden>In force today</span>
+              </div>
+              <h3 style="margin-top:10px">{x.road}</h3>
+              <p class="small muted mb0">{x.locality}{x.area && x.area !== x.locality && ` · ${x.area}`}</p>
+              <div class="meta-line"><span><Icon name="calendar_month" />{d(x.startDate)}{x.endDate && x.endDate !== x.startDate && ` – ${d(x.endDate)}`}</span></div>
+              {x.reason && <p class="small mb0"><strong>Why:</strong> {x.reason}</p>}
+              {x.promoter && <p class="small mb0"><strong>For:</strong> {x.promoter}</p>}
+              <div class="btn-row">
+                {x.mapUrl && <a class="btn ghost sm" href={x.mapUrl} target="_blank" rel="noopener"><Icon name="map" /> Diversion map</a>}
+                {x.helpline && <a class="btn ghost sm" href={telHref(x.helpline)}><Icon name="call" /> {x.helpline}</a>}
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="empty" id="empty" hidden>No notices match.</p>
+        <p class="source">Source: <a href={r?.sourceUrl} target="_blank" rel="noopener">{r?.source}</a>. Dates can change; follow the signs on the road.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<script>
+  import { isoDay, $$ } from '../lib/client';
+  const items = $$('#list > article');
+  if (items.length) {
+    const today = isoDay();
+    const plus7 = new Date(Date.parse(today) + 6 * 86400000).toISOString().slice(0, 10);
+    let area = 'all', when = 'all';
+    const q = document.getElementById('q') as HTMLInputElement;
+    const run = () => {
+      const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      let n = 0;
+      for (const el of items) {
+        const s = el.dataset.start!, e = el.dataset.end!;
+        const live = s <= today && e >= today;
+        el.querySelector<HTMLElement>('.now')!.hidden = !live;
+        const ok = e >= today && (area === 'all' || el.dataset.area === area) && (when === 'all' || (when === 'today' ? live : s <= plus7)) && words.every((w) => el.dataset.search!.includes(w));
+        el.hidden = !ok;
+        if (ok) n++;
+      }
+      document.getElementById('count')!.textContent = String(n);
+      document.getElementById('empty')!.hidden = n > 0;
+    };
+    for (const [id, set] of [['area', (v: string) => (area = v)], ['when', (v: string) => (when = v)]] as const) {
+      const chips = $$(`#${id} .chip`);
+      chips.forEach((c) => c.addEventListener('click', () => { set(c.dataset.value!); chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c))); run(); }));
+    }
+    q.addEventListener('input', run);
+    run();
+  }
+</script>
