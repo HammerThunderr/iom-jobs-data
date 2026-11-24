@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-24T16:51:53.042581+00:00",
-  "lastUpdated": "16:50 UTC",
+  "fetchedAt": "2026-11-24T16:55:55.982398+00:00",
+  "lastUpdated": "16:54 UTC",
   "departures": [
     {
       "flightNo": "EZY840",
@@ -97,9 +97,9 @@
       "flightNo": "EZY517",
       "airline": "easyJet",
       "scheduled": "17:15",
-      "status": "Expected 16:57",
+      "status": "Final approach",
       "origin": "Liverpool",
-      "statusType": "expected"
+      "statusType": "scheduled"
     },
     {
       "flightNo": "LM698",
