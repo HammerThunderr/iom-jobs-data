@@ -13,10 +13,11 @@ const list = upcoming();
 const meta = load<any>('events.json');
 const cats = Object.keys(EVENT_STYLE).filter((c) => list.some((e) => e.category === c || e.tags.includes(c)));
 const areas = [...new Set(list.map((e) => e.area).filter(Boolean))].sort();
+const updated = fmtDateTime(meta?.fetchedAt) || fmtDateTime(meta?.lastUpdated);
 ---
 <Layout title="What's On in the Isle of Man" description={`${list.length} upcoming events across the Isle of Man: music, theatre, family days out, festive events, talks and more.`} section="events">
   <PageHead title="What's On" sub="Events across the island, from the organisers' own listings" icon="event">
-    <span slot="meta">{(meta?.lastUpdated || meta?.fetchedAt) && `Updated ${fmtDateTime(meta.lastUpdated || meta.fetchedAt)}`}</span>
+    <span slot="meta">{updated && `Updated ${updated}`}</span>
     <span slot="meta"><a href="/events/submit/">+ Add your event</a></span>
     <span slot="meta"><a href="/events/my/">My submissions</a></span>
   </PageHead>
