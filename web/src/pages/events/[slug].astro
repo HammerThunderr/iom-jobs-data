@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import EventCard from '../../components/EventCard.astro';
+import { events, upcoming, styleFor, dateLabel, days, isLongRun, type Ev } from '../../lib/events';
+import { excerpt, mapsHref, richText } from '../../lib/format';
+
+export function getStaticPaths() {
+  return events().map((e) => ({ params: { slug: e.slug }, props: { e } }));
+}
+const { e } = Astro.props as { e: Ev };
+const s = styleFor(e.category);
+const ds = days(e);
+const more = upcoming().filter((x) => x.id !== e.id && (x.venue === e.venue || x.category === e.category)).slice(0, 3);
+const fmt = (d: string) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: e.title,
+  startDate: e.start,
+  endDate: e.end || e.start,
+  eventStatus: 'https://schema.org/EventScheduled',
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  location: { '@type': 'Place', name: e.venue || 'Isle of Man', address: { '@type': 'PostalAddress', streetAddress: e.address || e.venue, addressLocality: e.area || 'Isle of Man', addressCountry: 'IM' } },
+  description: excerpt(e.description, 500),
+  ...(e.image ? { image: [e.image] } : {}),
+  ...(e.url ? { url: e.url } : {}),
+  organizer: { '@type': 'Organization', name: e.source },
+};
+const firstTime = (e.occurrences.find((o) => o.time)?.time || e.time || '').match(/\d{1,2}[:.]\d{2}/)?.[0]?.replace('.', ':') ?? '';
+---
+<Layout title={e.title} description={excerpt(`${dateLabel(e)} at ${e.venue}. ${e.description}`, 155)} section="events" image={e.image || undefined} jsonld={jsonld}>
+  <div style={`--accent:${s.color}`}>
+    <PageHead title={e.title} sub={`${dateLabel(e)}${e.venue ? ` · ${e.venue}` : ''}`} icon={s.icon} crumbs={[{ href: '/events/', label: "What's On" }]} />
+  </div>
+  <div class="wrap" style={`--accent:${s.color}`}>
+    <div class="split">
+      <article class="card pad-lg">
+        {e.image && <img class="hero-img" src={e.image} alt="" referrerpolicy="no-referrer" onerror="this.remove()" />}
+        <div class="tags">
+          <span class="tag" style={`background:color-mix(in srgb, ${s.color} 14%, transparent);color:${s.color}`}>{e.category}</span>
+          {e.tags.filter((t) => t !== e.category).map((t) => <span class="tag">{t}</span>)}
+          {e.soldOut && <span class="tag bad">Sold out</span>}
+        </div>
+        <div class="prose" set:html={richText(e.description || 'See the organiser’s page for full details.')} />
+        {ds.length > 1 && (
+          <>
+            <h2 style="margin-top:20px">Dates</h2>
+            <div class="table-wrap">
+              <table class="table">
+                <tbody>
+                  {e.occurrences.map((o) => (
+                    <tr data-date={o.date}><td>{fmt(o.date)}</td><td>{o.time}</td><td>{o.soldOut ? <span class="tag bad">Sold out</span> : ''}</td></tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
+      </article>
+      <aside class="stack sticky">
+        <div class="card">
+          <dl class="kv">
+            <dt>When</dt><dd>{dateLabel(e)}{isLongRun(e) && <><br /><span class="tiny muted">Running daily</span></>}</dd>
+            {(e.time || firstTime) && <><dt>Time</dt><dd>{e.time || firstTime}</dd></>}
+            {e.venue && <><dt>Where</dt><dd>{e.venue}{e.address && e.address !== e.venue && <><br /><span class="tiny muted">{e.address}</span></>}</dd></>}
+            {e.price && <><dt>Price</dt><dd>{e.price}</dd></>}
+            <dt>From</dt><dd>{e.source}{e.alsoListedOn.length > 0 && <span class="tiny muted"> (also on {e.alsoListedOn.join(', ')})</span>}</dd>
+          </dl>
+          <div class="btn-row">
+            {(e.bookingUrl || e.url) && <a class="btn" href={e.bookingUrl || e.url} target="_blank" rel="noopener"><Icon name="confirmation_number" /> {e.bookingUrl ? 'Book tickets' : 'Event details'}</a>}
+            {e.venue && <a class="btn ghost sm" href={mapsHref(`${e.address || e.venue}, Isle of Man`)} target="_blank" rel="noopener"><Icon name="map" /> Map</a>}
+            <button class="btn ghost sm" type="button" id="ics" data-title={e.title} data-start={ds.find((d) => d >= new Date().toISOString().slice(0, 10)) || e.start} data-end={isLongRun(e) ? e.end : ''} data-time={firstTime} data-where={e.venue} data-url={e.url}><Icon name="calendar_add_on" /> Add to calendar</button>
+            <button class="btn ghost sm" type="button" data-share><Icon name="share" /> Share</button>
+          </div>
+          <p class="tiny muted mb0">Check times and prices with the organiser before you go.</p>
+        </div>
+        {more.length > 0 && (
+          <div class="stack">
+            <h3>You might also like</h3>
+            {more.map((m) => <EventCard e={m} />)}
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Layout>
+<style>
+  .hero-img { width: 100%; max-height: 420px; object-fit: cover; border-radius: 12px; margin-bottom: 14px; }
+</style>
+<script>
+  import { wireShare } from '../../lib/share';
+  import { downloadIcs } from '../../lib/ics';
+  wireShare();
+  const today = new Date().toLocaleDateString('en-CA', { timeZone: 'Europe/London' });
+  document.querySelectorAll<HTMLElement>('tr[data-date]').forEach((tr) => {
+    if (tr.dataset.date! < today) tr.style.opacity = '0.45';
+  });
+  const b = document.getElementById('ics') as HTMLButtonElement;
+  b?.addEventListener('click', () => {
+    const d = b.dataset;
+    downloadIcs({ title: d.title!, date: d.start!, endDate: d.end || undefined, time: d.time || undefined, where: d.where, url: d.url });
+  });
+</script>

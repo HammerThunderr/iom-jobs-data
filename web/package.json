@@ -1,0 +1,23 @@
+{
+  "name": "manxone-web",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "copy-data": "node scripts/copy-data.mjs && node scripts/icons.mjs",
+    "dev": "npm run copy-data && astro dev",
+    "build": "npm run copy-data && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "astronomy-engine": "2.1.19",
+    "firebase": "11.10.0",
+    "hls.js": "1.5.20",
+    "leaflet": "1.9.4"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.7.3"
+  }
+}

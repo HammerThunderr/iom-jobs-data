@@ -1,0 +1,337 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import Off from '../../components/Off.astro';
+import { featureOff, load } from '../../lib/data';
+
+const off = featureOff('bus_times');
+const liveOff = featureOff('bus_live');
+const idx = load<any>('bus/index.json');
+const routes = (idx?.routes ?? []).sort((a: any, b: any) => parseInt(a.code) - parseInt(b.code) || a.code.localeCompare(b.code));
+const palette = ['#00695C', '#1565C0', '#C62828', '#6A1B9A', '#EF6C00', '#2E7D32', '#AD1457', '#283593', '#00838F', '#5D4037', '#9E9D24', '#D84315'];
+const colour = (code: string) => { const n = parseInt(code, 10); return palette[(isNaN(n) ? code.charCodeAt(0) : n) % palette.length]; };
+---
+<Layout title="Isle of Man Bus Times, Map and Live Tracker" description="Isle of Man bus departures from any stop, a journey planner, route timetables, a route map and live bus positions." section="bus_times">
+  <PageHead title="Bus" sub="Departures, journey planner, timetables, map and live tracker" icon="directions_bus" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="tabs" role="tablist" id="tabs">
+          <button class="tab" role="tab" type="button" data-t="stop" aria-selected="true"><Icon name="schedule" /> Departures</button>
+          <button class="tab" role="tab" type="button" data-t="plan" aria-selected="false"><Icon name="route" /> Plan a journey</button>
+          <button class="tab" role="tab" type="button" data-t="routes" aria-selected="false"><Icon name="list" /> Routes</button>
+          <button class="tab" role="tab" type="button" data-t="map" aria-selected="false"><Icon name="map" /> Map</button>
+          {!liveOff && <button class="tab" role="tab" type="button" data-t="live" aria-selected="false"><Icon name="my_location" /> Live buses</button>}
+        </div>
+        <p class="small muted" id="day-label"></p>
+
+        <!-- Departures -->
+        <section data-p="stop">
+          <div class="toolbar">
+            <div class="search picker"><Icon name="search" /><input id="stop-q" type="search" placeholder="Search for a stop, e.g. Lord Street" aria-label="Search for a bus stop" autocomplete="off" />
+              <div class="picker-list" id="stop-results" hidden></div></div>
+            <button class="btn ghost" type="button" id="near-btn"><Icon name="near_me" /> Stops near me</button>
+          </div>
+          <div class="chips" id="recent"></div>
+          <div id="board"><div class="card empty"><Icon name="directions_bus" /><p>Search for a stop or find the ones near you to see the next buses.</p></div></div>
+        </section>
+
+        <!-- Planner -->
+        <section data-p="plan" hidden>
+          <div class="card pad-lg">
+            <div class="form-grid">
+              <label class="field picker"><span>From</span><input class="input" id="from-q" placeholder="Stop, street or place" autocomplete="off" /><div class="picker-list" id="from-results" hidden></div></label>
+              <label class="field picker"><span>To</span><input class="input" id="to-q" placeholder="Stop, street or place" autocomplete="off" /><div class="picker-list" id="to-results" hidden></div></label>
+            </div>
+            <div class="form-grid" style="margin-top:12px">
+              <label class="field"><span>Date</span><input class="input" type="date" id="plan-date" /></label>
+              <label class="field"><span>Leave after</span><input class="input" type="time" id="plan-time" /></label>
+            </div>
+            <div class="btn-row"><button class="btn" type="button" id="plan-go"><Icon name="route" /> Find buses</button><button class="btn ghost sm" type="button" id="from-me"><Icon name="my_location" /> From my location</button><button class="btn ghost sm" type="button" id="swap"><Icon name="swap_vert" /> Swap</button></div>
+            <p class="tiny muted mb0">Direct buses and journeys with one change, with short walks to and from the stop. Times are from the published timetable.</p>
+          </div>
+          <div id="plan-results" class="stack" style="margin-top:16px"></div>
+        </section>
+
+        <!-- Routes -->
+        <section data-p="routes" hidden>
+          <div class="grid sm">
+            {routes.map((r: any) => (
+              <a class="card route-card" href={`/bus/route/${r.code}/`}>
+                <span class="route-badge" style={`background:${colour(r.code)}`}>{r.code}</span>
+                <div class="tiny muted">{r.trips} trips · {r.days.join(', ')}</div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <!-- Map -->
+        <section data-p="map" hidden>
+          <div class="chips" id="map-routes"><button class="chip" type="button" data-value="" aria-pressed="true">All routes</button>{routes.map((r: any) => <button class="chip" type="button" data-value={r.code} aria-pressed="false">{r.code}</button>)}</div>
+          <div class="map" id="route-map"></div>
+          <p class="tiny muted">Zoom in to see stops. Tap a stop for its next departures.</p>
+        </section>
+
+        <!-- Live -->
+        <section data-p="live" hidden>
+          <div class="map" id="live-map"></div>
+          <p class="small muted" id="live-status">Loading live positions…</p>
+          <div class="rows" id="live-list"></div>
+        </section>
+
+        <p class="source">Timetables decoded from <a href="https://www.iombusandrail.im/" target="_blank" rel="noopener">Isle of Man Bus & Rail</a> (version {idx?.meta?.timetableVersion}). {idx?.meta?.note} Live positions come from the operator's tracker and may lag.</p>
+      </>
+    )}
+  </div>
+</Layout>
+
+<style is:global>
+  .picker { position: relative; }
+  .picker-list { position: absolute; left: 0; right: 0; top: calc(100% + 4px); background: var(--surface); border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow-lg); z-index: 20; max-height: 320px; overflow-y: auto; }
+  .picker-list button { display: flex; gap: 10px; align-items: center; width: 100%; text-align: left; padding: 10px 14px; border: none; background: none; cursor: pointer; border-bottom: 1px solid var(--border); font-size: 0.92rem; }
+  .picker-list button:hover, .picker-list button:focus { background: var(--surface-2); }
+  .route-badge { display: inline-grid; place-items: center; min-width: 38px; height: 28px; padding: 0 8px; border-radius: 8px; color: #fff; font-weight: 800; font-size: 0.9rem; }
+  .route-card { display: flex !important; gap: 12px; align-items: center; }
+  .dep-row .when { min-width: 70px; text-align: right; }
+  .dep-row .when strong { font-size: 1.1rem; display: block; }
+  .dep-row.gone { opacity: 0.45; }
+  .leg { display: grid; grid-template-columns: 54px 22px 1fr; gap: 10px; padding: 8px 0; }
+  .leg .line { width: 4px; margin: 0 auto; border-radius: 2px; height: 100%; min-height: 28px; }
+  .leg .line.walk { background: repeating-linear-gradient(var(--text-2) 0 4px, transparent 4px 8px); }
+</style>
+
+<script>
+  import { $$, esc, ic, store, isoDay } from '../../lib/client';
+  import * as bus from '../../lib/bus';
+
+  const tabsEl = document.getElementById('tabs');
+  if (tabsEl) {
+    const $ = (id: string) => document.getElementById(id) as any;
+    const started = new Set<string>();
+    const showTab = (t: string) => {
+      $$('#tabs .tab').forEach((o) => o.setAttribute('aria-selected', String(o.dataset.t === t)));
+      $$('[data-p]').forEach((p) => (p.hidden = p.dataset.p !== t));
+      history.replaceState(null, '', t === 'stop' ? location.pathname + location.search : `#${t}`);
+      if (!started.has(t)) {
+        started.add(t);
+        if (t === 'map') startRouteMap();
+        if (t === 'live') startLive();
+      }
+    };
+    $$('#tabs .tab').forEach((b) => b.addEventListener('click', () => showTab(b.dataset.t!)));
+
+    let ctx: bus.DayCtx;
+    let allStops: bus.Stop[] = [];
+    const ready = (async () => {
+      [ctx, allStops] = await Promise.all([bus.dayContext(), bus.stops()]);
+      $('day-label').textContent = `Today: ${ctx.label}`;
+    })();
+
+    // ── picker helper ──
+    const picker = (input: HTMLInputElement, list: HTMLElement, onPick: (p: bus.Place) => void, withPlaces: boolean) => {
+      let timer: any;
+      const render = (items: { label: string; sub?: string; icon: string; place: bus.Place }[]) => {
+        list.innerHTML = items.map((x, i) => `<button type="button" data-i="${i}">${ic(x.icon)}<span>${esc(x.label)}${x.sub ? `<br><span class="tiny muted">${esc(x.sub)}</span>` : ''}</span></button>`).join('');
+        list.hidden = !items.length;
+        list.querySelectorAll<HTMLButtonElement>('button').forEach((b) =>
+          b.addEventListener('click', () => {
+            const it = items[Number(b.dataset.i)];
+            input.value = it.label;
+            list.hidden = true;
+            onPick(it.place);
+          }),
+        );
+      };
+      input.addEventListener('input', () => {
+        clearTimeout(timer);
+        const q = input.value;
+        timer = setTimeout(async () => {
+          await ready;
+          const st = bus.searchStops(allStops, q, 8).map((s) => ({ label: s.name, sub: 'Bus stop', icon: 'directions_bus', place: { label: s.name, lat: s.lat!, lon: s.lon!, stopId: s.id } }));
+          render(st);
+          if (withPlaces && q.trim().length >= 3) {
+            const pl = (await bus.searchPlaces(q)).slice(0, 6).map((p) => ({ label: p.label, sub: 'Place', icon: 'location_on', place: p }));
+            if (input.value === q) render([...st.slice(0, 5), ...pl]);
+          }
+        }, 220);
+      });
+      input.addEventListener('blur', () => setTimeout(() => (list.hidden = true), 200));
+    };
+
+    // ── Departures ──
+    let boardStop: bus.Stop | null = null;
+    let wholeDay = false;
+    const recent = () => store.get<{ id: number; name: string }[]>('bus:recent', []);
+    const paintRecent = () => {
+      const r = recent();
+      $('recent').innerHTML = r.map((s) => `<button class="chip" type="button" data-id="${s.id}">${ic('history')} ${esc(s.name)}</button>`).join('');
+      $$('#recent .chip').forEach((c) => c.addEventListener('click', () => openStop(Number(c.dataset.id))));
+    };
+    const openStop = async (id: number) => {
+      await ready;
+      const s = allStops.find((x) => x.id === id);
+      if (!s) return;
+      boardStop = s;
+      store.set('bus:recent', [{ id: s.id, name: s.name }, ...recent().filter((x) => x.id !== s.id)].slice(0, 6));
+      paintRecent();
+      $('board').innerHTML = '<p class="loading">Loading departures…</p>';
+      const b = await bus.board(id);
+      if (!b) {
+        $('board').innerHTML = '<div class="card empty"><p>No timetable for this stop.</p></div>';
+        return;
+      }
+      const now = bus.nowMinutes();
+      const deps = b.departures.filter((d) => bus.matches(d.d, ctx)).sort((a, c) => a.t - c.t);
+      const shown = wholeDay ? deps : deps.filter((d) => d.t >= now - 1).slice(0, 20);
+      const rows = shown
+        .map((d) => {
+          const mins = d.t - now;
+          const when = mins < 0 ? 'Gone' : mins === 0 ? 'Due' : mins < 60 ? `${mins} min` : '';
+          return `<div class="dep-row ${mins < 0 ? 'gone' : ''}"><span class="route-badge" style="background:${bus.routeColour(d.r)}">${esc(d.r)}</span>
+            <span class="grow"><strong>${esc(d.dest)}</strong>${d.last ? ' <span class="tag warn">Last stop</span>' : ''}${bus.DAY_LABELS[d.d] && /Sch|Nsch/.test(d.d) ? `<br><span class="tiny muted">${bus.DAY_LABELS[d.d]}</span>` : ''}</span>
+            <span class="when"><strong>${bus.hm(d.t)}</strong><span class="tiny muted">${when}</span></span></div>`;
+        })
+        .join('');
+      $('board').innerHTML = `<div class="card"><div class="flex between"><div><h2 class="mb0">${esc(s.name)}</h2><p class="small muted mb0">${ctx.label} · ${wholeDay ? 'all of today' : 'next departures'}</p></div>
+        <div class="flex"><button class="btn ghost sm" type="button" id="whole">${wholeDay ? 'Next only' : 'Whole day'}</button><a class="btn ghost sm" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}">${ic('map')} Map</a></div></div></div>
+        <div class="rows" style="margin-top:10px">${rows || '<div class="muted">No more buses from this stop today.</div>'}</div>`;
+      $('whole').addEventListener('click', () => {
+        wholeDay = !wholeDay;
+        openStop(id);
+      });
+      const u = new URL(location.href);
+      u.searchParams.set('stop', String(id));
+      history.replaceState(null, '', u.pathname + u.search + u.hash);
+    };
+    picker($('stop-q'), $('stop-results'), (p) => p.stopId && openStop(p.stopId), false);
+    $('near-btn').addEventListener('click', () => {
+      if (!navigator.geolocation) return;
+      $('board').innerHTML = '<p class="loading">Finding stops near you…</p>';
+      navigator.geolocation.getCurrentPosition(
+        async (pos) => {
+          await ready;
+          const near = bus.nearest(allStops, pos.coords.latitude, pos.coords.longitude, 8);
+          $('board').innerHTML = `<h2>Stops near you</h2><div class="rows">${near.map((n) => `<a href="#" data-id="${n.stop.id}"><span class="grow"><strong>${esc(n.stop.name)}</strong></span><span class="small muted">${Math.round(n.km * 1000)} m</span></a>`).join('')}</div>`;
+          $$('#board a[data-id]').forEach((a) => a.addEventListener('click', (e) => { e.preventDefault(); openStop(Number(a.dataset.id)); }));
+        },
+        () => ($('board').innerHTML = '<div class="card empty"><p>Location is off. Search for a stop instead.</p></div>'),
+        { enableHighAccuracy: true, timeout: 10000 },
+      );
+    });
+    paintRecent();
+    const qsStop = new URLSearchParams(location.search).get('stop');
+    if (qsStop) openStop(Number(qsStop));
+
+    // ── Planner ──
+    let from: bus.Place | null = null, to: bus.Place | null = null;
+    picker($('from-q'), $('from-results'), (p) => (from = p), true);
+    picker($('to-q'), $('to-results'), (p) => (to = p), true);
+    $('plan-date').value = isoDay();
+    $('plan-time').value = bus.hm(bus.nowMinutes());
+    $('swap').addEventListener('click', () => {
+      [from, to] = [to, from];
+      const a = $('from-q').value;
+      $('from-q').value = $('to-q').value;
+      $('to-q').value = a;
+    });
+    $('from-me').addEventListener('click', () =>
+      navigator.geolocation?.getCurrentPosition((pos) => {
+        from = { label: 'My location', lat: pos.coords.latitude, lon: pos.coords.longitude };
+        $('from-q').value = 'My location';
+      }),
+    );
+    const legHtml = (l: bus.Leg) =>
+      l.kind === 'walk'
+        ? `<div class="leg"><strong>${bus.hm(l.depart)}</strong><span class="line walk"></span><span>${ic('directions_walk')} Walk ${l.arrive - l.depart} min to <strong>${esc(l.toName)}</strong></span></div>`
+        : `<div class="leg"><strong>${bus.hm(l.depart)}</strong><span class="line" style="background:${bus.routeColour(l.route!)}"></span><span><span class="route-badge" style="background:${bus.routeColour(l.route!)}">${esc(l.route)}</span> towards ${esc(l.destination)}<br><span class="small">Board at <strong>${esc(l.fromName)}</strong>, ride ${l.stopCount} stops, get off at <strong>${esc(l.toName)}</strong> at ${bus.hm(l.arrive)}</span></span></div>`;
+    $('plan-go').addEventListener('click', async () => {
+      const out = $('plan-results');
+      if (!from || !to) {
+        out.innerHTML = '<p class="notice warn"><span>Pick a start and a destination from the suggestions.</span></p>';
+        return;
+      }
+      out.innerHTML = '<p class="loading">Searching timetables…</p>';
+      await ready;
+      const day = await bus.dayContext($('plan-date').value || isoDay());
+      const [h, m] = String($('plan-time').value || '00:00').split(':').map(Number);
+      try {
+        const js = await bus.planPlaces(from, to, day, h * 60 + m, allStops);
+        out.innerHTML = js.length
+          ? `<p class="small muted">${day.label}</p>` +
+            js
+              .map((j) => `<div class="card"><div class="flex between"><h3 class="mb0">${bus.hm(j.depart)} → ${bus.hm(j.arrive)}</h3><span class="small muted">${j.arrive - j.depart} min · ${j.changes ? `${j.changes} change` : 'direct'}${j.walk ? ` · ${j.walk} min walk` : ''}</span></div>${j.legs.map(legHtml).join('')}</div>`)
+              .join('')
+          : '<div class="card empty"><p>No buses found for that journey after that time. Try an earlier time, another day, or a nearby stop.</p></div>';
+      } catch {
+        out.innerHTML = '<p class="notice bad"><span>The timetable couldn’t be loaded. Please try again.</span></p>';
+      }
+    });
+
+    // ── Route map ──
+    async function startRouteMap() {
+      const { createMap, L } = await import('../../lib/map');
+      const { getData } = await import('../../lib/client');
+      const map = createMap($('route-map'));
+      const geo = await getData<any>('bus/geometry.json');
+      await ready;
+      const layers = new Map<string, any>();
+      for (const [code, segs] of Object.entries<any>(geo.routes || {})) {
+        const g = L.featureGroup((segs as string[]).map((s) => L.polyline(bus.decodePolyline(s), { color: bus.routeColour(code), weight: 4, opacity: 0.75 }))).bindTooltip(`Route ${code}`, { sticky: true });
+        g.addTo(map);
+        layers.set(code, g);
+      }
+      const stopLayer = L.layerGroup();
+      for (const s of allStops) {
+        if (s.lat == null) continue;
+        L.circleMarker([s.lat, s.lon!], { radius: 4, color: '#333', weight: 1, fillColor: '#fff', fillOpacity: 1 })
+          .bindPopup(`<strong>${esc(s.name)}</strong><br><a href="?stop=${s.id}">Next departures</a>`)
+          .addTo(stopLayer);
+      }
+      const toggleStops = () => (map.getZoom() >= 14 ? stopLayer.addTo(map) : stopLayer.remove());
+      map.on('zoomend', toggleStops);
+      $$('#map-routes .chip').forEach((c) =>
+        c.addEventListener('click', () => {
+          $$('#map-routes .chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+          const code = c.dataset.value!;
+          for (const [k, g] of layers) {
+            if (!code || k === code) g.addTo(map);
+            else g.remove();
+          }
+          if (code && layers.get(code)) map.fitBounds(layers.get(code).getBounds(), { padding: [20, 20] });
+        }),
+      );
+    }
+
+    // ── Live ──
+    async function startLive() {
+      const { createMap, L, arrowIcon } = await import('../../lib/map');
+      const map = createMap($('live-map'));
+      const layer = L.layerGroup().addTo(map);
+      const refresh = async () => {
+        try {
+          const d = await bus.liveVehicles();
+          layer.clearLayers();
+          for (const v of d.vehicles) {
+            const colour = v.type === 'B' ? bus.routeColour(v.label || '0') : v.type === 'S' ? '#F9A825' : '#6D4C41';
+            L.marker([v.lat, v.lon], { icon: arrowIcon(colour, v.bearing, 28, 'navigation') })
+              .bindPopup(`<strong>${esc(v.label ? `Route ${v.label}` : v.typeName)}</strong><br>${esc(v.typeName)}${v.direction ? ` · ${esc(v.direction)}` : ''}${v.fixedAt ? `<br><span class="tiny">Position ${esc(v.fixedAt)}</span>` : ''}`)
+              .addTo(layer);
+          }
+          $('live-status').textContent = `${d.vehicles.length} vehicles on the road · updated ${new Date(d.updated || Date.now()).toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', second: '2-digit' })} · refreshes every 15 seconds`;
+          const byRoute = new Map<string, number>();
+          for (const v of d.vehicles) byRoute.set(v.label || v.typeName, (byRoute.get(v.label || v.typeName) || 0) + 1);
+          $('live-list').innerHTML = [...byRoute.entries()].sort((a, b) => a[0].localeCompare(b[0], undefined, { numeric: true })).map(([k, n]) => `<div><span class="route-badge" style="background:${bus.routeColour(k)}">${esc(k)}</span><span class="grow"></span><span class="small muted">${n} on the road</span></div>`).join('');
+        } catch {
+          $('live-status').textContent = 'Live bus positions are unavailable right now.';
+        }
+      };
+      refresh();
+      setInterval(() => document.visibilityState === 'visible' && !document.querySelector<HTMLElement>('[data-p="live"]')!.hidden && refresh(), 15000);
+    }
+
+    const hash = location.hash.slice(1);
+    if (['plan', 'routes', 'map', 'live'].includes(hash)) showTab(hash);
+  }
+  /*icons*/ ['history', 'directions_walk', 'near_me', 'location_on', 'directions_bus', 'map'];
+</script>

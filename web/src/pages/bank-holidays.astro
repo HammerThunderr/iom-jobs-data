@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { fmtDate } from '../lib/format';
+
+const b = load<any>('bank_holidays.json');
+---
+<Layout title="Isle of Man Bank Holidays" description="Isle of Man bank holiday dates, including TT Bank Holiday and Tynwald Day." section="bank_holidays">
+  <PageHead title="Bank holidays" sub="Isle of Man public holidays, including TT and Tynwald Day" icon="flag" />
+  <div class="wrap narrow">
+    <div id="next"></div>
+    <div class="notice"><Icon name="info" /><p>{b?.meta?.note}</p></div>
+    {(b?.years ?? []).map((y: any) => (
+      <section class="section">
+        <h2>{y.year}</h2>
+        <div class="rows">
+          {y.holidays.map((h: any) => (
+            <div data-date={h.date}><span class="grow"><strong>{h.name}</strong></span><span>{fmtDate(h.date + 'T12:00:00Z', { weekday: 'long', day: 'numeric', month: 'long' })}</span></div>
+          ))}
+        </div>
+      </section>
+    ))}
+    {b?.meta?.note2027 && <p class="small muted">{b.meta.note2027}</p>}
+    <p class="source">Source: <a href={b?.meta?.sourceUrl} target="_blank" rel="noopener">{b?.meta?.source}</a>. {b?.meta?.attribution}</p>
+  </div>
+</Layout>
+<script>
+  import { $$, isoDay } from '../lib/client';
+  const today = isoDay();
+  const rows = $$('[data-date]');
+  rows.forEach((r) => r.dataset.date! < today && (r.style.opacity = '0.45'));
+  const n = rows.find((r) => r.dataset.date! >= today);
+  if (n) {
+    n.style.background = 'color-mix(in srgb, var(--accent) 10%, transparent)';
+    const days = Math.round((Date.parse(n.dataset.date!) - Date.parse(today)) / 86400000);
+    document.getElementById('next')!.innerHTML = `<div class="card pad-lg" style="margin-bottom:12px"><span class="small muted">Next bank holiday</span><h2 class="mb0">${n.querySelector('strong')!.textContent}</h2><p class="mb0">${n.lastElementChild!.textContent} · ${days === 0 ? 'today' : days === 1 ? 'tomorrow' : `in ${days} days`}</p></div>`;
+  }
+</script>

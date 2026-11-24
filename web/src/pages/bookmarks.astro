@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Saved jobs" section="bookmarks" noindex>
+  <PageHead title="Bookmarks" sub="Jobs you've saved on this device" icon="bookmark" />
+  <div class="wrap narrow">
+    <div id="list"><p class="loading">Loading…</p></div>
+    <p class="source">Saved items stay in this browser only. Nothing is sent to Manx One.</p>
+  </div>
+</Layout>
+<script>
+  import { esc, ic } from '../lib/client';
+  import { savedList, toggleSaved } from '../lib/saved';
+  const box = document.getElementById('list')!;
+  const paint = () => {
+    const list = savedList();
+    box.innerHTML = list.length
+      ? `<div class="rows">${list.map((s, i) => `<div class="item"><a class="grow" href="${esc(s.href)}"><strong>${esc(s.title)}</strong><br><span class="small muted">${esc(s.sub)} · ${s.kind === 'gov' ? 'Government job' : 'JobCentre'}</span></a><button class="save-btn" type="button" aria-pressed="true" aria-label="Remove ${esc(s.title)}" data-i="${i}">${ic('bookmark')}</button></div>`).join('')}</div>`
+      : `<div class="card empty">${ic('bookmark')}<p>Nothing saved yet. Tap the bookmark on any job to keep it here.</p><a class="btn" href="/jobs/">Browse jobs</a></div>`;
+    box.querySelectorAll<HTMLButtonElement>('[data-i]').forEach((b) => b.addEventListener('click', () => { toggleSaved(savedList()[Number(b.dataset.i)]); paint(); }));
+  };
+  paint();
+</script>

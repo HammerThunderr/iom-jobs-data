@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import EventCard from '../components/EventCard.astro';
+import { load } from '../lib/data';
+import { upcoming } from '../lib/events';
+import { rotaHtml } from '../lib/pharmacy';
+import { isoDay, fmtDate, telHref } from '../lib/format';
+
+const today = isoDay();
+const y = Number(today.slice(0, 4)) - (today.slice(5, 7) === '01' ? 1 : 0);
+const from = `${y}-12-20`, to = `${y + 1}-01-04`;
+const festiveWords = /christmas|xmas|santa|festive|panto|grotto|nativity|carol|hogmanay|new year|tinsel|elf\b|reindeer|mince pie|yule|winter wonderland|lights switch/i;
+const kidsWords = /santa|grotto|kids|children|family|elf|panto/i;
+const events = upcoming().filter((e) => e.category === 'Festive' || festiveWords.test(e.title));
+const pharmacy = load<any>('pharmacy.json');
+const bins = load<any>('bins.json');
+const rail = load<any>('railways.json');
+const trains = (rail?.events ?? []).filter((e: any) => /santa|hogmanay|new year|auld|christmas/i.test(e.title) && (e.endDate || e.date) >= today);
+const hols = (load<any>('bank_holidays.json')?.years ?? []).flatMap((x: any) => x.holidays).filter((h: any) => h.date >= `${y}-12-01` && h.date <= `${y + 1}-01-31`);
+const exceptions = (bins?.exceptions ?? []).filter((e: any) => !e.example);
+const authName = Object.fromEntries((bins?.authorities ?? []).map((a: any) => [a.key, a.name]));
+const d = (s: string) => fmtDate(s + 'T12:00:00Z', { weekday: 'short', day: 'numeric', month: 'short' });
+---
+<Layout title="Christmas and New Year on the Isle of Man" description="Isle of Man Christmas and New Year guide: festive events and Santa trips, duty pharmacies over the holidays, bin collection changes, Santa trains and bank holidays." section="christmas">
+  <PageHead title="Christmas & New Year" sub="Everything festive on the island, in one place" icon="celebration">
+    <span slot="meta" id="countdown"></span>
+  </PageHead>
+  <div class="wrap">
+    <nav class="chips"><a class="chip" href="#events">Festive events</a><a class="chip" href="#pharmacy">Pharmacies</a><a class="chip" href="#bins">Bins</a><a class="chip" href="#trains">Trains</a><a class="chip" href="#holidays">Bank holidays</a></nav>
+
+    <section class="section" id="events">
+      <h2>Festive events</h2>
+      <div class="chips" id="ef">
+        <button class="chip" type="button" data-value="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-value="kids" aria-pressed="false">For kids</button>
+        <button class="chip" type="button" data-value="free" aria-pressed="false">Free</button>
+      </div>
+      <div class="grid" id="elist">
+        {events.map((e) => (
+          <div data-tags={[kidsWords.test(`${e.title} ${e.tags.join(' ')} ${e.category}`) || e.category === 'Family & Kids' ? 'kids' : '', /free/i.test(e.price) ? 'free' : ''].filter(Boolean).join('|')}><EventCard e={e} /></div>
+        ))}
+      </div>
+      <p class="empty" id="eempty" hidden>No festive events match — try another filter.</p>
+      <p><a class="btn ghost sm" href="/events/?cat=Festive">All events in What's On</a></p>
+    </section>
+
+    <section class="section" id="pharmacy">
+      <h2>Duty pharmacies over the holidays</h2>
+      {pharmacy?.meta?.validTo >= to.replace('-04', '-01')
+        ? <div set:html={rotaHtml(pharmacy?.areas ?? [], from > today ? from : today, to)} />
+        : <div class="notice"><Icon name="info" /><p>The holiday rota hasn't been published yet. It usually appears in December. See the <a href="/pharmacy/">current rota</a>.</p></div>}
+      <div class="notice"><Icon name="medical_services" /><p><strong>Need a doctor when the pharmacies are shut?</strong> Call MEDS on <a href="tel:01624650355">01624 650355</a>, or 999 in an emergency. <a href="/pharmacy/">Full pharmacy rota</a></p></div>
+    </section>
+
+    <section class="section" id="bins">
+      <h2>Bin collections</h2>
+      {exceptions.length
+        ? <div class="rows">{exceptions.map((c: any) => <div><span class="grow"><strong>{authName[c.authority] ?? c.authority}</strong><br /><span class="small">{c.movedFrom && c.movedTo ? `${d(c.movedFrom)} collection moves to ${d(c.movedTo)}` : c.movedFrom ? `No collection on ${d(c.movedFrom)}` : `Extra collection ${d(c.movedTo)}`}</span></span></div>)}</div>
+        : <div class="notice warn"><Icon name="info" /><p><strong>Christmas changes not announced yet.</strong> Councils usually publish Christmas and New Year collection changes in December. They'll appear here as soon as they do — meanwhile, check with your council.</p></div>}
+      <div class="flex" style="margin-top:10px">
+        <a class="btn sm" href="/bins/"><Icon name="delete" /> My bin day</a>
+        {(bins?.authorities ?? []).map((a: any) => <a class="btn ghost sm" href={a.url} target="_blank" rel="noopener">{a.name}</a>)}
+      </div>
+    </section>
+
+    <section class="section" id="trains">
+      <h2>Santa & Hogmanay trains</h2>
+      {trains.length
+        ? <div class="rows">{trains.map((t: any) => <div><span class="grow"><strong>{t.title}</strong><br /><span class="small muted">{t.detail}</span></span><span class="small nowrap">{d(t.date)}{t.endDate && t.endDate !== t.date && ` – ${d(t.endDate)}`}</span></div>)}</div>
+        : <p class="muted">No more Christmas trains listed this season.</p>}
+      <div class="btn-row"><a class="btn ghost sm" href="https://www.rail.im" target="_blank" rel="noopener"><Icon name="open_in_new" /> Book at rail.im</a><a class="btn ghost sm" href="/railways/">Timetables</a></div>
+    </section>
+
+    <section class="section" id="holidays">
+      <h2>Bank holidays</h2>
+      <div class="rows">{hols.map((h: any) => <div><span class="grow"><strong>{h.name}</strong></span><span class="small">{fmtDate(h.date + 'T12:00:00Z', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</span></div>)}</div>
+    </section>
+    <p class="source">Gathered from the duty pharmacy rota, your local authorities, Isle of Man Railways, Isle of Man Government bank holidays and the Manx One events feed. Times and arrangements can change over the holidays — always check with the organiser or service before you set off.</p>
+  </div>
+</Layout>
+<script>
+  import { $$, isoDay } from '../lib/client';
+  const today = isoDay();
+  const y = Number(today.slice(0, 4));
+  const xmas = `${y}-12-25`;
+  const days = Math.round((Date.parse(xmas) - Date.parse(today)) / 86400000);
+  const md = today.slice(5);
+  document.getElementById('countdown')!.textContent =
+    md === '12-25' ? 'Happy Christmas!' : md === '12-31' ? 'Happy Hogmanay!' : md === '01-01' ? 'Happy New Year!' : days === 1 ? 'Christmas Eve — 1 day to go!' : days > 0 ? `${days} days to Christmas` : '';
+  $$('section[data-date]').forEach((s) => (s.hidden = s.dataset.date! < today));
+  const chips = $$('#ef .chip');
+  const items = $$('#elist > div');
+  chips.forEach((c) => c.addEventListener('click', () => {
+    chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+    let n = 0;
+    items.forEach((el) => { const ok = c.dataset.value === 'all' || el.dataset.tags!.split('|').includes(c.dataset.value!); el.hidden = !ok; if (ok) n++; });
+    document.getElementById('eempty')!.hidden = n > 0;
+  }));
+</script>

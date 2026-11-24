@@ -1,0 +1,32 @@
+---
+// Renders a gov.im weather RSS description ("##Heading##\n\ntext").
+import { govSections } from '../lib/weather';
+const { desc = '' } = Astro.props;
+type Group = { title: string; rows: { k: string; v: string }[] };
+const groups: Group[] = [];
+let cur: Group = { title: '', rows: [] };
+for (const s of govSections(desc)) {
+  const k = s.heading.replace(/\)$/, '').replace(/:$/, '').trim();
+  const v = s.text.trim();
+  if (!v && k) {
+    if (cur.title || cur.rows.length) groups.push(cur);
+    cur = { title: k, rows: [] };
+  } else if (v) cur.rows.push({ k, v });
+}
+if (cur.title || cur.rows.length) groups.push(cur);
+---
+<div class="govfc">
+  {groups.map((g) => (
+    <section>
+      {g.title && <h3>{g.title}</h3>}
+      <dl class="kv">
+        {g.rows.map((r) => r.k ? <><dt>{r.k}</dt><dd class="prewrap">{r.v}</dd></> : <dd class="prewrap" style="grid-column:1/-1">{r.v}</dd>)}
+      </dl>
+    </section>
+  ))}
+</div>
+<style>
+  .govfc section + section { margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border); }
+  .govfc h3 { margin-bottom: 8px; }
+  .govfc .kv { grid-template-columns: minmax(90px, max-content) 1fr; }
+</style>

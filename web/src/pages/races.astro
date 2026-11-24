@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { fmtDate } from '../lib/format';
+
+const r = load<any>('races.json');
+const weeks = [...new Set((r?.days ?? []).map((d: any) => d.week))] as string[];
+const kindTag: Record<string, string> = { qualifying: 'info', race: 'bad', parade: 'warn', practice: 'info' };
+---
+<Layout title={`${r?.event?.name ?? 'TT'} Race Schedule`} description={`${r?.event?.name} schedule: qualifying and race days, session times and road closure notes.`} section="races">
+  <PageHead title={r?.event?.name ?? 'Race schedule'} sub={`${fmtDate(r?.event?.from + 'T12:00:00Z', { day: 'numeric', month: 'long' })} – ${fmtDate(r?.event?.to + 'T12:00:00Z', { day: 'numeric', month: 'long', year: 'numeric' })}`} icon="sports_motorsports">
+    <span slot="meta" id="countdown"></span>
+  </PageHead>
+  <div class="wrap narrow">
+    {r?.meta?.lastUpdate && <div class="notice"><Icon name="campaign" /><p><strong>{r.meta.lastUpdate.title}.</strong> {r.meta.lastUpdate.message}</p></div>}
+    {r?.meta?.sharedCourseNote && <p class="small">{r.meta.sharedCourseNote}</p>}
+    {weeks.map((w) => (
+      <section class="section">
+        <h2>{w}</h2>
+        <div class="stack">
+          {r.days.filter((d: any) => d.week === w).map((d: any) => (
+            <div class="card" data-date={d.date}>
+              <div class="flex between"><h3 class="mb0">{fmtDate(d.date + 'T12:00:00Z', { weekday: 'long', day: 'numeric', month: 'long' })}</h3><span class="tag">{d.label}</span></div>
+              <div class="rows" style="margin-top:8px">
+                {d.sessions.map((s: any) => (
+                  <div><span class="nowrap strong" style="min-width:56px">{s.time}</span><span class="grow">{s.name}{s.laps && <span class="muted"> · {s.laps} laps</span>}{s.note && <><br /><span class="tiny muted">{s.note}</span></>}</span><span class={`tag ${kindTag[s.kind] ?? ''}`}>{s.kind}</span></div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+    {r?.meta?.contingencyNote && <p class="small">{r.meta.contingencyNote}</p>}
+    <div class="btn-row"><a class="btn" href={r?.meta?.sourceUrl} target="_blank" rel="noopener"><Icon name="open_in_new" /> Official schedule</a><a class="btn ghost" href={r?.meta?.mgpUrl} target="_blank" rel="noopener">Manx Grand Prix</a><a class="btn ghost" href="/road-closures/">Road closures</a><a class="btn ghost" href="/visitor/#tt">Where to watch</a></div>
+    <p class="source">Source: {r?.meta?.source}. {r?.meta?.disclaimer}</p>
+  </div>
+</Layout>
+<script>
+  import { isoDay } from '../lib/client';
+  const today = isoDay();
+  const first = document.querySelector<HTMLElement>('[data-date]');
+  if (first && first.dataset.date! > today) {
+    const days = Math.round((Date.parse(first.dataset.date!) - Date.parse(today)) / 86400000);
+    document.getElementById('countdown')!.textContent = `${days} days to go`;
+  }
+  document.querySelectorAll<HTMLElement>('[data-date]').forEach((c) => c.dataset.date! < today && (c.style.opacity = '0.5'));
+</script>

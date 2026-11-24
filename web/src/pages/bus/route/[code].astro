@@ -1,0 +1,73 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PageHead from '../../../components/PageHead.astro';
+import Icon from '../../../components/Icon.astro';
+import { load } from '../../../lib/data';
+
+export function getStaticPaths() {
+  const idx = load<any>('bus/index.json');
+  return (idx?.routes ?? []).map((r: any) => ({ params: { code: r.code }, props: { r } }));
+}
+const { r } = Astro.props as { r: any };
+const data = load<any>(`bus/route_${r.code}.json`);
+const trips = data?.trips ?? [];
+const ends = [...new Set(trips.map((t: any) => `${t.origin} → ${t.destination}`))].slice(0, 6) as string[];
+const DAY: Record<string, string> = { 'M-F': 'Monday to Friday', 'M-Sa': 'Monday to Saturday', 'M-Th': 'Monday to Thursday', Sa: 'Saturday', Su: 'Sunday', SuBh: 'Sundays and bank holidays', Bh: 'Bank holidays', F: 'Fridays', FSa: 'Friday and Saturday', TuTh: 'Tuesday and Thursday', MWF: 'Monday, Wednesday, Friday', Sch: 'School days', Nsch: 'Non-school days' };
+const stopNames = Object.fromEntries((load<any>('bus/stops.json')?.stops ?? []).map((s: any) => [s.id, s.name]));
+const usedStops: Record<number, string> = {};
+for (const t of trips) for (const s of t.stops) usedStops[s.s] = stopNames[s.s] ?? `Stop ${s.s}`;
+---
+<Layout title={`Bus route ${r.code} timetable`} description={`Isle of Man bus route ${r.code}: ${ends.slice(0, 2).join('; ')}. ${r.trips} trips, ${r.days.map((d: string) => DAY[d] ?? d).join(', ')}.`} section="bus_times">
+  <PageHead title={`Route ${r.code}`} sub={ends.slice(0, 2).join(' · ')} icon="directions_bus" crumbs={[{ href: '/bus/#routes', label: 'Bus' }]} />
+  <div class="wrap">
+    <div class="toolbar">
+      <label class="field"><span class="tiny">Day</span><input class="input" type="date" id="date" /></label>
+      <span class="small muted" id="day-label"></span>
+      {r.pdf && <a class="btn ghost sm" href={r.pdf} target="_blank" rel="noopener"><Icon name="picture_as_pdf" /> Official timetable (PDF)</a>}
+    </div>
+    <div id="tables"><p class="loading">Loading timetable…</p></div>
+    <p class="small muted">Runs: {r.days.map((d: string) => DAY[d] ?? d).join(' · ')}</p>
+    <p class="source">Decoded from Isle of Man Bus & Rail timetable data (version {data?.timetableVersion}). Always confirm with the operator before travelling.</p>
+    <script type="application/json" id="route-data" set:html={JSON.stringify({ trips, names: usedStops })} />
+  </div>
+</Layout>
+<script>
+  import * as bus from '../../../lib/bus';
+  import { esc, isoDay } from '../../../lib/client';
+  const { trips, names } = JSON.parse(document.getElementById('route-data')!.textContent!);
+  const dateIn = document.getElementById('date') as HTMLInputElement;
+  dateIn.value = isoDay();
+  const paint = async () => {
+    const ctx = await bus.dayContext(dateIn.value || isoDay());
+    document.getElementById('day-label')!.textContent = ctx.label;
+    const running = trips.filter((t: any) => bus.matches(t.days, ctx));
+    const groups = new Map<string, any[]>();
+    for (const t of running) {
+      const k = `${t.origin} → ${t.destination}`;
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k)!.push(t);
+    }
+    const now = bus.nowMinutes();
+    const today = dateIn.value === isoDay();
+    const html = [...groups.entries()]
+      .sort((a, b) => b[1].length - a[1].length)
+      .map(([k, list]) => {
+        list.sort((a, b) => a.start - b.start);
+        // Stop order from the longest trip in this group.
+        const order: number[] = [...list].sort((a, b) => b.stops.length - a.stops.length)[0].stops.map((s: any) => s.s);
+        const head = `<tr><th>Stop</th>${list.map((t: any) => `<th>${/Sch|Nsch/.test(t.days) ? t.days : ''}</th>`).join('')}</tr>`;
+        const rows = order
+          .map((sid) => `<tr><td>${esc(names[sid] ?? sid)}</td>${list.map((t: any) => {
+            const s = t.stops.find((x: any) => x.s === sid);
+            const past = today && t.end < now;
+            return `<td${past ? ' style="opacity:.4"' : ''}>${s ? bus.hm(s.t) : '<span class="dash">–</span>'}</td>`;
+          }).join('')}</tr>`)
+          .join('');
+        return `<section class="section"><h2>${esc(k)}</h2><div class="table-wrap"><table class="table tt"><thead>${head}</thead><tbody>${rows}</tbody></table></div></section>`;
+      })
+      .join('');
+    document.getElementById('tables')!.innerHTML = html || '<div class="card empty"><p>Route ' + 'doesn’t run on this day.</p></div>';
+  };
+  dateIn.addEventListener('change', paint);
+  paint();
+</script>

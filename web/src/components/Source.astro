@@ -1,0 +1,10 @@
+---
+const { name, url, updated, note } = Astro.props;
+import { fmtDateTime } from '../lib/format';
+---
+<p class="source">
+  {name && <>Source: {url ? <a href={url} rel="noopener" target="_blank">{name}</a> : name}. </>}
+  {updated && <>Updated {fmtDateTime(updated)}. </>}
+  {note}
+  <slot />
+</p>

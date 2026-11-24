@@ -1,0 +1,110 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { isoDay, fmtDate } from '../lib/format';
+import { rotaHtml, phoneDisplay, tel } from '../lib/pharmacy';
+
+const r = load<any>('pharmacy.json');
+const dir = load<any>('pharmacies.json');
+const pharmacies = (dir?.pharmacies ?? []).sort((a: any, b: any) => a.area.localeCompare(b.area) || a.name.localeCompare(b.name));
+const areas = [...new Set(pharmacies.map((p: any) => p.area))] as string[];
+const services = [...new Set(pharmacies.flatMap((p: any) => p.services || []))].sort() as string[];
+const today = isoDay();
+const expired = r?.meta?.validTo && r.meta.validTo < today;
+---
+<Layout title="Isle of Man Pharmacy Rota and Opening Hours" description="Which Isle of Man pharmacies are open on Sundays and bank holidays, plus opening hours and services for every pharmacy on the island." section="pharmacy">
+  <PageHead title="Pharmacies" sub="Sunday & bank holiday duty rota, plus every pharmacy's hours" icon="local_pharmacy" />
+  <div class="wrap">
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" type="button" data-t="rota" aria-selected="true">Duty rota</button>
+      <button class="tab" role="tab" type="button" data-t="dir" aria-selected="false">All pharmacies</button>
+    </div>
+    <section data-p="rota">
+      <div class="grid two">
+        <div class="card">
+          <h2>Normal hours</h2>
+          <ul class="small mb0"><li>{r?.standingHours?.normal}</li><li>{r?.standingHours?.weekdayRota}</li><li>{r?.standingHours?.sundayRota}</li></ul>
+        </div>
+        <div class="card">
+          <h2>When pharmacies are shut</h2>
+          <div class="rows">{(r?.urgentCare ?? []).map((u: any) => <a href={tel(u.phone)}><span class="grow"><strong>{u.name}</strong><br /><span class="tiny muted">{u.detail}</span></span><span class="nowrap small">{u.phone === '999' ? '999' : phoneDisplay(u.phone)}</span></a>)}</div>
+        </div>
+      </div>
+      {expired
+        ? <div class="notice warn"><Icon name="warning" /><p>The published rota ({r?.meta?.period}) has ended. Check the <a href={r?.meta?.sourceUrl} target="_blank" rel="noopener">latest rota on gov.im</a>.</p></div>
+        : <><h2 style="margin-top:20px">Sunday & bank holiday duty pharmacies <span class="small muted">({r?.meta?.period})</span></h2><div id="rota" set:html={rotaHtml(r?.areas ?? [], today, r?.meta?.validTo ?? '9999')} /></>}
+      <p class="source">Source: <a href={r?.meta?.sourceUrl} target="_blank" rel="noopener">{r?.meta?.source}</a>. {r?.meta?.disclaimer}</p>
+    </section>
+    <section data-p="dir" hidden>
+      <div class="toolbar">
+        <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Pharmacy or town" aria-label="Search pharmacies" /></div>
+        <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map((a) => <option>{a}</option>)}</select>
+        <select class="input" id="svc" aria-label="Service"><option value="">Any service</option>{services.map((s) => <option>{s}</option>)}</select>
+      </div>
+      <label class="small flex" style="margin:-4px 0 12px"><input type="checkbox" id="open" /> Open now</label>
+      <div class="grid" id="list">
+        {pharmacies.map((p: any) => (
+          <article class="card" data-area={p.area} data-svc={(p.services || []).join('|')} data-hours={JSON.stringify(p.hours || {})} data-search={`${p.name} ${p.area} ${p.addressText}`.toLowerCase()}>
+            <div class="flex between"><h3 class="mb0">{p.name}</h3><span class="tag open-tag" hidden>Open now</span></div>
+            <p class="small muted">{p.addressText}</p>
+            <dl class="kv small">
+              <dt>Mon–Fri</dt><dd>{p.hours?.monFri || '—'}</dd>
+              <dt>Saturday</dt><dd>{p.hours?.sat || '—'}</dd>
+              <dt>Sunday</dt><dd>{p.hours?.sun || '—'}</dd>
+            </dl>
+            {p.services?.length > 0 && <details class="small" style="margin-top:8px"><summary>{p.services.length} services</summary><ul>{p.services.map((s: string) => <li>{s}</li>)}</ul></details>}
+            <div class="btn-row">
+              <a class="btn ghost sm" href={tel(p.phone)}><Icon name="call" /> {phoneDisplay(p.phone)}</a>
+              <a class="btn ghost sm" href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.mapsQuery)}`} target="_blank" rel="noopener"><Icon name="directions" /> Directions</a>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="empty" id="empty" hidden>No pharmacies match.</p>
+      <p class="source">Source: {dir?.meta?.source}. {dir?.meta?.note} Updated {fmtDate(dir?.meta?.generated)}.</p>
+    </section>
+  </div>
+</Layout>
+<script>
+  import { $$, isoDay } from '../lib/client';
+  $$('.tab[data-t]').forEach((t) => t.addEventListener('click', () => {
+    $$('.tab[data-t]').forEach((o) => o.setAttribute('aria-selected', String(o === t)));
+    $$('[data-p]').forEach((p) => (p.hidden = p.dataset.p !== t.dataset.t));
+  }));
+  const today = isoDay();
+  $$('#rota [data-date]').forEach((s) => (s.hidden = s.dataset.date! < today));
+  // "Open now" from text like "9am to 5:30pm".
+  const toMin = (s: string) => { const m = s.trim().match(/^(\d{1,2})(?::(\d{2}))?\s*(am|pm)$/i); if (!m) return null; let h = Number(m[1]) % 12; if (/pm/i.test(m[3])) h += 12; return h * 60 + Number(m[2] || 0); };
+  const isOpen = (txt: string) => {
+    const now = new Date();
+    const hm = now.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+    const cur = Number(hm.slice(0, 2)) * 60 + Number(hm.slice(3));
+    return String(txt || '').split(/,|&|and(?= \d)/).some((part) => { const [a, b] = part.split(/\s+to\s+|–|-/); const s = a && toMin(a), e = b && toMin(b); return s != null && e != null && cur >= s && cur < e; });
+  };
+  const dow = new Date().toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'short' });
+  const items = $$('#list > article');
+  for (const el of items) {
+    const h = JSON.parse(el.dataset.hours || '{}');
+    const txt = dow === 'Sun' ? h.sun : dow === 'Sat' ? h.sat : h.monFri;
+    const open = isOpen(txt || '');
+    el.dataset.open = open ? '1' : '';
+    const tag = el.querySelector<HTMLElement>('.open-tag')!;
+    tag.hidden = !open;
+    tag.classList.add('ok');
+  }
+  const q = document.getElementById('q') as HTMLInputElement, area = document.getElementById('area') as HTMLSelectElement, svc = document.getElementById('svc') as HTMLSelectElement, open = document.getElementById('open') as HTMLInputElement;
+  const run = () => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const el of items) {
+      const ok = (!area.value || el.dataset.area === area.value) && (!svc.value || el.dataset.svc!.split('|').includes(svc.value)) && (!open.checked || el.dataset.open) && words.every((w) => el.dataset.search!.includes(w));
+      el.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('empty')!.hidden = n > 0;
+  };
+  [q, area, svc, open].forEach((el) => el.addEventListener(el === q ? 'input' : 'change', run));
+  if (location.hash === '#all') (document.querySelector('.tab[data-t=dir]') as HTMLElement).click();
+</script>

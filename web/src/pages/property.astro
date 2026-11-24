@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { fmtDateTime } from '../lib/format';
+import { place, type Listing } from '../lib/property';
+
+const off = featureOff('property');
+const data = load<any>('property/properties.json');
+const listings: Listing[] = data?.listings ?? [];
+const areas = Object.entries(listings.reduce<Record<string, number>>((m, l) => { const p = place(l); if (p) m[p] = (m[p] || 0) + 1; return m; }, {})).sort((a, b) => a[0].localeCompare(b[0]));
+const agents = (data?.meta?.sources ?? []).map((s: any) => s.agent);
+---
+<Layout title="Isle of Man Property for Sale and to Rent" description={`${listings.length} Isle of Man homes, land and commercial property for sale and to rent from ${agents.length} local estate agents.`} section="property">
+  <PageHead title="Property" sub={`${listings.length.toLocaleString('en-GB')} listings from ${agents.length} Isle of Man estate agents`} icon="home_work">
+    <span slot="meta">{data?.meta?.generated && `Updated ${fmtDateTime(data.meta.generated)}`}</span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="chips" id="type">
+          <button class="chip" type="button" data-value="sale" aria-pressed="true">For sale</button>
+          <button class="chip" type="button" data-value="rent" aria-pressed="false">To rent</button>
+          <span style="width:12px"></span>
+          <button class="chip" type="button" data-cat="residential" aria-pressed="true">Homes</button>
+          <button class="chip" type="button" data-cat="commercial" aria-pressed="false">Commercial</button>
+          <button class="chip" type="button" data-cat="land" aria-pressed="false">Land</button>
+          <button class="chip" type="button" data-cat="all" aria-pressed="false">Everything</button>
+        </div>
+        <div class="toolbar filters">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Street, area or type" aria-label="Search property" /></div>
+          <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map(([a, n]) => <option value={a}>{a} ({n})</option>)}</select>
+          <select class="input" id="min" aria-label="Minimum price"><option value="">No min</option></select>
+          <select class="input" id="max" aria-label="Maximum price"><option value="">No max</option></select>
+          <select class="input" id="beds" aria-label="Bedrooms"><option value="">Any beds</option>{[1, 2, 3, 4, 5].map((b) => <option value={b}>{b}+ beds</option>)}</select>
+          <select class="input" id="agent" aria-label="Agent"><option value="">All agents</option>{agents.map((a: string) => <option value={a}>{a}</option>)}</select>
+          <select class="input" id="sort" aria-label="Sort">
+            <option value="new">Newest listed</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+            <option value="beds">Most bedrooms</option>
+          </select>
+        </div>
+        <label class="small flex" style="margin:-4px 0 12px"><input type="checkbox" id="avail" checked /> Hide Sold STC, under offer and let agreed</label>
+        <p class="count-line" id="count">Loading listings…</p>
+        <div class="grid" id="list"></div>
+        <div class="btn-row" style="justify-content:center"><button class="btn ghost" id="more" type="button" hidden>Show more</button></div>
+        <p class="empty" id="empty" hidden><Icon name="search_off" />No property matches. Try widening the price or area.</p>
+        <noscript><p class="notice"><Icon name="info" />Turn on JavaScript to search listings.</p></noscript>
+        <p class="source">{data?.meta?.disclaimer} Agents: {agents.join(', ')}.</p>
+      </>
+    )}
+  </div>
+</Layout>
+
+<style is:global>
+  .filters .input { flex: 0 1 auto; }
+  .prop { display: flex; flex-direction: column; gap: 4px; }
+  .prop .price { font-size: 1.3rem; font-weight: 800; line-height: 1.2; }
+  .prop .was { text-decoration: line-through; color: var(--text-2); font-size: 0.85rem; font-weight: 500; margin-left: 6px; }
+  .prop .type { text-transform: capitalize; font-weight: 600; }
+  .prop .agent { margin-top: auto; padding-top: 8px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+</style>
+
+<script>
+  import { getData, esc, ic, store } from '../lib/client';
+  import { priceText, typeLabel, place, statusLabel, type Listing } from '../lib/property';
+
+  const $ = (id: string) => document.getElementById(id) as any;
+  const list = $('list');
+  if (list) {
+    const SALE = [100000, 150000, 200000, 250000, 300000, 350000, 400000, 500000, 600000, 750000, 1000000, 1500000];
+    const RENT = [500, 750, 1000, 1250, 1500, 2000, 2500, 3000];
+    const state = { type: 'sale', cat: 'residential', shown: 30 };
+    const params = new URLSearchParams(location.search);
+    let all: Listing[] = [];
+
+    const fillPrices = () => {
+      const steps = state.type === 'rent' ? RENT : SALE;
+      for (const id of ['min', 'max']) {
+        const sel = $(id) as HTMLSelectElement;
+        const keep = sel.value;
+        sel.innerHTML = `<option value="">${id === 'min' ? 'No min' : 'No max'}</option>` + steps.map((s) => `<option value="${s}">£${s.toLocaleString('en-GB')}${state.type === 'rent' ? ' pcm' : ''}</option>`).join('');
+        if (steps.includes(Number(keep))) sel.value = keep;
+      }
+    };
+
+    const card = (l: Listing) => {
+      const p = priceText(l);
+      const st = statusLabel(l.status);
+      const isNew = l.firstSeen && (Date.now() - Date.parse(l.firstSeen)) / 86400000 < 4;
+      return `<a class="card prop" href="${esc(l.url)}" target="_blank" rel="noopener">
+        <div class="flex between"><div class="price">${p.prefix ? `<span class="tiny muted" style="display:block;font-weight:600">${esc(p.prefix)}</span>` : ''}${esc(p.main)}${l.previousPrice && l.price && l.previousPrice > l.price ? `<span class="was">£${l.previousPrice.toLocaleString('en-GB')}</span>` : ''}</div>
+        <div class="tags" style="margin:0">${st ? `<span class="tag ${st.kind}">${esc(st.text)}</span>` : ''}${isNew ? '<span class="tag ok">New</span>' : ''}</div></div>
+        ${p.note && p.note !== p.main ? `<div class="tiny muted">${esc(p.note)}</div>` : ''}
+        <div class="type">${esc(typeLabel(l))}</div>
+        <div class="small muted">${ic('location_on')} ${esc(l.address)}${place(l) && !l.address.includes(place(l)) ? ', ' + esc(place(l)) : ''}</div>
+        <div class="agent tiny muted"><span>${esc(l.agent)}</span><span>${ic('open_in_new')}</span></div>
+      </a>`;
+    };
+
+    const run = (resetShown = true) => {
+      if (resetShown) state.shown = 30;
+      const words = ($('q').value as string).trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const area = $('area').value, agent = $('agent').value;
+      const min = Number($('min').value) || 0, max = Number($('max').value) || Infinity;
+      const beds = Number($('beds').value) || 0;
+      const avail = $('avail').checked;
+      let res = all.filter((l) => {
+        if (l.listingType !== state.type) return false;
+        if (state.cat !== 'all' && l.category !== state.cat) return false;
+        if (area && place(l) !== area) return false;
+        if (agent && l.agent !== agent) return false;
+        if (avail && statusLabel(l.status)) return false;
+        if ((min || max !== Infinity) && (l.price == null || l.price < min || l.price > max)) return false;
+        if (beds && (l.bedrooms ?? 0) < beds) return false;
+        if (words.length) {
+          const hay = `${l.address} ${l.locality} ${l.parish} ${l.propertyType} ${l.agent}`.toLowerCase();
+          if (!words.every((w) => hay.includes(w))) return false;
+        }
+        return true;
+      });
+      const by = $('sort').value;
+      const price = (l: Listing, dir: number) => (l.price == null ? Infinity : dir * l.price);
+      res.sort((a, b) =>
+        by === 'low' ? price(a, 1) - price(b, 1) : by === 'high' ? price(a, -1) - price(b, -1) : by === 'beds' ? (b.bedrooms ?? 0) - (a.bedrooms ?? 0) : String(b.firstSeen).localeCompare(String(a.firstSeen)),
+      );
+      $('count').textContent = `${res.length.toLocaleString('en-GB')} ${res.length === 1 ? 'listing' : 'listings'}`;
+      list.innerHTML = res.slice(0, state.shown).map(card).join('');
+      $('more').hidden = res.length <= state.shown;
+      $('empty').hidden = res.length > 0;
+      const qs = new URLSearchParams();
+      if (state.type !== 'sale') qs.set('type', state.type);
+      if (state.cat !== 'residential') qs.set('cat', state.cat);
+      for (const id of ['q', 'area', 'min', 'max', 'beds', 'agent', 'sort']) if ($(id).value && !(id === 'sort' && $(id).value === 'new')) qs.set(id, $(id).value);
+      history.replaceState(null, '', qs.toString() ? `?${qs}` : location.pathname);
+      store.set('property:last', qs.toString());
+    };
+
+    // restore state from the URL
+    if (params.get('type') === 'rent') state.type = 'rent';
+    if (params.get('cat')) state.cat = params.get('cat')!;
+    fillPrices();
+    for (const id of ['q', 'area', 'min', 'max', 'beds', 'agent', 'sort']) if (params.get(id)) $(id).value = params.get(id);
+    const paintChips = () => {
+      document.querySelectorAll<HTMLElement>('#type [data-value]').forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.value === state.type)));
+      document.querySelectorAll<HTMLElement>('#type [data-cat]').forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.cat === state.cat)));
+    };
+    paintChips();
+    document.querySelectorAll<HTMLElement>('#type [data-value]').forEach((c) =>
+      c.addEventListener('click', () => {
+        state.type = c.dataset.value!;
+        fillPrices();
+        paintChips();
+        run();
+      }),
+    );
+    document.querySelectorAll<HTMLElement>('#type [data-cat]').forEach((c) =>
+      c.addEventListener('click', () => {
+        state.cat = c.dataset.cat!;
+        paintChips();
+        run();
+      }),
+    );
+    for (const id of ['area', 'min', 'max', 'beds', 'agent', 'sort', 'avail']) $(id).addEventListener('change', () => run());
+    $('q').addEventListener('input', () => run());
+    $('more').addEventListener('click', () => {
+      state.shown += 30;
+      run(false);
+    });
+
+    getData<any>('property/properties.json')
+      .then((d) => {
+        all = d.listings || [];
+        run();
+      })
+      .catch(() => ($('count').textContent = 'Listings could not be loaded. Please try again later.'));
+  }
+</script>

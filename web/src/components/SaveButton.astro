@@ -1,0 +1,8 @@
+---
+// Bookmark toggle. Saved items live in this browser (localStorage).
+import Icon from './Icon.astro';
+interface Props { kind: 'job' | 'gov'; id: string; title: string; sub?: string; href: string }
+const { kind, id, title, sub = '', href } = Astro.props;
+---
+<button class="save-btn" type="button" aria-pressed="false" aria-label={`Save ${title}`} title="Save"
+  data-save={JSON.stringify({ kind, id, title, sub, href })}><Icon name="bookmark" /></button>

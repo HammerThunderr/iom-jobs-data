@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { telHref } from '../lib/format';
+
+type N = { name: string; number: string; detail: string; hours?: string; is247?: boolean };
+const groups: { title: string; icon: string; items: N[] }[] = [
+  { title: 'Emergency services — non-emergency', icon: 'local_police', items: [
+    { name: 'Emergency Services Joint Control Room', number: '01624 697327', detail: 'ESJCR non-emergency line — also the 24-hour line for Civil Defence', is247: true },
+    { name: 'Police Headquarters (non-emergency)', number: '01624 631212', detail: 'Report non-urgent crime and police enquiries' },
+    { name: 'Coastguard (non-emergency)', number: '01624 686612', detail: 'Non-urgent coastal and sea matters — 999 if someone is in danger' },
+    { name: 'Fire & Rescue — fire safety advice', number: '01624 647300', detail: 'Home fire safety checks and advice · iomfire@gov.im' },
+    { name: 'Herbert Protocol / Dementia Aware', number: '01624 631212', detail: 'If someone with dementia is lost or missing · HerbPro.DHA@gov.im' },
+    { name: 'Civil Defence Corps (office)', number: '01624 694317', detail: 'Office hours — out of hours use the ESJCR line above' },
+    { name: 'Department of Infrastructure emergencies', number: '01624 672000', detail: 'DOI 24-hour emergency line', is247: true },
+  ] },
+  { title: 'Health', icon: 'local_hospital', items: [
+    { name: 'MEDS (out-of-hours GP)', number: '01624 650355', detail: 'Urgent GP care when your surgery is closed', hours: 'Mon–Fri 6pm–midnight · Weekends & bank holidays 24 hours' },
+    { name: 'Minor Injuries Unit, Ramsey', number: '01624 811800', detail: 'Walk-in for cuts, sprains and minor injuries', hours: '8am–8pm daily, including bank holidays' },
+    { name: "Noble's Hospital", number: '01624 650000', detail: 'Main Isle of Man hospital' },
+    { name: "Noble's A&E (enquiries)", number: '01624 650040', detail: 'Emergency department — call 999 in an emergency' },
+    { name: 'Ramsey & District Cottage Hospital', number: '01624 811811', detail: 'Northern IOM hospital' },
+  ] },
+  { title: 'Mental health & wellbeing', icon: 'psychology', items: [
+    { name: 'Crisis Response & Home Treatment', number: '01624 642860', detail: 'Urgent mental health support' },
+    { name: 'Isle Listen', number: '01624 679118', detail: 'Mental wellbeing support & counselling' },
+    { name: 'Community Mental Health Service (Adults)', number: '01624 686313', detail: 'CMHSA — adult mental health services' },
+    { name: 'Child & Adolescent Mental Health (CAMHS)', number: '01624 642875', detail: 'Mental health support for under 18s' },
+    { name: 'Cruse Bereavement Support', number: '01624 668191', detail: 'Support after the death of someone close' },
+  ] },
+  { title: 'Support helplines', icon: 'support_agent', items: [
+    { name: 'Samaritans', number: '116 123', detail: 'Free emotional support', is247: true },
+    { name: 'Childline', number: '0800 1111', detail: 'Help for children & young people' },
+    { name: 'IOM Domestic Abuse Helpline', number: '0808 1000 339', detail: 'Free & confidential', is247: true },
+    { name: 'Motiv8 (Drug & Alcohol)', number: '01624 627656', detail: 'Substance abuse support' },
+  ] },
+  { title: 'Utilities', icon: 'bolt', items: [
+    { name: 'Manx Utilities (Power)', number: '01624 687687', detail: 'Power cuts & faults — 24-hour line', is247: true },
+    { name: 'Manx Utilities (Water)', number: '01624 687687', detail: 'Water supply & faults' },
+    { name: 'Manx Gas', number: '0808 1624 444', detail: 'Gas leaks & emergencies', is247: true },
+  ] },
+];
+---
+<Layout title="Isle of Man Emergency and Urgent Numbers" description="Isle of Man emergency and urgent phone numbers: 999, police non-emergency, out-of-hours GP (MEDS), Noble's Hospital, mental health crisis support, helplines and utilities." section="emergency">
+  <PageHead title="Emergency" sub="Urgent and useful numbers for the Isle of Man" icon="emergency" />
+  <div class="wrap narrow">
+    <a class="sos-card" href="tel:999">
+      <span class="ms" aria-hidden="true">call</span>
+      <span><strong>Call 999</strong><br /><span>Police · Fire · Ambulance · Coastguard — life-threatening emergencies</span></span>
+    </a>
+    <div class="notice"><Icon name="favorite" /><p><strong>Need to talk right now?</strong> Services below may be closed outside office hours. Samaritans answer free, 24 hours a day, on <a href="tel:116123">116 123</a>.</p></div>
+    {groups.map((g) => (
+      <section class="section">
+        <h2><Icon name={g.icon} /> {g.title}</h2>
+        <div class="rows">
+          {g.items.map((n) => (
+            <a href={telHref(n.number)}>
+              <span class="grow">
+                <strong>{n.name}</strong> {n.is247 && <span class="tag ok">24/7</span>}
+                <br /><span class="small muted">{n.detail}</span>
+                {n.hours && <><br /><span class="tiny muted">{n.hours}</span></>}
+              </span>
+              <span class="nowrap strong"><Icon name="call" /> {n.number}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+    <p class="source">Numbers from Isle of Man Government, Manx Care and the organisations listed. In a life-threatening situation, always call 999. Also see <a href="/pharmacy/">pharmacy opening rota</a> and <a href="/toilets/">public toilets</a>.</p>
+  </div>
+</Layout>
+<style>
+  .sos-card { display: flex; gap: 16px; align-items: center; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; border-radius: 18px; padding: 20px 22px; box-shadow: 0 10px 30px color-mix(in srgb, var(--red) 35%, transparent); margin-bottom: 14px; }
+  .sos-card:hover { text-decoration: none; filter: brightness(1.05); }
+  .sos-card .ms { font-size: 2.6rem; width: auto; background: rgba(255, 255, 255, 0.18); border-radius: 50%; padding: 12px; }
+  .sos-card strong { font-size: 1.6rem; }
+  .sos-card span span { opacity: 0.9; font-size: 0.95rem; }
+  h2 .ms { color: var(--accent); }
+</style>

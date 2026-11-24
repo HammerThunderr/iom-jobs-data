@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Layout title="My event submissions" section="events" noindex>
+  <PageHead title="My submissions" sub="Events you've sent, and whether they've been approved" icon="list_alt" crumbs={[{ href: '/events/', label: "What's On" }]} />
+  <div class="wrap narrow">
+    <div id="auth"><p class="loading">Loading…</p></div>
+    <div id="mine" hidden>
+      <div class="flex between" style="margin-bottom:12px"><p class="small muted mb0" id="who"></p>
+        <div class="flex"><a class="btn sm" href="/events/submit/"><Icon name="add" /> Add an event</a><a class="btn ghost sm" id="admin" href="/events/review/" hidden>Review queue</a><button class="btn ghost sm" type="button" id="out">Sign out</button></div></div>
+      <div id="list" class="stack"><p class="loading">Loading…</p></div>
+    </div>
+  </div>
+</Layout>
+<script>
+  import { requireVerifiedUser, mySubmissions, withdraw, signOutNow, isAdmin, friendlyError } from '../../lib/community-auth';
+  import { esc } from '../../lib/client';
+  const STATUS: Record<string, [string, string, string]> = {
+    pending: ['Waiting for review', 'warn', 'We check every event before it goes live.'],
+    approved: ['Live in What’s On', 'ok', ''],
+    rejected: ['Not approved', 'bad', ''],
+    removed: ['Taken down', 'bad', ''],
+  };
+  const list = document.getElementById('list')!;
+  const paint = async (u: any) => {
+    list.innerHTML = '<p class="loading">Loading…</p>';
+    try {
+      const subs = await mySubmissions(u);
+      if (!subs.length) {
+        list.innerHTML = '<div class="card empty"><p>You haven’t sent any events yet.</p><a class="btn" href="/events/submit/">Add your first event</a></div>';
+        return;
+      }
+      list.innerHTML = subs
+        .map((s) => {
+          const [label, kind, help] = STATUS[s.status] ?? STATUS.pending;
+          const when = new Date(s.startDate + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+          return `<div class="card"><div class="flex between"><h3 class="mb0">${esc(s.title)}</h3><span class="tag ${kind}">${label}</span></div>
+            <div class="meta-line"><span>${when}${s.startTime ? ' · ' + esc(s.startTime) : ''}</span><span>${esc(s.venue)}, ${esc(s.area)}</span><span>${esc(s.category)}</span></div>
+            ${help ? `<p class="small muted mb0">${help}</p>` : ''}
+            ${s.reviewNote ? `<p class="notice warn"><span><strong>Note from the reviewer:</strong> ${esc(s.reviewNote)}</span></p>` : ''}
+            ${s.status === 'pending' ? `<div class="btn-row"><button class="btn ghost sm" data-withdraw="${esc(s.id)}" type="button">Withdraw</button></div>` : ''}
+            ${s.status === 'approved' ? `<div class="btn-row"><a class="btn ghost sm" href="/events/community/?id=${encodeURIComponent(s.id)}">View listing</a></div>` : ''}</div>`;
+        })
+        .join('');
+      list.querySelectorAll<HTMLButtonElement>('[data-withdraw]').forEach((b) =>
+        b.addEventListener('click', async () => {
+          if (!confirm('Withdraw this event? It won’t be reviewed.')) return;
+          b.disabled = true;
+          try {
+            await withdraw(b.dataset.withdraw!);
+            paint(u);
+          } catch (e) {
+            alert(friendlyError(e));
+            b.disabled = false;
+          }
+        }),
+      );
+    } catch (e) {
+      list.innerHTML = `<p class="notice bad"><span>${esc(friendlyError(e))}</span></p>`;
+    }
+  };
+  requireVerifiedUser(
+    document.getElementById('auth')!,
+    (u) => {
+      document.getElementById('mine')!.hidden = false;
+      document.getElementById('who')!.textContent = `Signed in as ${u.email}`;
+      document.getElementById('admin')!.hidden = !isAdmin(u);
+      paint(u);
+    },
+    () => (document.getElementById('mine')!.hidden = true),
+  );
+  document.getElementById('out')!.addEventListener('click', () => signOutNow());
+</script>

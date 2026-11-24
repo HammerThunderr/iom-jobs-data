@@ -1,0 +1,181 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { telHref, mapsHref } from '../lib/format';
+
+const attractions = (load<any>('attractions.json')?.attractions ?? []).sort((a: any, b: any) => Number(!!b.mustSee) - Number(!!a.mustSee) || a.name.localeCompare(b.name));
+const beaches = load<any>('beaches.json')?.beaches ?? [];
+const attrCats = [...new Set(attractions.map((a: any) => a.category))] as string[];
+const dots = (n: number) => '●'.repeat(Math.max(0, Math.min(5, n))) + '○'.repeat(Math.max(0, 5 - Math.min(5, n)));
+
+const ttSpots = [
+  ['Grandstand', 'Main start/finish in Douglas. Official tickets. Electric atmosphere.', false],
+  ['Ballaugh Bridge', 'Bikes jump the hump-back bridge. Free roadside viewing — arrive very early.', true],
+  ['Ramsey Hairpin', 'Tight corner with close views as bikes slow right down.', true],
+  ['Creg-ny-Baa', 'Popular corner with a pub — watch the bikes brake hard downhill.', true],
+  ['Bungalow Bridge', 'High on the Mountain Course near Snaefell. Mountain backdrop.', true],
+  ['Sulby Straight', 'One of the fastest sections of the course. Incredible noise.', true],
+  ["Kate's Cottage", 'Classic photo spot on the descent towards Creg-ny-Baa.', true],
+  ['Governors Bridge', 'Slow, tight hairpin near the finish — bikes come right past you.', true],
+] as const;
+const ttTips = ['Book accommodation many months ahead for TT fortnight', 'Roads close for practice and races — plan journeys early', 'Bring ear protection — it is loud', 'Mountain weather differs from Douglas — wear layers', 'Fill up with fuel the night before race days', 'Check the official schedule: road closing times are strict'];
+const foods = [
+  ['Manx Queenies', 'Queen scallops from Manx waters — the island’s prized delicacy, often served with garlic butter.'],
+  ['Manx Kippers', 'Cold-smoked herring, a centuries-old tradition. Peel’s kipper yards are famous.'],
+  ['Bonnag', 'Traditional Manx soda bread. Dense, slightly sweet and delicious warm with butter.'],
+  ['Manx Loaghtan Lamb', 'From the native four-horned Loaghtan sheep. Rich and gamey; a protected-name product.'],
+  ['Chips, cheese & gravy', 'A Manx chip-shop staple — ask for it in any local chippy.'],
+  ['Manx cheese & dairy', 'Isle of Man Creamery cheeses, butter and milk from local farms.'],
+  ['Local ales & spirits', 'Okell’s ales have been brewed on the island since 1850; local distilleries make gin and whiskey.'],
+];
+const walks = [
+  ['Raad ny Foillan', '95 miles', 'Coastal', 'Hard', 'The coastal path around the whole island. Walk it in sections.'],
+  ['Millennium Way', '28 miles', 'Inland', 'Moderate', 'Ramsey to Castletown through the island’s hills and glens.'],
+  ['Bayr ny Skeddan', '14 miles', 'Coastal/Inland', 'Moderate', 'The old “Herring Road” from Peel to Castletown.'],
+  ['Heritage Trail', '10.5 miles', 'Old railway', 'Easy', 'Flat, family-friendly trail along the old Douglas–Peel railway line.'],
+  ['Snaefell Summit', '3.5 miles', 'Mountain', 'Moderate', 'From the Bungalow to the 621 m summit. On a clear day, views of England, Scotland, Wales and Ireland.'],
+  ['The Sound', '2 miles', 'Coastal', 'Easy', 'At the southern tip, looking across to the Calf of Man. Seals are often seen.'],
+  ['Peel to Niarbyl', '6 miles', 'Coastal', 'Moderate', 'Dramatic west-coast cliff walk. Return by bus or taxi.'],
+];
+const phrases = [
+  ['Failt erriu', 'Welcome (to you all)', 'FALTCH ER-yoo'], ['Moghrey mie', 'Good morning', 'MOH-ree my'], ['Fastyr mie', 'Good afternoon/evening', 'FAS-ter my'],
+  ['Gura mie ayd', 'Thank you', 'GUR-uh my id'], ['Slaynt!', 'Cheers!', 'slanch'], ['Ellan Vannin', 'Isle of Man', 'EL-an VAN-in'], ['Traa dy liooar', 'Time enough (take it easy!)', 'tray duh LYOOR'],
+];
+const facts = [
+  ['gavel', 'Tynwald', 'One of the oldest continuous parliaments in the world, with roots over a thousand years old. Tynwald Day is 5 July.'],
+  ['pets', 'Manx cats', 'The famous tailless cats are native to the island.'],
+  ['sports_motorsports', 'TT Races', 'Motorcycle racing on the island’s public roads since 1907.'],
+  ['change_history', 'The Three Legs', 'The triskelion has been the island’s symbol since medieval times. Motto: “Whichever way you throw it, it will stand.”'],
+  ['payments', 'Own currency', 'Manx notes and coins are equal to sterling, but shops in the UK won’t usually take them — spend or swap them before you leave.'],
+  ['public', 'Crown Dependency', 'Self-governing with its own laws, taxes and parliament. Not part of the UK or the EU.'],
+  ['eco', 'UNESCO Biosphere', 'The whole island is a UNESCO Biosphere Region — the first entire nation to be one.'],
+];
+const numbers = [
+  ['Emergency', '999', 'Police, Fire, Ambulance, Coastguard'], ['Police (non-emergency)', '01624 631212', 'Police Headquarters'],
+  ['MEDS (out-of-hours GP)', '01624 650355', 'Weeknights 6pm–midnight, weekends 24h'], ["Noble's Hospital", '01624 650000', 'Main hospital, Douglas'],
+  ['Tourist information', '01624 686766', 'Visit Isle of Man'], ['Ronaldsway Airport', '01624 821600', 'Flight information'],
+  ['Bus & Rail', '01624 662525', 'Buses, trams & railways'], ['Samaritans', '116 123', 'Free emotional support, 24/7'],
+];
+const sections = [['attractions', 'Attractions'], ['beaches', 'Beaches'], ['getting-here', 'Getting here'], ['tt', 'TT guide'], ['food', 'Local food'], ['walks', 'Walks'], ['numbers', 'Useful numbers'], ['culture', 'Manx culture']];
+---
+<Layout title="Isle of Man Visitor Guide" description="Isle of Man visitor guide: top attractions, beaches, getting here, TT viewing spots, local food, walks, useful numbers and Manx culture." section="visitor">
+  <PageHead title="Visitor guide" sub="Failt erriu — welcome to the Isle of Man" icon="explore" />
+  <div class="wrap">
+    <nav class="chips" aria-label="Guide sections">{sections.map(([id, l]) => <a class="chip" href={`#${id}`}>{l}</a>)}</nav>
+
+    <section class="section" id="attractions">
+      <h2>Attractions</h2>
+      <div class="map" id="map" style="height:380px;margin-bottom:14px"></div>
+      <div class="chips" id="acats"><button class="chip" type="button" data-value="all" aria-pressed="true">All</button>{attrCats.map((c) => <button class="chip" type="button" data-value={c} aria-pressed="false">{c}</button>)}</div>
+      <div class="grid lg" id="alist">
+        {attractions.map((a: any) => (
+          <article class="card" data-cat={a.category} data-search={a.name.toLowerCase()}>
+            <div class="flex between"><span class="tag info">{a.category}</span>{a.mustSee && <span class="tag warn">Must see</span>}</div>
+            <h3 style="margin-top:8px">{a.name}</h3>
+            <p class="small">{a.description}</p>
+            <dl class="kv small">
+              {a.openingHours && <><dt>Open</dt><dd>{a.openingHours}</dd></>}
+              {(a.admissionAdult || a.freeEntry) && <><dt>Entry</dt><dd>{a.freeEntry ? 'Free' : `Adult ${a.admissionAdult}${a.admissionChild ? ` · Child ${a.admissionChild}` : ''}`}</dd></>}
+              {a.address && <><dt>Where</dt><dd>{a.address}</dd></>}
+            </dl>
+            <div class="btn-row">
+              {a.website && <a class="btn ghost sm" href={a.website} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}
+              {a.phone && <a class="btn ghost sm" href={telHref(a.phone)}><Icon name="call" /> Call</a>}
+              <a class="btn ghost sm" href={a.lat ? `https://www.google.com/maps/search/?api=1&query=${a.lat},${a.lng}` : mapsHref(`${a.name}, Isle of Man`)} target="_blank" rel="noopener"><Icon name="directions" /> Directions</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="beaches">
+      <h2>Beaches</h2>
+      <div class="grid lg">
+        {beaches.map((b: any) => (
+          <article class="card">
+            <div class="flex between"><h3 class="mb0">{b.name}</h3>{b.blueFlag && <span class="tag info">Blue Flag</span>}</div>
+            <p class="small muted">{b.location}</p>
+            <p class="small">{b.description}</p>
+            <dl class="kv small">
+              <dt>Swimming</dt><dd class="dots" aria-label={`${b.swimming} out of 5`}>{dots(b.swimming)}</dd>
+              <dt>Surfing</dt><dd class="dots" aria-label={`${b.surfing} out of 5`}>{dots(b.surfing)}</dd>
+              <dt>Dogs</dt><dd>{b.dogRestrictions || (b.dogFriendly ? 'Welcome' : 'Not allowed')}</dd>
+              {b.facilities?.length > 0 && <><dt>Facilities</dt><dd>{b.facilities.join(', ')}</dd></>}
+            </dl>
+            <div class="btn-row"><a class="btn ghost sm" href={`https://www.google.com/maps/search/?api=1&query=${b.lat},${b.lng}`} target="_blank" rel="noopener"><Icon name="directions" /> Directions</a><a class="btn ghost sm" href="/tides/">Tides</a></div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section" id="getting-here">
+      <h2>Getting here & around</h2>
+      <div class="grid">
+        <div class="card"><h3><Icon name="directions_boat" /> By sea</h3><p class="small">The Isle of Man Steam Packet sails to Douglas from Heysham all year, and seasonally from Liverpool, Belfast and Dublin.</p><div class="btn-row"><a class="btn sm" href="/ferry/">Sailings</a><a class="btn ghost sm" href="https://www.steam-packet.com" target="_blank" rel="noopener">Book</a></div></div>
+        <div class="card"><h3><Icon name="flight" /> By air</h3><p class="small">Ronaldsway Airport has flights to UK and Irish airports including London, Manchester, Liverpool, Birmingham, Bristol, Edinburgh and Dublin. Routes vary by season.</p><div class="btn-row"><a class="btn sm" href="/flights/">Today's flights</a><a class="btn ghost sm" href="https://www.airport.im" target="_blank" rel="noopener">airport.im</a></div></div>
+        <div class="card"><h3><Icon name="directions_bus" /> Buses & heritage railways</h3><p class="small">Buses link every town. The Manx Electric Railway runs Douglas–Laxey–Ramsey, the Steam Railway Douglas–Port Erin, and the Snaefell Mountain Railway climbs from Laxey to the summit.</p><div class="btn-row"><a class="btn sm" href="/bus/">Bus times</a><a class="btn ghost sm" href="/railways/">Railways</a></div></div>
+        <div class="card"><h3><Icon name="directions_car" /> Driving</h3><p class="small">Drive on the left. Hire cars are available at the airport and in Douglas. Some rural roads have no national speed limit, but most do — watch for signs.</p><div class="btn-row"><a class="btn ghost sm" href="/road-closures/">Road closures</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="tt">
+      <h2>TT race guide</h2>
+      <p>Racing on public roads since 1907, over the 37.73-mile Mountain Course. See the <a href="/races/">race schedule</a> and <a href="https://www.iomtt.com" target="_blank" rel="noopener">iomtt.com</a>.</p>
+      <div class="grid">
+        {ttSpots.map(([n, d, free]) => <div class="card"><div class="flex between"><h3 class="mb0">{n}</h3>{free && <span class="tag ok">Free</span>}</div><p class="small mb0" style="margin-top:6px">{d}</p></div>)}
+      </div>
+      <ul class="small" style="margin-top:14px">{ttTips.map((t) => <li>{t}</li>)}</ul>
+    </section>
+
+    <section class="section" id="food">
+      <h2>Local food & drink</h2>
+      <div class="grid">{foods.map(([n, d]) => <div class="card"><h3>{n}</h3><p class="small mb0">{d}</p></div>)}</div>
+      <p style="margin-top:12px"><a class="btn ghost sm" href="/places/">Find restaurants, cafes & pubs</a></p>
+    </section>
+
+    <section class="section" id="walks">
+      <h2>Walking routes</h2>
+      <div class="table-wrap"><table class="table">
+        <thead><tr><th>Route</th><th>Distance</th><th class="hide-sm">Type</th><th>Difficulty</th></tr></thead>
+        <tbody>{walks.map(([n, dist, type, diff, d]) => <tr><td><strong>{n}</strong><div class="tiny muted">{d}</div></td><td class="nowrap">{dist}</td><td class="hide-sm">{type}</td><td><span class={`tag ${diff === 'Easy' ? 'ok' : diff === 'Moderate' ? 'warn' : 'bad'}`}>{diff}</span></td></tr>)}</tbody>
+      </table></div>
+    </section>
+
+    <section class="section" id="numbers">
+      <h2>Useful numbers</h2>
+      <div class="rows">{numbers.map(([n, num, d]) => <a href={telHref(num)}><span class="grow"><strong>{n}</strong><br /><span class="small muted">{d}</span></span><span class="nowrap strong">{num}</span></a>)}</div>
+      <p class="small"><a href="/emergency/">All emergency and urgent numbers →</a></p>
+    </section>
+
+    <section class="section" id="culture">
+      <h2>Manx culture</h2>
+      <h3>A few words of Manx Gaelic</h3>
+      <div class="table-wrap"><table class="table"><thead><tr><th>Manx</th><th>Meaning</th><th>Say it</th></tr></thead>
+        <tbody>{phrases.map(([m, e, s]) => <tr><td><strong>{m}</strong></td><td>{e}</td><td class="muted">{s}</td></tr>)}</tbody></table></div>
+      <h3 style="margin-top:20px">Did you know?</h3>
+      <div class="grid">{facts.map(([i, t, d]) => <div class="card"><h3><span class="ms" aria-hidden="true">{i}</span> {t}</h3><p class="small mb0">{d}</p></div>)}</div>
+    </section>
+    <p class="source">Attraction and beach details from Manx One's visitor data. Opening times and prices change — check with the venue. More at <a href="https://www.visitisleofman.com" target="_blank" rel="noopener">visitisleofman.com</a>.</p>
+    <script type="application/json" id="pins" set:html={JSON.stringify([...attractions.filter((a: any) => a.lat).map((a: any) => ({ n: a.name, c: a.category, lat: a.lat, lng: a.lng, k: 'a' })), ...beaches.filter((b: any) => b.lat).map((b: any) => ({ n: b.name, c: 'Beach', lat: b.lat, lng: b.lng, k: 'b' }))])} />
+  </div>
+</Layout>
+<style is:global>
+  .dots { color: var(--accent); letter-spacing: 2px; }
+  #attractions h3 .ms, #getting-here h3 .ms, #culture h3 .ms { color: var(--accent); }
+</style>
+<script>
+  import { $$, wireFilter, esc } from '../lib/client';
+  wireFilter({ items: $$('#alist > article'), chips: $$('#acats .chip'), chipAttr: 'data-cat' });
+  const el = document.getElementById('map')!;
+  const io = new IntersectionObserver(async (entries) => {
+    if (!entries[0].isIntersecting) return;
+    io.disconnect();
+    const { createMap, L, dotIcon } = await import('../lib/map');
+    const map = createMap(el);
+    const pins = JSON.parse(document.getElementById('pins')!.textContent!);
+    for (const p of pins) L.marker([p.lat, p.lng], { icon: dotIcon(p.k === 'b' ? '#0288D1' : '#F4511E', '', 18) }).bindPopup(`<strong>${esc(p.n)}</strong><br>${esc(p.c)}`).addTo(map);
+  });
+  io.observe(el);
+</script>

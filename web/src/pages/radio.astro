@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+
+const off = featureOff('radio');
+const stations = (load<any>('radio_stations.json')?.stations ?? []).filter((s: any) => s.enabled !== false).sort((a: any, b: any) => a.order - b.order);
+const regions = [...new Set(stations.map((s: any) => s.region))] as string[];
+---
+<Layout title="Isle of Man Radio Live" description="Listen live to Manx Radio, 3FM, Energy FM and other Isle of Man radio stations." section="radio">
+  <PageHead title="Radio" sub="Listen live to Isle of Man stations" icon="radio" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        {regions.map((r) => (
+          <section class="section">
+            <h2>{r}</h2>
+            <div class="grid">
+              {stations.filter((s: any) => s.region === r).map((s: any) => (
+                <div class="card station" data-id={s.id} data-name={s.name} data-url={s.streamUrl} data-type={s.type} data-link={s.linkUrl} data-img={s.imageUrl}>
+                  <img src={s.imageUrl} alt="" width="56" height="56" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'" />
+                  <div class="grow">
+                    <strong>{s.name}</strong>
+                    <p class="tiny muted clamp-2 mb0">{s.description}</p>
+                  </div>
+                  {s.type === 'link'
+                    ? <a class="btn ghost sm" href={s.linkUrl} target="_blank" rel="noopener"><Icon name="open_in_new" /> {s.linkLabel || 'Listen'}</a>
+                    : <button class="play-btn" type="button" aria-label={`Play ${s.name}`}><Icon name="play_arrow" /></button>}
+                </div>
+              ))}
+            </div>
+          </section>
+        ))}
+        <p class="source">Streams are provided by the broadcasters. Some may not play outside the UK and Isle of Man, or may change without notice.</p>
+      </>
+    )}
+  </div>
+  <div class="player-bar" id="bar" hidden>
+    <div class="wrap flex between">
+      <div class="flex"><img id="bar-img" alt="" width="40" height="40" referrerpolicy="no-referrer" /><div><strong id="bar-name"></strong><div class="tiny muted" id="bar-state">Connecting…</div></div></div>
+      <div class="flex"><input type="range" id="vol" min="0" max="1" step="0.05" value="1" aria-label="Volume" /><button class="play-btn" type="button" id="bar-toggle" aria-label="Pause"><Icon name="pause" /></button><button class="icon-btn" type="button" id="bar-stop" aria-label="Stop"><Icon name="stop" /></button></div>
+    </div>
+  </div>
+  <audio id="audio" preload="none"></audio>
+</Layout>
+<style is:global>
+  .station { display: flex; gap: 12px; align-items: center; }
+  .station img { border-radius: 12px; background: var(--surface-2); object-fit: cover; flex-shrink: 0; }
+  .station .grow { flex: 1; min-width: 0; }
+  .station.playing { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 30%, transparent); }
+  .play-btn { width: 46px; height: 46px; border-radius: 50%; border: 0; background: var(--accent); color: #fff; cursor: pointer; display: grid; place-items: center; font-size: 1.4rem; flex-shrink: 0; }
+  .player-bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--surface); border-top: 1px solid var(--border); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12); padding: 10px 0; z-index: 40; }
+  .player-bar img { border-radius: 8px; }
+  #vol { width: 90px; }
+  @media (max-width: 520px) { #vol { display: none; } }
+</style>
+<script>
+  const audio = document.getElementById('audio') as HTMLAudioElement;
+  const bar = document.getElementById('bar')!;
+  const state = document.getElementById('bar-state')!;
+  let hls: any = null;
+  let current: HTMLElement | null = null;
+  const setIcon = (b: Element | null, playing: boolean) => b && (b.querySelector('.ms')!.textContent = playing ? 'pause' : 'play_arrow');
+  const stop = () => {
+    audio.pause();
+    hls?.destroy();
+    hls = null;
+    audio.removeAttribute('src');
+    audio.load();
+    document.querySelectorAll('.station').forEach((s) => { s.classList.remove('playing'); setIcon(s.querySelector('.play-btn'), false); });
+    current = null;
+    bar.hidden = true;
+  };
+  const play = async (card: HTMLElement) => {
+    if (current === card) {
+      if (audio.paused) audio.play(); else audio.pause();
+      return;
+    }
+    stop();
+    current = card;
+    card.classList.add('playing');
+    setIcon(card.querySelector('.play-btn'), true);
+    bar.hidden = false;
+    (document.getElementById('bar-img') as HTMLImageElement).src = card.dataset.img!;
+    document.getElementById('bar-name')!.textContent = card.dataset.name!;
+    state.textContent = 'Connecting…';
+    const url = card.dataset.url!;
+    if (url.includes('.m3u8') && !audio.canPlayType('application/vnd.apple.mpegurl')) {
+      const { default: Hls } = await import('hls.js');
+      hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(audio);
+      hls.on(Hls.Events.ERROR, (_: any, d: any) => d.fatal && (state.textContent = 'This stream can’t be played here right now'));
+    } else audio.src = url;
+    audio.play().catch(() => (state.textContent = 'Press play to start'));
+  };
+  document.querySelectorAll<HTMLElement>('.station .play-btn').forEach((b) => b.addEventListener('click', () => play(b.closest('.station')!)));
+  document.getElementById('bar-toggle')!.addEventListener('click', () => current && (audio.paused ? audio.play() : audio.pause()));
+  document.getElementById('bar-stop')!.addEventListener('click', stop);
+  (document.getElementById('vol') as HTMLInputElement).addEventListener('input', (e) => (audio.volume = Number((e.target as HTMLInputElement).value)));
+  audio.addEventListener('playing', () => { state.textContent = 'Live'; setIcon(document.getElementById('bar-toggle'), true); setIcon(current?.querySelector('.play-btn') ?? null, true); });
+  audio.addEventListener('pause', () => { state.textContent = 'Paused'; setIcon(document.getElementById('bar-toggle'), false); setIcon(current?.querySelector('.play-btn') ?? null, false); });
+  audio.addEventListener('waiting', () => (state.textContent = 'Buffering…'));
+  audio.addEventListener('error', () => current && (state.textContent = 'This stream isn’t available right now'));
+  if ('mediaSession' in navigator) {
+    audio.addEventListener('playing', () => {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: current?.dataset.name || 'Radio', artist: 'Manx One', artwork: current?.dataset.img ? [{ src: current.dataset.img, sizes: '256x256' }] : [] });
+    });
+  }
+</script>

@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+
+const d = load<any>('forms.json');
+const forms = d?.forms ?? [];
+const cats: string[] = d?.categories ?? [];
+const typeIcon: Record<string, string> = { service: 'language', pdf: 'picture_as_pdf', form: 'description', info: 'info' };
+---
+<Layout title="Isle of Man Government Forms and Online Services" description="Quick links to the most-used Isle of Man Government forms and online services: tax, vehicles, benefits, births and marriages, housing, health and business." section="forms">
+  <PageHead title="Gov forms" sub="Quick links to popular Isle of Man Government forms and online services" icon="description" />
+  <div class="wrap">
+    <div class="toolbar">
+      <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="What do you need to do? e.g. tax, passport, vehicle" aria-label="Search forms" /></div>
+      <a class="btn ghost" id="govsearch" href="https://www.gov.im/search/" target="_blank" rel="noopener"><Icon name="travel_explore" /> Search gov.im</a>
+    </div>
+    <div class="chips" id="cats"><button class="chip" type="button" data-value="all" aria-pressed="true">All</button>{cats.map((c) => <button class="chip" type="button" data-value={c} aria-pressed="false">{c}</button>)}</div>
+    <div class="grid lg" id="list">
+      {forms.map((f: any) => (
+        <a class="card" href={f.url} target="_blank" rel="noopener" data-cat={f.category} data-search={`${f.title} ${f.description} ${f.department} ${f.category}`.toLowerCase()}>
+          <div class="flex between"><span class="tag info">{f.category}</span><span class="ms" aria-hidden="true">{typeIcon[f.type] ?? 'open_in_new'}</span></div>
+          <h3 style="margin-top:8px">{f.title}</h3>
+          <p class="small muted">{f.description}</p>
+          <p class="tiny muted mb0">{f.department}{f.loginRequired && ' · Needs a Government Online Services login'}</p>
+        </a>
+      ))}
+    </div>
+    <p class="empty" id="empty" hidden>Nothing here matches — try <a href="https://www.gov.im/search/" target="_blank" rel="noopener">searching gov.im</a>.</p>
+    <p class="source">Links go straight to <a href="https://www.gov.im" target="_blank" rel="noopener">gov.im</a> and services.gov.im. Manx One doesn't see or store anything you submit.</p>
+  </div>
+</Layout>
+<script>
+  import { $$, wireFilter } from '../lib/client';
+  const q = document.getElementById('q') as HTMLInputElement;
+  wireFilter({ input: q, items: $$('#list > a'), chips: $$('#cats .chip'), chipAttr: 'data-cat', empty: document.getElementById('empty') });
+  q.addEventListener('input', () => ((document.getElementById('govsearch') as HTMLAnchorElement).href = `https://www.gov.im/search/?q=${encodeURIComponent(q.value)}`));
+</script>

@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { fmtDate, telHref } from '../lib/format';
+
+const off = featureOff('railways');
+const r = load<any>('railways.json');
+const rails = r?.railways ?? [];
+---
+<Layout title="Isle of Man Heritage Railways Timetables" description="Timetables, fares and running days for the Manx Electric Railway, Snaefell Mountain Railway, Isle of Man Steam Railway and Douglas Bay Horse Tramway." section="railways">
+  <PageHead title="Trams & Rail" sub={`Heritage railway timetables and fares · ${r?.meta?.season ?? ''} season`} icon="tram" />
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="chips" id="rails">
+          {rails.map((x: any, i: number) => <button class="chip" type="button" data-i={i} aria-pressed={i === 0 ? 'true' : 'false'} style={`--c:${x.colour}`}>{x.name}</button>)}
+        </div>
+        <div class="card pad-lg" style="margin-bottom:16px">
+          <div class="flex between">
+            <div>
+              <h2 class="mb0" id="r-name"></h2>
+              <p class="muted small mb0" id="r-route"></p>
+            </div>
+            <label class="field"><span class="tiny">Travel date</span><input class="input" type="date" id="date" /></label>
+          </div>
+          <p class="small" id="r-note" style="margin-top:10px"></p>
+          <div id="r-status"></div>
+        </div>
+        <div id="tables"></div>
+        <section class="section">
+          <h2>Fares</h2>
+          <div id="fares"></div>
+        </section>
+        {r?.events?.length > 0 && (
+          <section class="section">
+            <h2>Special events</h2>
+            <div class="rows">
+              {r.events.map((e: any) => (
+                <div><span class="grow"><strong>{e.title}</strong><br /><span class="small muted">{e.detail}</span></span><span class="small nowrap">{fmtDate(e.date + 'T12:00:00Z', { day: 'numeric', month: 'short' })}{e.endDate && e.endDate !== e.date && ` – ${fmtDate(e.endDate + 'T12:00:00Z', { day: 'numeric', month: 'short' })}`}</span></div>
+              ))}
+            </div>
+          </section>
+        )}
+        {r?.goExplore && (
+          <div class="notice"><Icon name="confirmation_number" /><p><strong>{r.goExplore.name}:</strong> {r.goExplore.detail} {r.goExplore.note} <a href={r.goExplore.url} target="_blank" rel="noopener">rail.im</a></p></div>
+        )}
+        <p class="source">{r?.meta?.disclaimer} Contact Isle of Man Railways: <a href={telHref(r?.meta?.contact?.phone ?? '')}>{r?.meta?.contact?.phone}</a> · <a href={`mailto:${r?.meta?.contact?.email}`}>{r?.meta?.contact?.email}</a>.</p>
+        <script type="application/json" id="rail-data" set:html={JSON.stringify(rails)} />
+      </>
+    )}
+  </div>
+</Layout>
+<style is:global>
+  #rails .chip[aria-pressed='true'] { background: var(--c); border-color: var(--c); color: #fff; }
+</style>
+<script>
+  import { isoDay, esc } from '../lib/client';
+  const dataEl = document.getElementById('rail-data');
+  if (dataEl) {
+    const rails = JSON.parse(dataEl.textContent!);
+    const $ = (id: string) => document.getElementById(id)!;
+    const dateIn = $('date') as HTMLInputElement;
+    let cur = 0;
+    const codesFor = (rail: any, date: string): string[] => {
+      const code = rail.calendar[date];
+      if (!code) return [];
+      if (rail.timetables[code]) return [code];
+      const out: string[] = [];
+      for (let i = 0; i < code.length; i++) {
+        const two = code.slice(i, i + 2);
+        if (two.endsWith('+') && rail.timetables[two]) { out.push(two); i++; }
+        else if (rail.timetables[code[i]]) out.push(code[i]);
+      }
+      return out;
+    };
+    const fmt = (d: string, o: Intl.DateTimeFormatOptions) => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', o);
+    const pickDate = (rail: any) => {
+      const today = isoDay();
+      const days = Object.keys(rail.calendar).sort();
+      return rail.calendar[today] ? today : days.find((d) => d > today) || days[days.length - 1] || today;
+    };
+    const paint = () => {
+      const rail = rails[cur];
+      document.body.style.setProperty('--accent', rail.colour);
+      $('r-name').textContent = rail.name;
+      $('r-route').textContent = `${rail.route} · ${rail.season}`;
+      $('r-note').textContent = rail.note || '';
+      const date = dateIn.value;
+      const days = Object.keys(rail.calendar).sort();
+      dateIn.min = days[0];
+      dateIn.max = days[days.length - 1];
+      const codes = codesFor(rail, date);
+      const today = isoDay();
+      const seasonOver = today > days[days.length - 1];
+      $('r-status').innerHTML = codes.length
+        ? `<span class="tag ok">Running on ${fmt(date, { weekday: 'long', day: 'numeric', month: 'long' })}</span> <span class="tiny muted">Timetable ${codes.join(' + ')}</span>${seasonOver ? ' <span class="tag warn">The season has finished — shown for reference</span>' : ''}`
+        : `<span class="tag bad">No service on ${fmt(date, { weekday: 'long', day: 'numeric', month: 'long' })}</span>${seasonOver ? ' <span class="tiny muted">The season has finished.</span>' : ''}`;
+      // Timetables: merge trips from every code running that day, per direction.
+      const dirs = new Map<string, { stations: string[]; trips: (string | null)[][] }>();
+      for (const c of codes) {
+        for (const d of rail.timetables[c].directions) {
+          const key = d.name;
+          if (!dirs.has(key)) dirs.set(key, { stations: d.stations, trips: [] });
+          const target = dirs.get(key)!;
+          for (const t of d.trips) {
+            const row = target.stations.map((s: string) => t[d.stations.indexOf(s)] ?? null);
+            target.trips.push(row);
+          }
+        }
+      }
+      const firstTime = (t: (string | null)[]) => t.find(Boolean) || '';
+      const nowHM = new Date().toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' });
+      $('tables').innerHTML = [...dirs.entries()]
+        .map(([name, d]) => {
+          const trips = d.trips.sort((a, b) => firstTime(a).localeCompare(firstTime(b)));
+          const nextIdx = date === today ? trips.findIndex((t) => firstTime(t) >= nowHM) : -1;
+          const head = `<tr><th>Station</th>${trips.map((_, i) => `<th>${i === nextIdx ? 'Next' : ''}</th>`).join('')}</tr>`;
+          const body = d.stations
+            .map((s, si) => `<tr><td>${esc(s)}</td>${trips.map((t, i) => `<td${i === nextIdx ? ' style="background:color-mix(in srgb, var(--accent) 12%, transparent);font-weight:700"' : ''}>${t[si] ? esc(t[si]) : '<span class="dash">–</span>'}</td>`).join('')}</tr>`)
+            .join('');
+          return `<section class="section"><h2>${esc(name)}</h2><div class="table-wrap"><table class="table tt"><thead>${head}</thead><tbody>${body}</tbody></table></div></section>`;
+        })
+        .join('');
+      const f = rail.fares || {};
+      $('fares').innerHTML = (f.rows || []).length
+        ? `<div class="table-wrap"><table class="table"><thead><tr><th>Journey</th><th class="num">Adult single</th><th class="num">Adult return</th><th class="num">Child single</th><th class="num">Child return</th></tr></thead><tbody>${f.rows
+            .map((x: any) => `<tr><td>${esc(x.journey)}</td><td class="num">${esc(x.adult?.single ?? '')}</td><td class="num">${esc(x.adult?.return ?? '')}</td><td class="num">${esc(x.child?.single ?? '')}</td><td class="num">${esc(x.child?.return ?? '')}</td></tr>`)
+            .join('')}</tbody></table></div>${(Array.isArray(f.notes) ? f.notes : f.notes ? [f.notes] : []).length ? `<ul class="small muted">${(Array.isArray(f.notes) ? f.notes : [f.notes]).map((n: string) => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}`
+        : '<p class="muted">Fares are on rail.im.</p>';
+    };
+    const chips = Array.from(document.querySelectorAll<HTMLElement>('#rails .chip'));
+    chips.forEach((c) =>
+      c.addEventListener('click', () => {
+        cur = Number(c.dataset.i);
+        chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+        dateIn.value = pickDate(rails[cur]);
+        paint();
+      }),
+    );
+    dateIn.addEventListener('change', paint);
+    dateIn.value = pickDate(rails[0]);
+    paint();
+  }
+</script>

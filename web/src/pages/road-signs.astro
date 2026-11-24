@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff } from '../lib/data';
+const off = featureOff('road_signs');
+---
+<Layout title="Isle of Man Live Road Signs" description="What the Isle of Man's electronic road matrix signs are showing right now, including the Mountain Road." section="road_signs">
+  <PageHead title="Road signs" sub="What the electronic matrix signs are showing right now" icon="signpost">
+    <span slot="meta" id="updated"></span>
+  </PageHead>
+  <div class="wrap narrow">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="chips" id="filter">
+          <button class="chip" type="button" data-value="all" aria-pressed="true">All signs</button>
+          <button class="chip" type="button" data-value="messages" aria-pressed="false">Showing a message</button>
+          <button class="chip" type="button" data-value="mountain" aria-pressed="false">Mountain Road</button>
+          <button class="chip" type="button" data-value="douglas" aria-pressed="false">Douglas & Onchan</button>
+          <button class="chip" type="button" data-value="north" aria-pressed="false">North & West</button>
+          <button class="chip" type="button" data-value="other" aria-pressed="false">Other</button>
+        </div>
+        <div id="signs"><p class="loading">Loading live signs…</p></div>
+        <div class="btn-row"><button class="btn ghost" type="button" id="refresh"><Icon name="refresh" /> Refresh</button><a class="btn ghost" href="/road-closures/">Planned closures</a></div>
+        <p class="source">Source: Isle of Man Government Department of Infrastructure (<a href="https://readthesigns.gov.im/m/signs.php" target="_blank" rel="noopener">readthesigns.gov.im</a>). A blank sign means it isn't showing a message. Follow what the sign on the road says.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<style is:global>
+  .matrix { background: #111; color: #ffb300; font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; text-transform: uppercase; text-align: center; padding: 12px; border-radius: 8px; letter-spacing: 0.08em; font-weight: 700; line-height: 1.5; text-shadow: 0 0 6px rgba(255, 179, 0, 0.55); margin-top: 8px; }
+  .matrix.blank { color: #555; text-shadow: none; font-weight: 500; letter-spacing: 0.02em; text-transform: none; }
+</style>
+<script>
+  import { getJson, esc, fmtTime } from '../lib/client';
+  const box = document.getElementById('signs');
+  if (box) {
+    const AREAS: [string, string][] = [['mountain', 'Mountain Road'], ['douglas', 'Douglas & Onchan'], ['north', 'North & West'], ['other', 'Other signs']];
+    const areaFor = (name: string) => {
+      const n = name.toLowerCase();
+      if (n.includes('mountain')) return 'mountain';
+      if (['douglas', 'bath place', 'albert road', 'richmond hill', 'liverpool arms', 'onchan', 'quarterbridge'].some((k) => n.includes(k))) return 'douglas';
+      if (['sulby', 'ramsey', 'barregarrow', 'barrule', 'kirk michael', 'ballaugh', 'peel'].some((k) => n.includes(k))) return 'north';
+      return 'other';
+    };
+    let filter = 'all';
+    let signs: any[] = [];
+    const paint = () => {
+      const html = AREAS.map(([key, label]) => {
+        if (filter !== 'all' && filter !== 'messages' && filter !== key) return '';
+        let list = signs.filter((s) => areaFor(s.name) === key);
+        if (filter === 'messages') list = list.filter((s) => (s.lines || []).some((l: string) => l.trim()));
+        if (!list.length) return '';
+        return `<section class="section"><h2>${label}</h2><div class="grid">${list
+          .map((s) => {
+            const lines = (s.lines || []).filter((l: string) => l.trim());
+            return `<div class="card"><div class="flex between"><strong>${esc(s.name)}</strong>${s.online === false ? '<span class="tag bad">Offline</span>' : `<span class="tiny muted">${esc(String(s.updated || '').replace(/^Today\s+/i, ''))}</span>`}</div>
+              <div class="matrix ${lines.length ? '' : 'blank'}">${lines.length ? lines.map(esc).join('<br>') : 'No message'}</div></div>`;
+          })
+          .join('')}</div></section>`;
+      }).join('');
+      box.innerHTML = html || '<div class="card empty"><p>No signs are showing a message right now.</p></div>';
+    };
+    const load = async () => {
+      try {
+        const d = await getJson<any>('https://manxone-signs.hammerpunch786.workers.dev/', 12000);
+        signs = d.signs || [];
+        document.getElementById('updated')!.textContent = `${d.source === 'cache' ? 'Last good reading' : 'Live'} · ${fmtTime(d.updated)} · ${signs.filter((s) => (s.lines || []).some((l: string) => l.trim())).length} showing messages`;
+        paint();
+      } catch {
+        box.innerHTML = '<div class="card empty"><p>Live road signs are unavailable right now. Try again in a few minutes.</p></div>';
+      }
+    };
+    document.querySelectorAll<HTMLElement>('#filter .chip').forEach((c) =>
+      c.addEventListener('click', () => {
+        filter = c.dataset.value!;
+        document.querySelectorAll('#filter .chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+        paint();
+      }),
+    );
+    document.getElementById('refresh')!.addEventListener('click', load);
+    load();
+    setInterval(() => document.visibilityState === 'visible' && load(), 60000);
+  }
+</script>

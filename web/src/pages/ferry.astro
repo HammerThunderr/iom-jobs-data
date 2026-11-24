@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { isoDay } from '../lib/format';
+import { ferryHtml } from '../lib/render-travel';
+
+const off = featureOff('ferry');
+const f = load<any>('ferry.json');
+const isoFromLabel = (label: string) => { const d = new Date(label.replace(/^\w+,\s*/, '') + ' 12:00 UTC'); return isNaN(d.getTime()) ? '' : d.toISOString().slice(0, 10); };
+const days = (f?.days ?? []).map((d: any) => ({ date: d.date, iso: isoFromLabel(d.date), sailings: d.sailings ?? [] }));
+---
+<Layout title="Isle of Man Ferry Times" description="Isle of Man Steam Packet sailings between Douglas, Heysham, Liverpool, Belfast and Dublin, with live status." section="ferry">
+  <PageHead title="Ferry" sub="Isle of Man Steam Packet sailings and live status" icon="directions_boat">
+    <span slot="meta" id="updated">{f?.lastUpdated && `Steam Packet update: ${f.lastUpdated}`}</span>
+    <span slot="meta" id="live-badge"></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div id="notice">{f?.notice && <div class="notice warn"><Icon name="campaign" /><p class="prewrap">{f.notice}</p></div>}</div>
+        <div class="chips" id="routes"><button class="chip" type="button" data-value="" aria-pressed="true">All routes</button></div>
+        <div id="days" set:html={ferryHtml(days, isoDay())} />
+        <div class="btn-row">
+          <a class="btn" href="https://www.steam-packet.com" target="_blank" rel="noopener"><Icon name="confirmation_number" /> Book on steam-packet.com</a>
+          <a class="btn ghost" href="/tides/">Tide times</a>
+          <a class="btn ghost" href="/weather/">Sea & wind forecast</a>
+        </div>
+        <p class="source">Source: <a href="https://www.steam-packet.com" target="_blank" rel="noopener">Isle of Man Steam Packet Company</a>. Times are local. Always check with the Steam Packet before you travel — sailings can change at short notice in bad weather.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<script>
+  import { fetchFerry } from '../lib/live';
+  import { ferryHtml } from '../lib/render-travel';
+  import { isoDay, esc, ic } from '../lib/client';
+  const box = document.getElementById('days');
+  if (box) {
+    let route = '';
+    let data: Awaited<ReturnType<typeof fetchFerry>> | null = null;
+    const paint = () => {
+      if (!data) return;
+      const today = isoDay();
+      const days = data.days
+        .filter((d) => !d.iso || d.iso >= today)
+        .map((d) => ({ ...d, sailings: d.sailings.filter((s) => !route || [s.departPort, s.arrivePort].sort().join('–') === route) }))
+        .filter((d) => d.sailings.length);
+      box.innerHTML = ferryHtml(days, today);
+    };
+    const load = async () => {
+      try {
+        data = await fetchFerry();
+        const routes = [...new Set(data.days.flatMap((d) => d.sailings.map((s) => [s.departPort, s.arrivePort].sort().join('–'))))].sort();
+        const chips = document.getElementById('routes')!;
+        chips.innerHTML = `<button class="chip" type="button" data-value="" aria-pressed="${!route}">All routes</button>` + routes.map((r) => `<button class="chip" type="button" data-value="${esc(r)}" aria-pressed="${r === route}">${esc(r.replace('–', ' ↔ '))}</button>`).join('');
+        chips.querySelectorAll<HTMLElement>('.chip').forEach((c) =>
+          c.addEventListener('click', () => {
+            route = c.dataset.value!;
+            chips.querySelectorAll('.chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+            paint();
+          }),
+        );
+        document.getElementById('updated')!.textContent = data.updated ? `Steam Packet update: ${data.updated}` : '';
+        document.getElementById('live-badge')!.innerHTML = data.live ? '<span class="tag ok">Live</span>' : '';
+        if (data.notice) document.getElementById('notice')!.innerHTML = `<div class="notice warn">${ic('campaign')}<p class="prewrap">${esc(data.notice)}</p></div>`;
+        paint();
+      } catch {}
+    };
+    load();
+    setInterval(() => document.visibilityState === 'visible' && load(), 120000);
+  }
+</script>

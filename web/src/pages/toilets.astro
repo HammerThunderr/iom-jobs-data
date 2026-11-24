@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { mapsHref } from '../lib/format';
+
+const d = load<any>('public_toilets.json');
+const list = (d?.toilets ?? []).sort((a: any, b: any) => a.order - b.order);
+const areas = [...new Set(list.map((t: any) => t.area))] as string[];
+---
+<Layout title="Public Toilets on the Isle of Man" description="Public toilets around the Isle of Man with accessible, RADAR key, Changing Places and baby changing facilities, opening hours and charges." section="toilets">
+  <PageHead title="Public toilets" sub="Locations, access and facilities" icon="wc" />
+  <div class="wrap">
+    <div class="grid two">
+      <div class="notice"><Icon name="key" /><p>{d?.meta?.radarKeyNote}</p></div>
+      <div class="notice"><Icon name="accessible" /><p>{d?.meta?.changingPlacesNote}</p></div>
+    </div>
+    <div class="toolbar"><div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Search by place" aria-label="Search toilets" /></div>
+      <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map((a) => <option>{a}</option>)}</select></div>
+    <div class="chips" id="flags">
+      <button class="chip" type="button" data-flag="accessible" aria-pressed="false">Accessible</button>
+      <button class="chip" type="button" data-flag="radar" aria-pressed="false">RADAR key</button>
+      <button class="chip" type="button" data-flag="changing" aria-pressed="false">Changing Places</button>
+      <button class="chip" type="button" data-flag="baby" aria-pressed="false">Baby changing</button>
+    </div>
+    <div class="grid" id="list">
+      {list.map((t: any) => (
+        <article class="card" data-area={t.area} data-accessible={t.accessible ? '1' : ''} data-radar={t.radarKey ? '1' : ''} data-changing={t.changingPlaces ? '1' : ''} data-baby={t.babyChanging ? '1' : ''} data-search={`${t.name} ${t.area} ${t.address}`.toLowerCase()}>
+          <h3>{t.name}</h3>
+          <p class="small muted mb0">{t.address}</p>
+          <div class="tags">
+            {t.accessible && <span class="tag ok"><Icon name="accessible" /> Accessible</span>}
+            {t.radarKey && <span class="tag info"><Icon name="key" /> RADAR</span>}
+            {t.changingPlaces && <span class="tag info">Changing Places</span>}
+            {t.babyChanging && <span class="tag">Baby changing</span>}
+          </div>
+          <dl class="kv small">
+            {t.hours && <><dt>Hours</dt><dd>{t.hours}</dd></>}
+            {t.charge && <><dt>Charge</dt><dd>{t.charge}</dd></>}
+            {t.operator && <><dt>Run by</dt><dd>{t.operator}</dd></>}
+          </dl>
+          {t.note && <p class="tiny muted" style="margin-top:8px">{t.note}</p>}
+          <div class="btn-row"><a class="btn ghost sm" href={mapsHref(t.mapsQuery || `${t.name}, Isle of Man`)} target="_blank" rel="noopener"><Icon name="directions" /> Directions</a></div>
+        </article>
+      ))}
+    </div>
+    <p class="empty" id="empty" hidden>None match those filters.</p>
+    <p class="source">{d?.meta?.note} {d?.meta?.incomplete?.replace('please use Feedback in the app', 'please let us know')} Sources: {d?.meta?.sources?.join(', ')}.</p>
+  </div>
+</Layout>
+<script>
+  import { $$ } from '../lib/client';
+  const items = $$('#list > article');
+  const q = document.getElementById('q') as HTMLInputElement;
+  const area = document.getElementById('area') as HTMLSelectElement;
+  const flags = new Set<string>();
+  const run = () => {
+    const words = q.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const el of items) {
+      const ok = (!area.value || el.dataset.area === area.value) && [...flags].every((f) => el.dataset[f]) && words.every((w) => el.dataset.search!.includes(w));
+      el.hidden = !ok;
+      if (ok) n++;
+    }
+    document.getElementById('empty')!.hidden = n > 0;
+  };
+  $$('#flags .chip').forEach((c) => c.addEventListener('click', () => { const f = c.dataset.flag!; flags.has(f) ? flags.delete(f) : flags.add(f); c.setAttribute('aria-pressed', String(flags.has(f))); run(); }));
+  q.addEventListener('input', run);
+  area.addEventListener('change', run);
+</script>

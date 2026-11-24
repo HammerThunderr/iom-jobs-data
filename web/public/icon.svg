@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D81B26;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7A0000;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect width="1024" height="1024" rx="220" ry="220" fill="url(#bgGrad)" />
+  
+  <!-- Subtle decorative ring -->
+  <circle cx="512" cy="512" r="380" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <circle cx="512" cy="512" r="350" fill="url(#centerGlow)"/>
+  
+  <!-- Triskelion: 3 bent legs at 120° apart, runner-style -->
+  <g transform="translate(512, 512)" fill="white" stroke="rgba(0,0,0,0.1)" stroke-width="2">
+    <!-- Leg template — pointing down, knee bent to right (when at 0°) -->
+    <!-- Use circles + thick rectangles to make a clean "leg" shape -->
+    
+    <!-- Leg 1 -->
+    <g transform="rotate(-30)">
+      <!-- Thigh (hip to knee) -->
+      <rect x="-32" y="0" width="64" height="140" rx="32" />
+      <!-- Knee circle -->
+      <circle cx="0" cy="140" r="42" />
+      <!-- Calf (knee to foot) - bent -->
+      <g transform="translate(0, 140) rotate(60)">
+        <rect x="-32" y="0" width="64" height="130" rx="32" />
+      </g>
+      <!-- Foot circle -->
+      <g transform="translate(0, 140) rotate(60) translate(0, 130)">
+        <circle cx="0" cy="0" r="36" />
+        <!-- Toe extension -->
+        <path d="M -36 0 Q -36 -25 -10 -28 L 25 -28 Q 36 -25 36 0 L 36 5 Q 0 25 -36 5 Z" />
+      </g>
+    </g>
+    
+    <!-- Leg 2 (rotated 120°) -->
+    <g transform="rotate(90)">
+      <rect x="-32" y="0" width="64" height="140" rx="32" />
+      <circle cx="0" cy="140" r="42" />
+      <g transform="translate(0, 140) rotate(60)">
+        <rect x="-32" y="0" width="64" height="130" rx="32" />
+      </g>
+      <g transform="translate(0, 140) rotate(60) translate(0, 130)">
+        <circle cx="0" cy="0" r="36" />
+        <path d="M -36 0 Q -36 -25 -10 -28 L 25 -28 Q 36 -25 36 0 L 36 5 Q 0 25 -36 5 Z" />
+      </g>
+    </g>
+    
+    <!-- Leg 3 (rotated 240°) -->
+    <g transform="rotate(210)">
+      <rect x="-32" y="0" width="64" height="140" rx="32" />
+      <circle cx="0" cy="140" r="42" />
+      <g transform="translate(0, 140) rotate(60)">
+        <rect x="-32" y="0" width="64" height="130" rx="32" />
+      </g>
+      <g transform="translate(0, 140) rotate(60) translate(0, 130)">
+        <circle cx="0" cy="0" r="36" />
+        <path d="M -36 0 Q -36 -25 -10 -28 L 25 -28 Q 36 -25 36 0 L 36 5 Q 0 25 -36 5 Z" />
+      </g>
+    </g>
+    
+    <!-- Center hub (joins the 3 legs) -->
+    <circle cx="0" cy="0" r="58" fill="white"/>
+    <circle cx="0" cy="0" r="42" fill="#D81B26"/>
+    <circle cx="0" cy="0" r="14" fill="#FFD700"/>
+  </g>
+  
+  <!-- "IOM" text below -->
+  <text x="512" y="945" 
+        text-anchor="middle" 
+        font-family="Helvetica, Arial, sans-serif" 
+        font-size="72" 
+        font-weight="900" 
+        fill="rgba(255,255,255,0.85)" 
+        letter-spacing="12">IOM</text>
+</svg>

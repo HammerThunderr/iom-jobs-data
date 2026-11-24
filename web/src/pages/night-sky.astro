@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import { load } from '../lib/data';
+import { mapsHref } from '../lib/format';
+
+const dark = load<any>('dark_sky_sites.json');
+const sites = (dark?.sites ?? []).sort((a: any, b: any) => a.order - b.order);
+const regions = [...new Set(sites.map((s: any) => s.region))] as string[];
+---
+<Layout title="Isle of Man Night Sky Tonight" description="Stargazing on the Isle of Man tonight: sunset and darkness times, moon phase, visible planets, ISS passes, meteor showers, cloud forecast and the island's official Dark Sky Discovery Sites." section="astronomy">
+  <PageHead title="Night sky" sub="Tonight's stargazing conditions over the island" icon="nights_stay" />
+  <div class="wrap">
+    <section class="card pad-lg score-card" id="score">
+      <div class="flex between"><div><span class="small muted">Stargazing tonight</span><h2 class="mb0" id="score-label">Working it out…</h2></div><div class="score-num" id="score-num">–</div></div>
+      <ul class="small" id="reasons"></ul>
+      <div id="cloud" class="cloud"></div>
+      <div class="flex between tiny muted"><span>6pm</span><span>Midnight</span><span>6am</span></div>
+    </section>
+
+    <div class="grid two section">
+      <section class="card pad-lg"><h2>Sun & Moon</h2><dl class="kv" id="sunmoon"></dl><p class="tiny muted mb0" style="margin-top:10px">Times for Douglas — within a minute island-wide.</p></section>
+      <section class="card pad-lg"><h2>Planets tonight</h2><div class="rows" id="planets"></div><p class="tiny muted mb0" style="margin-top:8px">Position shown about two hours after dark.</p></section>
+    </div>
+    <div class="grid two section">
+      <section class="card pad-lg"><h2>Space station</h2><div id="iss" class="small">Loading passes…</div></section>
+      <section class="card pad-lg"><h2>Meteor showers</h2><div id="meteors"></div></section>
+    </div>
+
+    <section class="section" id="sites">
+      <h2>Where to go: Dark Sky Discovery Sites</h2>
+      <p class="muted">{dark?.meta?.note}</p>
+      <div class="notice"><Icon name="lightbulb" /><p>Best this season: <strong id="season-picks"></strong></p></div>
+      <div class="chips" id="regions"><button class="chip" type="button" data-value="all" aria-pressed="true">All</button>{regions.map((r) => <button class="chip" type="button" data-value={r} aria-pressed="false">{r}</button>)}</div>
+      <div class="grid" id="slist">
+        {sites.map((s: any) => (
+          <article class="card" data-region={s.region}>
+            <span class="tag info">{s.region}</span>
+            <h3 style="margin-top:8px">{s.name}</h3>
+            <p class="small muted">{s.address}</p>
+            <p class="small">{s.description}</p>
+            {s.horizons && <p class="tiny muted">Clear horizons: {s.horizons}</p>}
+            <div class="tags">{(s.tags || []).map((t: string) => <span class="tag">{t}</span>)}</div>
+            <a class="btn ghost sm" href={mapsHref(s.mapsQuery)} target="_blank" rel="noopener"><Icon name="directions" /> Directions</a>
+          </article>
+        ))}
+      </div>
+      <ul class="small">{(dark?.meta?.advice ?? []).map((a: string) => <li>{a}</li>)}</ul>
+      <script type="application/json" id="picks" set:html={JSON.stringify(dark?.meta?.seasonalPicks ?? {})} />
+    </section>
+    <p class="source">Sun, moon and planet positions are calculated in your browser (Astronomy Engine). Cloud forecast: Open-Meteo. ISS passes: calculated from the latest orbital data. Dark Sky sites: <a href={dark?.meta?.sourceUrl} target="_blank" rel="noopener">{dark?.meta?.source}</a>.</p>
+  </div>
+</Layout>
+<style is:global>
+  .score-card { background: linear-gradient(135deg, #1b2048, #2e3a87); color: #e8eef7; border: 0; }
+  .score-card .muted, .score-card .tiny { color: #b8c2e8 !important; }
+  .score-num { font-size: 2.8rem; font-weight: 800; }
+  .cloud { display: grid; grid-template-columns: repeat(13, 1fr); gap: 3px; margin-top: 10px; height: 36px; }
+  .cloud span { border-radius: 4px; }
+  .planet-dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+</style>
+<script>
+  import * as A from 'astronomy-engine';
+  import { getJson, esc, $$, isoDay } from '../lib/client';
+  import { wireFilter } from '../lib/client';
+
+  const obs = new A.Observer(54.152, -4.486, 50);
+  const $ = (id: string) => document.getElementById(id)!;
+  const t = (d: Date | null | undefined) => (d ? d.toLocaleTimeString('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit' }) : '—');
+  const now = new Date();
+  const noon = new Date(isoDay() + 'T12:00:00Z');
+  const search = (body: A.Body, dir: number, from: Date, alt?: number) => {
+    try {
+      const r = alt == null ? A.SearchRiseSet(body, obs, dir, from, 2) : A.SearchAltitude(body, obs, dir, from, 2, alt);
+      return r?.date ?? null;
+    } catch {
+      return null;
+    }
+  };
+  const sunset = search(A.Body.Sun, -1, noon);
+  const dusk = search(A.Body.Sun, -1, noon, -18);
+  const sunriseNext = search(A.Body.Sun, +1, sunset ?? noon);
+  const dawn = search(A.Body.Sun, +1, sunset ?? noon, -18);
+  const darkMins = dusk && dawn ? Math.max(0, (dawn.getTime() - dusk.getTime()) / 60000) : 0;
+  const illum = A.Illumination(A.Body.Moon, now);
+  const moonPct = Math.round(illum.phase_fraction * 100);
+  const phaseDeg = A.MoonPhase(now);
+  const phaseName = phaseDeg < 10 || phaseDeg > 350 ? 'New moon' : phaseDeg < 80 ? 'Waxing crescent' : phaseDeg < 100 ? 'First quarter' : phaseDeg < 170 ? 'Waxing gibbous' : phaseDeg < 190 ? 'Full moon' : phaseDeg < 260 ? 'Waning gibbous' : phaseDeg < 280 ? 'Last quarter' : 'Waning crescent';
+  const moonrise = search(A.Body.Moon, +1, noon);
+  const moonset = search(A.Body.Moon, -1, noon);
+  const nextFull = A.SearchMoonPhase(180, now, 40)?.date;
+  const nextNew = A.SearchMoonPhase(0, now, 40)?.date;
+  // Is the moon up in the darkest part of the night?
+  const mid = dusk && dawn ? new Date((dusk.getTime() + dawn.getTime()) / 2) : new Date(noon.getTime() + 12 * 3600000);
+  const moonHor = (() => { const e = A.Equator(A.Body.Moon, mid, obs, true, true); return A.Horizon(mid, obs, e.ra, e.dec, 'normal'); })();
+  const moonUp = moonHor.altitude > 0;
+  const dayFmt = (d?: Date) => (d ? d.toLocaleDateString('en-GB', { timeZone: 'Europe/London', weekday: 'short', day: 'numeric', month: 'short' }) : '—');
+  $('sunmoon').innerHTML = `
+    <dt>Sunset</dt><dd>${t(sunset)}</dd>
+    <dt>Fully dark</dt><dd>${dusk ? `${t(dusk)} to ${t(dawn)} (${Math.floor(darkMins / 60)} h ${Math.round(darkMins % 60)} min)` : 'Not fully dark tonight'}</dd>
+    <dt>Sunrise</dt><dd>${t(sunriseNext)}</dd>
+    <dt>Moon</dt><dd>${phaseName}, ${moonPct}% lit</dd>
+    <dt>Moonrise / set</dt><dd>${t(moonrise)} / ${t(moonset)}</dd>
+    <dt>Next full moon</dt><dd>${dayFmt(nextFull)}</dd>
+    <dt>Next new moon</dt><dd>${dayFmt(nextNew)}</dd>`;
+
+  // Planets, two hours after full dark (or 21:00).
+  const when = dusk ? new Date(dusk.getTime() + 2 * 3600000) : new Date(isoDay() + 'T21:00:00Z');
+  const compass = (a: number) => ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'][Math.round(a / 45) % 8];
+  const planets: [A.Body, string, string][] = [[A.Body.Mercury, 'Mercury', '#9e9e9e'], [A.Body.Venus, 'Venus', '#f6d365'], [A.Body.Mars, 'Mars', '#e57373'], [A.Body.Jupiter, 'Jupiter', '#ffb74d'], [A.Body.Saturn, 'Saturn', '#d4b483']];
+  $('planets').innerHTML = planets
+    .map(([b, name, c]) => {
+      const e = A.Equator(b, when, obs, true, true);
+      const h = A.Horizon(when, obs, e.ra, e.dec, 'normal');
+      const mag = A.Illumination(b, when).mag;
+      const up = h.altitude > 8;
+      return `<div><span class="planet-dot" style="background:${c}"></span><span class="grow"><strong>${name}</strong><br><span class="tiny muted">${up ? `${Math.round(h.altitude)}° up in the ${compass(h.azimuth)} at ${t(when)}` : 'Below the horizon then'}</span></span><span class="tag ${up ? (mag < 1 ? 'ok' : 'info') : ''}">${up ? (mag < 0 ? 'Bright' : mag < 2 ? 'Visible' : 'Faint') : 'Not up'}</span></div>`;
+    })
+    .join('');
+
+  // Meteor showers
+  const showers = [
+    ['Quadrantids', 12, 28, 1, 12, 1, 3, 110], ['Lyrids', 4, 16, 4, 25, 4, 22, 18], ['Eta Aquariids', 4, 19, 5, 28, 5, 6, 50], ['Perseids', 7, 17, 8, 24, 8, 12, 100],
+    ['Draconids', 10, 6, 10, 10, 10, 8, 10], ['Orionids', 10, 2, 11, 7, 10, 21, 20], ['Leonids', 11, 6, 11, 30, 11, 17, 15], ['Geminids', 12, 4, 12, 17, 12, 14, 150], ['Ursids', 12, 17, 12, 26, 12, 22, 10],
+  ] as const;
+  const today = new Date(isoDay() + 'T12:00:00Z');
+  const Y = today.getUTCFullYear();
+  const mk = (y: number, m: number, d: number) => new Date(Date.UTC(y, m - 1, d, 12));
+  const info = showers.map(([n, sm, sd, em, ed, pm, pd, zhr]) => {
+    let start = mk(Y, sm, sd), end = mk(Y, em, ed);
+    if (end < start) { if (today.getUTCMonth() + 1 <= em) start = mk(Y - 1, sm, sd); else end = mk(Y + 1, em, ed); }
+    let peak = mk(start.getUTCFullYear() + (pm < sm ? 1 : 0), pm, pd);
+    const active = today >= start && today <= end;
+    if (!active && peak < today) peak = mk(peak.getUTCFullYear() + 1, pm, pd);
+    return { n, zhr, active, peak, days: Math.round((peak.getTime() - today.getTime()) / 86400000) };
+  });
+  const active = info.filter((s) => s.active);
+  const nextUp = info.filter((s) => !s.active && s.days > 0).sort((a, b) => a.days - b.days)[0];
+  $('meteors').innerHTML = (active.length
+    ? `<div class="rows">${active.map((s) => `<div><span class="grow"><strong>${s.n}</strong><br><span class="tiny muted">Up to ${s.zhr} an hour at peak, dark skies</span></span><span class="tag ${Math.abs(s.days) <= 2 ? 'ok' : 'info'}">${Math.abs(s.days) <= 2 ? 'Peak now' : s.days > 0 ? `Peak in ${s.days} days` : 'Past peak'}</span></div>`).join('')}</div>`
+    : '<p class="muted">No major shower active tonight.</p>') + (nextUp ? `<p class="small" style="margin-top:10px">Next: <strong>${nextUp.n}</strong>, peaking ${nextUp.peak.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' })}.</p>` : '');
+
+  // ISS
+  getJson<any>('https://manxone-iss.hammerpunch786.workers.dev/', 12000)
+    .then((d) => {
+      const passes = d.passes || [];
+      $('iss').innerHTML = passes.length
+        ? `<div class="rows">${passes.slice(0, 6).map((p: any) => `<div><span class="grow"><strong>${dayFmt(new Date(p.start))} ${t(new Date(p.start))}</strong><br><span class="tiny muted">From ${esc(p.startDirection)} to ${esc(p.endDirection)}, ${p.maxElevation}° high · ${Math.round(p.durationSeconds / 60)} min</span></span><span class="tag ${p.quality === 'Excellent' || p.quality === 'Good' ? 'ok' : 'info'}">${esc(p.quality)}</span></div>`).join('')}</div><p class="tiny muted" style="margin-top:8px">It looks like a bright, steady star moving across the sky — no flashing lights.</p>`
+        : '<p class="muted">No visible passes in the next few days.</p>';
+    })
+    .catch(() => ($('iss').innerHTML = '<p class="muted">ISS passes are unavailable right now.</p>'));
+
+  // Cloud + score
+  const score = (cloud: number | null) => {
+    let s = 100;
+    const reasons: string[] = [];
+    if (cloud == null) { s -= 15; reasons.push('Cloud forecast unavailable'); }
+    else { s -= cloud * 0.65; reasons.push(cloud <= 15 ? `Clear skies (${cloud}% cloud)` : cloud <= 40 ? `Some cloud (${cloud}%)` : cloud <= 70 ? `Fairly cloudy (${cloud}%)` : `Heavy cloud (${cloud}%)`); }
+    if (moonUp) { s -= moonPct * 0.3; reasons.push(moonPct > 70 ? 'Bright moon washes out faint objects' : moonPct > 35 ? `Moon up, ${moonPct}% lit` : 'Only a thin moon'); }
+    else reasons.push('No moon during the darkest hours');
+    if (darkMins < 30) { s -= 25; reasons.push('Barely any astronomical darkness'); }
+    else if (darkMins >= 300) reasons.push(`${Math.floor(darkMins / 60)} hours of full darkness`);
+    s = Math.max(0, Math.min(100, Math.round(s)));
+    $('score-num').textContent = String(s);
+    $('score-label').textContent = s >= 80 ? 'Excellent' : s >= 60 ? 'Good' : s >= 35 ? 'Fair' : 'Poor';
+    $('reasons').innerHTML = reasons.map((r) => `<li>${esc(r)}</li>`).join('');
+  };
+  getJson<any>('https://api.open-meteo.com/v1/forecast?latitude=54.236&longitude=-4.548&hourly=cloudcover&timezone=Europe%2FLondon&forecast_days=2')
+    .then((d) => {
+      const times: string[] = d.hourly.time, cc: number[] = d.hourly.cloudcover;
+      const start = times.indexOf(`${isoDay()}T18:00`);
+      const vals = start >= 0 ? cc.slice(start, start + 13) : [];
+      $('cloud').innerHTML = vals.map((v, i) => `<span title="${times[start + i].slice(11)}: ${v}% cloud" style="background:rgba(232,238,247,${0.12 + (v / 100) * 0.75})"></span>`).join('');
+      const night = vals.slice(3, 11);
+      score(night.length ? Math.round(night.reduce((a, b) => a + b, 0) / night.length) : null);
+    })
+    .catch(() => score(null));
+
+  // Dark sky sites
+  wireFilter({ items: $$('#slist > article'), chips: $$('#regions .chip'), chipAttr: 'data-region' });
+  const picks = JSON.parse($('picks').textContent!);
+  const m = new Date().getMonth() + 1;
+  const season = m <= 2 || m === 12 ? 'winter' : m <= 5 ? 'spring' : m <= 8 ? 'summer' : 'autumn';
+  $('season-picks').textContent = (picks[season] || []).join(', ');
+</script>

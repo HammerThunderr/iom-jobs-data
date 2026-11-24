@@ -1,0 +1,240 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHead from '../../components/PageHead.astro';
+import Icon from '../../components/Icon.astro';
+import Off from '../../components/Off.astro';
+import EventCard from '../../components/EventCard.astro';
+import { upcoming, EVENT_STYLE } from '../../lib/events';
+import { featureOff, load } from '../../lib/data';
+import { fmtDateTime } from '../../lib/format';
+
+const off = featureOff('events');
+const list = upcoming();
+const meta = load<any>('events.json');
+const cats = Object.keys(EVENT_STYLE).filter((c) => list.some((e) => e.category === c || e.tags.includes(c)));
+const areas = [...new Set(list.map((e) => e.area).filter(Boolean))].sort();
+---
+<Layout title="What's On in the Isle of Man" description={`${list.length} upcoming events across the Isle of Man: music, theatre, family days out, festive events, talks and more.`} section="events">
+  <PageHead title="What's On" sub="Events across the island, from the organisers' own listings" icon="event">
+    <span slot="meta">{(meta?.lastUpdated || meta?.fetchedAt) && `Updated ${fmtDateTime(meta.lastUpdated || meta.fetchedAt)}`}</span>
+    <span slot="meta"><a href="/events/submit/">+ Add your event</a></span>
+    <span slot="meta"><a href="/events/my/">My submissions</a></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="toolbar">
+          <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Search events, venues, artists" aria-label="Search events" /></div>
+          <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map((a) => <option value={a}>{a}</option>)}</select>
+          <button class="btn ghost sm" type="button" id="cal-toggle" aria-expanded="false"><Icon name="calendar_month" /> Calendar</button>
+        </div>
+        <div class="chips" id="when">
+          {[['all', 'Any time'], ['today', 'Today'], ['tomorrow', 'Tomorrow'], ['weekend', 'This weekend'], ['week', 'Next 7 days'], ['month', 'This month']].map(([v, l]) => (
+            <button class="chip" type="button" data-value={v} aria-pressed={v === 'all' ? 'true' : 'false'}>{l}</button>
+          ))}
+        </div>
+        <div class="chips" id="cats">
+          <button class="chip" type="button" data-value="" aria-pressed="true">All categories</button>
+          {cats.map((c) => <button class="chip" type="button" data-value={c} aria-pressed="false"><span class="ms" style={`color:${EVENT_STYLE[c].color}`} aria-hidden="true">{EVENT_STYLE[c].icon}</span> {c}</button>)}
+        </div>
+        <div class="card cal" id="cal" hidden>
+          <div class="flex between">
+            <button class="icon-btn" type="button" id="cal-prev" aria-label="Previous month"><Icon name="chevron_left" /></button>
+            <strong id="cal-title"></strong>
+            <button class="icon-btn" type="button" id="cal-next" aria-label="Next month"><Icon name="chevron_right" /></button>
+          </div>
+          <div class="cal-grid" id="cal-grid"></div>
+          <p class="tiny muted mb0">Pick a day to see what's on. Long-running exhibitions aren't counted.</p>
+        </div>
+        <p class="count-line"><span id="count">{list.length}</span> events<span id="day-label"></span></p>
+        <div class="grid" id="list">
+          {list.map((e) => <EventCard e={e} />)}
+        </div>
+        <p class="empty" id="empty" hidden><Icon name="event_busy" />Nothing matches. Try another day or category.</p>
+        <section class="section card pad-lg flex between">
+          <div>
+            <h2>Running an event?</h2>
+            <p class="muted mb0">Community groups can add events for free. Each one is checked before it appears.</p>
+          </div>
+          <a class="btn" href="/events/submit/"><Icon name="add" /> Add your event</a>
+        </section>
+        <p class="source">Sources: {(meta?.sources ?? []).map((s: any) => s.name).join(', ')}, plus approved community events. {meta?.disclaimer}</p>
+      </>
+    )}
+  </div>
+</Layout>
+
+<style is:global>
+  .ev-card .thumb { aspect-ratio: 16 / 8; }
+  .thumb.ph { display: grid; place-items: center; color: #fff; font-size: 2.4rem; background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #000)); }
+  .cal { max-width: 460px; margin-bottom: 16px; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin: 12px 0 8px; text-align: center; }
+  .cal-grid .dow { font-size: 0.72rem; color: var(--text-2); font-weight: 700; }
+  .cal-grid button { border: 1px solid var(--border); background: var(--surface); border-radius: 8px; padding: 6px 0; cursor: pointer; font-weight: 600; font-size: 0.9rem; line-height: 1.1; }
+  .cal-grid button small { display: block; font-size: 0.65rem; color: var(--accent); font-weight: 700; min-height: 0.8em; }
+  .cal-grid button[disabled] { opacity: 0.35; cursor: default; }
+  .cal-grid button[aria-pressed='true'] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .cal-grid button[aria-pressed='true'] small { color: #fff; }
+  .cal-grid button.today { border-color: var(--accent); }
+</style>
+
+<script>
+  import { $$, isoDay, esc, ic } from '../../lib/client';
+  import { loadCommunityEvents } from '../../lib/community';
+  import { styleFor } from '../../lib/event-style';
+
+  const list = document.getElementById('list');
+  if (list) {
+    const $ = (id: string) => document.getElementById(id) as any;
+    let items = $$('#list > a');
+    let when = 'all';
+    let cat = '';
+    let day = '';
+    const params = new URLSearchParams(location.search);
+    const addDays = (iso: string, n: number) => {
+      const d = new Date(iso + 'T12:00:00Z');
+      d.setUTCDate(d.getUTCDate() + n);
+      return d.toISOString().slice(0, 10);
+    };
+    const today = isoDay();
+    const range = (): [string, string] => {
+      if (day) return [day, day];
+      const dow = new Date(today + 'T12:00:00Z').getUTCDay();
+      switch (when) {
+        case 'today': return [today, today];
+        case 'tomorrow': return [addDays(today, 1), addDays(today, 1)];
+        case 'weekend': {
+          const sat = addDays(today, (6 - dow + 7) % 7);
+          return dow === 0 ? [today, today] : [dow === 6 ? today : sat, addDays(sat, 1)];
+        }
+        case 'week': return [today, addDays(today, 6)];
+        case 'month': {
+          const end = new Date(today + 'T12:00:00Z');
+          end.setUTCMonth(end.getUTCMonth() + 1, 0);
+          return [today, end.toISOString().slice(0, 10)];
+        }
+        default: return [today, '9999-12-31'];
+      }
+    };
+    const runsIn = (el: HTMLElement, from: string, to: string) => {
+      const dates = el.dataset.dates;
+      if (dates) return dates.split(',').some((d) => d >= from && d <= to);
+      const s = el.dataset.start || '', e = el.dataset.end || s;
+      return !!s && s <= to && e >= from;
+    };
+    const run = () => {
+      const words = ($('q').value as string).trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const area = $('area').value;
+      const [from, to] = range();
+      let n = 0;
+      for (const el of items) {
+        const ok =
+          runsIn(el, from, to) &&
+          (!cat || el.dataset.cat!.split('|').includes(cat)) &&
+          (!area || el.dataset.area === area) &&
+          words.every((w) => el.dataset.search!.includes(w));
+        el.hidden = !ok;
+        if (ok) n++;
+      }
+      $('count').textContent = String(n);
+      $('day-label').textContent = day ? ` on ${new Date(day + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })}` : '';
+      $('empty').hidden = n > 0;
+    };
+    const chipGroup = (id: string, set: (v: string) => void) => {
+      const chips = $$(`#${id} .chip`);
+      chips.forEach((c) =>
+        c.addEventListener('click', () => {
+          set(c.dataset.value!);
+          chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+          run();
+        }),
+      );
+      return chips;
+    };
+    chipGroup('when', (v) => {
+      when = v;
+      day = '';
+      paintCal();
+    });
+    const catChips = chipGroup('cats', (v) => (cat = v));
+    $('q').addEventListener('input', run);
+    $('area').addEventListener('change', run);
+    if (params.get('cat')) {
+      const c = catChips.find((x) => x.dataset.value === params.get('cat'));
+      c?.click();
+    }
+
+    // Month calendar
+    let month = today.slice(0, 7);
+    const paintCal = () => {
+      const [y, m] = month.split('-').map(Number);
+      const first = new Date(Date.UTC(y, m - 1, 1));
+      const daysIn = new Date(Date.UTC(y, m, 0)).getUTCDate();
+      $('cal-title').textContent = first.toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+      const lead = (first.getUTCDay() + 6) % 7;
+      let html = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((d) => `<span class="dow">${d}</span>`).join('');
+      html += '<span></span>'.repeat(lead);
+      for (let d = 1; d <= daysIn; d++) {
+        const iso = `${month}-${String(d).padStart(2, '0')}`;
+        const count = items.filter((el) => {
+          if (el.dataset.dates) return el.dataset.dates.split(',').includes(iso);
+          const s = el.dataset.start || '', e = el.dataset.end || s;
+          const long = (Date.parse(e) - Date.parse(s)) / 86400000 >= 3;
+          return !long && s <= iso && e >= iso;
+        }).length;
+        html += `<button type="button" data-day="${iso}" ${iso < today ? 'disabled' : ''} aria-pressed="${iso === day}" class="${iso === today ? 'today' : ''}">${d}<small>${count || ''}</small></button>`;
+      }
+      $('cal-grid').innerHTML = html;
+    };
+    $('cal-grid').addEventListener('click', (e: Event) => {
+      const b = (e.target as HTMLElement).closest('button[data-day]') as HTMLElement | null;
+      if (!b) return;
+      day = day === b.dataset.day ? '' : b.dataset.day!;
+      $$('#when .chip').forEach((o) => o.setAttribute('aria-pressed', String(!day && o.dataset.value === when)));
+      paintCal();
+      run();
+    });
+    const shift = (n: number) => {
+      const d = new Date(month + '-15T12:00:00Z');
+      d.setUTCMonth(d.getUTCMonth() + n);
+      month = d.toISOString().slice(0, 7);
+      paintCal();
+    };
+    $('cal-prev').addEventListener('click', () => shift(-1));
+    $('cal-next').addEventListener('click', () => shift(1));
+    $('cal-toggle').addEventListener('click', () => {
+      const open = $('cal').hidden;
+      $('cal').hidden = !open;
+      $('cal-toggle').setAttribute('aria-expanded', String(open));
+      if (open) paintCal();
+    });
+    run();
+
+    // Approved community events (Firestore), added in date order.
+    loadCommunityEvents()
+      .then((evs) => {
+        if (!evs.length) return;
+        const html = evs
+          .map((e) => {
+            const s = styleFor(e.category);
+            const date = new Date(e.startDate + 'T12:00:00Z').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
+            return `<a class="card ev-card" href="/events/community/?id=${encodeURIComponent(e.id)}" style="--accent:${s.color}" data-start="${esc(e.startDate)}" data-end="${esc(e.endDate || e.startDate)}" data-dates="" data-cat="${esc(e.category)}|Community" data-area="${esc(e.area)}" data-search="${esc(`${e.title} ${e.venue} ${e.area} ${e.category} ${e.description}`.toLowerCase())}">
+              ${/^https:/.test(e.imageUrl) ? `<img class="thumb" src="${esc(e.imageUrl)}" alt="" loading="lazy" referrerpolicy="no-referrer">` : `<div class="thumb ph">${ic('groups')}</div>`}
+              <div class="flex between" style="gap:6px"><span class="tag" style="background:color-mix(in srgb, ${s.color} 14%, transparent);color:${s.color}">${esc(e.category)}</span><span class="tag ok">Community</span></div>
+              <h3 class="clamp-2" style="margin-top:8px">${esc(e.title)}</h3>
+              <div class="meta-line" style="flex-direction:column;gap:2px"><span>${ic('calendar_month')}${date}${e.startTime ? ' · ' + esc(e.startTime) : ''}</span><span>${ic('location_on')}${esc(e.venue)}</span></div></a>`;
+          })
+          .join('');
+        list.insertAdjacentHTML('beforeend', html);
+        const all = $$('#list > a');
+        all.sort((a, b) => {
+          const next = (el: HTMLElement) => (el.dataset.dates ? el.dataset.dates.split(',').find((d) => d >= today) || '' : (el.dataset.start! < today ? today : el.dataset.start!));
+          return next(a).localeCompare(next(b));
+        });
+        all.forEach((el) => list.appendChild(el));
+        items = all;
+        run();
+      })
+      .catch(() => {});
+  }
+</script>

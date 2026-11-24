@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHead from '../components/PageHead.astro';
+import Icon from '../components/Icon.astro';
+import Off from '../components/Off.astro';
+import { featureOff, load } from '../lib/data';
+import { flightsHtml } from '../lib/render-travel';
+import { fmtTime } from '../lib/format';
+
+const off = featureOff('flights');
+const f = load<any>('flights.json');
+const norm = (r: any, dep: boolean) => ({ flightNo: r.flightNo, airline: r.airline, scheduled: r.scheduled, status: r.status, statusType: r.statusType, place: dep ? r.destination : r.origin });
+const deps = (f?.departures ?? []).map((r: any) => norm(r, true));
+const arrs = (f?.arrivals ?? []).map((r: any) => norm(r, false));
+---
+<Layout title="Isle of Man Airport Flights" description="Live departures and arrivals at Isle of Man Airport (Ronaldsway), plus a live map of aircraft around the island." section="flights">
+  <PageHead title="Flights" sub="Isle of Man Airport departures and arrivals today" icon="flight_takeoff">
+    <span slot="meta" id="updated">{f?.fetchedAt && `Updated ${fmtTime(f.fetchedAt)}`}</span>
+    <span slot="meta" id="live-badge"></span>
+  </PageHead>
+  <div class="wrap">
+    {off ? <Off message={off} /> : (
+      <>
+        <div class="tabs" role="tablist">
+          <button class="tab" role="tab" type="button" data-t="dep" aria-selected="true"><Icon name="flight_takeoff" /> Departures</button>
+          <button class="tab" role="tab" type="button" data-t="arr" aria-selected="false"><Icon name="flight_land" /> Arrivals</button>
+          <button class="tab" role="tab" type="button" data-t="map" aria-selected="false"><Icon name="radar" /> Live aircraft</button>
+        </div>
+        <div data-p="dep" id="dep" set:html={flightsHtml(deps, true)} />
+        <div data-p="arr" id="arr" hidden set:html={flightsHtml(arrs, false)} />
+        <div data-p="map" hidden>
+          <div class="map" id="map"></div>
+          <p class="small muted" id="ac-count">Loading aircraft…</p>
+          <div class="rows" id="ac-list"></div>
+          <p class="tiny muted">Positions from volunteer ADS-B receivers via adsb.lol, within about 60 nautical miles. Not every aircraft broadcasts its position; for information only.</p>
+        </div>
+        <div class="btn-row"><a class="btn ghost" href="https://www.airport.im" target="_blank" rel="noopener"><Icon name="open_in_new" /> airport.im</a></div>
+        <p class="source">Source: <a href="https://www.airport.im" target="_blank" rel="noopener">Isle of Man Airport</a>. Times are local. Check with your airline before travelling.</p>
+      </>
+    )}
+  </div>
+</Layout>
+<script>
+  import { fetchFlights } from '../lib/live';
+  import { flightsHtml } from '../lib/render-travel';
+  import { fmtTime, getJson, esc } from '../lib/client';
+
+  const dep = document.getElementById('dep');
+  if (dep) {
+    let mapStarted = false;
+    const tabs = Array.from(document.querySelectorAll<HTMLElement>('.tab[data-t]'));
+    const show = (t: string) => {
+      tabs.forEach((o) => o.setAttribute('aria-selected', String(o.dataset.t === t)));
+      document.querySelectorAll<HTMLElement>('[data-p]').forEach((p) => (p.hidden = p.dataset.p !== t));
+      if (t === 'map' && !mapStarted) {
+        mapStarted = true;
+        startMap();
+      }
+      history.replaceState(null, '', t === 'dep' ? location.pathname : `#${t}`);
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => show(t.dataset.t!)));
+    if (['#arr', '#map'].includes(location.hash)) show(location.hash.slice(1));
+
+    const load = async () => {
+      try {
+        const d = await fetchFlights();
+        dep.innerHTML = flightsHtml(d.departures, true);
+        document.getElementById('arr')!.innerHTML = flightsHtml(d.arrivals, false);
+        document.getElementById('updated')!.textContent = d.updated ? `Updated ${fmtTime(d.updated)}` : '';
+        document.getElementById('live-badge')!.innerHTML = d.live ? '<span class="tag ok">Live</span>' : '';
+      } catch {}
+    };
+    load();
+    setInterval(() => document.visibilityState === 'visible' && load(), 90000);
+
+    async function startMap() {
+      const { createMap, L, arrowIcon } = await import('../lib/map');
+      const map = createMap(document.getElementById('map')!, [54.2, -4.6], 8);
+      L.circleMarker([54.0833, -4.6239], { radius: 6, color: '#cf1020', fillOpacity: 1 }).addTo(map).bindPopup('Isle of Man Airport (Ronaldsway)');
+      const layer = L.layerGroup().addTo(map);
+      const refresh = async () => {
+        try {
+          const d = await getJson<any>('https://manxone-adsb.hammerpunch786.workers.dev/', 10000);
+          const list = (d.aircraft || []) as any[];
+          layer.clearLayers();
+          for (const a of list) {
+            const low = a.altitude != null && a.altitude < 10000;
+            L.marker([a.lat, a.lon], { icon: arrowIcon(low ? '#cf1020' : '#1565c0', a.heading, 26, 'flight') })
+              .bindPopup(`<strong>${esc(a.callsign || a.registration || a.id)}</strong><br>${a.type ? esc(a.type) + '<br>' : ''}${a.altitude != null ? (a.altitude === 0 ? 'On the ground' : `${Math.round(a.altitude).toLocaleString('en-GB')} ft`) : ''}${a.speed != null ? ` · ${Math.round(a.speed)} kt` : ''}`)
+              .addTo(layer);
+          }
+          document.getElementById('ac-count')!.textContent = `${list.length} aircraft in range · updated ${fmtTime(d.updated || new Date())} · red = below 10,000 ft`;
+          document.getElementById('ac-list')!.innerHTML = list
+            .filter((a) => a.callsign)
+            .slice(0, 12)
+            .map((a) => `<div><span class="grow"><strong>${esc(a.callsign)}</strong> <span class="tiny muted">${esc(a.type || '')} ${esc(a.registration || '')}</span></span><span class="small muted">${a.altitude === 0 ? 'Ground' : a.altitude != null ? Math.round(a.altitude).toLocaleString('en-GB') + ' ft' : ''}${a.distanceNm != null ? ` · ${Math.round(a.distanceNm)} nm` : ''}</span></div>`)
+            .join('');
+        } catch {
+          document.getElementById('ac-count')!.textContent = 'Live aircraft positions are unavailable right now.';
+        }
+      };
+      refresh();
+      setInterval(() => document.visibilityState === 'visible' && !document.querySelector<HTMLElement>('[data-p="map"]')!.hidden && refresh(), 20000);
+    }
+  }
+</script>
