@@ -1,7 +1,7 @@
 {
  "meta": {
   "schemaVersion": 1,
-  "generated": "2026-11-06",
+  "generated": "2026-11-25",
   "sourceUpdated": "2026-09-18T12:35:00",
   "source": "TT 2027 race schedule (ACU Events / Isle of Man TT Races)",
   "sourceUrl": "https://www.iomttraces.com",
@@ -14,7 +14,8 @@
    "status": "scheduled",
    "title": "TT 2027 schedule announced",
    "message": "TT 2027 runs from Monday 31 May to Saturday 12 June. Race order confirmed; exact start times to be announced."
-  }
+  },
+  "sidecarNote": "Sidecar races are provisional. Organisers adjusted the 2027 Sidecar rules in November 2026 after a team withdrew, and expect a smaller field. They say the 2027 return is still the first year of a three-year commitment to the class."
  },
  "event": {
   "name": "Isle of Man TT 2027",
@@ -138,7 +139,8 @@
      "name": "Sidecar TT Race 1",
      "laps": 2,
      "kind": "race",
-     "note": "Start time to be confirmed"
+     "note": "Provisional — start time to be confirmed. Sidecar races are subject to ongoing work on the class’s new rules.",
+     "provisional": true
     }
    ]
   },
@@ -187,7 +189,8 @@
      "name": "Sidecar TT Race 2",
      "laps": 2,
      "kind": "race",
-     "note": "Start time to be confirmed"
+     "note": "Provisional — start time to be confirmed. Sidecar races are subject to ongoing work on the class’s new rules.",
+     "provisional": true
     },
     {
      "time": "TBC",

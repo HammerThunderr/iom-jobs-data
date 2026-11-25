@@ -16,6 +16,7 @@ const kindTag: Record<string, string> = { qualifying: 'info', race: 'bad', parad
   <div class="wrap narrow">
     {r?.meta?.lastUpdate && <div class="notice"><Icon name="campaign" /><p><strong>{r.meta.lastUpdate.title}.</strong> {r.meta.lastUpdate.message}</p></div>}
     {r?.meta?.sharedCourseNote && <p class="small">{r.meta.sharedCourseNote}</p>}
+    {r?.meta?.sidecarNote && <div class="notice warn"><Icon name="info" /><p>{r.meta.sidecarNote}</p></div>}
     {weeks.map((w) => (
       <section class="section">
         <h2>{w}</h2>
@@ -25,7 +26,7 @@ const kindTag: Record<string, string> = { qualifying: 'info', race: 'bad', parad
               <div class="flex between"><h3 class="mb0">{fmtDate(d.date + 'T12:00:00Z', { weekday: 'long', day: 'numeric', month: 'long' })}</h3><span class="tag">{d.label}</span></div>
               <div class="rows" style="margin-top:8px">
                 {d.sessions.map((s: any) => (
-                  <div><span class="nowrap strong" style="min-width:56px">{s.time}</span><span class="grow">{s.name}{s.laps && <span class="muted"> · {s.laps} laps</span>}{s.note && <><br /><span class="tiny muted">{s.note}</span></>}</span><span class={`tag ${kindTag[s.kind] ?? ''}`}>{s.kind}</span></div>
+                  <div><span class="nowrap strong" style="min-width:56px">{s.time}</span><span class="grow">{s.name}{s.provisional && <> <span class="tag warn">Provisional</span></>}{s.laps && <span class="muted"> · {s.laps} laps</span>}{s.note && <><br /><span class="tiny muted">{s.note}</span></>}</span><span class={`tag ${kindTag[s.kind] ?? ''}`}>{s.kind}</span></div>
                 ))}
               </div>
             </div>

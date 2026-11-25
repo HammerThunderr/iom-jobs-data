@@ -37,7 +37,11 @@ const months = [...new Set(calls.map((x: any) => x.date.slice(0, 7)))] as string
         </div>
       </section>
     ))}
-    <p class="empty" id="empty" hidden>No more calls this season. The next season's schedule usually appears in the autumn.</p>
+    <div class="card pad-lg empty" id="empty" hidden>
+      <span class="ms" aria-hidden="true">anchor</span>
+      <h2>The {c?.meta?.season} cruise season is over</h2>
+      <p class="mb0">Visit Isle of Man usually publishes the {Number(c?.meta?.season) + 1} schedule in the New Year. It will appear here as soon as it does. Tick "Show past calls" to see this season's ships.</p>
+    </div>
     <p class="source">Source: <a href={c?.meta?.sourceUrl} target="_blank" rel="noopener">{c?.meta?.source}</a> ({c?.meta?.scheduleVersion}). {c?.meta?.disclaimer}</p>
   </div>
 </Layout>
