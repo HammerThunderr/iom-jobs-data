@@ -1,28 +1,28 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-25T01:26:08+00:00",
- "lastUpdated": "01:26 UTC",
- "totalCount": 174,
+ "fetchedAt": "2026-11-25T15:35:41+00:00",
+ "lastUpdated": "15:35 UTC",
+ "totalCount": 179,
  "categories": {
-  "Festive": 33,
+  "Festive": 34,
   "Family & Kids": 8,
-  "Music": 35,
+  "Music": 37,
   "Theatre & Comedy": 28,
-  "Film": 13,
+  "Film": 15,
   "Arts & Workshops": 10,
-  "Heritage": 2,
+  "Heritage": 3,
   "Talks & Learning": 16,
   "Sport": 10,
   "Markets & Fairs": 1,
   "Community": 3,
-  "Other": 15
+  "Other": 14
  },
  "sources": [
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 101,
+   "count": 104,
    "status": "ok"
   },
   {
@@ -34,7 +34,7 @@
   {
    "key": "visitiom",
    "name": "Visit Isle of Man",
-   "count": 62,
+   "count": 64,
    "status": "ok"
   },
   {
@@ -774,6 +774,37 @@
    ]
   },
   {
+   "title": "Meet Father Christmas",
+   "venue": "Ballaugh Parish Church",
+   "startDate": "2026-11-28",
+   "endDate": "2026-11-28",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Festive"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Father Christmas will be in Ballaugh Parish Church on Saturday 28th November. One of the elves is coming with him and has said everyone is invited to come and have a chat with them!",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2FMeet_Father_Christmas_2026_1497258644.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/meet-father-christmas-p1909601",
+   "id": "visitiom-1909601",
+   "sourceKey": "visitiom",
+   "category": "Festive",
+   "area": "Kirk Michael",
+   "address": "Ballaugh Parish Church, Station Road, Ballaugh, N/A, IM7 5AH",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-11-28",
+     "time": ""
+    }
+   ]
+  },
+  {
    "title": "Festive Arts in the Arcade - Willow Trees",
    "venue": "Villa Marina Arcade",
    "startDate": "2026-11-29",
@@ -1299,7 +1330,7 @@
    "source": "Manx National Heritage",
    "recurring": true,
    "description": "Step away from the everyday and immerse yourself in the natural world. Wildlife Photographer of the Year is an internationally acclaimed exhibition, celebrating the very best in nature photography. Journey from polar landscapes to tropical rainforests, vast oceans to remote deserts, through 100 extraordinary images that have come out on top in this year’s competition. Thoughtfully displayed in a calm, contemplative setting, the exhibition invites you to slow down, look closer and experience nature’s most remarkable stories. Beyond their breathtaking artistry, these award-winning photographs offer powerful insights into the environmental challenges facing our planet today. They shine a light on the people, places and species that need our attention the most. About the Exhibition Wildlife Photographer of the Year is the most prestigious photography event of its kind, providing a global…",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2023/02/©-Federico-Veronesi-Wildlife-Photographer-of-the-Year-Image-17-1000x575.jpg",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/11/©-Audun-Rikardsen-Wildlife-Photographer-of-the-Year-Image-18-1000x575.jpg",
    "time": "09:30 – 16:30",
    "price": "Family: £22, Adults: £8, Children, students and concessions: £4*.",
    "url": "https://manxnationalheritage.im/whats-on/detail/wildlife-photographer-of-the-year/",
@@ -1358,7 +1389,7 @@
    "source": "Manx National Heritage",
    "recurring": true,
    "description": "Step back in time and meet a traditional Father Christmas dressed in green, set in a charming Victorian setting. Each child will receive a special gift complete with a personalised gift tag, making the experience truly memorable for just £10 per child. Booking is essential to secure your visit. What’s included in your booking: Meet a Victorian Father Christmas and receive a gift with a personalised gift tag Wander through beautifully decorated rooms with themed Christmas trees Join children’s craft workshops and enjoy carol singing with Briarfield Brass and Matt Kelly Browse the festive shop for local gifts, handmade crafts, seasonal decorations, stocking fillers Sample seasonal treats in the tearoom provided by Parish Pantry Learn about Victorian Christmas traditions, from decorated trees and cards to crackers Additional Information: Each visit with Father Christmas will last…",
-   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2025/11/Grove-Christmas-2025-1000x575.png",
+   "imageUrl": "https://manxnationalheritage.im/wp-content/uploads/2026/09/Santas-Moonlit-Coastal-Sleigh-Ride.png",
    "time": "11:00 – 15:00",
    "price": "£10 per child (1 accompanying adult free) plus optional donation to our Charity",
    "url": "https://manxnationalheritage.im/whats-on/detail/meet-father-christmas-at-the-grove-2/",
@@ -2082,33 +2113,34 @@
    ]
   },
   {
-   "title": "It’s A Wonderful Life",
-   "venue": "Erin Arts Centre",
-   "startDate": "2026-12-16",
-   "endDate": "2026-12-16",
+   "title": "This Symphony May Contain Hope",
+   "venue": "Broadway Cinema",
+   "startDate": "2026-12-13",
+   "endDate": "2026-12-13",
    "isTbc": false,
    "duration": 0.0,
    "tags": [
-    "Other"
+    "Film",
+    "Music"
    ],
-   "source": "Erin Arts Centre",
+   "source": "Villa Marina & Gaiety",
    "recurring": false,
-   "description": "Adults £8 Under 18’s £2 Kickstart the festivities with a trip to the EAC and Bushy’s Yuletide institution. We look forward to this all year and can’t wait to see you. Happy Christmas to all our friends and supporters! We all know the story but it’s still a beautiful thing to watch it unfold and work it’s seasonal magic. An angel is sent from heaven to help a desperately frustrated businessman by showing him what life would have been like if he had never existed. James Stewart, Donna Reed and Virginia Patton star in Frank Capra’s evergreen, Christmas classic. Martin and Debbie will be serving their special mulled wine and mince pies at the interval. Sponsored by Bushy’s brewery. Tickets Google Calendar iCalendar",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/wonderful-life-2026.jpg",
-   "time": "19:30",
-   "price": "£8",
-   "url": "https://www.erinartscentre.com/event/its-a-wonderful-life-2/",
-   "id": "erin-11772",
-   "sourceKey": "erin",
-   "category": "Other",
-   "area": "Port Erin",
-   "address": "Port Erin",
-   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "description": "This Symphony May Contain Hope Dates: Sunday 13th December 2026 Time: 7pm Running time: 135mins (inc cinema exclusive content) THIS SYMPHONY MAY CONTAIN HOPE. RAYE is a songwriter, storyteller and occasional over-thinker. She writes about love, loss, faith, joy and the strange theatre of being human – often all at once. One of the world's most celebrated artists, the South London-born singer-songwriter made history in 2024 when she won six BRIT Awards in a single night, the most by any artist ever. Her Mercury Prize-winning sophomore album, THIS MUSIC MAY CONTAIN HOPE. showcases her evolution as an independent artist, songwriter, composer, producer, and arranger. Now, leading with 11 nominations at the 2027 GRAMMY® Awards – matching the record for the most nominations received by a female artist in a single year – RAYE has reached another extraordinary milestone. THIS SYMPHONY MAY…",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/nymkijs3iqwopvursx8qmzfk0ygx/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "19:00",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873692936/events",
+   "id": "villagaiety-873692936",
+   "sourceKey": "villagaiety",
+   "category": "Film",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873692936/events",
    "soldOut": false,
    "occurrences": [
     {
-     "date": "2026-12-16",
-     "time": "19:30"
+     "date": "2026-12-13",
+     "time": "19:00"
     }
    ]
   },
@@ -2517,6 +2549,37 @@
     {
      "date": "2027-01-06",
      "time": "14:00"
+    }
+   ]
+  },
+  {
+   "title": "Midweek Movie: Sense and Sensibility (2pm + 7.30pm)",
+   "venue": "Erin Arts Centre",
+   "startDate": "2027-01-13",
+   "endDate": "2027-01-13",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Film"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £8 / under 18s £2 What better way to ease you into the new year than a fresh take on Jane Austen’s beloved, coming-of-age classic, Sense and Sensibility. After their father’s death, the Dashwood sisters, Elinor (Daisy Edgar-Jones), Marianne (Esme Creed-Miles) and Margaret (Bodhi Rae Breathnach), along with their mother (Caitriona Balfe), are left penniless. When the family estate passes to the closest male relative, the Dashwood girls are forced out of their home with the possibility of marrying well, their only hope of escaping uncertainty. Navigating love, loss and societal expectations, logical Elinor and passionate Marianne don’t always see eye to eye, yet their unshakable bond sees them through the whirlwind of relocation, romance, heartbreak and, ultimately, hope for a happy future. Daisy Edgar-Jones is excellent as Elinor, playing the role with a poise and restraint that…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/sense-and-sensibility-jan-2027.jpg",
+   "time": "14:00 – 19:30",
+   "price": "£8",
+   "url": "https://www.erinartscentre.com/event/midweek-movie-sense-and-sensibility-2pm-7-30pm/",
+   "id": "erin-11822",
+   "sourceKey": "erin",
+   "category": "Film",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-01-13",
+     "time": "14:00 – 19:30"
     }
    ]
   },
@@ -4848,6 +4911,37 @@
    ]
   },
   {
+   "title": "The Cavern Club Story",
+   "venue": "Gaiety Theatre",
+   "startDate": "2027-07-09",
+   "endDate": "2027-07-09",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Music"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": false,
+   "description": "Fully endorsed by The Cavern Club, The Cavern Club Story tells the story of the most famous venue in music. Playing host to countless music icons and having launched the careers of some of the most famous acts of all time, The Cavern has been at the forefront of music history for decades. Over an incredible 70 years, through highs and lows, The Cavern has built a legacy like no other, having hosted such incredible artists as The Beatles, Cilla Black, The Rolling Stones, Queen, Status Quo, Adele and Oasis, to name but a few. With outstanding live musicians, cutting edge visuals and a set list featuring songs such as ‘I Want To Hold Your Hand’, ‘You Really Got Me’, ‘Anyone Who Had A Heart’, ‘Satisfaction’, ‘Everybody Loves A Lover’, ‘Rolling In The Deep’ and many more, don't miss The Cavern Club Story - a show like no other! USEFUL INFORMATION Age guidance Suitable for all. Under 16s must…",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/1u84ivlsabw9w4ic4oevowgg6vms/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "19:30",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873693020/events",
+   "id": "villagaiety-873693020",
+   "sourceKey": "villagaiety",
+   "category": "Music",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873693020/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-07-09",
+     "time": "19:30"
+    }
+   ]
+  },
+  {
    "title": "Queen of the Night - A Tribute to Whitney Houston",
    "venue": "Villa Marina Royal Hall",
    "startDate": "2027-07-16",
@@ -4934,6 +5028,37 @@
    "bookingUrl": "",
    "soldOut": false,
    "occurrences": []
+  },
+  {
+   "title": "The Simon & Garfunkel Story",
+   "venue": "Gaiety Theatre",
+   "startDate": "2027-07-23",
+   "endDate": "2027-07-23",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Music"
+   ],
+   "source": "Villa Marina & Gaiety",
+   "recurring": false,
+   "description": "Following SOLD-OUT performances in London's West End, a Worldwide tour, and standing ovations at every performance, The Simon & Garfunkel Story continues to stun audiences across the globe, making it a must-see international sensation. Using huge projection photos and original film footage, the international hit show also features a full live band performing all the hits including Mrs Robinson , Cecilia , Bridge Over Troubled Water , Homeward Bound , and many more. Get your tickets fast as this is an evening not to be missed! \" Fantastic\" - Elaine Paige, BBC Radio 2. \" Authentic and Exciting\" - The Stage. USEFUL INFORMATION Age guidance Suitable for all. Under 16s must be accompanied by an adult (18+) Seating Theatre style - All seats are allocated/reserved so please ensure you check your section/ row and seat numbers before taking your seats. Customer notice regarding Boxes: please…",
+   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/xqlkuhbcqxta95vwi4575kge8hso/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
+   "time": "19:30",
+   "price": "",
+   "url": "https://villagaiety.ticketsolve.com/shows/873658041/events",
+   "id": "villagaiety-873658041",
+   "sourceKey": "villagaiety",
+   "category": "Music",
+   "area": "Douglas",
+   "address": "Douglas",
+   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873658041/events",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-07-23",
+     "time": "19:30"
+    }
+   ]
   },
   {
    "title": "The Bon Jovi Experience",
@@ -5354,6 +5479,37 @@
    "occurrences": [
     {
      "date": "2027-08-29",
+     "time": ""
+    }
+   ]
+  },
+  {
+   "title": "Coast 2 Coast",
+   "venue": "NSC",
+   "startDate": "2027-09-05",
+   "endDate": "2027-09-05",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Heritage"
+   ],
+   "source": "Visit Isle of Man",
+   "recurring": false,
+   "description": "Enjoy the 12 mile Heritage trail from Douglas to Peel in aid of Sight Matters.",
+   "imageUrl": "https://eu-assets.simpleview-europe.com/isleofman2019/imageresizer/?image=%2Fdmsimgs%2F067_820015102.jpg&action=ProductListGallery",
+   "time": "",
+   "price": "",
+   "url": "https://www.visitisleofman.com/whats-on/coast-2-coast-p1909591",
+   "id": "visitiom-1909591",
+   "sourceKey": "visitiom",
+   "category": "Heritage",
+   "area": "Douglas",
+   "address": "NSC, Onchan, Douglas, Isle of Man, IM2 1RB",
+   "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2027-09-05",
      "time": ""
     }
    ]
