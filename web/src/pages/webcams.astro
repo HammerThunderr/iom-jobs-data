@@ -87,6 +87,30 @@ const live = cams.filter((c: any) => c.type === 'video');
   refresh();
   setInterval(() => document.visibilityState === 'visible' && refresh(), 60000);
 
+  // ipcamlive reports whether a camera is currently streaming.
+  const camLive = async (alias: string): Promise<boolean | null> => {
+    try {
+      const r = await fetch(`https://g0.ipcamlive.com/player/getcamerastreamstate.php?alias=${encodeURIComponent(alias)}`);
+      const d = await r.json();
+      return String(d?.details?.streamavailable) === '1';
+    } catch {
+      return null;
+    }
+  };
+  // Mark offline ipcamlive cameras straight away.
+  document.querySelectorAll<HTMLElement>('.player').forEach(async (box) => {
+    const url = box.dataset.url!;
+    if (url.includes('.m3u8')) return;
+    const alias = new URL(url).searchParams.get('alias');
+    if (alias && (await camLive(alias)) === false) {
+      const tag = box.parentElement!.querySelector('figcaption .tag');
+      if (tag) {
+        tag.textContent = 'Offline';
+        tag.className = 'tag';
+      }
+    }
+  });
+
   document.querySelectorAll<HTMLElement>('.player').forEach((box) =>
     box.querySelector('.play')!.addEventListener('click', async () => {
       const url = box.dataset.url!;
@@ -99,19 +123,29 @@ const live = cams.filter((c: any) => c.type === 'video');
         box.innerHTML = '';
         box.appendChild(video);
         const src = url.includes('camsecure.uk') ? 'https://manxone-hls.hammerpunch786.workers.dev/?url=' + encodeURIComponent(url) : url;
-        if (video.canPlayType('application/vnd.apple.mpegurl')) video.src = src;
-        else {
-          const { default: Hls } = await import('hls.js');
-          if (Hls.isSupported()) {
-            const hls = new Hls({ lowLatencyMode: true, liveSyncDurationCount: 3 });
-            hls.loadSource(src);
-            hls.attachMedia(video);
-            hls.on(Hls.Events.ERROR, (_e: any, d: any) => {
-              if (d.fatal) box.innerHTML = '<span class="err">Stream unavailable right now</span>';
-            });
-          }
-        }
+        // Use hls.js wherever it works. Desktop Chrome now claims it can play
+        // HLS natively but fails on these streams; only fall back to native
+        // playback (Safari / iPhone) when hls.js isn't supported.
+        const { default: Hls } = await import('hls.js');
+        if (Hls.isSupported()) {
+          const hls = new Hls({ liveSyncDurationCount: 3 });
+          hls.loadSource(src);
+          hls.attachMedia(video);
+          hls.on(Hls.Events.MANIFEST_PARSED, () => video.play().catch(() => {}));
+          hls.on(Hls.Events.ERROR, (_e: any, d: any) => {
+            if (d.fatal) box.innerHTML = '<span class="err">Stream unavailable right now</span>';
+          });
+        } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+          video.src = src;
+          video.addEventListener('error', () => (box.innerHTML = '<span class="err">Stream unavailable right now</span>'));
+        } else box.innerHTML = '<span class="err">This browser can’t play live streams</span>';
       } else {
+        // ipcamlive: check the owner is actually streaming before embedding.
+        const alias = new URL(url).searchParams.get('alias');
+        if (alias && (await camLive(alias)) === false) {
+          box.innerHTML = '<span class="err">This camera is offline right now. Try again later.</span>';
+          return;
+        }
         box.innerHTML = `<iframe src="${url}" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Live webcam"></iframe>`;
       }
     }),

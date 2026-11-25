@@ -87,8 +87,8 @@ const regions = [...new Set(stations.map((s: any) => s.region))] as string[];
     document.getElementById('bar-name')!.textContent = card.dataset.name!;
     state.textContent = 'Connecting…';
     const url = card.dataset.url!;
-    if (url.includes('.m3u8') && !audio.canPlayType('application/vnd.apple.mpegurl')) {
-      const { default: Hls } = await import('hls.js');
+    const Hls = url.includes('.m3u8') ? (await import('hls.js')).default : null;
+    if (Hls && Hls.isSupported()) {
       hls = new Hls();
       hls.loadSource(url);
       hls.attachMedia(audio);
