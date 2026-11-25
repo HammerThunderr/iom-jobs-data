@@ -49,6 +49,37 @@ const groups: { title: string; icon: string; items: N[] }[] = [
       <span class="ms" aria-hidden="true">call</span>
       <span><strong>Call 999</strong><br /><span>Police · Fire · Ambulance · Coastguard — life-threatening emergencies</span></span>
     </a>
+    <details class="card medid" id="medical-id">
+      <summary>
+        <span class="medid-ic"><Icon name="medical_information" /></span>
+        <span class="medid-text"><strong>Set up your Medical ID</strong><span class="small muted">Let paramedics and first aiders see your allergies, medicines and emergency contacts from your lock screen.</span></span>
+        <span class="ms chev" aria-hidden="true">keyboard_arrow_down</span>
+      </summary>
+      <p class="small">If you're hurt or unwell and can't speak, a responder can open this from your locked phone — no passcode needed. It only takes a few minutes and could save your life.</p>
+      <div class="grid two medid-steps">
+        <div data-os="ios">
+          <h3><Icon name="phone_iphone" /> iPhone</h3>
+          <ol class="small">
+            <li>Open the <strong>Health</strong> app and tap your picture (top right).</li>
+            <li>Tap <strong>Medical ID</strong>, then <strong>Get Started</strong> or <strong>Edit</strong>.</li>
+            <li>Add conditions, medicines, allergies, blood type and emergency contacts.</li>
+            <li>Turn on <strong>Show When Locked</strong> (and <strong>Share During Emergency Call</strong>), then tap <strong>Done</strong>.</li>
+          </ol>
+          <p class="tiny view">To view on a locked iPhone: wake it, swipe up, tap <strong>Emergency</strong> on the passcode screen, then <strong>Medical ID</strong>.</p>
+        </div>
+        <div data-os="android">
+          <h3><Icon name="phone_android" /> Android</h3>
+          <ol class="small">
+            <li>Open <strong>Settings</strong> and tap <strong>Safety &amp; emergency</strong> (on some phones: <strong>Emergency information</strong> or <strong>About phone</strong>).</li>
+            <li>Tap <strong>Medical information</strong> and add conditions, medicines, allergies and blood type.</li>
+            <li>Tap <strong>Emergency contacts</strong> and add the people to call.</li>
+            <li>Allow it on the lock screen if your phone asks.</li>
+          </ol>
+          <p class="tiny view">To view on a locked Android phone: swipe up, tap <strong>Emergency</strong> or <strong>Emergency call</strong>, then <strong>Emergency information</strong> (or <strong>View medical info</strong>).</p>
+        </div>
+      </div>
+      <p class="tiny muted mb0">Menu names vary between phone makers and versions. Only add what you're happy for a stranger to read.</p>
+    </details>
     <div class="notice"><Icon name="favorite" /><p><strong>Need to talk right now?</strong> Services below may be closed outside office hours. Samaritans answer free, 24 hours a day, on <a href="tel:116123">116 123</a>.</p></div>
     {groups.map((g) => (
       <section class="section">
@@ -71,10 +102,30 @@ const groups: { title: string; icon: string; items: N[] }[] = [
   </div>
 </Layout>
 <style>
+  .medid { margin-bottom: 14px; border-color: color-mix(in srgb, #1565c0 35%, var(--border)); background: color-mix(in srgb, #1565c0 5%, var(--surface)); }
+  .medid summary { display: flex; gap: 12px; align-items: center; cursor: pointer; list-style: none; }
+  .medid summary::-webkit-details-marker { display: none; }
+  .medid-ic { width: 42px; height: 42px; border-radius: 50%; background: #1565c0; color: #fff; display: grid; place-items: center; flex-shrink: 0; font-size: 1.2rem; }
+  .medid-text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; line-height: 1.35; }
+  .medid .chev { font-size: 1.6rem; width: auto; transition: transform 0.2s; color: var(--text-2); }
+  .medid[open] .chev { transform: rotate(180deg); }
+  .medid[open] summary { margin-bottom: 12px; }
+  .medid h3 .ms { color: #1565c0; }
+  .medid ol { padding-left: 1.2em; margin: 0 0 8px; }
+  .medid ol li { margin-bottom: 4px; }
+  .medid .view { background: color-mix(in srgb, #1565c0 9%, transparent); padding: 8px 10px; border-radius: 8px; margin: 0; }
+  .medid-steps { margin: 8px 0 10px; }
   .sos-card { display: flex; gap: 16px; align-items: center; background: linear-gradient(135deg, var(--red), var(--red-deep)); color: #fff; border-radius: 18px; padding: 20px 22px; box-shadow: 0 10px 30px color-mix(in srgb, var(--red) 35%, transparent); margin-bottom: 14px; }
   .sos-card:hover { text-decoration: none; filter: brightness(1.05); }
   .sos-card .ms { font-size: 2.6rem; width: auto; background: rgba(255, 255, 255, 0.18); border-radius: 50%; padding: 12px; }
   .sos-card strong { font-size: 1.6rem; }
   .sos-card span span { opacity: 0.9; font-size: 0.95rem; }
+  .sos-card > span:last-child { line-height: 1.35; }
   h2 .ms { color: var(--accent); }
 </style>
+<script>
+  // Show the visitor's own phone type first, and open the tip if linked to.
+  const steps = document.querySelector('.medid-steps');
+  if (steps && /android/i.test(navigator.userAgent)) steps.prepend(steps.querySelector('[data-os="android"]')!);
+  if (location.hash === '#medical-id') (document.getElementById('medical-id') as HTMLDetailsElement).open = true;
+</script>
