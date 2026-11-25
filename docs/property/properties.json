@@ -1,23 +1,23 @@
 {
   "meta": {
-    "generated": "2026-11-25T03:59:48+00:00",
+    "generated": "2026-11-25T19:05:53+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
-        "count": 289,
+        "count": 288,
         "withPrice": 282,
         "status": "ok"
       },
       {
         "agent": "Cowley Groves",
-        "count": 139,
-        "withPrice": 131,
+        "count": 138,
+        "withPrice": 130,
         "status": "ok"
       },
       {
         "agent": "Garforth Gray",
-        "count": 253,
-        "withPrice": 251,
+        "count": 252,
+        "withPrice": 250,
         "status": "ok"
       },
       {
@@ -34,8 +34,8 @@
       },
       {
         "agent": "Manxmove",
-        "count": 32,
-        "withPrice": 32,
+        "count": 34,
+        "withPrice": 34,
         "status": "ok"
       },
       {
@@ -2240,6 +2240,7 @@
       "locality": "Michael",
       "parish": "Michael",
       "postcode": null,
+      "status": "Let Agreed",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-25"
     },
@@ -2657,8 +2658,8 @@
       "url": "https://bgc.im/property/hill-street-douglas-3/",
       "category": "commercial",
       "listingType": "rent",
-      "price": null,
-      "priceQualifier": "unknown",
+      "price": 9210,
+      "priceQualifier": "pcm",
       "bedrooms": null,
       "bathrooms": null,
       "propertyType": "office",
@@ -2666,6 +2667,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": null,
+      "priceNote": "£110,520 per year",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-25"
     },
@@ -4289,25 +4291,6 @@
       "lastSeen": "2026-11-25"
     },
     {
-      "id": "bgc-ramsey-isle-of-man",
-      "agent": "Black Grace Cowley",
-      "url": "https://bgc.im/property/ramsey-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 997000,
-      "priceQualifier": "asking",
-      "bedrooms": 6,
-      "bathrooms": 3,
-      "propertyType": "detached",
-      "address": "New Hey, Grove Mount Ramsey",
-      "locality": "Ramsey",
-      "parish": "Ramsey",
-      "postcode": null,
-      "status": "Sold STC",
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-25"
-    },
-    {
       "id": "bgc-rhen-cullen-kirk-michael",
       "agent": "Black Grace Cowley",
       "url": "https://bgc.im/property/rhen-cullen-kirk-michael/",
@@ -5625,6 +5608,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 7EE",
+      "status": "Under Offer",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -6258,7 +6242,7 @@
       "priceQualifier": "asking",
       "bedrooms": 1,
       "bathrooms": 1,
-      "propertyType": null,
+      "propertyType": "apartment",
       "address": "Apt. 16 Woodbourne Court, Woodbourne Road, Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
@@ -7322,24 +7306,6 @@
       "lastSeen": "2026-11-25"
     },
     {
-      "id": "cg-mount-rule-farm-west-baldwin-road-mount-rule-douglas-im4-4hw",
-      "agent": "Cowley Groves",
-      "url": "https://www.cowleygroves.com/property/mount-rule-farm-west-baldwin-road-mount-rule-douglas-im4-4hw/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 1695000,
-      "priceQualifier": "asking",
-      "bedrooms": 6,
-      "bathrooms": 2,
-      "propertyType": "detached",
-      "address": "Mount Rule Farm, West Baldwin Road, Mount Rule, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM4 4HW",
-      "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-25"
-    },
-    {
       "id": "cg-neoworx-samuel-harris-house-5-11-st-george-s-street-douglas-im1-1aj",
       "agent": "Cowley Groves",
       "url": "https://www.cowleygroves.com/property/neoworx-samuel-harris-house-5-11-st-george-s-street-douglas-im1-1aj/",
@@ -7918,7 +7884,7 @@
       "locality": "Onchan",
       "parish": "Onchan",
       "postcode": "IM3 2EL",
-      "status": "Under Offer",
+      "status": "Let Agreed",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -9131,8 +9097,8 @@
       "bathrooms": 1,
       "propertyType": null,
       "address": "55 Ballacottier Meadow, Braddan, Douglas",
-      "locality": "Braddan",
-      "parish": "Braddan",
+      "locality": "Douglas",
+      "parish": "Douglas",
       "postcode": "IM2",
       "status": "Sold STC",
       "firstSeen": "2026-11-23",
@@ -10289,6 +10255,7 @@
       "locality": "Foxdale",
       "parish": "Foxdale",
       "postcode": "IM4",
+      "status": "Offer Accepted",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -10381,6 +10348,7 @@
       "locality": "Foxdale",
       "parish": "Foxdale",
       "postcode": "IM4",
+      "status": "Offer Accepted",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -10658,8 +10626,8 @@
       "bathrooms": 2,
       "propertyType": "detached",
       "address": "West Aust Farm, Aust Lane, Andreas Road, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM7",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
@@ -11599,6 +11567,7 @@
       "locality": "Port Erin",
       "parish": "Port Erin",
       "postcode": "IM9",
+      "status": "Offer Accepted",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -11957,6 +11926,24 @@
       "postcode": "IM8",
       "status": "Sold STC",
       "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-25"
+    },
+    {
+      "id": "gg-ramsey-clenagh-road-1",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/ramsey-clenagh-road-1/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 840000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "propertyType": "land",
+      "address": "Gollane House, Clenagh Road, Sandygate, Ramsey",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": "IM7",
+      "firstSeen": "2026-11-25",
       "lastSeen": "2026-11-25"
     },
     {
@@ -12425,44 +12412,6 @@
       "parish": "Ramsey",
       "postcode": "IM8",
       "status": "Sold STC",
-      "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-25"
-    },
-    {
-      "id": "gg-rent-ballasalla-shimmin-road-8",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/rentals/ballasalla-shimmin-road-8/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 2250,
-      "priceQualifier": "pcm",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": "detached",
-      "address": "18 Shimmin Road, Reayrt Mie, Ballasalla",
-      "locality": "Ballasalla",
-      "parish": "Ballasalla",
-      "postcode": null,
-      "status": "Offer Accepted",
-      "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-25"
-    },
-    {
-      "id": "gg-rent-douglas-hampton-house-1",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/rentals/douglas-hampton-house-1/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1250,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "propertyType": "apartment",
-      "address": "Flat 5, Hampton House, Hampton Grove, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": null,
-      "status": "Offer Accepted",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
@@ -15723,24 +15672,6 @@
       "lastSeen": "2026-11-25"
     },
     {
-      "id": "chr-12829601-26-mill-street-castletown",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-for-sale/property/12829601-26-mill-street-castletown/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 425000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "land",
-      "address": "26 Mill Street, Castletown",
-      "locality": "Castletown",
-      "parish": "Castletown",
-      "postcode": "IM9 1AG",
-      "firstSeen": "2026-09-20",
-      "lastSeen": "2026-11-25"
-    },
-    {
       "id": "chr-12835185-waverley-main-road-colby",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-for-sale/property/12835185-waverley-main-road-colby/",
@@ -17970,6 +17901,24 @@
       "lastSeen": "2026-11-25"
     },
     {
+      "id": "chr-12932768-magherdonnagh-ponyfields-port-erin",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-to-let/property/12932768-magherdonnagh-ponyfields-port-erin/",
+      "category": "residential",
+      "listingType": "rent",
+      "price": 1100,
+      "priceQualifier": "pcm",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "Magherdonnagh Ponyfields, Port Erin",
+      "locality": "Port Erin",
+      "parish": "Port Erin",
+      "postcode": "IM9 6BY",
+      "firstSeen": "2026-11-25",
+      "lastSeen": "2026-11-25"
+    },
+    {
       "id": "chr-6643088-3-the-level-colby",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/6643088-3-the-level-colby/",
@@ -18003,6 +17952,7 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM2 3JA",
+      "status": "under_offer",
       "firstSeen": "2026-11-13",
       "lastSeen": "2026-11-25"
     },
@@ -18078,6 +18028,7 @@
       "locality": "Baldrine",
       "parish": "Baldrine",
       "postcode": "IM4 6AF",
+      "status": "under_offer",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-25"
     },
@@ -18098,6 +18049,25 @@
       "postcode": "IM2 1LA",
       "status": "let_stc",
       "firstSeen": "2026-10-26",
+      "lastSeen": "2026-11-25"
+    },
+    {
+      "id": "dw-1-3-murrays-road-douglas-isle-of-man",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/1-3-murrays-road-douglas-isle-of-man/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 415000,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "propertyType": "end of terrace",
+      "address": "1-3 Murrays Road, Douglas, Isle of Man",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-25",
       "lastSeen": "2026-11-25"
     },
     {
@@ -23651,8 +23621,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -24740,25 +24710,6 @@
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-19",
-      "lastSeen": "2026-11-25"
-    },
-    {
-      "id": "dw-lhergy-house-balnahowe-santon-isle-of-man",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/lhergy-house-balnahowe-santon-isle-of-man/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 285000,
-      "priceQualifier": "asking",
-      "bedrooms": null,
-      "bathrooms": null,
-      "propertyType": "detached",
-      "address": "Lhergy House, Balnahowe, Santon, Isle Of Man",
-      "locality": "Santon",
-      "parish": "Santon",
-      "postcode": "IM1 2LF",
-      "status": "for_sale",
-      "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-25"
     },
     {
@@ -26971,6 +26922,25 @@
       "lastSeen": "2026-11-25"
     },
     {
+      "id": "mm-69-cronk-liauyr-douglas-im2-5lx",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/69-cronk-liauyr-douglas-im2-5lx/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 665000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "propertyType": "house",
+      "address": "4  Bed  House For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM2 5LX",
+      "status": "for_sale",
+      "firstSeen": "2026-11-25",
+      "lastSeen": "2026-11-25"
+    },
+    {
       "id": "mm-alijo-37-cannan-avenue-kirk-michael-im6-1hg",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/alijo-37-cannan-avenue-kirk-michael-im6-1hg/",
@@ -27220,6 +27190,25 @@
       "status": "for_sale",
       "firstSeen": "2026-09-30",
       "previousPrice": 2000000,
+      "lastSeen": "2026-11-25"
+    },
+    {
+      "id": "mm-tara-highfield-drive-baldrine-isle-of-man-im4-6ed",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/uncategorized/uncategorized/tara-highfield-drive-baldrine-isle-of-man-im4-6ed/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 575000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "bungalow",
+      "address": "3  Bed  Bungalow For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 6ED",
+      "status": "for_sale",
+      "firstSeen": "2026-11-25",
       "lastSeen": "2026-11-25"
     },
     {
@@ -27639,7 +27628,7 @@
       "url": "https://graysestateagents.com/listings/residential_sale-RX785087-isle-of-man/",
       "category": "residential",
       "listingType": "sale",
-      "price": 290000,
+      "price": 230000,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 1,
@@ -27649,6 +27638,7 @@
       "parish": "Peel",
       "postcode": null,
       "firstSeen": "2026-11-20",
+      "previousPrice": 290000,
       "lastSeen": "2026-11-25"
     },
     {
@@ -27995,25 +27985,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": null,
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-25"
-    },
-    {
-      "id": "pre-678816",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/1-bed-apartment-to-rent-in-central-promenade-douglas-im2/678816/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 925,
-      "priceQualifier": "pcm",
-      "bedrooms": 1,
-      "bathrooms": null,
-      "propertyType": "apartment",
-      "address": "Central Promenade, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": null,
-      "status": "Let Agreed",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-25"
     },
@@ -28884,6 +28855,24 @@
       "lastSeen": "2026-11-25"
     },
     {
+      "id": "pre-754687",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/3-bed-mid-terraced-house-for-sale-in-14-derwent-drive-onchan-im3/754687/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 365000,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "terraced",
+      "address": "14 Derwent Drive Onchan",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": null,
+      "firstSeen": "2026-11-25",
+      "lastSeen": "2026-11-25"
+    },
+    {
       "id": "pre-745588",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/3-bed-mid-terraced-house-for-sale-in-2-roslyn-terrace-douglas-im2/745588/",
@@ -28972,7 +28961,7 @@
       "locality": "Lonan",
       "parish": "Lonan",
       "postcode": null,
-      "status": "Under Offer",
+      "status": "Sold STC",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-25"
     },
