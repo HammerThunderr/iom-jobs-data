@@ -1,28 +1,28 @@
 {
  "success": true,
  "schemaVersion": 2,
- "fetchedAt": "2026-11-25T15:35:41+00:00",
- "lastUpdated": "15:35 UTC",
+ "fetchedAt": "2026-11-26T00:59:49+00:00",
+ "lastUpdated": "00:59 UTC",
  "totalCount": 179,
  "categories": {
   "Festive": 34,
   "Family & Kids": 8,
   "Music": 37,
-  "Theatre & Comedy": 28,
+  "Theatre & Comedy": 27,
   "Film": 15,
-  "Arts & Workshops": 10,
+  "Arts & Workshops": 9,
   "Heritage": 3,
   "Talks & Learning": 16,
   "Sport": 10,
   "Markets & Fairs": 1,
   "Community": 3,
-  "Other": 14
+  "Other": 16
  },
  "sources": [
   {
    "key": "villagaiety",
    "name": "Villa Marina & Gaiety",
-   "count": 104,
+   "count": 103,
    "status": "ok"
   },
   {
@@ -40,7 +40,7 @@
   {
    "key": "erin",
    "name": "Erin Arts Centre",
-   "count": 17,
+   "count": 18,
    "status": "ok"
   }
  ],
@@ -188,51 +188,20 @@
    ]
   },
   {
-   "title": "Crown Ballet presents The Nutcracker",
-   "venue": "Gaiety Theatre",
-   "startDate": "2026-11-25",
-   "endDate": "2026-11-25",
-   "isTbc": false,
-   "duration": 0.0,
-   "tags": [
-    "Theatre & Comedy"
-   ],
-   "source": "Villa Marina & Gaiety",
-   "recurring": false,
-   "description": "Crown Ballet® Presents The Nutcracker – An eternal season favourite of classical ballet, performed live on stage The Nutcracker - a charming and kind fairy tale is one of the jewels of Tchaikovsky's repertoire. Prepare to enter a magical new world – the nutcracker in this ballet may be a handsome prince in disguise. The original Christmas story is based on The Nutcracker and the Mouse King written by E.T.A. Hoffmann. It tells the story of Marie, a sad little girl, whose godfather, Drosselmeier, gives her a Nutcracker doll as a present on Christmas Eve. In her lively imagination it turns into a prince and the magic starts… This eternal seasonal favourite will be an unforgettable journey and an ideal introduction to audiences of any age to the magic that is classical ballet. A wonderful treat full of glitter for the whole family! USEFUL INFORMATION Age guidance Suitable for all ages…",
-   "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/3glu9g4xjm1l7a4cp1e5fu7dql5y/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "19:30",
-   "price": "",
-   "url": "https://villagaiety.ticketsolve.com/shows/873622831/events",
-   "id": "villagaiety-873622831",
-   "sourceKey": "villagaiety",
-   "category": "Theatre & Comedy",
-   "area": "Douglas",
-   "address": "Douglas",
-   "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873622831/events",
-   "soldOut": false,
-   "occurrences": [
-    {
-     "date": "2026-11-25",
-     "time": "19:30"
-    }
-   ]
-  },
-  {
    "title": "Ghosts the Possession of Button House",
    "venue": "Broadway Cinema",
-   "startDate": "2026-11-25",
+   "startDate": "2026-11-26",
    "endDate": "2026-11-26",
    "isTbc": false,
-   "duration": 1.0,
+   "duration": 0.0,
    "tags": [
     "Film"
    ],
    "source": "Villa Marina & Gaiety",
-   "recurring": true,
+   "recurring": false,
    "description": "Certificate: PG PG film is suitable for general viewing, but some scenes may be unsuitable for young children. Running time: 1hr 37min BBFC Criteria: mild scary scenes, rude humour, violence, language, drug references Synopsis: Three friends attempt to communicate with the spirits occupying a haunted house, and become embroiled in a supernatural adventure.",
    "imageUrl": "https://d235gwso45fsgz.cloudfront.net/as-assets/variants/p65bwtwb1mceox5nxfwbd9f0a9al/5c5d339ca2f97b088aa6699bd98c15e7b498d37e0dac3d578fdcbe81f8c9d62b",
-   "time": "",
+   "time": "14:30",
    "price": "",
    "url": "https://villagaiety.ticketsolve.com/shows/873691682/events",
    "id": "villagaiety-873691682",
@@ -244,44 +213,10 @@
    "soldOut": false,
    "occurrences": [
     {
-     "date": "2026-11-25",
-     "time": "14:30"
-    },
-    {
-     "date": "2026-11-25",
-     "time": "19:30"
-    },
-    {
      "date": "2026-11-26",
      "time": "14:30"
     }
    ]
-  },
-  {
-   "title": "Southern Photographic Society Anniversary Exhibition: Favourites at 55",
-   "venue": "Erin Arts Centre",
-   "startDate": "2026-11-25",
-   "endDate": "2027-01-15",
-   "isTbc": false,
-   "duration": 51.0,
-   "tags": [
-    "Arts & Workshops"
-   ],
-   "source": "Erin Arts Centre",
-   "recurring": true,
-   "description": "Southern Photographic Society’s 55th Anniversary Exhibition For more than half a century, members of the Southern Photographic Society have gathered with the same simple purpose: to look closely at the world and make something lasting from what they see. To mark the Colby club’s 55th anniversary, the current members are bringing new work onto the wall. ‘Favourites At 55’ is an exhibition of printed images created by our members, with each photographer choosing a few of their own favourites to share. Landscape and portrait, street and studio, quiet detail and sweeping view: each frame is a moment someone noticed, and a picture they are proud of. Come and see the world as our photographers see it now. Stand close enough to take in the detail, then step back and let the whole picture come into focus. Preview Evening: Wednesday 25th November 6.30 pm – 8 pm Exhibition Runs: 25th November to…",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/southern-photographic-exhibition-nov-2026.jpg",
-   "time": "",
-   "price": "",
-   "url": "https://www.erinartscentre.com/event/southern-photographic-society-anniversary-exhibition-favourites-at-55/",
-   "id": "erin-11819",
-   "sourceKey": "erin",
-   "category": "Arts & Workshops",
-   "area": "Port Erin",
-   "address": "Port Erin",
-   "bookingUrl": "https://southernphotographicsociety.org/",
-   "soldOut": false,
-   "occurrences": []
   },
   {
    "title": "Creative Sector Sessions - Communicating a Sense of Place in your Creative Practice",
@@ -405,11 +340,12 @@
    "area": "Douglas",
    "address": "Douglas",
    "bookingUrl": "https://villagaiety.ticketsolve.com/shows/873688072/events",
-   "soldOut": false,
+   "soldOut": true,
    "occurrences": [
     {
      "date": "2026-11-27",
-     "time": "19:30"
+     "time": "19:30",
+     "soldOut": true
     }
    ]
   },
@@ -1118,6 +1054,32 @@
    "area": "",
    "address": "The Roundhouse, Strang Corner Field, Ballaoates Road, Braddan, IOM, IM2 4AY",
    "bookingUrl": "",
+   "soldOut": false,
+   "occurrences": []
+  },
+  {
+   "title": "EAC Events in December",
+   "venue": "Erin Arts Centre",
+   "startDate": "2026-12-01",
+   "endDate": "2026-12-31",
+   "isTbc": false,
+   "duration": 30.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": true,
+   "description": "Google Calendar iCalendar",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/agenda-dec-2026.jpg",
+   "time": "",
+   "price": "",
+   "url": "https://www.erinartscentre.com/event/eac-events-in-december/",
+   "id": "erin-11828",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
    "soldOut": false,
    "occurrences": []
   },
@@ -2141,6 +2103,37 @@
     {
      "date": "2026-12-13",
      "time": "19:00"
+    }
+   ]
+  },
+  {
+   "title": "Miracle on 34th Street (1947) sponsored by Bushys",
+   "venue": "Erin Arts Centre",
+   "startDate": "2026-12-16",
+   "endDate": "2026-12-16",
+   "isTbc": false,
+   "duration": 0.0,
+   "tags": [
+    "Other"
+   ],
+   "source": "Erin Arts Centre",
+   "recurring": false,
+   "description": "Adults £8 Under 18’s £2 Come and share the festive spirit at EAC and Bushy’s Yuletide institution. Happy Christmas to all our friends and supporters! With ‘It’s A Wonderful Life’ temporarily unavailable for screening, we’re bringing you the next best thing! In this Christmas classic, an old man going by the name of Kris Kringle (Edmund Gwenn) fills in for an intoxicated Santa in Macy’s annual Thanksgiving Day parade. Kringle proves to be such a hit that he is soon appearing regularly at the chain’s main store in midtown Manhattan. When Kringle surprises customers and employees alike by claiming that he really is Santa Claus, it leads to a court case to determine his mental health and more importantly, his authenticity. Tender, touching, melancholy, and unpretentious, ‘Miracle on 34th Street’ burns with Capraesque compassion and humanity, whilst displaying a prescient understanding of…",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/miracle-on-34th-street-dec-2026.jpg",
+   "time": "19:30",
+   "price": "£8",
+   "url": "https://www.erinartscentre.com/event/miracle-on-34th-street-1947-sponsored-by-bushys/",
+   "id": "erin-11825",
+   "sourceKey": "erin",
+   "category": "Other",
+   "area": "Port Erin",
+   "address": "Port Erin",
+   "bookingUrl": "https://www.ticketsource.com/whats-on/isle-of-man/erin-arts-centre",
+   "soldOut": false,
+   "occurrences": [
+    {
+     "date": "2026-12-16",
+     "time": "19:30"
     }
    ]
   },
@@ -3375,7 +3368,7 @@
    "source": "Erin Arts Centre",
    "recurring": false,
    "description": "Join the EAC Book Circle on the first Wednesday of each month (except August) from 2pm to discuss the chosen book over tea & coffee. £2 minimum donation and newcomers welcome! Wednesday 2nd December – from 2pm Knife by Salman Rushdie Elliott weaves the real-life story of Dasani Coate’s childhood with the history of her ancestors, tracing their passage from slavery to the Great Migration north. As Dasani comes of age, she must guide her siblings through a world of hunger, violence, racism, drug addiction, and the threat of foster care. Google Calendar iCalendar",
-   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/04/book-circle-DEC-2026.jpg",
+   "imageUrl": "https://www.erinartscentre.com/content/uploads/2026/11/book-circle-2027-2-1.jpg",
    "time": "14:00",
    "price": "",
    "url": "https://www.erinartscentre.com/event/eac-book-circle-invisible-child-by-andrea-elliott/",
