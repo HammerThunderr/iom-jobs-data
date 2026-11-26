@@ -246,7 +246,11 @@ def scrape():
         "meta": {
             "schemaVersion": 1,
             "generated": date.today().isoformat(),
-            "registerDate": register_date(soup),
+            # gov.im's caption still says "as of September 2025" even though
+            # the list includes instructors who qualified in 2026, so the
+            # useful date is when we last read the live list.
+            "registerDate": date.today().strftime("%-d %B %Y"),
+            "govCaptionDate": register_date(soup),
             "source": "Isle of Man Government — Approved driving instructors register",
             "sourceUrl": URL,
             "licence": LICENCE,

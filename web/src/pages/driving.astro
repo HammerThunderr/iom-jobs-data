@@ -57,7 +57,7 @@ const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6}
       ))}
     </div>
     <p class="empty" id="empty" hidden>No instructors match.</p>
-    <p class="source">Source: <a href={d?.sourceUrl ?? d?.meta?.sourceUrl} target="_blank" rel="noopener">{d?.meta?.source}</a> (register dated {d?.meta?.registerDate}). {d?.meta?.disclaimer} {d?.meta?.licence}</p>
+    <p class="source">Source: <a href={d?.sourceUrl ?? d?.meta?.sourceUrl} target="_blank" rel="noopener">{d?.meta?.source}</a> (list checked against gov.im on {d?.meta?.registerDate}). {d?.meta?.disclaimer} {d?.meta?.licence}</p>
   </div>
 </Layout>
 <script>

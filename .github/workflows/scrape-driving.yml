@@ -1,11 +1,11 @@
 # .github/workflows/scrape-driving.yml
 #
-# Approved driving instructor register — refreshed monthly.
+# Approved driving instructor register — refreshed weekly.
 #
 # The register changes as instructors qualify or leave, so this keeps the
 # app's list current without any manual work.
 #
-# gov.im RATE-LIMITS. This fetches exactly one page per run, once a month.
+# gov.im RATE-LIMITS. This fetches exactly one page per run, once a week.
 # Do not increase the frequency or add retry loops.
 #
 # Output: docs/driving.json
@@ -14,10 +14,15 @@ name: Scrape Driving Instructors
 
 on:
   schedule:
-    # 04:00 UTC on the 2nd of each month. The register is updated
-    # infrequently, so monthly is plenty.
-    - cron: "0 4 2 * *"
+    # 04:17 UTC every Monday. New instructors are added between gov.im's
+    # caption updates, so monthly checks missed them for weeks.
+    - cron: "17 4 * * 1"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/driving/**"
+      - ".github/workflows/scrape-driving.yml"
 
 concurrency:
   group: scrape-driving
