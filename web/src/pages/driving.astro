@@ -4,6 +4,7 @@ import PageHead from '../components/PageHead.astro';
 import Icon from '../components/Icon.astro';
 import { load } from '../lib/data';
 import { telHref } from '../lib/format';
+import { EXPERIENCE, FREQUENCY, TIMES } from '../lib/lesson';
 
 const d = load<any>('driving.json');
 const list = (d?.instructors ?? []).sort((a: any, b: any) => a.name.replace(/^(Mr|Mrs|Ms|Miss|Dr)\.?\s+\S+\s+/, '').localeCompare(b.name.replace(/^(Mr|Mrs|Ms|Miss|Dr)\.?\s+\S+\s+/, '')));
@@ -26,6 +27,36 @@ const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6}
         <p class="small muted mb0">{d?.registrarNote}</p>
       </div>
     </div>
+    <section class="card pad-lg req" id="req">
+      <div class="req-head">
+        <span class="req-ic"><Icon name="edit_note" /></span>
+        <div class="grow">
+          <h2 class="mb0" id="req-title">Ask for lessons in seconds</h2>
+          <p class="small muted mb0" id="req-sub">Fill this in once. Then press <strong>Email</strong> or <strong>Text</strong> on any instructor and the message is written for you — just press Send.</p>
+        </div>
+        <button class="btn ghost sm" type="button" id="req-edit" hidden>Edit</button>
+      </div>
+      <form id="req-form" class="stack" style="margin-top:14px" novalidate>
+        <div class="form-grid">
+          <label class="field"><span>Your name</span><input class="input" name="name" autocomplete="name" placeholder="e.g. Sam Quayle" /></label>
+          <label class="field"><span>Your phone <small style="display:inline">(optional)</small></span><input class="input" name="phone" type="tel" autocomplete="tel" placeholder="So they can call you back" /></label>
+          <label class="field"><span>Area for lessons</span><input class="input" name="area" placeholder="e.g. Douglas" list="area-list" /></label>
+        </div>
+        <datalist id="area-list">{areas.map((a) => <option value={a} />)}</datalist>
+        <div class="field"><span>Car</span><div class="chips wrap-chips mb0" data-group="car">
+          <button class="chip" type="button" data-v="manual" aria-pressed="true">Manual</button>
+          <button class="chip" type="button" data-v="automatic" aria-pressed="false">Automatic</button>
+          <button class="chip" type="button" data-v="either" aria-pressed="false">Either</button></div></div>
+        <div class="field"><span>Experience</span><div class="chips wrap-chips mb0" data-group="experience">{EXPERIENCE.map((e, i) => <button class="chip" type="button" data-v={e} aria-pressed={i === 0 ? 'true' : 'false'}>{e}</button>)}</div></div>
+        <div class="field"><span>What you're looking for</span><div class="chips wrap-chips mb0" data-group="frequency">{FREQUENCY.map((e, i) => <button class="chip" type="button" data-v={e} aria-pressed={i === 0 ? 'true' : 'false'}>{e}</button>)}</div></div>
+        <div class="field"><span>When you're free <small style="display:inline">(pick any)</small></span><div class="chips wrap-chips mb0" data-group="times" data-multi="1">{TIMES.map((e) => <button class="chip" type="button" data-v={e} aria-pressed="false">{e}</button>)}</div></div>
+        <label class="field"><span>Anything else? <small style="display:inline">(optional)</small></span><textarea class="input" name="notes" rows="2" maxlength="400" placeholder="e.g. I can be picked up from work in town"></textarea></label>
+        <p class="notice bad" id="req-err" hidden></p>
+        <div class="btn-row mb0"><button class="btn" type="submit"><Icon name="check" /> Save my request</button></div>
+        <p class="tiny muted mb0">Saved in this browser only. Manx One never sees or sends your messages.</p>
+      </form>
+    </section>
+
     <div class="toolbar">
       <div class="search"><Icon name="search" /><input id="q" type="search" placeholder="Instructor name" aria-label="Search instructors" /></div>
       <select class="input" id="area" aria-label="Area"><option value="">All areas</option>{areas.map((a) => <option>{a}</option>)}</select>
@@ -46,11 +77,12 @@ const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6}
             {i.motorcycle && <span class="tag warn">Motorcycle</span>}
             {i.qualifiedSince && <span class="tag">Since {i.qualifiedSince}</span>}
           </div>
-          <p class="small muted"><Icon name="location_on" /> {i.areaLabel}</p>
+          {i.areaLabel ? <p class="small muted"><Icon name="location_on" /> {i.areaLabel}</p> : <p class="small muted">Area not listed — ask when you get in touch</p>}
           <div class="btn-row">
             {i.mobile && <a class="btn ghost sm" href={telHref(i.mobile)}><Icon name="call" /> {fmtPhone(i.mobile)}</a>}
             {i.landline && <a class="btn ghost sm" href={telHref(i.landline)}><Icon name="call" /> {fmtPhone(i.landline)}</a>}
-            {i.email && <a class="btn ghost sm" href={`mailto:${i.email}`}><Icon name="mail" /> Email</a>}
+            {i.email && <button class="btn sm" type="button" data-email={i.email} data-name={i.name}><Icon name="mail" /> Email request</button>}
+            {i.mobile && <button class="btn ghost sm sms-only" type="button" data-sms={i.mobile} data-name={i.name} hidden><Icon name="sms" /> Text request</button>}
             {i.website && <a class="btn ghost sm" href={/^https?:/.test(i.website) ? i.website : `https://${i.website}`} target="_blank" rel="noopener"><Icon name="open_in_new" /> Website</a>}
           </div>
         </div>
@@ -59,9 +91,32 @@ const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6}
     <p class="empty" id="empty" hidden>No instructors match.</p>
     <p class="source">Source: <a href={d?.sourceUrl ?? d?.meta?.sourceUrl} target="_blank" rel="noopener">{d?.meta?.source}</a> (list checked against gov.im on {d?.meta?.registerDate}). {d?.meta?.disclaimer} {d?.meta?.licence}</p>
   </div>
+  <dialog id="send" class="send-dlg">
+    <form method="dialog">
+      <h3 id="send-title">Email your request</h3>
+      <p class="small muted">Choose how to send it. The message is already written — check it, then press Send.</p>
+      <div class="stack">
+        <a class="btn" id="send-mail" href="#"><Icon name="mail" /> Open my email app</a>
+        <a class="btn ghost" id="send-gmail" href="#" target="_blank" rel="noopener"><Icon name="open_in_new" /> Write it in Gmail</a>
+        <button class="btn ghost" type="button" id="send-copy"><Icon name="content_copy" /> Copy message and email address</button>
+      </div>
+      <details class="small" style="margin-top:12px"><summary>Preview the message</summary><pre id="send-preview"></pre></details>
+      <div class="btn-row" style="justify-content:flex-end;margin-bottom:0"><button class="btn ghost sm" value="close">Close</button></div>
+    </form>
+  </dialog>
 </Layout>
+<style is:global>
+  .req { margin-bottom: 18px; border-color: color-mix(in srgb, var(--accent) 35%, var(--border)); background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+  .req-head { display: flex; gap: 12px; align-items: center; }
+  .req-ic { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; display: grid; place-items: center; flex-shrink: 0; font-size: 1.3rem; }
+  .req .field > span { margin-bottom: 6px; }
+  .send-dlg { border: 1px solid var(--border); border-radius: 16px; padding: 20px; max-width: min(460px, calc(100vw - 32px)); width: 100%; background: var(--surface); color: var(--text); box-shadow: var(--shadow-lg); }
+  .send-dlg::backdrop { background: rgba(10, 15, 25, 0.5); }
+  .send-dlg pre { white-space: pre-wrap; font: inherit; font-size: 0.85rem; background: var(--surface-2); padding: 10px; border-radius: 8px; max-height: 240px; overflow: auto; }
+</style>
 <script>
-  import { $$ } from '../lib/client';
+  import { $$, store } from '../lib/client';
+  import { mailto, gmail, smsHref, subject, body, carLabel, type LessonRequest } from '../lib/lesson';
   const items = $$('#list > .card');
   const q = document.getElementById('q') as HTMLInputElement;
   const area = document.getElementById('area') as HTMLSelectElement;
@@ -81,4 +136,95 @@ const fmtPhone = (p: string) => p.replace(/^\+44/, '0').replace(/^(0\d{4})(\d{6}
   chips.forEach((c) => c.addEventListener('click', () => { type = c.dataset.value!; chips.forEach((o) => o.setAttribute('aria-pressed', String(o === c))); run(); }));
   q.addEventListener('input', run);
   area.addEventListener('change', run);
+
+  // ── Lesson request ──
+  const form = document.getElementById('req-form') as HTMLFormElement;
+  const pick = (group: string) => $$(`[data-group="${group}"] .chip`).filter((c) => c.getAttribute('aria-pressed') === 'true').map((c) => c.dataset.v!);
+  $$('[data-group]').forEach((g) =>
+    g.querySelectorAll<HTMLElement>('.chip').forEach((c) =>
+      c.addEventListener('click', () => {
+        if (g.dataset.multi) c.setAttribute('aria-pressed', String(c.getAttribute('aria-pressed') !== 'true'));
+        else g.querySelectorAll('.chip').forEach((o) => o.setAttribute('aria-pressed', String(o === c)));
+      }),
+    ),
+  );
+  const setGroup = (group: string, values: string[]) => $$(`[data-group="${group}"] .chip`).forEach((c) => c.setAttribute('aria-pressed', String(values.includes(c.dataset.v!))));
+  let req = store.get<LessonRequest | null>('lesson', null);
+  const showForm = (open: boolean) => {
+    form.hidden = !open;
+    document.getElementById('req-edit')!.hidden = open || !req;
+    document.getElementById('req-title')!.textContent = req && !open ? 'Your lesson request is ready' : 'Ask for lessons in seconds';
+    document.getElementById('req-sub')!.innerHTML = req && !open
+      ? `${carLabel(req)} · ${req.area} · ${req.experience}. Press <strong>Email request</strong>${$$('.sms-only').some((b) => !b.hidden) ? ' or <strong>Text request</strong>' : ''} on any instructor below.`
+      : 'Fill this in once. Then press <strong>Email</strong> or <strong>Text</strong> on any instructor and the message is written for you — just press Send.';
+  };
+  const fill = (r: LessonRequest) => {
+    for (const k of ['name', 'phone', 'area', 'notes'] as const) (form.elements.namedItem(k) as HTMLInputElement).value = r[k] || '';
+    setGroup('car', [r.car]);
+    setGroup('experience', [r.experience]);
+    setGroup('frequency', [r.frequency]);
+    setGroup('times', r.times);
+  };
+  if (req) fill(req);
+  else {
+    (form.elements.namedItem('area') as HTMLInputElement).value = area.value;
+    if (type === 'automatic') setGroup('car', ['automatic']);
+  }
+  // Texts only make sense on a phone.
+  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) $$('.sms-only').forEach((b) => (b.hidden = false));
+  showForm(!req);
+  let pending: (() => void) | null = null;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const f = new FormData(form);
+    const r: LessonRequest = {
+      name: String(f.get('name') || '').trim(),
+      phone: String(f.get('phone') || '').trim(),
+      area: String(f.get('area') || '').trim(),
+      notes: String(f.get('notes') || '').trim(),
+      car: (pick('car')[0] || 'manual') as LessonRequest['car'],
+      experience: pick('experience')[0],
+      frequency: pick('frequency')[0],
+      times: pick('times'),
+    };
+    const err = document.getElementById('req-err')!;
+    err.hidden = true;
+    if (!r.name) { err.textContent = 'Add your name so the instructor knows who to reply to.'; err.hidden = false; return; }
+    if (!r.area) { err.textContent = 'Add the area you want lessons in, e.g. Douglas.'; err.hidden = false; return; }
+    req = r;
+    store.set('lesson', r);
+    showForm(false);
+    if (pending) { const p = pending; pending = null; p(); }
+  });
+  document.getElementById('req-edit')!.addEventListener('click', () => showForm(true));
+
+  const dlg = document.getElementById('send') as HTMLDialogElement;
+  const needRequest = (then: () => void) => {
+    if (req) return then();
+    pending = then;
+    showForm(true);
+    document.getElementById('req')!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    (form.elements.namedItem('name') as HTMLInputElement).focus({ preventScroll: true });
+  };
+  $$('[data-email]').forEach((b) =>
+    b.addEventListener('click', () =>
+      needRequest(() => {
+        const to = b.dataset.email!, who = b.dataset.name!;
+        document.getElementById('send-title')!.textContent = `Email ${who}`;
+        (document.getElementById('send-mail') as HTMLAnchorElement).href = mailto(to, req!, who);
+        (document.getElementById('send-gmail') as HTMLAnchorElement).href = gmail(to, req!, who);
+        document.getElementById('send-preview')!.textContent = `To: ${to}\nSubject: ${subject(req!)}\n\n${body(req!, who)}`;
+        const copy = document.getElementById('send-copy')!;
+        copy.onclick = async () => {
+          try {
+            await navigator.clipboard.writeText(`${to}\n\nSubject: ${subject(req!)}\n\n${body(req!, who)}`);
+            copy.lastChild!.textContent = ' Copied';
+          } catch {}
+        };
+        copy.lastChild!.textContent = ' Copy message and email address';
+        dlg.showModal();
+      }),
+    ),
+  );
+  $$('[data-sms]').forEach((b) => b.addEventListener('click', () => needRequest(() => (location.href = smsHref(b.dataset.sms!, req!, b.dataset.name!)))));
 </script>
