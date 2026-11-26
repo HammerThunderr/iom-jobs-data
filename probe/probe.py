@@ -1,12 +1,25 @@
-import os, subprocess, json, collections
+import os, re, requests
+from bs4 import BeautifulSoup
 os.makedirs("probe/out", exist_ok=True)
-out = os.path.abspath("probe/out/prop7.json")
-env = dict(os.environ, PROPERTY_AGENTS="gg", OUTPUT_PATH=out)
-r = subprocess.run(["python", "run.py"], cwd="scripts/property", env=env, capture_output=True, text=True)
-log = r.stdout[-6000:] + "\n" + r.stderr[-4000:]
-d = json.load(open(out))
-c = collections.Counter((l["agent"], l["category"], l["listingType"], l.get("status")) for l in d["listings"])
-lines = [f"{k}: {v}" for k, v in sorted(c.items(), key=str)]
-for l in [x for x in d["listings"] if x["agent"] == "Chapman"][:60]:
-    lines.append(json.dumps({k: l.get(k) for k in ("address", "locality", "listingType", "price", "priceQualifier", "priceNote", "status", "category")}, ensure_ascii=False))
-open("probe/out/prop7_summary.txt", "w").write(log + "\n" + "\n".join(lines))
+URLS = [
+  "https://www.gov.im/categories/travel-traffic-and-motoring/drivers-and-vehicles/learning-to-drive/approved-driving-instructors/",
+  "https://gov.im/categories/travel-traffic-and-motoring/drivers-and-vehicles/learning-to-drive/approved-driving-instructors",
+]
+lines = []
+for u in URLS:
+    r = requests.get(u, headers={"User-Agent": "ManxOneBot/1.0 (+mailto:hammerpunch786@gmail.com)"}, timeout=30)
+    lines.append(f"== {u} -> {r.status_code} final={r.url} len={len(r.text)}")
+    soup = BeautifulSoup(r.text, "html.parser")
+    lines.append("as-of matches: " + str(re.findall(r"as of\s+[A-Z][a-z]+\s+\d{4}", soup.get_text(" "), flags=re.I)))
+    for ti, t in enumerate(soup.find_all("table")):
+        rows = t.find_all("tr")
+        cap = t.find("caption")
+        lines.append(f"-- table {ti}: {len(rows)} rows caption={cap.get_text(' ',strip=True) if cap else None}")
+        for row in rows:
+            cells = [re.sub(r'\s+',' ',c.get_text(' ')).strip() for c in row.find_all(['td','th'])]
+            lines.append(" | ".join(cells)[:220])
+    for a in soup.find_all("a", href=True):
+        if re.search(r"\.pdf|instructor|register", a["href"], re.I):
+            lines.append("link: " + a.get_text(" ", strip=True)[:80] + " -> " + a["href"])
+    open("probe/out/adi_raw.html", "w").write(r.text)
+open("probe/out/adi.txt", "w").write("\n".join(lines))
