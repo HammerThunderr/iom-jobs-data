@@ -1,16 +1,8 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-27T21:42:28.437311+00:00",
-  "lastUpdated": "21:41 UTC",
+  "fetchedAt": "2026-11-27T21:46:30.316378+00:00",
+  "lastUpdated": "21:46 UTC",
   "departures": [
-    {
-      "flightNo": "EZY518",
-      "airline": "easyJet",
-      "scheduled": "15:40",
-      "status": "Departed 15:53",
-      "destination": "Liverpool",
-      "statusType": "departed"
-    },
     {
       "flightNo": "EZY836",
       "airline": "easyJet",
@@ -89,6 +81,14 @@
       "scheduled": "10:00",
       "status": "On-time",
       "destination": "Liverpool",
+      "statusType": "ontime"
+    },
+    {
+      "flightNo": "EZY716",
+      "airline": "easyJet",
+      "scheduled": "11:45",
+      "status": "On-time",
+      "destination": "Manchester",
       "statusType": "ontime"
     }
   ],
