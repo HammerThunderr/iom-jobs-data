@@ -1,7 +1,7 @@
 {
   "success": true,
-  "fetchedAt": "2026-11-27T21:46:30.316378+00:00",
-  "lastUpdated": "21:46 UTC",
+  "fetchedAt": "2026-11-27T21:50:32.105129+00:00",
+  "lastUpdated": "21:49 UTC",
   "departures": [
     {
       "flightNo": "EZY836",
@@ -180,8 +180,16 @@
       "status": "On-time",
       "origin": "Manchester",
       "statusType": "ontime"
+    },
+    {
+      "flightNo": "LM682",
+      "airline": "Loganair",
+      "scheduled": "11:50",
+      "status": "On-time",
+      "origin": "Liverpool",
+      "statusType": "ontime"
     }
   ],
-  "totalCount": 22,
+  "totalCount": 23,
   "source": "airport.im"
 }
