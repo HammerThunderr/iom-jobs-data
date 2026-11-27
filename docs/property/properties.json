@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-27T03:30:57+00:00",
+    "generated": "2026-11-27T18:22:17+00:00",
     "sources": [
       {
         "agent": "Black Grace Cowley",
@@ -22,8 +22,8 @@
       },
       {
         "agent": "Chrystals",
-        "count": 297,
-        "withPrice": 270,
+        "count": 298,
+        "withPrice": 269,
         "status": "ok"
       },
       {
@@ -46,15 +46,15 @@
       },
       {
         "agent": "Partners Real Estate",
-        "count": 113,
-        "withPrice": 113,
+        "count": 111,
+        "withPrice": 111,
         "status": "ok"
       },
       {
         "agent": "Chapman",
-        "count": 57,
-        "withPrice": 27,
-        "status": "ok"
+        "count": 0,
+        "status": "failed",
+        "error": "no listing URLs discovered"
       }
     ],
     "disclaimer": "Listings collected from Isle of Man estate agent websites. Always confirm price, status and availability with the agent. Manx One is not an estate agent and is not affiliated with any agency listed."
@@ -112,6 +112,7 @@
       "locality": "Port Erin",
       "parish": "Port Erin",
       "postcode": null,
+      "status": "Let Agreed",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -5010,7 +5011,7 @@
       "url": "https://bgc.im/property/thorny-road-douglas/",
       "category": "residential",
       "listingType": "sale",
-      "price": 499000,
+      "price": 469950,
       "priceQualifier": "asking",
       "bedrooms": 4,
       "bathrooms": 2,
@@ -5020,6 +5021,7 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-20",
+      "previousPrice": 499000,
       "lastSeen": "2026-11-27"
     },
     {
@@ -9217,25 +9219,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "gg-douglas-brunswick-road-6",
-      "agent": "Garforth Gray",
-      "url": "https://www.garforthgray.im/douglas-brunswick-road-6/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 559950,
-      "priceQualifier": "asking",
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "propertyType": null,
-      "address": "St Bede, 41 Brunswick Road, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2",
-      "status": "Offer Accepted",
-      "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "gg-douglas-brunswick-road-7",
       "agent": "Garforth Gray",
       "url": "https://www.garforthgray.im/douglas-brunswick-road-7/",
@@ -10611,8 +10594,8 @@
       "bathrooms": 2,
       "propertyType": "detached",
       "address": "West Aust Farm, Aust Lane, Andreas Road, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM7",
       "firstSeen": "2026-11-23",
       "lastSeen": "2026-11-27"
@@ -10859,6 +10842,24 @@
       "postcode": "IM3",
       "status": "Sold STC",
       "firstSeen": "2026-11-23",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "gg-onchan-falkland-drive-4",
+      "agent": "Garforth Gray",
+      "url": "https://www.garforthgray.im/onchan-falkland-drive-4/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 469950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": 3,
+      "propertyType": "end of terrace",
+      "address": "16 Falkland Drive, Onchan",
+      "locality": "Onchan",
+      "parish": "Onchan",
+      "postcode": "IM3",
+      "firstSeen": "2026-11-27",
       "lastSeen": "2026-11-27"
     },
     {
@@ -13004,7 +13005,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": "IM4 4RG",
-      "status": "let_stc",
       "firstSeen": "2026-09-20",
       "lastSeen": "2026-11-27"
     },
@@ -13517,6 +13517,24 @@
       "lastSeen": "2026-11-27"
     },
     {
+      "id": "chr-12929824-41-43-victoria-street-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12929824-41-43-victoria-street-douglas/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "41-43 Victoria Street, Douglas Annual Rental Of £19,018.50 Excl.",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "firstSeen": "2026-11-27",
+      "lastSeen": "2026-11-27"
+    },
+    {
       "id": "chr-12929834-mezzanine-floor-10-12-prospect-hill-douglas",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12929834-mezzanine-floor-10-12-prospect-hill-douglas/",
@@ -13532,6 +13550,24 @@
       "parish": "Douglas",
       "postcode": "IM1 1EJ",
       "firstSeen": "2026-11-18",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "chr-12933744-41-43-victoria-street-douglas",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/commercial/commercial-lettings/property/12933744-41-43-victoria-street-douglas/",
+      "category": "commercial",
+      "listingType": "rent",
+      "price": null,
+      "priceQualifier": "unknown",
+      "bedrooms": 0,
+      "bathrooms": 0,
+      "propertyType": "land",
+      "address": "41-43 Victoria Street, Douglas Annual Rental Of £16,096.50 Excl.",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "firstSeen": "2026-11-27",
       "lastSeen": "2026-11-27"
     },
     {
@@ -14674,6 +14710,24 @@
       "parish": "Port Erin",
       "postcode": "IM9 6LF",
       "firstSeen": "2026-09-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "chr-11747363-11-carrick-court-bay-view-road-port-st-mary",
+      "agent": "Chrystals",
+      "url": "https://www.chrystals.co.im/properties-for-sale/property/11747363-11-carrick-court-bay-view-road-port-st-mary/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 235000,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "propertyType": "land",
+      "address": "11 Carrick Court, Bay View Road, Port St Mary",
+      "locality": "Port St Mary",
+      "parish": "Port St Mary",
+      "postcode": "IM9 5AL",
+      "firstSeen": "2026-11-27",
       "lastSeen": "2026-11-27"
     },
     {
@@ -17923,44 +17977,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "chr-6644200-imperial-court-castle-hill-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/6644200-imperial-court-castle-hill-douglas/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1300,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "Imperial Court Castle Hill, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM2 4AA",
-      "status": "let_stc",
-      "firstSeen": "2026-10-02",
-      "lastSeen": "2026-11-27"
-    },
-    {
-      "id": "chr-8487566-douglas-head-douglas",
-      "agent": "Chrystals",
-      "url": "https://www.chrystals.co.im/properties-to-let/property/8487566-douglas-head-douglas/",
-      "category": "residential",
-      "listingType": "rent",
-      "price": 1800,
-      "priceQualifier": "pcm",
-      "bedrooms": 2,
-      "bathrooms": 2,
-      "propertyType": "land",
-      "address": "Douglas Head, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 5BY",
-      "status": "let_stc",
-      "firstSeen": "2026-10-12",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "chr-9279965-baldromma-road-baldrine",
       "agent": "Chrystals",
       "url": "https://www.chrystals.co.im/properties-to-let/property/9279965-baldromma-road-baldrine/",
@@ -18585,6 +18601,25 @@
       "postcode": "IM1 2LF",
       "status": "for_sale",
       "firstSeen": "2026-09-27",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "dw-122-bucks-road-douglas",
+      "agent": "DeanWood",
+      "url": "https://deanwood.im/property/122-bucks-road-douglas/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 104950,
+      "priceQualifier": "asking",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "propertyType": "apartment",
+      "address": "122 Bucks Road, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 2LF",
+      "status": "for_sale",
+      "firstSeen": "2026-11-27",
       "lastSeen": "2026-11-27"
     },
     {
@@ -23119,25 +23154,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "dw-bay-view-cottage-8-acres-glen-road-colby",
-      "agent": "DeanWood",
-      "url": "https://deanwood.im/property/bay-view-cottage-8-acres-glen-road-colby/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 700000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "propertyType": "detached",
-      "address": "Bay View Cottage & 8 Acres, Glen Road, Colby",
-      "locality": "Colby",
-      "parish": "Colby",
-      "postcode": "IM9 1LF",
-      "status": "for_sale",
-      "firstSeen": "2026-10-14",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "dw-bay-view-cottage-glen-road-colby",
       "agent": "DeanWood",
       "url": "https://deanwood.im/property/bay-view-cottage-glen-road-colby/",
@@ -23588,8 +23604,8 @@
       "bathrooms": 5,
       "propertyType": "detached",
       "address": "Dhoor School House, Andreas Road, The Dhoor, Lezayre",
-      "locality": "Lezayre",
-      "parish": "Lezayre",
+      "locality": "Andreas",
+      "parish": "Andreas",
       "postcode": "IM8 1AJ",
       "status": "for_sale",
       "firstSeen": "2026-10-27",
@@ -26832,25 +26848,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "mm-1-furman-close-onchan-im3-1bt",
-      "agent": "Manxmove",
-      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/1-furman-close-onchan-im3-1bt/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 465000,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "bungalow",
-      "address": "3  Bed  Bungalow For  Sale",
-      "locality": null,
-      "parish": null,
-      "postcode": "IM3 1BT",
-      "status": "for_sale",
-      "firstSeen": "2026-10-28",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "mm-1-stanley-road-peel-im5-1nx",
       "agent": "Manxmove",
       "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/1-stanley-road-peel-im5-1nx/",
@@ -26924,6 +26921,25 @@
       "postcode": "IM2 5LX",
       "status": "for_sale",
       "firstSeen": "2026-11-25",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "mm-7-ashlar-drive-union-mills-im4-4lj",
+      "agent": "Manxmove",
+      "url": "https://www.manxmove.im/properties/sale/isle-of-man/isle-of-man/7-ashlar-drive-union-mills-im4-4lj/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 775000,
+      "priceQualifier": "asking",
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "propertyType": null,
+      "address": "4  Bed  Property For  Sale",
+      "locality": null,
+      "parish": null,
+      "postcode": "IM4 4LJ",
+      "status": "for_sale",
+      "firstSeen": "2026-11-27",
       "lastSeen": "2026-11-27"
     },
     {
@@ -28068,25 +28084,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "pre-684270",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/1-bed-flat-for-sale-in-mooragh-promenade-ramsey-im8/684270/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 125000,
-      "priceQualifier": "asking",
-      "bedrooms": 1,
-      "bathrooms": null,
-      "propertyType": "flat",
-      "address": "Mooragh Promenade, Ramsey",
-      "locality": "Ramsey",
-      "parish": "Ramsey",
-      "postcode": null,
-      "status": "Sold STC",
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "pre-753675",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/1-bed-flat-to-rent-in-flat-1-6-rosemount-douglas-im1/753675/",
@@ -28177,25 +28174,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "pre-659281",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/10-bed-terraced-town-house-for-sale-in-bradda-house-5-rosemount-douglas-im1-3hq/659281/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 460000,
-      "priceQualifier": "asking",
-      "bedrooms": 10,
-      "bathrooms": null,
-      "propertyType": "terraced",
-      "address": "Bradda House 5 Rosemount Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": "IM1 3HQ",
-      "status": "Sold STC",
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "pre-733389",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/15-bed-house-of-multiple-occupation-for-sale-in-wavecrest-12-empress-drive-douglas-im2/733389/",
@@ -28228,25 +28206,6 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": null,
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
-      "id": "pre-657996",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/19-bed-house-of-multiple-occupation-for-sale-in-empress-drive-douglas-im2/657996/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 798950,
-      "priceQualifier": "asking",
-      "bedrooms": 19,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "Empress Drive, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": null,
-      "status": "Under Offer",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -28413,6 +28372,25 @@
       "locality": "Ramsey",
       "parish": "Ramsey",
       "postcode": null,
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "pre-715650",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/2-bed-flat-for-sale-in-demesne-road-douglas-im1/715650/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 189950,
+      "priceQualifier": "asking",
+      "bedrooms": 2,
+      "bathrooms": null,
+      "propertyType": "flat",
+      "address": "Demesne Road, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": null,
+      "status": "Sold STC",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -28638,24 +28616,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "pre-701450",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/3-bed-detached-bungalow-for-sale-in-cronk-y-thatcher-colby-im9/701450/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 395000,
-      "priceQualifier": "oio",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "detached bungalow",
-      "address": "Cronk-Y-Thatcher, Colby",
-      "locality": "Colby",
-      "parish": "Colby",
-      "postcode": null,
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "pre-750438",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/3-bed-detached-bungalow-for-sale-in-hayfield-brookfield-crescent-ramsey-im8/750438/",
@@ -28664,7 +28624,7 @@
       "price": 424950,
       "priceQualifier": "asking",
       "bedrooms": 3,
-      "bathrooms": null,
+      "bathrooms": 2,
       "propertyType": "detached bungalow",
       "address": "Hayfield Brookfield Crescent Ramsey",
       "locality": "Ramsey",
@@ -28821,25 +28781,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "pre-715650",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/3-bed-flat-for-sale-in-demesne-road-douglas-im1/715650/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 189950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "propertyType": "flat",
-      "address": "Demesne Road, Douglas",
-      "locality": "Douglas",
-      "parish": "Douglas",
-      "postcode": null,
-      "status": "Sold STC",
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "pre-752594",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/3-bed-house-for-sale-in-25-murrays-lake-drive-douglas-im4/752594/",
@@ -28853,25 +28794,6 @@
       "address": "25 Murrays Lake Drive Douglas",
       "locality": "Douglas",
       "parish": "Douglas",
-      "postcode": null,
-      "status": "Under Offer",
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
-      "id": "pre-741646",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/3-bed-house-for-sale-in-archallaghan-view-main-road-crosby-im4/741646/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 329950,
-      "priceQualifier": "asking",
-      "bedrooms": 3,
-      "bathrooms": null,
-      "propertyType": "house",
-      "address": "Archallaghan View Main Road Crosby",
-      "locality": "Crosby",
-      "parish": "Crosby",
       "postcode": null,
       "status": "Under Offer",
       "firstSeen": "2026-11-20",
@@ -29003,6 +28925,25 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": null,
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "pre-741646",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/3-bed-semi-detached-house-for-sale-in-archallaghan-view-main-road-crosby-im4/741646/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 329950,
+      "priceQualifier": "asking",
+      "bedrooms": 3,
+      "bathrooms": null,
+      "propertyType": "semi-detached",
+      "address": "Archallaghan View Main Road Crosby",
+      "locality": "Crosby",
+      "parish": "Crosby",
+      "postcode": null,
+      "status": "Under Offer",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -29516,6 +29457,7 @@
       "locality": "Ramsey",
       "parish": "Ramsey",
       "postcode": null,
+      "status": "Under Offer",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -29588,6 +29530,7 @@
       "locality": "Ramsey",
       "parish": "Ramsey",
       "postcode": null,
+      "status": "Under Offer",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -29673,13 +29616,31 @@
       "price": 569000,
       "priceQualifier": "asking",
       "bedrooms": 5,
-      "bathrooms": 4,
+      "bathrooms": null,
       "propertyType": "terraced",
       "address": "La Vista, 11 Royal Avenue West Onchan",
       "locality": "Onchan",
       "parish": "Onchan",
       "postcode": "IM3 1HB",
       "status": "Under Offer",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "pre-657180",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/5-bed-terraced-town-house-for-sale-in-2-waverley-terrace-ramsey-isle-of-man/657180/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 299950,
+      "priceQualifier": "asking",
+      "bedrooms": 5,
+      "bathrooms": null,
+      "propertyType": "terraced",
+      "address": "2 Waverley Terrace, Ramsey, Isle of Man",
+      "locality": "Ramsey",
+      "parish": "Ramsey",
+      "postcode": null,
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -29832,24 +29793,6 @@
       "lastSeen": "2026-11-27"
     },
     {
-      "id": "pre-657180",
-      "agent": "Partners Real Estate",
-      "url": "https://www.partners.co.im/property/6-bed-terraced-town-house-for-sale-in-2-waverley-terrace-ramsey-isle-of-man/657180/",
-      "category": "residential",
-      "listingType": "sale",
-      "price": 299950,
-      "priceQualifier": "asking",
-      "bedrooms": 6,
-      "bathrooms": null,
-      "propertyType": "terraced",
-      "address": "2 Waverley Terrace, Ramsey, Isle of Man",
-      "locality": "Ramsey",
-      "parish": "Ramsey",
-      "postcode": null,
-      "firstSeen": "2026-11-20",
-      "lastSeen": "2026-11-27"
-    },
-    {
       "id": "pre-657505",
       "agent": "Partners Real Estate",
       "url": "https://www.partners.co.im/property/8-bed-block-of-apartments-for-sale-in-glen-road-laxey-im4/657505/",
@@ -29877,7 +29820,7 @@
       "price": 460000,
       "priceQualifier": "asking",
       "bedrooms": 8,
-      "bathrooms": null,
+      "bathrooms": 2,
       "propertyType": "terraced",
       "address": "15 Derby Square Douglas",
       "locality": "Douglas",
@@ -29902,6 +29845,25 @@
       "locality": "Douglas",
       "parish": "Douglas",
       "postcode": null,
+      "status": "Sold STC",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "pre-659281",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/9-bed-terraced-town-house-for-sale-in-bradda-house-5-rosemount-douglas-im1-3hq/659281/",
+      "category": "residential",
+      "listingType": "sale",
+      "price": 460000,
+      "priceQualifier": "asking",
+      "bedrooms": 9,
+      "bathrooms": 2,
+      "propertyType": "terraced",
+      "address": "Bradda House 5 Rosemount Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": "IM1 3HQ",
       "status": "Sold STC",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
@@ -29958,6 +29920,25 @@
       "locality": null,
       "parish": null,
       "postcode": "IM2 4LJ",
+      "firstSeen": "2026-11-20",
+      "lastSeen": "2026-11-27"
+    },
+    {
+      "id": "pre-657996",
+      "agent": "Partners Real Estate",
+      "url": "https://www.partners.co.im/property/guest-house-for-sale-in-empress-drive-douglas-im2/657996/",
+      "category": "commercial",
+      "listingType": "sale",
+      "price": 798950,
+      "priceQualifier": "asking",
+      "bedrooms": null,
+      "bathrooms": null,
+      "propertyType": null,
+      "address": "Empress Drive, Douglas",
+      "locality": "Douglas",
+      "parish": "Douglas",
+      "postcode": null,
+      "status": "Under Offer",
       "firstSeen": "2026-11-20",
       "lastSeen": "2026-11-27"
     },
@@ -30105,7 +30086,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-10-strand-street-douglas",
@@ -30123,7 +30105,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-11a-and-12a-village-walk",
@@ -30142,7 +30125,8 @@
       "postcode": null,
       "priceNote": "£14.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-14-16-peel-road-douglas-douglas",
@@ -30160,7 +30144,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-14-athol-street-douglas",
@@ -30179,7 +30164,8 @@
       "postcode": null,
       "priceNote": "£30,702 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-1517-duke-street-investment-sale-douglas",
@@ -30197,7 +30183,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-18-20-north-quay-douglas-douglas",
@@ -30216,7 +30203,8 @@
       "postcode": null,
       "priceNote": "£18.50 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-19-duke-street-rear-shop",
@@ -30235,7 +30223,8 @@
       "postcode": null,
       "priceNote": "£10,750 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-19-strand-street-douglas",
@@ -30253,7 +30242,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-1a-village-walk-douglas",
@@ -30271,7 +30261,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-2-mount-pleasant-douglas",
@@ -30289,7 +30280,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-22-finch-road-douglas",
@@ -30307,7 +30299,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-23a-village-walk-onchan",
@@ -30326,7 +30319,8 @@
       "postcode": null,
       "priceNote": "£15.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-24-church-road-port-erin-port-erin",
@@ -30344,7 +30338,8 @@
       "parish": "Port Erin",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-27-strand-street-douglas",
@@ -30362,7 +30357,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-36-spring-valley",
@@ -30380,7 +30376,8 @@
       "parish": null,
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-42-spring-valley-douglas",
@@ -30399,7 +30396,8 @@
       "postcode": null,
       "priceNote": "£8.85 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-5b-and-6b-village-walk",
@@ -30418,7 +30416,8 @@
       "postcode": null,
       "priceNote": "£16.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-6-mount-pleasant-douglas",
@@ -30436,7 +30435,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-62-66-strand-street-douglas",
@@ -30454,7 +30454,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-63-strand-street-douglas",
@@ -30473,7 +30474,8 @@
       "postcode": null,
       "priceNote": "£45,000 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-66-66a-parliament-street-ramsey-ramsey",
@@ -30492,7 +30494,8 @@
       "postcode": null,
       "priceNote": "£15,750 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-68a-parliament-street-ramsey-ramsey",
@@ -30510,7 +30513,8 @@
       "parish": "Ramsey",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-78-to-82-strand-street-next-douglas",
@@ -30528,7 +30532,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-88-90-strand-street-douglas",
@@ -30546,7 +30551,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-airport-advertising-space-opportunity-ballasalla",
@@ -30564,7 +30570,8 @@
       "parish": "Ballasalla",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-atlantic-house-1st-and-4th-floors-douglas",
@@ -30583,7 +30590,8 @@
       "postcode": null,
       "priceNote": "£17.50 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-atlantic-house-circular-road-investment-douglas",
@@ -30601,7 +30609,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-balthane-industrial-estate-ballasalla",
@@ -30619,7 +30628,8 @@
       "parish": "Ballasalla",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-cameo-house-duke-street-douglas",
@@ -30638,7 +30648,8 @@
       "postcode": null,
       "priceNote": "£7,400 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-former-joinery-workshop-ramsey-shipyard-ramsey",
@@ -30656,7 +30667,8 @@
       "parish": "Ramsey",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-former-kc-foods-hills-meadow-douglas",
@@ -30674,7 +30686,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-goldie-house-goldie-terrace-douglas",
@@ -30693,7 +30706,8 @@
       "postcode": null,
       "priceNote": "£12.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-grape-tree-investment-54-strand-street-douglas",
@@ -30711,7 +30725,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-hamilton-house-peel-road-douglas",
@@ -30730,7 +30745,8 @@
       "postcode": null,
       "priceNote": "POA £21.50 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-hangar-5-isle-of-man-airport-ballasalla",
@@ -30748,7 +30764,8 @@
       "parish": "Ballasalla",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-hangars-11-and-12-isle-of-man-airport-ballasalla",
@@ -30766,7 +30783,8 @@
       "parish": "Ballasalla",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-hangars-s1-and-s2-ronaldsway-airport-ballasalla",
@@ -30785,7 +30803,8 @@
       "postcode": null,
       "priceNote": "£8.50 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-investment-or-development-opportunity-waterloo-road-ramsey",
@@ -30803,7 +30822,8 @@
       "parish": "Ramsey",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-land-at-santon-9-acres-approx",
@@ -30821,7 +30841,8 @@
       "parish": "Santon",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-market-street-former-supermarket",
@@ -30840,7 +30861,8 @@
       "postcode": null,
       "priceNote": "£10.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-offices-in-main-terminal-ronaldsway-airport-ballasalla",
@@ -30859,7 +30881,8 @@
       "postcode": null,
       "priceNote": "£14.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-queen-victoria-house-4th-floor-douglas",
@@ -30878,7 +30901,8 @@
       "postcode": null,
       "priceNote": "£19.00 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-residential-development-land-at-springfield-terrace-foxdale",
@@ -30896,7 +30920,8 @@
       "parish": "Foxdale",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-st-georges-tower-investment-owner-occupation-douglas",
@@ -30914,7 +30939,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-st-georges-tower-st-georges-street-douglas",
@@ -30933,7 +30959,8 @@
       "postcode": null,
       "priceNote": "£22 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-st-marys-the-parade-castletown-castletown",
@@ -30951,7 +30978,8 @@
       "parish": "Castletown",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-13-hills-meadow-douglas",
@@ -30970,7 +30998,8 @@
       "postcode": null,
       "priceNote": "£9.10 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-14-hills-meadow-douglas",
@@ -30989,7 +31018,8 @@
       "postcode": null,
       "priceNote": "£18,500 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-1a-the-strand-centre-douglas",
@@ -31008,7 +31038,8 @@
       "postcode": null,
       "priceNote": "£25,000 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-267-jurby-trading-estate",
@@ -31027,7 +31058,8 @@
       "postcode": null,
       "priceNote": "£2.70 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-4-strand-centre-douglas",
@@ -31046,7 +31078,8 @@
       "postcode": null,
       "priceNote": "£50,000 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-46-balthane-industrial-estate-ballasalla",
@@ -31065,7 +31098,8 @@
       "postcode": null,
       "priceNote": "£9.50 per sq ft",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-6a-6b-villa-marina-arcade-douglas",
@@ -31083,7 +31117,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-unit-7-villa-marina-arcade-douglas",
@@ -31101,7 +31136,8 @@
       "parish": "Douglas",
       "postcode": null,
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-units-73-to-77-balthane-ballasalla",
@@ -31120,7 +31156,8 @@
       "postcode": null,
       "priceNote": "£9,750 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     },
     {
       "id": "chp-villa-marina-arcade-unit-5-douglas",
@@ -31139,7 +31176,8 @@
       "postcode": null,
       "priceNote": "£25,000 per year",
       "firstSeen": "2026-11-23",
-      "lastSeen": "2026-11-27"
+      "lastSeen": "2026-11-27",
+      "stale": true
     }
   ]
 }
